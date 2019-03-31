@@ -1,25 +1,15 @@
 {
-  "name": "gittest",
+  "name": "git_test",
   "version": "1.0.0",
   "description": "",
-  "main": "gulpfile.js",
+  "main": "index.js",
   "dependencies": {
     "browser-sync": "^2.26.3",
-    "compass": "^0.1.1",
-<<<<<<< HEAD
->>>>>>> B功能開發
-=======
-<<<<<<< HEAD
     "gsap": "^2.1.2",
-=======
->>>>>>> bca727bace7af0b0d1acfc456ac36b72b8691d5e
->>>>>>> B功能開發
     "gulp": "^3.9.1",
-    "gulp-cli": "^2.0.1",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
-    "jquery": "^3.3.1",
-    "sass": "^1.17.3"
+    "jquery": "^3.3.1"
   },
   "devDependencies": {},
   "scripts": {
