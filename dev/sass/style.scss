@@ -1,0 +1,24 @@
+@import 'var';
+@import 'reset';
+
+.container{
+    width: 1200px;
+
+    outline: #333 solid;
+    margin: auto;
+}
+.commonBtn{
+    position: relative;
+    font-size: $buttonWord;
+    font-family: $fontFamily;
+    width: 120px;
+    height: 60px;
+    background: url(../images/smallBtnNeonLight.gif) center no-repeat;
+    background-size: cover;
+    color: $fontColor;
+    border-radius: 10px;  
+    outline: none;
+    border:none;
+    box-shadow: 0px 0px 25px $fontColor;
+}
+
