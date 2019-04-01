@@ -1,14 +1,16 @@
 #carStart,#carEnd{
-    position: absolute;
-    top: 80%;
+    position: relative;
+    
+    top: 80vh;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* background: url(../img-gym/background.png) no-repeat; */
-    background-color: gray;
+    background: url(../images/car/vote2.jpg) no-repeat;
+    /* background-color: gray; */
     background-size: 100% 100%;
     background-position: center;
-    width: 55%;
-    padding-top: 23%;
+    width: 500px;
+    /* padding-top: 300px; */
+    height: 300px;
     line-height: 1.8;
     z-index: 11;
     /* display: none; */
@@ -65,9 +67,9 @@ canvas {
 	background-color: #222427;
 	margin: 0 auto;
 	display: block;
-	transform: scale(0.5);
+	transform: scale(.7);
 	vertical-align:top;
-	margin-top: -150px;
+	margin-top: -120px;
 }
 #score {
 	font-size: 50px;
@@ -75,4 +77,7 @@ canvas {
 }
 #retry {
 	cursor: pointer;
+}
+#blue-car{
+    width: 30%;
 }

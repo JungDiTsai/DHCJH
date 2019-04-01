@@ -1,3 +1,20 @@
+<?php 
+//car
+    $errMsg="";
+
+    try {
+        require_once("dhc.php");
+        $sql = "select * from coupons order by rand() limit 0,1";
+        $back=$pdo->query($sql);  //下指令
+        
+
+    } catch (PDOException $e) {
+        $errMsg .=  "錯誤原因" . $e->getMessage() . "<br>"; 
+        $errMsg .=  "錯誤行號" . $e->getLine() . "<br>";
+    }
+
+    echo $errMsg;  
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,11 +24,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/car1.css">
 </head>
-<body>   
-    <!-- 遊戲開始前 -->
+<body>  
+                           
+    <!-- 遊戲開始前  -->
         <div id="carStart">
             <div id="carStarText">
-                <h3>使用←跟→來閃躲來車,閃躲五秒後即可獲得優惠卷哦!</h3>
+                <h3>使用←跟→來閃躲來車，閃躲五秒後即可獲得優惠卷哦!</h3>
                 <div id="startButton">
                     <button id="backpage">返回</button>
                     <button id="startGame">開始</button>
@@ -23,10 +41,14 @@
         <div id="carEnd">
             <div id="carEndText">
                 <h3>恭喜你挑戰成功!</h3>
-                <p>金額：</p>
-            
+                
                 <div id="endButton">
-
+                    <?php                    
+                     while( $backprice = $back->fetch(PDO::FETCH_ASSOC)){ 
+                       
+                    ?>
+                    <p>金額： <?php echo $backprice["couponsName"]  ;?></p>
+                    <?php }?>  
                     <button id="endtGame">領取優惠卷</button>
                 </div>
             </div>
@@ -34,7 +56,7 @@
 
         <div id="carGame">
                 <h1 id="score">5</h1>
-                <h2 id="retry">使用←跟→來閃躲來車,閃躲五秒後即可獲得優惠卷哦～</h2>
+                <h2 id="retry">使用←跟→來閃躲來車，閃躲五秒後即可獲得優惠卷哦～</h2>
                 <canvas width="500" height="850"></canvas>
         </div>
       

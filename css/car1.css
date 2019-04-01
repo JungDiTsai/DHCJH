@@ -3449,4 +3449,95 @@ header {
     -webkit-filter: hue-rotate(360deg);
   }
 }
-/*# sourceMappingURL=checkout.css.map */
+
+#carStart, #carEnd {
+  position: relative;
+  top: 80vh;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: url(../images/car/vote2.jpg) no-repeat;
+  /* background-color: gray; */
+  background-size: 100% 100%;
+  background-position: center;
+  width: 500px;
+  /* padding-top: 300px; */
+  height: 300px;
+  line-height: 1.8;
+  z-index: 11;
+}
+
+#carStart #carStarText, #carStart #carEndText, #carEnd #carStarText, #carEnd #carEndText {
+  width: 80%;
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 25px;
+  color: #eee;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 3%;
+  text-align: center;
+}
+
+#startGame, #endtGame, #backpage {
+  font-size: 21px;
+  font-weight: 300;
+  padding: 0rem 3.84rem;
+  line-height: 3.2rem;
+  border: 1px solid #00ffff;
+  background-color: rgba(247, 140, 140, 0.3);
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-box-shadow: 0 0 0 0 transparent;
+          box-shadow: 0 0 0 0 transparent;
+  overflow: hidden;
+  margin: auto;
+  text-align: center;
+}
+
+#carEnd, #backpage {
+  display: none;
+}
+
+#carGame {
+  width: 500px;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  text-align: center;
+  font-family: monospace;
+}
+
+#carGame canvas {
+  background-color: #222427;
+  margin: 0 auto;
+  display: block;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+  vertical-align: top;
+  margin-top: -120px;
+}
+
+#carGame #score {
+  font-size: 50px;
+  margin: 5px 0px;
+}
+
+#carGame #retry {
+  cursor: pointer;
+}
+
+.clearboth {
+  clear: both;
+}
+/*# sourceMappingURL=car1.css.map */
