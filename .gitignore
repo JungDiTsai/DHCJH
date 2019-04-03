@@ -15,3 +15,5 @@ views/libs
 
 
 stage
+*.map
+.gitignore
