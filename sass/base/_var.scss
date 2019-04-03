@@ -5,10 +5,13 @@ $buttonWord:18px; //按鈕
 $contentWord:16px; //內文
 $titleWord:42px;  //大標題
 $subTitleWord:36px; //次標題
+$thrTitleWord:30px; //次標題2
 $lineHeight:1.5; //行距
 $fontFamily:"wangHangMing"; //字體
 $fontColor:rgb(255, 255, 189);  //字體顏色
 $memberBackColor:#a82eb6; //會員中心的nav背景
+$loginBackColor:rgb(16, 82, 41); //登入燈窗背景
+$loginInputBackColor: rgb(45, 54, 49);//登入輸入盒背景
 @font-face{
     font-family: "wangHangMing";
     src: url("../font/WCL-02.ttf");

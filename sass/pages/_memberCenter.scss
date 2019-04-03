@@ -1,57 +1,66 @@
-
-.wrap{
-    box-sizing: border-box;
-    border: 1px solid black;
-    width: 375px;
-    height: 667px;
-}
-#memberNav{
-    width: 100%;
-    height: 27px;
-    line-height: $lineHeight;
-    // overflow: hidden;
-    box-sizing: border-box;
-
-    ul{
-        width: 1290px;
-        display: block;
-        background: $memberBackColor;
-
-        li{
-            width:120px;
-            font-size: 18px;
-            float: left;
-            margin:0 30px;
-            text-align: center;
-            color:$fontColor;
-        }
-    }
-
-    ul::after{
-        content: '';
-        display: block;
-        clear: left;
-    }
-}
-
-#memberData{
     .memberImg{
         margin: 50px auto 0;
         border-radius: 50%;
         width: 150px;
         height: 150px;
         overflow: hidden;
+        position: relative;
         img{  
             width: 150px;
             background: red;
         }
-    }
-
-    input{
-        opacity: 0;
+        &:hover{
+            border: 5px solid #faa;
+        }
     }
     h3{
+        margin-top:25px;
         font-weight: bold;
         text-align: center;
+        font-size: $thrTitleWord;
     }
-}
+    table{
+        margin: auto;
+        tr{
+            border-bottom: 1px solid #000;
+            th{padding: 10px 10px;
+               text-align: center;
+            }
+            td{     
+                padding: 10px 10px; 
+                input{
+                    border: none;
+                    &:hover{
+                        outline: 1px solid #faa;
+                    }
+                }
+                i{cursor: pointer;}
+                i:hover{
+                    color: #faa;
+                }
+            }
+       }
+       .changePSW{
+           font-size: 14px;
+           color:#666;
+           text-align: right;
+           background: #faa;
+           z-index: -1;
+
+       }
+       tr:last-child{
+        border-bottom: none;
+       }
+    }
+    
+    @media screen and (min-width:768px) {
+        fieldset{
+
+            width: 50%;
+            margin:50px auto 0;
+
+            legend{
+                font-size: 21px;
+            }
+        }
+    }
