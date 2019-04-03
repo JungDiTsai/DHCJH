@@ -1,11 +1,11 @@
-@keyframes textLight{
-    0%{color:rgb(255, 255, 255);
-        text-shadow: 1px 0px 2px rgb(255, 9, 42),-1px 0px 2px rgb(255, 9, 42),0px 1px 2px rgb(255, 9, 42),0px -1px 2px rgb(255, 9, 42),
-                     0px 0px 7px rgb(255, 87, 9),0px 0px 10px rgb(255, 87, 9),0px 0px 13px rgb(255, 251, 9),0px 0px 15px rgb(255, 251, 9);}
-    50%{color:rgb(0, 0, 0);
-        text-shadow: 1px 0px 2px rgb(255, 255, 255),-1px 0px 2px rgb(255, 255, 255),0px 1px 2px rgb(255, 255, 255),0px -1px 2px rgb(255, 255, 255),
-                     0px 0px 7px rgb(255, 87, 9),0px 0px 10px rgb(255, 87, 9);}
-    100%{color:rgb(255, 255, 255);
-        text-shadow: 1px 0px 2px rgb(144, 7, 185),-1px 0px 2px rgb(144, 7, 185),0px 1px 2px rgb(144, 7, 185),0px -1px 2px rgb(144, 7, 185),
-                     0px 0px 7px rgb(8, 212, 1),0px 0px 10px rgb(8, 212, 1),0px 0px 13px rgb(255, 251, 9),0px 0px 15px rgb(255, 251, 9);}
-}
+@keyframes neon {
+    0%,
+    100% {
+      text-shadow: 0 0 1vw #FA1C16, 0 0 2vw #FA1C16, 0 0 5vw #FA1C16, 0 0 5vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
+      color: #FED128;
+    }
+    50% {
+      text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
+      color: #fff;
+    }
+  }

@@ -31,6 +31,7 @@
         font-weight: bold;
         text-align: center;
         font-size: $thrTitleWord;
+        color:$logoColor;
     }
     ul{
         width: 1050px;
@@ -49,10 +50,15 @@
                 text-decoration: none;
             }
             &:hover a{
-                color:rgb(255, 255, 255);
-                text-shadow: 1px 0px 2px rgb(255, 9, 42),-1px 0px 2px rgb(255, 9, 42),0px 1px 2px rgb(255, 9, 42),0px -1px 2px rgb(255, 9, 42),
-                             0px 0px 7px rgb(255, 87, 9),0px 0px 10px rgb(255, 87, 9),0px 0px 13px rgb(255, 251, 9),0px 0px 15px rgb(255, 251, 9);
-                animation: textLight 1.5s infinite;
+                color: #FB4264;
+                text-shadow: 0 0 3vw #F40A35;
+                animation: neon 1s ease infinite;
+            }
+        }
+        .here{
+            transform: scale(1.1);
+            a{
+                color: #DC2578;
             }
         }
     }
@@ -109,6 +115,7 @@
 
 
 // <!-- 會員中心側邊攔 -->
+//     <div class="wrap">
 //         <div id="memberNav" class="col-md-3">
 //             <div class="memberImg max_view">
 //                 <label for="memberImgFile">
@@ -117,7 +124,7 @@
 //             </div>
 //             <h3 class="max_view">李三十四</h3>
 //             <ul>
-//                 <li><a href="">帳號管理</a></li>
+//                 <li class="here"><a href="">帳號管理</a></li>
 //                 <li><a href="">訂單管理</a></li>
 //                 <li><a href="">我的發表</a></li>
 //                 <li><a href="">我的收藏</a></li>
