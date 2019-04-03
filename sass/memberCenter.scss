@@ -6,7 +6,10 @@
 @import "abstracts/_animations.scss";
 @import "pages/_memberCenter.scss";
 @import "layout/_header.scss";
+
+// 引入元件
 @import "components/_buttons.scss";
 @import "components/_memberTopNav.scss";
-@import "components/_login.scss";
-@import "components/_registered.scss";
+@import "components/_login.scss"; //登入燈箱
+@import "components/_registered.scss";  //註冊燈箱
+@import "components/_forgotPSW.scss";  //忘記密碼燈箱

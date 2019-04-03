@@ -1,0 +1,147 @@
+.registeredBox{
+    display: none;
+    width: 300px;
+    height: 500px;
+    background: $loginBackColor;
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px #fff;
+    padding:25px;
+    text-align: center;
+    .fa-times{
+        color:#fff;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+        &:hover{
+            color:rgb(243, 210, 23);
+        }
+    }
+    h3{
+        margin: 0;
+        font-size: $thrTitleWord;
+        color:#fff;
+    }
+    table{
+        margin: 20px auto;
+        border: 1px solid #fff;
+        color:#fff;
+        .prompt{
+            font-size:12px;
+            color:rgb(226, 111, 111);
+        }
+        td,th{
+            padding:5px;
+        }
+        .commonBtn{
+            margin: 10px;
+            width: 100px;
+            height: 50px;
+            border-radius: 5px;
+        }
+        label{
+            margin-right:30px;
+            
+            input{
+                position: absolute;
+                opacity: 0;
+                z-index: -1;
+            }
+            input:checked+i{
+                color:yellow;
+            }
+        }
+    }
+    div{
+        margin-top: 50px;
+        color: #fff;
+        input{
+            margin-left: 20px;
+        }
+        a{
+            cursor: pointer;
+            &:hover{
+                color:rgb(243, 210, 23);
+            }
+        }
+    }
+}
+
+
+
+// <!-- 註冊燈箱 -->
+//     <div class="registeredBox">
+//         <i class="fas fa-times"></i>
+//         <h3>立即註冊</h3>
+//         <table>
+//             <tr>
+//                 <th>會員帳號</th>
+//                 <td><input type="text"></td>
+//             </tr>
+//             <tr><td colspan="2" class="prompt"><span>此帳號已有人使用 !</span></td></tr>
+//             <tr>
+//                 <th>會員密碼</th>
+//                 <td><input type="password" name="" id=""></td>
+//             </tr>
+//             <tr>
+//                 <th>會員姓名</th>
+//                 <td><input type="text" name="" id=""></td>
+//             </tr>
+//             <tr>
+//                 <th>會員電話</th>
+//                 <td><input type="tel" name="" id=""></td>
+//             </tr>
+//             <tr>
+//                 <th>會員信箱</th>
+//                 <td><input type="email" name="" id=""></td>
+//             </tr>
+//             <tr>
+//                 <th>性別</th>
+//                 <td>
+//                     <label>
+//                         <input type="radio" name="sex" value="">
+//                         <i class="fas fa-venus fa-2x"></i>
+//                     </label>
+//                     <label>
+//                         <input type="radio" name="sex" value="">
+//                         <i class="fas fa-mars fa-2x"></i>
+//                     </label>
+//                 </td>
+//             </tr>
+//             <tr>
+//                 <th colspan="2"><input type="submit" value="註冊帳號" class="commonBtn"></th>
+//             </tr>
+//         </table>
+//         <div><a class="backLogin">回到登入</a></div>
+//     </div>
+
+
+// /* 註冊燈箱 JS*/
+//         // 點擊關閉----------------------------
+//         document.querySelector('.registeredBox .fa-times').addEventListener('click',function(){
+//             let registeredBox = document.querySelector('.registeredBox');
+//             let style = window.getComputedStyle(registeredBox, null).getPropertyValue('display');
+//             if(style=="block"){
+//                 registeredBox.style.setProperty('display',"none");
+//             }
+//         })
+//         // 點擊回到登入----------------------------
+//         document.querySelector('.registeredBox .backLogin').addEventListener('click',function(){
+//             // 隱藏註冊燈箱
+//             let registeredBox = document.querySelector('.registeredBox');
+//             registeredBox.style.setProperty('display',"none");
+//             // 顯示登入燈箱
+//             let loginBox = document.querySelector('.loginBox');
+//             let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
+//             if(style=="none"){
+//                 loginBox.style.setProperty('display',"block");
+//             }
+//         })
