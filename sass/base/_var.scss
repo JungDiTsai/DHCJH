@@ -1,13 +1,17 @@
 
 //共用的部分
-
+$buttonWord:18px; //按鈕
+$contentWord:16px; //內文
+$titleWord:42px;  //大標題
+$subTitleWord:36px; //次標題
+$thrTitleWord:30px; //次標題2
 $buttonWord:18px; //按鈕 h4
 $contentWord:16px; //內文 p
 $titleWord:42px;  //大標題 h2
 $subTitleWord:36px; //次標題 h3
 $lineHeight:1.5; //行距
 $fontFamily:"wangHangMing"; //字體
-$fontColor:rgb(255, 255, 189);  //字體顏色
+
 @font-face{
     font-family: "wangHangMing";
     src: url("../font/WCL-02.ttf");
