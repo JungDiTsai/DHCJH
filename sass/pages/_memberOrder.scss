@@ -30,15 +30,28 @@
 
     .orderDetails{
         width: 90%;
+        box-sizing: border-box;
         background: #768397;
         margin:auto;
         border-radius: 15px;
         padding: 20px 10px;
-        
+
         h4{
             color:#ffffff;
             font-size: 24px;
             text-align: center;
+            border-bottom:2px solid #6e6e6e;
+        }
+        .detailContent{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px 10px;
+            border-bottom:2px solid #6e6e6e;
+            .big{
+                text-shadow: 0 0 1px #000;
+                font-size: 21px;
+                color:#faf;
+            }
         }
     }
 }
