@@ -1,20 +1,4 @@
 #memberData{
-    .memberImg{
-        margin: 50px auto 0;
-        border-radius: 50%;
-        width: 150px;
-        height: 150px;
-        overflow: hidden;
-        position: relative;
-        text-align: center;
-        img{
-            cursor: pointer;
-            width: 160px;
-        }
-        &:hover{
-            transform: scale(1.05);
-        }
-    }
     h3{
         margin-top:25px;
         font-weight: bold;
@@ -59,6 +43,22 @@
        tr:last-child{
         border-bottom: none;
        }
+    }
+}
+.memberImg{
+    margin: 50px auto 0;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    img{
+        cursor: pointer;
+        width: 160px;
+    }
+    &:hover{
+        transform: scale(1.05);
     }
 }
     @media screen and (min-width:768px) {

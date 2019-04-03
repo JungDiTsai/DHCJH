@@ -1,0 +1,44 @@
+#memberOrder{
+
+    .allOrderBox{
+        width: 80%;
+        background: #178cf6;
+        margin:30px auto;
+        border-radius: 15px;
+        padding: 20px 10px;
+
+        h3{
+            font-size: $thrTitleWord;
+            color:#fff;
+            text-align: center;
+        }
+        table{
+            width: 100%;
+            border:1px solid #000;
+            margin: auto;
+            th{
+                padding: 0 10px;
+                font-size: 14px;
+                border-bottom: 1px solid #6e6e6e;
+            }
+            td{
+                text-align: center;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .orderDetails{
+        width: 90%;
+        background: #768397;
+        margin:auto;
+        border-radius: 15px;
+        padding: 20px 10px;
+        
+        h4{
+            color:#ffffff;
+            font-size: 24px;
+            text-align: center;
+        }
+    }
+}

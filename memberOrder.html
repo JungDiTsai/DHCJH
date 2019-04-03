@@ -11,6 +11,69 @@
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 <body>
-    
+    <!-- 並排 -->
+    <div class="wrap">
+        <!-- 會員中心側邊攔 -->
+        <div id="memberNav" class="col-md-3">
+            <div class="memberImg max_view">
+                <label for="memberImgFile">
+                    <img src="images/member2.jpg" alt="">
+                </label>
+            </div>
+            <h3 class="max_view">李三十四</h3>
+            <ul>
+                <li><a href="memberCenter.html">帳號管理</a></li>
+                <li class="here"><a href="">訂單管理</a></li>
+                <li><a href="">我的發表</a></li>
+                <li><a href="">我的收藏</a></li>
+                <li><a href="">宣傳單管理</a></li>
+                <li><a href="">我的優惠券</a></li>
+                <li><a href="">登出</a></li>
+            </ul>
+        </div>
+        <!-- 會員中心訂單管理 -->
+        <div id="memberOrder" class="col-md-9">
+            <div class="allOrderBox">
+                <h3>所有訂單</h3>
+                <table>
+                    <tr>
+                        <th>訂單編號</th>
+                        <th>活動日期</th>
+                        <th>訂單狀態</th>
+                        <th>金額</th>
+                    </tr>
+                    <tr>
+                        <td>89757</td>
+                        <td>2018-06-26</td>
+                        <td>處理中</td>
+                        <td>70,0000</td>
+                    </tr>
+                    <tr>
+                        <td>50215771</td>
+                        <td>2018-06-26</td>
+                        <td>已結案</td>
+                        <td>300,0000</td>
+                    </tr>
+                    <tr>
+                        <td>5028831</td>
+                        <td>2018-06-26</td>
+                        <td>發貨中</td>
+                        <td>95,0000</td>
+                    </tr>
+                    <tr>
+                        <td>5029931</td>
+                        <td>2018-06-26</td>
+                        <td>處理中</td>
+                        <td>1,0000</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="orderDetails">
+                <h4>編號 : 89757</h4>
+                <p>活動日期 : 2019-03-16 (一)</p>
+                <p>活動地點：桃園市中壢區中大陸300號</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
