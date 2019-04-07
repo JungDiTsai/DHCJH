@@ -51,6 +51,6 @@ function test(e){
  var myPix = new Array("images/api/sun.png","images/api/cloud.jpg","images/api/rain.jpg");
  var randomNum = Math.floor((Math.random() * myPix.length ));
  var x = myPix[randomNum];
- document.getElementById("myPicture").innerHTML = '<img src= " '+ x +' ">';
+ document.getElementById("myPicture").innerHTML = '<img class="myPictureImg"src= " '+ x +' ">';
     
 }
