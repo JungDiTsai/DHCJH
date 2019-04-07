@@ -2,13 +2,14 @@
         background: url(../images/member_bg.jpg) center;
         background-size: cover;
         min-height: 100vh;
+        padding: 10px;
         padding-top: 50px;
     .allOrderBox{
         width: 80%;
         background: #178cf6;
         margin:auto;
         border-radius: 15px;
-        padding: 20px 10px;
+        padding: 10px;
         margin-bottom: 30px;
         h3{
             font-size: $thrTitleWord;
@@ -126,5 +127,10 @@
                 }
             }
         }
+    }
+}
+@media screen and (min-width:768px) {
+    #memberOrder{
+        padding-top: 150px;
     }
 }
