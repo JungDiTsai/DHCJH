@@ -6,6 +6,7 @@
 @import "abstracts/_mixins.scss";
 @import "layout/_header.scss";
 @import "components/_buttons.scss";
+<<<<<<< HEAD
 @import "components/_titlebackground.scss";
 @import "pages/api.scss"; 
 @import "pages/game.scss";
@@ -16,3 +17,8 @@
 
 
 
+=======
+@import "pages/_api.scss";
+@import "pages/_game.scss";
+@import "pages/_loading.scss";
+>>>>>>> first
