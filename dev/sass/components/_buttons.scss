@@ -2,9 +2,10 @@
     position: relative;
     font-size: $buttonWord;
     font-family: $fontFamily;
+    line-height: 58px;
     width: 120px;
     height: 60px;
-    background: url(../images/smallBtnNeonLight.gif) center no-repeat;
+    background: url(../images/btnNeonLight.gif) center no-repeat;
     background-size: cover;
     color: $fontColor;
     border-radius: 10px;  
