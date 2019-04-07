@@ -1,12 +1,21 @@
 *{
-    outline:1px solid #f00;
+    // outline:1px solid #f00;
     margin: 0;
     padding: 0;
 }
-@import "base/var";
+@import "base/_var";
 @import "base/color";
+@import "components/Registered";
+@import"components/login";
+@import"components/forgotPSW";
 @import "layout/grid";
-@media screen and (min-width:768px){
+@keyframes lightShow 
+{
+    0% { border-image:url("../images/navTDD.png")35 repeat;}
+  100% { border-image:url("../images/navTDL.png")35 repeat;}
+}
+
+@media screen and (min-width:992px){
     header{
         position: fixed;
         background-image: url("../images/navigator.svg");
@@ -31,9 +40,14 @@
         display: inline-block;
         margin: 0 30px;
         margin-top: 25px;
-        border:20px solid transparent;
-        border-image:url("../images/navTDD.png")30 round;
-        border-top: 10px;
+        border-bottom: 30px solid transparent;
+        border-image:url("../images/navTDD.png")35 repeat;
+        }
+        li:hover{
+            // border-image:url("../images/navTDL.png")34 repeat;
+            color:$logoColor;
+            animation: lightShow .3s infinite alternate;
+            a{color:$logoColor;}
         }
         h1{display: inline-block;}
         img{width: 250px;
@@ -43,8 +57,8 @@
     .navMemCarBtn{
         color: $logoColor;  
         position: absolute;
-        top: 25px;
-        right: -80px;
+        top: 30px;
+        right: 0px;
         margin:0px 10px;
     }
     // html{background-image: url("../images/navigator.png");
