@@ -1,5 +1,5 @@
 *{
-    // outline:1px solid #f00;
+    outline:1px solid #f00;
     margin: 0;
     padding: 0;
 }
@@ -130,6 +130,7 @@ header{
         height: 110px;
         margin: auto;
         li{
+        width: initial;
         vertical-align:top;
         display: inline-block;
         margin: 0 35px;
