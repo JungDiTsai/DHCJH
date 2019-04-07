@@ -19,11 +19,7 @@
         position: relative;
         text-align: center;
         img{
-            cursor: pointer;
             width: 160px;
-        }
-        &:hover{
-            transform: scale(1.05);
         }
     }
     h3{
