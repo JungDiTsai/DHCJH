@@ -31,10 +31,8 @@
         display: inline-block;
         margin: 0 30px;
         margin-top: 25px;
-        border-image:url("../images/navTDD.png") 30 30 round;
-        border-bottom:0;
-        border-left:0;
-        border-right:0;
+        border:20px solid transparent;
+        border-image:url("../images/navTDD.png")30 round;
         border-top: 10px;
         }
         h1{display: inline-block;}
