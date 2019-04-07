@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,QAAQ,CAAA;EACJ,QAAQ,EAAE,QAAQ;EAClB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,KAAK;EACb,gBAAgB,EAAE,OAAe;EACjC,gBAAgB,EAAE,0BAA0B;EAE5C,iBAAiB,EAAE,SAAS;EAC5B,mBAAmB,EAAE,aAAa;CACrC",
+    "sources": [
+        "../sass/pages/loading.scss"
+    ],
+    "names": [],
+    "file": "loading.css"
+}

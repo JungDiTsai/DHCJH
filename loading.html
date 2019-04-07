@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <!-- <link rel="stylesheet" href="css/loading.css"> -->
+    <style>
+  
+       
+        .lampFirst {
+        position: absolute;
+        left: 44.5%;
+        /* transform: translateX(-50%); */
+        width: 15%;
+        height: 400vh;
+        background-image: radial-gradient(ellipse, rgba(235, 177, 4, 0.8), rgba(246,205,81, 0.2)25%, rgba(255,255,255,0) 50%);
+        top: -185vh;
+        transform: perspective(25vh) rotateX(60deg) translateX(0);
+        transition: transform 2s;
+        /* z-index: 50; */
+        pointer-events: none;
+        }
+        .lampSec {
+        position: absolute;
+        left: 39%;
+        /* transform: translateX(-50%); */
+        width: 15%;
+        height: 400vh;
+        background-image: radial-gradient(ellipse, rgba(255, 184, 143, 0.7),  rgba(245, 132, 27, 0.2)25%, rgba(255,255,255,0) 50%);
+        top: -185vh;
+        transform: perspective(25vh) rotateX(60deg) translateX(0);
+        transition: transform 2s;
+        /* z-index: 50; */
+        pointer-events: none;
+        }       
+        .lampThree {
+        position: absolute;
+        left: 50.5%;
+        /* transform: translateX(-50%); */
+        width: 15%;
+        height: 400vh;
+        background-image: radial-gradient(ellipse, rgba(255, 184, 143, 0.7),  rgba(245, 132, 27, 0.2)25%, rgba(255,255,255,0) 50%);
+        top: -185vh;
+        transform: perspective(25vh) rotateX(60deg) translateX(0);
+        transition: transform 2s;
+        /* z-index: 50; */
+        pointer-events: none;
+        }           
+        p {
+        text-align: center;
+        font-size: 3em;
+        margin: 20px 0 20px 0;
+        position: fixed;
+            top: 60vh;
+        }
+        .front{
+              left: 35%;
+        }
+        .back{
+            left: 60%;
+        }
+        a {
+        text-decoration: none;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        transition: all 0.5s;
+        font-size: 48px;
+        color: white;
+        font-family: Iceland;
+        box-shadow: 0px 0px 10px 10px red;
+        background-color:rgb(41, 41, 41);
+        padding: 10px 10px;
+        }
+        .light .first{
+           
+           -webkit-transition: all 0.5s;
+           -moz-transition: all 0.5s;
+           transition: all 0.5s;
+           /* transform: perspective(25vh) rotateX(30deg) rotateY(20deg); */
+           transform: perspective(25vh) rotateX(0deg) translateX(0);
+          
+           }
+        .light .sec{
+           
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        transition: all 0.5s;
+        /* transform: perspective(25vh) rotateX(30deg) rotateY(20deg); */
+        transform: perspective(25vh) rotateX(0deg) translateX(0);
+       
+        }
+        .light .three{
+           
+           -webkit-transition: all 0.5s;
+           -moz-transition: all 0.5s;
+           transition: all 0.5s;
+           /* transform: perspective(25vh) rotateX(30deg) rotateY(20deg); */
+           transform: perspective(25vh) rotateX(0deg) translateX(0);
+          
+           }
+        img:hover{
+            /* transform: perspective(25vh) rotateX(30deg) rotateY(0deg); */
+            transform: perspective(25vh) rotateY(10deg) rotateX(10deg) rotateZ(30deg);
+
+        }
+        a:hover {
+        -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+        -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+        animation: neon2 1.5s ease-in-out infinite alternate;
+        }
+
+
+
+        a:hover {
+        color: yellow;
+        box-shadow: 0px 0px 10px 5px blue;
+        }
+
+        .first{
+            /* width: 100px;
+            height: 100px; */
+            position: fixed;
+            left: 43.8%;
+            top: 30px;
+            /* border: 1px solid red; */
+        }
+        .sec{
+            
+            position: absolute;
+            left: 49.5%;
+            top: 30px;
+            /* border: 1px solid red; */
+        }
+        .three{
+            
+            position: absolute;
+            left: 55%;
+            top: 30px;
+            /* border: 1px solid red; */
+        }
+        
+@-webkit-keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px rgb(255, 78, 34), 0 0 35px rgb(255, 82, 2), 0 0 40px rgb(255, 82, 2), 0 0 50px rgb(255, 82, 2)F, 0 0 75px rgb(255, 82, 2);
+  }
+}
+
+        </style>
+</head>
+<body>
+    
+        <div class="loading">
+                <div class="lampFirst"></div>
+                <div class="lampSec"></div>
+                <div class="lampThree"></div>
+                <div class="light">
+                    <img class="first" src="images/light1.png" alt="">
+                    <img class="sec" src="images/light1.png" alt="">
+                    <img class="three" src="images/light1.png" alt="">
+                </div>
+                <!-- <a href="" class="front enter">
+                        <h1>前台</h1>
+                </a>
+                <a href="" class="back enter">
+                    <h1>後台</h1>
+                </a> -->
+            <p class="front"><a href="https://en.wikipedia.org/wiki/Blue">
+            前台
+          </a></p>
+          <p class="back"><a href="https://en.wikipedia.org/wiki/Blue">
+            後台
+          </a></p>
+        </div>
+        
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script>
+         // ///投射燈///////
+        $('.back').mouseover(function(){
+            $('.lampFirst').css('transform','perspective(25vh) rotateX(60deg) translateX('+20+'%)');
+            $('.lampSec').css('transform','perspective(25vh) rotateX(60deg) translateX('+20+'%)');
+            $('.lampThree').css('transform','perspective(25vh) rotateX(60deg) translateX('+20+'%)');
+
+        });
+        $('.back').mouseout(function(){
+            $('.lampFirst').css('transform','perspective(25vh) rotateX(60deg) translateX('+0+'%)');
+            $('.lampSec').css('transform','perspective(25vh) rotateX(60deg) translateX('+0+'%)');
+            $('.lampThree').css('transform','perspective(25vh) rotateX(60deg) translateX('+0+'%)');
+
+        });
+        $('.front').mouseover(function(){
+            $('.lampFirst').css('transform','perspective(25vh) rotateX(60deg) translateX('+ -20 +'%)');
+            $('.lampSec').css('transform','perspective(25vh) rotateX(60deg) translateX('+ -20 +'%)');
+            $('.lampThree').css('transform','perspective(25vh) rotateX(60deg) translateX('+ -20 +'%)');
+
+        });
+        $('.front').mouseout(function(){
+            $('.lampFirst').css('transform','perspective(25vh) rotateX(60deg) translateX('+0+'%)');
+            $('.lampSec').css('transform','perspective(25vh) rotateX(60deg) translateX('+0+'%)');
+            $('.lampThree').css('transform','perspective(25vh) rotateX(60deg) translateX('+0+'%)');
+
+        });
+        ////////////燈進去/////////
+        $('.front').mouseover(function(){
+		$('.light img').css('transform','perspective(25vh) rotateY(10deg) rotateX(10deg) rotateZ(30deg)');
+        });
+
+        $('.front').mouseout(function(){
+		$('.light img').css('transform','perspective(25vh) rotateX(0deg) translateX(0)');
+        });
+
+        // //////////燈出來/////////
+        $('.back').mouseover(function(){
+		$('.light img').css('transform','perspective(25vh) rotateY(10deg) rotateX(10deg) rotateZ(-30deg)');
+        });
+
+        $('.back').mouseout(function(){
+		$('.light img').css('transform','perspective(25vh) rotateX(0deg) translateX(0)');
+        });
+        </script>
+</body>
+</html>
