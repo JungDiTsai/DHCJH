@@ -16,10 +16,10 @@
         <i class="fas fa-times"></i>
         <h3>登入</h3>
         <div class="inputBox">
-                <i class="fas fa-user fa-1x"></i><input type="text" id="username" placeholder="User">
+            <i class="fas fa-user fa-1x"></i><input type="text" id="username" placeholder="User">
         </div>
         <div class="inputBox">
-                <i class="fas fa-key fa-1x"></i><input type="password" id="password" placeholder="Password">
+            <i class="fas fa-key fa-1x"></i><input type="password" id="password" placeholder="Password">
         </div>
         <button class="commonBtn">登入</button>
         <p><a class="showRegistered">註冊</a> / <a class="showForgotPSW">忘記密碼</a></p>
@@ -250,6 +250,11 @@
                 loginBox.style.setProperty('display',"block");
             }
         })
+        //螢幕寬度
+        let screenWidth = document.body.clientWidth;
+        if(screenWidth<=768){
+            
+        }
     </script>
 </body>
 </html>
