@@ -1,9 +1,54 @@
 *{
     outline:1px solid #f00;
+    margin: 0;
+    padding: 0;
 }
+@import "base/var";
+@import "base/color";
 @import "layout/grid";
 @media screen and (min-width:768px){
-    .mainNav{
-        
+    header{
+        position: fixed;
+        background-image: url("../images/navigator.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 0px -10px;
+        height: 225px;
+        width: 100%;
     }
+    .mainNav{
+        position: relative;
+        max-width:1200px;
+        text-align: center;
+        height: 110px;
+        a{text-decoration: none;
+        color: $fontColor;}
+        font-family: "wangHangMing"; 
+        font-size: 24px;
+        margin: auto;
+        li{
+        vertical-align:top;
+        display: inline-block;
+        margin: 0 30px;
+        margin-top: 25px;
+        border-image:url("../images/navTDD.png") 30 30 round;
+        border-bottom:0;
+        border-left:0;
+        border-right:0;
+        border-top: 10px;
+        }
+        h1{display: inline-block;}
+        img{width: 250px;
+        margin-top: 15px;}
+        i{color:$logoColor;}
+    }
+    .navMemCarBtn{
+        color: $logoColor;  
+        position: absolute;
+        top: 25px;
+        right: -80px;
+        margin:0px 10px;
+    }
+    // html{background-image: url("../images/navigator.png");
+    // background-repeat: no-repeat;}
 }
