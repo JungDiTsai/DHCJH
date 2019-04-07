@@ -9,6 +9,7 @@
         display: block;
         position: relative;
         
+        
         .font{
             position: relative;
             left: 0;
@@ -19,9 +20,9 @@
             transform: perspective(1200px) rotateY(0deg);
             transition: 1.5s;
             overflow: hidden;
-            border: 1px solid #000;
             box-sizing: border-box;
             backface-visibility:hidden;
+            box-shadow: 0 0 50px #6e6e6e;
             
             .topArea{
                 padding: 5PX;
