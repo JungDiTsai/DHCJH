@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/headerNav.css">
+    <title>台灣大舞台</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
+    <input type="checkbox" id=menu_control>
+    <header>
+         <!-- 放bar選單 -->
+         <label for="menu_control" class="menubtn" >
+                <div class="menuandcross"></div>
+        </label>
+        <nav class="mainNav">
+            <li class="mainNavCell"><a href="">電子花車客製</a></li>
+            <li class="mainNavCell"><a href="">客製宣傳單</a></li>
+            <h1 class="navLogo"><a href="header.html"><img src="images/logo.png" alt="台灣大舞台"></a></h1>
+            <li class="mainNavCell"><a href="">花車選美</a></li>
+            <li class="mainNavCell"><a href="">花車特色介紹</a></li>
+            <div class="navMemBtn"> 
+                <a href=""><i class="far fa-user-circle" href=></i></a> 
+            </div>
+        </nav>       
+    </header>
+    <div class="box"></div>
+    <!-- 登入燈箱 -->
+    <div class="loginBox">
+        <i class="fas fa-times"></i>
+        <h3>登入</h3>
+        <div class="inputBox">
+                <i class="fas fa-user fa-1x"></i><input type="text" id="username" placeholder="User">
+        </div>
+        <div class="inputBox">
+                <i class="fas fa-key fa-1x"></i><input type="password" id="password" placeholder="Password">
+        </div>
+        <button class="commonBtn">登入</button>
+        <p><a class="showRegistered">註冊</a> / <a class="showForgotPSW">忘記密碼</a></p>
+    </div>
+    <!-- 註冊燈箱 -->
+    <div class="registeredBox">
+        <i class="fas fa-times"></i>
+        <h3>立即註冊</h3>
+        <table>
+            <tr>
+                <th>會員帳號</th>
+                <td><input type="text"></td>
+            </tr>
+            <tr><td colspan="2" class="prompt"><span>此帳號已有人使用 !</span></td></tr>
+            <tr>
+                <th>會員密碼</th>
+                <td><input type="password"></td>
+            </tr>
+            <tr>
+                <th>會員姓名</th>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <th>會員電話</th>
+                <td><input type="tel"></td>
+            </tr>
+            <tr>
+                <th>會員信箱</th>
+                <td><input type="email"></td>
+            </tr>
+            <tr>
+                <th>性別</th>
+                <td>
+                    <label>
+                        <input type="radio" name="sex" value="">
+                        <i class="fas fa-venus fa-2x"></i>
+                    </label>
+                    <label>
+                        <input type="radio" name="sex" value="">
+                        <i class="fas fa-mars fa-2x"></i>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2"><input type="submit" value="註冊帳號" class="commonBtn"></th>
+            </tr>
+        </table>
+        <div><a class="backLogin">回到登入</a></div>
+    </div>
+    <!-- 忘記密碼燈箱 -->
+    <div class="forgotBox">
+        <i class="fas fa-times"></i>
+        <h3>忘記密碼</h3>
+        <p>請輸入您註冊時的會員信箱，我們會將新的密碼寄至您的信箱。</p>
+        <div>會員信箱<input type="email"></div>
+        <input type="submit" value="寄送密碼" class="commonBtn">
+        <div><a class="backLogin">回到登入</a></div>
+    </div>
+    <script>
+    /* 登入燈箱 JS*/
+        // 點擊關閉----------------------------
+        document.querySelector('.loginBox .fa-times').addEventListener('click', function () {
+            let loginBox = document.querySelector('.loginBox');
+            let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
+            if(style=="block"){
+                loginBox.style.setProperty('display',"none");
+            }
+        })
+        // 點擊註冊------------------------------
+        document.querySelector('.loginBox .showRegistered').addEventListener('click', function () {
+            // 隱藏登入燈箱
+            let loginBox = document.querySelector('.loginBox');
+            loginBox.style.setProperty('display',"none");
+            // 顯示註冊燈箱
+            let registeredBox = document.querySelector('.registeredBox');
+            let style = window.getComputedStyle(registeredBox, null).getPropertyValue('display');
+            if(style=="none"){
+                registeredBox.style.setProperty('display',"block");
+            }
+        })
+        // 點擊忘記密碼------------------------------
+        document.querySelector('.loginBox .showForgotPSW').addEventListener('click', function () {
+            // 隱藏登入燈箱
+            let loginBox = document.querySelector('.loginBox');
+            loginBox.style.setProperty('display',"none");
+            // 顯示忘記密碼燈箱
+            let forgotBox = document.querySelector('.forgotBox');
+            let style = window.getComputedStyle(forgotBox, null).getPropertyValue('display');
+            if(style=="none"){
+                forgotBox.style.setProperty('display',"block");
+            }  
+        })
+        // 點擊會員icon------------------------------
+        document.querySelector('.fa-user-circle').addEventListener('click', function () {
+            // 隱藏登入燈箱
+            let loginBox = document.querySelector('.loginBox');
+            loginBox.style.setProperty('display',"block");
+        })
+    </script>
+</body>
+</html>

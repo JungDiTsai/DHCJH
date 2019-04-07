@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/memberCenter.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
+    <!-- 登入燈箱 -->
+    <div class="loginBox">
+        <i class="fas fa-times"></i>
+        <h3>登入</h3>
+        <div class="inputBox">
+                <i class="fas fa-user fa-1x"></i><input type="text" id="username" placeholder="User">
+        </div>
+        <div class="inputBox">
+                <i class="fas fa-key fa-1x"></i><input type="password" id="password" placeholder="Password">
+        </div>
+        <button class="commonBtn">登入</button>
+        <p><a class="showRegistered">註冊</a> / <a class="showForgotPSW">忘記密碼</a></p>
+    </div>
+    <!-- 註冊燈箱 -->
+    <div class="registeredBox">
+        <i class="fas fa-times"></i>
+        <h3>立即註冊</h3>
+        <table>
+            <tr>
+                <th>會員帳號</th>
+                <td><input type="text"></td>
+            </tr>
+            <tr><td colspan="2" class="prompt"><span>此帳號已有人使用 !</span></td></tr>
+            <tr>
+                <th>會員密碼</th>
+                <td><input type="password"></td>
+            </tr>
+            <tr>
+                <th>會員姓名</th>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <th>會員電話</th>
+                <td><input type="tel"></td>
+            </tr>
+            <tr>
+                <th>會員信箱</th>
+                <td><input type="email"></td>
+            </tr>
+            <tr>
+                <th>性別</th>
+                <td>
+                    <label>
+                        <input type="radio" name="sex" value="">
+                        <i class="fas fa-venus fa-2x"></i>
+                    </label>
+                    <label>
+                        <input type="radio" name="sex" value="">
+                        <i class="fas fa-mars fa-2x"></i>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2"><input type="submit" value="註冊帳號" class="commonBtn"></th>
+            </tr>
+        </table>
+        <div><a class="backLogin">回到登入</a></div>
+    </div>
+    <!-- 忘記密碼燈箱 -->
+    <div class="forgotBox">
+        <i class="fas fa-times"></i>
+        <h3>忘記密碼</h3>
+        <p>請輸入您註冊時的會員信箱，我們會將新的密碼寄至您的信箱。</p>
+        <div>會員信箱<input type="email"></div>
+        <input type="submit" value="寄送密碼" class="commonBtn">
+        <div><a class="backLogin">回到登入</a></div>
+    </div>
+    <!-- 並排 -->
+    <div class="wrap">
+        <!-- 會員中心側邊攔 -->
+        <div id="memberNav" class="col-md-3">
+            <div class="memberImg max_view">
+                <label for="memberImgFile">
+                    <img src="images/member2.jpg" alt="">
+                </label>
+            </div>
+            <h3 class="max_view">李三十四</h3>
+            <ul>
+                <li class="here"><a href="">帳號管理</a></li>
+                <li><a href="memberOrder.html">訂單管理</a></li>
+                <li><a href="">我的發表</a></li>
+                <li><a href="">我的收藏</a></li>
+                <li><a href="">宣傳單管理</a></li>
+                <li><a href="">我的優惠券</a></li>
+                <li><a href="">登出</a></li>
+            </ul>
+        </div>
+        <!-- 會員中心帳號管理內容開始 -->
+        <div id="memberData" class="col-md-9">
+            <div class="memberImg min_view">
+                <label for="memberImgFile">
+                    <img src="images/member2.jpg" alt="">
+                </label>
+            </div>
+            <input type="file" name="memberImg" id="memberImgFile">
+            <h3 class="min_view">李三十四</h3>
+            <form action="">
+                <fieldset>
+                    <legend>帳號管理</legend>
+                    <table>
+                        <tr>
+                            <th>會員帳號</th>
+                            <td><input type="text" value="abcd1234"></td>
+                        </tr>
+                        <tr>
+                            <th>會員密碼</th>
+                            <td>******************<i class="fas fa-pen"></i></td>
+                        </tr>
+                        <tr class="changePSW" style="opacity: 0;position: absolute;">
+                            <td>舊密碼</td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr class="changePSW" style="opacity: 0;position: absolute;">
+                            <td>新密碼</td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr class="changePSW" style="opacity: 0;position: absolute;">
+                            <td>確認新密碼</td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <th>會員信箱</th>
+                            <td><input type="email" value="abcd1234@gmail.com"></td>
+                        </tr>
+                        <tr>
+                            <th>會員電話</th>
+                            <td><input type="tel" value="0911111111"></td>
+                        </tr>
+                        <tr>
+                            <th>會員姓名</th>
+                            <td><input type="text" value="李三十四"></td>
+                        </tr>
+                        <tr>
+                            <th colspan="2"><input type="submit" value="確定修改" class="commonBtn"></th>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script>
+        // 點擊會員密碼修改筆----------------
+        document.querySelector('.fa-pen').addEventListener('click', function () {
+            let changePSWs = document.querySelectorAll('.changePSW')
+            for (let key in changePSWs) {
+                let style = changePSWs[key].style.opacity;
+                if (style == "0") {
+                    changePSWs[key].style.opacity = '1';
+                    changePSWs[key].style.position = 'relative';
+                } else {
+                    changePSWs[key].style.opacity = '0';
+                    changePSWs[key].style.position = 'absolute';
+                }
+            }
+        })
+
+        /* 登入燈箱 JS*/
+        // 點擊關閉----------------------------
+        document.querySelector('.loginBox .fa-times').addEventListener('click', function () {
+            let loginBox = document.querySelector('.loginBox');
+            let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
+            if(style=="block"){
+                loginBox.style.setProperty('display',"none");
+            }
+        })
+        // 點擊註冊------------------------------
+        document.querySelector('.loginBox .showRegistered').addEventListener('click', function () {
+            // 隱藏登入燈箱
+            let loginBox = document.querySelector('.loginBox');
+            loginBox.style.setProperty('display',"none");
+            // 顯示註冊燈箱
+            let registeredBox = document.querySelector('.registeredBox');
+            let style = window.getComputedStyle(registeredBox, null).getPropertyValue('display');
+            if(style=="none"){
+                registeredBox.style.setProperty('display',"block");
+            }
+        })
+        // 點擊忘記密碼------------------------------
+        document.querySelector('.loginBox .showForgotPSW').addEventListener('click', function () {
+            // 隱藏登入燈箱
+            let loginBox = document.querySelector('.loginBox');
+            loginBox.style.setProperty('display',"none");
+            // 顯示忘記密碼燈箱
+            let forgotBox = document.querySelector('.forgotBox');
+            let style = window.getComputedStyle(forgotBox, null).getPropertyValue('display');
+            if(style=="none"){
+                forgotBox.style.setProperty('display',"block");
+            }
+        })
+
+        /* 註冊燈箱 JS*/
+        // 點擊關閉----------------------------
+        document.querySelector('.registeredBox .fa-times').addEventListener('click',function(){
+            let registeredBox = document.querySelector('.registeredBox');
+            let style = window.getComputedStyle(registeredBox, null).getPropertyValue('display');
+            if(style=="block"){
+                registeredBox.style.setProperty('display',"none");
+            }
+        })
+        // 點擊回到登入----------------------------
+        document.querySelector('.registeredBox .backLogin').addEventListener('click',function(){
+            // 隱藏註冊燈箱
+            let registeredBox = document.querySelector('.registeredBox');
+            registeredBox.style.setProperty('display',"none");
+            // 顯示登入燈箱
+            let loginBox = document.querySelector('.loginBox');
+            let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
+            if(style=="none"){
+                loginBox.style.setProperty('display',"block");
+            }
+        })
+
+        /* 忘記密碼燈箱 JS*/
+        // 點擊關閉----------------------------
+        document.querySelector('.forgotBox .fa-times').addEventListener('click',function(){
+            let forgotBox = document.querySelector('.forgotBox');
+            let style = window.getComputedStyle(forgotBox, null).getPropertyValue('display');
+            if(style=="block"){
+                forgotBox.style.setProperty('display',"none");
+            }
+        })
+        // 點擊回到登入----------------------------
+        document.querySelector('.forgotBox .backLogin').addEventListener('click',function(){
+            // 隱藏忘記密碼燈箱
+            let forgotBox = document.querySelector('.forgotBox');
+            forgotBox.style.setProperty('display',"none");
+            // 顯示登入燈箱
+            let loginBox = document.querySelector('.loginBox');
+            let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
+            if(style=="none"){
+                loginBox.style.setProperty('display',"block");
+            }
+        })
+    </script>
+</body>
+</html>

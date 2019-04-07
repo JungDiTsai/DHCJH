@@ -1,0 +1,74 @@
+#memberData{
+    h3{
+        margin-top:25px;
+        font-weight: bold;
+        text-align: center;
+        font-size: $thrTitleWord;
+    }
+    table{
+        margin: auto;
+        tr{
+            border-bottom: 1px solid #000;
+            th{padding: 10px 10px;
+               text-align: center;
+
+               input[type="submit"]{
+                   width: 100px;
+                   height: 50px;
+                   border-radius: 5px;
+               }
+            }
+            td{     
+                padding: 10px 10px; 
+                input{
+                    border: none;
+                    &:hover{
+                        outline: 1px solid #faa;
+                    }
+                }
+                i{cursor: pointer;}
+                i:hover{
+                    color: #faa;
+                }
+            }
+       }
+       .changePSW{
+           font-size: 14px;
+           color:#666;
+           text-align: right;
+           background: #faa;
+           z-index: -1;
+
+       }
+       tr:last-child{
+        border-bottom: none;
+       }
+    }
+}
+.memberImg{
+    margin: 50px auto 0;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    img{
+        cursor: pointer;
+        width: 160px;
+    }
+    &:hover{
+        transform: scale(1.05);
+    }
+}
+    @media screen and (min-width:768px) {
+        fieldset{
+
+            width: 50%;
+            margin:50px auto 0;
+
+            legend{
+                font-size: 21px;
+            }
+        }
+    }
