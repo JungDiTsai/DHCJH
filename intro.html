@@ -4,41 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/intro.css">
+    <!-- font awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <title>咱的故事</title>
-</head>
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <style>
+       
+    </style>
+    </head>
 <body>
     <input type="checkbox" id=menu_control>
-    <header>
-         <!-- 放bar選單 -->
-         <label for="menu_control" class="menubtn" >
+    <header>    
+        <!-- 放bar選單 -->
+        <label for="menu_control" class="menubtn" >
                 <div class="menuandcross"></div>
         </label>
         <nav class="mainNav">
             <li class="mainNavCell"><a href="">電子花車客製</a></li>
-            <li class="mainNavCell"><a href="">客製宣傳單</a></li>
-            <h1 class="navLogo"><a href="header.html"><img src="images/logo.png" alt="台灣大舞台"></a></h1>
+            <li class="mainNavCell"><a href="flyer.html">客製宣傳單</a></li>
+            <h1 class="navLogo"><a href="index.html"><img src="images/logo.png" alt="台灣大舞台"></a></h1>
             <li class="mainNavCell"><a href="">花車選美</a></li>
             <li class="mainNavCell"><a href="">花車特色介紹</a></li>
             <div class="navMemBtn"> 
-                <a href=""><i class="far fa-user-circle" href=></i></a> 
+                <i class="far fa-user-circle"></i>
             </div>
         </nav>       
     </header>
+
+    
+    
     <div class="box"></div>
     <!-- 登入燈箱 -->
     <div class="loginBox">
         <i class="fas fa-times"></i>
         <h3>登入</h3>
         <div class="inputBox">
-                <i class="fas fa-user fa-1x"></i><input type="text" id="username" placeholder="User">
+            <i class="fas fa-user fa-1x"></i><input type="text" id="username" placeholder="User">
         </div>
         <div class="inputBox">
-                <i class="fas fa-key fa-1x"></i><input type="password" id="password" placeholder="Password">
+            <i class="fas fa-key fa-1x"></i><input type="password" id="password" placeholder="Password">
         </div>
-        <button class="commonBtn">登入</button>
+        <a href="memberCenter.html"><button class="commonBtn">登入</button></a>
         <p><a class="showRegistered">註冊</a> / <a class="showForgotPSW">忘記密碼</a></p>
     </div>
     <!-- 註冊燈箱 -->
@@ -95,8 +105,68 @@
         <input type="submit" value="寄送密碼" class="commonBtn">
         <div><a class="backLogin">回到登入</a></div>
     </div>
+    <div class="clear"></div>
+    <!-- beauty pageant -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <!-- -----團隊介紹---------------- --> 
+    
+    <div class="introTime">
+        <h2 class="titleBgi introTimeTitle">團隊介紹</h2>   
+       <div class="introStage">
+       
+           <div class="people">
+               <img class="peopleFirst" src="../images/intro/intropeople1-1.png" alt="">
+                <img class="peopleSec" src="../images/intro/intropeople2-1.png" alt="">
+                <img class="peopleThree" src="../images/intro/intropeople3-1.png" alt="">
+                <img class="peopleFourth" src="../images/intro/intropeople4-1.png" alt="">
+                <img class="peopleFiv" src="../images/intro/intropeople5-1.png" alt="">
+
+            </div>
+            <!-- 跑馬燈 -->
+            <div class="led">
+                <marquee direction="right" height="30" scrollamount="5" behavior="alternate">團隊介紹</marquee>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+   
     <script>
-    /* 登入燈箱 JS*/
+        
+        /* 登入燈箱 JS*/
+        // 點擊icon開啟登入燈箱----------------------------
+        document.querySelector('.fa-user-circle').addEventListener('click', function (e){
+            // 顯示登入燈箱
+            let loginBox = document.querySelector('.loginBox');
+            let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
+            if(style=="block"){
+                loginBox.style.setProperty('display',"none");
+                e.target.style.setProperty('color',"#2cffff");
+            }else{
+                loginBox.style.setProperty('display',"block");
+                e.target.style.setProperty('color',"rgb(252, 211, 28)");
+            }
+        })
         // 點擊關閉----------------------------
         document.querySelector('.loginBox .fa-times').addEventListener('click', function () {
             let loginBox = document.querySelector('.loginBox');
@@ -127,17 +197,58 @@
             let style = window.getComputedStyle(forgotBox, null).getPropertyValue('display');
             if(style=="none"){
                 forgotBox.style.setProperty('display',"block");
-            }  
+            }
         })
-        // 點擊會員icon------------------------------
-        document.querySelector('.fa-user-circle').addEventListener('click', function () {
-            // 隱藏登入燈箱
+
+        /* 註冊燈箱 JS*/
+        // 點擊關閉----------------------------
+        document.querySelector('.registeredBox .fa-times').addEventListener('click',function(){
+            let registeredBox = document.querySelector('.registeredBox');
+            let style = window.getComputedStyle(registeredBox, null).getPropertyValue('display');
+            if(style=="block"){
+                registeredBox.style.setProperty('display',"none");
+            }
+        })
+        // 點擊回到登入----------------------------
+        document.querySelector('.registeredBox .backLogin').addEventListener('click',function(){
+            // 隱藏註冊燈箱
+            let registeredBox = document.querySelector('.registeredBox');
+            registeredBox.style.setProperty('display',"none");
+            // 顯示登入燈箱
             let loginBox = document.querySelector('.loginBox');
-            loginBox.style.setProperty('display',"block");
+            let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
+            if(style=="none"){
+                loginBox.style.setProperty('display',"block");
+            }
         })
+
+        /* 忘記密碼燈箱 JS*/
+        // 點擊關閉----------------------------
+        document.querySelector('.forgotBox .fa-times').addEventListener('click',function(){
+            let forgotBox = document.querySelector('.forgotBox');
+            let style = window.getComputedStyle(forgotBox, null).getPropertyValue('display');
+            if(style=="block"){
+                forgotBox.style.setProperty('display',"none");
+            }
+        })
+        // 點擊回到登入----------------------------
+        document.querySelector('.forgotBox .backLogin').addEventListener('click',function(){
+            // 隱藏忘記密碼燈箱
+            let forgotBox = document.querySelector('.forgotBox');
+            forgotBox.style.setProperty('display',"none");
+            // 顯示登入燈箱
+            let loginBox = document.querySelector('.loginBox');
+            let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
+            if(style=="none"){
+                loginBox.style.setProperty('display',"block");
+            }
+        })
+        
+        //螢幕寬度
+        let screenWidth = document.body.clientWidth;
+        if(screenWidth<=768){
+            
+        }
     </script>
-    <div class="brandWrap"></div>
-    
-    
 </body>
 </html>
