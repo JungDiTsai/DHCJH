@@ -1,0 +1,31 @@
+@keyframes neon {
+    0%,
+    100% {
+      text-shadow: 0 0 1vw #FA1C16, 0 0 2vw #FA1C16, 0 0 5vw #FA1C16, 0 0 5vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
+      color: #FED128;
+    }
+    50% {
+      text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
+      color: #fff;
+    }
+  }
+
+@keyframes lightShow 
+{
+    0% { border-image:url("../images/navTDD.png")36 repeat;}
+  100% { border-image:url("../images/navTDL.png")36 repeat;}
+}
+@keyframes jitter{
+  0%{transform: rotateZ(0deg)}
+  25% {transform: rotateZ(-15deg)}
+  75%{transform: rotateZ(15deg)}
+  100% { transform: rotateZ(0deg)}
+}
+@keyframes headerNeon 
+{
+    0% {filter:drop-shadow(3px 2px 8px rgba(245, 132, 132, 0.7));}
+    25%{filter:drop-shadow(3px -2px 8px rgba(248, 202, 74, 0.7));}
+    50%{filter:drop-shadow(-3px -2px 8px rgba(177, 255, 132, 0.7));}
+    75%{filter:drop-shadow(-3px 2px 8px rgba(255, 255, 255, 0.7));}
+  100% {filter:drop-shadow(3px 2px 8px rgba(59, 78, 250, 0.7));}
+}

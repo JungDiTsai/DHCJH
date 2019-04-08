@@ -1,3 +1,20 @@
+*{
+    // outline:1px solid #f00;
+    margin: 0;
+    padding: 0;
+}
+@import "base/_var";
+@import "base/color";
+@import "components/Registered";
+@import"components/login";
+@import"components/forgotPSW";
+@import "layout/grid";
+@keyframes lightShow 
+{
+    0% { border-image:url("../images/navTDD.png")36 repeat;}
+  100% { border-image:url("../images/navTDL.png")36 repeat;}
+}
+
 .menuandcross{
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 20%, 0% 20%, 0 40%, 100% 40%, 100% 60%, 0% 60%, 0% 80%, 100% 80%, 100% 100%, 0 100%);
     clip-path: polygon(0% 0%, 100% 0%, 100% 20%, 0% 20%, 0 40%, 100% 40%, 100% 60%, 0% 60%, 0% 80%, 100% 80%, 100% 100%, 0 100%);
@@ -9,7 +26,6 @@
     position: relative;
     z-index: 2;
     transform: scale(0.8);
-    cursor: pointer;
 }
 #menu_control{
     position: absolute;
@@ -81,13 +97,7 @@
         top: 16px;
         right: 84px;
         font-size: 44px;
-        i{
-            color:$logoColor;
-            cursor: pointer;
-            &:hover{
-                animation: jitter 1.5s linear infinite;
-            }
-        }
+        i{color:$logoColor;}
     }
 }
 header{
@@ -98,8 +108,7 @@ header{
     height: 80px;
     width: 100%;
     top: 0px;
-    z-index: 1;
-    animation: headerNeon 1s infinite; 
+    z-index: 100;
 }
 @media screen and (min-width:1200px){
 
