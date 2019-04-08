@@ -9,11 +9,7 @@
 @import "abstracts/_animations.scss";
 
 // 引入元件
-@import "components/_buttons.scss";
 @import "components/_memberTopNav.scss";
-@import "components/_login.scss"; //登入燈箱
-@import "components/_registered.scss";  //註冊燈箱
-@import "components/_forgotPSW.scss";  //忘記密碼燈箱
 
 //引入頁面
 @import "pages/_memberOrder.scss";

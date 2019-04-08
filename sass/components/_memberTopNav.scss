@@ -1,3 +1,4 @@
+.wrap{margin-top:80px }
 .min_view{
   display: block;
 }
@@ -75,13 +76,16 @@
     .wrap{
         display: flex;
         flex-wrap: nowrap;
+        position: relative;
     }
     #memberNav{
+        position: sticky;
+        top:0;
         background: $memberBackColor;
         line-height: $lineHeight;
         box-sizing: border-box;
         padding: 0;
-        height: 100vh;
+        
         h3{
             margin-top:25px;
             font-size: $thrTitleWord;
