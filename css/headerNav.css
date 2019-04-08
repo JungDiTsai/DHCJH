@@ -1,0 +1,630 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "wangHangMing";
+  src: url("../font/WCL-02.ttf");
+}
+
+.registeredBox {
+  display: none;
+  max-width: 500px;
+  height: 500px;
+  background: #105229;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 1;
+  border-radius: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0 0 10px #fff;
+          box-shadow: 0 0 10px #fff;
+  padding: 25px;
+  text-align: center;
+}
+
+.registeredBox .fa-times {
+  color: #fff;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.registeredBox .fa-times:hover {
+  color: #f3d217;
+}
+
+.registeredBox h3 {
+  margin: 0;
+  font-size: 30px;
+  color: #fff;
+}
+
+.registeredBox table {
+  width: 100%;
+  margin: 20px auto;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.registeredBox table .prompt {
+  font-size: 12px;
+  color: #e26f6f;
+}
+
+.registeredBox table td, .registeredBox table th {
+  padding: 5px;
+}
+
+.registeredBox table .commonBtn {
+  margin: 10px;
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.registeredBox table label {
+  margin-right: 30px;
+}
+
+.registeredBox table label input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.registeredBox table label input:checked + i {
+  color: yellow;
+}
+
+.registeredBox table label i:hover {
+  cursor: pointer;
+}
+
+.registeredBox div {
+  margin-top: 50px;
+  color: #fff;
+}
+
+.registeredBox div input {
+  margin-left: 20px;
+}
+
+.registeredBox div a {
+  cursor: pointer;
+}
+
+.registeredBox div a:hover {
+  color: #f3d217;
+}
+
+.loginBox {
+  display: none;
+  width: 300px;
+  height: 350px;
+  background: #105229;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 1;
+  border-radius: 10px;
+  padding: 30px 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  -webkit-box-shadow: 0 0 10px #fff;
+          box-shadow: 0 0 10px #fff;
+}
+
+.loginBox .fa-times {
+  color: #fff;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.loginBox .fa-times:hover {
+  color: #f3d217;
+}
+
+.loginBox h3 {
+  margin-top: 0px;
+  font-size: 30px;
+  color: #fff;
+}
+
+.loginBox .inputBox {
+  background: #2d3631;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 5px 10px;
+}
+
+.loginBox .inputBox i {
+  color: #fff;
+}
+
+.loginBox .inputBox input {
+  height: 20px;
+  margin-left: 10px;
+  background: #2d3631;
+  outline: none;
+  border: none;
+  color: #fff;
+}
+
+.loginBox .commonBtn {
+  margin-top: 20px;
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.loginBox p {
+  margin-top: 30px;
+  color: #fff;
+}
+
+.loginBox p a {
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+}
+
+.loginBox p a:hover {
+  color: #f3d217;
+}
+
+.forgotBox {
+  display: none;
+  width: 300px;
+  height: 400px;
+  background: #105229;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 1;
+  border-radius: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0 0 10px #fff;
+          box-shadow: 0 0 10px #fff;
+  padding: 25px;
+  text-align: center;
+}
+
+.forgotBox .fa-times {
+  color: #fff;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.forgotBox .fa-times:hover {
+  color: #f3d217;
+}
+
+.forgotBox h3 {
+  margin: 0;
+  font-size: 30px;
+  color: #fff;
+}
+
+.forgotBox p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #d8d87e;
+}
+
+.forgotBox div {
+  margin-top: 50px;
+  color: #fff;
+}
+
+.forgotBox div input {
+  margin-left: 20px;
+}
+
+.forgotBox div a {
+  cursor: pointer;
+}
+
+.forgotBox div a:hover {
+  color: #f3d217;
+}
+
+.forgotBox .commonBtn {
+  margin-top: 30px;
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.col-1 {
+  width: 8.333333%;
+}
+
+.col-2 {
+  width: 16.666666%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.333333%;
+}
+
+.col-5 {
+  width: 41.666666%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.333333%;
+}
+
+.col-8 {
+  width: 66.666666%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.333333%;
+}
+
+.col-11 {
+  width: 91.666666%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .col-md-1 {
+    width: 8.333333%;
+  }
+  .col-md-2 {
+    width: 16.666666%;
+  }
+  .col-md-3 {
+    width: 25%;
+  }
+  .col-md-4 {
+    width: 33.333333%;
+  }
+  .col-md-5 {
+    width: 41.666666%;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  .col-md-7 {
+    width: 58.333333%;
+  }
+  .col-md-8 {
+    width: 66.666666%;
+  }
+  .col-md-9 {
+    width: 75%;
+  }
+  .col-md-10 {
+    width: 83.333333%;
+  }
+  .col-md-11 {
+    width: 91.666666%;
+  }
+  .col-md-12 {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .col-lg-1 {
+    width: 8.333333%;
+  }
+  .col-lg-2 {
+    width: 16.666666%;
+  }
+  .col-lg-3 {
+    width: 25%;
+  }
+  .col-lg-4 {
+    width: 33.333333%;
+  }
+  .col-lg-5 {
+    width: 41.666666%;
+  }
+  .col-lg-6 {
+    width: 50%;
+  }
+  .col-lg-7 {
+    width: 58.333333%;
+  }
+  .col-lg-8 {
+    width: 66.666666%;
+  }
+  .col-lg-9 {
+    width: 75%;
+  }
+  .col-lg-10 {
+    width: 83.333333%;
+  }
+  .col-lg-11 {
+    width: 91.666666%;
+  }
+  .col-lg-12 {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .col-xl-1 {
+    width: 8.333333%;
+  }
+  .col-xl-2 {
+    width: 16.666666%;
+  }
+  .col-xl-3 {
+    width: 25%;
+  }
+  .col-xl-4 {
+    width: 33.333333%;
+  }
+  .col-xl-5 {
+    width: 41.666666%;
+  }
+  .col-xl-6 {
+    width: 50%;
+  }
+  .col-xl-7 {
+    width: 58.333333%;
+  }
+  .col-xl-8 {
+    width: 66.666666%;
+  }
+  .col-xl-9 {
+    width: 75%;
+  }
+  .col-xl-10 {
+    width: 83.333333%;
+  }
+  .col-xl-11 {
+    width: 91.666666%;
+  }
+  .col-xl-12 {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes lightShow {
+  0% {
+    border-image: url("../images/navTDD.png") 36 repeat;
+  }
+  100% {
+    border-image: url("../images/navTDL.png") 36 repeat;
+  }
+}
+
+@keyframes lightShow {
+  0% {
+    -o-border-image: url("../images/navTDD.png") 36 repeat;
+       border-image: url("../images/navTDD.png") 36 repeat;
+  }
+  100% {
+    -o-border-image: url("../images/navTDL.png") 36 repeat;
+       border-image: url("../images/navTDL.png") 36 repeat;
+  }
+}
+
+.menuandcross {
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 20%, 0% 20%, 0 40%, 100% 40%, 100% 60%, 0% 60%, 0% 80%, 100% 80%, 100% 100%, 0 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 20%, 0% 20%, 0 40%, 100% 40%, 100% 60%, 0% 60%, 0% 80%, 100% 80%, 100% 100%, 0 100%);
+  -webkit-transition: .3s .2s;
+  transition: .3s .2s;
+  width: 44px;
+  height: 44px;
+  background-color: #ccc;
+  display: block;
+  position: relative;
+  z-index: 2;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+#menu_control {
+  position: absolute;
+  opacity: 0;
+  z-index: -2;
+}
+
+#menu_control:checked ~ header .menuandcross {
+  -webkit-clip-path: polygon(20% 0%, 50% 30%, 80% 0%, 100% 20%, 70% 50%, 100% 80%, 80% 100%, 50% 70%, 20% 100%, 0% 80%, 30% 50%, 0% 20%);
+  clip-path: polygon(20% 0%, 50% 30%, 80% 0%, 100% 20%, 70% 50%, 100% 80%, 80% 100%, 50% 70%, 20% 100%, 0% 80%, 30% 50%, 0% 20%);
+  -webkit-transition: .3s .2s;
+  transition: .3s .2s;
+}
+
+#menu_control:checked ~ header .mainNav {
+  top: 80px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#menu_control:checked ~ header .mainNav img {
+  top: 10px;
+}
+
+.menubtn {
+  display: block;
+  width: 44px;
+  position: absolute;
+  height: 44px;
+  top: 16px;
+  right: 20px;
+}
+
+.menubtn::after {
+  display: block;
+  content: "";
+  width: 44px;
+  height: 44px;
+  position: absolute;
+}
+
+.mainNav {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  top: calc(-100vh - 80px);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: #333;
+}
+
+.mainNav {
+  padding-top: 25px;
+  font-size: 24px;
+  font-family: "wangHangMing";
+}
+
+.mainNav img {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: auto;
+  height: 60px;
+}
+
+.mainNav a {
+  text-decoration: none;
+  color: #ffffbd;
+}
+
+.mainNav li {
+  margin: 30px auto;
+  left: 0;
+  right: 0;
+  width: 150px;
+  text-align: center;
+  display: block;
+  border-bottom: 30px solid  transparent;
+  border-bottom-width: 30px;
+  -o-border-image: url("../images/navTDD.png") 36 repeat;
+     border-image: url("../images/navTDD.png") 36 repeat;
+}
+
+.mainNav .navMemBtn {
+  position: fixed;
+  top: 16px;
+  right: 84px;
+  font-size: 44px;
+}
+
+.mainNav .navMemBtn i {
+  color: #2cffff;
+}
+
+header {
+  position: fixed;
+  background-image: url("../images/navigatorM.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 80px;
+  width: 100%;
+  top: 0px;
+  z-index: 100;
+}
+
+@media screen and (min-width: 1200px) {
+  .menubtn {
+    display: none;
+  }
+  header {
+    background-image: url("../images/navigator.png");
+    background-size: cover;
+    background-position: center center;
+    height: 225px;
+    top: -20px;
+  }
+  .mainNav {
+    padding: 0;
+    background-color: initial;
+    top: 20px;
+    position: relative;
+    max-width: 1200px;
+    text-align: center;
+    height: 110px;
+    margin: auto;
+  }
+  .mainNav li {
+    width: initial;
+    vertical-align: top;
+    display: inline-block;
+    margin: 0 35px;
+    margin-top: 25px;
+    border-bottom: 30px solid transparent;
+    -o-border-image: url("../images/navTDD.png") 36 repeat;
+       border-image: url("../images/navTDD.png") 36 repeat;
+  }
+  .mainNav li a {
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  .mainNav li:hover {
+    color: #2cffff;
+    -webkit-animation: lightShow .3s infinite alternate;
+            animation: lightShow .3s infinite alternate;
+  }
+  .mainNav li:hover a {
+    color: #2cffff;
+    -webkit-filter: drop-shadow(3px -5px 8px rgba(255, 255, 255, 0.7));
+            filter: drop-shadow(3px -5px 8px rgba(255, 255, 255, 0.7));
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  .mainNav h1 {
+    display: inline-block;
+  }
+  .mainNav img {
+    width: 225px;
+    margin-top: 10px;
+    position: initial;
+    height: auto;
+  }
+  .mainNav i {
+    color: #2cffff;
+  }
+  .mainNav .navMemBtn {
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    margin: 0px 10px;
+    font-size: 24px;
+  }
+}
+/*# sourceMappingURL=headerNav.css.map */
