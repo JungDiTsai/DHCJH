@@ -1,36 +1,3 @@
-<<<<<<< HEAD
-
-.customizedBg{
-    padding-top: 20px;
-    background-image: url(/images/customized/customized_bg.jpg);
-    background-repeat: repeat;
-    background-position: center;
-    width: 100%;
-    height: 100vh;
-}
-.customizedTitle{
-    background-image: url(/images/customized/title_bg.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    margin: auto;
-    width: 300px;
-    height: 100px;
-}
-.customizedStep{
-    padding-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .customizedStepSelectedImg{
-        width: 120px;
-    }
-    .customizedStepImg{
-        width: 80px;
-    }
-}
-.customizedStepStageStep{
-    
-=======
 // mobile
 // bg
 .custBg{
@@ -1239,5 +1206,4 @@
 //顯示與不顯示
 .disN{
     display: none;
->>>>>>> 480fb7477d0c776008ba632183a32b21414a2d57
 }
