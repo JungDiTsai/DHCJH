@@ -1,18 +1,23 @@
 #memberOrder{
-
+        background: url(../images/bkground/member_bg.jpg) center;
+        background-size: cover;
+        min-height: 100vh;
+        padding: 10px;
+        padding-top: 50px;
     .allOrderBox{
         width: 80%;
         background: #178cf6;
-        margin:30px auto;
+        margin:auto;
         border-radius: 15px;
-        padding: 20px 10px;
-
+        padding: 10px;
+        margin-bottom: 30px;
         h3{
             font-size: $thrTitleWord;
             color:#fff;
             text-align: center;
         }
         table{
+            background: #fff;
             width: 100%;
             border:1px solid #000;
             margin: auto;
@@ -20,6 +25,7 @@
                 padding: 0 10px;
                 font-size: 14px;
                 border-bottom: 1px solid #6e6e6e;
+                background: rgb(105, 212, 33);
             }
             td{
                 text-align: center;
@@ -31,27 +37,100 @@
     .orderDetails{
         width: 90%;
         box-sizing: border-box;
-        background: #768397;
-        margin:auto;
-        border-radius: 15px;
-        padding: 20px 10px;
+        margin:0 auto 50px;
+        background: #fff;
+        box-shadow: 0px 0px  3px #666;
+        
+        .bckColor{
+            padding: 20px;
+            background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
 
-        h4{
-            color:#ffffff;
-            font-size: 24px;
-            text-align: center;
-            border-bottom:2px solid #6e6e6e;
-        }
-        .detailContent{
-            display: flex;
-            flex-wrap: wrap;
-            padding: 10px 10px;
-            border-bottom:2px solid #6e6e6e;
-            .big{
-                text-shadow: 0 0 1px #000;
-                font-size: 21px;
-                color:#faf;
+            h4{
+                color:#ffffff;
+                font-size: 24px;
+                text-align: center;
+                border: 2px solid #fff;
+                border-radius: 30px;
+    
+            }
+            .detailContent{
+                display: flex;
+                flex-wrap: wrap;
+                padding: 10px 10px;
+                 color:#fff;
+                .big{
+                    text-shadow: 0 0 1px #000;
+                    font-size: 21px;
+                    color:rgb(255, 243, 71);
+                }
+            }
+            .detailHost{
+                display: flex;
+                flex-wrap: wrap;
+                padding: 10px 10px;
+                color:#fff;
             }
         }
+
+        .detailStage{
+            padding: 20px;
+            table{            
+                width: 100%;
+                margin-top: 20px;
+                th{
+                    box-sizing: border-box;
+                    background: rgb(68, 170, 42);
+                    color:#fff;
+                    border: 1px solid #000;
+                    
+                }
+                td{
+                    padding: 0px 5px;
+                    border: 1px solid #000;
+                    text-align: center;
+                    div>img{
+                        width: 100%;
+                    }
+                }
+                td[colspan="3"]{
+                    background: #000;
+                }
+            }
+            .buttonArea{
+                width: 50%;
+                display: flex;
+                text-align: center;
+                justify-content: space-between;
+                margin: auto;
+                
+                button:last-of-type{
+                    background-image: linear-gradient(to top, #fddb92 0%, #ecfa25 100%);
+                    box-shadow: 0px 2px 2px #888;
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    margin-top:5px; 
+                    cursor: pointer;
+                    &:hover{
+                        background-image: linear-gradient(to bottom, #cfa54a 0%, #faec25 100%);
+                    }
+                }
+                button:first-of-type{
+                    box-shadow: 0px 2px 2px #888;
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    margin-top:5px; 
+                    cursor: pointer;
+                    background-image: linear-gradient(to top, #d299c2 0%, #b84a4a 100%);
+                    &:hover{
+                        background-image: linear-gradient(to top, #e4abd4 0%, #ff1010 100%);
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:768px) {
+    #memberOrder{
+        padding-top: 150px;
     }
 }
