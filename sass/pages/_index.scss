@@ -479,6 +479,8 @@
 
 
   //首頁第二屏 wrapper （客製花車配件介紹）
+
+  
   #carEquipmentsIntroWrap{
     padding-top:$paddingTop; 
     position: relative;
@@ -488,20 +490,22 @@
     background-position: center;
     background-size: cover;
     z-index: -2;
-    
     min-height: 600px;
     //outline: 5px red solid;
-  }
-  #equipCarStage{
-    //outline: 5px red solid;
-    position: relative;
-    margin-top: 10px;
-    img{
-      width: 100%;
-    }
     .commonBtn{
       margin: -30px auto 30px auto;
       
+    }
+  }
+  #equipCarStage{
+    outline: 5px red solid;
+    position: relative;
+    text-align: center;
+    
+    img{
+      width: 280px;
+      margin: auto;
+      outline: 5px rgb(0, 255, 106) solid; 
     }
     #pipe{
       width:8px;
@@ -514,8 +518,47 @@
       top: 0;
       bottom: 0;
     }
-  }
+    #hoverArea{
+      width: 100%;
+      z-index:10;
+      position: absolute;
+      z-index:100000px;
+      text-align: center;
   
+      right: 0;
+      top: -48px;
+      outline: 5px rgb(0, 255, 157) solid;
+   
+      #hoverAreaStageInner{
+        margin: auto;
+        width: 280px;
+        height: 258px;
+        outline: 15px rgb(0, 89, 255) solid;
+        z-index:100000px;
+        background-color: rgba(255, 0, 0, 0.582);
+        -webkit-clip-path: polygon(88% 23%, 81% 48%, 81% 76%, 100% 76%, 100% 88%, 0 88%, 0 76%, 20% 76%, 19% 49%, 12% 23%);
+        clip-path: polygon(88% 23%, 81% 48%, 81% 76%, 100% 76%, 100% 88%, 0 88%, 0 76%, 20% 76%, 19% 49%, 12% 23%);
+        box-shadow: 0px 0px 30px 1px rgba(240, 255, 197, 0.6);
+      }
+      #hoverAreaSound{
+        position: inherit;
+        margin: auto;
+        width: 40px;
+        height: 60px;
+        left: 60px;
+        z-index:100000px;
+        background-color: greenyellow ;
+        
+        box-shadow: 0px 0px 30px 5px rgba(240, 255, 197, 0.9);
+      }
+      
+    }
+  }
+  #hoverAreaStageInner:hover{
+        border: #f1c40f 3px solid;
+        background: #96ff0c8e;
+        box-shadow: 0px 0px 30px 1px rgba(240, 255, 197, 0.6);
+      }
   #equipContainer{
     text-align: center;
     //outline: #00ff95 5px solid;
@@ -595,19 +638,21 @@
 .flyerFeature{
   position: relative;
   //outline: 5px rgb(0, 216, 134) solid;
-  margin: 10px auto;
+  margin: 15px auto;
   width: 100%;
-  display: flex;
-  vertical-align:middle;
+  vertical-align: middle;
+
   img{
-    width: 120%;
+    vertical-align: middle;
+    width:100%;
     display: inline-block;
-    //outline: 5px rgb(0, 50, 216) solid;
-    margin: 20px 0px; 
+    outline: 5px rgb(0, 50, 216) solid;
+   
   }
   div{
     display: inline-block;
-    //outline: 5px rgb(216, 0, 205) solid;
+    vertical-align: middle;
+    outline: 5px rgb(216, 0, 205) solid;
   }
 
 }
@@ -863,12 +908,10 @@ footer{
   }
 
   #equipCarStage{
-    width: 50%;
+   
     margin-top: 0px;
-    margin-left: 20px;
-    img{
-      width: 120%;
-    }
+    
+    
     .commonBtn{
       margin-left: 80px;
     }
@@ -887,9 +930,7 @@ footer{
       font-size: $contentWord;
     }
   }
-  #introFlyerFeature{
-    margin-top: 30px;
-  }
+  
   footer{
     p{
       display: block;
@@ -925,12 +966,7 @@ footer{
   #tryCustormiseWrap{
     background-image: url(../images/tryCustormiseWrap.jpg);
   }
-  .flyerFeature{ 
-    img{
-      width: 100%;
-      margin: auto; 
-    }
-  }
+  
 }
 @media screen and (min-width:1200px){
   #equipmentsArea{
