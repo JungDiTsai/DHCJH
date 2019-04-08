@@ -21,3 +21,11 @@
   75%{transform: rotateZ(15deg)}
   100% { transform: rotateZ(0deg)}
 }
+@keyframes headerNeon 
+{
+    0% {filter:drop-shadow(3px 2px 8px rgba(245, 132, 132, 0.7));}
+    25%{filter:drop-shadow(3px -2px 8px rgba(248, 202, 74, 0.7));}
+    50%{filter:drop-shadow(-3px -2px 8px rgba(177, 255, 132, 0.7));}
+    75%{filter:drop-shadow(-3px 2px 8px rgba(255, 255, 255, 0.7));}
+  100% {filter:drop-shadow(3px 2px 8px rgba(59, 78, 250, 0.7));}
+}
