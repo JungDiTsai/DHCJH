@@ -1,38 +1,39 @@
 // mobile
 // bg
 .custBg{
-    padding-top: 30px;
+    padding-top: 100px;
     background-image: url(../../images/customized/customized_bg.jpg);
     background-position: center;
-    width: 100%;
 }
 //title
-.custTitle{
-    background-image:url(../../images/customized/title_bg.png);
-    background-size: cover;
-    margin: auto;
-    width: 85%;
-    height: 100px;
-    padding: 5px 10px 0px 0px;
-    text-align: center;
-    h3{
-        font-size: $subTitleWord;
-        color: $fontColor;
-        line-height: 90px;
-    }
-}
+// replace with titleBgi
+// .custTitle{
+//     background-image:url(../../images/customized/title_bg.png);
+//     background-size: 100%;
+//     background-repeat: no-repeat;
+//     margin: auto;
+//     width: 300px;
+//     text-align: center;
+//     h3{
+//         font-size: $subTitleWord;
+//         color: $fontColor;
+//         line-height: 85px;
+//     }
+// }
+
 // 客製步驟
 .custStep{
+    width: 95%;
+    margin: auto;
     padding-top: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 .btnCustStep{
     cursor: pointer;
     font-size:14px;
     width: 85px;
-    height: 60px;
     background: url(../../images/customized/customized_step.svg) center no-repeat;
     background-size: 100%;
     color: $fontColor;
@@ -45,7 +46,7 @@
     }
 }
 .custSelected{
-    width: 100px;
+    width: 110px;
     filter: drop-shadow(2px 2px 8px $logoColor);
     h4{
         font-size:18px;
@@ -56,6 +57,8 @@
 }
 // 客製舞台步驟
 .custStageStep{
+    width: 80%;
+    margin: auto;
     padding: 10px 30px 0px;
     display: flex;
     justify-content: space-between;
@@ -145,9 +148,9 @@
         margin: auto;
     }
     // 下舞台
-    .front{ width: 130px; transform: translateX(-85px) translateZ(75px);background: url(../../images/stage/2.png)center no-repeat;background-size:cover;}
+    .front{ width: 130px; transform: translateX(-85px) translateZ(75px);background: url(../../images/2.png)center no-repeat;background-size:cover;}
     .front1{  width: 40px; transform:  translateZ(75px);background: #faf}
-    .front2{  width: 130px; transform: translateX(85px) translateZ(75px);background: url(../../images/stage/5.png)center no-repeat;background-size:cover;}
+    .front2{  width: 130px; transform: translateX(85px) translateZ(75px);background: url(../../images/5.png)center no-repeat;background-size:cover;}
      .back{transform:  translateZ(-75px);background: url(../images/3.png)center no-repeat;background-size:cover;}
        .up{ 
            transform: rotateX(90deg)  translateZ(20px); 
@@ -159,9 +162,9 @@
                 box-shadow: 0px 0px 8px 8px $fontColor;
             }
         }
-     .down{ transform: rotateX(270deg)  translateZ(20px); height: 150px;background: url(../../images/stage/3.png)center no-repeat;background-size:cover;}
-     .left{ transform: rotateY(270deg) translateZ(150px); width: 150px;background: url(../../images/stage/3.png)center no-repeat;background-size:cover;}
-    .right{ transform: rotateY(90deg) translateZ(150px);  width: 150px;background: url(../../images/stage/3.png)center no-repeat;background-size:cover;}
+     .down{ transform: rotateX(270deg)  translateZ(20px); height: 150px;background: url(../../images/3.png)center no-repeat;background-size:cover;}
+     .left{ transform: rotateY(270deg) translateZ(150px); width: 150px;background: url(../../images/3.png)center no-repeat;background-size:cover;}
+    .right{ transform: rotateY(90deg) translateZ(150px);  width: 150px;background: url(../../images/3.png)center no-repeat;background-size:cover;}
     .stairsA{ }
     .stairsB{ width: 30px;height:40px;transform:rotateX(270deg) translateY(-85px)  translateZ(20px)}
     // 壁屏
@@ -182,8 +185,8 @@
     .stairsC3{width: 6px; height: 95px;transform: translateY(-65px) translatez(-73px) translateX(-126px) rotateY(90deg);background: #646464;}
     .stairsC4{width: 250px; height: 6px;transform: translateZ(-73px)translateY(-112px) rotateX(90deg);background: #646464;}
     // 上壁屏
-    .stairsD{ width: 50px; height: 205px;transform: translateZ(20px)translateX(-95px)translateY(-160px) rotateX(-60deg);background: url(../../images/stage/6.png)center no-repeat;background-size:cover;}
-    .stairsE{ width: 50px; height: 205px;transform: translateZ(20px)translateX(95px)translateY(-160px) rotateX(-60deg);background: url(../../images/stage/7.png)center no-repeat;background-size:cover;}
+    .stairsD{ width: 50px; height: 205px;transform: translateZ(20px)translateX(-95px)translateY(-160px) rotateX(-60deg);background: url(../../images/6.png)center no-repeat;background-size:cover;}
+    .stairsE{ width: 50px; height: 205px;transform: translateZ(20px)translateX(95px)translateY(-160px) rotateX(-60deg);background: url(../../images/7.png)center no-repeat;background-size:cover;}
     .stairsF{ 
         width: 140px;
         height: 205px;
@@ -449,7 +452,7 @@
     .audioBox{
         width: 30px;
         height: 60px;
-        background: url(../../images/stage/audio1.png)center no-repeat;background-size:cover;
+        background: url(../../images/audio1.png)center no-repeat;background-size:cover;
         transform:translateZ(40px)translateX(-120px) translateY(-50px)  rotateY(-30deg) translateZ(10px)
     }
     .audioBox1{
@@ -480,7 +483,7 @@
     .audioBox5{
         width: 30px;
         height: 60px;
-        background: url(../../images/stage/audio1.png)center no-repeat;background-size:cover;
+        background: url(../../images/audio1.png)center no-repeat;background-size:cover;
         transform:translateZ(40px)translateX(120px) translateY(-50px)  rotateY(30deg) translateZ(10px)
     }
     .audioBox6{
@@ -540,9 +543,30 @@
     height: 50px;
     h5{
         color: $fontColor;
-        font-size: $buttonWord;
+        font-size: 22px;
         text-align: center;
         line-height: 50px;
+        position: relative;
+    }
+    h5::before, h5::after{
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        top: 15px;
+        border-left: 3px solid $fontColor;
+        border-bottom: 3px solid $fontColor;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+    h5::before{
+        left: 25px;
+        transform: rotate(45deg);
+    }
+    h5::after{
+        right: 25px;
+        transform: rotate(-135deg);
     }
 }
 // 全部客製舞台內容
@@ -785,25 +809,6 @@
         h5{
             font-size: $thrTitleWord;
             line-height: 60px;
-        }
-        h5::before, h5::after{
-            content: "";
-            display: inline-block;
-            position: relative;
-            width: 15px;
-            height: 15px;
-            border-left: 3px solid $fontColor;
-            border-bottom: 3px solid $fontColor;
-            vertical-align: middle;
-            cursor: pointer;
-        }
-        h5::before{
-            right: 80px;
-            transform: rotate(45deg);
-        }
-        h5::after{
-            left: 80px;
-            transform: rotate(-135deg);
         }
     }
     .stage{
