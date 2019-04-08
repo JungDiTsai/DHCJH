@@ -12,6 +12,6 @@ gulpfile.js
 bower_components
 
 views/libs
-
+*.map
 
 stage
