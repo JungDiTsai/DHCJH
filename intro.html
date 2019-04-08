@@ -5,12 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+<<<<<<< HEAD
     <link rel="stylesheet" href="css/beautyPageant.css">
     <link rel="stylesheet" href="css/rollStyle.css">
+=======
+<<<<<<< HEAD
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/intro.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <style>
+       
+    </style>
+    </head>
+=======
+    <link rel="stylesheet" href="css/index.css">
+>>>>>>> b572ba85154bd041490b2a5b25d5b43a9af3284b
     <!-- font awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
+>>>>>>> ed355754c7b3d088eaf3758d82d9cd1111b6cc61
 <body>
     <input type="checkbox" id=menu_control>
     <header>    
@@ -29,6 +47,9 @@
             </div>
         </nav>       
     </header>
+
+    
+    
     <div class="box"></div>
     <!-- 登入燈箱 -->
     <div class="loginBox">
@@ -97,6 +118,7 @@
         <input type="submit" value="寄送密碼" class="commonBtn">
         <div><a class="backLogin">回到登入</a></div>
     </div>
+<<<<<<< HEAD
 
     <!-- beauty pageant -->	
     <div id='wrapper'>
@@ -131,6 +153,63 @@
         </div> <!-- scroller -->
     </div> <!-- wrapper -->
         <script src="js/pushIn.js" type="text/javascript"></script>
+=======
+<<<<<<< HEAD
+    <div class="clear"></div>
+    <!-- beauty pageant -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <!-- -----團隊介紹---------------- --> 
+    
+    <div class="introTime">
+        <h2 class="titleBgi introTimeTitle">團隊介紹</h2>   
+       <div class="introStage">
+       
+           <div class="people">
+               <img class="peopleFirst" src="../images/intro/intropeople1-1.png" alt="">
+                <img class="peopleSec" src="../images/intro/intropeople2-1.png" alt="">
+                <img class="peopleThree" src="../images/intro/intropeople3-1.png" alt="">
+                <img class="peopleFourth" src="../images/intro/intropeople4-1.png" alt="">
+                <img class="peopleFiv" src="../images/intro/intropeople5-1.png" alt="">
+
+            </div>
+            <!-- 跑馬燈 -->
+            <div class="led">
+                <marquee direction="right" height="30" scrollamount="5" behavior="alternate">團隊介紹</marquee>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+   
+=======
+    <!-- beauty pageant -->
+
+
+
+
+
+>>>>>>> ed355754c7b3d088eaf3758d82d9cd1111b6cc61
+>>>>>>> b572ba85154bd041490b2a5b25d5b43a9af3284b
     <script>
         
         /* 登入燈箱 JS*/
@@ -195,6 +274,7 @@
             let registeredBox = document.querySelector('.registeredBox');
             registeredBox.style.setProperty('display',"none");
             // 顯示登入燈箱
+<<<<<<< HEAD
             let loginBox = document.querySelector('.loginBox');
             let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
             if(style=="none"){
@@ -217,11 +297,38 @@
             let forgotBox = document.querySelector('.forgotBox');
             forgotBox.style.setProperty('display',"none");
             // 顯示登入燈箱
+=======
+>>>>>>> ed355754c7b3d088eaf3758d82d9cd1111b6cc61
             let loginBox = document.querySelector('.loginBox');
             let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
             if(style=="none"){
                 loginBox.style.setProperty('display',"block");
             }
+<<<<<<< HEAD
+=======
+        })
+
+        /* 忘記密碼燈箱 JS*/
+        // 點擊關閉----------------------------
+        document.querySelector('.forgotBox .fa-times').addEventListener('click',function(){
+            let forgotBox = document.querySelector('.forgotBox');
+            let style = window.getComputedStyle(forgotBox, null).getPropertyValue('display');
+            if(style=="block"){
+                forgotBox.style.setProperty('display',"none");
+            }
+        })
+        // 點擊回到登入----------------------------
+        document.querySelector('.forgotBox .backLogin').addEventListener('click',function(){
+            // 隱藏忘記密碼燈箱
+            let forgotBox = document.querySelector('.forgotBox');
+            forgotBox.style.setProperty('display',"none");
+            // 顯示登入燈箱
+            let loginBox = document.querySelector('.loginBox');
+            let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
+            if(style=="none"){
+                loginBox.style.setProperty('display',"block");
+            }
+>>>>>>> ed355754c7b3d088eaf3758d82d9cd1111b6cc61
         })
         
         //螢幕寬度
