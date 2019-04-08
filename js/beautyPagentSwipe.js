@@ -1,16 +1,16 @@
-//封装的对象接受所有图片的盒元素与触发切换的最小滑动距离作为参数
+//封裝的對象接受所有圖片的盒元素與觸發切換的最小滑動距離作為參數
 var ImageSwiper = function(beautyRankingimgs, minRange) {
     this.imgBox = beautyRankingimgs
     this.beautyRankingimgs = beautyRankingimgs.children
-    this.cur_img = 1 //起始圖片設為1 ,而非0,将在图片显示方法中作-1处理
-    this.ready_moved = true //判断每次滑动开始的标记变量
+    this.cur_img = 1 //起始圖片設為1 ,而非0,將在圖片顯示方法中作-1處理
+    this.ready_moved = true //判斷每次滑動開始的標記變量
     this.imgs_count = this.beautyRankingimgs.length
-    this.touchX //触控开始的手指最初落点
+    this.touchX //觸控開始的手指最初落點
     this.minRange = Number(minRange)
-    this.fadeIn //图片切换的方式,这里使用淡入淡出
+    this.fadeIn //圖片切換的方式,這裡使用淡入淡出
     this.fadeOut
-    this.bindTouchEvn() //初始化绑定滑动事件
-    this.showPic(this.cur_img) //显示图片方法,注意其中图片编号的-1处理
+    this.bindTouchEvn() //初始化綁定滑動事件
+    this.showPic(this.cur_img) //顯示圖片方法,注意其中圖片編號的-1處理
   }
   ImageSwiper.prototype.bindTouchEvn = function() {
     this.imgBox.addEventListener('touchstart', this.touchstart.bind(this), false)
@@ -86,7 +86,7 @@ var ImageSwiper = function(beautyRankingimgs, minRange) {
       }
   
     }
-    //在样式表中设置好 .fadeIn 的透明度为0
+    //在樣式表中設置好 .fadeIn 的透明度為0
   ImageSwiper.prototype.fadeIn = function(e) {
     e.classList.add("fadeIn")
   }
@@ -99,7 +99,7 @@ var ImageSwiper = function(beautyRankingimgs, minRange) {
   
   ImageSwiper.prototype.showPic = function(cur_img) {
     this.hidePics(this.beautyRankingimgs)
-      //得到图片元素的真实索引
+      //得到圖片元素的真實索引
     var index = cur_img - 1
   
     if (document.getElementsByClassName("active")[0]) {
@@ -116,5 +116,5 @@ var ImageSwiper = function(beautyRankingimgs, minRange) {
       this.fadeOut(e)
   
     }
-    //传参
+    //傳參
   var beautyRankingimgs = new ImageSwiper(document.getElementById('beautyRankingimgs'), 30)
