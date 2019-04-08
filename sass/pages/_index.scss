@@ -1,4 +1,12 @@
 //首頁第一屏 wrapper
+.container{   
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: auto;
+    width: 80vw;
+    max-width: 1200px;
+}
 #carIntroWrap{
     padding-top:$paddingTop; 
     position: relative;
@@ -544,7 +552,7 @@
   //outline: #ff00aa 5px solid;
   width: 60%;
   margin: 30px auto 10px auto; 
-  // @include fontStyle;
+  @include fontStyle;
 }
 
 //首頁第三屏 wrapper （客製小試身手）
@@ -800,40 +808,7 @@ footer{
   }
 }
 
-@keyframes processIntro{
-  from {transform:o}
-  to   {opacity: 0;}
-}
 
-
-@keyframes truck {
-  0%{transform: translateY(10px);}
-  50%{transform: translateY(16px);}
-  100%{transform: translateY(10px);}
-}
-
-@keyframes rotate {
-  from {transform: rotate(0deg);}
-  to   {transform: rotate(-359deg);}
-}
-
-@keyframes colors {
-  0%   {background-color: #3498db;}
-  20%  {background-color: #3498db;}
-  30%  {background-color: #2c3e50;}
-  70%  {background-color: #2c3e50;}
-  80%  {background-color: #3498db;}
-  100% {background-color: #3498db;}
-}
-
-@keyframes starscolors {
-  0%   {background-color: #3498db;}
-  20%  {background-color: #3498db;}
-  30%  {background-color: #ffffff;}
-  70%  {background-color: #ffffff;}
-  80%  {background-color: #3498db;}
-  100% {background-color: #3498db;}
-}
 
 @media screen and (min-width:768px) {
   #earth{

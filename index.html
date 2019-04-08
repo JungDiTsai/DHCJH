@@ -9,38 +9,8 @@
     <!-- font awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-         <script src="js/jquery.js"></script>
-        <script>
-            $(document).ready(function() {
-            var res = '',
-                width = parseInt($(window).width()),
-                height = parseInt($(window).height());
-    
-            for (var i = 0;i < 200;i++) {
-                res += '<div class="star" ' +
-                    'style="top: ' + Math.random() * height +
-                    'px;left: ' + Math.random() * width + 'px"></div>';
-            }
-            $('#stars').html(res);
-            });
-        </script> 
-        <script>
-            function fadeIn() {
-                var scrolled = $(window).scrollTop();
-                $(".appear").each(function(){
-                var current = $(this),
-                    w_height = $(window).outerHeight(), 
-                    offsetTop = current.offset().top;
-                if (scrolled + w_height +50 > offsetTop) {
-                    current.addClass("fadeIn");
-                } else {
-                    current.removeClass("fadeIn");
-                }
-                });
-            }
-            $(window).on("scroll", fadeIn);
-        </script>
 </head>
+
 <body>
     <input type="checkbox" id=menu_control>
     <header>    
@@ -127,6 +97,7 @@
         <input type="submit" value="寄送密碼" class="commonBtn">
         <div><a class="backLogin">回到登入</a></div>
     </div>
+
 
 
 
@@ -416,8 +387,26 @@
 
 
 
+
+
+
+
+
+    <script src="js/jquery.js"></script>
     <script>
-        
+        $(document).ready(function() {
+        var res = '';
+            width = parseInt($(window).width());
+            height = parseInt($(window).height());
+        for (var i = 0;i < 200;i++) {
+            res += '<div class="star" ' +
+                'style="top: ' + Math.random() * height +
+                'px;left: ' + Math.random() * width + 'px"></div>';
+        }
+        $('#stars').html(res);
+        });
+    </script> 
+    <script>
         /* 登入燈箱 JS*/
         // 點擊icon開啟登入燈箱----------------------------
         document.querySelector('.fa-user-circle').addEventListener('click', function (e){
