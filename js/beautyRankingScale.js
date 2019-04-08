@@ -7,7 +7,6 @@ window.addEventListener('resize',function(){
     }
 })
 carArr = document.getElementsByClassName("beautyRankingbg");
-carArr[1].style.transform='scale(1.2)';
 function stagescale(){
     for(i=0;i<carArr.length;i++){
         if(this == carArr[i]){
@@ -24,6 +23,7 @@ function init(){
             return ;
         }else{
             carArr[i].addEventListener('mouseover', stagescale);
+            carArr[1].style.transform='scale(1.2)';
         }
     }
 }

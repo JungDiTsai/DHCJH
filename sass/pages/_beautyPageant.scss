@@ -101,6 +101,21 @@
   .pagination li:last-child {
     margin-right: 0
   }
+  .dotflip{
+    text-align:center;
+    position: relative;
+  }
+  .dotpanel{
+    position: absolute;
+    height:auto;;
+    width:100px;
+    right: 0;
+    display:none;
+    border:solid 1px #c3c3c3;
+    p{
+    font-size: $contentWord;
+    }
+  }
 @media screen and (min-width:1200px){
     .paginationPanel{
         display: none;
