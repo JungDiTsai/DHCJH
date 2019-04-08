@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+         <script src="js/jquery.js"></script>
+        <script>
+            $(document).ready(function() {
+            var res = '',
+                width = parseInt($(window).width()),
+                height = parseInt($(window).height());
+    
+            for (var i = 0;i < 200;i++) {
+                res += '<div class="star" ' +
+                    'style="top: ' + Math.random() * height +
+                    'px;left: ' + Math.random() * width + 'px"></div>';
+            }
+            $('#stars').html(res);
+            });
+        </script> 
+        <script>
+            function fadeIn() {
+                var scrolled = $(window).scrollTop();
+                $(".appear").each(function(){
+                var current = $(this),
+                    w_height = $(window).outerHeight(), 
+                    offsetTop = current.offset().top;
+                if (scrolled + w_height +50 > offsetTop) {
+                    current.addClass("fadeIn");
+                } else {
+                    current.removeClass("fadeIn");
+                }
+                });
+            }
+            $(window).on("scroll", fadeIn);
+        </script>
+</head>
+<body>
+    <input type="checkbox" id=menu_control>
+    <header>    
+        <!-- 放bar選單 -->
+        <label for="menu_control" class="menubtn" >
+                <div class="menuandcross"></div>
+        </label>
+        <nav class="mainNav">
+            <li class="mainNavCell"><a href="">電子花車客製</a></li>
+            <li class="mainNavCell"><a href="flyer.html">客製宣傳單</a></li>
+            <h1 class="navLogo"><a href="index.html"><img src="images/logo.png" alt="台灣大舞台"></a></h1>
+            <li class="mainNavCell"><a href="">花車選美</a></li>
+            <li class="mainNavCell"><a href="">花車特色介紹</a></li>
+            <div class="navMemBtn"> 
+                <i class="far fa-user-circle"></i>
+            </div>
+        </nav>       
+    </header>
+    <div class="box"></div>
+    <!-- 登入燈箱 -->
+    <div class="loginBox">
+        <i class="fas fa-times"></i>
+        <h3>登入</h3>
+        <div class="inputBox">
+            <i class="fas fa-user fa-1x"></i><input type="text" id="username" placeholder="User">
+        </div>
+        <div class="inputBox">
+            <i class="fas fa-key fa-1x"></i><input type="password" id="password" placeholder="Password">
+        </div>
+        <a href="memberCenter.html"><button class="commonBtn">登入</button></a>
+        <p><a class="showRegistered">註冊</a> / <a class="showForgotPSW">忘記密碼</a></p>
+    </div>
+    <!-- 註冊燈箱 -->
+    <div class="registeredBox">
+        <i class="fas fa-times"></i>
+        <h3>立即註冊</h3>
+        <table>
+            <tr>
+                <th>會員帳號</th>
+                <td><input type="text"></td>
+            </tr>
+            <tr><td colspan="2" class="prompt"><span>此帳號已有人使用 !</span></td></tr>
+            <tr>
+                <th>會員密碼</th>
+                <td><input type="password"></td>
+            </tr>
+            <tr>
+                <th>會員姓名</th>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <th>會員電話</th>
+                <td><input type="tel"></td>
+            </tr>
+            <tr>
+                <th>會員信箱</th>
+                <td><input type="email"></td>
+            </tr>
+            <tr>
+                <th>性別</th>
+                <td>
+                    <label>
+                        <input type="radio" name="sex" value="">
+                        <i class="fas fa-venus fa-2x"></i>
+                    </label>
+                    <label>
+                        <input type="radio" name="sex" value="">
+                        <i class="fas fa-mars fa-2x"></i>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2"><input type="submit" value="註冊帳號" class="commonBtn"></th>
+            </tr>
+        </table>
+        <div><a class="backLogin">回到登入</a></div>
+    </div>
+    <!-- 忘記密碼燈箱 -->
+    <div class="forgotBox">
+        <i class="fas fa-times"></i>
+        <h3>忘記密碼</h3>
+        <p>請輸入您註冊時的會員信箱，我們會將新的密碼寄至您的信箱。</p>
+        <div>會員信箱<input type="email"></div>
+        <input type="submit" value="寄送密碼" class="commonBtn">
+        <div><a class="backLogin">回到登入</a></div>
+    </div>
+
+
+
+    <!--game and customer service wrapper-->
+    <div id="gameAndService">
+        <div id="gameHub"></div>
+        <div id="customerService"></div>
+    </div>
+
+    <!--first wrapper-->
+    
+    
+    <div id="carIntroWrap"> 
+    <div class="container">
+        <div id="bgiArea" col-12>
+            <img id="bgiAreaBar" src="images/carIntroWrapBgiBars.png" alt="">
+            <div id="bgiAreaRotation">
+                <img id="bgiAreaCircle" src="images/carIntroWrapBgiCircle.png" alt="">
+            </div>
+        </div>
+         <!-- slogan ＋ 第一名花車 ＋ 來去客製按鈕 -->
+         <!-- 第一名花車 -->
+         <div id="introCarStageOne" class="col-12 col-lg-8">
+            <div  class="perspective">
+                <div class="groupA ">
+                    <!-- 周邊細項 -->
+                        <!-- ? -->
+                    <div class="stairsA"></div>
+                        <!-- ? -->
+                    <div class="stairsB"></div>
+                        <!-- 壁屏 -->
+                    <div class="stairsC"></div>
+                    <div class="stairsC1"></div>
+                    <div class="stairsC2"></div>
+                    <div class="stairsC3"></div>
+                    <div class="stairsC4"></div>
+                        <!-- 上壁屏 -->
+                    <div class="stairsD"></div>
+                    <div class="stairsE"></div>
+                    <div class="stairsF"></div>
+                    <div class="stairsF1"></div>
+                    <div class="stairsF2"></div>
+                    <div class="stairsF3"></div>
+                    <div class="stairsF4"></div>
+                    <!-- 舞台 -->
+                    <div class="front"></div>
+                    <div class="front1"></div>
+                    <div class="front2"></div>
+                    <div class="back"></div>
+                    <div class="up"></div>
+                    <div class="down"></div>
+                    <div class="left"></div>
+                    <div class="right"></div>
+                    <!-- 跑馬燈 -->
+                    <div class="subtitles">跑馬燈</div>
+                    <div class="subtitles1"></div>
+                    <div class="subtitles2"></div>
+                    <!-- 樓梯三角形 -->
+                    <div class="triangleA"></div>
+                    <div class="triangleB"></div>
+                    <div class="triangleC"></div>
+                    <div class="triangleD"></div>
+                    <div class="triangleE"></div>
+                    <div class="triangleF"></div>
+                    <!-- 樓梯 -->
+                    <div class="ladderA"></div>
+                    <div class="ladderB"></div>
+                    <div class="ladderC"></div>
+                    <div class="ladderD"></div>
+                    <div class="ladderE"></div>
+                    <div class="ladderF"></div>
+                    <!-- 燈柱 -->
+                    <div class="headlightbox"></div>
+                    <div class="headlightbox1"></div>
+                    <div class="headlightbox2"></div>
+                    <div class="headlightbox3"></div>
+                    <div class="headlightbox4"></div>
+                    <div class="headlightbox5"></div>
+                    <!-- 中間投射燈 -->
+                    <div class="headlight"></div>
+                    <div class="headlight1"></div>
+                    <div class="headlight2"></div>
+                    <div class="headlight3"></div>
+                    <!-- 左邊投射燈 -->
+                    <div class="headlight4"></div>
+                    <div class="headlight5"></div>
+                    <div class="headlight6"></div>
+                    <div class="headlight7"></div>
+                    <!-- 右邊投射燈 -->
+                    <div class="headlight8"></div>
+                    <div class="headlight9"></div>
+                    <div class="headlight10"></div>
+                    <div class="headlight11"></div>
+                    <!-- 左音箱 -->
+                    <div class="audioBox"></div>
+                    <div class="audioBox1"></div>
+                    <div class="audioBox2"></div>
+                    <div class="audioBox3"></div>
+                    <div class="audioBox4"></div>
+                    <!-- 右音箱 -->
+                    <div class="audioBox5"></div>
+                    <div class="audioBox6"></div>
+                    <div class="audioBox7"></div>
+                    <div class="audioBox8"></div>
+                    <div class="audioBox9"></div>
+                    <!-- <img src="images/Fireworks5.gif" alt=""> -->
+                    <img src="images/fire1.gif" alt="">
+                    <img src="images/fire1.gif" alt="" class="img2">
+                </div>
+            </div>
+         </div>
+        <!-- 來去客製按鈕 -->
+        <div id="introWords" class="col-12 col-lg-4">
+            <h2>全台最大的電子花車客製平台上線啦！</h2>
+            <h3> 最蝦趴的電子花車<br>
+                都 在 這！</h3>
+            <a href="#">
+                <button class="commonBtn">
+                    立即客製
+                </button>
+            </a>
+        </div>
+       
+    </div>
+</div>
+        
+ 
+
+    <!--Second wrapper intro for function & equipments -->
+
+    <div id="carEquipmentsIntroWrap"> 
+        <h2 class="titleBgi">
+            花車舞台介紹
+        </h2>
+        <div class="container">
+            <!--配件介紹背板-->
+            <div id="equipContainer" class="col-12 col-md-4">
+                <div id="equipBoardContainer">
+                    <div id="equipBoard">
+                        <img src="images/equipmentIntroBoard.jpg" alt="介紹背板">
+                    </div> 
+                </div>
+                <div id="equipmentsArea" class="col-md-10">
+                   <div id="equipStealPipe">
+                        <span>鋼管</span>
+                        <p>可謂花車文化的靈魂中柱啊！19K強化塑形鋼管，即便是撼天動地熱舞也能Hold住全場！
+                        </p>
+                    </div> 
+                </div>  
+            </div>
+            <!--被hover的花車-->
+            <div id="equipCarStage" class="col-12 col-md-8">
+                <img src="images/carStageEquip.png" alt="介紹用的花車">
+                <img id="pipe" src="images/pipe.png" alt="鋼管">
+                <button class="commonBtn">
+                    立即客製
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--third wrapper try to customise a Stage -->
+    <div id="tryCustormiseWrap"> 
+        <h2 class="titleBgi">
+            客製小試身手
+        </h2>
+        <div class="container">
+
+        </div>
+    </div>
+
+    <!--forth wrapper try to customise a ivitation poster -->
+    <div id="tryCustormiseFlyerWrap"> 
+        <h2 class="titleBgi">
+            客製宣傳單
+        </h2>
+        <div class="container">
+            <div id="introFlyers" class="col-12 col-md-7">
+                <img src="images/flyerOne.jpg" alt="">
+
+            </div>
+            <div id="introFlyerFeature" class="col-12 col-md-5">
+                <div class="flyerFeature col-12">
+                    <div class="col-4 col-md-4" >
+                        <img src="images/flyerFree.png" alt="宣傳單免費服務">
+                    </div>
+                    
+                    <div class="col-7 col-md-7">
+                        <span>壹.免費客製</span>
+                        <p>此客製宣傳單為免費服務，讓您輕鬆有效宣傳花車活動沒煩惱！</p> 
+                    </div>
+                </div>
+                <div class="flyerFeature col-12">
+                    <div class="col-4 col-md-4" >
+                        <img src="images/flyerAna.png" alt="自動匯入資料產出邀請單">
+                    </div>
+                    <div class="col-7 col-md-7">
+                        <span>貳.邀請好友</span>
+                        <p>有訂製花車客戶更可匯入訂單內容，快速產出宣傳單輕鬆邀請朋友！</p> 
+                    </div>
+                    
+                </div>
+                <div class="flyerFeature col-12">
+                    <div class="col-4 col-md-4" >
+                        <img src="images/flyerInvite.png"  alt="統計人數">
+                    </div>
+                    <div class="col-7 col-md-7">
+                        <span>參.統計人數</span>
+                        <p>更強大的是：這份宣傳單還有統計參加人數的功能喔！快來試試看！</p>
+                    </div>
+                    
+                </div>
+                <a href="#">
+                    <button class="commonBtn">
+                       立即體驗
+                    </button> 
+                </a>
+                
+
+            </div>
+            
+        </div>
+    </div>
+    <!--fifth wrapper : Beauty pageant -->
+    <div id="beautyContestWrap"> 
+        <h2 class="titleBgi">
+            花車選美
+        </h2>
+        <div class="container">
+
+        </div>
+    </div>
+    <!--fifth wrapper : process  -->
+    <div id="processWrap"> 
+        <h2 class="titleBgi">
+            訂製流程
+        </h2>
+        <div id="stars"></div>
+        
+        <div class="container">
+            <div id="processIntro">
+                <div id="step1">
+                    <span>Step1.製作客製花車</span>
+                    
+                    <p>客製訂單完成後，開始施工製作電子花車舞台</p>	
+                </div>
+                <div id="step2">
+                    <span>Step2.專人駕駛運送</span>
+                    
+                    <p>活動當天，派遣專人將花車開往現場</p>	
+                </div>
+                <div id="step3">
+                    <span>Step3.專人全程服務</span>
+                    <p>送達現場後進行舞台展開，並於現場待命直到活動結束</p>	
+                </div>
+                
+            </div>
+            
+            <div id="earthContainer">
+                <div id="earth"></div>
+            </div>
+            
+            <div id="truck">
+                <div id="carBody"></div>
+                <div id="carTire"></div>
+            </div>
+            
+                
+        </div>
+        <div id="asters">	
+            <div class='sun'></div>
+            <div class="moon"></div>
+        </div>
+    </div>
+    <!--  footer  -->
+    <footer>
+        <p>Copyright © 2019 Taiwan Great Stage Inc.</p>
+        <p>All rights reserved</p>
+        <div>
+            <a href="#"><img src="images/facebook (1).png" alt="FB"></a> 
+            <a href="#"><img src="images/instagram (1).png" alt="IG"></a> 
+            <a href="#"><img src="images/youtube (1).png" alt="YouTube"></a>        
+        </div>
+    </footer>
+
+
+
+
+
+
+    <script>
+        
+        /* 登入燈箱 JS*/
+        // 點擊icon開啟登入燈箱----------------------------
+        document.querySelector('.fa-user-circle').addEventListener('click', function (e){
+            // 顯示登入燈箱
+            let loginBox = document.querySelector('.loginBox');
+            let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
+            if(style=="block"){
+                loginBox.style.setProperty('display',"none");
+                e.target.style.setProperty('color',"#2cffff");
+            }else{
+                loginBox.style.setProperty('display',"block");
+                e.target.style.setProperty('color',"rgb(252, 211, 28)");
+            }
+        })
+        // 點擊關閉----------------------------
+        document.querySelector('.loginBox .fa-times').addEventListener('click', function () {
+            let loginBox = document.querySelector('.loginBox');
+            let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
+            if(style=="block"){
+                loginBox.style.setProperty('display',"none");
+            }
+        })
+        // 點擊註冊------------------------------
+        document.querySelector('.loginBox .showRegistered').addEventListener('click', function () {
+            // 隱藏登入燈箱
+            let loginBox = document.querySelector('.loginBox');
+            loginBox.style.setProperty('display',"none");
+            // 顯示註冊燈箱
+            let registeredBox = document.querySelector('.registeredBox');
+            let style = window.getComputedStyle(registeredBox, null).getPropertyValue('display');
+            if(style=="none"){
+                registeredBox.style.setProperty('display',"block");
+            }
+        })
+        // 點擊忘記密碼------------------------------
+        document.querySelector('.loginBox .showForgotPSW').addEventListener('click', function () {
+            // 隱藏登入燈箱
+            let loginBox = document.querySelector('.loginBox');
+            loginBox.style.setProperty('display',"none");
+            // 顯示忘記密碼燈箱
+            let forgotBox = document.querySelector('.forgotBox');
+            let style = window.getComputedStyle(forgotBox, null).getPropertyValue('display');
+            if(style=="none"){
+                forgotBox.style.setProperty('display',"block");
+            }
+        })
+
+        /* 註冊燈箱 JS*/
+        // 點擊關閉----------------------------
+        document.querySelector('.registeredBox .fa-times').addEventListener('click',function(){
+            let registeredBox = document.querySelector('.registeredBox');
+            let style = window.getComputedStyle(registeredBox, null).getPropertyValue('display');
+            if(style=="block"){
+                registeredBox.style.setProperty('display',"none");
+            }
+        })
+        // 點擊回到登入----------------------------
+        document.querySelector('.registeredBox .backLogin').addEventListener('click',function(){
+            // 隱藏註冊燈箱
+            let registeredBox = document.querySelector('.registeredBox');
+            registeredBox.style.setProperty('display',"none");
+            // 顯示登入燈箱
+            let loginBox = document.querySelector('.loginBox');
+            let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
+            if(style=="none"){
+                loginBox.style.setProperty('display',"block");
+            }
+        })
+
+        /* 忘記密碼燈箱 JS*/
+        // 點擊關閉----------------------------
+        document.querySelector('.forgotBox .fa-times').addEventListener('click',function(){
+            let forgotBox = document.querySelector('.forgotBox');
+            let style = window.getComputedStyle(forgotBox, null).getPropertyValue('display');
+            if(style=="block"){
+                forgotBox.style.setProperty('display',"none");
+            }
+        })
+        // 點擊回到登入----------------------------
+        document.querySelector('.forgotBox .backLogin').addEventListener('click',function(){
+            // 隱藏忘記密碼燈箱
+            let forgotBox = document.querySelector('.forgotBox');
+            forgotBox.style.setProperty('display',"none");
+            // 顯示登入燈箱
+            let loginBox = document.querySelector('.loginBox');
+            let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
+            if(style=="none"){
+                loginBox.style.setProperty('display',"block");
+            }
+        })
+        
+        //螢幕寬度
+        let screenWidth = document.body.clientWidth;
+        if(screenWidth<=768){
+            
+        }
+    </script>
+</body>
+</html>

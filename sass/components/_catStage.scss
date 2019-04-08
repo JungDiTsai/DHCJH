@@ -1,0 +1,409 @@
+.perspective{
+    max-width: 500px;
+    height: 400px;
+    border:1px solid #000;
+    position: relative;
+    perspective: 900px;
+}
+@keyframes turn{
+    0%{transform:translateY(100px) rotateX(0deg) rotateY(180deg) rotateZ(0deg)}
+    100%{transform:translateY(100px) rotateX(0deg) rotateY(-180deg) rotateZ(0deg)}
+}
+@keyframes turn2{
+    0%{transform: translateY(-80px) translateX(-100px) translateZ(75px) rotateX(0deg) rotateY(-180deg) rotateZ(0deg)}
+    100%{transform:translateY(-80px) translateX(-100px) translateZ(75px) rotateX(0deg) rotateY(180deg) rotateZ(0deg)}
+}
+@keyframes turn3{
+    0%{transform: translateY(-80px) translateX(100px) translateZ(75px) rotateX(0deg) rotateY(-180deg) rotateZ(0deg)}
+    100%{transform:translateY(-80px) translateX(100px) translateZ(75px) rotateX(0deg) rotateY(180deg) rotateZ(0deg)}
+}
+// 整個舞台
+.groupA{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    width: 300px;
+    height: 40px;
+    // outline: 2px solid #f00;
+    transform-style: preserve-3d;
+    transform: translateY(100px) rotateX(-30deg) rotateY(20deg) rotateZ(0deg);
+    animation: turn 10s alternate infinite;
+
+    div{
+        box-sizing: border-box;
+        width: 300px;
+        height: 40px;
+        font-size: 40px;
+        line-height: 40px;
+        text-align: center;
+        // outline: 1px solid #00f;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    // 下舞台
+    .front{ width: 130px; transform: translateX(-85px) translateZ(75px);background: url(../images/2.png)center no-repeat;background-size:cover;}
+    .front1{  width: 40px; transform:  translateZ(75px);background: #faf}
+    .front2{  width: 130px; transform: translateX(85px) translateZ(75px);background: url(../images/5.png)center no-repeat;background-size:cover;}
+     .back{transform:  translateZ(-75px);background: url(../images/3.png)center no-repeat;background-size:cover;}
+       .up{ transform: rotateX(90deg)  translateZ(20px); height: 150px;background: url(../images/3.png)center no-repeat;background-size:cover;}
+     .down{ transform: rotateX(270deg)  translateZ(20px); height: 150px;background: url(../images/3.png)center no-repeat;background-size:cover;}
+     .left{ transform: rotateY(270deg) translateZ(150px); width: 150px;background: url(../images/3.png)center no-repeat;background-size:cover;}
+    .right{ transform: rotateY(90deg) translateZ(150px);  width: 150px;background: url(../images/3.png)center no-repeat;background-size:cover;}
+   
+    .stairsB{ width: 30px;height:40px;transform:rotateX(270deg) translateY(-85px)  translateZ(20px)}
+    // 壁屏
+    .stairsC{ width: 250px;height: 95px;transform:  translateZ(-75px) translateY(-65px);border:#000 solid 1px;background: url(../images/5.png)center no-repeat;background-size:cover;}
+    .stairsC1{width: 250px;height: 95px;transform:  translateZ(-69px) translateY(-65px);border:#000 solid 1px;background: url(../images/5.png)center no-repeat;background-size:cover;}
+    .stairsC2{width: 6px; height: 95px;transform: translateY(-65px) translatez(-73px) translateX(126px) rotateY(90deg);background: #646464;}
+    .stairsC3{width: 6px; height: 95px;transform: translateY(-65px) translatez(-73px) translateX(-126px) rotateY(90deg);background: #646464;}
+    .stairsC4{width: 250px; height: 6px;transform: translateZ(-73px)translateY(-112px) rotateX(90deg);background: #646464;}
+    // 上壁屏
+    .stairsD{ width: 50px; height: 205px;transform: translateZ(20px)translateX(-95px)translateY(-160px) rotateX(-60deg);background: url(../images/6.png)center no-repeat;background-size:cover;}
+    .stairsE{ width: 50px; height: 205px;transform: translateZ(20px)translateX(95px)translateY(-160px) rotateX(-60deg);background: url(../images/7.png)center no-repeat;background-size:cover;}
+    .stairsF{ width: 150px; height: 205px;transform: translateZ(20px)translateY(-160px) rotateX(-60deg);background: url(../images/2.png)center no-repeat;background-size:cover;}
+    .stairsF1{width: 240px; height: 205px;transform: translateZ(20px)translateY(-162px) rotateX(-60deg);background: url(../images/2.png)center no-repeat;background-size:cover;}
+    .stairsF2{width:2px; height: 208px;transform: translateZ(18px) translateY(-160px) translateX(-120px) rotateY(-90deg) rotateZ(60deg);background: #646464;}
+    .stairsF3{width:2px; height: 208px;transform: translateZ(18px) translateY(-160px) translateX(120px) rotateY(-90deg) rotateZ(60deg);background: #646464;}
+    .stairsF4{width:240px; height: 2px;transform: translateZ(108px) translateY(-212px) ;background: #646464;}
+    // 跑馬燈
+    .subtitles{ width:200px ;height:20px;transform: translateY(-100px) translateZ(-67px);font-size: 18px;line-height: 1;text-align: center;background: #000;color:#fff;}
+    .subtitles1{width:2px ;height:20px;transform: translateY(-100px) translateZ(-67px)translateX(100px)rotateY(90deg);background: #646464;}
+    .subtitles2{width:2px ;height:20px;transform: translateY(-100px) translateZ(-67px)translateX(-100px)rotateY(90deg);background: #646464;}
+
+    // 樓梯三角形 位置調整translateZ(75px)
+    .triangleA{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 45px 0 0 60px;
+        border-color: transparent transparent transparent rgba(30,30,30,.9);
+        transform:translateZ(75px) translateZ(30px) translateX(-20px) rotateY(-90deg);
+    }
+    .triangleB{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 45px 0 0 60px;
+        border-color: transparent transparent transparent rgba(30,30,30,.9);
+        transform:translateZ(75px) translateZ(30px) translateX(-30px) rotateY(-90deg);
+    }
+    .triangleC{
+        width: 10px;
+        height: 75px;
+        background: rgba(30,30,30,.9);
+        transform:translateZ(75px)  translateX(-25px) translateZ(30px) rotateX(53deg)
+    }
+    .triangleD{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 45px 0 0 60px;
+        border-color: transparent transparent transparent rgba(30,30,30,.9);
+        transform:translateZ(75px) translateZ(30px) translateX(20px) rotateY(-90deg);
+    }
+    .triangleE{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 45px 0 0 60px;
+        border-color: transparent transparent transparent rgba(30,30,30,.9);
+        transform:translateZ(75px) translateZ(30px) translateX(30px) rotateY(-90deg);
+    }
+    .triangleF{
+        width: 10px;
+        height: 75px;
+        background: rgba(30,30,30,.9);
+        transform:translateZ(75px)  translateX(25px) translateZ(30px) rotateX(53deg)
+    }
+    
+    // 樓梯 位置調整translateZ(75px)
+    .ladderA{
+        width: 40px;
+        border: 1px solid #6e6e6e;
+        height: 10px;
+        background: #faf;
+        transform:translateZ(75px)  translateY(-10px) translateZ(10px) rotateX(90deg);
+    }
+    .ladderB{
+        width: 40px;
+        border: 1px solid #6e6e6e;
+        height: 10px;
+        background: #faf;
+        transform:translateZ(75px)  translateY(-5px) translateZ(15px) ;
+    }
+    .ladderC{
+        width: 40px;
+        border: 1px solid #6e6e6e;
+        height: 10px;
+        background: #faf;
+        transform:translateZ(75px)  translateY(0px) translateZ(20px) rotateX(90deg);
+    }
+    .ladderD{
+        width: 40px;
+        border: 1px solid #6e6e6e;
+        height: 10px;
+        background: #faf;
+        transform:translateZ(75px)  translateY(5px) translateZ(25px) ;
+    }
+    .ladderE{
+        width: 40px;
+        border: 1px solid #6e6e6e;
+        height: 10px;
+        background: #faf;
+        transform:translateZ(75px)  translateY(10px) translateZ(30px) rotateX(90deg);
+    }
+    .ladderF{
+        width: 40px;
+        border: 1px solid #6e6e6e;
+        height: 10px;
+        background: #faf;
+        transform:translateZ(75px)  translateY(15px) translateZ(35px) ;
+    }
+        /* 燈柱 位置調整 translateY(-210px) translateZ(115px) */
+    .headlightbox{    
+        width: 150px;
+        height: 10px;
+        background: #00f;
+        transform:translateY(-210px) translateZ(115px) translateY(5px)rotateX(90deg);
+    }
+    .headlightbox1{
+        
+        width: 150px;
+        height: 10px;
+        background: #00f;
+        transform:translateY(-210px) translateZ(115px) translateY(5px) rotateX(90deg) ;
+    }
+    .headlightbox2{
+        width: 150px;
+        height: 10px;
+        background: #00f;
+        transform:translateY(-210px) translateZ(115px) translateZ(5px) ;
+    }
+    .headlightbox3{
+        width: 150px;
+        height: 10px;
+        background: #00f;
+        transform:translateY(-210px) translateZ(115px) translateZ(-5px) ;
+    }
+    .headlightbox4{
+        width: 10px;
+        height: 10px;
+        background: #00f;
+        transform:translateY(-210px) translateZ(115px) translateX(75px) rotateY(90deg);
+    }
+    .headlightbox5{
+        width: 10px;
+        height: 10px;
+        background: #00f;
+        transform:translateY(-210px) translateZ(115px) translateX(-75px) rotateY(90deg);
+    }
+    /* 中間投射燈 位置調整 translateY(-210px) translateZ(115px) */
+    .headlight{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 10px 20px 10px;
+        border-color: transparent transparent #007bff transparent;
+        background: none;
+        transform:translateY(-210px) translateZ(115px)  translateY(5px) translateZ(5px)rotateX(30deg)
+    }
+    .headlight1{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 10px 20px 10px;
+        border-color: transparent transparent #007bff transparent;
+        background: none;
+        transform:translateY(-210px) translateZ(115px)  translateY(5px) translateZ(-5px) rotateX(-30deg)
+    }
+    .headlight2{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 10px 20px 10px;
+        border-color: transparent transparent #007bff transparent;
+        background: none;
+        transform:translateY(-210px) translateZ(115px)  translateY(5px) translateX(5px) rotateY(90deg) rotateX(30deg)
+    }
+    .headlight3{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 10px 20px 10px;
+        border-color: transparent transparent #007bff transparent;
+        background: none;
+        transform:translateY(-210px) translateZ(115px)  translateY(5px) translateX(-5px) rotateY(-90deg) rotateX(30deg)
+    }
+    
+    /* 左邊投射燈 位置調整 translateY(-210px) translateZ(115px) */
+    .headlight4{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 10px 20px 10px;
+        border-color: transparent transparent #007bff transparent;
+        background: none;
+        transform:translateY(-210px) translateZ(115px) translateX(-50px) translateY(5px) translateZ(5px)rotateX(30deg)
+    }
+    .headlight5{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 10px 20px 10px;
+        border-color: transparent transparent #007bff transparent;
+        background: none;
+        transform:translateY(-210px) translateZ(115px) translateX(-50px) translateY(5px) translateZ(-5px) rotateX(-30deg)
+    }
+    .headlight6{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 10px 20px 10px;
+        border-color: transparent transparent #007bff transparent;
+        background: none;
+        transform:translateY(-210px) translateZ(115px) translateX(-50px) translateY(5px) translateX(5px) rotateY(90deg) rotateX(30deg)
+    }
+    .headlight7{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 10px 20px 10px;
+        border-color: transparent transparent #007bff transparent;
+        background: none;
+        transform:translateY(-210px) translateZ(115px) translateX(-50px) translateY(5px) translateX(-5px) rotateY(-90deg) rotateX(30deg)
+    }
+    
+    /* 右邊投射燈 位置調整 translateY(-210px) translateZ(115px) */
+    .headlight8{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 10px 20px 10px;
+        border-color: transparent transparent #007bff transparent;
+        background: none;
+        transform:translateY(-210px) translateZ(115px) translateX(50px) translateY(5px) translateZ(5px)rotateX(30deg)
+    }
+    .headlight9{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 10px 20px 10px;
+        border-color: transparent transparent #007bff transparent;
+        background: none;
+        transform:translateY(-210px) translateZ(115px) translateX(50px) translateY(5px) translateZ(-5px) rotateX(-30deg)
+    }
+    .headlight10{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 10px 20px 10px;
+        border-color: transparent transparent #007bff transparent;
+        background: none;
+        transform:translateY(-210px) translateZ(115px) translateX(50px) translateY(5px) translateX(5px) rotateY(90deg) rotateX(30deg)
+    }
+    .headlight11{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 10px 20px 10px;
+        border-color: transparent transparent #007bff transparent;
+        background: none;
+        transform:translateY(-210px) translateZ(115px) translateX(50px) translateY(5px) translateX(-5px) rotateY(-90deg) rotateX(30deg)
+    }
+    /* 左音箱 位置調整前三個 translateZ(40px)translateX(-120px) translateY(-50px)*/
+    .audioBox{
+        width: 30px;
+        height: 60px;
+        background: url(../images/audio1.png)center no-repeat;background-size:cover;
+        transform:translateZ(40px)translateX(-120px) translateY(-50px)  rotateY(-30deg) translateZ(10px)
+    }
+    .audioBox1{
+        width: 30px;
+        height: 60px;
+        background: #000;
+        transform:translateZ(40px)translateX(-120px) translateY(-50px) rotateY(-30deg) translateZ(-10px)
+    }
+    .audioBox2{
+        width: 20px;
+        height: 60px;
+        background: #000;
+        transform:translateZ(40px)translateX(-120px) translateY(-50px) rotateY(-30deg) translateX(-15px) rotateY(90deg)
+    }
+    .audioBox3{
+        width: 20px;
+        height: 60px;
+        background: #000;
+        transform:translateZ(40px)translateX(-120px) translateY(-50px) rotateY(-30deg) translateX(15px) rotateY(90deg)
+    }
+    .audioBox4{
+        width: 30px;
+        height: 20px;
+        background: #000;
+        transform:translateZ(40px)translateX(-120px) translateY(-50px)  translateY(-30px) rotateY(-30deg) rotateX(90deg)
+    }
+    /* 右音箱 位置調整前三個 translateZ(40px)translateX(120px) translateY(-50px)*/
+    .audioBox5{
+        width: 30px;
+        height: 60px;
+        background: url(../images/audio1.png)center no-repeat;background-size:cover;
+        transform:translateZ(40px)translateX(120px) translateY(-50px)  rotateY(30deg) translateZ(10px)
+    }
+    .audioBox6{
+        width: 30px;
+        height: 60px;
+        background: #000;
+        transform:translateZ(40px)translateX(120px) translateY(-50px) rotateY(30deg) translateZ(-10px)
+    }
+    .audioBox7{
+        width: 20px;
+        height: 60px;
+        background: #000;
+        transform:translateZ(40px)translateX(120px) translateY(-50px) rotateY(30deg) translateX(-15px) rotateY(90deg)
+    }
+    .audioBox8{
+        width: 20px;
+        height: 60px;
+        background: #000;
+        transform:translateZ(40px)translateX(120px) translateY(-50px) rotateY(30deg) translateX(15px) rotateY(90deg)
+    }
+    .audioBox9{
+        width: 30px;
+        height: 20px;
+        background: #000;
+        transform:translateZ(40px)translateX(120px) translateY(-50px)  translateY(-30px) rotateY(30deg) rotateX(90deg)
+    }
+    img{
+        width: 80px;
+        position: absolute;
+        top:0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        animation: turn2 10s alternate infinite;
+    }
+    .img2{
+        width: 80px;
+        position: absolute;
+        top:0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        animation: turn3 10s alternate infinite;
+    }
+}
+@media screen and (min-width:768px) {
+    .perspective{
+        perspective: 300px;
+    }
+}
+@media screen and (min-width:992px) {}
+@media screen and (min-width:1200px) {}
