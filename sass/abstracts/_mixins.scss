@@ -8,3 +8,16 @@
   outline-offset: (-1 * ($outline-width + $outline-offset));
   background-color: $background-color;
 }
+
+@mixin fontStyle {
+
+  color:$fontColor;
+  font-family: $fontFamily;
+  span{
+      font-size: $subTitleWord;
+  }
+  p{
+      font-size: $contentWord;
+  }
+  
+}
