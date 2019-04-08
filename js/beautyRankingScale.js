@@ -3,14 +3,14 @@ window.addEventListener('resize',function(){
         stagescale();
     }else{
         init();
-        carArr[1].style.transform='scale(1.2)';
+        carArr[1].style.transform='scale(1.3)';
     }
 })
 carArr = document.getElementsByClassName("beautyRankingbg");
 function stagescale(){
     for(i=0;i<carArr.length;i++){
         if(this == carArr[i]){
-            carArr[i].style.transform = 'scale(1.2)';
+            carArr[i].style.transform = 'scale(1.3)';
         }else{
             carArr[i].style.transform = 'scale(1)';
         }
@@ -23,7 +23,7 @@ function init(){
             return ;
         }else{
             carArr[i].addEventListener('mouseover', stagescale);
-            carArr[1].style.transform='scale(1.2)';
+            carArr[1].style.transform='scale(1.3)';
         }
     }
 }
