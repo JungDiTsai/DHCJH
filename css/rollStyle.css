@@ -53,7 +53,9 @@ body {
 #scroller {
 	position: absolute;
 	height: 100%;
-	background: url(../img/bricks.png);
+	background: url(../images/introscroll.png);
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 .layer {
@@ -119,6 +121,8 @@ h4 { position: relative; }
 
 .layer {
 	transition: opacity 1000ms ease;
+	font-size: 36px;
+	color: white;
 }
 
 .hide {
@@ -132,8 +136,14 @@ h4 { position: relative; }
 
 /* COLORS */
 
-.yellow { background: rgb(255, 255, 230); }
+.yellow { background:url('../images/itro/intro2018.jpg');
+background-size: cover;
+background-position: 50% 50%; }
 
-.green  { background: rgb(200, 230, 200); }
+.green  { background: url('../images/itro/intro2019.jpg');
+	background-size: cover;
+	background-position: 50% 50%;  }
 
-.blue { background: rgb(200, 215, 230); }
+.blue { background: url('../images/itro/intro2017.jpg');
+	background-size: cover;
+	background-position: 50% 50%; }
