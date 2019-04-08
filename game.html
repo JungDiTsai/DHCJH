@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <style>
+    #bar{
+        width: 1000px;
+        height: 20px;
+        border: 1px solid red;
+    }
+    
+    #bar img{
+        width: 20px;
+        height: 20px;
+    }
+   #progressbar{
+       width: 20px;
+       height: 20px;
+       position: absolute;
+       top: 60px;
+       /* margin-left: 100px; */
+   }
+    
+    </style>
+</head>
+<body>
+        <audio controls="controls" id="myvideo">
+                <!-- <source src="/i/song.ogg" type="audio/ogg"> -->
+                <source src="images/videoplayback.mp4" type="audio/mpeg">
+            </audio>
+       
+        <div id="bar">
+            <!-- <img src="images/api/up.png" alt=""> -->
+                  
+        </div>
+        
+  
+        <img id="progressbar" src="images/api/up.png" alt="">
+  <script src="js/jquery-3.3.1.min.js"></script>
+
+   <script>
+    
+    window.addEventListener('load',starts);
+    class imgObject{
+    constructor(images, margin,asc) {
+        this.images = images;
+        this.margin = margin;
+        this.asc = asc;
+      }
+    }
+    var imgSize;
+    var el = document.getElementById("bar"); 
+    var el2 = document.getElementById("progressbar"); 
+    var imgObjArray =[];
+    var randomTotal=0;
+    var runpositon=0;
+    var marginData=[];
+    var marginTotal = 0;
+    // var fruits = ['10', '20', '30'];
+    // var x =$.inArray('10', fruits);
+    // console.log((x));
+
+    function starts(){
+        var x = randomNumber(5,8);
+        console.log('抽幾張',x);
+    
+
+        for(var i=0; i<x; i++){
+
+            var imgObj = new imgObject();
+            
+            // 哪一個圖的位置
+            var randomNum = Math.floor((Math.random() * 4 ));  
+            // console.log('圖片亂數',randomNum);
+           
+            
+            var marginNumb = Math.floor((Math.random()+1)*2 );
+            
+            console.log('margin',marginNumb);
+
+            randomTotal =((marginNumb*10)+randomTotal);
+            console.log('randomTotal',randomTotal);
+
+            var myPic = new Array("up.png","left.png","down.png","right.svg");
+            
+            imgObj.images= (myPic[randomNum]);
+            imgObj.margin=(randomTotal);
+
+            imgObjArray.push(imgObj);
+            // console.log(imgObjArray);
+            // console.log(imgObj.images);
+
+////////////////////////////////////////放圖片的碼號
+            switch(imgObj.images){
+                case 'up.png':                   
+                    imgObj.asc= 0x26;
+                    break;
+
+                case 'down.png':    
+                    imgObj.asc=0x28 ;
+                    break;
+
+                case 'left.png':    
+                    imgObj.asc=0x25 ;
+                    break;
+
+                case 'right.svg':    
+                    imgObj.asc=0x27 ;
+                    break;
+            };
+
+            
+           ///////////////
+        
+            // setInterval(update,1000);
+        }
+        
+        ///////更新進度條///
+        function update(){
+            
+            myvideo.play();
+            barsize = 1000; 
+            var runtime = myvideo.duration/9.2; //10次
+            // console.log('幾次',runtime);
+            
+            var videoRun =  (myvideo.currentTime/1000)*2; //每秒跑多少px
+            // console.log('每秒跑多少px',videoRun);
+
+            var runCircle  = videoRun%0.92;
+            // console.log('runCircle',runCircle );
+
+            runpositon = Math.ceil(runCircle*1000);
+           
+            console.log('runpositon',runpositon);
+
+            el2.style.marginLeft = runpositon + 'px';
+            // var x = el2.style.marginLeft;
+
+            var answer =$.inArray(runpositon, marginData);
+            console.log(answer);
+           if( answer != -1) {
+            console.log('11111');
+           }
+        }
+       
+       
+        
+        
+       
+        //////////放圖片到ＢＡＲ裡///////
+        var imgObjArrayLen = imgObjArray.length;
+        // console.log(imgObjArrayLen);
+        var b ='';
+        for(var i =0; i<imgObjArrayLen; i++){
+            var d=[];         
+            var pic='<img  style=" margin-left: '+imgObjArray[i].margin +'px"  src= " images/api/'+ imgObjArray[i].images +' ">';      
+            b += pic;
+
+            marginTotal+= imgObjArray[i].margin;          
+             /////把margin放到陣列/////////
+            marginData.push(marginTotal);
+            console.log(marginData);
+        }
+        el.innerHTML = b;
+    }
+    
+    
+    // 選抽幾張
+    function randomNumber(min,max){
+         return Math.floor(Math.random()*(max-min+1)) +min;
+    }
+   
+    
+    </script>
+</body>
+</html>

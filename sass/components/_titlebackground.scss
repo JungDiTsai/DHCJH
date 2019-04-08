@@ -1,0 +1,24 @@
+.titleBgi{
+    position: relative;
+    font-size: $titleWord;
+    font-family: $fontFamily;
+    text-align: center;
+    line-height: 110px;
+    width: 320px;
+    height: 120px;
+    background: url(../images/titleNeonLightPink.gif) center no-repeat;
+    background-size: cover;
+    color: $fontColor;
+    border-radius: 10px;  
+    outline: none;
+    border:none;
+    margin: 10px auto;
+}
+@media screen and (min-width:1200px) {
+    .titleBgi{
+        margin-top: 20px;
+        margin-left: 200px;
+        outline: red 5px solid;
+    }
+
+}
