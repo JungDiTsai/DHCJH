@@ -1,8 +1,12 @@
 *{
     outline: 1px solid #f00;
 }
-body {
-  background: #9C9C9C;
+.beautyPageantWrap{
+    background-image: url("../../images/beautyPageant/bPBg1.png");
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;   
 }
 .beautyRankingbg {
     position: absolute;
@@ -14,22 +18,14 @@ body {
     opacity: 0;
     filter: alpha(opacity=0);
   }
-  
-  #beautyRankingbg1 {
-    background: url(http://i3.tietuku.com/6c65325bbf87eb84.jpg) no-repeat;
-    background-size: cover;
+  .beautyRankingbg{
+      img{
+          width: 100%;  
+          height: auto;
+          margin-top: 150px;
+          filter:drop-shadow(3px 2px 20px rgba(245, 132, 132, 0.7));
+      }
   }
-  
-  #beautyRankingbg2 {
-    background: url(http://i3.tietuku.com/a72ff6249b76a87e.jpg) no-repeat;
-    background-size: cover;
-  }
-  
-  #beautyRankingbg3 {
-    background: url(http://i3.tietuku.com/eba2fb18598fa5ca.jpg) no-repeat;
-    background-size: cover;
-  }
-  
   .fadeIn {
     opacity: 100;
     filter: alpha(opacity=100);
@@ -71,7 +67,7 @@ body {
     .beautyPageantWrap{
         background-image: url("../../images/beautyPageant/bPBg1.png");
         background-size: cover;
-        height: 960px;
+        height: 1080px;
         width: 100%;
 
     }
