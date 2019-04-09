@@ -1,0 +1,15 @@
+@mixin fontStyle {
+
+    color:$fontColor;
+    font-family: $fontFamily;
+    span{
+        font-size: $subTitleWord;
+    }
+    p{
+        font-size: $contentWord;
+    }
+    h3{
+        font-size: $subTitleWord;
+    }
+    
+}

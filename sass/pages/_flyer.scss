@@ -2,14 +2,20 @@
     background: url(../images/bkground/flyerbg1.jpg) center;
     background-size: cover;
     // height: 100vh;
-
+    .wrap{
+        max-width: 1200px;
+        margin:auto;
+    }
     .title{
         margin-top:80px;
+        padding-top:50px;
         text-align: center;
+
+        .titleBgi{
+            font-size: $subTitleWord;
+            margin-bottom: 20px;
+        }
         .col-md-6{
-            img{
-                width: 90%;
-            }
             p{
                 margin: auto;
                 width: 90%;
@@ -32,7 +38,7 @@
                 text-align: center;
                 background: rgb(255, 38, 0);
                 border-radius: 50%;
-                margin: 5px auto 5px;
+                margin: 10px auto 10px;
                 cursor: pointer;
                 &:hover{
                     transform: scale(1.05);
@@ -48,28 +54,223 @@
                 line-height: 40px;
                 background:yellow;
                 box-shadow: 0 0 30px #fff, 0 0 0 1px #fff;
-                margin:0px auto;
+                margin:5px auto;
             }
             p{color:#fff;}
+            .step+p{color: yellow}
         }
     }
 
     .doIt{
-        
+        margin-top: 30px;
+        position: relative;
+        .clothCurtain{
+            background: rgba(0,0,0,.7);
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+            
+            p{
+                margin: auto;
+                width: 50%;
+                text-align: center;
+                color:#fff;
+            }
+            .commonBtn{margin-left: 10px;margin-top: 10px;}
+        }
         .backBlock{
             background: url(../images/bkground/flyerBackBlock.png) center;
             background-size: cover;
             padding-top: 71.3947990543735%;
+        }
+        .whiteBlock{
+            box-sizing: border-box;
+            padding: 20px;
+            .innerBox{
+                background: #fff;
+                border-radius: 5px;
+                padding: 10px;
+                h3{
+                    padding: 10px;
+                    background:#366040;
+                    color:#fffebf;
+                    text-align: center;
+                    font-size: 21px;
+                    border-radius: 5px 5px 0 0 ;
+                    position: relative;
+                    margin-bottom: 20px;
+                    &:before{
+                        content: "◄";
+                        left: 10px;
+                        color:#fff;
+                        position: absolute;
+                    }
+                    &:after{
+                        content: "►";
+                        right: 10px;
+                        color:#fff;
+                        position: absolute;
+                    }
+                }
+                .toolBox{
+                    outline: 1px solid #000;
+                    display: flex;
+                    flex-wrap: wrap;
+                    .tool{
+                        box-sizing: border-box;
+                        padding: 10px;
+                        img{
+                            width: 90%;
+                            &:hover{
+                                transform:scale(1.05);
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+                .btnBar{
+                    margin-top: 10px;
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
         }
     }
 }
 .secScreen{
     background: url(../images/bkground/flyerbg3.jpg) center;
     background-size: cover;
-    height: 100vh;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+    .wrap{
+        max-width: 1200px;
+        margin:auto;
+        .title{
+            padding-top:50px;
+            text-align: center;
+            padding-bottom: 50px;
+            .titleBgi{
+                font-size: $subTitleWord;
+                margin-bottom: 20px;
+            }
+        }
+        .owl-carousel{z-index: 0;}
+        .box{
+            text-align: center;
+            background: rgba(255,255,255,.5);
+            border-radius: 5px;
+            padding: 10px;
+            
+            h4{
+                text-align: center;font-size: 21px;color:#fff;
+            }
+            div{text-align: left;}
+            button{
+                margin-top: 10px;
+                display: none;
+            }
+        }
+        .center{
+            
+            background-color: red;
+            transition: 2s;
+            border-radius: 5px;
+            h4{
+                text-shadow:none;
+                font-size: 24px;
+                -webkit-text-fill-color: transparent;
+                background: url(../images/bkground/animated_text_fill.png) repeat-y;
+	            -webkit-background-clip: text;
+                background-clip: text;
+
+                animation: aitf 40s linear infinite;
+            }
+            button{display: inline-block;}
+        }
+    }
 }
 .thrScreen{
     background: url(../images/bkground/flyerbg2.jpg) center;
     background-size: cover;
-    height: 100vh;
+    .wrap{
+        max-width: 1200px;
+        margin:auto;
+        .title{
+            padding-top:50px;
+            text-align: center;
+            padding-bottom:50px;
+            .titleBgi{
+                font-size: $subTitleWord;
+            }
+        }
+        ul{
+            margin:0;
+            padding:0;
+            -moz-column-count: 3;
+            -moz-column-gap: 15px;
+            -webkit-column-count: 3;
+            -webkit-column-gap: 15px;
+            column-count: 2;
+            column-gap: 15px;
+          }
+        li{
+            list-style:none;
+            padding:0;
+            margin:0 0 15px 0;
+            display:inline-block;
+          }
+        li img{
+            max-width:100%;
+            cursor: pointer;
+        }
+    }
 }
+@media screen and (min-width:768px) {
+    .firstScreen{
+        .wrap{
+            .title{
+                display: flex;
+                .titleBgi{widows: 50%;}
+                p{
+                    width: 50%;
+                    font-size: $buttonWord;
+                }
+            }
+            .doIt{
+                .backBlock{
+                    float: left;
+                    padding-top: 47.5965327029157%;
+                }
+                .whiteBlock{
+                    float: left;
+                    
+                }
+                &::after{
+                    display: block;
+                    content:"";
+                    clear: left;
+                }
+            }
+        }
+    }
+    .thrScreen{
+        .wrap{
+            ul{
+                column-count: 5;
+            }
+        }
+    }
+}
+@media screen and (min-width:992px) {
+    .commonBtn{width: 100px;height: 50px;}
+}
+@media screen and (min-width:1200px) {
+    .commonBtn{width: 150px;height: 75px;}
+}
+

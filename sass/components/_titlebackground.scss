@@ -12,6 +12,13 @@
     border-radius: 10px;  
     outline: none;
     border:none;
-    margin: 10px auto;
+    margin:10px auto;
+}
+@media screen and (min-width:1200px) {
+    .titleBgi{
+        margin-top: 20px;
+        margin-left: 200px;
+       // outline: red 5px solid;
+    }
 
 }
