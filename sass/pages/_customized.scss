@@ -1,38 +1,39 @@
 // mobile
 // bg
 .custBg{
-    padding-top: 30px;
+    padding-top: 100px;
     background-image: url(../../images/customized/customized_bg.jpg);
     background-position: center;
-    width: 100%;
 }
 //title
-.custTitle{
-    background-image:url(../../images/customized/title_bg.png);
-    background-size: cover;
-    margin: auto;
-    width: 85%;
-    height: 100px;
-    padding: 5px 10px 0px 0px;
-    text-align: center;
-    h3{
-        font-size: $subTitleWord;
-        color: $fontColor;
-        line-height: 90px;
-    }
-}
+// replace with titleBgi
+// .custTitle{
+//     background-image:url(../../images/customized/title_bg.png);
+//     background-size: 100%;
+//     background-repeat: no-repeat;
+//     margin: auto;
+//     width: 300px;
+//     text-align: center;
+//     h3{
+//         font-size: $subTitleWord;
+//         color: $fontColor;
+//         line-height: 85px;
+//     }
+// }
+
 // 客製步驟
 .custStep{
+    width: 95%;
+    margin: auto;
     padding-top: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 .btnCustStep{
     cursor: pointer;
     font-size:14px;
     width: 85px;
-    height: 60px;
     background: url(../../images/customized/customized_step.svg) center no-repeat;
     background-size: 100%;
     color: $fontColor;
@@ -45,7 +46,7 @@
     }
 }
 .custSelected{
-    width: 100px;
+    width: 110px;
     filter: drop-shadow(2px 2px 8px $logoColor);
     h4{
         font-size:18px;
@@ -56,6 +57,8 @@
 }
 // 客製舞台步驟
 .custStageStep{
+    width: 80%;
+    margin: auto;
     padding: 10px 30px 0px;
     display: flex;
     justify-content: space-between;
@@ -97,6 +100,7 @@
 }
 // 舞台
 .perspective{
+    margin: auto;
     max-width: 500px;
     height: 400px;
     position: relative;
@@ -145,9 +149,9 @@
         margin: auto;
     }
     // 下舞台
-    .front{ width: 130px; transform: translateX(-85px) translateZ(75px);background: url(../../images/stage/2.png)center no-repeat;background-size:cover;}
+    .front{ width: 130px; transform: translateX(-85px) translateZ(75px);background: url(../../images/2.png)center no-repeat;background-size:cover;}
     .front1{  width: 40px; transform:  translateZ(75px);background: #faf}
-    .front2{  width: 130px; transform: translateX(85px) translateZ(75px);background: url(../../images/stage/5.png)center no-repeat;background-size:cover;}
+    .front2{  width: 130px; transform: translateX(85px) translateZ(75px);background: url(../../images/5.png)center no-repeat;background-size:cover;}
      .back{transform:  translateZ(-75px);background: url(../images/3.png)center no-repeat;background-size:cover;}
        .up{ 
            transform: rotateX(90deg)  translateZ(20px); 
@@ -159,9 +163,9 @@
                 box-shadow: 0px 0px 8px 8px $fontColor;
             }
         }
-     .down{ transform: rotateX(270deg)  translateZ(20px); height: 150px;background: url(../../images/stage/3.png)center no-repeat;background-size:cover;}
-     .left{ transform: rotateY(270deg) translateZ(150px); width: 150px;background: url(../../images/stage/3.png)center no-repeat;background-size:cover;}
-    .right{ transform: rotateY(90deg) translateZ(150px);  width: 150px;background: url(../../images/stage/3.png)center no-repeat;background-size:cover;}
+     .down{ transform: rotateX(270deg)  translateZ(20px); height: 150px;background: url(../../images/3.png)center no-repeat;background-size:cover;}
+     .left{ transform: rotateY(270deg) translateZ(150px); width: 150px;background: url(../../images/3.png)center no-repeat;background-size:cover;}
+    .right{ transform: rotateY(90deg) translateZ(150px);  width: 150px;background: url(../../images/3.png)center no-repeat;background-size:cover;}
     .stairsA{ }
     .stairsB{ width: 30px;height:40px;transform:rotateX(270deg) translateY(-85px)  translateZ(20px)}
     // 壁屏
@@ -182,8 +186,8 @@
     .stairsC3{width: 6px; height: 95px;transform: translateY(-65px) translatez(-73px) translateX(-126px) rotateY(90deg);background: #646464;}
     .stairsC4{width: 250px; height: 6px;transform: translateZ(-73px)translateY(-112px) rotateX(90deg);background: #646464;}
     // 上壁屏
-    .stairsD{ width: 50px; height: 205px;transform: translateZ(20px)translateX(-95px)translateY(-160px) rotateX(-60deg);background: url(../../images/stage/6.png)center no-repeat;background-size:cover;}
-    .stairsE{ width: 50px; height: 205px;transform: translateZ(20px)translateX(95px)translateY(-160px) rotateX(-60deg);background: url(../../images/stage/7.png)center no-repeat;background-size:cover;}
+    .stairsD{ width: 50px; height: 205px;transform: translateZ(20px)translateX(-95px)translateY(-160px) rotateX(-60deg);background: url(../../images/6.png)center no-repeat;background-size:cover;}
+    .stairsE{ width: 50px; height: 205px;transform: translateZ(20px)translateX(95px)translateY(-160px) rotateX(-60deg);background: url(../../images/7.png)center no-repeat;background-size:cover;}
     .stairsF{ 
         width: 140px;
         height: 205px;
@@ -449,7 +453,7 @@
     .audioBox{
         width: 30px;
         height: 60px;
-        background: url(../../images/stage/audio1.png)center no-repeat;background-size:cover;
+        background: url(../../images/audio1.png)center no-repeat;background-size:cover;
         transform:translateZ(40px)translateX(-120px) translateY(-50px)  rotateY(-30deg) translateZ(10px)
     }
     .audioBox1{
@@ -480,7 +484,7 @@
     .audioBox5{
         width: 30px;
         height: 60px;
-        background: url(../../images/stage/audio1.png)center no-repeat;background-size:cover;
+        background: url(../../images/audio1.png)center no-repeat;background-size:cover;
         transform:translateZ(40px)translateX(120px) translateY(-50px)  rotateY(30deg) translateZ(10px)
     }
     .audioBox6{
@@ -540,9 +544,30 @@
     height: 50px;
     h5{
         color: $fontColor;
-        font-size: $buttonWord;
+        font-size: 22px;
         text-align: center;
         line-height: 50px;
+        position: relative;
+    }
+    h5::before, h5::after{
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        top: 15px;
+        border-left: 3px solid $fontColor;
+        border-bottom: 3px solid $fontColor;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+    h5::before{
+        left: 25px;
+        transform: rotate(45deg);
+    }
+    h5::after{
+        right: 25px;
+        transform: rotate(-135deg);
     }
 }
 // 全部客製舞台內容
@@ -554,9 +579,9 @@
     background-size: 100%;
     margin: -10px auto;
     width: 300px;
-    height: 250px;
+    height: 290px;
     box-sizing: border-box;
-    padding: 17px 12px;
+    padding: 15px 15px;
     overflow: scroll;
     display: flex;
     flex-wrap: wrap;
@@ -567,6 +592,7 @@
         width: 80px;
         height: 80px;
         margin: 5px;
+        border-radius: 5px; 
     }
     input[type="file"]{
         display: none;
@@ -580,14 +606,38 @@
     }
 }
 // 音響與鋼管客製舞台內容
-.audioPoleItem{
+.audioPoleItem, .danceItem{
     .custItemContent{
-        align-content: center;
+        background-image: url(../../images/customized/stage_item_content_l.gif);
+        width: 300px;
+        height: 355px;
+        align-items: center;
     }
 }
+//  燈光客製舞台內容
 .lightItem{
     .custItemContent{
-        align-content: center;
+        height: 245px;
+        align-items: flex-start;
+    }
+}
+//  表演客製舞台內容
+//  字幕機客製舞台內容
+.subtitleItem{
+    .custItemContent{
+        height: 245px;
+    }
+    .custItemContentInfo{
+        textarea{
+            margin: 20px 0px 10px;
+            font-size: $buttonWord;
+            font-family: $fontFamily;
+            border-radius: 8px;
+        }
+        input{
+            width: 90px;
+            height: 45px;
+        }
     }
 }
 .custItemContentInfo{
@@ -614,7 +664,7 @@
     background-size: 100%;
     margin: auto;
     width: 300px;
-    height: 80px;
+    height: 65px;
     display: flex;
     justify-content: space-around;
     img{
@@ -638,6 +688,53 @@
     width: 300px;
     height: 110px;
 }
+// 客製特效控制
+.sizePicker{
+    margin: auto;
+    position: absolute;
+    height: 8px;
+    width: 70%;
+    border-radius: 20px;
+    top: 28px;
+    right: 25px;
+    background: linear-gradient(to right, $fontColor, #dfad09 );
+    &:before{
+        content: "大小";
+        position: absolute;
+        color: #fff;
+        left: -43px;
+        bottom: -7px;
+    }
+}
+// 客製顏色、字幕機控制
+.lightControl{
+    .colorPicker, .brightPicker{
+        margin: auto;
+        position: absolute;
+        height: 8px;
+        width: 70%;
+        border-radius: 20px;
+        left: 65px;
+        &:before{
+            content: "彩度";
+            position: absolute;
+            color: #fff;
+            left: -43px;
+            bottom: -7px;
+        }
+    }
+    .colorPicker{
+        top: 35px;
+        background: linear-gradient(to right,hsl(0,100%,50%),hsl(60,100%,50%),hsl(120,100%,50%),hsl(180,100%,50%),hsl(240,100%,50%),hsl(300,100%,50%),hsl(360,100%,50%));
+    }
+    .brightPicker{
+        top: 65px;
+        background: linear-gradient(to right, #fff, #333);
+        &:before{
+            content: "明度";
+        }
+    }
+}
 
 .btnStep{
     display: flex;
@@ -652,18 +749,18 @@
 //tablet
 @media screen and (min-width:768px) {
     // mobile
-    // bg
-    .custBg{}
     //title
-    .custTitle{
-        width: 50%;
-        height: 120px;
-        h3{
-            line-height: 105px;
-        }
+    .custStep{
+        width: 90%;
     }
+    // .custTitle{
+    //     width: 50%;
+    //     height: 120px;
+    //     h3{
+    //         line-height: 105px;
+    //     }
+    // }
     // 客製步驟
-    .custStep{}
     .btnCustStep{
         font-size: 22px;
         width: 140px;
@@ -687,9 +784,15 @@
     }
     // 客製舞台步驟
     .custStageStep{
-        width: 70%;
+        width: 680px;
         margin: auto;
         padding: 30px 30px 0px;
+        h5{
+            font-size: 24px;
+        }
+        p{
+            font-size: $buttonWord;
+        }
     }
     .btnCustStageStep{
         h5{
@@ -711,45 +814,41 @@
         filter: drop-shadow(2px 2px 10px #dc6364);
     }
     //舞台
-    .perspective{
+    .stage{
+        display: flex;
+        align-items: center;
         margin: 40px auto;
-        perspective: 300px;
     }
     // 客製舞台物件
     .custItem{
-        margin: 80px auto 0px;
+        // margin: 80px auto 0px;
     }
 }
 @media screen and (min-width:992px) {
     //title
-    .custTitle{
-        width: 40%;
-        height: 125px;
-        h3{
-            line-height: 115px;
-        }
+    .custStep{
+        width: 810px;
     }
-    .stage{
-        display: flex;
-        justify-content: space-evenly;
-        margin-top: 30px;
-    }
+    // .custTitle{
+    //     width: 40%;
+    //     height: 125px;
+    // }
     .perspective{
         width: 500px;
     }
-    .custItem{
-        margin: 80px 50px 60px 0px;
-    }
 }
 @media screen and (min-width:1200px) {
+    // .custTitle{
+    //     width: 475px;
+    //     height: 155px;
+    //     margin-left: 5%;
+    //     h3{
+    //         font-size: $titleWord;
+    //         line-height: 135px;
+    //     }
+    // }
     .custTitle{
-        width: 475px;
-        height: 155px;
-        margin-left: 5%;
-        h3{
-            font-size: $titleWord;
-            line-height: 135px;
-        }
+       right: 400px;
     }
     .btnCustStep{
         width: 180px;
@@ -768,66 +867,90 @@
         }
     }
     // 客製舞台步驟
-    .custStageStep{
-        width: 60%;
-        h5{
-            font-size: 24px;
-        }
-        p{
-            font-size: $buttonWord;
-        }
-    }
-    .custItemTitle, .custItemContent, .custItemControl{
-        width: 360px;
-    }
-    .custItemTitle{
-        height: 60px;
-        h5{
-            font-size: $thrTitleWord;
-            line-height: 60px;
-        }
-        h5::before, h5::after{
-            content: "";
-            display: inline-block;
-            position: relative;
-            width: 15px;
-            height: 15px;
-            border-left: 3px solid $fontColor;
-            border-bottom: 3px solid $fontColor;
-            vertical-align: middle;
-            cursor: pointer;
-        }
-        h5::before{
-            right: 80px;
-            transform: rotate(45deg);
-        }
-        h5::after{
-            left: 80px;
-            transform: rotate(-135deg);
-        }
-    }
     .stage{
-        align-items: center;
+        width: 1200px;
     }
     .perspective{
         transform: scale(1.3);
     }
+    // 客製標題
+    .custItemTitle, .custItemContent, .custItemControl{
+        width: 380px;
+    }
+    .custItemTitle{
+        height: 65px;
+        h5{
+            font-size: $thrTitleWord;
+            line-height: 60px;
+            &:before, &:after{
+                top: 20px;;
+            }
+        }
+    }
+    // 客製內容
     .custItemContent{
+        overflow: hidden;
         height: 345px;
         label, img{
             width: 100px;
             height: 100px;
         }
+        p{
+            font-size: 18px;
+        }
     }
+    .audioPoleItem, .danceItem{
+        .custItemContent{
+            width: 380px;
+            height: 425px;
+            background-position: bottom;
+        }
+    }
+    .lightItem, .subtitleItem{
+        .custItemContent{
+            height: 295px;
+        }
+    }
+    .subtitleItem{
+        .custItemContentInfo{
+            margin: 20px auto;
+            text-align: center;
+            textarea{
+                display: block;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    // 客製控制
     .custItemControl{
-        height: 75px;
+        height: 80px;
         img{
             width: 30px;
         }
     }
     .lightControl{
-        width: 360px;
+        width: 380px;
         height: 130px;
+        .colorPicker, .brightPicker{
+            height: 15px;
+            left: 80px;
+            &:before{
+                font-size: $buttonWord;
+                left: -50px;
+            }
+        }
+        .brightPicker{
+            top: 80px;
+        }
+    }
+    .effectControl{
+        .sizePicker{
+            top: 35px;
+            left: 80px;
+            &:before{
+                font-size: $buttonWord;
+            }
+        }
     }
 }
 // custmoized_02
@@ -835,9 +958,9 @@
 .date{
     box-shadow: 1px 2px 10px #000;
     background-color: #403a60;
-    width: 330px;
+    width: 320px;
     height: 360px;
-    margin: 10px auto;
+    margin: 20px auto;
     border-radius: 10px;
 }
 .selectDate{
@@ -937,13 +1060,17 @@
 }
 .loc{
     margin: auto;
+    .locInput{
+        display: flex;
+        justify-content: space-between;
+    }
     input{
         margin-top: 20px;
         vertical-align: middle;
     }
     input[type="text"]{
         padding-top: 10px;
-        width: 165px;
+        width: 50%;
         height: 40px;
         border-radius: 5px;
         font-size: 18px;
@@ -971,6 +1098,7 @@
         align-items: center;
     }
     .date{
+        width: 360px;
         height: 380px;
     }
     .infoNLoc{
@@ -995,7 +1123,7 @@
 @media screen and (min-width:992px){
     .date{
         padding-top: 30px;
-        width: 530px;
+        width: 480px;
         height: 530px;
     }
     .selectDate{
@@ -1080,11 +1208,12 @@
     background-image: url(../../images/customized/host/host_bg.jpg);
 }
 .hostInfoDetail{
+
     position: relative;
     background-image: url(../../images/customized/host/host_info.jpg);
     width: 278px;
     height: 546px;
-    margin: auto;
+    margin: 20px auto 0px;
     text-align: center;
     img{
         padding-top: 40px;
@@ -1114,7 +1243,7 @@
 // codepen radar chart end
 @media screen and (min-width:768px){
     .hostInfo{
-        padding-top: 40px;
+        padding-top: 20px;
     }
 }
 // 訂單資訊
@@ -1176,6 +1305,7 @@
 }
 @media screen and (min-width:768px){
     .orderInfo{
+        padding-top: 20px;
         margin: auto;
         display: flex;
         justify-content: space-around;

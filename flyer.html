@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,15 +8,19 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/flyer.css">
     <!-- font awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.carousel.min.css"></link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.theme.default.min.css"></link>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/owl.carousel.min.js"></script>
 </head>
+
 <body>
     <input type="checkbox" id=menu_control>
-    <header>    
+    <header>
         <!-- 放bar選單 -->
-        <label for="menu_control" class="menubtn" >
-                <div class="menuandcross"></div>
+        <label for="menu_control" class="menubtn">
+            <div class="menuandcross"></div>
         </label>
         <nav class="mainNav">
             <li class="mainNavCell"><a href="">電子花車客製</a></li>
@@ -23,10 +28,10 @@
             <h1 class="navLogo"><a href="index.html"><img src="images/logo.png" alt="台灣大舞台"></a></h1>
             <li class="mainNavCell"><a href="">花車選美</a></li>
             <li class="mainNavCell"><a href="">花車特色介紹</a></li>
-            <div class="navMemBtn"> 
+            <div class="navMemBtn">
                 <i class="far fa-user-circle"></i>
             </div>
-        </nav>       
+        </nav>
     </header>
     <div class="box"></div>
     <!-- 登入燈箱 -->
@@ -51,7 +56,9 @@
                 <th>會員帳號</th>
                 <td><input type="text"></td>
             </tr>
-            <tr><td colspan="2" class="prompt"><span>此帳號已有人使用 !</span></td></tr>
+            <tr>
+                <td colspan="2" class="prompt"><span>此帳號已有人使用 !</span></td>
+            </tr>
             <tr>
                 <th>會員密碼</th>
                 <td><input type="password"></td>
@@ -101,143 +108,327 @@
 
     <!-- flyer內容 -->
     <article class="firstScreen">
-        <div class="title">
-            <div class="col-12 col-md-6">
-                <img src="images/Title/flyerTitle.gif">
+        <div class="wrap">
+            <div class="title">
+                <h2 class="titleBgi">客製活動宣傳單</h2>
+                <div class="col-12 col-md-6">
+                    <p> 客製宣傳單功能為免費功能，有購買花車的客戶可以更可匯入花車內容，輕鬆幫你邀請朋友參加活動，還有統計參加人數，快來試試看吧！</p>
+                </div>
             </div>
-            <div class="col-12 col-md-6">
-                <p> 客製宣傳單功能為免費功能，有購買花車的客戶可以更可匯入花車內容，輕鬆幫你邀請朋友參加活動，還有統計參加人數，快來試試看吧！</p>
+            <div class="stepsBar">
+                <div class="stepBox">
+                    <div class="circle step">壹</div>
+                    <p>選擇背景圖片</p>
+                </div>
+                <div class="stepBox">
+                    <div class="circle">貳</div>
+                    <p>選擇日期</p>
+                </div>
+                <div class="stepBox">
+                    <div class="circle">參</div>
+                    <p>選擇活動地點</p>
+                </div>
+                <div class="stepBox">
+                    <div class="circle">肆</div>
+                    <p>輸入文字</p>
+                </div>
             </div>
-        </div>
-        <div class="stepsBar">
-            <div class="clothCurtain">
-                <p>如有舞台客製訂單者，可指定訂單，即可匯入宣傳單內，無訂單者，也可以免費體驗客製宣傳單估能。<br>＊公開體驗宣傳單將於發布達24小時移除＊</p>
-                <button class="commonBtn">匯入訂單</button>
-                <button class="commonBtn">免費體驗</button>
+            <div class="doIt">
+                <div class="backBlock col-md-8">
+
+                </div>
+                <div class="whiteBlock col-md-4">
+                    <div class="innerBox">
+                        <h3>選擇背景圖片</h3>
+                        <div class="toolBox">
+                            <div class="tool col-4">
+                                <img src="images/flyertools/1.jpg" alt="">
+                            </div>
+                            <div class="tool col-4">
+                                <img src="images/flyertools/2.jpg" alt="">
+                            </div>
+                            <div class="tool col-4">
+                                <img src="images/flyertools/3.jpg" alt="">
+                            </div>
+                            <div class="tool col-4">
+                                <img src="images/flyertools/4.jpg" alt="">
+                            </div>
+                            <div class="tool col-4">
+                                <img src="images/flyertools/5.jpg" alt="">
+                            </div>
+                            <div class="tool col-4">
+                                <img src="images/flyertools/6.jpg" alt="">
+                            </div>
+                            <div class="tool col-4">
+                                <img src="images/flyertools/7.jpg" alt="">
+                            </div>
+                            <div class="tool col-4">
+                                <img src="images/flyertools/8.jpg" alt="">
+                            </div>
+                            <div class="tool col-4">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="cloud-upload-alt" class="svg-inline--fa fa-cloud-upload-alt fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" width="100%"viewBox="-50 -80 840 600"><path fill="currentColor" d="M537.6 226.6c4.1-10.7 6.4-22.4 6.4-34.6 0-53-43-96-96-96-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32c-88.4 0-160 71.6-160 160 0 2.7.1 5.4.2 8.1C40.2 219.8 0 273.2 0 336c0 79.5 64.5 144 144 144h368c70.7 0 128-57.3 128-128 0-61.9-44-113.6-102.4-125.4zM393.4 288H328v112c0 8.8-7.2 16-16 16h-48c-8.8 0-16-7.2-16-16V288h-65.4c-14.3 0-21.4-17.2-11.3-27.3l105.4-105.4c6.2-6.2 16.4-6.2 22.6 0l105.4 105.4c10.1 10.1 2.9 27.3-11.3 27.3z"></path></svg>
+                            </div>
+                        </div>
+                        <div class="btnBar">
+                            <button class="commonBtn">上一步</button>
+                            <button class="commonBtn">下一步</button>
+                        </div>
+                        <div class="clothCurtain">
+                            <div><p>如有舞台客製訂單者，可指定訂單，即可匯入宣傳單內，無訂單者，也可以免費體驗客製宣傳單估能。<br>＊公開體驗宣傳單將於發布達24小時移除＊</p></div>
+                            <div>
+                                <button class="commonBtn">匯入訂單</button>
+                                <button class="commonBtn start">免費體驗</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="stepBox">
-                <div class="circle step">壹</div>
-                <p>選擇背景圖片</p>
-            </div>
-            <div class="stepBox">
-                <div class="circle">貳</div>
-                <p>選擇日期</p>
-            </div>
-            <div class="stepBox">
-                <div class="circle">參</div>
-                <p>活動地點</p>
-            </div>
-            <div class="stepBox">
-                <div class="circle">肆</div>
-                <p>輸入文字</p>
-            </div>
-        </div>
-        <div class="doIt">
-            <div class="backBlock col-md-6"></div>
         </div>
     </article>
-    <article class="secScreen"></article>
-    <article class="thrScreen"></article>
+    <article class="secScreen">
+        <div class="wrap">
+            <div class="title">
+                <h2 class="titleBgi">客製活動宣傳單</h2>
+            </div>
+            <div id="carrousel">
+                <div class="container">
+                    <div class="col-md-12">
+                        <div class="owl-carousel owl-theme">
+                          <div class="box" style="width:220px">
+                                <img src="images/flyer/0.png">
+                                <div>
+                                    <h4>勁爆你的夜</h4>
+                                    <p>日期 : 2019-03-24(一)</p>
+                                    <p>主持人 : 小勒勒</p>
+                                    <p>地點 : 桃園市中壢區中央路200號</p>
+                                    <p>目前參與人數 : 96人</p>
+                                </div>
+                                <button class="commonBtn centerShow">我要參加</button>
+                          </div>
+                          <div class="box" style="width:220px">
+                                <img src="images/flyer/1.png">
+                                <div>
+                                    <h4>勁爆你的夜</h4>
+                                    <p>日期 : 2019-03-24(一)</p>
+                                    <p>主持人 : 小勒勒</p>
+                                    <p>地點 : 桃園市中壢區中央路200號</p>
+                                    <p>目前參與人數 : 96人</p>
+                                </div>
+                                <button class="commonBtn centerShow">我要參加</button>
+                          </div>
+                          <div class="box" style="width:220px">
+                                <img src="images/flyer/2.png">
+                                <div>
+                                    <h4>勁爆你的夜</h4>
+                                    <p>日期 : 2019-03-24(一)</p>
+                                    <p>主持人 : 小勒勒</p>
+                                    <p>地點 : 桃園市中壢區中央路200號</p>
+                                    <p>目前參與人數 : 96人</p>
+                                </div>
+                                <button class="commonBtn centerShow">我要參加</button>
+                          </div>
+                          <div class="box" style="width:220px">
+                                <img src="images/flyer/3.png">
+                                <div>
+                                    <h4>勁爆你的夜</h4>
+                                    <p>日期 : 2019-03-24(一)</p>
+                                    <p>主持人 : 小勒勒</p>
+                                    <p>地點 : 桃園市中壢區中央路200號</p>
+                                    <p>目前參與人數 : 96人</p>
+                                </div>
+                                <button class="commonBtn centerShow">我要參加</button>
+                          </div>
+                          <div class="box" style="width:220px">
+                                <img src="images/flyer/4.png">
+                                <div>
+                                    <h4>勁爆你的夜</h4>
+                                    <p>日期 : 2019-03-24(一)</p>
+                                    <p>主持人 : 小勒勒</p>
+                                    <p>地點 : 桃園市中壢區中央路200號</p>
+                                    <p>目前參與人數 : 96人</p>
+                                </div>
+                                <button class="commonBtn centerShow">我要參加</button>
+                          </div>
+                          <div class="box" style="width:220px">
+                                <img src="images/flyer/5.png">
+                                <div>
+                                    <h4>勁爆你的夜</h4>
+                                    <p>日期 : 2019-03-24(一)</p>
+                                    <p>主持人 : 小勒勒</p>
+                                    <p>地點 : 桃園市中壢區中央路200號</p>
+                                    <p>目前參與人數 : 96人</p>
+                                </div>
+                                <button class="commonBtn centerShow">我要參加</button>
+                          </div>
+                          <div class="box" style="width:220px">
+                                <img src="images/flyer/6.png">
+                                <div>
+                                    <h4>勁爆你的夜</h4>
+                                    <p>日期 : 2019-03-24(一)</p>
+                                    <p>主持人 : 小勒勒</p>
+                                    <p>地點 : 桃園市中壢區中央路200號</p>
+                                    <p>目前參與人數 : 96人</p>
+                                </div>
+                                <button class="commonBtn centerShow">我要參加</button>
+                          </div>
+                          
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </article>
+    <article class="thrScreen">
+        <div class="wrap">
+            <div class="title">
+                <h2 class="titleBgi">宣傳單小試身手</h2>
+            </div>
+            <ul>
+                <li><img src="images/flyer/1.png"></li>
+                <li><img src="images/flyer/2.png"></li>
+                <li><img src="images/flyer/3.png"></li>
+                <li><img src="images/flyer/4.png"></li>
+                <li><img src="images/flyer/5.png"></li>
+                <li><img src="images/flyer/6.png"></li>
+                <li><img src="images/flyer/7.png"></li>
+                <li><img src="images/flyer/4.png"></li>
+                <li><img src="images/flyer/5.png"></li>
+                <li><img src="images/flyer/6.png"></li>
+                <li><img src="images/flyer/7.png"></li>
+            </ul>
+        </div>     
+    </article>
 
 
     <script>
-        
+
         /* 登入燈箱 JS*/
         // 點擊icon開啟登入燈箱----------------------------
-        document.querySelector('.fa-user-circle').addEventListener('click', function (e){
+        document.querySelector('.fa-user-circle').addEventListener('click', function (e) {
             // 顯示登入燈箱
             let loginBox = document.querySelector('.loginBox');
             let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
-            if(style=="block"){
-                loginBox.style.setProperty('display',"none");
-                e.target.style.setProperty('color',"#2cffff");
-            }else{
-                loginBox.style.setProperty('display',"block");
-                e.target.style.setProperty('color',"rgb(252, 211, 28)");
+            if (style == "block") {
+                loginBox.style.setProperty('display', "none");
+                e.target.style.setProperty('color', "#2cffff");
+            } else {
+                loginBox.style.setProperty('display', "block");
+                e.target.style.setProperty('color', "rgb(252, 211, 28)");
             }
         })
         // 點擊關閉----------------------------
         document.querySelector('.loginBox .fa-times').addEventListener('click', function () {
             let loginBox = document.querySelector('.loginBox');
             let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
-            if(style=="block"){
-                loginBox.style.setProperty('display',"none");
+            if (style == "block") {
+                loginBox.style.setProperty('display', "none");
             }
         })
         // 點擊註冊------------------------------
         document.querySelector('.loginBox .showRegistered').addEventListener('click', function () {
             // 隱藏登入燈箱
             let loginBox = document.querySelector('.loginBox');
-            loginBox.style.setProperty('display',"none");
+            loginBox.style.setProperty('display', "none");
             // 顯示註冊燈箱
             let registeredBox = document.querySelector('.registeredBox');
             let style = window.getComputedStyle(registeredBox, null).getPropertyValue('display');
-            if(style=="none"){
-                registeredBox.style.setProperty('display',"block");
+            if (style == "none") {
+                registeredBox.style.setProperty('display', "block");
             }
         })
         // 點擊忘記密碼------------------------------
         document.querySelector('.loginBox .showForgotPSW').addEventListener('click', function () {
             // 隱藏登入燈箱
             let loginBox = document.querySelector('.loginBox');
-            loginBox.style.setProperty('display',"none");
+            loginBox.style.setProperty('display', "none");
             // 顯示忘記密碼燈箱
             let forgotBox = document.querySelector('.forgotBox');
             let style = window.getComputedStyle(forgotBox, null).getPropertyValue('display');
-            if(style=="none"){
-                forgotBox.style.setProperty('display',"block");
+            if (style == "none") {
+                forgotBox.style.setProperty('display', "block");
             }
         })
 
         /* 註冊燈箱 JS*/
         // 點擊關閉----------------------------
-        document.querySelector('.registeredBox .fa-times').addEventListener('click',function(){
+        document.querySelector('.registeredBox .fa-times').addEventListener('click', function () {
             let registeredBox = document.querySelector('.registeredBox');
             let style = window.getComputedStyle(registeredBox, null).getPropertyValue('display');
-            if(style=="block"){
-                registeredBox.style.setProperty('display',"none");
+            if (style == "block") {
+                registeredBox.style.setProperty('display', "none");
             }
         })
         // 點擊回到登入----------------------------
-        document.querySelector('.registeredBox .backLogin').addEventListener('click',function(){
+        document.querySelector('.registeredBox .backLogin').addEventListener('click', function () {
             // 隱藏註冊燈箱
             let registeredBox = document.querySelector('.registeredBox');
-            registeredBox.style.setProperty('display',"none");
+            registeredBox.style.setProperty('display', "none");
             // 顯示登入燈箱
             let loginBox = document.querySelector('.loginBox');
             let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
-            if(style=="none"){
-                loginBox.style.setProperty('display',"block");
+            if (style == "none") {
+                loginBox.style.setProperty('display', "block");
             }
         })
 
         /* 忘記密碼燈箱 JS*/
         // 點擊關閉----------------------------
-        document.querySelector('.forgotBox .fa-times').addEventListener('click',function(){
+        document.querySelector('.forgotBox .fa-times').addEventListener('click', function () {
             let forgotBox = document.querySelector('.forgotBox');
             let style = window.getComputedStyle(forgotBox, null).getPropertyValue('display');
-            if(style=="block"){
-                forgotBox.style.setProperty('display',"none");
+            if (style == "block") {
+                forgotBox.style.setProperty('display', "none");
             }
         })
         // 點擊回到登入----------------------------
-        document.querySelector('.forgotBox .backLogin').addEventListener('click',function(){
+        document.querySelector('.forgotBox .backLogin').addEventListener('click', function () {
             // 隱藏忘記密碼燈箱
             let forgotBox = document.querySelector('.forgotBox');
-            forgotBox.style.setProperty('display',"none");
+            forgotBox.style.setProperty('display', "none");
             // 顯示登入燈箱
             let loginBox = document.querySelector('.loginBox');
             let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
-            if(style=="none"){
-                loginBox.style.setProperty('display',"block");
+            if (style == "none") {
+                loginBox.style.setProperty('display', "block");
             }
         })
-        
+
         //螢幕寬度
         let screenWidth = document.body.clientWidth;
-        if(screenWidth<=768){
-            
+        if (screenWidth <= 768) {
+
         }
+
+        //owlCarousel套件
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            center: true,
+            autoWidth:true,
+            margin: 50,
+            autoplay: true, // 自動輪播
+            autoplayTimeout: 3000, // 切換時間
+            autoplayHoverPause: true, // 滑鼠經過時暫停
+            responsive: {
+                0: {
+                    items: 3,
+                },
+                600: {
+                    items: 5,
+                },
+                1000: {
+                    items: 7
+                }
+            }
+        })
+
+        //點擊免費體驗
+        document.querySelector('.start').addEventListener('click',function(){
+            let clothCurtain = document.querySelector('.clothCurtain');
+            clothCurtain.style.setProperty('animation',`blurFadeInOut 2s ease-in backwards`);
+            setTimeout(function(){clothCurtain.style.display = "none"},2000);
+        })
     </script>
 </body>
+
 </html>

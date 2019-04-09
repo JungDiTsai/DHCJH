@@ -1,5 +1,4 @@
 .titleBgi{
-    position: relative;
     font-size: $titleWord;
     font-family: $fontFamily;
     text-align: center;
@@ -18,7 +17,7 @@
     .titleBgi{
         margin-top: 20px;
         margin-left: 200px;
-        outline: red 5px solid;
+       // outline: red 5px solid;
     }
 
 }

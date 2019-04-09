@@ -5,14 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>customized_01</title>
+    <!-- header css -->
+    <!-- <link rel="stylesheet" href="css/index.css"> -->
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- customzied css -->
     <link rel="stylesheet" href="css/customized.css">
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 <body>
-    <!-- <header></header> -->
+    <!-- header -->
+<input type="checkbox" id=menu_control>
+    <header>    
+        <!-- 放bar選單 -->
+        <label for="menu_control" class="menubtn" >
+                <div class="menuandcross"></div>
+        </label>
+        <nav class="mainNav">
+            <li class="mainNavCell"><a href="">電子花車客製</a></li>
+            <li class="mainNavCell"><a href="flyer.html">客製宣傳單</a></li>
+            <h1 class="navLogo"><a href="index.html"><img src="images/logo.png" alt="台灣大舞台"></a></h1>
+            <li class="mainNavCell"><a href="">花車選美</a></li>
+            <li class="mainNavCell"><a href="">花車特色介紹</a></li>
+            <div class="navMemBtn"> 
+                <i class="far fa-user-circle"></i>
+            </div>
+        </nav>       
+    </header>
+    <div class="box"></div>
+    <!-- 登入燈箱 -->
+    <div class="loginBox">
+        <i class="fas fa-times"></i>
+        <h3>登入</h3>
+        <div class="inputBox">
+            <i class="fas fa-user fa-1x"></i><input type="text" id="username" placeholder="User">
+        </div>
+        <div class="inputBox">
+            <i class="fas fa-key fa-1x"></i><input type="password" id="password" placeholder="Password">
+        </div>
+        <a href="memberCenter.html"><button class="commonBtn">登入</button></a>
+        <p><a class="showRegistered">註冊</a> / <a class="showForgotPSW">忘記密碼</a></p>
+    </div>
+    <!-- 註冊燈箱 -->
+    <div class="registeredBox">
+        <i class="fas fa-times"></i>
+        <h3>立即註冊</h3>
+        <table>
+            <tr>
+                <th>會員帳號</th>
+                <td><input type="text"></td>
+            </tr>
+            <tr><td colspan="2" class="prompt"><span>此帳號已有人使用 !</span></td></tr>
+            <tr>
+                <th>會員密碼</th>
+                <td><input type="password"></td>
+            </tr>
+            <tr>
+                <th>會員姓名</th>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <th>會員電話</th>
+                <td><input type="tel"></td>
+            </tr>
+            <tr>
+                <th>會員信箱</th>
+                <td><input type="email"></td>
+            </tr>
+            <tr>
+                <th>性別</th>
+                <td>
+                    <label>
+                        <input type="radio" name="sex" value="">
+                        <i class="fas fa-venus fa-2x"></i>
+                    </label>
+                    <label>
+                        <input type="radio" name="sex" value="">
+                        <i class="fas fa-mars fa-2x"></i>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2"><input type="submit" value="註冊帳號" class="commonBtn"></th>
+            </tr>
+        </table>
+        <div><a class="backLogin">回到登入</a></div>
+    </div>
+    <!-- 忘記密碼燈箱 -->
+    <div class="forgotBox">
+        <i class="fas fa-times"></i>
+        <h3>忘記密碼</h3>
+        <p>請輸入您註冊時的會員信箱，我們會將新的密碼寄至您的信箱。</p>
+        <div>會員信箱<input type="email"></div>
+        <input type="submit" value="寄送密碼" class="commonBtn">
+        <div><a class="backLogin">回到登入</a></div>
+    </div>
+
+    <!-- customized start -->
     <div class="custBg">
-        <div class="custTitle">
+        <div class="custTitle titleBgi">
             <h3>客製舞台</h3>
         </div>
         <!-- 客製步驟 -->
@@ -58,7 +151,7 @@
             </div>
         </div>
         <div class="stage">
-            <div class="stageView">
+            <div class="stageView col-md-6">
                 <div class="perspective">
                 <div class="groupA">
                     <!-- 周邊細項 -->
@@ -150,204 +243,212 @@
                         <div class="audioBox9"></div>
                     </div>    
                     <!-- <img src="images/Fireworks5.gif" alt=""> -->
-                    <!-- <img src="images/stage/fire1.gif" alt=""> -->
-                    <!-- <img src="images/stage/fire1.gif" alt="" class="img2"> -->
+                    <!-- <img src="images/fire1.gif" alt=""> -->
+                    <!-- <img src="images/fire1.gif" alt="" class="img2"> -->
                     </div>
                 </div>
             </div>
 
-            <!-- 內塗裝 -->
-            <div class="custItem patternItem">
-                <div class="custItemTitle">
-                    <h5>內塗裝</h5>
+            <div class="custAllItem col-md-6">
+                <!-- 內塗裝 -->
+                <div class="custItem patternItem">
+                    <div class="custItemTitle">
+                        <h5>內塗裝</h5>
+                    </div>
+                    <div class="custItemContent">
+                        <label for="patternUpload"></label>
+                        <input type="file" name="patternUpload" id="patternUpload">
+                        <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_01.jpg" alt="">
+                        <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_02.jpg" alt="">
+                        <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_03.jpg" alt="">
+                        <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_04.jpg" alt="">
+                        <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_05.jpg" alt="">
+                        <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_06.jpg" alt="">
+                        <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_07.jpg" alt="">
+                        <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_08.jpg" alt="">
+                    </div>
+                    <div class="custItemControl">
+                        <div class="btnZoomIn">
+                            <img src="images/customized/cust_stage_innerPattern/cust_stage_control_zoomIn.svg" alt="">
+                        </div>
+                        <div class="btnZoomOut">
+                            <img src="images/customized/cust_stage_innerPattern/cust_stage_control_zoomOut.svg" alt="">
+                        </div>
+                        <div class="btnRot">
+                            <img src="images/customized/cust_stage_innerPattern/cust_stage_control_rotate.svg" alt="">
+                        </div>
+                        <div class="btnDel">
+                            <img src="images/customized/cust_stage_innerPattern/cust_stage_control_delete.svg" alt="">
+                        </div>
+                    </div>
                 </div>
-                <div class="custItemContent">
-                    <label for="patternUpload"></label>
-                    <input type="file" name="patternUpload" id="patternUpload">
-                    <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_01.jpg" alt="">
-                    <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_02.jpg" alt="">
-                    <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_03.jpg" alt="">
-                    <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_04.jpg" alt="">
-                    <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_05.jpg" alt="">
-                    <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_06.jpg" alt="">
-                    <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_07.jpg" alt="">
-                    <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_08.jpg" alt="">
+
+                <!-- 音響與鋼管 -->
+                <div class="custItem audioPoleItem disN">
+                    <div class="custItemTitle">
+                        <h5>音響鋼管</h5>
+                    </div>
+                    <div class="custItemContent">
+                        <div class="custItemContentInfo">
+                            <img src="images/customized/cust_stage_audioAndPole/audio_01.png" alt="">
+                            <p>鄰居會罵型</p>
+                            <p>$8000</p>
+                        </div>      
+                        <div class="custItemContentInfo">
+                            <img src="images/customized/cust_stage_audioAndPole/audio_02.png" alt="">
+                            <p>震耳欲聾型</p>
+                            <p>$13000</p>
+                        </div>      
+                        <div class="custItemContentInfo">
+                            <img src="images/customized/cust_stage_audioAndPole/audio_03.png" alt="">
+                            <p>毀天滅地型</p>
+                            <p>$21000</p>
+                        </div>      
+                        <div class="custItemContentInfo">
+                            <img src="images/customized/cust_stage_audioAndPole/pole.png" alt="">
+                            <p>一枝獨秀款</p>
+                            <p>$25000</p>
+                        </div>      
+                        <div class="custItemContentInfo">
+                            <img src="images/customized/cust_stage_audioAndPole/pole_3.png" alt="">
+                            <p>三人小團體</p>
+                            <p>$25000</p>
+                        </div>      
+                        <div class="custItemContentInfo">
+                            <img src="images/customized/cust_stage_audioAndPole/pole_5.png" alt="">
+                            <p>五福大臨門</p>
+                            <p>$25000</p>
+                        </div>   
+                    </div>
                 </div>
-                <div class="custItemControl">
-                    <div class="btnZoomIn">
-                        <img src="images/customized/cust_stage_innerPattern/cust_stage_control_zoomIn.svg" alt="">
+
+                <!-- 燈光 -->
+                <div class="custItem lightItem disN">
+                    <div class="custItemTitle">
+                        <h5>燈光</h5>
                     </div>
-                    <div class="btnZoomOut">
-                        <img src="images/customized/cust_stage_innerPattern/cust_stage_control_zoomOut.svg" alt="">
+                    <div class="custItemContent">
+                        <div class="custItemContentInfo">
+                            <img src="images/customized/cust_stage_light/light_01.png" alt="">
+                            <p>毀天滅地型</p>
+                            <p>$25000</p>
+                        </div> 
+                        <div class="custItemContentInfo">
+                            <img src="images/customized/cust_stage_light/light_02.png" alt="">
+                            <p>毀天滅地型</p>
+                            <p>$25000</p>
+                        </div> 
+                        <div class="custItemContentInfo">
+                            <img src="images/customized/cust_stage_light/light_03.png" alt="">
+                            <p>毀天滅地型</p>
+                            <p>$25000</p>
+                        </div> 
                     </div>
-                    <div class="btnRot">
-                        <img src="images/customized/cust_stage_innerPattern/cust_stage_control_rotate.svg" alt="">
+                    <div class="lightControl">
+                        <div class="colorPicker"></div>
+                        <div class="brightPicker"></div>
                     </div>
-                    <div class="btnDel">
-                        <img src="images/customized/cust_stage_innerPattern/cust_stage_control_delete.svg" alt="">
+                </div>
+
+                <!-- 特效 -->
+                <div class="custItem effectItem disN">
+                    <div class="custItemTitle">
+                        <h5>特效</h5>
+                    </div>
+                    <div class="custItemContent">
+                        <div class="custItemContentInfo">
+                            <img src="images/customized/cust_stage_effect/effects_01.png" alt="">
+                            <p>火焰之舞</p>
+                            <p>$3000</p>
+                        </div> 
+                        <div class="custItemContentInfo">
+                            <img src="images/customized/cust_stage_effect/effects_02.png" alt="">
+                            <p>火力四射</p>
+                            <p>$5000</p>
+                        </div> 
+                        <div class="custItemContentInfo">
+                            <img src="images/customized/cust_stage_effect/effects_03.png" alt="">
+                            <p>火力全開</p>
+                            <p>$6000</p>
+                        </div>
+                        <div class="custItemContentInfo">
+                            <img src="images/customized/cust_stage_effect/firework_01.png" alt="">
+                            <p>雷霆萬鈞</p>
+                            <p>$13000</p>
+                        </div> 
+                        <div class="custItemContentInfo">
+                            <img src="images/customized/cust_stage_effect/firework_02.png" alt="">
+                            <p>萬紫千紅</p>
+                            <p>$18000</p>
+                        </div> 
+                        <div class="custItemContentInfo">
+                            <img src="images/customized/cust_stage_effect/firework_03.png" alt="">
+                            <p>龍翔九天</p>
+                            <p>$25000</p>
+                        </div>
+                    </div>
+                    <div class="custItemControl effectControl">
+                        <div class="sizePicker"></div>
+                    </div>
+                </div>
+
+                <!-- 表演 -->
+                <div class="custItem danceItem disN">
+                    <div class="custItemTitle">
+                        <h5>表演</h5>
+                    </div>
+                    <div class="custItemContent">
+                        <div class="custItemContentInfo">
+                            <img src="images/customized/cust_stage_dance/dance_01.png" alt="">
+                            <p>辣台妹鋼管</p>
+                            <p>$7000</p>
+                        </div>      
+                        <div class="custItemContentInfo">
+                            <img src="images/customized/cust_stage_dance/dance_02.png" alt="">
+                            <p>超熱情森巴</p>
+                            <p>$10000</p>
+                        </div>      
+                        <div class="custItemContentInfo">
+                            <img src="images/customized/cust_stage_dance/dance_03.png" alt="">
+                            <p>極短裙搖擺</p>
+                            <p>$12000</p>
+                        </div>      
+                        <div class="custItemContentInfo">
+                            <img src="images/customized/cust_stage_dance/dance_04.png" alt="">
+                            <p>鄰居小妹妹</p>
+                            <p>$12000</p>
+                        </div>      
+                        <div class="custItemContentInfo">
+                            <img src="images/customized/cust_stage_dance/dance_05.png" alt="">
+                            <p>雙人對跳</p>
+                            <p>$13000</p>
+                        </div>      
+                        <div class="custItemContentInfo">
+                            <img src="images/customized/cust_stage_dance/dance_06.png" alt="">
+                            <p>舞龍舞獅</p>
+                            <p>$22000</p>
+                        </div>   
+                    </div>
+                </div>
+
+                <!-- 字幕機 -->
+                <div class="custItem subtitleItem disN">
+                    <div class="custItemTitle">
+                        <h5>字幕機</h5>
+                    </div>
+                    <div class="custItemContent">
+                        <div class="custItemContentInfo">
+                            <textarea name="subtileItemInfo" cols="30" rows="3"></textarea>
+                            <input class="commonBtn" type="submit">
+                        </div>
+                    </div>
+                    <div class="lightControl">
+                        <div class="colorPicker"></div>
+                        <div class="brightPicker"></div>
                     </div>
                 </div>
             </div>
 
-            <!-- 音響與鋼管 -->
-            <div class="custItem audioPoleItem disN">
-                <div class="custItemTitle">
-                    <h5>音響鋼管</h5>
-                </div>
-                <div class="custItemContent">
-                    <div class="custItemContentInfo">
-                        <img src="images/customized/cust_stage_audioAndPole/audio_01.png" alt="">
-                        <p>毀天滅地型</p>
-                        <p>$25000</p>
-                    </div>      
-                    <div class="custItemContentInfo">
-                        <img src="images/customized/cust_stage_audioAndPole/audio_02.png" alt="">
-                        <p>毀天滅地型</p>
-                        <p>$25000</p>
-                    </div>      
-                    <div class="custItemContentInfo">
-                        <img src="images/customized/cust_stage_audioAndPole/audio_03.png" alt="">
-                        <p>毀天滅地型</p>
-                        <p>$25000</p>
-                    </div>      
-                    <div class="custItemContentInfo">
-                        <img src="images/customized/cust_stage_audioAndPole/pole.png" alt="">
-                        <p>毀天滅地型</p>
-                        <p>$25000</p>
-                    </div>      
-                    <div class="custItemContentInfo">
-                        <img src="images/customized/cust_stage_audioAndPole/pole_3.png" alt="">
-                        <p>毀天滅地型</p>
-                        <p>$25000</p>
-                    </div>      
-                    <div class="custItemContentInfo">
-                        <img src="images/customized/cust_stage_audioAndPole/pole_5.png" alt="">
-                        <p>毀天滅地型</p>
-                        <p>$25000</p>
-                    </div>   
-                </div>
-            </div>
-
-            <!-- 燈光 -->
-            <div class="custItem lightItem disN">
-                <div class="custItemTitle">
-                    <h5>燈光</h5>
-                </div>
-                <div class="custItemContent">
-                    <div class="custItemContentInfo">
-                        <img src="images/customized/cust_stage_light/light_01.png" alt="">
-                        <p>毀天滅地型</p>
-                        <p>$25000</p>
-                    </div> 
-                    <div class="custItemContentInfo">
-                        <img src="images/customized/cust_stage_light/light_02.png" alt="">
-                        <p>毀天滅地型</p>
-                        <p>$25000</p>
-                    </div> 
-                    <div class="custItemContentInfo">
-                        <img src="images/customized/cust_stage_light/light_03.png" alt="">
-                        <p>毀天滅地型</p>
-                        <p>$25000</p>
-                    </div> 
-                </div>
-                <div class="lightControl">
-                </div>
-            </div>
-
-            <!-- 特效 -->
-            <div class="custItem effectItem disN">
-                <div class="custItemTitle">
-                    <h5>特效</h5>
-                </div>
-                <div class="custItemContent">
-                    <div class="custItemContentInfo">
-                        <img src="images/customized/cust_stage_effect/effects_01.png" alt="">
-                        <p>火焰之舞</p>
-                        <p>$3000</p>
-                    </div> 
-                    <div class="custItemContentInfo">
-                        <img src="images/customized/cust_stage_effect/effects_02.png" alt="">
-                        <p>火力四射</p>
-                        <p>$5000</p>
-                    </div> 
-                    <div class="custItemContentInfo">
-                        <img src="images/customized/cust_stage_effect/effects_03.png" alt="">
-                        <p>火力全開</p>
-                        <p>$6000</p>
-                    </div>
-                    <div class="custItemContentInfo">
-                        <img src="images/customized/cust_stage_effect/firework_01.png" alt="">
-                        <p>雷霆萬鈞</p>
-                        <p>$13000</p>
-                    </div> 
-                    <div class="custItemContentInfo">
-                        <img src="images/customized/cust_stage_effect/firework_02.png" alt="">
-                        <p>萬紫千紅</p>
-                        <p>$18000</p>
-                    </div> 
-                    <div class="custItemContentInfo">
-                        <img src="images/customized/cust_stage_effect/firework_03.png" alt="">
-                        <p>龍翔九天</p>
-                        <p>$25000</p>
-                    </div>
-                </div>
-                <div class="custItemControl">
-                    
-                </div>
-            </div>
-
-            <!-- 表演 -->
-            <div class="custItem danceItem disN">
-                <div class="custItemTitle">
-                    <h5>表演</h5>
-                </div>
-                <div class="custItemContent">
-                    <div class="custItemContentInfo">
-                        <img src="images/customized/cust_stage_dance/dance_01.png" alt="">
-                        <p>辣台妹鋼管</p>
-                        <p>$7000</p>
-                    </div>      
-                    <div class="custItemContentInfo">
-                        <img src="images/customized/cust_stage_dance/dance_02.png" alt="">
-                        <p>超熱情森巴</p>
-                        <p>$10000</p>
-                    </div>      
-                    <div class="custItemContentInfo">
-                        <img src="images/customized/cust_stage_dance/dance_03.png" alt="">
-                        <p>極短裙搖擺</p>
-                        <p>$12000</p>
-                    </div>      
-                    <div class="custItemContentInfo">
-                        <img src="images/customized/cust_stage_dance/dance_04.png" alt="">
-                        <p>鄰居小妹妹</p>
-                        <p>$12000</p>
-                    </div>      
-                    <div class="custItemContentInfo">
-                        <img src="images/customized/cust_stage_dance/dance_05.png" alt="">
-                        <p>雙人對跳</p>
-                        <p>$13000</p>
-                    </div>      
-                    <div class="custItemContentInfo">
-                        <img src="images/customized/cust_stage_dance/dance_06.png" alt="">
-                        <p>舞龍舞獅</p>
-                        <p>$22000</p>
-                    </div>   
-                </div>
-            </div>
-
-            <!-- 字幕機 -->
-            <div class="custItem subtitleItem disN">
-                <div class="custItemTitle">
-                    <h5>字幕機</h5>
-                </div>
-                <div class="custItemContent">
-                    <div class="custItemContentInfo">
-                        <input type="text">
-                    </div>
-                </div>
-                <div class="lightControl">
-                </div>
-            </div>
         </div>
 
         <!-- 日期與地點 -->
@@ -442,8 +543,10 @@
                 </div>
                 <!-- loc -->
                 <div class="loc">
-                    <input type="text" placeholder="請輸入活動地址">
-                    <input class="commonBtn" type="submit" value="確認">
+                    <div class="locInput">
+                        <input type="text" placeholder="請輸入活動地址">
+                        <input class="commonBtn" type="submit" value="確認">
+                    </div>
                     <div class="map">
                         <iframe src='https://maps.google.com.tw/maps?f=q&hl=zh-TW&geocode=&q=中央大學資策會&z=16&output=embed&t='></iframe>
                     </div> 
@@ -559,8 +662,8 @@
                             <div class="audioBox8"></div>
                             <div class="audioBox9"></div>
                             <!-- <img src="images/Fireworks5.gif" alt=""> -->
-                            <img src="images/stage/fire1.gif" alt="">
-                            <img src="images/stage/fire1.gif" alt="" class="img2">
+                            <img src="images/fire1.gif" alt="">
+                            <img src="images/fire1.gif" alt="" class="img2">
                         </div>
                     </div>
                 </div>
@@ -641,5 +744,104 @@
     <script src="js/custRadarChart.js"></script>
     <!-- for radar chart -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+    <!-- header script -->
+    <script>
+        /* 登入燈箱 JS*/
+        // 點擊icon開啟登入燈箱----------------------------
+        document.querySelector('.fa-user-circle').addEventListener('click', function (e){
+            // 顯示登入燈箱
+            let loginBox = document.querySelector('.loginBox');
+            let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
+            if(style=="block"){
+                loginBox.style.setProperty('display',"none");
+                e.target.style.setProperty('color',"#2cffff");
+            }else{
+                loginBox.style.setProperty('display',"block");
+                e.target.style.setProperty('color',"rgb(252, 211, 28)");
+            }
+        })
+        // 點擊關閉----------------------------
+        document.querySelector('.loginBox .fa-times').addEventListener('click', function () {
+            let loginBox = document.querySelector('.loginBox');
+            let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
+            if(style=="block"){
+                loginBox.style.setProperty('display',"none");
+            }
+        })
+        // 點擊註冊------------------------------
+        document.querySelector('.loginBox .showRegistered').addEventListener('click', function () {
+            // 隱藏登入燈箱
+            let loginBox = document.querySelector('.loginBox');
+            loginBox.style.setProperty('display',"none");
+            // 顯示註冊燈箱
+            let registeredBox = document.querySelector('.registeredBox');
+            let style = window.getComputedStyle(registeredBox, null).getPropertyValue('display');
+            if(style=="none"){
+                registeredBox.style.setProperty('display',"block");
+            }
+        })
+        // 點擊忘記密碼------------------------------
+        document.querySelector('.loginBox .showForgotPSW').addEventListener('click', function () {
+            // 隱藏登入燈箱
+            let loginBox = document.querySelector('.loginBox');
+            loginBox.style.setProperty('display',"none");
+            // 顯示忘記密碼燈箱
+            let forgotBox = document.querySelector('.forgotBox');
+            let style = window.getComputedStyle(forgotBox, null).getPropertyValue('display');
+            if(style=="none"){
+                forgotBox.style.setProperty('display',"block");
+            }
+        })
+
+        /* 註冊燈箱 JS*/
+        // 點擊關閉----------------------------
+        document.querySelector('.registeredBox .fa-times').addEventListener('click',function(){
+            let registeredBox = document.querySelector('.registeredBox');
+            let style = window.getComputedStyle(registeredBox, null).getPropertyValue('display');
+            if(style=="block"){
+                registeredBox.style.setProperty('display',"none");
+            }
+        })
+        // 點擊回到登入----------------------------
+        document.querySelector('.registeredBox .backLogin').addEventListener('click',function(){
+            // 隱藏註冊燈箱
+            let registeredBox = document.querySelector('.registeredBox');
+            registeredBox.style.setProperty('display',"none");
+            // 顯示登入燈箱
+            let loginBox = document.querySelector('.loginBox');
+            let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
+            if(style=="none"){
+                loginBox.style.setProperty('display',"block");
+            }
+        })
+
+        /* 忘記密碼燈箱 JS*/
+        // 點擊關閉----------------------------
+        document.querySelector('.forgotBox .fa-times').addEventListener('click',function(){
+            let forgotBox = document.querySelector('.forgotBox');
+            let style = window.getComputedStyle(forgotBox, null).getPropertyValue('display');
+            if(style=="block"){
+                forgotBox.style.setProperty('display',"none");
+            }
+        })
+        // 點擊回到登入----------------------------
+        document.querySelector('.forgotBox .backLogin').addEventListener('click',function(){
+            // 隱藏忘記密碼燈箱
+            let forgotBox = document.querySelector('.forgotBox');
+            forgotBox.style.setProperty('display',"none");
+            // 顯示登入燈箱
+            let loginBox = document.querySelector('.loginBox');
+            let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
+            if(style=="none"){
+                loginBox.style.setProperty('display',"block");
+            }
+        })
+        
+        //螢幕寬度
+        let screenWidth = document.body.clientWidth;
+        if(screenWidth<=768){
+            
+        }
+    </script>
 </body>
 </html>
