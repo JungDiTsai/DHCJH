@@ -188,21 +188,18 @@
     left: 47%;
   }
   .loading .light {
-    width: 220px;
-    top: 21%;
-    left: 45%;
+    width: 180px;
+    top: 18%;
+    left: 45.5%;
   }
   .loading .light .first {
     left: -5%;
-    width: 34%;
   }
   .loading .light .sec {
     left: 33%;
-    width: 34%;
   }
   .loading .light .three {
     left: 67%;
-    width: 34%;
   }
   .loading .front {
     left: 32%;
@@ -211,4 +208,4 @@
     left: 58%;
   }
 }
-/*# sourceMappingURL=test.css.map */
+/*# sourceMappingURL=load.css.map */
