@@ -167,7 +167,9 @@
             border-radius: 5px;
             padding: 10px;
             
-            h4{text-align: center;font-size: 21px;color:#fff;text-shadow: 0 0 2px #000;}
+            h4{
+                text-align: center;font-size: 21px;color:#fff;
+            }
             div{text-align: left;}
             button{
                 margin-top: 10px;
@@ -179,6 +181,16 @@
             background-color: red;
             transition: 2s;
             border-radius: 5px;
+            h4{
+                text-shadow:none;
+                font-size: 24px;
+                -webkit-text-fill-color: transparent;
+                background: url(../images/bkground/animated_text_fill.png) repeat-y;
+	            -webkit-background-clip: text;
+                background-clip: text;
+
+                animation: aitf 40s linear infinite;
+            }
             button{display: inline-block;}
         }
     }
