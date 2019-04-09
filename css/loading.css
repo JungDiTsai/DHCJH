@@ -1,0 +1,156 @@
+.loading {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #3b3a3a;
+  background-image: url(../images/loadingBgi.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.loading .lampFirst {
+  position: absolute;
+  left: 51.5%;
+  width: 15%;
+  height: 400vh;
+  background-image: radial-gradient(ellipse, rgba(235, 177, 4, 0.8), rgba(246, 205, 81, 0.2) 25%, rgba(255, 255, 255, 0) 50%);
+  top: -185vh;
+  -webkit-transform: perspective(25vh) rotateX(60deg) translateX(0);
+          transform: perspective(25vh) rotateX(60deg) translateX(0);
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
+  transition: transform 2s, -webkit-transform 2s;
+  /* z-index: 50;
+  pointer-events: none;
+}
+
+.loading .lampSec {
+  position: absolute;
+  left: 34%;
+  width: 15%;
+  height: 400vh;
+  background-image: radial-gradient(ellipse, rgba(255, 184, 143, 0.7), rgba(245, 132, 27, 0.2) 25%, rgba(255, 255, 255, 0) 50%);
+  top: -185vh;
+  -webkit-transform: perspective(25vh) rotateX(60deg) translateX(0);
+          transform: perspective(25vh) rotateX(60deg) translateX(0);
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
+  transition: transform 2s, -webkit-transform 2s;
+  pointer-events: none;
+}
+
+.loading .lampThree {
+  position: absolute;
+  left: 70.5%;
+  width: 15%;
+  height: 400vh;
+  background-image: radial-gradient(ellipse, rgba(255, 184, 143, 0.7), rgba(245, 132, 27, 0.2) 25%, rgba(255, 255, 255, 0) 50%);
+  top: -185vh;
+  -webkit-transform: perspective(25vh) rotateX(60deg) translateX(0);
+          transform: perspective(25vh) rotateX(60deg) translateX(0);
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
+  transition: transform 2s, -webkit-transform 2s;
+  pointer-events: none;
+}
+
+.loading .light {
+  position: relative;
+  border: 10px solid red;
+  top: 9%;
+  left: 30%;
+  width: 199px;
+}
+
+.loading .light .first {
+  position: absolute;
+  left: 0.8%;
+  top: -48px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: perspective(25vh) rotateX(0deg) translateX(0);
+          transform: perspective(25vh) rotateX(0deg) translateX(0);
+}
+
+.loading .light .sec {
+  position: absolute;
+  left: 33.5%;
+  top: -48px;
+  /* border: 1px solid red; */
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  /* transform: perspective(25vh) rotateX(30deg) rotateY(20deg); */
+  -webkit-transform: perspective(25vh) rotateX(0deg) translateX(0);
+          transform: perspective(25vh) rotateX(0deg) translateX(0);
+}
+
+.loading .light .three {
+  position: absolute;
+  left: 67%;
+  top: -48px;
+  /* border: 1px solid red; */
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  /* transform: perspective(25vh) rotateX(30deg) rotateY(20deg); */
+  -webkit-transform: perspective(25vh) rotateX(0deg) translateX(0);
+          transform: perspective(25vh) rotateX(0deg) translateX(0);
+}
+
+@-webkit-keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff4e22, 0 0 35px #ff5202, 0 0 40px #ff5202, 0 0 50px #ff5202 F, 0 0 75px #ff5202;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .loading .light .loading .light {
+    top: 23.5%;
+    left: 39%;
+  }
+  .loading .light .loading .lampFirst, .loading .light .loading .lampSec, .loading .light .loading .lampThree {
+    width: 15%;
+    height: 432vh;
+  }
+  .loading .light .loading .lampFirst {
+    left: 45.5%;
+  }
+  .loading .light .loading .lampSec {
+    left: 37%;
+  }
+  .loading .light .loading .lampThree {
+    left: 54.5%;
+  }
+  .loading .light .loading .front {
+    top: 36vh;
+  }
+  .loading .light .loading .back {
+    top: 45vh;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .loading .light .loading .light {
+    top: 30.2%;
+    left: 42%;
+  }
+  .loading .light .loading .lampFirst, .loading .light .loading .lampSec, .loading .light .loading .lampThree {
+    width: 15%;
+    height: 446vh;
+  }
+  .loading .light .loading .lampFirst {
+    left: 44.5%;
+  }
+  .loading .light .loading .lampSec {
+    left: 39%;
+  }
+  .loading .light .loading .lampThree {
+    left: 51.5%;
+  }
+} 
+# sourceMappingURL=loading.css.map
