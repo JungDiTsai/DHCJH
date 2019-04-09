@@ -1,5 +1,5 @@
-*{
-    // outline: 1px solid #f00; 
+.titleBgi{
+  margin: 0;
 }
 .beautyPageantWrap{
     background-image: url("../../images/beautyPageant/bPBg1.png");
@@ -244,7 +244,7 @@
     .beautyPageantWrap{
         background-image: url("../../images/beautyPageant/bPBg1.png");
         background-size: cover;
-        height: 1080px;
+        height: 960px;
         width: 100%;
         .beautyRankingHeader{
             display: flex;
