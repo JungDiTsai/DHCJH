@@ -56,7 +56,19 @@
   80%  {background-color: #3498db;}
   100% {background-color: #3498db;}
 }
+@keyframes boxshadows {
+  0%   {box-shadow: 0 0 10px #3498db, 0 0 10px #3498db inset}
+  20%  {box-shadow: 0 0 10px #3498db, 0 0 10px #3498db inset}
+  30%  {box-shadow: 0 0 10px #fff, 0 0 10px #fff inset}
+  70%  {box-shadow: 0 0 10px #fff, 0 0 10px #fff inset}
+  80%  {box-shadow: 0 0 10px #3498db, 0 0 10px #3498db inset}
+  100% {box-shadow: 0 0 10px #3498db, 0 0 10px #3498db inset}
+}
 
+@keyframes aitf {
+	0% { background-position: 0% 50%; }
+	100% { background-position: 100% 50%; }
+}
 
 @keyframes starscolors {
   0%   {background-color: #3498db;}

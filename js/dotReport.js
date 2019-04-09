@@ -25,7 +25,7 @@ $(document).ready(function(){
             $('.dotpanel').eq(x).animate({width:'toggle'},350);
             
         });
-        $(".dotpanel",this).mouseout(function(){
+        $(".dotflip",this).mouseout(function(){
             var x = $('.dotflip').index(this);
             // console.log(x);
             var styleX = $('.dotpanel').eq(x).css("display");
