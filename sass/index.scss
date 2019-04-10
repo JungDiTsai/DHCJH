@@ -13,5 +13,34 @@
 @import "components/_Registered.scss";  //註冊燈箱
 @import "components/_forgotPSW.scss";  //忘記密碼燈箱
 @import "components/_titlebackground.scss";
+
 //引入頁面
+@import "pages/_customized.scss";
+.custBg{
+    padding-top: 30px;
+    background-image:none;
+    background-position: center;
+}
+@keyframes turnA{
+    0%{transform:translateY(100px) rotateX(0deg) rotateY(30deg) rotateZ(0deg)}
+    100%{transform:translateY(100px) rotateX(0deg) rotateY(-30deg) rotateZ(0deg)}
+}
+@keyframes turn2{
+    0%{transform: translateY(-80px) translateX(-100px) translateZ(75px) rotateX(0deg) rotateY(-30deg) rotateZ(0deg)}
+    100%{transform:translateY(-80px) translateX(-100px) translateZ(75px) rotateX(0deg) rotateY(30deg) rotateZ(0deg)}
+}
+@keyframes turn3{
+    0%{transform: translateY(-80px) translateX(100px) translateZ(75px) rotateX(0deg) rotateY(-30deg) rotateZ(0deg)}
+    100%{transform:translateY(-80px) translateX(100px) translateZ(75px) rotateX(0deg) rotateY(30deg) rotateZ(0deg)}
+}
+// 整個舞台
+#groupB{
+    
+    animation:turnA 8s alternate infinite;
+}
+#tryCustormiseWrap{
+   .perspective{
+    transform: scale(0.97);
+    } 
+}
 @import "pages/_index.scss"; //首頁頁面
