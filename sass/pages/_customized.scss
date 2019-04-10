@@ -2,13 +2,13 @@
 // bg
 .custBg{
     padding-top: 100px;
-    background-image: url(../../images/customized/customized_bg.jpg);
+    background-image: url(../images/customized/customized_bg.jpg);
     background-position: center;
 }
 //title
 // replace with titleBgi
 // .custTitle{
-//     background-image:url(../../images/customized/title_bg.png);
+//     background-image:url(../images/customized/title_bg.png);
 //     background-size: 100%;
 //     background-repeat: no-repeat;
 //     margin: auto;
@@ -34,7 +34,7 @@
     cursor: pointer;
     font-size:14px;
     width: 85px;
-    background: url(../../images/customized/customized_step.svg) center no-repeat;
+    background: url(../images/customized/customized_step.svg) center no-repeat;
     background-size: 100%;
     color: $fontColor;
     text-align: center;
@@ -74,7 +74,7 @@
         font-size:14px;
         width: 28px;
         // height: 28px;
-        background: url(../../images/customized/cust_stage_innerPattern/customized_step_stage_selected.svg) center no-repeat;
+        background: url(../images/customized/cust_stage_innerPattern/customized_step_stage_selected.svg) center no-repeat;
         // background-size: cover;
         line-height: 28px;
     }
@@ -149,9 +149,9 @@
         margin: auto;
     }
     // 下舞台
-    .front{ width: 130px; transform: translateX(-85px) translateZ(75px);background: url(../../images/2.png)center no-repeat;background-size:cover;}
+    .front{ width: 130px; transform: translateX(-85px) translateZ(75px);background: url(../images/2.png)center no-repeat;background-size:cover;}
     .front1{  width: 40px; transform:  translateZ(75px);background: #faf}
-    .front2{  width: 130px; transform: translateX(85px) translateZ(75px);background: url(../../images/5.png)center no-repeat;background-size:cover;}
+    .front2{  width: 130px; transform: translateX(85px) translateZ(75px);background: url(../images/5.png)center no-repeat;background-size:cover;}
      .back{transform:  translateZ(-75px);background: url(../images/3.png)center no-repeat;background-size:cover;}
        .up{ 
            transform: rotateX(90deg)  translateZ(20px); 
@@ -163,13 +163,13 @@
                 box-shadow: 0px 0px 8px 8px $fontColor;
             }
         }
-     .down{ transform: rotateX(270deg)  translateZ(20px); height: 150px;background: url(../../images/3.png)center no-repeat;background-size:cover;}
-     .left{ transform: rotateY(270deg) translateZ(150px); width: 150px;background: url(../../images/3.png)center no-repeat;background-size:cover;}
-    .right{ transform: rotateY(90deg) translateZ(150px);  width: 150px;background: url(../../images/3.png)center no-repeat;background-size:cover;}
+     .down{ transform: rotateX(270deg)  translateZ(20px); height: 150px;background: url(../images/3.png)center no-repeat;background-size:cover;}
+     .left{ transform: rotateY(270deg) translateZ(150px); width: 150px;background: url(../images/3.png)center no-repeat;background-size:cover;}
+    .right{ transform: rotateY(90deg) translateZ(150px);  width: 150px;background: url(../images/3.png)center no-repeat;background-size:cover;}
     .stairsA{ }
     .stairsB{ width: 30px;height:40px;transform:rotateX(270deg) translateY(-85px)  translateZ(20px)}
     // 壁屏
-    // .stairsC{ width: 250px;height: 95px;transform:  translateZ(-75px) translateY(-65px);border:#000 solid 1px;background: url(../../images/stage/5.png)center no-repeat;background-size:cover;}
+    // .stairsC{ width: 250px;height: 95px;transform:  translateZ(-75px) translateY(-65px);border:#000 solid 1px;background: url(../images/stage/5.png)center no-repeat;background-size:cover;}
     .stairsC1{
         width: 250px;
         height: 95px;
@@ -186,8 +186,8 @@
     .stairsC3{width: 6px; height: 95px;transform: translateY(-65px) translatez(-73px) translateX(-126px) rotateY(90deg);background: #646464;}
     .stairsC4{width: 250px; height: 6px;transform: translateZ(-73px)translateY(-112px) rotateX(90deg);background: #646464;}
     // 上壁屏
-    .stairsD{ width: 50px; height: 205px;transform: translateZ(20px)translateX(-95px)translateY(-160px) rotateX(-60deg);background: url(../../images/6.png)center no-repeat;background-size:cover;}
-    .stairsE{ width: 50px; height: 205px;transform: translateZ(20px)translateX(95px)translateY(-160px) rotateX(-60deg);background: url(../../images/7.png)center no-repeat;background-size:cover;}
+    .stairsD{ width: 50px; height: 205px;transform: translateZ(20px)translateX(-95px)translateY(-160px) rotateX(-60deg);background: url(../images/6.png)center no-repeat;background-size:cover;}
+    .stairsE{ width: 50px; height: 205px;transform: translateZ(20px)translateX(95px)translateY(-160px) rotateX(-60deg);background: url(../images/7.png)center no-repeat;background-size:cover;}
     .stairsF{ 
         width: 140px;
         height: 205px;
@@ -453,7 +453,7 @@
     .audioBox{
         width: 30px;
         height: 60px;
-        background: url(../../images/audio1.png)center no-repeat;background-size:cover;
+        background: url(../images/audio1.png)center no-repeat;background-size:cover;
         transform:translateZ(40px)translateX(-120px) translateY(-50px)  rotateY(-30deg) translateZ(10px)
     }
     .audioBox1{
@@ -484,7 +484,7 @@
     .audioBox5{
         width: 30px;
         height: 60px;
-        background: url(../../images/audio1.png)center no-repeat;background-size:cover;
+        background: url(../images/audio1.png)center no-repeat;background-size:cover;
         transform:translateZ(40px)translateX(120px) translateY(-50px)  rotateY(30deg) translateZ(10px)
     }
     .audioBox6{
@@ -536,7 +536,7 @@
 .custItemTitle{
     position: relative;
     z-index: 3;
-    background-image: url(../../images/customized/stage_item_title.gif);
+    background-image: url(../images/customized/stage_item_title.gif);
     background-repeat: no-repeat;
     background-size: 100%;
     margin: auto;
@@ -574,7 +574,7 @@
 .custItemContent{
     position: relative;
     z-index: 1;
-    background-image: url(../../images/customized/stage_item_content.gif);
+    background-image: url(../images/customized/stage_item_content.gif);
     background-repeat: no-repeat;
     background-size: 100%;
     margin: -10px auto;
@@ -588,7 +588,7 @@
     justify-content: space-between;
     label{
         cursor: pointer;
-        background-image: url(../../images/customized/cust_stage_innerPattern/pattern_upload.svg);
+        background-image: url(../images/customized/cust_stage_innerPattern/pattern_upload.svg);
         width: 80px;
         height: 80px;
         margin: 5px;
@@ -608,7 +608,7 @@
 // 音響與鋼管客製舞台內容
 .audioPoleItem, .danceItem{
     .custItemContent{
-        background-image: url(../../images/customized/stage_item_content_l.gif);
+        background-image: url(../images/customized/stage_item_content_l.gif);
         width: 300px;
         height: 355px;
         align-items: center;
@@ -659,7 +659,7 @@
 .custItemControl{
     position: relative;
     z-index: 2;
-    background-image: url(../../images/customized/stage_item_control.gif);
+    background-image: url(../images/customized/stage_item_control.gif);
     background-repeat: no-repeat;
     background-size: 100%;
     margin: auto;
@@ -681,7 +681,7 @@
     position: relative;
     bottom: 50px;
     z-index: 2;
-    background-image: url(../../images/customized/cust_stage_light/stage_light_control.gif);
+    background-image: url(../images/customized/cust_stage_light/stage_light_control.gif);
     background-repeat: no-repeat;
     background-size: 100%;
     margin: auto;
@@ -1205,12 +1205,12 @@
 //customized_03
 //host bg
 .host{
-    background-image: url(../../images/customized/host/host_bg.jpg);
+    background-image: url(../images/customized/host/host_bg.jpg);
 }
 .hostInfoDetail{
 
     position: relative;
-    background-image: url(../../images/customized/host/host_info.jpg);
+    background-image: url(../images/customized/host/host_info.jpg);
     width: 278px;
     height: 546px;
     margin: 20px auto 0px;
