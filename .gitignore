@@ -6,7 +6,9 @@ gulpfile
 .DS_Store
 gulpfile.js
 ._.DS_Store
-
+test.css
+test.scss
+test
 .sass-cache/
 
 bower_components

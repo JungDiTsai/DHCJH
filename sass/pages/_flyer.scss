@@ -6,23 +6,6 @@
         max-width: 1200px;
         margin:auto;
     }
-    .title{
-        margin-top:80px;
-        padding-top:50px;
-        text-align: center;
-
-        .titleBgi{
-            font-size: $subTitleWord;
-            margin-bottom: 20px;
-        }
-        .col-md-6{
-            p{
-                margin: auto;
-                width: 90%;
-                color: #fff;
-            }
-        }
-    }
 
     .stepsBar{
         margin-top: 30px;
@@ -160,38 +143,61 @@
                 margin-bottom: 20px;
             }
         }
-        .owl-carousel{z-index: 0;}
-        .box{
-            text-align: center;
-            background: rgba(255,255,255,.5);
-            border-radius: 5px;
-            padding: 10px;
-            
-            h4{
-                text-align: center;font-size: 21px;color:#fff;
-            }
-            div{text-align: left;}
-            button{
-                margin-top: 10px;
-                display: none;
-            }
-        }
-        .center{
-            
-            background-color: red;
-            transition: 2s;
-            border-radius: 5px;
-            h4{
-                text-shadow:none;
-                font-size: 24px;
-                -webkit-text-fill-color: transparent;
-                background: url(../images/bkground/animated_text_fill.png) repeat-y;
-	            -webkit-background-clip: text;
-                background-clip: text;
+        .CardOfGoofs{
+            // outline: 2px solid red;
+            .newGood{
+                border-radius: 5px;
+                position: relative;
+                overflow: hidden;
+                &::after{
+                    display: none;
+                    content:"☛";
+                    text-shadow: 0 0 10px #000;
+                    color:#fff;
+                    font-size: 40px;
+                    line-height: 100%;
+                    position:absolute;
+                    top: 0;
+                    bottom:0;
+                    margin:auto;
+                    right: 0px;
+                    animation: touchHand 0.5s infinite alternate;
+                }
+                &:hover:after{
+                    display: inline;
+                }
+                img{width:100%;vertical-align: top;}
+                .clickCard{ animation: clickCard 1s forwards}
+                .clickleaveCard{ animation: clickleaveCard 1s forwards}
+                .imgCard{
+                    width: 100%;
+                    box-sizing: border-box;
+                    padding: 20px 40px;
+                    position: absolute;
+                    background: rgba(0, 0, 0,.7);
+                    height: 100%;
+                    top: 0;
+                    transform: translateX(100%);
+                    transition: 1s;
+                    h4{
+                        font-size: 30px;text-align: center;-webkit-text-fill-color: 
+                        transparent;
+                        background: url(../images/bkground/animated_text_fill.png) repeat-y;
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        animation: aitf 10s linear infinite;
+                    }
+                    p{text-shadow: 0 0 1px #000;color:#fff;}
+                    button{
+                        position: absolute;
+                        bottom:20px;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
 
-                animation: aitf 40s linear infinite;
+                    }
+                }
             }
-            button{display: inline-block;}
         }
     }
 }
@@ -236,13 +242,16 @@
         .wrap{
             .title{
                 display: flex;
-                .titleBgi{widows: 50%;}
+                .titleBgi{width: 50%;}
                 p{
                     width: 50%;
                     font-size: $buttonWord;
                 }
             }
             .doIt{
+                .clothCurtain{
+                    clip-path:none;
+                }
                 .backBlock{
                     float: left;
                     padding-top: 47.5965327029157%;

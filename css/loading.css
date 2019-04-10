@@ -21,7 +21,7 @@
   transition: -webkit-transform 2s;
   transition: transform 2s;
   transition: transform 2s, -webkit-transform 2s;
-  /* z-index: 50;
+  /* z-index: 50; */
   pointer-events: none;
 }
 
@@ -152,5 +152,5 @@
   .loading .light .loading .lampThree {
     left: 51.5%;
   }
-} 
-# sourceMappingURL=loading.css.map
+}
+/*# sourceMappingURL=loading.css.map */
