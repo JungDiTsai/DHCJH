@@ -1,3 +1,6 @@
+*{
+    outline: 1px solid #F00;
+}
 .menuandcross{
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 20%, 0% 20%, 0 40%, 100% 40%, 100% 60%, 0% 60%, 0% 80%, 100% 80%, 100% 100%, 0 100%);
     clip-path: polygon(0% 0%, 100% 0%, 100% 20%, 0% 20%, 0 40%, 100% 40%, 100% 60%, 0% 60%, 0% 80%, 100% 80%, 100% 100%, 0 100%);
@@ -108,27 +111,33 @@ header{
         background-image: url("../images/navigator.png");
         background-size: cover;
         background-position:center center;
-        height: 225px;
-        top:-20px;
+        height: 130px;
     }
     .mainNav{
         padding: 0;
         background-color:initial;
-        top: 20px;
+        top: 0px;
         position: relative;
         max-width:1200px;
         text-align: center;
         height: 110px;
         margin: auto;
+        display: flex;
         li{
-        width: initial;
+        flex-grow: 1;
+        flex-wrap: nowrap;
+        width: 150px;
         vertical-align:top;
         display: inline-block;
-        margin: 0 35px;
+        // margin: 0 35px;
         margin-top: 25px;
-        border-bottom: 30px solid transparent;
-        border-image:url("../images/navTDD.png")36 repeat;
-        a{ transition: .4s;}
+        border-bottom:initial;
+        a{ transition: .4s;
+        border-bottom: 12px solid transparent;
+        border-image:url("../images/navTDD.png")30 round;
+        border-image-outset: 1px;
+
+        }
         }
         li:hover{
             // border-image:url("../images/navTDL.png")34 repeat;
@@ -139,11 +148,16 @@ header{
             transition: .3s;}
             
         }
-        h1{display: inline-block;}
-        img{width: 225px;
-        margin-top: 10px;
-        position: initial;
-        height: auto;}
+        h1{display: inline-block;
+            flex-grow: 1;
+            padding-left: 5px;
+            img{width: auto;
+                // margin-top: 10px;
+                position: initial;
+                height: 100px;
+                }
+        }
+       
         i{color:$logoColor;}
         .navMemBtn{  
             position: absolute;
