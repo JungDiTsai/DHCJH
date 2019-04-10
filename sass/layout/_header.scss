@@ -1,5 +1,5 @@
 *{
-    outline: 1px solid #F00;
+    // outline: 1px solid #F00;
 }
 
 #nav-icon2 span {
@@ -7,7 +7,7 @@
     position: absolute;
     height: 4px;
     width: 50%;
-    background: #d3531a;
+    background: $logoColor;
     opacity: 1;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -106,7 +106,7 @@
     width: 44px;
     position: absolute;
     height: 40px;
-    top: 16px;
+    top: 20px;
     right: 10px;
 }
 .mainNav{
@@ -140,16 +140,21 @@
         border-bottom: 30px solid 
         transparent;
         border-bottom-width:30px; 
-        border-image:url("../images/navTDD.png")36 repeat;
+        border-image:url("../images/navTDD.png")41 round;
     }
     .navMemBtn{
         position: fixed;
-        top: 16px;
+        top: 18px;
         right: 84px;
         font-size: 44px;
+        height: 44px;
+        width: 44px;
         i{
             color:$logoColor;
+            position: absolute;
             cursor: pointer;
+            width: 44px;
+            top: 0;
             &:hover{
                 animation: jitter 1.5s linear infinite;
             }
@@ -186,6 +191,18 @@ header{
         height: 110px;
         margin: auto;
         display: flex;
+        .navMemBtn{
+          width: 44px;
+          height: 44px;;
+          right: 0px;
+          margin: 0;
+          i{
+            top: 0;
+            right: 0;
+            height: 44px;
+            font-size: 44px;
+          }
+        }
         li{
         flex-grow: 1;
         flex-wrap: nowrap;
@@ -195,6 +212,12 @@ header{
         // margin: 0 35px;
         margin-top: 25px;
         border-bottom:initial;
+        &:nth-child(4){
+          padding-right: 48px;
+        }
+        &:nth-child(5){
+          padding-right: 93px;
+        }
             a{ transition: .4s;
             border-bottom: 25px solid transparent;
             border-image:url("../images/navTDD.png")30 41 round;
@@ -234,9 +257,6 @@ header{
         .navMemBtn{  
             position: absolute;
             top: 30px;
-            right: 0px;
-            margin:0px 10px;
-            font-size: 24px;
         }
     }
    
