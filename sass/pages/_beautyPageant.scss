@@ -108,11 +108,16 @@
   .dotpanel{
     position: absolute;
     height:auto;;
-    width:100px;
-    right: -15px;
-    display:none;
+    width:84px;
+    right: 0px;
+    // display:none;
+    border: 1px solid #f00;
+    top: 0px;
+    padding-top:20px; 
+    z-index: 2;
     p{
     font-size: $contentWord;
+    padding: auto;
     }
   }
   .beautyDiscWrap{ 
@@ -128,7 +133,7 @@
         height:auto;
         max-height: 650px;
         width: 100%;
-        background-color: rgb(248, 252, 5);
+        background-color: #fff700c2;
         border-radius: 10px;
         padding: 10px;
         margin: 50px 0;
