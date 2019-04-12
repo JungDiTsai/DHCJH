@@ -1,3 +1,7 @@
+/* item content */
+.owl-carousel{
+  z-index: 0;
+}
 /* end fix */
 .owl-nav > div {
   margin-top: -26px;
@@ -8,11 +12,9 @@
 .owl-nav i {
   font-size: 52px;
 }
-
 .owl-nav .owl-prev {
   left: -40px;
 }
-
 .owl-nav .owl-next {
-  right: -40px
+  right: -40px;
 }

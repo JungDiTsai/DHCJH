@@ -93,15 +93,3 @@
     display: none;
 	}
 }
-@keyframes touchHand {
-  0%{ transform: translateX(0px) }
-  100%{ transform: translateX(-5px) }
-}
-@keyframes clickCard {
-  0%{ transform: translateX(100%) }
-  100%{ transform: translateX(0%) }
-}
-@keyframes clickleaveCard {
-  0%{ transform: translateX(0%) }
-  100%{ transform: translateX(-150%) }
-}

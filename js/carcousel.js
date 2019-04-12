@@ -6,10 +6,12 @@ $('.owl-carousel').owlCarousel({
   ],
   margin:30,
   items: 1,
+  dots: false,
   autoplay: true,
+  autoHeight:true,
   autoplayHoverPause: true,
-  nav:true,
-  autoplayTimeout: 2000,
+  nav:false,
+  autoplayTimeout: 1000,
   center:true,
   responsive:{
       0:{
