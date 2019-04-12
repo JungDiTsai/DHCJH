@@ -104,20 +104,20 @@
   .dotflip{
     text-align:center;
     position: relative;
+    width: 150px;
+    z-index: 0;
   }
   .dotpanel{
     position: absolute;
     height:auto;;
     width:84px;
     right: 0px;
-    // display:none;
     border: 1px solid #f00;
     top: 0px;
     padding-top:20px; 
     z-index: 2;
-    p{
-    font-size: $contentWord;
-    padding: auto;
+    li{
+      z-index: 1;
     }
   }
   .beautyDiscWrap{ 
