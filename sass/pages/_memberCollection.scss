@@ -2,16 +2,22 @@
     background: url(../images/bkground/member_bg.jpg) center;
     background-size: cover;
     min-height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    padding-top: 50px;
-    justify-content: center;
+    // display: flex;
+    // flex-wrap: wrap;
+    // 
+    // padding-top: 50px;
+    // justify-content: center;
+    .cardGroupWidth{
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        padding: 10px;
+    }
     .card{
-        margin: 20px 50px 20px 0;
+        width: 300px;
+        margin: 20px auto;
         display: block;
         position: relative;
-        
         
         .font{
             position: relative;
@@ -28,8 +34,8 @@
             box-shadow: 0 0 50px #6e6e6e;
             
             .topArea{
-                padding: 5PX;
-                background: white;
+                padding: 5px 10px;
+                background: #fff;
                 display: flex;
                 flex-wrap: wrap;
                 .headImg{
@@ -42,17 +48,18 @@
                     }
                 }
                 h3{
-                    margin-left: 5px;
+                    margin-left: 10px;
                     line-height: 50px;
                     font-size: 21px;
                     color: rgb(255, 128, 43);
                 }
             }
             .stageImg{
-                background: white;
+                background: #fff;
                 img{width: 100%;}
             }
             .toolBar{
+                font-size: $buttonWord;
                 .fa-heart{color: rgb(228, 20, 20);padding:5px 20px;}
                 .fa-share,.fa-ellipsis-h{
                     padding:5px 20px;
@@ -65,6 +72,7 @@
         }
         
         .back{
+            width: 300px;
             position: absolute;
             left: 0;
             top: 0;
@@ -100,7 +108,14 @@
     }
 }
 @media screen and (min-width:768px) {
-    .col-md-9{
+    .col-md-10{
         padding-top: 150px;
+    }
+}
+@media screen and (min-width:1200px){
+    .cardGroupWidth{
+        width: 980px;
+        display: flex;
+        flex-wrap: wrap;
     }
 }

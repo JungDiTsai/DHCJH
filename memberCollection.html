@@ -36,7 +36,7 @@
     <!-- 並排 -->
     <div class="wrap">
       <!-- 會員中心側邊攔 -->
-      <div id="memberNav" class="col-md-3">
+      <div id="memberNav" class="col-md-2">
         <div class="memberImg max_view">
           <label for="memberImgFile">
             <img src="images/member2.jpg" alt="" />
@@ -44,18 +44,19 @@
         </div>
         <h3 class="max_view">李三十四</h3>
         <ul>
-            <li class="here"><a href="memberCenter.html">帳號管理</a></li>
+            <li><a href="memberCenter.html">帳號管理</a></li>
             <li><a href="memberOrder.html">訂單管理</a></li>
             <li><a href="memberBeauty.html">我的發表</a></li>
-            <li><a href="memberCollection.html">我的收藏</a></li>
+            <li class="here"><a href="memberCollection.html">我的收藏</a></li>
             <li><a href="memberFlyer.html">宣傳單管理</a></li>
             <li><a href="memberCoupons.html">我的優惠券</a></li>
             <li><a href="index.html">登出</a></li>
         </ul>
       </div>
       <!-- 我的收藏Card -->
-      <article class="cardGroup col-md-9">
-          <session class="card col-12 col-md-3">
+      <article class="cardGroup col-md-10">
+        <div class="cardGroupWidth">
+          <session class="card">
               <div class="font">
                   <div class="topArea">
                       <div class="headImg">
@@ -80,7 +81,7 @@
                 </div>
               </div>
           </session>
-          <session class="card col-12 col-md-3">
+          <session class="card">
               <div class="font">
                  <div class="topArea">
                       <div class="headImg">
@@ -105,7 +106,7 @@
                 </div>
               </div>
           </session>
-          <session class="card col-12 col-md-3">
+          <session class="card">
                 <div class="font">
                    <div class="topArea">
                       <div class="headImg">
@@ -129,33 +130,33 @@
                       <div class="return">返回</div>
                   </div>
                 </div>
-            </session>
-            <session class="card col-12 col-md-3">
-                <div class="font">
-                   <div class="topArea">
-                      <div class="headImg">
-                          <img src="images/member.jpg" alt="">
-                      </div>
-                      <h3>Lilian</h3>
-                  </div>
-                  <div class="stageImg">
-                    <img src="images/stage_full.png" alt="">
-                  </div>
-                  <div class="toolBar">
-                    <i class="fas fa-heart"></i>
-                    <span>155個喜歡</span>
-                    <i class="fas fa-share"></i>
-                    <i class="fas fa-ellipsis-h"></i>
-                  </div>
+          </session>
+          <session class="card">
+              <div class="font">
+                  <div class="topArea">
+                    <div class="headImg">
+                        <img src="images/member.jpg" alt="">
+                    </div>
+                    <h3>Lilian</h3>
                 </div>
-                <div class="back">
-                  <div class="centerBox">
-                      <div class="unlike">取消追蹤</div>
-                      <div class="return">返回</div>
-                  </div>
+                <div class="stageImg">
+                  <img src="images/stage_full.png" alt="">
                 </div>
-            </session>
-            <session class="card col-12 col-md-3">
+                <div class="toolBar">
+                  <i class="fas fa-heart"></i>
+                  <span>155個喜歡</span>
+                  <i class="fas fa-share"></i>
+                  <i class="fas fa-ellipsis-h"></i>
+                </div>
+              </div>
+              <div class="back">
+                <div class="centerBox">
+                    <div class="unlike">取消追蹤</div>
+                    <div class="return">返回</div>
+                </div>
+              </div>
+          </session>
+          <session class="card">
               <div class="font">
                  <div class="topArea">
                     <div class="headImg">
@@ -180,7 +181,7 @@
                 </div>
               </div>
           </session>
-          <session class="card col-12 col-md-3">
+          <session class="card">
               <div class="font">
                  <div class="topArea">
                     <div class="headImg">
@@ -205,7 +206,7 @@
                 </div>
               </div>
           </session>
-          <session class="card col-12 col-md-3">
+          <session class="card">
               <div class="font">
                  <div class="topArea">
                     <div class="headImg">
@@ -230,6 +231,7 @@
                 </div>
               </div>
           </session>
+        </div>
       </article>
     </div>
 
