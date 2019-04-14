@@ -2,7 +2,7 @@
   margin: 0;
 }
 .beautyPageantWrap{
-    background-image: url("../../images/beautyPageant/bPBg1.png");
+    background-image: url("../images/beautyPageant/bPBg1.png");
     height: 100vh;
     width: 100%;
     background-size: cover;
@@ -21,7 +21,7 @@
     left: 0;
     top: 0;
     width: 100%;
-    height: 100vh;
+    height: 580px;
     transition: opacity .7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     opacity: 0;
     filter: alpha(opacity=0);
@@ -51,11 +51,11 @@
         height: 44px;
         width:50%;
         line-height: 44px;
-        text-align: left;
+        text-align: center;
     }
       i{
         justify-content:space-between;
-        width:25%;
+        width:50%;
         height: 44px;
         font-size: 28px;
         flex-grow: 1;
@@ -79,7 +79,7 @@
   .paginationPanel {
     width: 100%;
     position: relative;
-    margin-top: 590px;
+    margin-top: 510px;
     z-index: 1;
     height: auto;
   }
@@ -104,15 +104,20 @@
   .dotflip{
     text-align:center;
     position: relative;
+    width: 150px;
+    z-index: 0;
   }
   .dotpanel{
     position: absolute;
     height:auto;;
-    width:100px;
-    right: -15px;
-    display:none;
-    p{
-    font-size: $contentWord;
+    width:84px;
+    right: 0px;
+    border: 1px solid #f00;
+    top: 0px;
+    padding-top:20px; 
+    z-index: 2;
+    li{
+      z-index: 1;
     }
   }
   .beautyDiscWrap{ 
@@ -128,7 +133,7 @@
         height:auto;
         max-height: 650px;
         width: 100%;
-        background-color: rgb(248, 252, 5);
+        background-color: #fff700c2;
         border-radius: 10px;
         padding: 10px;
         margin: 50px 0;
@@ -242,7 +247,7 @@
       height: 960px;
     }
     .beautyPageantWrap{
-        background-image: url("../../images/beautyPageant/bPBg1.png");
+        background-image: url("../images/beautyPageant/bPBg1.png");
         background-size: cover;
         height: 960px;
         width: 100%;

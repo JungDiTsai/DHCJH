@@ -1,3 +1,19 @@
+@import "base/_reset.scss";
+@import "base/_var.scss";
+@import "base/_color.scss";
+@import "layout/_grid.scss";
+@import "abstracts/_mixins.scss";
+//引入layout
+@import "layout/_header.scss";
+//引入動畫
+@import "abstracts/_animations.scss";
+// 引入元件
+@import "components/_buttons.scss";
+@import "components/_login.scss"; //登入燈箱
+@import "components/_Registered.scss";  //註冊燈箱
+@import "components/_forgotPSW.scss";  //忘記密碼燈箱
+@import "components/_titlebackground.scss";
+@import "index.scss";//引入頁面
 ///////////團體介紹開始  ///////////////
 .introTime{
    background-image: url(../images/intro/introBg2.png);
