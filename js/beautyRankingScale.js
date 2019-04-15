@@ -28,6 +28,12 @@ function init(){
         }
     }
 }
+
+btn = document.getElementById("beautyRankingimgsMonthBtn");
+btn.onclick=function(){
+    carArr[4].style.transform='scale(1.3)';
+    init();}
+			
 window.onload=init();
 
 // function stagescaleorign(){
