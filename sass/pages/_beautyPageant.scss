@@ -3,6 +3,8 @@
   top: 0;
   left: 0;
   z-index: -2;
+  height: 960px;
+  width: 100%;
 }
 #thefile {
   // position: fixed;
@@ -314,7 +316,7 @@ li{
                 border-radius: 100%;
                 background-color: #feffb2; 
                 opacity: 0.6;
-                -webkit-filter: blur(40px);
+                // -webkit-filter: blur(40px);
               }
   
               .square {
