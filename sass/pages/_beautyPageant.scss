@@ -1,8 +1,38 @@
+#musicContent{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+#thefile {
+  // position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+  }
+
+  #canvasMusic {
+  // position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  }
+
+  #audioMusic {
+  // position: fixed;
+  left: 10px;
+  bottom: 10px;
+  width: calc(100% - 20px);
+  }
 .titleBgi{
   margin: 0;
 }
+li{
+  list-style: none;
+}
 .beautyPageantWrap{
-    background-image: url("../images/beautyPageant/bPBg1.png");
+    // background-image: url("../images/beautyPageant/bPBg1.png");
     height: 100vh;
     width: 100%;
     background-size: cover;
@@ -243,15 +273,18 @@
     .paginationPanel{
         display: none;
     }
-    .beautyRankingContainer{
-      height: 960px;
-    }
+
     .beautyPageantWrap{
-        background-image: url("../images/beautyPageant/bPBg1.png");
+        // background-image: url("../images/beautyPageant/bPBg1.png");
         background-size: cover;
         height: 960px;
         width: 100%;
-        .beautyRankingHeader{
+        .beautyRankingContainer{
+          height: 960px;
+          .beautyRanking{
+            margin-top: 100px;
+          }
+          .beautyRankingHeader{
             display: flex;
             .beautyRankingSlogan{
                 padding-top:250px;
@@ -263,6 +296,8 @@
                 ;
             } 
         }
+        }
+
     }
     #beautyRankingimgs{
         display: flex;
