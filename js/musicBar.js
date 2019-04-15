@@ -30,12 +30,12 @@ window.onload = function() {
         ctx.fillRect(0, 0, WIDTH, HEIGHT);
         for (var i = 0; i < bufferLength; i++) {
           barHeight = dataArray[i];
-          var r = barHeight + (25 * (i/bufferLength));
+          var r = barHeight + (20 * (i/bufferLength));
           var g = 250 * (i/bufferLength);
-          var b = 250;
-          var a = 0.5;
+          var b = 200;
+          var a = 0.4;
           ctx.fillStyle = "rgba(" + r + "," + g + "," + b + ","+ a +")";
-          ctx.fillRect(x, HEIGHT - barHeight*1.5, barWidth, barHeight*2);
+          ctx.fillRect(x, HEIGHT - barHeight*1.2, barWidth, barHeight*2);
           x += barWidth + 1;
         }
       }
