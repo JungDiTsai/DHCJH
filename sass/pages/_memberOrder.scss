@@ -2,98 +2,120 @@
         background: url(../images/bkground/member_bg.jpg) center;
         background-size: cover;
         min-height: 100vh;
-        padding: 10px;
-        padding-top: 50px;
+        padding: 50px 15px 15px;
     .allOrderBox{
-        width: 80%;
-        background: #178cf6;
+        width: 90%;
+        background-color: #fff;
         margin:auto;
-        border-radius: 15px;
+        border-radius: 8px;
         padding: 10px;
         margin-bottom: 30px;
+        box-shadow: 1px 1px 5px #333;
         h3{
             font-size: $thrTitleWord;
-            color:#fff;
+            color: #e56e50;
             text-align: center;
+            padding-bottom: 20px;
         }
         table{
             background: #fff;
             width: 100%;
-            border:1px solid #000;
+            // border:1px solid #ccc;
+            border-radius: 8px;
             margin: auto;
+            
+            tr:hover{
+                background-color: $fontColor;
+            }
+            .orderBoxTitle:hover{
+                background-color:#fff;
+            }
             th{
-                padding: 0 10px;
-                font-size: 14px;
-                border-bottom: 1px solid #6e6e6e;
-                background: rgb(105, 212, 33);
+                font-size: $contentWord;
             }
             td{
                 text-align: center;
-                font-size: 14px;
+                font-size: $contentWord;
+                color: #5c5c5c;
             }
         }
     }
+    .orderBoxSelected{
+        background-color: $fontColor;
+    }
 
     .orderDetails{
-        width: 90%;
+        width: 95%;
         box-sizing: border-box;
         margin:0 auto 50px;
         background: #fff;
-        box-shadow: 0px 0px  3px #666;
+        box-shadow: 1px 1px 5px #333;
+        border-radius: 8px;
+        overflow: hidden;
         
         .bckColor{
             padding: 20px;
-            background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+            // background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
 
             h4{
-                color:#ffffff;
+                color: $memberBackColor;
                 font-size: 24px;
-                text-align: center;
-                border: 2px solid #fff;
-                border-radius: 30px;
+                // text-align: center;
+                background-color: #fff;
+                border-radius: 8px;
     
             }
             .detailContent{
                 display: flex;
                 flex-wrap: wrap;
-                padding: 10px 10px;
-                 color:#fff;
+                padding: 10px 0px;
+                font-size: $buttonWord;
                 .big{
-                    text-shadow: 0 0 1px #000;
-                    font-size: 21px;
-                    color:rgb(255, 243, 71);
+                    font-size: 22px;
                 }
             }
             .detailHost{
                 display: flex;
                 flex-wrap: wrap;
-                padding: 10px 10px;
-                color:#fff;
+                padding: 20px 0px;
+                font-size: $buttonWord;
+                position: relative;
+                &:before, &:after{
+                    content: "";
+                    width: 100%;
+                    height: 1px;
+                    background-color: #ccc;
+                    position: absolute;
+                    left: 0;
+                }
+                &:before{
+                    top: 5px;
+                }
+                &:after{
+                    bottom: -5px;
+                }
             }
         }
 
         .detailStage{
-            padding: 20px;
+            padding: 0px 20px 20px;
+            .detailStageImg{
+                img{
+                    background: #000;
+                    width: 100%;
+                }
+            }
             table{            
                 width: 100%;
                 margin-top: 20px;
                 th{
                     box-sizing: border-box;
-                    background: rgb(68, 170, 42);
-                    color:#fff;
-                    border: 1px solid #000;
-                    
+                    // border: 1px solid #000;
                 }
                 td{
                     padding: 0px 5px;
-                    border: 1px solid #000;
                     text-align: center;
-                    div>img{
-                        width: 100%;
-                    }
-                }
-                td[colspan="3"]{
-                    background: #000;
+                    color: #5c5c5c;
                 }
             }
             .buttonArea{
@@ -101,29 +123,33 @@
                 display: flex;
                 text-align: center;
                 justify-content: space-between;
-                margin: auto;
+                margin: 20px auto 10px ;
                 
                 button:last-of-type{
-                    background-image: linear-gradient(to top, #fddb92 0%, #ecfa25 100%);
-                    box-shadow: 0px 2px 2px #888;
-                    padding: 5px 10px;
-                    border-radius: 5px;
-                    margin-top:5px; 
-                    cursor: pointer;
-                    &:hover{
-                        background-image: linear-gradient(to bottom, #cfa54a 0%, #faec25 100%);
-                    }
+                    width: 100px;
+                    height: 50px;
+                    // background-image: linear-gradient(to top, #fddb92 0%, #ecfa25 100%);
+                    // box-shadow: 0px 2px 2px #888;
+                    // padding: 5px 10px;
+                    // border-radius: 5px;
+                    // margin-top:5px; 
+                    // cursor: pointer;
+                    // &:hover{
+                    //     background-image: linear-gradient(to bottom, #cfa54a 0%, #faec25 100%);
+                    // }
                 }
                 button:first-of-type{
-                    box-shadow: 0px 2px 2px #888;
-                    padding: 5px 10px;
-                    border-radius: 5px;
-                    margin-top:5px; 
-                    cursor: pointer;
-                    background-image: linear-gradient(to top, #d299c2 0%, #b84a4a 100%);
-                    &:hover{
-                        background-image: linear-gradient(to top, #e4abd4 0%, #ff1010 100%);
-                    }
+                    width: 100px;
+                    height: 50px;
+                    // box-shadow: 0px 2px 2px #888;
+                    // padding: 5px 10px;
+                    // border-radius: 5px;
+                    // margin-top:5px; 
+                    // cursor: pointer;
+                    // background-image: linear-gradient(to top, #d299c2 0%, #b84a4a 100%);
+                    // &:hover{
+                    //     background-image: linear-gradient(to top, #e4abd4 0%, #ff1010 100%);
+                    // }
                 }
             }
         }
@@ -131,6 +157,60 @@
 }
 @media screen and (min-width:768px) {
     #memberOrder{
+        .allOrderBox{
+            h3{
+                font-size: 36px;
+            }
+            table{
+                th, td{
+                    font-size: 22px;
+                }
+            }
+        }
+        .orderDetails{
+            .bckColor{
+                h4{
+                    font-size: 32px;
+                }
+                .detailContent, .detailHost{
+                    font-size: 22px;
+                }
+            }
+            .detailStage{
+                table{
+                    th, td{
+                        font-size: 22px;
+                    }
+                }
+            }
+        }  
+    }
+}
+@media screen and (min-width:1200px){
+    #memberOrder{
         padding-top: 150px;
+        .allOrderBox{
+            width: 800px;
+        }
+        .orderDetails{
+            width: 820px;
+            .bckColor{
+                width: 750px;
+                margin: 0 auto;
+            }
+            .detailStage{
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                padding: 0px 35px 20px;
+                .detailStageImg{
+                    width: 50%;
+                }
+                table{
+                    width: 50%;
+                }
+
+            }
+        }
     }
 }

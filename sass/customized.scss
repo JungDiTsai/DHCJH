@@ -3,8 +3,14 @@
 @import "base/_color.scss";
 @import "layout/grid.scss";
 @import "abstracts/_mixins.scss";
+@import "index.scss";//引入頁面
 @import "layout/_header.scss";
 @import "components/_buttons.scss";
-@import "headerNav.scss";
 @import "pages/_customized.scss";
 @import "components/_titlebackground.scss";
+@import "abstracts/_animations.scss";
+// 引入元件
+@import "components/_login.scss"; //登入燈箱
+@import "components/_Registered.scss";  //註冊燈箱
+@import "components/_forgotPSW.scss";  //忘記密碼燈箱
+

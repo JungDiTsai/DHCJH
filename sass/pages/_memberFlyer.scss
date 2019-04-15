@@ -1,4 +1,4 @@
-.col-md-9{
+.col-md-10{
     background: url(../images/bkground/member_bg.jpg) center;
     background-size: cover;
     min-height: 100vh;
@@ -6,24 +6,24 @@
     
 }
 .AllflyerBox{
-    max-width: 700px;
+    width: 90%;
+    max-width: 800px;
     box-sizing: border-box;
     padding-bottom: 30px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px #333;
     h3{
+        padding-top: 20px;
+        color: #e56e50;
         font-size: $thrTitleWord;
     }
     table{
-        margin-top: 20px;
+        margin: 20px auto 0px ;
         width: 100%;
         text-align: center;
-        box-shadow: 0 0  10px #000;
-        th{
-            background: #3a9679;
-            color:#fff;
-        }
-        .out td{
-            background: #aaa;
-        }
+        font-size: $buttonWord;
         td{
             background: #fff;
             label{
@@ -33,7 +33,7 @@
                     opacity: 0;
                     &:checked+.btnBox{
                         text-align: right;
-                        background: #32ff7e;
+                        background: #fff82d;
                     }
                 }
                 .btnBox{
@@ -41,8 +41,7 @@
                     width: 40px;
                     height: 20px;
                     vertical-align: middle;
-                    background: #fffa65;
-                    box-shadow: 0 0 3px #000;
+                    background: #32ff7e;
                     border-radius: 10px;
                     text-align: left;
                     cursor: pointer;
@@ -52,7 +51,7 @@
                         height: 20px;
                         border-radius: 20px;
                         box-sizing: border-box;
-                        box-shadow: 0 0 0 1px #000;
+                        box-shadow: 0 0 3px #000;
                         background: #fff;
                     }
                 }
@@ -68,10 +67,15 @@
 
 
 .detailFlyer{
-    max-width: 700px;
-    margin: auto;
-    background: rgba(255,255,255,.5);
-    h3{
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px #333;
+    h4{
+        padding: 20px 0px;
+        color: $memberBackColor;
         font-size: $thrTitleWord;
         text-align: center;
     }
@@ -79,7 +83,7 @@
         display: block;
         margin: 0 auto 10px;
         max-width: 700px;
-        box-shadow: 0 0 30px rgb(255, 226, 226),0 0 0 1px #000;
+        box-shadow: 1px 5px 20px #ccc;
     }
     p{
         text-align: center;
@@ -91,33 +95,65 @@
         justify-content: space-between;
         button{
             box-shadow: 0px 2px 2px #888;
-            padding: 5px 10px;
+            // padding: 5px 10px;
             border-radius: 5px;
             margin:20px; 
             cursor: pointer;
         }
         button:first-of-type{
-            background-image: linear-gradient(to top, #d299c2 0%, #b84a4a 100%);
-            &:hover{
-                background-image: linear-gradient(to top, #e4abd4 0%, #ff1010 100%);
-            }
+            width: 100px;
+            height: 50px;
+            // background-image: linear-gradient(to top, #d299c2 0%, #b84a4a 100%);
+            // &:hover{
+            //     background-image: linear-gradient(to top, #e4abd4 0%, #ff1010 100%);
+            // }
         }
         button:last-child{
-            background-image: linear-gradient(to top, #fddb92 0%, #ecfa25 100%);
-            &:hover{
-                background-image: linear-gradient(to bottom, #cfa54a 0%, #faec25 100%);
-            }
+            width: 100px;
+            height: 50px;
+            // background-image: linear-gradient(to top, #fddb92 0%, #ecfa25 100%);
+            // &:hover{
+            //     background-image: linear-gradient(to bottom, #cfa54a 0%, #faec25 100%);
+            // }
         }
     }
 }
 
 @media screen and (min-width:768px) {
-    .col-md-9{
+    .col-md-10{
         padding-top: 150px;
     }
     .AllflyerBox{
         margin:50px auto;
+        h3{
+            font-size: 36px;
+        }
+        table{
+            th, td{
+                font-size: 22px;
+                label{
+                    .btnBox{
+                        .btn{
+                            width: 22px;
+                            height: 22px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .detailFlyer{
+        h4{
+            font-size: 32px;
+        }
     }
 }
 @media screen and (min-width:992px) {}
-@media screen and (min-width:1200px) {}
+@media screen and (min-width:1200px) {
+    .AllflyerBox{
+        margin:50px auto;
+        table{
+            width: 80%;
+        }
+    }
+}

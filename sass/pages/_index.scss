@@ -1,5 +1,78 @@
+//客服機器人＆遊戲
+#gameAndService{
+  z-index: 9999999;
+}
+#gameHub{
+  opacity:0.75;
+  position: fixed;
+  left: 0px;
+  bottom: 100px;
+  width: 70px;
+  height: 80px;
+  background-color:#444;
+  text-align: center;
+  //outline: 5px red solid;
+  border:5px rgb(235, 235, 235) solid;
+  color: #ffffa3;
+  vertical-align: middle;
+  img{
+    width: 120%;
+    margin: 5px auto;
+  }
+  animation:gameCar 10s 2s ease infinite;
+}
+#customerServiceGirl{
+  position:fixed;
+  vertical-align: middle;
+  //outline: 5px red solid;
+  width:90px;
+  right: 30px;
+  bottom: -40px;
+  img{
+    width:100%;
+    
+  }
+  animation:serviceGirl 12s 1s ease infinite;
+  
+}
+
+#customerTextArea{
+  position: fixed;
+  border: $fontColor 8px solid;
+  border-radius: 10px;
+  width: 300px;
+  height: 300px;
+  background-color: #222222;
+  color: $fontColor;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 30px;
+  z-index:2;
+  img{
+    width:5%
+  }
+}
+@keyframes gameCar{
+  0%{transform:translateX(10px);}
+  20%{transform:translateX(-20px);}
+  40%{transform:translateX(-100px);}
+  60%{transform:translateX(-100px);}
+  80%{transform:translateX(-10px);}
+  100%{transform:translateX(10px);}
+}
+@keyframes serviceGirl{
+  0%{transform:translateY(20px);}
+  20%{transform:translateY(-10px);}
+  30%{transform:scaleX(-1);}
+  40%{transform:scaleX(-1);}
+  50%{transform:translateY(-10px);}
+  100%{transform:translateY(20px);}
+}
+
 //首頁第一屏 wrapper
-.container{   
+.dcontainer{   
     display: flex;
     flex-wrap: wrap;
     text-align: center;
@@ -85,7 +158,7 @@
     margin: auto;
     //outline: 5px blue solid;
     height: 400px;
-    border:1px solid #000;
+    //border:1px solid #000;
     position: relative;
     perspective: 900px;
 }
@@ -565,7 +638,7 @@
   background-position: center;
   background-size: cover;
   z-index: -2;
-  height: 100vh;
+  height: 180vh;
   min-height: 600px;
   //outline: 5px red solid;
   .titleBgi{
@@ -573,7 +646,15 @@
     background-size: cover;
 
   }
+  a{
+    //outline: #007bff 5px solid;
+    margin:-30px auto 30px auto;
+  }
 }
+
+
+//引入客製頁面
+
 
 //首頁第四屏 wrapper （客製宣傳單小試身手）
 #tryCustormiseFlyerWrap{
@@ -597,30 +678,100 @@
   .commonBtn{
     margin: 20px;
   }
+  #flyerContentDetail{
+    margin: auto;
+    width:250px;
+    background-color:white;
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px;
+    h4{
+      font-size: 20px;
+    }
+  }
+  #introFlyers{
+    //outline: #007bff 5px solid;
+    margin: auto;
+    img{
+      margin: auto;
+      width:250px;
+    }
+  }
   
 }
 
 .flyerFeature{
   position: relative;
   //outline: 5px rgb(0, 216, 134) solid;
-  margin: 10px auto;
+  margin: 5px auto;
   width: 100%;
-  display: flex;
-  vertical-align:middle;
+  vertical-align: middle;
+
   img{
-    width: 120%;
+    vertical-align: middle;
+    width:80%;
     display: inline-block;
     //outline: 5px rgb(0, 50, 216) solid;
-    margin: 20px 0px; 
+   
   }
   div{
     display: inline-block;
+    vertical-align: middle;
     //outline: 5px rgb(216, 0, 205) solid;
   }
 
 }
+//flyer頁面引入
+.secScreen{
+  width: 100%;
+  height: auto;
+  //outline: #00f 5px solid;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+  .wrap{
+      max-width: 1200px;
+      margin:auto;
+      .title{
+          padding-top:50px;
+          text-align: center;
+          padding-bottom: 50px;
+          .titleBgi{
+              font-size: $subTitleWord;
+              margin-bottom: 20px;
+          }
+      }
+      .owl-carousel{z-index: 0;}
+      .box{
+          text-align: center;
+          background: rgba(255,255,255,.5);
+          border-radius: 5px;
+          padding: 10px;
+          
+          h4{text-align: center;font-size: 21px;color:#fff;text-shadow: 0 0 2px #000;}
+          div{text-align: left;}
+          button{
+              margin-top: 10px;
+              display: none;
+          }
+      }
+      .center{
+          
+          background-color: red;
+          transition: 2s;
+          border-radius: 5px;
+          button{display: inline-block;}
+      }
+  }
+}
+@media screen and (min-width:992px) {
+  .commonBtn{width: 100px;height: 50px;}
+}
+@media screen and (min-width:1200px) {
+  .commonBtn{width: 150px;height: 75px;}
+}
 
-//首頁第五屏 wrapper （客製宣傳單小試身手）
+
+//首頁第五屏 wrapper （選美）
 #beautyContestWrap{
   padding-top:$paddingTop; 
   position: relative;
@@ -643,6 +794,163 @@
   }
   
 }
+//引入選美
+.beautyPageantWrap{
+}
+.beautyRankingContainer{
+  margin-top: -200px;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin:auto;
+  height: 1080px;
+}
+.beautyRankingbg {
+  position: absolute;
+  transform: scale(1);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  transition: opacity .7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  opacity: 0;
+  filter: alpha(opacity=0);
+  h3{
+      font-size: $subTitleWord;
+      color:$fontColor;
+      text-align: center;
+      filter: drop-shadow(0px 3px 10px rgba(228, 252, 162, 0.7));
+      
+  }
+   img{
+       width: 100%;  
+       height: auto;
+       max-height: 277px;
+       margin-top: 150px;
+       filter:drop-shadow(3px 2px 20px rgba(245, 132, 132, 0.7));
+   }
+}
+.beautyRankingSocialBtns{
+    display: flex;
+    text-align: center;
+    .fa-heart,.fa-heart{
+      color:red;}
+  p{
+      color:white;
+      flex-grow: 1;
+      height: 44px;
+      width:50%;
+      line-height: 44px;
+      text-align: left;
+  }
+    i{
+      justify-content:space-between;
+      width:25%;
+      height: 44px;
+      font-size: 28px;
+      flex-grow: 1;
+      align-content: center;
+      color:white;
+      line-height: 44px;
+    }
+}
+
+.fadeIn {
+  opacity: 100;
+  filter: alpha(opacity=100);
+}
+
+.pagination {
+  width: auto;
+  display: table;
+  margin: 0 auto
+}
+
+.paginationPanel {
+  width: 100%;
+  position: relative;
+  margin-top: 590px;
+  z-index: 1;
+  height: auto;
+}
+
+.pagination li {
+  border-radius: 15px;
+  height: 15px;
+  width: 50px;
+  background: $fontColor;
+  float: left;
+  margin-right: 10px;
+  list-style-type: none
+}
+
+.pagination li.active {
+  background: $logoColor;
+}
+
+.pagination li:last-child {
+  margin-right: 0
+}
+.dotflip{
+  text-align:center;
+  position: relative;
+}
+.dotpanel{
+  position: absolute;
+  height:auto;;
+  width:100px;
+  right: 0;
+  display:none;
+  p{
+  font-size: $contentWord;
+  }
+}
+@media screen and (min-width:1200px){
+  .paginationPanel{
+      display: none;
+  }
+  .beautyPageantWrap{
+      background-size: cover;
+      height: 1080px;
+      width: 100%;
+      .beautyRankingHeader{
+          display: flex;
+          .beautyRankingSlogan{
+              padding-top:250px;
+              padding-bottom: 50px;
+              color: $fontColor;
+              flex-grow:1;
+              text-align: center;
+              font-size: $titleWord;
+              ;
+          } 
+      }
+  }
+  #beautyRankingimgs{
+      display: flex;
+      .beautyRankingbg{
+          width: 33%;
+          opacity: 1;
+          position: initial;
+          flex-grow: 1;
+          height: auto;
+          transition: 1s;
+          p{
+              color: $fontColor;
+              font-size: $contentWord;
+              letter-spacing: .1em;
+          }
+          img{
+              margin: 0px;
+              width: 100%;
+              height: auto;
+              padding: 30px;
+              box-sizing: border-box ;
+          }
+      }
+  }
+}
+
 
 //首頁第六屏 wrapper （客製與出貨流程）
 #processWrap{
@@ -900,12 +1208,7 @@ footer{
   #tryCustormiseWrap{
     background-image: url(../images/tryCustormiseWrap.jpg);
   }
-  .flyerFeature{ 
-    img{
-      width: 100%;
-      margin: auto; 
-    }
-  }
+  
 }
 @media screen and (min-width:1200px){
   #equipmentsArea{

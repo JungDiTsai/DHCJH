@@ -16,11 +16,18 @@
     <header>    
         <!-- 放bar選單 -->
         <label for="menu_control" class="menubtn" >
-                <div class="menuandcross"></div>
+            <div id="nav-icon2">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </label>
         <nav class="mainNav">
             <li class="mainNavCell"><a href="customized_01.html">電子花車客製</a></li>
-            <li class="mainNavCell"><a href="flyer.html">客製宣傳單</a></li>
+            <li class="mainNavCell"><a href="flyer.html">客製化宣傳單</a></li>
             <h1 class="navLogo"><a href="index.html"><img src="images/logo.png" alt="台灣大舞台"></a></h1>
             <li class="mainNavCell"><a href="beautyPageant.html">花車選美</a></li>
             <li class="mainNavCell"><a href="intro.html">花車特色介紹</a></li>
@@ -101,9 +108,16 @@
     <div class="beautyPageantWrap">
         <div class="beautyRankingContainer">
             <div class="beautyRankingHeader">
+                <div class="discoBallContainer">
+                    <div id="discoBallLight"></div>
+                    <div id="discoBall">
+                        <div id="discoBallMiddle"></div>
+                    </div>
+                    <div class="light"></div>
+                </div>
                 <div class="beautyRankingSlogan">最土最有力</div>
-                <div class="beautyRankingBtn"></div>
-                <div class="beautyRankingBtn"></div>
+                <button class="beautyRankingBtn">季排名</button>
+                <button class="beautyRankingBtn">總排名</button>
                 <div class="beautyRankingSlogan">最俗最在地</div>
             </div>
             <div class="beautyRanking">
@@ -115,36 +129,24 @@
                             <i class="far fa-heart"></i>
                             <i class="fas fa-share-square" alt="分享"></i>
                             <p>891 個喜歡</p>
-                            <div class="dotpanel">
-                                <p>檢舉</p>
-                            </div>
-                            <i class="fas fa-ellipsis-v dotflip"></i>
                         </div>
                     </div>
                     <div id="beautyRankingbg2" class="beautyRankingbg">
                         <img src="images/beautyPageant/rank/ranking2.png" alt="">
-                        <h3>霹靂大舞台</h3>
+                        <h3>超級大舞台</h3>
                         <div class="beautyRankingSocialBtns">
                             <i class="far fa-heart"></i>
                             <i class="fas fa-share-square" alt="分享"></i>
                             <p>622 個喜歡</p>
-                            <div class="dotpanel">
-                                <p>檢舉</p>
-                            </div>
-                            <i class="fas fa-ellipsis-v dotflip"></i>
                         </div>
                     </div>
                     <div id="beautyRankingbg3" class="beautyRankingbg">
                         <img src="images/beautyPageant/rank/ranking3.png" alt="">
-                        <h3>霹靂大舞台</h3>
+                        <h3>火花大舞台</h3>
                         <div class="beautyRankingSocialBtns">
                             <i class="fas fa-heart"></i>
                             <i class="fas fa-share-square" alt="分享"></i>
                             <p>384 個喜歡</p>
-                            <div class="dotpanel">
-                                <p>檢舉</p>
-                            </div>
-                            <i class="fas fa-ellipsis-v dotflip"></i>
                         </div>
                     </div>
                 </div>
@@ -157,12 +159,17 @@
                 </div>
             </div>
         </div> 
+        <div id="musicContent">
+            <canvas id="canvasMusic"></canvas>
+            <audio id="audioMusic" controls autoplay style="display : none" src="audios\backloop.mp3"></audio>
+        </div>
     </div>
     
     <!-- 第二屏幕 選美大舞台-->
     <div class="beautyDiscWrap">
-        <h2 class="titleBgi">花車大選美</h2>
+        
         <div class="beautyDiscContainer">
+            <h2 class="titleBgi">花車大選美</h2>
             <div class="beautyDiscFilter">
                 <!-- 選項篩選 全部時間 排序 上傳時間  還有一個上傳按鈕-->
             </div>
@@ -179,10 +186,13 @@
                         <i class="far fa-heart"></i>
                         <i class="fas fa-share-square" alt="分享"></i>
                         <p>622 個喜歡</p>
-                        <div class="dotpanel">
-                            <p>檢舉</p>
+                        <div class="dotflip">
+                            <i class="fas fa-ellipsis-h"></i>
+                            <div class="dotpanel">
+                                <li>檢舉</li>
+                                <li>刪除</li>
+                            </div>
                         </div>
-                        <i class="fas fa-ellipsis-v dotflip"></i>
                     </div>
                     <div class="beautyDiscIgMemTextContainer">
                         <img src="images/beautyPageant/DiscStage/Alex/Alex.png" alt="Alex">
@@ -214,10 +224,13 @@
                             <i class="far fa-heart"></i>
                             <i class="fas fa-share-square" alt="分享"></i>
                             <p>622 個喜歡</p>
-                            <div class="dotpanel">
-                                <p>檢舉</p>
+                            <div class="dotflip">
+                                <i class="fas fa-ellipsis-h"></i>
+                                <div class="dotpanel">
+                                    <li>檢舉</li>
+                                    <li>刪除</li>
+                                </div>
                             </div>
-                            <i class="fas fa-ellipsis-v dotflip"></i>
                         </div>
                         <div class="beautyDiscIgMemTextContainer">
                             <img src="images/beautyPageant/DiscStage/Alex/Alex.png" alt="Alex">
@@ -249,10 +262,13 @@
                             <i class="far fa-heart"></i>
                             <i class="fas fa-share-square" alt="分享"></i>
                             <p>622 個喜歡</p>
-                            <div class="dotpanel">
-                                <p>檢舉</p>
+                            <div class="dotflip">
+                                <i class="fas fa-ellipsis-h"></i>
+                                <div class="dotpanel">
+                                    <li>檢舉</li>
+                                    <li>刪除</li>
+                                </div>
                             </div>
-                            <i class="fas fa-ellipsis-v dotflip"></i>
                         </div>
                         <div class="beautyDiscIgMemTextContainer">
                             <img src="images/beautyPageant/DiscStage/Alex/Alex.png" alt="Alex">
@@ -284,10 +300,13 @@
                             <i class="far fa-heart"></i>
                             <i class="fas fa-share-square" alt="分享"></i>
                             <p>622 個喜歡</p>
-                            <div class="dotpanel">
-                                <p>檢舉</p>
+                            <div class="dotflip">
+                                <i class="fas fa-ellipsis-h"></i>
+                                <div class="dotpanel">
+                                    <li>檢舉</li>
+                                    <li>刪除</li>
+                                </div>
                             </div>
-                            <i class="fas fa-ellipsis-v dotflip"></i>
                         </div>
                         <div class="beautyDiscIgMemTextContainer">
                             <img src="images/beautyPageant/DiscStage/Alex/Alex.png" alt="Alex">
@@ -319,10 +338,13 @@
                             <i class="far fa-heart"></i>
                             <i class="fas fa-share-square" alt="分享"></i>
                             <p>622 個喜歡</p>
-                            <div class="dotpanel">
-                                <p>檢舉</p>
+                            <div class="dotflip">
+                                <i class="fas fa-ellipsis-h"></i>
+                                <div class="dotpanel">
+                                    <li>檢舉</li>
+                                    <li>刪除</li>
+                                </div>
                             </div>
-                            <i class="fas fa-ellipsis-v dotflip"></i>
                         </div>
                         <div class="beautyDiscIgMemTextContainer">
                             <img src="images/beautyPageant/DiscStage/Alex/Alex.png" alt="Alex">
@@ -354,10 +376,13 @@
                             <i class="far fa-heart"></i>
                             <i class="fas fa-share-square" alt="分享"></i>
                             <p>622 個喜歡</p>
-                            <div class="dotpanel">
-                                <p>檢舉</p>
+                            <div class="dotflip">
+                                <i class="fas fa-ellipsis-h"></i>
+                                <div class="dotpanel">
+                                    <li>檢舉</li>
+                                    <li>刪除</li>
+                                </div>
                             </div>
-                            <i class="fas fa-ellipsis-v dotflip"></i>
                         </div>
                         <div class="beautyDiscIgMemTextContainer">
                             <img src="images/beautyPageant/DiscStage/Alex/Alex.png" alt="Alex">
@@ -491,6 +516,10 @@
             
         }
     </script>
+    <script src="js/musicBar.js"></script>
     <script src="js/dotReport.js"></script>
+    <script src="js/navmenu.js"></script>
+    <script src="js/discoBall.js"></script>
+
 </body>
 </html>
