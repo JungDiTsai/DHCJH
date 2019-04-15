@@ -243,16 +243,88 @@
     .paginationPanel{
         display: none;
     }
-    .beautyRankingContainer{
-      height: 960px;
-    }
+
     .beautyPageantWrap{
+<<<<<<< HEAD
         background-image: url("../images/beautyPageant/bPBg1.png");
+=======
+        // background-image: url("../images/beautyPageant/bPBg1.png");
+>>>>>>> 88cb117de0a2d0b2a6d1d6c2bcd169783bfe67cf
         background-size: cover;
         height: 960px;
         width: 100%;
-        .beautyRankingHeader{
+        .beautyRankingContainer{
+          height: 960px;
+          .beautyRanking{
+            margin-top: 100px;
+          }
+          .beautyRankingHeader{
             display: flex;
+            
+            .discoBallContainer{
+              transform: scale(1.5);
+              position: absolute;
+              top: 180px;
+              left: 50%;
+              margin-left: -50px;
+              #discoBall {
+                -webkit-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+                width: 100px;
+                height: 100px;
+                -webkit-animation: rotateDiscoBall 18s linear infinite;
+                animation: rotateDiscoBall 18s linear infinite;
+                color: #fff;
+                
+              }
+  
+              #discoBallLight {
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                top: 180px;
+                left: 50%;
+                margin-left: -50px; 
+                border-radius: 100%;
+                background-color: #feffb2; 
+                opacity: 0.6;
+                // -webkit-filter: blur(40px);
+              }
+  
+              .square {
+                transform-style: preserve-3d;	
+                position: absolute;
+                top: 50px;
+                left: 50px;
+                width: 6px;
+                height: 6px;
+                position: absolute;
+                transform: rotateX(90deg) rotateY(0deg) translateZ(0px);
+              }
+  
+              #discoBallMiddle { 
+                height: 100%;
+                border-radius: 100%;
+                background-color: #111;
+                position: absolute;
+                background: -webkit-linear-gradient(top, #111, #333);
+                background: -moz-linear-gradient(top, #111, #333);
+                background: linear-gradient(top, #111, #333);
+                -webkit-animation: rotateDiscoBallMiddle 18s linear infinite;
+                animation: rotateDiscoBallMiddle 18s linear infinite;
+              }
+  
+              .light {
+                display: none;
+                width: 10px;
+                height: 10px;
+                color: #ebf2dd;
+                background-color: currentColor;
+                border-radius: 50%;
+                box-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor, 0 0 25px currentColor, 0 0 35px currentColor, 0 0 65px currentColor;
+              }
+            }
+           
             .beautyRankingSlogan{
                 padding-top:250px;
                 padding-bottom: 50px;
@@ -263,6 +335,8 @@
                 ;
             } 
         }
+        }
+
     }
     #beautyRankingimgs{
         display: flex;
