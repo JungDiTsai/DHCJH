@@ -3,7 +3,6 @@ window.addEventListener('resize',function(){
         stagescale();
     }else{
         init();
-        carArr[i].addEventListener('mouseover', stagescale);
         carArr[1].style.transform='scale(1.3)';
     }
 })
@@ -28,7 +27,7 @@ function init(){
         }
     }
 }
-window.onload=init();
+window.onload=init;
 
 // function stagescaleorign(){
 //     this.style.transform='scale(1)';

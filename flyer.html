@@ -8,40 +8,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/flyer.css">
     <!-- font awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <!-- owl.carousel.js -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.carousel.min.css">
-    </link>
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.theme.default.min.css">
-    </link>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.carousel.min.css"></link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.theme.default.min.css"></link>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/owl.carousel.min.js"></script>
-    <!-- 動畫套件 -->
-    <script src="js/parallax.js"></script>
-    <!-- jquer UI -->
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
-<style>
-    html {
-        overflow: -moz-hidden-unscrollable;
-        height: 100%;
-    }
-
-    body::-webkit-scrollbar {
-        display: none;
-    }
-
-    body {
-        -ms-overflow-style: none;
-        height: 100%;
-        width: calc(100vw + 18px);
-        overflow: auto;
-    }
-</style>
 
 <body>
     <input type="checkbox" id=menu_control>
@@ -144,9 +116,11 @@
     <!-- flyer內容 -->
     <article class="firstScreen">
         <div class="wrap">
-            <h2 class="titleBgi">客製活動宣傳單</h2>
             <div class="title">
-                <p> 客製宣傳單功能為免費功能，有購買花車的客戶可以更可匯入花車內容，輕鬆幫你邀請朋友參加活動，還有統計參加人數，快來試試看吧！</p>
+                <h2 class="titleBgi">客製活動宣傳單</h2>
+                <div class="col-12 col-md-6">
+                    <p> 客製宣傳單功能為免費功能，有購買花車的客戶可以更可匯入花車內容，輕鬆幫你邀請朋友參加活動，還有統計參加人數，快來試試看吧！</p>
+                </div>
             </div>
             <div class="stepsBar">
                 <div class="stepBox">
@@ -166,82 +140,56 @@
                     <p>輸入文字</p>
                 </div>
             </div>
-            <div class="clearfloat">
-            </div>
             <div class="doIt">
-                <div class="backBlock">
-                    <div id="A4page"></div>
-                    <div id="tool">
-                        <i class="fas fa-search-plus"></i>
-                        <i class="fas fa-search-minus"></i>
-                        <i class="fas fa-redo-alt"></i>
-                        <i class="fas fa-undo-alt"></i>
-                        <i class="fas fa-arrow-left"></i>
-                        <i class="fas fa-arrow-right"></i>
-                        <i class="fas fa-trash-alt"></i>
-                    </div>
-                </div>
-                <div class="whiteBlock">
-                    <h4>選擇背景圖片</h4>
-                    <div id="toolBox">
-                        <div id="alltool">
-                            <div id="toolinnerBox">
+                <div class="backBlock col-md-8">
 
-                                <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_02.jpg" alt="">
-                                <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_03.jpg" alt="">
-                                <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_04.jpg" alt="">
-                                <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_05.jpg" alt="">
-                                <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_06.jpg" alt="">
-                                <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_07.jpg" alt="">
-                                <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_08.jpg" alt="">
-                                <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_09.jpg" alt="">
-                                <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_10.jpg" alt="">
-                                <label>
-                                    <img src="images/icon/updateIcon.png" id="updateIcon">
-                                    <input type="file" name="">
-                                    <span>上傳圖片</span>
-                                </label>
+                </div>
+                <div class="whiteBlock col-md-4">
+                    <div class="innerBox">
+                        <h3>選擇背景圖片</h3>
+                        <div class="toolBox">
+                            <div class="tool col-4">
+                                <img src="images/flyertools/1.jpg" alt="">
                             </div>
-                            <div id="selectDay">
-                                <label>
-                                    <img src="images/icon/dateIcon.png">
-                                    <p>活動日期 : <span>點擊選擇日期</span></p>
-                                    <input type="text" id="datepicker">
-                                </label>
+                            <div class="tool col-4">
+                                <img src="images/flyertools/2.jpg" alt="">
                             </div>
-                            <div id="textPlace">
-                                <div class="col-8">
-                                    <input type="text" placeholder="輸入您的活動地點">
-                                    <p>您的活動地點 <span>高雄市前鎮區草衙里佛宗街54號</span> 的google地圖</p>
-                                </div>
-                                <div class="col-4"><img src="https://fakeimg.pl/70x70/666"></div>
+                            <div class="tool col-4">
+                                <img src="images/flyertools/3.jpg" alt="">
                             </div>
-                            <div id="textWord">
-                                <textarea name="" id="" cols="30" rows="3" placeholder="輸入想在宣傳單告知的內容 ( 限120字 )"></textarea>
+                            <div class="tool col-4">
+                                <img src="images/flyertools/4.jpg" alt="">
+                            </div>
+                            <div class="tool col-4">
+                                <img src="images/flyertools/5.jpg" alt="">
+                            </div>
+                            <div class="tool col-4">
+                                <img src="images/flyertools/6.jpg" alt="">
+                            </div>
+                            <div class="tool col-4">
+                                <img src="images/flyertools/7.jpg" alt="">
+                            </div>
+                            <div class="tool col-4">
+                                <img src="images/flyertools/8.jpg" alt="">
+                            </div>
+                            <div class="tool col-4">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="cloud-upload-alt" class="svg-inline--fa fa-cloud-upload-alt fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" width="100%"viewBox="-50 -80 840 600"><path fill="currentColor" d="M537.6 226.6c4.1-10.7 6.4-22.4 6.4-34.6 0-53-43-96-96-96-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32c-88.4 0-160 71.6-160 160 0 2.7.1 5.4.2 8.1C40.2 219.8 0 273.2 0 336c0 79.5 64.5 144 144 144h368c70.7 0 128-57.3 128-128 0-61.9-44-113.6-102.4-125.4zM393.4 288H328v112c0 8.8-7.2 16-16 16h-48c-8.8 0-16-7.2-16-16V288h-65.4c-14.3 0-21.4-17.2-11.3-27.3l105.4-105.4c6.2-6.2 16.4-6.2 22.6 0l105.4 105.4c10.1 10.1 2.9 27.3-11.3 27.3z"></path></svg>
                             </div>
                         </div>
-                        <i class="fas fa-angle-double-left fa-2x"></i>
-                        <i class="fas fa-angle-double-right fa-2x"></i>
-                    </div>
-                    <div class="btnBar">
-                        <button class="commonBtn" id="back">上一步</button>
-                        <button class="commonBtn" id="next">下一步</button>
-                    </div>
-                </div>
-                <div class="clothCurtain">
-                    <div>
-                        <p>如有舞台客製訂單者，可指定訂單，即可匯入宣傳單內，無訂單者，也可以免費體驗客製宣傳單估能。<br><br>＊公開體驗宣傳單將於發布達24小時移除＊</p>
-                    </div>
-                    <div>
-                        <button class="commonBtn">匯入訂單</button>
-                        <button class="commonBtn start">免費體驗</button>
+                        <div class="btnBar">
+                            <button class="commonBtn">上一步</button>
+                            <button class="commonBtn">下一步</button>
+                        </div>
+                        <div class="clothCurtain">
+                            <div><p>如有舞台客製訂單者，可指定訂單，即可匯入宣傳單內，無訂單者，也可以免費體驗客製宣傳單估能。<br>＊公開體驗宣傳單將於發布達24小時移除＊</p></div>
+                            <div>
+                                <button class="commonBtn">匯入訂單</button>
+                                <button class="commonBtn start">免費體驗</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="mouse">
-            <p class="scroll">scroll</p>
-        </div>
         </div>
     </article>
     <article class="secScreen">
@@ -249,117 +197,117 @@
             <div class="title">
                 <h2 class="titleBgi">客製活動宣傳單</h2>
             </div>
-            <div class="bigCarcouselBox">
-                <div class="card one">
-                    <div class="ElongationBox">
-                        <div class="blockBox">
-                            <img src="images/flyer/2.jpg" alt="">
-                            <img src="images/flyer/flyerPin.png" alt="">
-                            <img src="images/flyer/flyerPin.png" alt="">
+            <div id="carrousel">
+                <div class="container">
+                    <div class="col-md-12">
+                        <div class="owl-carousel owl-theme">
+                          <div class="box" style="width:220px">
+                                <img src="images/flyer/0.png">
+                                <div>
+                                    <h4>勁爆你的夜</h4>
+                                    <p>日期 : 2019-03-24(一)</p>
+                                    <p>主持人 : 小勒勒</p>
+                                    <p>地點 : 桃園市中壢區中央路200號</p>
+                                    <p>目前參與人數 : 96人</p>
+                                </div>
+                                <button class="commonBtn centerShow">我要參加</button>
+                          </div>
+                          <div class="box" style="width:220px">
+                                <img src="images/flyer/1.png">
+                                <div>
+                                    <h4>勁爆你的夜</h4>
+                                    <p>日期 : 2019-03-24(一)</p>
+                                    <p>主持人 : 小勒勒</p>
+                                    <p>地點 : 桃園市中壢區中央路200號</p>
+                                    <p>目前參與人數 : 96人</p>
+                                </div>
+                                <button class="commonBtn centerShow">我要參加</button>
+                          </div>
+                          <div class="box" style="width:220px">
+                                <img src="images/flyer/2.png">
+                                <div>
+                                    <h4>勁爆你的夜</h4>
+                                    <p>日期 : 2019-03-24(一)</p>
+                                    <p>主持人 : 小勒勒</p>
+                                    <p>地點 : 桃園市中壢區中央路200號</p>
+                                    <p>目前參與人數 : 96人</p>
+                                </div>
+                                <button class="commonBtn centerShow">我要參加</button>
+                          </div>
+                          <div class="box" style="width:220px">
+                                <img src="images/flyer/3.png">
+                                <div>
+                                    <h4>勁爆你的夜</h4>
+                                    <p>日期 : 2019-03-24(一)</p>
+                                    <p>主持人 : 小勒勒</p>
+                                    <p>地點 : 桃園市中壢區中央路200號</p>
+                                    <p>目前參與人數 : 96人</p>
+                                </div>
+                                <button class="commonBtn centerShow">我要參加</button>
+                          </div>
+                          <div class="box" style="width:220px">
+                                <img src="images/flyer/4.png">
+                                <div>
+                                    <h4>勁爆你的夜</h4>
+                                    <p>日期 : 2019-03-24(一)</p>
+                                    <p>主持人 : 小勒勒</p>
+                                    <p>地點 : 桃園市中壢區中央路200號</p>
+                                    <p>目前參與人數 : 96人</p>
+                                </div>
+                                <button class="commonBtn centerShow">我要參加</button>
+                          </div>
+                          <div class="box" style="width:220px">
+                                <img src="images/flyer/5.png">
+                                <div>
+                                    <h4>勁爆你的夜</h4>
+                                    <p>日期 : 2019-03-24(一)</p>
+                                    <p>主持人 : 小勒勒</p>
+                                    <p>地點 : 桃園市中壢區中央路200號</p>
+                                    <p>目前參與人數 : 96人</p>
+                                </div>
+                                <button class="commonBtn centerShow">我要參加</button>
+                          </div>
+                          <div class="box" style="width:220px">
+                                <img src="images/flyer/6.png">
+                                <div>
+                                    <h4>勁爆你的夜</h4>
+                                    <p>日期 : 2019-03-24(一)</p>
+                                    <p>主持人 : 小勒勒</p>
+                                    <p>地點 : 桃園市中壢區中央路200號</p>
+                                    <p>目前參與人數 : 96人</p>
+                                </div>
+                                <button class="commonBtn centerShow">我要參加</button>
+                          </div>
                         </div>
-                        <div class="cardContent">
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card two">
-                    <div class="ElongationBox">
-                        <div class="blockBox">
-                            <img src="images/flyer/3.jpg" alt="">
-                            <img src="images/flyer/flyerPin.png" alt="">
-                            <img src="images/flyer/flyerPin.png" alt="">
-                        </div>
-                        <div class="cardContent"></div>
-                    </div>
-                </div>
-
-                <div class="card three">
-                    <div class="ElongationBox">
-                        <div class="blockBox">
-                            <img src="images/flyer/1.jpg" alt="">
-                            <img src="images/flyer/flyerPin.png" alt="">
-                            <img src="images/flyer/flyerPin.png" alt="">
-                        </div>
-                        <div class="cardContent"></div>
                     </div>
                 </div>
             </div>
-            <div class="owl-carousel owl-theme">
-                <div class="item"><img src="images/flyer/1.jpg" class="flyer"></div>
-                <div class="item"><img src="images/flyer/2.jpg" class="flyer"></div>
-                <div class="item"><img src="images/flyer/3.jpg" class="flyer"></div>
-                <div class="item"><img src="images/flyer/4.jpg" class="flyer"></div>
-                <div class="item"><img src="images/flyer/1.jpg" class="flyer"></div>
-                <div class="item"><img src="images/flyer/2.jpg" class="flyer"></div>
-                <div class="item"><img src="images/flyer/3.jpg" class="flyer"></div>
-                <div class="item"><img src="images/flyer/4.jpg" class="flyer"></div>
-                <div class="item"><img src="images/flyer/5.jpg" class="flyer"></div>
-            </div>
+        </div>
     </article>
     <article class="thrScreen">
         <div class="wrap">
-            <div class="title" id="parallax_box">
-                <h2 class="titleBgi" data-depth="0.3">宣傳單小試身手</h2>
+            <div class="title">
+                <h2 class="titleBgi">宣傳單小試身手</h2>
             </div>
             <ul>
-                <li><img src="images/flyer/1.jpg"></li>
-                <li><img src="images/flyer/2.jpg"></li>
-                <li><img src="images/flyer/3.jpg"></li>
-                <li><img src="images/flyer/4.jpg"></li>
-                <li><img src="images/flyer/5.jpg"></li>
-                <li><img src="images/flyer/1.jpg"></li>
-                <li><img src="images/flyer/2.jpg"></li>
-                <li><img src="images/flyer/3.jpg"></li>
-                <li><img src="images/flyer/4.jpg"></li>
-                <li><img src="images/flyer/5.jpg"></li>
+                <li><img src="images/flyer/1.png"></li>
+                <li><img src="images/flyer/2.png"></li>
+                <li><img src="images/flyer/3.png"></li>
+                <li><img src="images/flyer/4.png"></li>
+                <li><img src="images/flyer/5.png"></li>
+                <li><img src="images/flyer/6.png"></li>
+                <li><img src="images/flyer/7.png"></li>
+                <li><img src="images/flyer/4.png"></li>
+                <li><img src="images/flyer/5.png"></li>
+                <li><img src="images/flyer/6.png"></li>
+                <li><img src="images/flyer/7.png"></li>
             </ul>
-        </div>
+        </div>     
     </article>
 
 
-    <!-- 宣傳單燈箱 -->
-    <div class="blackBox">
-        <div class="envelopeLightBox">
-            <i class="fas fa-times fa-2x" id="hiddenEnvelopeLightBox"></i>
-            <img src="images/icon/iconMore.png" alt="查看更多" id="envelopeIcon">
-            <div class="flyerArea">
-                <img src="images/flyer/1.png" alt="宣傳單">
-                <div class="envelopeHeader">
-                    <h4>闖闖看淘氣大舞台</h4>
-                    <span>活動時間 2019-08-28</span>
-                </div>
-            </div>
-            <div class="envelopeContent">
-                <div class="envelopeTitle">
-                    <div class="titleImg"><img src="images/member2.jpg" alt=""></div>
-                    <div class="titleName">
-                        <p>Christina</p><span>參加人數 <mark>24</mark> 人</span>
-                    </div>
-                </div>
-                <div class="envelopeDetail">
-                    <p>主持人</p>
-                    <p>潘佳麗</p>
-                    <p>地點</p>
-                    <p>桃園市桃園區八德路中壢巷54號</p>
-                    <p>活動時間</p>
-                    <p>2019-08-29</p>
-                    <span>
-                        簡介<br>
-                        從小朋友喜歡的兒童汽車、氣墊遊戲及特色胖卡市集，舞台活動更邀請到波力、MOMO哥哥姐姐們及BabyBoss職業體驗城等知名卡童玩偶陪伴大家一起玩樂，更首創300公分高的馬卡龍色系大舞台地景唷。
-                    </span>
-                </div>
-                <div class="envelopeBar">
-                    <button class="commonBtn">我要參加</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
     <script>
+
         /* 登入燈箱 JS*/
         // 點擊icon開啟登入燈箱----------------------------
         document.querySelector('.fa-user-circle').addEventListener('click', function (e) {
@@ -452,245 +400,38 @@
         })
 
         //螢幕寬度
+        let screenWidth = document.body.clientWidth;
+        if (screenWidth <= 768) {
 
+        }
 
+        //owlCarousel套件
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            center: true,
+            autoWidth:true,
+            margin: 50,
+            autoplay: true, // 自動輪播
+            autoplayTimeout: 5000, // 切換時間
+            autoplayHoverPause: true, // 滑鼠經過時暫停
+            responsive: {
+                0: {
+                    items: 3,
+                },
+                600: {
+                    items: 5,
+                },
+                1000: {
+                    items: 7
+                }
+            }
+        })
 
         //點擊免費體驗
-        document.querySelector('.start').addEventListener('click', function () {
+        document.querySelector('.start').addEventListener('click',function(){
             let clothCurtain = document.querySelector('.clothCurtain');
-            clothCurtain.style.setProperty('animation', `blurFadeInOut 2s ease-in backwards`);
-            setTimeout(function () {
-                clothCurtain.style.display = "none"
-            }, 2000);
-        })
-
-        // 宣傳單燈箱
-
-        function envelopeLightBox() {
-            let flyers = document.getElementsByClassName('flyer');
-            for (let i = 0; i < flyers.length; i++) {
-                flyers[i].addEventListener('click', function () {
-                    document.querySelector('.blackBox').style.setProperty('display', 'block');
-                    document.getElementById('hiddenEnvelopeLightBox').addEventListener('click', function () {
-                        document.querySelector('.blackBox').style.setProperty('display', 'none');
-                    })
-
-                    document.getElementById('envelopeIcon').addEventListener('click', function (e) {
-                        let envelopeContent = document.querySelector('.envelopeContent')
-                        let style = window.getComputedStyle(envelopeContent).getPropertyValue('left')
-                        if (style !== '0px') {
-                            e.target.setAttribute('src', 'images/icon/iconBack.png');
-                            document.querySelector('.envelopeContent').style.setProperty('opacity',
-                                '1');
-                            document.querySelector('.envelopeContent').style.setProperty('left', '0');
-                            document.querySelector('.envelopeContent').style.setProperty('transition',
-                                '1s');
-                        } else {
-                            e.target.setAttribute('src', 'images/icon/iconMore.png');
-                            document.querySelector('.envelopeContent').style.setProperty('opacity',
-                                '0');
-                            document.querySelector('.envelopeContent').style.setProperty('left',
-                                '-150%');
-                            document.querySelector('.envelopeContent').style.setProperty('transition',
-                                '1s');
-                        }
-                    })
-                    document.querySelector('.flyerArea').addEventListener('mouseover', function () {
-                        document.querySelector('.envelopeHeader').style.setProperty('bottom', '-10%');
-                        document.querySelector('.envelopeHeader').style.setProperty('transition', '1s');
-                    })
-                })
-            }
-        }
-        envelopeLightBox();
-
-        let cards = document.querySelectorAll('.card');
-        for (let i = 0; i < cards.length; i++) {
-            cards[i].addEventListener('click', function () {
-                let listenMove = this.style.getPropertyValue('transform');
-                console.log(listenMove);
-                if (listenMove !== 'translateX(-50%)') {
-                    this.style.setProperty('transform', 'translateX(-50%)');
-                    this.style.setProperty('z-index', '5');
-                    this.querySelector('.cardContent').style.setProperty('transform', 'translateX(100%)');
-
-                } else {
-                    this.style.setProperty('z-index', '-1');
-                    this.style.setProperty('transform', 'translateX(0%)');
-                    this.querySelector('.cardContent').style.setProperty('transform', 'translateX(0%)');
-                }
-                if (i == 2) {
-                    document.querySelector('.one').style.setProperty('z-index', '5');
-                }
-
-            })
-        }
-        document.querySelector('.mouse').addEventListener('click', function () {
-            window.scrollTo({
-                top: 900,
-                behavior: "smooth"
-            });
-        })
-        let screenWidth = document.body.clientWidth;
-
-        //   大輪播捲動
-        window.addEventListener('scroll', function (e) {
-            let nowScrollHeight = window.pageYOffset;
-            let secScreen = document.querySelector('.secScreen').offsetTop;
-            console.log(secScreen);
-            let screenWidth = document.body.clientWidth;
-
-            if (nowScrollHeight > secScreen) {
-                document.querySelector('.one').style.setProperty('z-index', '5');
-                document.querySelectorAll('.title')[1].style.setProperty('position', 'fixed');
-                document.querySelectorAll('.title')[1].style.setProperty('opacity', '1');
-                document.querySelectorAll('.title')[1].style.setProperty('top', '50px');
-                document.querySelector('.bigCarcouselBox').style.setProperty('opacity', '1')
-                if (screenWidth >= 768) {
-                    document.querySelector('.bigCarcouselBox').style.setProperty('bottom', '150px')
-                } else {
-                    document.querySelector('.bigCarcouselBox').style.setProperty('bottom', '50px')
-                }
-                document.querySelector('.bigCarcouselBox').style.setProperty('position', 'fixed')
-                document.querySelectorAll('.card')[0].querySelector('.cardContent').style.setProperty(
-                    'transform', 'translateX(0%)')
-            } else {
-                document.querySelectorAll('.title')[1].style.setProperty('opacity', '0');
-                document.querySelector('.bigCarcouselBox').style.setProperty('bottom', '0px')
-                document.querySelector('.bigCarcouselBox').style.setProperty('opacity', '0')
-                document.querySelector('.bigCarcouselBox').style.setProperty('position', 'absolute')
-            }
-            if (nowScrollHeight > secScreen + 500) {
-                document.querySelector('.one').style.setProperty('transform', 'translateY(300%)');
-                document.querySelector('.two').style.setProperty('z-index', '5');
-            } else {
-                document.querySelector('.one').style.setProperty('z-index', '5');
-                document.querySelector('.two').style.setProperty('z-index', '4');
-                document.querySelector('.one').style.setProperty('transform', 'translateY(0%)');
-            }
-            if (nowScrollHeight > secScreen + 1000) {
-                document.querySelector('.two').style.setProperty('transform', 'translateY(300%)');
-            } else {
-                document.querySelector('.two').style.setProperty('transform', 'translateY(0%)')
-            }
-            if (nowScrollHeight > secScreen + 1500) {
-                document.querySelector('.three').style.setProperty('transform', 'translateY(300%)')
-            } else {
-                document.querySelector('.three').style.setProperty('transform', 'translateY(0%)')
-            }
-            if (nowScrollHeight > secScreen + 1700) {
-                document.querySelectorAll('.title')[1].style.setProperty('position', 'absolute');
-            }
-        })
-        document.querySelector('.one').addEventListener('mouseover', function () {
-            document.querySelector('.three').style.setProperty('transform', 'rotateZ(-10deg)')
-            document.querySelector('.two').style.setProperty('transform', 'rotateZ(10deg)')
-        })
-        document.querySelector('.two').addEventListener('mouseover', function () {
-            document.querySelector('.three').style.setProperty('transform', 'rotateZ(-10deg)')
-        })
-    </script>
-    <!-- owl輪播 JS -->
-    <script src="js/carcousel.js"></script>
-    <!-- 畫面捲動 -->
-    <script>
-        function parallaxs() {
-            var scene = document.getElementById('parallax_box');
-        };
-        parallaxs();
-    </script>
-    <!-- jquery UI datepicker -->
-    <script>
-        $(function () {
-            $("#datepicker").datepicker();
-        });
-        $('#selectDay input').on('change', function () {
-            $('#selectDay p').html('活動日期' + ' : <span>' + this.value + '</span>')
-        })
-    </script>
-    <!-- 點擊下一步到下一個步驟 -->
-    <script>
-        document.getElementById('next').addEventListener('click', function (e) {
-            let alltoll = document.getElementById('alltool');
-            let key = window.getComputedStyle(alltoll, null).top;
-            let screenWidth = document.body.clientWidth;
-            if (screenWidth <= 768) {
-                switch (key) {
-                    case '0px':
-                        document.querySelector('.fa-angle-double-left').style.display = 'none';
-                        document.querySelector('.fa-angle-double-right').style.display = 'none';
-                        alltoll.style.setProperty('top', '-88px');
-                        break;
-                    case '-88px':
-                        alltoll.style.setProperty('top', '-176px')
-                        break;
-                    case '-176px':
-                        alltoll.style.setProperty('top', '-264px');
-                        e.target.innerText = "完成";
-                        break;
-                    default:
-                        break;
-                }
-            } else {
-                switch (key) {
-                    case '0px':
-                        document.querySelector('.fa-angle-double-left').style.display = 'none';
-                        document.querySelector('.fa-angle-double-right').style.display = 'none';
-                        alltoll.style.setProperty('top', '-300px');
-                        break;
-                    case '-300px':
-                        alltoll.style.setProperty('top', '-600px')
-                        break;
-                    case '-600px':
-                        alltoll.style.setProperty('top', '-900px');
-                        document.querySelector('#textWord textarea ').setAttribute("rows", "10");
-                        e.target.innerText = "完成";
-                        break;
-                    default:
-                        break;
-                }
-            }
-        })
-        document.getElementById('back').addEventListener('click', function () {
-            let alltoll = document.getElementById('alltool');
-            let key = window.getComputedStyle(alltoll, null).top;
-            let screenWidth = document.body.clientWidth;
-            if (screenWidth <= 768) {
-                switch (key) {
-                    case '-88px':
-                        document.querySelector('.fa-angle-double-left').style.display = 'block';
-                        document.querySelector('.fa-angle-double-right').style.display = 'block';
-                        alltoll.style.setProperty('top', '0px')
-                        break;
-                    case '-176px':
-                        alltoll.style.setProperty('top', '-88px')
-                        break;
-                    case '-264px':
-                        alltoll.style.setProperty('top', '-176px');
-                        document.getElementById('next').innerText = "下一步";
-                        break;
-                    default:
-                        break;
-                }
-            }else{
-                switch (key) {
-                    case '-300px':
-                        document.querySelector('.fa-angle-double-left').style.display = 'block';
-                        document.querySelector('.fa-angle-double-right').style.display = 'block';
-                        alltoll.style.setProperty('top', '0px')
-                        break;
-                    case '-600px':
-                        alltoll.style.setProperty('top', '-300px');
-                        
-                        break;
-                    case '-900px':
-                        alltoll.style.setProperty('top', '-600px');
-                        document.getElementById('next').innerText = "下一步";
-                        break;
-                    default:
-                        break;
-                }
-            }
+            clothCurtain.style.setProperty('animation',`blurFadeInOut 2s ease-in backwards`);
+            setTimeout(function(){clothCurtain.style.display = "none"},2000);
         })
     </script>
     <script src="js/navmenu.js"></script>
