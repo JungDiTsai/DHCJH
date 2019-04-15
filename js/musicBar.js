@@ -33,9 +33,7 @@ window.onload = function() {
           var r = barHeight + (25 * (i/bufferLength));
           var g = 250 * (i/bufferLength);
           var b = 250;
-          var a = 0.7;
           ctx.fillStyle = "rgba(" + r + "," + g + "," + b + ","+ a +")";
-          ctx.fillRect(x, HEIGHT - barHeight*2, barWidth, barHeight*2);
           x += barWidth + 1;
         }
       }
