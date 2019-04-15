@@ -1,0 +1,121 @@
+.checkoutInfo{
+    text-align: center;
+    img{
+        padding: 20px 0px;
+        width: 80%;
+        height: 80%;
+    }
+    p{
+        background-image: url(../images/customized/checkout/checkoutPrice.jpg);
+        background-size: cover;
+        height: 118px;
+        margin: auto;
+        font-size: $subTitleWord;
+        color: #000;
+        width: 300px;
+        border-radius: 5px;
+        line-height: 118px;
+        text-shadow: 0px 0px 8px #fff;
+        animation: headerNeon 2s infinite;
+    }
+}
+.checkoutInfoForm, .cardInfo{
+    margin-top: 30px;
+    text-align: center;
+    h4{
+        color: $fontColor;
+        font-size: $subTitleWord;
+        padding: 10px 0px;
+    }
+    table{
+        margin: auto;
+        text-align-last: left;
+        label, th{
+            padding-top: 10px;
+            font-size: $buttonWord;
+            color: $fontColor;
+        }
+        select{
+            padding-right: 20px;
+            background: url(../images/customized/checkout/select_bg.svg) no-repeat scroll right center transparent;
+            background-size: 20%;
+        }
+        input, select{
+            height: 20px;
+            margin-left: 20px;
+            box-shadow: none;
+            -webkit-appearance: none;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid $fontColor;
+            font-size: $buttonWord;
+            color: $fontColor;
+            &:focus {
+                outline : 0;
+            }
+            option{
+                background-color: $memberBackColor;
+            }
+        }
+    }
+}
+.cardInfo{
+    img{
+        width: 80px;
+        border-radius: 5px;
+        // &:hover{
+        //     outline: 3px solid $logoColor;
+        // }
+    }
+}
+@media screen and (min-width:768px){
+    .checkoutInfoForm, .cardInfo{
+        h4{
+            font-size: $titleWord;
+            padding: 20px 0px;
+        }
+        table{
+            margin: auto;
+            text-align-last: left;
+            label, th{
+                padding-top: 10px;
+                font-size: 22px;
+                color: $fontColor;
+            }
+            input{
+                font-size: 22px;
+            }
+        }
+    }
+    .cardInfo{
+        img{
+            width: 120px;
+        }
+    }
+
+    .checkoutInfo{
+        p{
+            width: 500px;
+            height: 195px;
+            line-height: 195px;
+            font-size: $thrTitleWord;
+        }
+    }
+}
+@media screen and (min-width:992px){
+    .checkOutAll{
+        display: flex;
+    }
+}
+@media screen and (min-width:1200px){
+    .checkoutInfo, .checkOutAll{
+        width: 1200px;
+        margin: auto;
+    }
+    .checkoutOrder{
+        display: flex;
+        img{
+            width: 50%;
+        }
+    }
+}
