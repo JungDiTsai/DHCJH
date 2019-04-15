@@ -1,47 +1,100 @@
 //客服機器人＆遊戲
-#gameAndService{
-  z-index: 9999999;
-}
 #gameHub{
-  opacity:0.75;
+  opacity:0.85;
   position: fixed;
   left: 0px;
   bottom: 100px;
-  width: 70px;
-  height: 80px;
+  width: 80px;
+  height: 90px;
   background-color:#444;
   text-align: center;
   //outline: 5px red solid;
   border:5px rgb(235, 235, 235) solid;
   color: #ffffa3;
   vertical-align: middle;
+  z-index: 3;
   img{
     width: 120%;
     margin: 5px auto;
   }
-  animation:gameCar 10s 2s ease infinite;
+  animation:gameCar 10s ease infinite;
 }
 #customerServiceGirl{
   position:fixed;
   vertical-align: middle;
-  //outline: 5px red solid;
-  width:90px;
-  right: 30px;
+  //outline: 5px red solid：
+  width:100px;
+  right: -10px;
   bottom: -40px;
+  z-index:3;
   img{
-    width:100%;
-    
+    width:100%; 
   }
-  animation:serviceGirl 12s 1s ease infinite;
+  animation:serviceGirl 12s  ease infinite;
   
 }
-
+@media screen and (min-width:992px) {
+  .perspective{
+    perspective: 300px;
+    transform: scale(1.3);
+    margin-top:80px;
+  }
+  #introWords{
+    margin-top:40vh;
+    z-index:1;
+    h2{
+      font-size: 32px;
+    }
+    h3{
+      font-size: 24px;
+    }
+  }
+  #equipCarStage{
+    .commonBtn{
+      margin-left: 110px;
+    }
+  }
+  
+  #customerServiceGirl{
+    position:fixed;
+    vertical-align: middle;
+    //outline: 5px red solid：
+    width:140px;
+    right: 80px;
+    bottom: -40px;
+    z-index:3;
+    img{
+      width:100%; 
+    }
+    animation:serviceGirl 12s 1s ease infinite;
+    
+  }
+  #gameHub{
+    padding:10px;
+    opacity:0.9;
+    font-size:20px;
+    width: 120px;
+    height: 140px;
+    //outline: 5px red solid;
+    img{
+      margin: 20px auto;
+    }
+  }
+  
+}
+//使用者客服問答區
+#gameAndService{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  //  outline: #007bff 5px solid;
+ 
+}
 #customerTextArea{
   position: fixed;
-  border: $fontColor 8px solid;
   border-radius: 10px;
   width: 300px;
-  height: 300px;
+  height: 420px;
   background-color: #222222;
   color: $fontColor;
   margin: auto;
@@ -49,11 +102,108 @@
   right: 0;
   top: 0;
   bottom: 30px;
-  z-index:2;
+  z-index: 2;
   img{
     width:5%
   }
 }
+//客服背景圖筐
+.chatrobot {
+  position: fixed;
+  border: $fontColor 8px groove;
+  border-radius: 10px;
+  width: 300px;
+  height: 420px;
+  background-color: #222222;
+  color: $fontColor;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 30px;
+  z-index: 2;
+  box-shadow: 0 0 10px 12px rgba(230, 230, 230, 0.3);
+  display: none; 
+}
+.chatrobot::after{
+  content:'';
+  background: url("../images/custormerService.png") no-repeat;
+  background-size:contain;
+  width:100px;
+  height:150px;
+  top:100px;
+  right: -55px;
+  position: absolute;
+  animation:serviceGirl 12s  linear infinite;
+}
+//客服文字圖筐
+.chatrobot .chatbox {
+  width: 250px;
+  height: 280px;
+  background-color: #444;
+  margin: auto;
+  margin-top: 30px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-family: "微軟正黑體";
+  overflow: auto; 
+}
+.chatrobot .chatbox::-webkit-scrollbar {
+  display: none; }
+  //客服使用者文字輸入區塊
+.chatrobot .chatbox .customMessage {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: $fontColor;
+  color: #222;
+  text-align: left;
+  position: relative; }
+.chatrobot .chatbox .chatline span {
+  margin-left: 20px; }
+
+  .chatrobot .closebtn {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    font-size: 30px;
+    color: #e5dccb;
+    cursor: pointer; }
+  .chatrobot .chattext {
+    width: 250px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around; }
+    .chatrobot .chattext .messagebox {
+      width: 190px;
+      height: 50px;
+      box-sizing: border-box;
+      padding: 5px;
+      margin: 0px;
+      border: 0px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-family: "Microsoft JhengHei"; }
+    .chatrobot .chattext .chatbtn {
+      height: 50px;
+      width: 50px;
+      border: 0;
+      font-size: 20px;
+      font-family: "kangxi";
+      color: #e5dccb;
+      border-radius: 10px;
+      background-color: #d53e23;
+      text-align: center;
+      line-height: 50px;
+      cursor: pointer; 
+    }
+    .popOutBgiBlack{
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+
+
 @keyframes gameCar{
   0%{transform:translateX(10px);}
   20%{transform:translateX(-20px);}
@@ -63,12 +213,11 @@
   100%{transform:translateX(10px);}
 }
 @keyframes serviceGirl{
-  0%{transform:translateY(20px);}
-  20%{transform:translateY(-10px);}
-  30%{transform:scaleX(-1);}
-  40%{transform:scaleX(-1);}
-  50%{transform:translateY(-10px);}
-  100%{transform:translateY(20px);}
+  0%{transform:translateY(0px);}
+  25%{transform:translateY(20px);}
+  50%{transform:translateY(0px);}
+  75%{transform:translateY(-20px);}
+  100%{transform:translateY(0px);}
 }
 
 //首頁第一屏 wrapper
@@ -78,6 +227,7 @@
     text-align: center;
     margin: auto;
     width: 80vw;
+    height: 100vh;
     max-width: 1200px;
 }
 #carIntroWrap{
@@ -88,8 +238,8 @@
     background-attachment: scroll;
     background-position: center;
     background-size: cover;
-    z-index: -2;
-    height: 100vh;
+    z-index: 0;
+    //height: 100vh;
     min-height: 600px;
     //outline: 5px red solid;
   }
@@ -568,77 +718,296 @@
     background-attachment: scroll;
     background-position: center;
     background-size: cover;
-    z-index: -2;
-    
+    z-index: 0;
+    height:100vh;
     min-height: 600px;
     //outline: 5px red solid;
   }
   #equipCarStage{
-    //outline: 5px red solid;
-    position: relative;
-    margin-top: 10px;
-    img{
-      width: 100%;
-    }
+    outline: red 5px solid;
+    
     .commonBtn{
       margin: -30px auto 30px auto;
       
     }
-    #pipe{
-      width:8px;
-      height:100px;
-      position: absolute;
-      z-index:10px;
-      margin: auto;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-    }
   }
   
-  #equipContainer{
+  .EquipIntroWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin:20px auto;
+    width:90%;
+    font-family:sans-serif;
+    color:rgb(99, 95, 78);
+    font-size:14px;
+    line-height:24px;
+    max-width:1200px;
+    min-width:230px;
+    //overflow:hidden;
+    height: 100vh;
     text-align: center;
-    //outline: #00ff95 5px solid;
+
+  }
+  
+  .introTabs {
+    margin:0px 30px;
+    .tabLi {
+      list-style:none;
+      float:left;
+      width:16.66666666666667%;
+    }
+    a {
+      display:block;
+      text-align:center;
+      text-decoration:none;
+      position:relative;
+      text-transform:uppercase;
+      font-size: 18px;
+      color:#fff;
+      height:80px;
+      line-height:100px;
+      background:linear-gradient(165deg,transparent 29%, #98927C 20%);
+      
+      &:hover, &.active {
+         background: linear-gradient(165deg,transparent 29%, #F2EEE2 20%);
+         color:#98927C;
+         font-weight: bold;
+      }
+      
+      &:before{
+        content:'';
+        position:absolute;
+        z-index:11;
+        left:100%;
+        top:-60%;
+        height:58px;
+        line-height:90px;
+        width:0;
+        border-bottom: 70px solid rgba(0,0,0,.1);
+        border-right: 7px solid transparent;
+      }
+      &.active:before{
+        content:'';
+        position:absolute;
+        z-index:11;
+        left:100%;
+        top:-60%;
+        height:58px;
+        line-height:90px;
+        width:0;
+        border-bottom: 70px solid rgba(0,0,0,.2);
+        border-right: 20px solid transparent;
+      }
+      // &:last-child:before, &.active:last-child:before{
+      //   border: none;
+      // }
+    }
+  }
+  .tabgroup {
+    box-shadow:2px 2px 2px 2px rgba(0,0,0,.1);
+    margin:0px 30px;
+    h2{
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 28px;
+    }
+    div {
+      padding:30px;
+      height: 200px;
+      width: 100%;
+      max-width:500px;
+      min-width:210px;
+      background:#F2EEE2;
+      box-shadow:0 3px 10px rgba(0,0,0,.3);
+      border-color:rgb(128, 119, 89);
+      border-width:10px  0px 10px 0px;
+      border-style:groove;
+    }
+  }
+  .clearfix:after {
+    content:"";
+    display:table;
+    clear:both;
+  }
+  //包住所有被件及背景舞台的div
+  #equipCarStage{
+      position: relative;
+      width: 90vw;
+      margin-top: -220px
+  }
+  #introCarStage{
+    width: 100%;
+    position:absolute;
+    //outline: red 5px solid;
+    top: 0;
+    left: 0;
+
+  }
+  #introInnerBlock{
+    width: 102%;
+    position:absolute;
+    //outline: blue 5px solid;
+    top: 0;
+    left: 0;
+    margin-left:-4px; 
+    animation: introInnerBlockShine 2.4s ease infinite;
+  }
+  @keyframes introInnerBlockShine{
+    0%{ opacity:1;  }
+    25%{ opacity:0.4; }
+    50%{ opacity:1;  }
+    75%{ opacity:0.6; }
+    100%{opacity:1;}
   }
 
-#equipBoardContainer{
-  position: relative;
-  width: 100%;
-  margin: auto;
-  left: 0;
-  right: 0;
-  //outline: #00ff95 5px solid;
-  z-index: -10;
-}
-#equipBoard{
-  position: absolute;
-  //outline: #007bff 5px solid;
-  margin:20px auto; 
-  img{
-    width: 70%;
+  #introPoleBlock{
+    width: 3%;
+    position:absolute;
+    //outline: blue 5px solid;
     margin: auto;
+    top: 15vw;
+    right: 0;
+    left: 0;
+    filter: drop-shadow(0px 0px 5px rgb(255, 244, 203));
+    animation: introPoleBlockScale 3s ease infinite;
   }
+  @keyframes introPoleBlockScale{
+    0%{ transform:scaleY(1);  }
+    25%{ transform:scaleY(.9); }
+    50%{ transform:scaleY(1);  }
+    75%{ transform:scaleY(.95); }
+    100%{transform:scaleY(1);}
+  }
+  
+  #introDanceBlock{
+    width: 15%;
+    position:absolute;
+   
+    margin: auto;
+    top: 25vw;
+    right: 0;
+    left: 0;   
+    filter: drop-shadow(0px 0px 4px rgba(36, 36, 36, 0.9));
+    animation: introDanceBlock 10s ease infinite;
+  }
+  @keyframes introDanceBlock{
+    0%{ transform:translateX(0px) scale(1);  }
+    10%{ transform:translateX(5px) scale(1.05); }
+    25%{ transform:translateX(-5px) scale(1.02);  }
+    20%{ transform:translateX(0px) scale(1); }
+    30%{ transform:translateX(10px) scale(1.05); }
+    60%{ transform:translate(0px,5vw) scale(1.15); }
+    100%{transform:translateX(0px) scale(1);}
+  }
+  .introSpecialBlock{
+    position:absolute;
+    margin: auto;    
+  }
+  .introSpecialBlock.one{
+      width: 50%;
+      left: 0;
+      top: -60px
+  }
+  .introSpecialBlock.two{
+    width: 70%;
+    right: 0px;
+    top: -90px
 }
-#equipmentsArea{
-  position: relative;
-  //outline: #ff00aa 5px solid;
-  width: 60%;
-  margin: 30px auto 10px auto; 
-  @include fontStyle;
+  .introSpecialBlock.three{
+    width: 25%;
+    right: 30px;
+    top: 70px;
+}
+.introSpecialBlock.four{
+    width: 25%;
+    left: 30px;
+    transform: scaleX(-1) rotate(5deg);
+    top: 70px;
+}
+#introScreenBlock{
+    width: 52vw;
+    height: 6vw;
+    position:absolute;
+    margin: auto;  
+    top: 26.2vw;
+    right: 0;
+    left: 0;  
+    overflow: hidden;
+    span{
+        width: 600px;
+        height: 6vw;
+        position:absolute;
+        font-size: 4vw;
+        line-height: 6vw;
+        color: #F2EEE2;
+        animation: introScreenWords 18s linear infinite;
+    }
+}
+@keyframes introScreenWords{
+    from{transform: translateX(100px);}
+    to{transform: translateX(-700px);}
+}
+.introSoundsBlock{
+    width: 14%;
+    position:absolute;
+    margin: auto;  
+    top: 28vw;
+}
+.introSoundsBlock.one{
+    right: 5vw;
+    animation: introSoundsScale 1.5s ease reverse infinite;
+    filter: drop-shadow(0px 0px 7px rgb(255, 244, 203));
+}
+.introSoundsBlock.two{
+    left: 5vw;
+    animation: introSoundsScale 1.5s ease reverse infinite;
+    filter: drop-shadow(0px 0px 7px rgb(255, 244, 203));
+}
+@keyframes introSoundsScale{
+    0%{ transform:scale(1.05);  }
+    6%{ transform:scale(1); }
+    12%{ transform:scale(1.02);  }
+    20%{ transform:scale(1); }
+    30%{ transform:scale(1.02);  }
+    80%{ transform:scale(1); }
+    100%{transform:scale(1.05);}
+  }
+
+  #lyrics{
+    width: 52vw;
+    height: 6vw;
+    position:absolute;
+    margin: auto;  
+    top: 26.2vw;
+    right: 0;
+    left: 0;  
+    overflow: hidden;
+    span{
+        width: 800px;
+        height: 6vw;
+        position:absolute;
+        font-size: 4vw;
+        line-height: 6vw;
+        color: #F2EEE2;
+        animation: lyrics 19s linear infinite;
+    }
+}
+@keyframes lyrics{
+    from{transform: translateX(100px);}
+    to{transform: translateX(-900px);}
 }
 
 //首頁第三屏 wrapper （客製小試身手）
 #tryCustormiseWrap{
   padding-top:$paddingTop; 
   position: relative;
-  background-image: url(../images/tryCustormiseWrapSmall.jpg);
+  background-image: url(../images/darkBrick.jpg);
   background-repeat: no-repeat;
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  z-index: -2;
-  height: 180vh;
+  z-index: 0;
+
   min-height: 600px;
   //outline: 5px red solid;
   .titleBgi{
@@ -660,12 +1029,12 @@
 #tryCustormiseFlyerWrap{
   padding-top:$paddingTop; 
   position: relative;
-  background-image: url(../images/tryCustormiseInvitationWrap.jpg);
+  background-image: url(../images/darkBgi.jpg);
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center;
   background-size: cover;
-  z-index: -2;
+  z-index: 0;
   //height: 100vh;
   min-height: 600px;
   //outline: 5px red solid;
@@ -674,7 +1043,7 @@
     background-size: cover;
   }
   @include fontStyle;
-  color: #222222;
+  color: $fontColor;
   .commonBtn{
     margin: 20px;
   }
@@ -780,7 +1149,7 @@
   background-attachment: scroll;
   background-position: center;
   background-size: cover;
-  z-index: -2;
+  z-index: 0;
   height: 100vh;
   min-height: 600px;
   //outline: 5px red solid;
@@ -901,7 +1270,6 @@
   width:100px;
   right: 0;
   display:none;
-  border:solid 1px #c3c3c3;
   p{
   font-size: $contentWord;
   }
@@ -911,7 +1279,6 @@
       display: none;
   }
   .beautyPageantWrap{
-      margin-top: -250px;
       background-size: cover;
       height: 1080px;
       width: 100%;
@@ -1140,38 +1507,7 @@ footer{
 
 @media screen and (min-width:768px) {
 
-  #equipBoardContainer{
-    width: 100%;
-    img{
-      width: 100%;
-    }
-  }
 
-  #equipCarStage{
-    width: 50%;
-    margin-top: 0px;
-    margin-left: 20px;
-    img{
-      width: 120%;
-    }
-    .commonBtn{
-      margin-left: 80px;
-    }
-  }
-  #equipBoard{
-    img{
-      max-width: 600px;
-    }
-  }
-  #equipmentsArea{
-    
-    span{
-      font-size: $titleWord;
-    }
-    p{
-      font-size: $contentWord;
-    }
-  }
   #introFlyerFeature{
     margin-top: 30px;
   }
@@ -1203,22 +1539,34 @@ footer{
     }
   }
   #equipCarStage{
+    width: 55%;
     .commonBtn{
       margin-left: 110px;
     }
   }
-  #tryCustormiseWrap{
-    background-image: url(../images/tryCustormiseWrap.jpg);
+  .introTabs {
+    margin:0px 0px 0px 60px;
   }
+
+  .tabgroup {
+    box-shadow:2px 2px 2px 2px rgba(0,0,0,.1);
+    h2{
+        margin-bottom: 20px;
+        font-size: 30px;
+    }
+    div {
+      height: 320px;
+      font-size:20px;
+      line-height:30px;
+      margin:0px 0px 0px 30px;
+
+    }
+  }
+
   
 }
 @media screen and (min-width:1200px){
-  #equipmentsArea{
-    padding-top:70px;
-    width:80%;
-   
-  }
   #equipCarStage{
-    margin-top:-20px;
+    margin-top:0px;
   }
 }

@@ -5,40 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-<<<<<<< HEAD
-    <link rel="stylesheet" href="css/beautyPageant.css">
     <link rel="stylesheet" href="css/rollStyle.css">
-=======
-<<<<<<< HEAD
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/intro.css">
     <!-- font awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
     <style>
-       
     </style>
     </head>
-=======
     <link rel="stylesheet" href="css/index.css">
->>>>>>> b572ba85154bd041490b2a5b25d5b43a9af3284b
     <!-- font awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
->>>>>>> ed355754c7b3d088eaf3758d82d9cd1111b6cc61
 <body>
     <input type="checkbox" id=menu_control>
     <header>    
         <!-- 放bar選單 -->
         <label for="menu_control" class="menubtn" >
-                <div class="menuandcross"></div>
+            <div id="nav-icon2">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </label>
         <nav class="mainNav">
             <li class="mainNavCell"><a href="customized_01.html">電子花車客製</a></li>
-            <li class="mainNavCell"><a href="flyer.html">客製宣傳單</a></li>
+            <li class="mainNavCell"><a href="flyer.html">客製化宣傳單</a></li>
             <h1 class="navLogo"><a href="index.html"><img src="images/logo.png" alt="台灣大舞台"></a></h1>
             <li class="mainNavCell"><a href="beautyPageant.html">花車選美</a></li>
             <li class="mainNavCell"><a href="intro.html">花車特色介紹</a></li>
@@ -118,7 +114,6 @@
         <input type="submit" value="寄送密碼" class="commonBtn">
         <div><a class="backLogin">回到登入</a></div>
     </div>
-<<<<<<< HEAD
 
     <!-- beauty pageant -->	
     <div id='wrapper'>
@@ -258,7 +253,6 @@
             let registeredBox = document.querySelector('.registeredBox');
             registeredBox.style.setProperty('display',"none");
             // 顯示登入燈箱
-<<<<<<< HEAD
             let loginBox = document.querySelector('.loginBox');
             let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
             if(style=="none"){
@@ -281,15 +275,11 @@
             let forgotBox = document.querySelector('.forgotBox');
             forgotBox.style.setProperty('display',"none");
             // 顯示登入燈箱
-=======
->>>>>>> ed355754c7b3d088eaf3758d82d9cd1111b6cc61
             let loginBox = document.querySelector('.loginBox');
             let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
             if(style=="none"){
                 loginBox.style.setProperty('display',"block");
             }
-<<<<<<< HEAD
-=======
         })
 
         /* 忘記密碼燈箱 JS*/
@@ -312,7 +302,6 @@
             if(style=="none"){
                 loginBox.style.setProperty('display',"block");
             }
->>>>>>> ed355754c7b3d088eaf3758d82d9cd1111b6cc61
         })
         
         //螢幕寬度
@@ -321,5 +310,6 @@
             
         }
     </script>
+    <script src="js/navmenu.js"></script>
 </body>
 </html>
