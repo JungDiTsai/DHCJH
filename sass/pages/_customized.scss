@@ -131,9 +131,8 @@
     height: 40px;
     // outline: 2px solid #f00;
     transform-style: preserve-3d;
-    // transform: translateY(100px) rotateX(-30deg) rotateY(20deg) rotateZ(0deg);
     transform: translateY(100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-    // animation: turn 6s alternate infinite;
+    animation: turn 6s alternate infinite;
 
     div{
         box-sizing: border-box;
@@ -745,7 +744,6 @@
 .previousStep, .nextStep, .resetStep, .checkout, .checkoutStep{
     text-align: center;
     margin: 0 auto;
-    line-height: 55px;
 }
 
 //tablet
