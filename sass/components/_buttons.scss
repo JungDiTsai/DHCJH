@@ -38,3 +38,23 @@
                     0 0 0 1px #fff;
     }
 }
+.commonBtnSmall{
+    font-size: $smallButtonWord;
+    font-family: $fontFamily;
+    width: 120px;
+    height: 70px;
+    background: url(../images/smallBtnNeonLightSub.gif) center no-repeat;
+    background-size: cover;
+    color: $fontColor;
+    border-radius: 10px; 
+    line-height:70px; 
+    border:none;
+    z-index:9999;
+    box-shadow: 0 0 3px 2px $fontColor;
+    cursor: pointer;
+    &:hover{
+        transform: scale(1.05);
+        box-shadow: 0px 0px 25px $fontColor,
+                    0 0 0 1px #fff;
+    }
+}

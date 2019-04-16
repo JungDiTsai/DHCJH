@@ -120,6 +120,7 @@
     top: calc(-100vh - 80px);
     transition: 0.3s;
     background-color: #333;
+    
 }
 .mainNav{
     padding-top: 25px;
@@ -173,6 +174,7 @@ header{
     width: 100%;
     top: 0px;
     z-index: 1;
+    z-index: 9999;
     animation: headerNeon 1s infinite; 
 }
 @media screen and (min-width:1200px){
