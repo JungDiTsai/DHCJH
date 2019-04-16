@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body {
+  background: #000;
+  overflow: hidden;
+}
+#context {
+  text-align: center;
+}
+
+iframe {
+  position: absolute;
+  opacity: .7;
+}
+</style>
+</head>
+<body>
+        <iframe width="33%" height="75" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/138554132&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+    <script>
+        var scene, camera, controls, sphere, sun, textureCube, loader, stars, light, light1, light2, light3, light4, light5, light6, light7, cubeCamera, renderer;
+
+init();
+draw();
+animate();
+
+function init() {
+  //set up scene
+  scene = new THREE.Scene();
+  scene.fog = new THREE.FogExp2(0x000000, .0007);
+
+  var width = window.innerWidth;
+  var height = window.innerHeight;
+
+  renderer = new THREE.WebGLRenderer({
+    antialias: true
+  });
+
+  renderer.setSize(width, height);
+  renderer.setClearColor(0x000011, 1);
+  renderer.domElement.id = "context";
+  document.body.appendChild(renderer.domElement);
+
+  //set up camera
+  camera = new THREE.PerspectiveCamera(45, width / height, .1, 10000);
+  scene.add(camera);
+  camera.position.set(0, 90, -290);
+  camera.lookAt(scene.position);
+
+  //set up cube camera
+  cubeCamera = new THREE.CubeCamera(1, 100000, 1024);
+  scene.add(cubeCamera);
+
+  //set up fill lights
+  var ambientLight = new THREE.AmbientLight(0xffffff);
+  scene.add(ambientLight);
+
+  light = new THREE.PointLight(0xFFFBE3);
+  light.position.set(100, 0, -60);
+  scene.add(light);
+
+  light1 = new THREE.PointLight(0xFFFBE3);
+  light1.position.set(-50, 200, 50);
+  scene.add(light1);
+
+  //set up color lights
+
+  var intensity = 2.5;
+  var distance = 100;
+  var decay = 2.0;
+
+  var c1 = 0xff0040,
+    c2 = 0x0040ff,
+    c3 = 0x80ff80,
+    c4 = 0xffaa00,
+    c5 = 0x00ffaa,
+    c6 = 0xff1100;
+
+  var dot = new THREE.SphereGeometry(0.25, 16, 8);
+
+  light2 = new THREE.PointLight(c1, intensity, distance, decay);
+  light2.add(new THREE.Mesh(dot, new THREE.MeshBasicMaterial({
+    color: c1
+  })));
+  scene.add(light2);
+
+  light3 = new THREE.PointLight(c2, intensity, distance, decay);
+  light3.add(new THREE.Mesh(dot, new THREE.MeshBasicMaterial({
+    color: c2
+  })));
+  scene.add(light3);
+
+  light4 = new THREE.PointLight(c3, intensity, distance, decay);
+  light4.add(new THREE.Mesh(dot, new THREE.MeshBasicMaterial({
+    color: c3
+  })));
+  scene.add(light4);
+
+  light5 = new THREE.PointLight(c4, intensity, distance, decay);
+  light5.add(new THREE.Mesh(dot, new THREE.MeshBasicMaterial({
+    color: c4
+  })));
+  scene.add(light5);
+
+  light6 = new THREE.PointLight(c5, intensity, distance, decay);
+  light6.add(new THREE.Mesh(dot, new THREE.MeshBasicMaterial({
+    color: c5
+  })));
+  scene.add(light6);
+
+  light7 = new THREE.PointLight(c6, intensity, distance, decay);
+  light7.add(new THREE.Mesh(dot, new THREE.MeshBasicMaterial({
+    color: c6
+  })));
+  scene.add(light7);
+
+  //add orbital controls
+ controls = new THREE.OrbitControls(camera);
+}
+
+function draw() {
+  //draw disco ball
+  var geo = new THREE.SphereGeometry(55, 30, 20);
+  var mat = new THREE.MeshPhongMaterial({
+    emissive: '#222',
+    shininess: 50,
+    reflectivity: 3.5,
+    shading: THREE.FlatShading,
+    specular: 'white',
+    color: 'gray',
+    side: THREE.DoubleSide,
+    envMap: cubeCamera.renderTarget.texture,
+    combine: THREE.AddOperation
+  });
+  sphere = new THREE.Mesh(geo, mat);
+  scene.add(sphere);
+
+  //draw stars
+  var starAmt = 20000;
+  var starGeo = new THREE.SphereGeometry(1000, 100, 50);
+  var starAmt = 10000;
+  var starMat = {
+    size: 1.0,
+    opacity: 0.7
+  };
+  var starMesh = new THREE.PointsMaterial(starMat);
+
+  for (var i = 0; i < starAmt; i++) {
+    var starVertex = new THREE.Vector3();
+    starVertex.x = Math.random() * 1000 - 500;
+    starVertex.y = Math.random() * 1000 - 500;
+    starVertex.z = Math.random() * 1000 - 500;
+    starGeo.vertices.push(starVertex);
+  }
+  stars = new THREE.Points(starGeo, starMesh);
+  scene.add(stars);
+
+}
+
+function animate() {
+  //animation
+  requestAnimationFrame(animate);
+  sphere.rotation.y += 0.005;
+
+  //move color lights
+  var time = Date.now() * 0.0025;
+  var d = 100;
+  light2.position.x = Math.cos(time * 0.3) * d;
+  light2.position.y = Math.cos(time * 0.1) * d;
+  light2.position.z = Math.sin(time * 0.7) * d;
+
+  light3.position.x = Math.sin(time * 0.5) * d;
+  light3.position.y = Math.cos(time * 0.1) * d;
+  light3.position.z = Math.sin(time * 0.5) * d;
+
+  light4.position.x = Math.sin(time * 0.3) * d;
+  light4.position.y = Math.sin(time * 0.1) * d;
+  light4.position.z = Math.sin(time * 0.5) * d;
+
+  light5.position.x = Math.cos(time * 0.3) * d;
+  light5.position.y = Math.cos(time * 0.1) * d;
+  light5.position.z = Math.sin(time * 0.5) * d;
+
+  light6.position.x = Math.cos(time * 0.5) * d;
+  light6.position.y = Math.sin(time * 0.3) * d;
+  light6.position.z = Math.cos(time * 0.5) * d;
+  
+  light7.position.x = Math.cos(time * 0.5) * d;
+  light7.position.y = Math.sin(time * 0.1) * d;
+  light7.position.z = Math.cos(time * 0.5) * d;
+
+  //Update the render target cube
+  sphere.visible = false;
+  cubeCamera.position.copy(sphere.position);
+  cubeCamera.updateCubeMap(renderer, scene);
+
+  //renderer
+  sphere.visible = true;
+  renderer.render(scene, camera);
+}
+</script>
+</body>
+</html>

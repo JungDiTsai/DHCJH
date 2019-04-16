@@ -3,9 +3,11 @@ window.addEventListener('resize',function(){
         stagescale();
     }else{
         init();
+        carArr[i].addEventListener('mouseover', stagescale);
         carArr[1].style.transform='scale(1.3)';
     }
 })
+
 carArr = document.getElementsByClassName("beautyRankingbg");
 function stagescale(){
     for(i=0;i<carArr.length;i++){
@@ -27,7 +29,26 @@ function init(){
         }
     }
 }
-window.onload=init;
+btnB = document.getElementById("beautyRankingimgsBtn");
+btnM = document.getElementById("beautyRankingimgsMonthBtn");
+btnM.onclick=function(){
+    for(i=0;i<carArr.length;i++){
+    carArr[i].style.transform = 'scale(1)';
+    }
+    carArr[4].style.transform='scale(1.3)';
+}
+btnB.onclick=function(){
+    for(i=0;i<carArr.length;i++){
+        carArr[i].style.transform = 'scale(1)';
+        }
+        carArr[1].style.transform='scale(1.3)';
+}
+
+
+    
+
+
+window.onload=init();
 
 // function stagescaleorign(){
 //     this.style.transform='scale(1)';

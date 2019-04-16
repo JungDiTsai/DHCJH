@@ -1,31 +1,57 @@
-.col-md-9{
+.col-md-10{
     background: url(../images/bkground/member_bg.jpg) center;
     background-size: cover;
     min-height: 100vh;
     padding: 10px;
     padding-top: 50px;
 }
-h3{
+.allCoupons{
+    margin: auto;
+    width: 90%;
+    max-width: 800px;
+    box-sizing: border-box;
+    padding-bottom: 30px;
     text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px #333;
+}
+h3{
+    padding-top: 20px;
+    color: #e56e50;
     font-size: $thrTitleWord;
 }
 table{
+    width: 100%;
     margin:20px auto;
     text-align: center;
-    border: 1px solid #000;
-    box-shadow: 0 0 10px #000;
-    th{
-        padding: 5px;background: rgb(88, 86, 86);
-        color:rgb(255, 255, 255);
-    }
+    font-size: $buttonWord;
     td{
+        padding: 5px;
+        vertical-align: middle;
+        color: #5c5c5c;
         background: #fff;
     }
     .used{color:red;}
     .unuse{color:green}
 }
 @media screen and (min-width:768px) {
-    .col-md-9{
+    h3{
+        font-size: 36px;
+    }
+    table{
+        font-size: 22px;
+    }
+    .col-md-10{
         padding-top: 150px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    table{
+        width: 80%;
+        td{
+            padding: 10px;
+        }
     }
 }

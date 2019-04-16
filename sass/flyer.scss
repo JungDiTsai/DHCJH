@@ -16,6 +16,16 @@
 @import "components/_Registered.scss";  //註冊燈箱
 @import "components/_forgotPSW.scss";  //忘記密碼燈箱
 @import "components/_titlebackground.scss";
+@import "components/_carcousel.scss";  //輪播
+@import "components/_envelopeLightBox.scss"; //宣傳單燈箱
+@import "components/_colorPicker.scss";  //顏色選擇器
+
+<<<<<<< HEAD
+//引入頁面a
 @import "index.scss";//引入頁面
-//引入頁面
 @import "pages/_flyer.scss";
+=======
+//引入頁面
+@import "pages/index";
+@import "pages/_flyer.scss";
+>>>>>>> 26c60d8fc46fa48c46f8e54710c5d8cf74c7d1e4

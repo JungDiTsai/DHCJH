@@ -4,6 +4,7 @@
   background-position: center;
   width: 100%;
   padding-top: 35px;
+  margin-top: 75px;
   position: relative;
 }
 
@@ -14,11 +15,11 @@
   width: 95%;
   height: 600px;
   position: relative;
-  top: 3%;
+  top: 0%;
   left: 0;
   right: 0;
   margin: auto;
-  margin-top: 62px;
+  margin-top: 40px;
 }
 
 .introTime .introStage .people .peopleFirst, .introTime .introStage .people .peopleSec, .introTime .introStage .people .peopleThree, .introTime .introStage .people .peopleFourth, .introTime .introStage .people .peopleFiv {
@@ -160,6 +161,7 @@
     left: 0;
     right: 0;
     margin: auto;
+    margin-top: 56px;
   }
   .introTime .introStage .people .peopleFirst {
     top: 34%;
