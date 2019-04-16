@@ -147,7 +147,12 @@ $(document).ready(function(){
     // 上一步
     $('.previousStep').bind('click', function(){
         index = temp;
-        index--;
+        if(index == 0){
+            //重新選擇的動作
+            index = 0;
+        }else{
+            index--;
+        }
         temp = index;
         console.log(index);
         controlContent(index);
@@ -155,10 +160,15 @@ $(document).ready(function(){
     // 下一步
     $('.nextStep').bind('click', function(){
         index = temp;
-        index++;
-        temp = index;
-        console.log(index);
-        controlContent(index);
+        if(index == 8 ){
+            //跳轉至結帳的動作
+            index = 8;
+        }else{
+            index++;
+            temp = index;
+            console.log(index);
+            controlContent(index);
+        }
     });
 
     //讓點選index與下方共用
