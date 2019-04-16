@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/flyer.css">
-
+    <link rel="stylesheet" href="css/loadingScene.css">
     
     <!-- font awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -16,8 +15,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.theme.default.min.css"></link>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/owl.carousel.min.js"></script>
+    
 </head>
 <body>
+    <!--載入頁面   起-->
+    <div class="loading">     
+        <div class="stars"></div>
+        <div id="fog"></div>
+        <canvas id="canvas"></canvas>
+        <div id="car">
+            <img src="images/loadingSceneCar.png" alt="載入車">
+        </div>
+        <div class="wrapper">
+            <h2 class="neon pulse" data-value="Taiwan">Taiwan</h2>
+            <h3 class="neon pulse" data-value="Great Stage">Great Stage</h3>
+            <h4 class="neon bent" data-value="“客製”一下花車好不好！！">“客製”一下花車好不好！！</h4>
+        </div>  
+    </div>   
+    <script> 
+        window.onload=function(){
+            var loadFadeOut = function(){
+            $(".loading").fadeOut(2000);
+            }
+            $("#car").removeClass('readyLoadingCar');
+            $("#car").addClass('loadingCar');
+            setTimeout(loadFadeOut,5200);    
+        }
+    </script>
+        <!--載入頁面   尾-->
     <input type="checkbox" id=menu_control>
     <header>    
         <!-- 放bar選單 -->
@@ -115,8 +140,8 @@
 
 
     <!--game and customer service wrapper-->
-    <div id="gameAndService">
-        <a href="game.html">
+   
+    <a href="game.html">
             <div id="gameHub">
                 <span>玩遊戲<br>
                         拿優惠
@@ -124,40 +149,41 @@
                 <img src="images/gameCar.png" alt="遊戲"></img>
             </div>
         </a>
+        
         <div id="customerService">
-            <div id="customerTextArea" style="display: none;">
-                <div class="chatrobot" style="display: none;">
-                    <div class="chatbox">
-                        <div class="chatline">
-                            歡迎來到台灣大舞台！可搜尋如下關鍵字，會迅速為您解答唷<br>
-                            <span>#營業時間</span><br>
-                            <span>#客製流程</span><br>
-                            <span>#可以跟客服約會嗎</span>
-                        </div>
+            
+            <div class="chatrobot" style="display: none;">
+                <div class="chatbox">
+                    <div class="chatline">
+                        歡迎來到台灣大舞台！可搜尋如下關鍵字，會迅速為您解答唷<br>
+                        <span>#營業時間</span><br>
+                        <span>#客製流程</span><br>
+                        <span>#可以跟客服小姐約會嗎</span>
                     </div>
-                    
-                    <div class="closebtn"><i class="fas fa-times-circle btnCancel">
-                        <img src="images/serviceClose.png" alt="關閉客服">
-                    </i></div>   
-                    <div class="chattext">
-                        <textarea name="saymessage" class="messagebox"></textarea>
-                        <div class="chatbtn">送出</div>
-                    </div> 
                 </div>
+                
+                <div class="closebtn"><i class="fas fa-times-circle btnCancel">
+                    <!--<img src="images/serviceClose.png" alt="關閉客服">-->
+                </i></div>   
+                <div class="chattext">
+                    <textarea name="saymessage" class="messagebox"></textarea>
+                    <div class="chatbtn">送出</div>
+                </div> 
             </div>
+            
 
-            <div id="customerServiceGirl">
+            <div id="customerServiceGirl" style="cursor: pointer" >
                 <img src="images/custormerService.png" alt="">
             </div>
         </div>
-    </div>
+
 
     <!--first wrapper-->
     
     
     <div id="carIntroWrap"> 
     <div class="dcontainer">
-        <div id="bgiArea" col-12>
+        <div id="bgiArea" class="col-12">
             <img id="bgiAreaBar" src="images/carIntroWrapBgiBars.png" alt="">
             <div id="bgiAreaRotation">
                 <img id="bgiAreaCircle" src="images/carIntroWrapBgiCircle.png" alt="">
@@ -277,33 +303,74 @@
         <h2 class="titleBgi">
             花車舞台介紹
         </h2>
-        <div class="dcontainer">
+        
             <!--配件介紹背板-->
-            <div id="equipContainer" class="col-12 col-md-4">
-                <div id="equipBoardContainer">
-                    <div id="equipBoard">
-                         <img src="images/equipmentIntroBoard.jpg" alt="介紹背板">
-                    </div> 
+            <div class="EquipIntroWrapper">
+                <div class="col-12 col-md-5">
+                  <ul class="introTabs clearfix" data-tabgroup="first-tab-group">
+                    <li class="tabLi" id="introSpecial"><a href="#tab1" class="active">特效</a></li>
+                    <li class="tabLi" id="introDance"><a href="#tab2">舞團</a></li>
+                    <li class="tabLi" id="introPole"><a href="#tab3">鋼管</a></li>
+                    <li class="tabLi" id="introScreen"><a href="#tab5">銀幕</a></li>
+                    <li class="tabLi" id="introSounds"><a href="#tab4">音響</a></li>     
+                    <li class="tabLi" id="introInner"><a href="#tab6">塗裝</a></li>
+                  </ul>
+                  <section id="first-tab-group" class="tabgroup">
+                    <div id="tab1">
+                      <h2>特效 Special Effects</h2>
+                      <p>最ㄅ一ㄤˋ 最華麗的舞台特效就在台灣大舞台啦～ 有天上噴發的、有地上閃耀的，讓你的五感體驗再升級！</p>
+                    </div>
+                    <div id="tab2">
+                      <h2>舞團 Dance</h2>
+                      <p>本公司力聘台灣電子花車界最最會扭最會跳的辣妹猛男舞團，給你最與眾不同的視覺體驗！</p>
+                    </div>
+                    <div id="tab3">
+                      <h2>鋼管 Dancing Pole</h2>
+                      <p>可謂花車文化的靈魂中柱啊！19K強化塑形鋼管，即便是撼天動地熱舞也能Hold住全場！</p>
+                    </div>
+                    <div id="tab4">
+                      <h2>音響 Sounds </h2>
+                      <p>一場華麗完美的演出，怎能缺少高音質的音響呢？Dolby環繞音效，讓你在戶外仍能享有高級劇院的音效品質</p>
+                    </div>
+                    <div id="tab5">
+                      <h2>銀幕 Screen</h2>
+                      <p>把你想對觀眾說的話都化作閃亮的字體，傳遞文字的力量、傳遞對台灣的愛！</p>
+                    </div>
+                    <div id="tab6">
+                      <h2>塗裝 Painting</h2>
+                      <p>高彩度、高畫質的內塗裝，提供多樣款式給你打造專屬於你的華麗電子花車！</p>
+                    </div>
+                  </section>  
                 </div>
-                <div id="equipmentsArea" class="col-md-10">
-                   <div id="equipStealPipe">
-                        <span>鋼管</span>
-                        <p>可謂花車文化的靈魂中柱啊！19K強化塑形鋼管，即便是撼天動地熱舞也能Hold住全場！
-                        </p>
-                    </div> 
-                </div>  
+                  
+                
+                <!--配件展示-->
+                <div id="equipCarStage" class="col-12 col-md-5">
+                    <img class="introSpecialBlock one" src="images/Fireworks2.gif" alt="特效＿煙火" style="display: block;">
+                    <img class="introSpecialBlock two" src="images/Fireworks1.gif" alt="特效＿煙火2" style="display: block;">
+                    <!--配件展示的車-->
+                    <img id="introInnerBlock" src="images/carStageEquipShing.png" alt="內塗裝" style="display: none;">
+                    <img id="introCarStage" src="images/carStageEquip.png" alt="介紹用的花車">
+                    <div id="introScreenBlock" style="display: none;"><!--跑馬燈的框-->
+                    <span>
+                    我要嗨翻全場！有看到嗎有看到嗎～可以跑字超酷的啦！嘿嘿嘿 趕快來試試看啊！台灣大舞台！
+                    </span>  
+                    </div>
+                    <img id="introPoleBlock" src="images/pipe.png" alt="鋼管" style="display: none;">
+                    <div id="lyrics" class="introSoundsBlock" style="display: none;"><!--跑馬燈的框-->
+                    <span>
+                        轉吧～轉啊～七彩霓虹燈！讓我看透這一個人生～讓那沒有答案的疑問，通通掉進雨後的水坑！一個兩個三個四個，五個六個七個八個，天花板總是有許多，許多數不完的彩虹燈！  
+                    </span>  
+                    </div>
+                    <img class="introSoundsBlock one" src="images/audio1.png" alt="音響" style="display: none;">
+                    <img class="introSoundsBlock two" src="images/audio1.png" alt="音響" style="display: none;">
+                    <img id="introDanceBlock" src="images/danceGirlOne.gif" alt="舞團" style="display: none;">
+                    <img class="introSpecialBlock three" src="images/fire1.gif" alt="特效＿火" style="display: block;">
+                    <img class="introSpecialBlock four" src="images/fire1.gif" alt="特效＿火2" style="display: block;">
+                    <!--<img id="pipe" src="images/pipe.png" alt="鋼管">-->
+                </div>
             </div>
-            <!--被hover的花車-->
-            <div id="equipCarStage" class="col-12 col-md-8">
-                <img src="images/carStageEquip.png" alt="介紹用的花車">
-                <!--<img id="pipe" src="images/pipe.png" alt="鋼管">-->
-                <a href="customized_01.html">
-                    <button class="commonBtn">
-                        立即客製
-                    </button>
-                </a>
-            </div>
-        </div>
+       
     </div>
     <!--third wrapper try to customise a Stage -->
     <div id="tryCustormiseWrap"> 
@@ -810,6 +877,186 @@
             
         }
     </script>
+            
+    <script>
+        ///////客服機器人區////
+        //打開客服小姐
+        $('#customerServiceGirl').click(function(){
+            $('.chatrobot').fadeIn(400).css("display","block");    
+            $('#gameAndService').fadeIn(400).addClass('popOutBgiBlack');
+            $('#customerServiceGirl').fadeOut(300);
+        });
+        $('.closebtn').click(function(){
+            $('.chatrobot').fadeOut(400).css("display","none");
+            $('#gameAndService').removeClass('popOutBgiBlack');
+            $('#customerServiceGirl').fadeIn(500);
+        });
+        
+        //送出資料，滑鼠點擊送出
+        var chatbtn = document.querySelector('.chatbtn');
+        var message = document.querySelector(".messagebox");
+        
+        chatbtn.addEventListener('click',say);
+        function say(e){
+            if (message.value == "") {  //未輸入內容，無法發送
+                e.preventDefault();
+            }else {
+                append("<div class='customMessage'>" + message.value + "</div>");
+                answer(say);
+            }
+        }
+        //當按下 enter 鍵時，會呼叫此函數進行回答
+        message.onkeydown = keyin;
+        function keyin(e) {
+        var keyCode = e.which; // 取出按下的鍵
+            if (keyCode == 13 && !event.shiftKey == 1) { //shift+enter，換行
+                e.returnValue = false;  //停止textarea本身enter換行功能
+                if (message.value == "") {  //未輸入內容，無法發送
+                    e.preventDefault();
+                } else {
+                    say();
+                }
+            }
+        }
+        
+        // 回答問題 
+        function answer(say){     
+        // alert(message.value);
+        console.log(message.value);
+            var xhr = new XMLHttpRequest();
+        
+            xhr.open("post", "php/robot.php", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onload = function(){
+            if(xhr.readyState ==4){
+                if(xhr.status == 200){
+                    append( "<div class='avatar'><p class='avatar__text'>" + xhr.responseText + "</p></div>")
+                }else{
+                    var hardToReply = ['誒豆～這個偶不知道耶','哩勒供蝦咪？？', '這個偶不懂耶～偶腦袋不好拍謝','偶看不懂你在寫蝦咪？囧','拍謝啦！看不懂～哇阿餒母湯'];
+                    var replyNumber = Math.floor((Math.random()*5));
+                    alert(hardToReply[replyNumber]);
+                }
+            }
+        }
+        var say = "saymessage=" + message.value;
+        xhr.send(say);
+        message.value = '';
+        }
+        
+        // chatbox 加入對話
+        function append(line){
+            var messageContent = document.querySelector(".chatbox"); // 取出對話框
+            messageContent.innerHTML += line;
+            // document.querySelector(".messagebox").value = '';
+        
+            var scrollHeight = $('.chatbox').prop("scrollHeight"); //scrollbar自動在最下方
+            $('.chatbox').scrollTop(scrollHeight);
+        
+        }
+    </script>
     <script src="js/navmenu.js"></script>
+    <script>
+        //點選個配件tab 
+        $('.tabgroup > div').hide();
+        $('.tabgroup > div:first-of-type').show();
+        $('.introTabs a').click(function(e){
+          e.preventDefault();
+            var $this = $(this),
+                tabgroup = '#'+$this.parents('.introTabs').data('tabgroup'),
+                others = $this.closest('li').siblings().children('a'),
+                target = $this.attr('href');
+            others.removeClass('active');
+            $this.addClass('active');
+            $(tabgroup).children('div').hide();
+            $(target).show();
+        })
+      </script>
+      <script>
+        //點選鋼管 
+        document.getElementById('introPole').addEventListener('click', function(){
+          document.getElementById('introPoleBlock').style.display = 'block';
+          document.getElementById('introDanceBlock').style.display = 'none';
+          document.getElementsByClassName('introSpecialBlock')[0].style.display = 'none';
+          document.getElementsByClassName('introSpecialBlock')[1].style.display = 'none';
+          document.getElementsByClassName('introSpecialBlock')[2].style.display = 'none';
+          document.getElementsByClassName('introSpecialBlock')[3].style.display = 'none';
+          document.getElementsByClassName('introSoundsBlock')[0].style.display = 'none';
+          document.getElementsByClassName('introSoundsBlock')[1].style.display = 'none';
+          document.getElementsByClassName('introSoundsBlock')[2].style.display = 'none';
+          document.getElementById('introScreenBlock').style.display = 'none';
+          document.getElementById('introInnerBlock').style.display = 'none';  
+        });
+        //點選舞團 
+        document.getElementById('introDance').addEventListener('click', function(){
+          document.getElementById('introPoleBlock').style.display = 'none';
+          document.getElementById('introDanceBlock').style.display = 'block';
+          document.getElementsByClassName('introSpecialBlock')[0].style.display = 'none';
+          document.getElementsByClassName('introSpecialBlock')[1].style.display = 'none';
+          document.getElementsByClassName('introSpecialBlock')[2].style.display = 'none';
+          document.getElementsByClassName('introSpecialBlock')[3].style.display = 'none';
+          document.getElementsByClassName('introSoundsBlock')[0].style.display = 'none';
+          document.getElementsByClassName('introSoundsBlock')[1].style.display = 'none';
+          document.getElementsByClassName('introSoundsBlock')[2].style.display = 'none';
+          document.getElementById('introScreenBlock').style.display = 'none';
+          document.getElementById('introInnerBlock').style.display = 'none';  
+        });
+        //點選特效
+        document.getElementById('introSpecial').addEventListener('click', function(){
+          document.getElementById('introPoleBlock').style.display = 'none';
+          document.getElementById('introDanceBlock').style.display = 'none';
+          document.getElementsByClassName('introSpecialBlock')[0].style.display = 'block';
+          document.getElementsByClassName('introSpecialBlock')[1].style.display = 'block';
+          document.getElementsByClassName('introSpecialBlock')[2].style.display = 'block';
+          document.getElementsByClassName('introSpecialBlock')[3].style.display = 'block';
+          document.getElementsByClassName('introSoundsBlock')[0].style.display = 'none';
+          document.getElementsByClassName('introSoundsBlock')[1].style.display = 'none';
+          document.getElementsByClassName('introSoundsBlock')[2].style.display = 'none';
+          document.getElementById('introScreenBlock').style.display = 'none';
+          document.getElementById('introInnerBlock').style.display = 'none';  
+        });
+        //點選音響
+        document.getElementById('introSounds').addEventListener('click', function(){
+          document.getElementById('introPoleBlock').style.display = 'none';
+          document.getElementById('introDanceBlock').style.display = 'none';
+          document.getElementsByClassName('introSpecialBlock')[0].style.display = 'none';
+          document.getElementsByClassName('introSpecialBlock')[1].style.display = 'none';
+          document.getElementsByClassName('introSpecialBlock')[2].style.display = 'none';
+          document.getElementsByClassName('introSpecialBlock')[3].style.display = 'none';
+          document.getElementsByClassName('introSoundsBlock')[0].style.display = 'block';
+          document.getElementsByClassName('introSoundsBlock')[1].style.display = 'block';
+          document.getElementsByClassName('introSoundsBlock')[2].style.display = 'block';
+          document.getElementById('introScreenBlock').style.display = 'none';
+          document.getElementById('introInnerBlock').style.display = 'none';  
+        });
+        //點選銀幕
+        document.getElementById('introScreen').addEventListener('click', function(){
+          document.getElementById('introPoleBlock').style.display = 'none';
+          document.getElementById('introDanceBlock').style.display = 'none';
+          document.getElementsByClassName('introSpecialBlock')[0].style.display = 'none';
+          document.getElementsByClassName('introSpecialBlock')[1].style.display = 'none';
+          document.getElementsByClassName('introSpecialBlock')[2].style.display = 'none';
+          document.getElementsByClassName('introSpecialBlock')[3].style.display = 'none';
+          document.getElementsByClassName('introSoundsBlock')[0].style.display = 'none';
+          document.getElementsByClassName('introSoundsBlock')[1].style.display = 'none';
+          document.getElementsByClassName('introSoundsBlock')[2].style.display = 'none';
+          document.getElementById('introScreenBlock').style.display = 'block';
+          document.getElementById('introInnerBlock').style.display = 'none';  
+        });
+        //點選內塗裝
+        document.getElementById('introInner').addEventListener('click', function(){
+          document.getElementById('introPoleBlock').style.display = 'none';
+          document.getElementById('introDanceBlock').style.display = 'none';
+          document.getElementsByClassName('introSpecialBlock')[0].style.display = 'none';
+          document.getElementsByClassName('introSpecialBlock')[1].style.display = 'none';
+          document.getElementsByClassName('introSpecialBlock')[2].style.display = 'none';
+          document.getElementsByClassName('introSpecialBlock')[3].style.display = 'none';
+          document.getElementsByClassName('introSoundsBlock')[0].style.display = 'none';
+          document.getElementsByClassName('introSoundsBlock')[1].style.display = 'none';
+          document.getElementsByClassName('introSoundsBlock')[2].style.display = 'none';
+          document.getElementById('introScreenBlock').style.display = 'none';
+          document.getElementById('introInnerBlock').style.display = 'block';  
+        });
+
+      </script>
 </body>
 </html>

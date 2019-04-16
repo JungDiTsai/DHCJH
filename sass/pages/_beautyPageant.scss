@@ -34,7 +34,7 @@ li{
   list-style: none;
 }
 .beautyPageantWrap{
-    // background-image: url("../images/beautyPageant/bPBg1.png");
+    background-image: linear-gradient(180deg, transparent, transparent 85%, #000 100%);
     height: 100vh;
     width: 100%;
     background-size: cover;
@@ -46,6 +46,11 @@ li{
     max-width: 1200px;
     margin:auto;
     height: auto;
+    .beautyRankingHeader{
+      .discoBallContainer{
+        display: none;
+      }
+    }
 }
 .beautyRankingbg {
     position: absolute;
@@ -142,14 +147,20 @@ li{
   .dotpanel{
     position: absolute;
     height:auto;;
-    width:84px;
+    width:76px;
     right: 0px;
-    border: 1px solid #f00;
+    // border: 1px solid #f00;
+    background-image: linear-gradient(180deg, transparent, transparent 5%, #fff 100%);
     top: 0px;
-    padding-top:20px; 
+    padding-top:30px; 
     z-index: 2;
+    border-radius: 0 0 3px 3px;
     li{
       z-index: 1;
+      cursor: pointer;
+      &:hover{
+        color: $logoColor;
+      }
     }
   }
   .beautyDiscWrap{ 
@@ -159,6 +170,7 @@ li{
     .beautyDiscContainer{
       margin: auto;
       padding: 10px;
+      padding-top: 20px;
     }
     .beautyDiscStageContainer{
       .beautyDiscIg{
@@ -288,8 +300,37 @@ li{
           }
           .beautyRankingHeader{
             display: flex;
-            
+            margin-top: 0px;
+            padding-bottom: 0px;
+            .beautyRankingSlogan{
+              &:nth-child(2){
+                filter: drop-shadow(-8px 8px 2px $logoColor);
+              }
+              &:nth-child(5){
+                filter: drop-shadow(8px 8px 2px $logoColor);
+              }
+            }
+            .beautyRankingBtn{
+              margin-top: 220px;
+              margin-left: 10px;
+              margin-right: 10px;
+              padding: 0;
+              background-color: rgba(255, 255, 255, 0.9);
+              border-radius: 10px;
+              border-color: transparent;
+              width: 150px;
+              height: 80px;
+              font-size: $titleWord;
+              z-index: 1;
+              cursor: pointer;
+              font-family: 'wangHangMing';
+              filter: drop-shadow(0px 4px 5px $fontColor);
+              &:hover{
+                filter: drop-shadow(0px 4px 5px $logoColor);
+              }
+            }
             .discoBallContainer{
+              display: initial;
               transform: scale(1.5);
               position: absolute;
               top: 180px;
@@ -310,7 +351,7 @@ li{
                 width: 100px;
                 height: 100px;
                 position: absolute;
-                top: 180px;
+                top: 0px;
                 left: 50%;
                 margin-left: -50px; 
                 border-radius: 100%;
@@ -355,7 +396,7 @@ li{
            
             .beautyRankingSlogan{
                 padding-top:250px;
-                padding-bottom: 50px;
+                padding-bottom: 30px;
                 color: $fontColor;
                 flex-grow:1;
                 text-align: center;
@@ -389,4 +430,27 @@ li{
             }
         }
     }
+    #beautyRankingimgsMonth{
+      display: none;
+        .beautyRankingbg{
+          width: 33%;
+          opacity: 1;
+          position: initial;
+          flex-grow: 1;
+          height: auto;
+          transition: 1s;
+          p{
+              color: $fontColor;
+              font-size: $contentWord;
+              letter-spacing: .1em;
+          }
+          img{
+              margin: 0px;
+              width: 100%;
+              height: auto;
+              padding: 30px;
+              box-sizing: border-box ;
+          }
+      }
+  }
 }
