@@ -1,12 +1,10 @@
 #memberOrder{
         background: url(../images/bkground/member_bg.jpg) center;
-        // background-color: #f3f3f3;
         background-size: cover;
         min-height: 100vh;
         padding: 50px 15px 15px;
     .allOrderBox{
         width: 90%;
-        // background: #178cf6;
         background-color: #fff;
         margin:auto;
         border-radius: 8px;
@@ -17,7 +15,7 @@
             font-size: $thrTitleWord;
             color: #e56e50;
             text-align: center;
-            padding-bottom: 10px;
+            padding-bottom: 20px;
         }
         table{
             background: #fff;
@@ -33,7 +31,6 @@
                 background-color:#fff;
             }
             th{
-                padding: 0 10px;
                 font-size: $contentWord;
             }
             td{
@@ -57,7 +54,7 @@
         overflow: hidden;
         
         .bckColor{
-            padding: 15px;
+            padding: 20px;
             // background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
 
             h4{
@@ -102,6 +99,12 @@
 
         .detailStage{
             padding: 0px 20px 20px;
+            .detailStageImg{
+                img{
+                    background: #000;
+                    width: 100%;
+                }
+            }
             table{            
                 width: 100%;
                 margin-top: 20px;
@@ -113,12 +116,6 @@
                     padding: 0px 5px;
                     text-align: center;
                     color: #5c5c5c;
-                    div>img{
-                        width: 100%;
-                    }
-                }
-                td[colspan="3"]{
-                    background: #000;
                 }
             }
             .buttonArea{
@@ -126,29 +123,33 @@
                 display: flex;
                 text-align: center;
                 justify-content: space-between;
-                margin: auto;
+                margin: 20px auto 10px ;
                 
                 button:last-of-type{
-                    background-image: linear-gradient(to top, #fddb92 0%, #ecfa25 100%);
-                    box-shadow: 0px 2px 2px #888;
-                    padding: 5px 10px;
-                    border-radius: 5px;
-                    margin-top:5px; 
-                    cursor: pointer;
-                    &:hover{
-                        background-image: linear-gradient(to bottom, #cfa54a 0%, #faec25 100%);
-                    }
+                    width: 100px;
+                    height: 50px;
+                    // background-image: linear-gradient(to top, #fddb92 0%, #ecfa25 100%);
+                    // box-shadow: 0px 2px 2px #888;
+                    // padding: 5px 10px;
+                    // border-radius: 5px;
+                    // margin-top:5px; 
+                    // cursor: pointer;
+                    // &:hover{
+                    //     background-image: linear-gradient(to bottom, #cfa54a 0%, #faec25 100%);
+                    // }
                 }
                 button:first-of-type{
-                    box-shadow: 0px 2px 2px #888;
-                    padding: 5px 10px;
-                    border-radius: 5px;
-                    margin-top:5px; 
-                    cursor: pointer;
-                    background-image: linear-gradient(to top, #d299c2 0%, #b84a4a 100%);
-                    &:hover{
-                        background-image: linear-gradient(to top, #e4abd4 0%, #ff1010 100%);
-                    }
+                    width: 100px;
+                    height: 50px;
+                    // box-shadow: 0px 2px 2px #888;
+                    // padding: 5px 10px;
+                    // border-radius: 5px;
+                    // margin-top:5px; 
+                    // cursor: pointer;
+                    // background-image: linear-gradient(to top, #d299c2 0%, #b84a4a 100%);
+                    // &:hover{
+                    //     background-image: linear-gradient(to top, #e4abd4 0%, #ff1010 100%);
+                    // }
                 }
             }
         }
@@ -196,6 +197,19 @@
             .bckColor{
                 width: 750px;
                 margin: 0 auto;
+            }
+            .detailStage{
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                padding: 0px 35px 20px;
+                .detailStageImg{
+                    width: 50%;
+                }
+                table{
+                    width: 50%;
+                }
+
             }
         }
     }

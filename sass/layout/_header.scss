@@ -120,6 +120,7 @@
     top: calc(-100vh - 80px);
     transition: 0.3s;
     background-color: #333;
+    
 }
 .mainNav{
     padding-top: 25px;
@@ -173,13 +174,14 @@ header{
     width: 100%;
     top: 0px;
     z-index: 1;
+    z-index: 9999;
     animation: headerNeon 1s infinite; 
 }
 @media screen and (min-width:1200px){
 
     .menubtn{display: none}
     header{
-        background-image: url("../images/navigator.png");
+        background-image: url("../images/navigator.svg");
         background-size: cover;
         background-position:center center;
         height: 130px;
@@ -239,11 +241,12 @@ header{
         h1{display: inline-block;
             flex-grow: 1;
             padding-left: 5px;
+            padding-top: 8px;
             
             img{width: auto;
                 // margin-top: 10px;
                 position: initial;
-                height: 100px;
+                height: 95px;
                 transition: .6s cubic-bezier(0.785, 0.135, 0.15, 0.86);
                 }
             &:hover{
