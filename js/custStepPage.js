@@ -182,38 +182,13 @@ $(document).ready(function(){
     $('.nextStep').text('下一步');
     // 上一步
     $('.previousStep').bind('click', function(){
-<<<<<<< HEAD
-        index = temp;
-        if(index == 0){
-            //重新選擇的動作
-            index = 0;
-        }else{
-            index--;
-        }
-        temp = index;
-        console.log(index);
-=======
         index--;
->>>>>>> fb08e37ae177ef20c634c29db9e7ddcb18116d4d
         controlContent(index);
     });
     // 下一步
     $('.nextStep').bind('click', function(){
-<<<<<<< HEAD
-        index = temp;
-        if(index == 8 ){
-            //跳轉至結帳的動作
-            index = 8;
-        }else{
-            index++;
-            temp = index;
-            console.log(index);
-            controlContent(index);
-        }
-=======
         index++;
         controlContent(index);
->>>>>>> fb08e37ae177ef20c634c29db9e7ddcb18116d4d
     });
 
     //讓點選index與下方共用

@@ -56,52 +56,6 @@
         filter: drop-shadow(2px 2px 8px $logoColor);
     }
 }
-<<<<<<< HEAD
-// 客製舞台步驟
-.custStageStep{
-    width: 95%;
-    margin: auto;
-    padding: 10px 30px 0px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.btnCustStageStep{
-    cursor: pointer;
-    text-align: center;
-    color: #c82a2a;
-    opacity: 0.5;
-    h5{
-        margin: auto;
-        font-size:14px;
-        width: 28px;
-        // height: 28px;
-        background: url(../images/customized/cust_stage_innerPattern/customized_step_stage_selected.svg) center no-repeat;
-        // background-size: cover;
-        line-height: 28px;
-    }
-    p{
-        padding-top: 5px;
-        font-size: 12px;
-    }
-    &:hover{
-        opacity: 1;
-    }
-    &:hover h5, &:hover p{
-        filter: drop-shadow(0px 0px 10px #c82a2a);
-        color: #ddd;
-    }
-}
-.custStageSelected{
-    color: #ddd;
-    opacity: 1;
-    filter: drop-shadow(0px 0px 10px #c82a2a);
-    h5, p{
-        filter: drop-shadow(0px 0px 10px #c82a2a);
-    }
-}
-=======
->>>>>>> fb08e37ae177ef20c634c29db9e7ddcb18116d4d
 // 舞台
 .perspective{
     margin: auto;
@@ -135,13 +89,8 @@
     // outline: 2px solid #f00;
     transform-style: preserve-3d;
     transform: translateY(100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-<<<<<<< HEAD
-    animation: turn 6s alternate infinite;
-
-=======
     // animation: turn 6s alternate infinite;
     animation: none;
->>>>>>> fb08e37ae177ef20c634c29db9e7ddcb18116d4d
     div{
         box-sizing: border-box;
         width: 300px;
@@ -717,19 +666,6 @@
         bottom: -7px;
     }
 }
-<<<<<<< HEAD
-
-.btnStep{
-    display: flex;
-    padding: 20px 0px;
-}
-.previousStep, .nextStep, .resetStep, .checkout, .checkoutStep{
-    text-align: center;
-    margin: 0 auto;
-}
-
-=======
->>>>>>> fb08e37ae177ef20c634c29db9e7ddcb18116d4d
 //tablet
 @media screen and (min-width:768px) {
     // mobile
@@ -759,40 +695,6 @@
             filter: drop-shadow(2px 2px 15px $logoColor);
         }
     }
-<<<<<<< HEAD
-    // 客製舞台步驟
-    .custStageStep{
-        width: 680px;
-        margin: auto;
-        padding: 30px 0px 0px;
-        h5{
-            font-size: 24px;
-        }
-        p{
-            font-size: $buttonWord;
-        }
-    }
-    .btnCustStageStep{
-        h5{
-            width: 50px;
-            height: 50px;
-            font-size: 20px;
-            line-height: 50px;
-        }
-        p{
-            font-size: $contentWord;
-        }
-        &:hover{
-            opacity: 1;
-            filter: drop-shadow(2px 2px 10px #dc6364);
-        }
-    }
-    .custStageSelected{
-        opacity: 1;
-        filter: drop-shadow(2px 2px 10px #dc6364);
-    }
-=======
->>>>>>> fb08e37ae177ef20c634c29db9e7ddcb18116d4d
     //舞台
     .stage{
         display: flex;
@@ -924,14 +826,6 @@
             bottom: -10px;
         }
     }
-<<<<<<< HEAD
-    .btnStep{
-        margin: auto;
-        width: 1200px;
-    }
-=======
-
->>>>>>> fb08e37ae177ef20c634c29db9e7ddcb18116d4d
 }
 
 // custmoized_02
