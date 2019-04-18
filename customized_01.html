@@ -467,7 +467,7 @@
             <!-- 日期與地點 -->
             <div class="dateNLoc">
                 <!-- calendar -->
-                <div class="date">
+                <div class="calendar">
                     <div class="selectDate">
                         <div class="dateOption">日期
                             <select name="day" id="day">
@@ -487,68 +487,31 @@
                             </select>
                         </div>
                     </div>
-                    <div class="calendar">
-                        <div class="caleHeader">
-                            <h5>五月</h5>
+                    <div class="caleHeader">
+                        <h3 id="calendarTitle">Month</h3>
+                        <h4 id="calendarYear">Year</h4>
+                        <button id="prev"></button>
+                        <button id="next"></button>
+                    </div>
+                    <div class="body">
+                        <div class="weekday caleList">
+                            <ul class="date">
+                            <li>一</li>
+                            <li>二</li>
+                            <li>三</li>
+                            <li>四</li>
+                            <li>五</li>
+                            <li>六</li>
+                            <li>日</li>
+                            </ul>
                         </div>
-                        <table>
-                            <tr class="weekday">
-                                <th>日</th>
-                                <th>一</th>
-                                <th>二</th>
-                                <th>三</th>
-                                <th>四</th>
-                                <th>五</th>
-                                <th>六</th>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td class="fullApply">1</td>
-                                <td class="fullApply">2</td>
-                                <td class="fullApply">3</td>
-                                <td class="fullApply">4</td>
-                            </tr>
-                            <tr>
-                                <td class="fullApply">5</td>
-                                <td class="fullApply">6</td>
-                                <td>7</td>
-                                <td>8</td>
-                                <td class="choice">9</td>
-                                <td>10</td>
-                                <td>11</td>
-                            </tr>
-                            <tr>
-                                <td>12</td>
-                                <td>13</td>
-                                <td class="fullApply">14</td>
-                                <td>15</td>
-                                <td class="fullApply">16</td>
-                                <td class="fullApply">17</td>
-                                <td class="fullApply">18</td>
-                            </tr>
-                            <tr>
-                                <td>19</td>
-                                <td class="fullApply">20</td>
-                                <td>21</td>
-                                <td class="fullApply">22</td>
-                                <td class="fullApply">23</td>
-                                <td>24</td>
-                                <td>25</td>
-                            </tr>
-                            <tr>
-                                <td>26</td>
-                                <td>27</td>
-                                <td class="fullApply">28</td>
-                                <td>29</td>
-                                <td class="fullApply">30</td>
-                                <td>31</td>
-                                <td></td>
-                            </tr>
-                        </table>
+                        <div class="available caleList">
+                            <ul id="days">
+                            </ul>
+                        </div>
                     </div>
                 </div>    
+                
                 <div class="infoNLoc"> 
                     <div class="dateChoose">
                         <p>選擇日期：2019-05-09(四)</p>
@@ -558,7 +521,7 @@
                     <div class="loc">
                         <div class="locInput">
                             <input type="text" placeholder="請輸入活動地址">
-                            <input class="commonBtn" type="submit" value="確認">
+                            <input class="commonBtnSmall" type="submit" value="確認">
                         </div>
                         <div class="map">
                             <iframe src='https://maps.google.com.tw/maps?f=q&hl=zh-TW&geocode=&q=中央大學資策會&z=16&output=embed&t='></iframe>
