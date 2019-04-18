@@ -8,7 +8,7 @@
   height: 90px;
   background-color:#444;
   text-align: center;
-  //outline: 5px red solid;
+  ////outline: 5px red solid;
   border:5px rgb(235, 235, 235) solid;
   color: #ffffa3;
   vertical-align: middle;
@@ -22,13 +22,24 @@
 #customerServiceGirl{
   position:fixed;
   vertical-align: middle;
+<<<<<<< HEAD
+  ////outline: 5px red solid：
+=======
   //outline: 5px red solid：
+>>>>>>> 8e0bb60beb40f7304e0952b73a20ab9954ec6ba6
   width:100px;
   right: -10px;
   bottom: -40px;
   z-index:3;
   img{
     width:100%; 
+<<<<<<< HEAD
+  }
+  animation:serviceGirl 12s  ease infinite;
+  
+}
+
+=======
   }
   animation:serviceGirl 12s  ease infinite;
   
@@ -82,12 +93,17 @@
   }
   
 }
+>>>>>>> 8e0bb60beb40f7304e0952b73a20ab9954ec6ba6
 //使用者客服問答區
 #gameAndService{
   position: fixed;
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
+  //  //outline: #007bff 5px solid;
+=======
   //  outline: #007bff 5px solid;
+>>>>>>> 8e0bb60beb40f7304e0952b73a20ab9954ec6ba6
  
 }
 #customerTextArea{
@@ -239,58 +255,49 @@
     background-position: center;
     background-size: cover;
     z-index: 0;
+<<<<<<< HEAD
+    height: 100vh;
+=======
     //height: 100vh;
+>>>>>>> 8e0bb60beb40f7304e0952b73a20ab9954ec6ba6
     min-height: 600px;
-    //outline: 5px red solid;
+    ////outline: 5px red solid;
   }
-  #introWords{
-    margin:-30px auto auto auto;
-    //width: 70vw;
-    float:left;
-    font-family: "wangHangMing";
-    font-size: 24px;
-    color: #ffffbd;
-    //outline: 5px purple solid;
-    font-weight: bolder;
-    h2{
-        font-weight: 400;
-    }
-    h3{
-        margin-top: 10px;
-        font-size: 20px;
-    }
-    .commonBtn{
-        margin:20px auto;
-    }
-  }
+  
   //首頁第一屏 背景圖們
   #bgiArea{
-    position: absolute;
+    position: relative;
     overflow: hidden;
     margin: auto;
-    left: 0;
-    right: 0;
-    text-align: center;
-    //outline: 5px red solid;
+    width: 80vw;
+    margin-top: -150px;
+    height: 100vh;
+    min-height: 600px;
     z-index: -2;
+    //outline: 7px green solid;
   }
   //首頁第一屏 背景圖們 條狀
   #bgiAreaBar{
     position: absolute;
     margin: auto;
+    top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
-    width: 70vw;
-    min-width: 375px;
-    max-width: 650px;
-    //outline: 5px red solid;
+    width: 100%;
+    max-width: 900px;
+    ////outline: 5px red solid;
   }
  //首頁第一屏 背景圖們 旋轉發光圓圈
   #bgiAreaCircle{
-    width: 70vw;
-    min-width: 375px;
-    max-width: 650px;
+    position:absolute;
     margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 900px;
     animation: shinging 14s linear infinite ;
   }
   
@@ -301,16 +308,55 @@
     75%{ opacity:0.1; transform: rotate(270deg); }
     100%{opacity:1; transform: rotate(360deg); }
   }
-
+#introCarStageOne{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-top: -120px;
+  height: 100vh;
+  min-height: 600px;
+  width: 80%;
+  //outline: 5px red solid;
+}
 
   //////////
-  .perspective{
-    margin: auto;
-    //outline: 5px blue solid;
-    height: 400px;
-    //border:1px solid #000;
-    position: relative;
-    perspective: 900px;
+.perspective{
+  position:absolute;
+  margin:auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  //outline: 5px blue solid;
+  height:100vh;
+  width: 100%;
+  position: relative;
+  perspective: 900px;
+}
+#introWords{
+  //outline: 5px pink solid;
+  position: absolute;
+  width: 80%;
+  margin:auto;
+  margin-top:320px;
+  float:left;
+  font-family: "wangHangMing";
+  font-size: 24px;
+  color: #ffffbd;
+  font-weight: bolder;
+  h2{
+      font-weight: 400;
+  }
+  h3{
+      margin-top: 10px;
+      font-size: 20px;
+  }
+  .commonBtn{
+      margin:20px auto;
+  }
 }
 @keyframes turn{
     0%{transform:translateY(100px) rotateX(0deg) rotateY(180deg) rotateZ(0deg)}
@@ -324,19 +370,39 @@
     0%{transform: translateY(-80px) translateX(100px) translateZ(75px) rotateX(0deg) rotateY(-180deg) rotateZ(0deg)}
     100%{transform:translateY(-80px) translateX(100px) translateZ(75px) rotateX(0deg) rotateY(180deg) rotateZ(0deg)}
 }
+@media screen and (min-width:992px) {
+  #bgiArea{
+    margin-top: auto;
+  }
+  #introCarStageOne{
+    margin-top: auto;
+    width: 50%;
+    margin-left: 180px;
+  }
+  .perspective{
+    perspective: 500px;
+    transform: scale(1.5);
+    left: -100px;
+  }
+}
+@media screen and (min-width:1200px) {
+  #introCarStageOne{
+    margin-left: 260px;
+  }
+}
 // 整個舞台
 .groupA{
     position: absolute;
     top: 0;
     right: 0;
-    left: -10px;
+    left: 0;
     bottom: 0;
     margin: auto;
     width: 300px;
     height: 40px;
-    // outline: 2px solid #f00;
+    // //outline: 2px solid #f00;
     transform-style: preserve-3d;
-    transform: translateY(100px) rotateX(-30deg) rotateY(20deg) rotateZ(0deg);
+    transform: translateY(100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
     animation: turn 10s alternate infinite;
 
     div{
@@ -346,7 +412,7 @@
         font-size: 40px;
         line-height: 40px;
         text-align: center;
-        // outline: 1px solid #00f;
+        // //outline: 1px solid #00f;
         position: absolute;
         top: 0;
         right: 0;
@@ -719,19 +785,159 @@
     background-position: center;
     background-size: cover;
     z-index: 0;
+<<<<<<< HEAD
+    //height:100vh;
+=======
     height:100vh;
+>>>>>>> 8e0bb60beb40f7304e0952b73a20ab9954ec6ba6
     min-height: 600px;
-    //outline: 5px red solid;
+    ////outline: 5px red solid;
   }
   #equipCarStage{
     outline: red 5px solid;
-    
-    .commonBtn{
-      margin: -30px auto 30px auto;
-      
-    }
+<<<<<<< HEAD
+    margin:auto;
+    margin-top:150px;
+    position: relative;
+    width: 90vw;
+    margin-top: -50px; 
   }
   
+  .EquipIntroWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin:10px auto auto auto ;
+    width:100%;
+    font-family:sans-serif;
+    color:rgb(99, 95, 78);
+    font-size:14px;
+    line-height:24px;
+    max-width:1200px;
+    min-width:230px;
+    //overflow:hidden;
+    text-align: center;
+=======
+    
+>>>>>>> 8e0bb60beb40f7304e0952b73a20ab9954ec6ba6
+    .commonBtn{
+      margin: 200px auto 30px auto;
+      
+    }
+<<<<<<< HEAD
+
+  }
+
+
+  
+  .introTabs {
+    margin:0px 30px;
+    .tabLi {
+      list-style:none;
+      float:left;
+      width:16.66666666666667%;
+    }
+    a {
+      display:block;
+      text-align:center;
+      text-decoration:none;
+      position:relative;
+      text-transform:uppercase;
+      font-size: 18px;
+      color:#fff;
+      height:80px;
+      line-height:100px;
+      background:linear-gradient(165deg,transparent 29%, #98927C 20%);
+      
+      &:hover, &.active {
+         background: linear-gradient(165deg,transparent 29%, #F2EEE2 20%);
+         color:#98927C;
+         font-weight: bold;
+      }
+      
+      &:before{
+        content:'';
+        position:absolute;
+        z-index:11;
+        left:100%;
+        top:-60%;
+        height:58px;
+        line-height:90px;
+        width:0;
+        border-bottom: 70px solid rgba(0,0,0,.1);
+        border-right: 7px solid transparent;
+      }
+      &.active:before{
+        content:'';
+        position:absolute;
+        z-index:11;
+        left:100%;
+        top:-60%;
+        height:58px;
+        line-height:90px;
+        width:0;
+        border-bottom: 70px solid rgba(0,0,0,.2);
+        border-right: 20px solid transparent;
+      }
+      // &:last-child:before, &.active:last-child:before{
+      //   border: none;
+      // }
+    }
+  }
+  .tabgroup {
+    box-shadow:2px 2px 2px 2px rgba(0,0,0,.1);
+    margin:0px 30px;
+    h2{
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 28px;
+    }
+    div {
+      padding:30px;
+      height: 200px;
+      width: 100%;
+      max-width:500px;
+      min-width:210px;
+      background:#F2EEE2;
+      box-shadow:0 3px 10px rgba(0,0,0,.3);
+      border-color:rgb(128, 119, 89);
+      border-width:10px  0px 10px 0px;
+      border-style:groove;
+    }
+=======
+>>>>>>> 8e0bb60beb40f7304e0952b73a20ab9954ec6ba6
+  }
+  .clearfix:after {
+    content:"";
+    display:table;
+    clear:both;
+  }
+  //包住所有被件及背景舞台的div
+  
+<<<<<<< HEAD
+  #introCarStage{
+    width: 100%;
+    position:absolute;
+    ////outline: red 5px solid;
+    top: 0;
+    left: 0;
+
+  }
+  #introInnerBlock{
+    width: 102%;
+    position:absolute;
+    ////outline: blue 5px solid;
+    top: 0;
+    left: 0;
+    margin-left:-4px; 
+    animation: introInnerBlockShine 2.4s ease infinite;
+  }
+  @keyframes introInnerBlockShine{
+    0%{ opacity:1;  }
+    25%{ opacity:0.4; }
+    50%{ opacity:1;  }
+    75%{ opacity:0.6; }
+    100%{opacity:1;}
+=======
   .EquipIntroWrapper {
     display: flex;
     flex-wrap: wrap;
@@ -747,6 +953,7 @@
     height: 100vh;
     text-align: center;
 
+>>>>>>> 8e0bb60beb40f7304e0952b73a20ab9954ec6ba6
   }
   
   .introTabs {
@@ -842,6 +1049,12 @@
     top: 0;
     left: 0;
 
+<<<<<<< HEAD
+  #introPoleBlock{
+    width: 3%;
+    position:absolute;
+    ////outline: blue 5px solid;
+=======
   }
   #introInnerBlock{
     width: 102%;
@@ -864,6 +1077,7 @@
     width: 3%;
     position:absolute;
     //outline: blue 5px solid;
+>>>>>>> 8e0bb60beb40f7304e0952b73a20ab9954ec6ba6
     margin: auto;
     top: 15vw;
     right: 0;
@@ -889,6 +1103,7 @@
     left: 0;   
     filter: drop-shadow(0px 0px 4px rgba(36, 36, 36, 0.9));
     animation: introDanceBlock 10s ease infinite;
+<<<<<<< HEAD
   }
   @keyframes introDanceBlock{
     0%{ transform:translateX(0px) scale(1);  }
@@ -899,6 +1114,18 @@
     60%{ transform:translate(0px,5vw) scale(1.15); }
     100%{transform:translateX(0px) scale(1);}
   }
+=======
+  }
+  @keyframes introDanceBlock{
+    0%{ transform:translateX(0px) scale(1);  }
+    10%{ transform:translateX(5px) scale(1.05); }
+    25%{ transform:translateX(-5px) scale(1.02);  }
+    20%{ transform:translateX(0px) scale(1); }
+    30%{ transform:translateX(10px) scale(1.05); }
+    60%{ transform:translate(0px,5vw) scale(1.15); }
+    100%{transform:translateX(0px) scale(1);}
+  }
+>>>>>>> 8e0bb60beb40f7304e0952b73a20ab9954ec6ba6
   .introSpecialBlock{
     position:absolute;
     margin: auto;    
@@ -1002,23 +1229,42 @@
   padding-top:$paddingTop; 
   position: relative;
   background-image: url(../images/darkBrick.jpg);
+<<<<<<< HEAD
+  background-repeat: repeat;
+=======
   background-repeat: no-repeat;
+>>>>>>> 8e0bb60beb40f7304e0952b73a20ab9954ec6ba6
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
   z-index: 0;
+<<<<<<< HEAD
+=======
 
+>>>>>>> 8e0bb60beb40f7304e0952b73a20ab9954ec6ba6
   min-height: 600px;
-  //outline: 5px red solid;
+  ////outline: 5px red solid;
   .titleBgi{
     background: url(../images/titleNeonLightGreen.gif) center no-repeat;
     background-size: cover;
 
   }
   a{
-    //outline: #007bff 5px solid;
-    margin:-30px auto 30px auto;
+    ////outline: #007bff 5px solid;
+    margin:30px auto ;
   }
+}
+#tryPerspective{
+  height: 40vh;
+}
+#groupB{
+  transform: scale(1.5);
+}
+.stage{
+  margin: 0px auto;
+}
+.custBg{
+  padding-top:0px; 
 }
 
 
@@ -1037,7 +1283,7 @@
   z-index: 0;
   //height: 100vh;
   min-height: 600px;
-  //outline: 5px red solid;
+  ////outline: 5px red solid;
   .titleBgi{
     background: url(../images/titleNeonLightGreen.gif) center no-repeat;
     background-size: cover;
@@ -1059,7 +1305,7 @@
     }
   }
   #introFlyers{
-    //outline: #007bff 5px solid;
+    ////outline: #007bff 5px solid;
     margin: auto;
     img{
       margin: auto;
@@ -1071,7 +1317,7 @@
 
 .flyerFeature{
   position: relative;
-  //outline: 5px rgb(0, 216, 134) solid;
+  ////outline: 5px rgb(0, 216, 134) solid;
   margin: 5px auto;
   width: 100%;
   vertical-align: middle;
@@ -1080,63 +1326,123 @@
     vertical-align: middle;
     width:80%;
     display: inline-block;
-    //outline: 5px rgb(0, 50, 216) solid;
+    ////outline: 5px rgb(0, 50, 216) solid;
    
   }
   div{
     display: inline-block;
     vertical-align: middle;
-    //outline: 5px rgb(216, 0, 205) solid;
+    ////outline: 5px rgb(216, 0, 205) solid;
   }
 
 }
 //flyer頁面引入
-.secScreen{
-  width: 100%;
-  height: auto;
-  //outline: #00f 5px solid;
-  padding-bottom: 50px;
-  box-sizing: border-box;
-  .wrap{
-      max-width: 1200px;
-      margin:auto;
-      .title{
-          padding-top:50px;
-          text-align: center;
-          padding-bottom: 50px;
-          .titleBgi{
-              font-size: $subTitleWord;
-              margin-bottom: 20px;
-          }
+.bigCarcouselBox {
+  transition: 2s;
+  opacity: 0;
+  width: 300px;
+  height: 423.98px;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -30px;
+  .icard {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 423.98px;
+  width: 300px;
+  box-shadow: 0 0 20px #000;
+  cursor: pointer;
+
+  .iElongationBox {
+    height: 423.98px;
+    width: 300px;
+    position: relative;
+
+    .iblockBox {
+      height: 423.98px;
+      width: 300px;
+      background: url(../images/flyer/flyerBoard.jpg) center center no-repeat;
+      background-size: cover;
+      position: relative;
+
+      img:nth-of-type(1) {
+        width: 280px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
       }
-      .owl-carousel{z-index: 0;}
-      .box{
-          text-align: center;
-          background: rgba(255,255,255,.5);
-          border-radius: 5px;
-          padding: 10px;
-          
-          h4{text-align: center;font-size: 21px;color:#fff;text-shadow: 0 0 2px #000;}
-          div{text-align: left;}
-          button{
-              margin-top: 10px;
-              display: none;
-          }
+
+      img:nth-of-type(2) {
+        width: 30px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
       }
-      .center{
-          
-          background-color: red;
-          transition: 2s;
-          border-radius: 5px;
-          button{display: inline-block;}
+
+      img:nth-of-type(3) {
+        width: 30px;
+        position: absolute;
+        right: 0px;
+        top: 0px;
       }
+    }
+  }
+
+  .icardContent {
+    transition: 1s;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 20px #666 inset;
   }
 }
-@media screen and (min-width:992px) {
-  .commonBtn{width: 100px;height: 50px;}
+
+
+.icard.one {
+  transition: 1.5s;
+  z-index: 4;
+  transform: scale(1.5);
+
+  .icardContent {
+    transform: translateX(100%);
+  }
 }
-@media screen and (min-width:1200px) {
-  .commonBtn{width: 150px;height: 75px;}
+
+.icard.two {
+  z-index: 3;
+  transition: 1.5s;
+  transform: rotateZ(0deg);
+}
+
+.icard.three {
+  z-index: 2;
+  transition: 1.5s;
+  transform: rotateZ(0deg);
+}
+
+&:hover .icard.two {
+  transition: 1s;
+  transform: rotateZ(-10deg);
+}
+
+&:hover .icard.three {
+  transition: 1s;
+  transform: rotateZ(10deg);
+}
+
 }
 
 
@@ -1152,7 +1458,7 @@
   z-index: 0;
   height: 100vh;
   min-height: 600px;
-  //outline: 5px red solid;
+  ////outline: 5px red solid;
   .titleBgi{
     background: url(../images/titleNeonLightPink.gif) center no-repeat;
     background-size: cover;
@@ -1164,10 +1470,9 @@
   
 }
 //引入選美
-.beautyPageantWrap{
-}
-.beautyRankingContainer{
-  margin-top: -200px;
+
+.ibeautyRankingContainer{
+  margin-top: -400px;
   position: relative;
   width: 100%;
   max-width: 1200px;
@@ -1369,7 +1674,7 @@
 #processIntro{
   @include fontStyle;
   z-index: 100;
-  //outline: 5px rgb(229, 247, 187) solid;
+  ////outline: 5px rgb(229, 247, 187) solid;
   width: 60vw;
   height: 240px;
   max-width: 500px;
@@ -1386,7 +1691,7 @@
   height: 100px;
   bottom: 0;
   overflow: hidden;
-  //outline: 5px red solid;
+  ////outline: 5px red solid;
 }
 #earth{
   background-image: url(../images/processEarth.jpg);
@@ -1412,7 +1717,7 @@
   left: 0;
   right: 0;
   bottom: 60px;
-  //outline: #f1c40f 5px solid;
+  ////outline: #f1c40f 5px solid;
 }
 #carBody{
   background-image: url(../images/processCarUp.png);
@@ -1475,7 +1780,7 @@ footer{
     padding-top: 0px;
   }
   div{
-    //outline: #ff00aa 5px solid;
+    ////outline: #ff00aa 5px solid;
     text-align: center;
   }
   img{
@@ -1510,26 +1815,23 @@ footer{
 
   #introFlyerFeature{
     margin-top: 30px;
+<<<<<<< HEAD
   }
   footer{
     p{
       display: block;
       text-align: center;
-      //outline: #007bff 5px solid;
+      ////outline: #007bff 5px solid;
       margin: auto;
     }
   }
   
 }
 @media screen and (min-width:992px) {
-  .perspective{
-    perspective: 300px;
-    transform: scale(1.3);
-    margin-top:80px;
-  }
+  
   #introWords{
+    width: 40%;
     margin-left:-100px;
-    margin-top: 200px;
     z-index:100;
     h2{
       font-size: 32px;
@@ -1537,6 +1839,9 @@ footer{
     h3{
       font-size: 24px;
     }
+  }
+  #carEquipmentsIntroWrap{
+    height:100vh;
   }
   #equipCarStage{
     width: 55%;
@@ -1562,11 +1867,216 @@ footer{
 
     }
   }
+  #tryCustormiseWrap{
+    height: 100vh;
+  }
+  
+}
+//舞台配件介紹 col-lg 頭
+@media screen and (min-width:992px) {
+  .EquipIntroWrapper {
+    margin:120px auto auto auto;
+  }
+  //包住所有被件及背景舞台的div
+    #equipCarStage{
+      width: 600px;
+      margin:auto;
+      margin-top: 30px
+  }
+  #introCarStage{
+    width: 100%;
+    position:absolute;
+    ////outline: red 5px solid;
+    top: 0;
+    left: 0;
+
+  }
+  #introInnerBlock{
+    width: 102%;
+    position:absolute;
+    ////outline: blue 5px solid;
+    top: 0;
+    left: 0;
+    margin-left:-8px; 
+    animation: introInnerBlockShine 2.4s ease infinite;
+  }
+  #introPoleBlock{
+    margin: auto;
+    top: 120px;
+
+  }
+
+  #introDanceBlock{
+    width: 15%;
+    position:absolute;
+    margin: auto;
+    top: 180px;
+    right: 0;
+    left: 0;   
+    filter: drop-shadow(0px 0px 4px rgba(36, 36, 36, 0.9));
+    animation: introDanceBlock 10s ease infinite;
+  }
+  .introSpecialBlock{
+    position:absolute;
+    margin: auto;    
+  }
+  .introSpecialBlock.one{
+      width: 60%;
+      left: 0;
+      top: -70px
+  }
+  .introSpecialBlock.two{
+    width: 75%;
+    top: -160px
+  }
+  .introSpecialBlock.three{
+    width: 25%;
+    right: 80px;
+    top: 120px;
+  }
+  .introSpecialBlock.four{
+    width: 25%;
+    left: 80px;
+    transform: scaleX(-1) rotate(5deg);
+    top: 120px;
+  }
+  #introScreenBlock{
+    width: 360px;
+    height: 50px;
+    position:absolute;
+    margin: auto;  
+    top: 167px;
+    right: 0;
+    left: 0;  
+    overflow: hidden;
+    span{
+        width: 600px;
+        height: 50px;
+        position:absolute;
+        font-size: 30px;
+        line-height: 45px;
+        color: #F2EEE2;
+        animation: introScreenWords 18s linear infinite;
+    }
+  }
+  @keyframes introScreenWords{
+    from{transform: translateX(100px);}
+    to{transform: translateX(-700px);}
+=======
+>>>>>>> 8e0bb60beb40f7304e0952b73a20ab9954ec6ba6
+  }
+  .introSoundsBlock{
+    width: 14%;
+    position:absolute;
+    margin: auto;  
+    top: 200px;
+  }
+  .introSoundsBlock.one{
+    right: 43px;
+    animation: introSoundsScale 1.5s ease reverse infinite;
+    filter: drop-shadow(0px 0px 7px rgb(255, 244, 203));
+  }
+  .introSoundsBlock.two{
+    left: 43px;
+    animation: introSoundsScale 1.5s ease reverse infinite;
+    filter: drop-shadow(0px 0px 7px rgb(255, 244, 203));
+  }
+
+  #lyrics{
+    width: 360px;
+    height: 50px;
+    position:absolute;
+    margin: auto;  
+    top: 167px;
+    right: 0;
+    left: 0;  
+    overflow: hidden;
+    span{
+        width: 900px;
+        height: 50px;
+        position:absolute;
+        font-size: 30px;
+        line-height: 45px;
+        color: #F2EEE2;
+        animation: lyrics 19s linear infinite;
+    }
+  }
+
+}
+//舞台配件介紹 col-lg 尾
+@media screen and (min-width:992px) {
+  .perspective{
+    perspective: 300px;
+    transform: scale(1.3);
+    margin-top:80px;
+  }
+  #introWords{
+    z-index:1;
+    h2{
+      font-size: 32px;
+    }
+    h3{
+      font-size: 24px;
+    }
+  }
+  #equipCarStage{
+    width: 55%;
+    .commonBtn{
+      margin-left: 110px;
+    }
+  }
+<<<<<<< HEAD
+  
+  #customerServiceGirl{
+    position:fixed;
+    vertical-align: middle;
+    ////outline: 5px red solid：
+    width:140px;
+    right: 80px;
+    bottom: -40px;
+    z-index:3;
+    img{
+      width:100%; 
+    }
+    animation:serviceGirl 12s 1s ease infinite;
+    
+  }
+  #gameHub{
+    padding:10px;
+    opacity:0.9;
+    font-size:20px;
+    width: 120px;
+    height: 140px;
+    ////outline: 5px red solid;
+    img{
+      margin: 20px auto;
+    }
+=======
+  .introTabs {
+    margin:0px 0px 0px 60px;
+  }
+
+  .tabgroup {
+    box-shadow:2px 2px 2px 2px rgba(0,0,0,.1);
+    h2{
+        margin-bottom: 20px;
+        font-size: 30px;
+    }
+    div {
+      height: 320px;
+      font-size:20px;
+      line-height:30px;
+      margin:0px 0px 0px 30px;
+
+    }
+  }
 
   
 }
 @media screen and (min-width:1200px){
   #equipCarStage{
     margin-top:0px;
+>>>>>>> 8e0bb60beb40f7304e0952b73a20ab9954ec6ba6
   }
+  
 }
