@@ -120,6 +120,7 @@
     top: calc(-100vh - 80px);
     transition: 0.3s;
     background-color: #333;
+    
 }
 .mainNav{
     padding-top: 25px;
@@ -173,6 +174,7 @@ header{
     width: 100%;
     top: 0px;
     z-index: 1;
+    z-index: 9999;
     animation: headerNeon 1s infinite; 
 }
 @media screen and (min-width:1200px){
@@ -227,9 +229,8 @@ header{
             border-image-outset: 1px;
             }
         }
-        li:hover{
-            color:$logoColor;
-            a{color:$logoColor;
+        li{
+            a:hover{color:$logoColor;
             animation: lightShow .3s infinite alternate; 
             border-bottom: 25px solid transparent;
             border-image:url("../images/navTDL.png")30 41 round;
@@ -246,15 +247,13 @@ header{
                 position: initial;
                 height: 95px;
                 transition: .6s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-                }
-            &:hover{
-                img{
+                  &:hover{
                     filter: drop-shadow(3px 3px 5px #66f);
                     animation: headerNeon 1s infinite; 
                     transform: scale(1.2) translateY(10px);
                     transition: .6s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+                    }
                 }
-            }
         }
        
         i{color:$logoColor;}

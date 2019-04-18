@@ -13,22 +13,34 @@
   height: 100vh;
   background-size: auto 100%;
   margin: auto;
-  background-image: url(../images/load.png);
+  background-image: url(../images/loading/introstage.png);
   background-repeat: no-repeat;
   background-position: center center;
   position: relative;
 }
 
+.loading .loadingCar .light {
+  display: none;
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  top: 0px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border: 5px solid #f00;
+}
+
 .loading .loadingCar .light .sec {
   position: absolute;
-  top: 40px;
-  left: 10%;
+  top: 37px;
+  left: 0%;
 }
 
 .loading .loadingCar .light .three {
   position: absolute;
-  top: 40px;
-  left: 30%;
+  top: 37px;
+  left: 35%;
 }
 
 .loading .link {
@@ -66,7 +78,31 @@
 }
 
 @media all and (min-width: 768px) {
-  .loading .loadingCar .lampFirst {
+  .loading .loadingCar {
+    background-image: url(../images/loading/stage1.png);
+  }
+  .loading .loadingCar .light {
+    width: 300px;
+    display: block;
+  }
+  .loading .loadingCar .light .sec {
+    width: 25%;
+    top: 59px;
+    left: 11%;
+  }
+  .loading .loadingCar .light .three {
+    top: 59px;
+    left: 38%;
+    width: 25%;
+  }
+  .loading .loadingCar .light .first {
+    position: absolute;
+    top: 59px;
+    left: 65%;
+    width: 25%;
+  }
+  .loading .lampFirst {
+    left: 33%;
     position: absolute;
     width: 15%;
     height: 400vh;
@@ -80,8 +116,8 @@
     transition: transform 2s, -webkit-transform 2s;
     pointer-events: none;
   }
-  .loading .loadingCar .lampSec {
-    left: 10%;
+  .loading .lampSec {
+    left: 43%;
     position: absolute;
     width: 15%;
     height: 400vh;
@@ -95,8 +131,8 @@
     transition: transform 2s, -webkit-transform 2s;
     pointer-events: none;
   }
-  .loading .loadingCar .lampThree {
-    left: 20%;
+  .loading .lampThree {
+    left: 54%;
     position: absolute;
     width: 15%;
     height: 400vh;
@@ -113,6 +149,21 @@
 }
 
 @media all and (min-width: 992px) {
+  .loading .loadingCar .light .sec {
+    top: 84px;
+    left: -1%;
+    width: 33%;
+  }
+  .loading .loadingCar .light .three {
+    top: 84px;
+    left: 34%;
+    width: 33%;
+  }
+  .loading .loadingCar .light .first {
+    top: 84px;
+    left: 68%;
+    width: 33%;
+  }
   .loading .link {
     float: left;
   }
@@ -129,6 +180,29 @@
 }
 
 @media all and (min-width: 1200px) {
+  .loading .loadingCar .light .sec {
+    top: 63px;
+    left: 8%;
+    width: 27%;
+  }
+  .loading .loadingCar .light .three {
+    left: 38%;
+    top: 63px;
+    width: 27%;
+  }
+  .loading .loadingCar .light .first {
+    top: 63px;
+    width: 27%;
+  }
+  .loading .loadingCar .lampFirst {
+    left: 38%;
+  }
+  .loading .loadingCar .lampSec {
+    left: 43%;
+  }
+  .loading .loadingCar .lampThree {
+    left: 48%;
+  }
   .loading .link {
     float: left;
   }

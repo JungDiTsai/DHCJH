@@ -24,6 +24,11 @@
     <!-- jquer UI -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- vue -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js'></script>
+    <!-- QR code.js -->
+    <script src="js/jquery-qrcode-0.14.0.min.js"></script>
+    <!-- color picker -->
 </head>
 <style>
     html {
@@ -38,7 +43,6 @@
     body {
         -ms-overflow-style: none;
         height: 100%;
-        width: calc(100vw + 18px);
         overflow: auto;
     }
 </style>
@@ -142,108 +146,117 @@
 
 
     <!-- flyer內容 -->
-    <article class="firstScreen">
-        <div class="wrap">
-            <h2 class="titleBgi">客製活動宣傳單</h2>
-            <div class="title">
-                <p> 客製宣傳單功能為免費功能，有購買花車的客戶可以更可匯入花車內容，輕鬆幫你邀請朋友參加活動，還有統計參加人數，快來試試看吧！</p>
-            </div>
-            <div class="stepsBar">
-                <div class="stepBox">
-                    <div class="circle step">壹</div>
-                    <p>選擇背景圖片</p>
+    <div id="app">
+        <article class="firstScreen">
+            <div class="wrap">
+                <h2 class="titleBgi">客製活動宣傳單</h2>
+                <div class="title">
+                    <p> 客製宣傳單功能為免費功能，有購買花車的客戶可以更可匯入花車內容，輕鬆幫你邀請朋友參加活動，還有統計參加人數，快來試試看吧！</p>
                 </div>
-                <div class="stepBox">
-                    <div class="circle">貳</div>
-                    <p>選擇日期</p>
-                </div>
-                <div class="stepBox">
-                    <div class="circle">參</div>
-                    <p>選擇活動地點</p>
-                </div>
-                <div class="stepBox">
-                    <div class="circle">肆</div>
-                    <p>輸入文字</p>
-                </div>
-            </div>
-            <div class="clearfloat">
-            </div>
-            <div class="doIt">
-                <div class="backBlock">
-                    <div id="A4page"></div>
-                    <div id="tool">
-                        <i class="fas fa-search-plus"></i>
-                        <i class="fas fa-search-minus"></i>
-                        <i class="fas fa-redo-alt"></i>
-                        <i class="fas fa-undo-alt"></i>
-                        <i class="fas fa-arrow-left"></i>
-                        <i class="fas fa-arrow-right"></i>
-                        <i class="fas fa-trash-alt"></i>
+                <div class="stepsBar">
+                    <div class="stepBox">
+                        <div class="circle step">壹</div>
+                        <p>選擇背景圖片</p>
+                    </div>
+                    <div class="stepBox">
+                        <div class="circle">貳</div>
+                        <p>選擇日期</p>
+                    </div>
+                    <div class="stepBox">
+                        <div class="circle">參</div>
+                        <p>選擇活動地點</p>
+                    </div>
+                    <div class="stepBox">
+                        <div class="circle">肆</div>
+                        <p>輸入文字</p>
                     </div>
                 </div>
-                <div class="whiteBlock">
-                    <h4>選擇背景圖片</h4>
-                    <div id="toolBox">
-                        <div id="alltool">
-                            <div id="toolinnerBox">
-
-                                <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_02.jpg" alt="">
-                                <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_03.jpg" alt="">
-                                <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_04.jpg" alt="">
-                                <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_05.jpg" alt="">
-                                <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_06.jpg" alt="">
-                                <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_07.jpg" alt="">
-                                <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_08.jpg" alt="">
-                                <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_09.jpg" alt="">
-                                <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_10.jpg" alt="">
-                                <label>
-                                    <img src="images/icon/updateIcon.png" id="updateIcon">
-                                    <input type="file" name="">
-                                    <span>上傳圖片</span>
-                                </label>
-                            </div>
-                            <div id="selectDay">
-                                <label>
-                                    <img src="images/icon/dateIcon.png">
-                                    <p>活動日期 : <span>點擊選擇日期</span></p>
-                                    <input type="text" id="datepicker">
-                                </label>
-                            </div>
-                            <div id="textPlace">
-                                <div class="col-8">
-                                    <input type="text" placeholder="輸入您的活動地點">
-                                    <p>您的活動地點 <span>高雄市前鎮區草衙里佛宗街54號</span> 的google地圖</p>
-                                </div>
-                                <div class="col-4"><img src="https://fakeimg.pl/70x70/666"></div>
-                            </div>
-                            <div id="textWord">
-                                <textarea name="" id="" cols="30" rows="3" placeholder="輸入想在宣傳單告知的內容 ( 限120字 )"></textarea>
-                            </div>
+                <div class="clearfloat">
+                </div>
+                <div class="doIt">
+                    <div class="backBlock">
+                        <div id="A4page">
+                            <img src="" alt="" >
+                            <h5></h5>
                         </div>
-                        <i class="fas fa-angle-double-left fa-2x"></i>
-                        <i class="fas fa-angle-double-right fa-2x"></i>
+                        <div id="tool">
+                            <i class="fas fa-search-plus" v-on:click="clickPlus"></i>
+                            <i class="fas fa-search-minus" v-on:click="clickMinus"></i>
+                            <i class="fas fa-redo-alt" v-on:click="clickRedo"></i>
+                            <i class="fas fa-undo-alt" v-on:click="clickUndo"></i>
+                            <i class="fas fa-palette" v-on:click="clickColorPicker"></i>
+                            <i class="fas fa-trash-alt" v-on:click="clickTrash"></i>
+                        </div>
                     </div>
-                    <div class="btnBar">
-                        <button class="commonBtn" id="back">上一步</button>
-                        <button class="commonBtn" id="next">下一步</button>
+                    <div class="whiteBlock">
+                        <h4>選擇背景圖片</h4>
+                        <div id="toolBox">
+                            <div id="alltool">
+                                <div id="toolinnerBox">
+                                    <label>
+                                        <img src="images/icon/updateIcon.png" id="updateIcon">
+                                        <input type="file" name="" id="updateInput">
+                                        <span>上傳圖片</span>
+                                    </label>
+                                    <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_02.jpg"
+                                        alt="">
+                                    <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_03.jpg"
+                                        alt="">
+                                    <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_04.jpg"
+                                        alt="">
+                                    <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_05.jpg"
+                                        alt="">
+                                    <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_06.jpg"
+                                        alt="">
+                                    <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_07.jpg"
+                                        alt="">
+                                    <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_08.jpg"
+                                        alt="">
+                                </div>
+                                <div id="selectDay">
+                                    <label>
+                                        <img src="images/icon/dateIcon.png">
+                                        <p>活動日期</p>
+                                        <input type="text" id="datepicker">
+                                    </label>
+                                </div>
+                                <div id="textPlace">
+                                    <div class="col-8">
+                                        <input type="text" placeholder="輸入您的活動地點" v-model="place" v-on:change="settingPlace">
+                                        <p>您的活動地點 <span>{{place}}</span> 的google地圖</p>
+                                    </div>
+                                    <div class="col-4" id="QRCODE"></div>
+                                </div>
+                                <div id="textWord">
+                                    <textarea name="" id="" cols="30" rows="3" maxlength="120" placeholder="輸入想在宣傳單傳達的內容 ( 限120字 )" v-on:change="settingContent"></textarea>
+                                </div>
+                            </div>
+                            <i class="fas fa-angle-double-left fa-2x"></i>
+                            <i class="fas fa-angle-double-right fa-2x"></i>
+                        </div>
+                        <div class="btnBar">
+                            <button class="commonBtn" id="back" v-on:click="clickOK">上一步</button>
+                            <button class="commonBtn" id="next" v-on:click="clickOK">下一步</button>
+                        </div>
                     </div>
-                </div>
-                <div class="clothCurtain">
-                    <div>
-                        <p>如有舞台客製訂單者，可指定訂單，即可匯入宣傳單內，無訂單者，也可以免費體驗客製宣傳單估能。<br><br>＊公開體驗宣傳單將於發布達24小時移除＊</p>
-                    </div>
-                    <div>
-                        <button class="commonBtn">匯入訂單</button>
-                        <button class="commonBtn start">免費體驗</button>
+                    <div class="clothCurtain">
+                        <div>
+                            <p>如有舞台客製訂單者，可指定訂單，即可匯入宣傳單內，無訂單者，也可以免費體驗客製宣傳單估能。<br><br>＊公開體驗宣傳單將於發布達24小時移除＊</p>
+                        </div>
+                        <div>
+                            <button class="commonBtn">匯入訂單</button>
+                            <button class="commonBtn start">免費體驗</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="mouse">
-            <p class="scroll">scroll</p>
-        </div>
-        </div>
-    </article>
+            <div class="mouse">
+                <p class="scroll"></p>
+            </div>
+        </article>
+    </div>
+    
+
     <article class="secScreen">
         <div class="wrap">
             <div class="title">
@@ -299,8 +312,8 @@
     </article>
     <article class="thrScreen">
         <div class="wrap">
-            <div class="title" id="parallax_box">
-                <h2 class="titleBgi" data-depth="0.3">宣傳單小試身手</h2>
+            <div class="title">
+                <h2 class="titleBgi">宣傳單小試身手</h2>
             </div>
             <ul>
                 <li><img src="images/flyer/1.jpg"></li>
@@ -323,6 +336,13 @@
         <div class="envelopeLightBox">
             <i class="fas fa-times fa-2x" id="hiddenEnvelopeLightBox"></i>
             <img src="images/icon/iconMore.png" alt="查看更多" id="envelopeIcon">
+            <div id="QrcodeIcon">
+                <img src="images/icon/QRcodeIcon.png" alt="查看更多">
+                <div>
+                    <p>QrCode</p>
+                    <p>檢舉</p>
+                </div>
+            </div>
             <div class="flyerArea">
                 <img src="images/flyer/1.png" alt="宣傳單">
                 <div class="envelopeHeader">
@@ -357,104 +377,9 @@
     </div>
 
 
-
-
+    <script src="js/font_loginLightBox.js"></script>
+    <script src="js/vue.js"></script>
     <script>
-        /* 登入燈箱 JS*/
-        // 點擊icon開啟登入燈箱----------------------------
-        document.querySelector('.fa-user-circle').addEventListener('click', function (e) {
-            // 顯示登入燈箱
-            let loginBox = document.querySelector('.loginBox');
-            let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
-            if (style == "block") {
-                loginBox.style.setProperty('display', "none");
-                e.target.style.setProperty('color', "#2cffff");
-            } else {
-                loginBox.style.setProperty('display', "block");
-                e.target.style.setProperty('color', "rgb(252, 211, 28)");
-            }
-        })
-        // 點擊關閉----------------------------
-        document.querySelector('.loginBox .fa-times').addEventListener('click', function () {
-            let loginBox = document.querySelector('.loginBox');
-            let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
-            if (style == "block") {
-                loginBox.style.setProperty('display', "none");
-            }
-        })
-        // 點擊註冊------------------------------
-        document.querySelector('.loginBox .showRegistered').addEventListener('click', function () {
-            // 隱藏登入燈箱
-            let loginBox = document.querySelector('.loginBox');
-            loginBox.style.setProperty('display', "none");
-            // 顯示註冊燈箱
-            let registeredBox = document.querySelector('.registeredBox');
-            let style = window.getComputedStyle(registeredBox, null).getPropertyValue('display');
-            if (style == "none") {
-                registeredBox.style.setProperty('display', "block");
-            }
-        })
-        // 點擊忘記密碼------------------------------
-        document.querySelector('.loginBox .showForgotPSW').addEventListener('click', function () {
-            // 隱藏登入燈箱
-            let loginBox = document.querySelector('.loginBox');
-            loginBox.style.setProperty('display', "none");
-            // 顯示忘記密碼燈箱
-            let forgotBox = document.querySelector('.forgotBox');
-            let style = window.getComputedStyle(forgotBox, null).getPropertyValue('display');
-            if (style == "none") {
-                forgotBox.style.setProperty('display', "block");
-            }
-        })
-
-        /* 註冊燈箱 JS*/
-        // 點擊關閉----------------------------
-        document.querySelector('.registeredBox .fa-times').addEventListener('click', function () {
-            let registeredBox = document.querySelector('.registeredBox');
-            let style = window.getComputedStyle(registeredBox, null).getPropertyValue('display');
-            if (style == "block") {
-                registeredBox.style.setProperty('display', "none");
-            }
-        })
-        // 點擊回到登入----------------------------
-        document.querySelector('.registeredBox .backLogin').addEventListener('click', function () {
-            // 隱藏註冊燈箱
-            let registeredBox = document.querySelector('.registeredBox');
-            registeredBox.style.setProperty('display', "none");
-            // 顯示登入燈箱
-            let loginBox = document.querySelector('.loginBox');
-            let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
-            if (style == "none") {
-                loginBox.style.setProperty('display', "block");
-            }
-        })
-
-        /* 忘記密碼燈箱 JS*/
-        // 點擊關閉----------------------------
-        document.querySelector('.forgotBox .fa-times').addEventListener('click', function () {
-            let forgotBox = document.querySelector('.forgotBox');
-            let style = window.getComputedStyle(forgotBox, null).getPropertyValue('display');
-            if (style == "block") {
-                forgotBox.style.setProperty('display', "none");
-            }
-        })
-        // 點擊回到登入----------------------------
-        document.querySelector('.forgotBox .backLogin').addEventListener('click', function () {
-            // 隱藏忘記密碼燈箱
-            let forgotBox = document.querySelector('.forgotBox');
-            forgotBox.style.setProperty('display', "none");
-            // 顯示登入燈箱
-            let loginBox = document.querySelector('.loginBox');
-            let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
-            if (style == "none") {
-                loginBox.style.setProperty('display', "block");
-            }
-        })
-
-        //螢幕寬度
-
-
-
         //點擊免費體驗
         document.querySelector('.start').addEventListener('click', function () {
             let clothCurtain = document.querySelector('.clothCurtain');
@@ -464,8 +389,16 @@
             }, 2000);
         })
 
-        // 宣傳單燈箱
+        // 點擊scroll滑動
+        document.querySelector('.mouse').addEventListener('click', function () {
+            let secScreen = document.querySelector('.secScreen').offsetTop;
+            window.scrollTo({
+                top: secScreen + 1,
+                behavior: "smooth"
+            });
+        })
 
+        // 宣傳單燈箱
         function envelopeLightBox() {
             let flyers = document.getElementsByClassName('flyer');
             for (let i = 0; i < flyers.length; i++) {
@@ -474,7 +407,22 @@
                     document.getElementById('hiddenEnvelopeLightBox').addEventListener('click', function () {
                         document.querySelector('.blackBox').style.setProperty('display', 'none');
                     })
+                    //點擊QRcodeICON
+                    document.getElementById('QrcodeIcon').addEventListener('click', function (e) {
+                        let style = window.getComputedStyle(this.getElementsByTagName('div')[0])
+                            .getPropertyValue('display');
+                        if (style != "none") {
+                            this.getElementsByTagName('div')[0].style.setProperty('display', 'none');
+                            this.getElementsByTagName('div')[0].style.setProperty('z-index', '-1');
+                        } else {
+                            this.getElementsByTagName('div')[0].style.setProperty('display',
+                                'inline-block');
+                            this.getElementsByTagName('div')[0].style.setProperty('z-index', 100);
 
+                        }
+                        e.stopPropagation();
+                    })
+                    //點擊更多頁面ICON
                     document.getElementById('envelopeIcon').addEventListener('click', function (e) {
                         let envelopeContent = document.querySelector('.envelopeContent')
                         let style = window.getComputedStyle(envelopeContent).getPropertyValue('left')
@@ -504,6 +452,7 @@
         }
         envelopeLightBox();
 
+        // 大輪播圖卡更換
         let cards = document.querySelectorAll('.card');
         for (let i = 0; i < cards.length; i++) {
             cards[i].addEventListener('click', function () {
@@ -525,19 +474,10 @@
 
             })
         }
-        document.querySelector('.mouse').addEventListener('click', function () {
-            window.scrollTo({
-                top: 900,
-                behavior: "smooth"
-            });
-        })
-        let screenWidth = document.body.clientWidth;
-
         //   大輪播捲動
         window.addEventListener('scroll', function (e) {
             let nowScrollHeight = window.pageYOffset;
             let secScreen = document.querySelector('.secScreen').offsetTop;
-            console.log(secScreen);
             let screenWidth = document.body.clientWidth;
 
             if (nowScrollHeight > secScreen) {
@@ -549,7 +489,7 @@
                 if (screenWidth >= 768) {
                     document.querySelector('.bigCarcouselBox').style.setProperty('bottom', '150px')
                 } else {
-                    document.querySelector('.bigCarcouselBox').style.setProperty('bottom', '50px')
+                    document.querySelector('.bigCarcouselBox').style.setProperty('bottom', '150px')
                 }
                 document.querySelector('.bigCarcouselBox').style.setProperty('position', 'fixed')
                 document.querySelectorAll('.card')[0].querySelector('.cardContent').style.setProperty(
@@ -592,41 +532,37 @@
     </script>
     <!-- owl輪播 JS -->
     <script src="js/carcousel.js"></script>
-    <!-- 畫面捲動 -->
-    <script>
-        function parallaxs() {
-            var scene = document.getElementById('parallax_box');
-        };
-        parallaxs();
-    </script>
     <!-- jquery UI datepicker -->
     <script>
         $(function () {
             $("#datepicker").datepicker();
         });
         $('#selectDay input').on('change', function () {
-            $('#selectDay p').html('活動日期' + ' : <span>' + this.value + '</span>')
+            $('#selectDay p').html('活動日期' + ' : <span>' + this.value + '</span>');
+            $('#A4page h5').text(this.value);
         })
     </script>
+
     <!-- 點擊下一步到下一個步驟 -->
     <script>
         document.getElementById('next').addEventListener('click', function (e) {
             let alltoll = document.getElementById('alltool');
             let key = window.getComputedStyle(alltoll, null).top;
             let screenWidth = document.body.clientWidth;
-            if (screenWidth <= 768) {
+            if (screenWidth <= 992) {
                 switch (key) {
                     case '0px':
-                        document.querySelector('.fa-angle-double-left').style.display = 'none';
-                        document.querySelector('.fa-angle-double-right').style.display = 'none';
                         alltoll.style.setProperty('top', '-88px');
+                        stepIndex = 1;
                         break;
                     case '-88px':
                         alltoll.style.setProperty('top', '-176px')
+                        stepIndex = 2;
                         break;
                     case '-176px':
                         alltoll.style.setProperty('top', '-264px');
                         e.target.innerText = "完成";
+                        stepIndex = 3;
                         break;
                     default:
                         break;
@@ -634,66 +570,139 @@
             } else {
                 switch (key) {
                     case '0px':
-                        document.querySelector('.fa-angle-double-left').style.display = 'none';
-                        document.querySelector('.fa-angle-double-right').style.display = 'none';
                         alltoll.style.setProperty('top', '-300px');
+                        stepIndex = 1;
                         break;
                     case '-300px':
                         alltoll.style.setProperty('top', '-600px')
+                        stepIndex = 2;
                         break;
                     case '-600px':
                         alltoll.style.setProperty('top', '-900px');
                         document.querySelector('#textWord textarea ').setAttribute("rows", "10");
                         e.target.innerText = "完成";
+                        stepIndex = 3;
                         break;
                     default:
                         break;
                 }
             }
+            console.log('stepIndex : ' + stepIndex)
         })
         document.getElementById('back').addEventListener('click', function () {
             let alltoll = document.getElementById('alltool');
             let key = window.getComputedStyle(alltoll, null).top;
             let screenWidth = document.body.clientWidth;
-            if (screenWidth <= 768) {
+            if (screenWidth <= 992) {
                 switch (key) {
                     case '-88px':
                         document.querySelector('.fa-angle-double-left').style.display = 'block';
                         document.querySelector('.fa-angle-double-right').style.display = 'block';
                         alltoll.style.setProperty('top', '0px')
+                        stepIndex = 0;
                         break;
                     case '-176px':
                         alltoll.style.setProperty('top', '-88px')
+                        stepIndex = 1;
                         break;
                     case '-264px':
                         alltoll.style.setProperty('top', '-176px');
                         document.getElementById('next').innerText = "下一步";
+                        stepIndex = 2;
                         break;
                     default:
                         break;
                 }
-            }else{
+            } else {
                 switch (key) {
                     case '-300px':
                         document.querySelector('.fa-angle-double-left').style.display = 'block';
                         document.querySelector('.fa-angle-double-right').style.display = 'block';
                         alltoll.style.setProperty('top', '0px')
+                        stepIndex = 0;
                         break;
                     case '-600px':
                         alltoll.style.setProperty('top', '-300px');
-                        
+                        stepIndex = 1;
                         break;
                     case '-900px':
                         alltoll.style.setProperty('top', '-600px');
                         document.getElementById('next').innerText = "下一步";
+                        stepIndex = 2;
                         break;
                     default:
                         break;
                 }
             }
+            console.log('stepIndex : ' + stepIndex)
+        })
+
+        //客製使用的共同變數
+        let AllToolImg = document.querySelectorAll('#toolinnerBox img');
+        let A4Box = document.getElementById('A4page');
+        let stepIndex = 0;
+        let setting = ["url", 1, 0, "date", 1, 0, 255, 255, 255]; //url,scale,rotate,date,scale,rotate,r,g,b
+
+        for (let i = 1; i < AllToolImg.length; i++) {
+
+            //對拖拉圖片設定-------------------------------
+            AllToolImg[i].addEventListener('dragstart', function (e) {
+                let aa = e.target.src;
+                console.log(aa);
+                e.dataTransfer.setData('image/jpeg', aa)
+            })
+            AllToolImg[i].addEventListener('dragend', function (e) {
+                //拖拉圖片結束後，對圖片設定
+            })
+
+            //對置入的盒子做設定---------------------------
+            A4Box.addEventListener('dragover', function (e) {
+                e.preventDefault();
+            });
+
+            A4Box.addEventListener('drop', function (e) {
+                let thisImg = e.dataTransfer.getData('image/jpeg');
+                this.getElementsByTagName('img')[0].src = thisImg;
+                setting[0] = document.querySelector('#A4page img').src;
+            })
+        }
+
+        // 檔案上傳
+        document.getElementById('updateInput').addEventListener('change', function (e) {
+            let file = e.target.files[0];
+            let readFile = new FileReader();
+            readFile.readAsDataURL(file);
+            readFile.addEventListener('load', function () {
+                let img = document.createElement('img')
+                img.src = readFile.result;
+                img.addEventListener('dragstart', function (e) {
+                    let aa = e.target.src;
+                    console.log(aa);
+                    e.dataTransfer.setData('image/jpeg', aa)
+                })
+                img.addEventListener('dragend', function (e) {
+                    //拖拉圖片結束後，對圖片設定
+                })
+                document.getElementById('toolinnerBox').appendChild(img);
+            })
+        })
+        //QrCode生成
+        document.querySelector('#textPlace input').addEventListener('input',function(){
+            var theURL = encodeURIComponent(this.value);
+            $('#QRCODE').text('');
+            $('#QRCODE').qrcode({		//產生QRCode
+						text: `https://www.google.com.tw/maps/search/${theURL}`,
+						mode:0,
+						// mode:1,
+						// label: 'https://www.silvia.com',
+				        // fontname: 'tahoma',
+				        // fontcolor: 'tomato',
+				        size: 75,
+				        fill: '#456789',
+					});
         })
     </script>
-    <script src="js/navmenu.js"></script>
+
 </body>
 
 </html>

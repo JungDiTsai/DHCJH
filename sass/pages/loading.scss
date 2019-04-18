@@ -15,23 +15,47 @@
         background-size: auto 100%;
         margin: auto;
         // background-color: rgb(59, 58, 58);
-        background-image: url(../images/load.png);
+        background-image: url(../images/loading/introstage.png);
         background-repeat: no-repeat;
         background-position: center center;
         position: relative;
+        // .test{
+        //     position: absolute;
+        //     height: 200px;
+        //     width: 200px;
+        //     top: 20px;
+        //     left: 0;
+        //     // bottom: 0;
+        //     right: 0;
+        //     margin: auto;
+        //     border: 5px solid #f00;
+        // }
         
         .light{
+            display: none;
+            position: absolute;
+                height: 200px;
+                width: 200px;
+                top: 0px;
+                left: 0;
+                // bottom: 0;
+                right: 0;
+                margin: auto;
+                border: 5px solid #f00;
             .sec{
                 position: absolute;
-                top: 40px;
-                left: 10%;
+                top: 37px;
+                left: 0%;
+               
 
             }
             .three{
                 position: absolute;
-                top: 40px;
-                left: 30%;
+                top: 37px;
+                left: 35%;
+                // width: 22%;
             }
+           
         }
     }
     .link{
@@ -68,8 +92,31 @@
 @media all and (min-width:768px){
     .loading{
         .loadingCar{
+            background-image: url(../images/loading/stage1.png);
+            .light{
+                width: 300px;
+                display: block;
+                .sec{
+                    width: 25%;
+                    top: 59px;
+                    left: 11%;
+                    }
+                .three{
+                    top: 59px;
+                    left: 38%;
+                    width: 25%;
+                  }
+                .first{
+                    position: absolute;
+                top: 59px;
+                left: 65%;
+                width: 25%;
+                }
+
+                }
+            }
             .lampFirst {
-                
+                left: 33%;
                 position: absolute;
                 width: 15%;
                 height: 400vh;
@@ -80,7 +127,7 @@
                 pointer-events: none;
             }
             .lampSec {
-               left: 10%;
+               left: 43%;
                 position: absolute;  
                 width: 15%;
                 height: 400vh;
@@ -91,7 +138,7 @@
                 pointer-events: none;
             }
             .lampThree {
-                left: 20%;
+                left: 54%;
                 position: absolute;
                 width: 15%;
                 height: 400vh;
@@ -103,13 +150,30 @@
                 }
 
         } 
-    }
+    
 }
 ///////////////////////////////////
 @media all and (min-width:992px) {
     .loading{
         .loadingCar{
-
+            .light{
+                // width: 300px;
+                .sec{
+                    top: 84px;
+                    left: -1%;
+                   width: 33%;
+                }
+                .three{
+                    top: 84px;
+                    left: 34%;
+                    width: 33%;
+                }
+                .first{
+                    top: 84px;
+                    left: 68%;
+                   width: 33%;
+                }
+            }
         }
         .link{
             float: left;
@@ -129,7 +193,32 @@
 @media all and (min-width:1200px) {
     .loading{
         .loadingCar{
-
+            .light{
+                // width: 400px;
+                .sec{
+                   top: 63px;
+                   left: 8%;
+                   width: 27%;
+                }
+                .three{
+                    left: 38%;
+                    top: 63px;
+                    width: 27%;
+                }
+                .first{
+                    top: 63px;
+                    width: 27%;
+                }
+            }
+            .lampFirst{
+                left: 38%;
+            }
+            .lampSec{
+                left: 43%;
+            }
+            .lampThree{
+                left: 48%;
+            }
         }
         .link{
             float: left;
