@@ -56,6 +56,7 @@
         filter: drop-shadow(2px 2px 8px $logoColor);
     }
 }
+<<<<<<< HEAD
 // 客製舞台步驟
 .custStageStep{
     width: 95%;
@@ -99,6 +100,8 @@
         filter: drop-shadow(0px 0px 10px #c82a2a);
     }
 }
+=======
+>>>>>>> fb08e37ae177ef20c634c29db9e7ddcb18116d4d
 // 舞台
 .perspective{
     margin: auto;
@@ -132,8 +135,13 @@
     // outline: 2px solid #f00;
     transform-style: preserve-3d;
     transform: translateY(100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+<<<<<<< HEAD
     animation: turn 6s alternate infinite;
 
+=======
+    // animation: turn 6s alternate infinite;
+    animation: none;
+>>>>>>> fb08e37ae177ef20c634c29db9e7ddcb18116d4d
     div{
         box-sizing: border-box;
         width: 300px;
@@ -533,65 +541,77 @@
         animation: turn3 6s alternate infinite;
     }
 }
-// 客製舞台物件
-.custItemTitle{
-    position: relative;
-    z-index: 3;
-    background-image: url(../images/customized/stage_item_title.gif);
-    background-repeat: no-repeat;
-    background-size: 100%;
+// 客製舞台步驟
+.custStageStep{
     margin: auto;
-    width: 300px;
-    height: 50px;
-    h5{
-        color: $fontColor;
-        font-size: 22px;
-        text-align: center;
-        line-height: 50px;
+    width: 335px;
+    display: flex;
+    justify-content: flex-start;
+    color: #e47071;
+    li{
+        display: flex;
+    }
+    .btnCustStageStep{
+        background: url(../images/customized/new_cust/customized_step_stage.svg) center no-repeat;
+        width: 50px;
         position: relative;
-    }
-    h5::before, h5::after{
-        content: "";
-        display: inline-block;
-        position: absolute;
-        width: 15px;
-        height: 15px;
-        top: 15px;
-        border-left: 3px solid $fontColor;
-        border-bottom: 3px solid $fontColor;
-        vertical-align: middle;
+        top: 20px;
         cursor: pointer;
+        opacity: .5;
+        .stageInfoRotate{
+            width: 100%;
+            // margin: auto;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            img{
+                width: 30px;
+            }
+        }
+        p{
+            font-size: 20px;
+        }
+        &:hover{
+            opacity: 1;
+            filter: drop-shadow(0px 0px 10px #c82a2a);
+        }
     }
-    h5::before{
-        left: 25px;
-        transform: rotate(45deg);
-    }
-    h5::after{
-        right: 25px;
-        transform: rotate(-135deg);
+    .custStageSelected{
+        background: url(../images/customized/new_cust/customized_step_stage_selected.svg) center no-repeat;
+        width: 125px;
+        height: 75px;
+        z-index: 2;
+        opacity: 1;
+        // left: 2px;
+        &:hover{
+            opacity: 1;
+            filter: drop-shadow(0px 0px 0px);
+        }
     }
 }
 // 全部客製舞台內容
-.custItemContent{
-    position: relative;
-    z-index: 1;
-    background-image: url(../images/customized/stage_item_content.gif);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    margin: -10px auto;
-    width: 300px;
-    height: 290px;
-    box-sizing: border-box;
-    padding: 15px 15px;
-    overflow: scroll;
+.custItem{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    position: relative;
+}
+.custItemContent{
+    background: url(../images/customized/new_cust/stage_item_content_wc.svg) center no-repeat;
+    width: 335px;
+    height: 325px;
+    padding: 20px 0px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+    filter: drop-shadow(0px 0px 8px #c82a2a);
+    // overflow: scroll;
     label{
         cursor: pointer;
         background-image: url(../images/customized/cust_stage_innerPattern/pattern_upload.svg);
-        width: 80px;
-        height: 80px;
+        width: 90px;
+        height: 90px;
         margin: 5px;
         border-radius: 5px; 
     }
@@ -600,46 +620,21 @@
     }
     img{
         cursor: pointer;
-        width: 80px;
-        height: 80px;
+        width: 90px;
+        height: 90px;
         margin: 5px;
         border-radius: 5px; 
     }
 }
-// 音響與鋼管客製舞台內容
-.audioPoleItem, .danceItem{
+//舞團客製內容
+.danceItem, .audioPoleItem{
     .custItemContent{
-        background-image: url(../images/customized/stage_item_content_l.gif);
-        width: 300px;
-        height: 355px;
-        align-items: center;
+        background: url(../images/customized/new_cust/stage_item_content_woc-02.svg) center no-repeat;
+        width: 335px;
+        height: 392px;
+        padding: 30px 0px 0px;
     }
-}
-//  燈光客製舞台內容
-.lightItem{
-    .custItemContent{
-        height: 245px;
-        align-items: flex-start;
-    }
-}
-//  表演客製舞台內容
-//  字幕機客製舞台內容
-.subtitleItem{
-    .custItemContent{
-        height: 245px;
-    }
-    .custItemContentInfo{
-        textarea{
-            margin: 20px 0px 10px;
-            font-size: $buttonWord;
-            font-family: $fontFamily;
-            border-radius: 8px;
-        }
-        input{
-            width: 90px;
-            height: 45px;
-        }
-    }
+    
 }
 .custItemContentInfo{
     text-align: center;
@@ -655,17 +650,26 @@
         font-size: $contentWord;
     }
 }
-
+.subtitleItem{
+    .custItemContentInfo{
+        textarea{
+            width: 250px;
+            margin: 50px 0px 10px;
+            font-size: $buttonWord;
+            border-radius: 8px;
+        }
+    }
+}
 // 全部客製舞台控制
 .custItemControl{
+    background: url(../images/customized/new_cust/stage_item_control.svg) center no-repeat;
+    width: 340px;
+    height: 67px;
     position: relative;
-    z-index: 2;
-    background-image: url(../images/customized/stage_item_control.gif);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    margin: auto;
-    width: 300px;
-    height: 65px;
+    bottom: 20px;
+    // bottom: -40px;
+    // left: 0;
+    // right: 0;
     display: flex;
     justify-content: space-around;
     img{
@@ -673,21 +677,9 @@
         margin-top: 20px;
         width: 20px;
         &:hover{
-            filter: drop-shadow(0px 0px 5px #ef1da8);
+            filter: drop-shadow(0px 0px 8px #c82a2a);
         }
     }
-}
-// 客製燈光控制
-.lightControl{
-    position: relative;
-    bottom: 50px;
-    z-index: 2;
-    background-image: url(../images/customized/cust_stage_light/stage_light_control.gif);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    margin: auto;
-    width: 300px;
-    height: 110px;
 }
 // 客製特效控制
 .sizePicker{
@@ -707,35 +699,25 @@
         bottom: -7px;
     }
 }
-// 客製顏色、字幕機控制
-.lightControl{
-    .colorPicker, .brightPicker{
-        margin: auto;
+// 客製顏色控制
+.colorPicker{
+    margin: auto;
+    position: absolute;
+    height: 8px;
+    width: 70%;
+    border-radius: 20px;
+    top: 30px;
+    left: 65px;
+    background: linear-gradient(to right,hsl(0,100%,50%),hsl(60,100%,50%),hsl(120,100%,50%),hsl(180,100%,50%),hsl(240,100%,50%),hsl(300,100%,50%),hsl(360,100%,50%));
+    &:before{
+        content: "彩度";
         position: absolute;
-        height: 8px;
-        width: 70%;
-        border-radius: 20px;
-        left: 65px;
-        &:before{
-            content: "彩度";
-            position: absolute;
-            color: #fff;
-            left: -43px;
-            bottom: -7px;
-        }
-    }
-    .colorPicker{
-        top: 35px;
-        background: linear-gradient(to right,hsl(0,100%,50%),hsl(60,100%,50%),hsl(120,100%,50%),hsl(180,100%,50%),hsl(240,100%,50%),hsl(300,100%,50%),hsl(360,100%,50%));
-    }
-    .brightPicker{
-        top: 65px;
-        background: linear-gradient(to right, #fff, #333);
-        &:before{
-            content: "明度";
-        }
+        color: #fff;
+        left: -43px;
+        bottom: -7px;
     }
 }
+<<<<<<< HEAD
 
 .btnStep{
     display: flex;
@@ -746,6 +728,8 @@
     margin: 0 auto;
 }
 
+=======
+>>>>>>> fb08e37ae177ef20c634c29db9e7ddcb18116d4d
 //tablet
 @media screen and (min-width:768px) {
     // mobile
@@ -753,13 +737,6 @@
     .custStep{
         width: 90%;
     }
-    // .custTitle{
-    //     width: 50%;
-    //     height: 120px;
-    //     h3{
-    //         line-height: 105px;
-    //     }
-    // }
     // 客製步驟
     .btnCustStep{
         font-size: 22px;
@@ -782,6 +759,7 @@
             filter: drop-shadow(2px 2px 15px $logoColor);
         }
     }
+<<<<<<< HEAD
     // 客製舞台步驟
     .custStageStep{
         width: 680px;
@@ -813,15 +791,13 @@
         opacity: 1;
         filter: drop-shadow(2px 2px 10px #dc6364);
     }
+=======
+>>>>>>> fb08e37ae177ef20c634c29db9e7ddcb18116d4d
     //舞台
     .stage{
         display: flex;
         align-items: center;
         margin: 40px auto;
-    }
-    // 客製舞台物件
-    .custItem{
-        // margin: 80px auto 0px;
     }
 }
 @media screen and (min-width:992px) {
@@ -829,10 +805,6 @@
     .custStep{
         width: 810px;
     }
-    // .custTitle{
-    //     width: 40%;
-    //     height: 125px;
-    // }
     .perspective{
         width: 500px;
     }
@@ -861,89 +833,105 @@
     .perspective{
         transform: scale(1.4);
     }
-    // 客製標題
-    .custItemTitle, .custItemContent, .custItemControl{
+    .custStageStep{
         width: 380px;
-    }
-    .custItemTitle{
-        height: 65px;
-        h5{
-            font-size: $thrTitleWord;
-            line-height: 60px;
-            &:before, &:after{
-                top: 20px;;
+        .btnCustStageStep{
+            width: 55px;
+            top: 10px;
+            .stageInfoRotate{
+                justify-content: center;
+                p{
+                    padding-left: 10px;
+                }
+                img{
+                    width: 40px;
+                }
+            }
+            p{
+                font-size: 22px;
             }
         }
+        #stageaudioNPole p{
+            width: 40%;
+        }
+        .custStageSelected{
+            width: 142px;
+            height: 85px;
+        }
     }
-    // 客製內容
+    // 全部客製舞台內容
     .custItemContent{
-        overflow: hidden;
-        height: 345px;
-        label, img{
+        width: 380px;
+        height: 350px;
+        label{
             width: 100px;
             height: 100px;
         }
-        p{
-            font-size: 18px;
+        img{
+            width: 100px;
+            height: 100px;
         }
     }
-    .audioPoleItem, .danceItem{
+    //舞團客製內容
+    .danceItem, .audioPoleItem{
         .custItemContent{
             width: 380px;
-            height: 425px;
-            background-position: bottom;
+            height: 420px;
+            // padding: 30px 0px 0px;
         }
     }
-    .lightItem, .subtitleItem{
-        .custItemContent{
-            height: 295px;
+    .custItemContentInfo{
+        p{
+            font-size: 22px;
         }
     }
     .subtitleItem{
         .custItemContentInfo{
-            margin: 20px auto;
-            text-align: center;
             textarea{
-                display: block;
-                margin-bottom: 20px;
+                width: 300px;
+                font-size: 22px;
             }
         }
     }
-    // 客製控制
+    // 全部客製舞台控制
     .custItemControl{
-        height: 80px;
+        width: 380px;
+        height: 75px;
         img{
             width: 30px;
         }
     }
-    .lightControl{
-        width: 380px;
-        height: 130px;
-        .colorPicker, .brightPicker{
-            height: 15px;
-            left: 80px;
-            &:before{
-                font-size: $buttonWord;
-                left: -50px;
-            }
-        }
-        .brightPicker{
-            top: 80px;
+    // 客製特效控制
+    .sizePicker{
+        height: 10px;
+        width: 70%;
+        top: 35px;
+        &:before{
+            font-size: 22px;
+            left: -60px;
+            bottom: -10px;
         }
     }
-    .effectControl{
-        .sizePicker{
-            top: 35px;
-            left: 80px;
-            &:before{
-                font-size: $buttonWord;
-            }
+    // 客製顏色控制
+    .colorPicker{
+        height: 10px;
+        width: 70%;
+        top: 35px;
+        right: 10px;
+        &:before{
+            font-size: 22px;
+            left: -60px;
+            bottom: -10px;
         }
     }
+<<<<<<< HEAD
     .btnStep{
         margin: auto;
         width: 1200px;
     }
+=======
+
+>>>>>>> fb08e37ae177ef20c634c29db9e7ddcb18116d4d
 }
 
 // custmoized_02
@@ -1287,6 +1275,10 @@
     ul{
         padding-left: 15px;
     }
+}
+.btnStep{
+    display: flex;
+    justify-content: space-around;
 }
 @media screen and (min-width:768px){
     .orderInfo{

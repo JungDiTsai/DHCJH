@@ -132,12 +132,12 @@
                         </div>
                     </div>
                     <div id="beautyRankingbg2" class="beautyRankingbg">
-                        <img src="images/beautyPageant/rank/ranking2.png" alt="">
+                        <a href="beautyDiscuss.html"><img src="images/beautyPageant/rank/ranking2.png"  alt=""></a>
                         <h3>超級大舞台</h3>
                         <div class="beautyRankingSocialBtns">
                             <i class="far fa-heart"></i>
                             <i class="fas fa-share-square" alt="分享"></i>
-                            <p>622 個喜歡</p>
+                            <p>1622 個喜歡</p>
                         </div>
                     </div>
                     <div id="beautyRankingbg3" class="beautyRankingbg">
@@ -152,7 +152,7 @@
                 </div>
                 <div id="beautyRankingimgsMonth">
                     <div id="beautyRankingbg4" class="beautyRankingbg">
-                        <img src="images/beautyPageant/rank/ranking1.png" alt="">
+                        <img src="images/beautyPageant/rank/ranking2.png" alt="">
                         <h3>太極大舞台</h3>
                         <div class="beautyRankingSocialBtns">
                             <i class="far fa-heart"></i>
@@ -161,7 +161,7 @@
                         </div>
                     </div>
                     <div id="beautyRankingbg5" class="beautyRankingbg">
-                        <img src="images/beautyPageant/rank/ranking2.png" alt="">
+                        <img src="images/beautyPageant/rank/ranking3.png" alt="">
                         <h3>嬤嬤大舞台</h3>
                         <div class="beautyRankingSocialBtns">
                             <i class="far fa-heart"></i>
@@ -170,7 +170,7 @@
                         </div>
                     </div>
                     <div id="beautyRankingbg6" class="beautyRankingbg">
-                        <img src="images/beautyPageant/rank/ranking3.png" alt="">
+                        <img src="images/beautyPageant/rank/ranking1.png" alt="">
                         <h3>花火大舞台</h3>
                         <div class="beautyRankingSocialBtns">
                             <i class="fas fa-heart"></i>
@@ -551,13 +551,21 @@
     <script src="js/discoBall.js"></script>
     <script>
             $("#beautyRankingimgsBtn").click(function(){
+                var bgcc = new Array();
             $('#beautyRankingimgs').css('display','flex');
             $('#beautyRankingimgsMonth').css('display','none');
-            
+            $('#beautyRankingimgsBtn').css('transform', 'scale(' + 1.2 + ')');
+            $('#beautyRankingimgsMonthBtn').css('transform', 'scale(' + 1 + ')');
+            $('#beautyRankingimgsMonthBtn').css('background-color','#ffffffe6'); 
+            $('#beautyRankingimgsBtn').css('background-color','#F2EB50');     
         });
         $("#beautyRankingimgsMonthBtn").click(function(){
             $('#beautyRankingimgsMonth').css('display','flex');
             $('#beautyRankingimgs').css('display','none'); 
+            $('#beautyRankingimgsMonthBtn').css('transform', 'scale(' + 1.2 + ')');
+            $('#beautyRankingimgsBtn').css('transform', 'scale(' + 1 + ')');
+            $('#beautyRankingimgsMonthBtn').css('background-color','#F2EB50'); 
+            $('#beautyRankingimgsBtn').css('background-color','#ffffffe6');     
         });
     </script>
 

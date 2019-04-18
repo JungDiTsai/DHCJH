@@ -13,23 +13,59 @@
             position: relative;
             .beautyDiscIg{
                 padding: 25px;
-                color: white;
-                margin-left: 50%;
+                color: #111;
+                margin-left: calc(50% + 25px );
                 border-radius: 25px;
-                background-color: #ddd;
+                background-color: #fff700c2;
+                margin-top: 25px;
+                margin-right:25px;
+                height: 650px;
+                position: relative;
+                filter: drop-shadow(0 0 8px #fff); 
                 .beautyDiscForm{
+                    margin-bottom: 0;
+                    position: absolute;
+                    bottom: 20px;
+                    width: calc(100% - 40px);
                     .DiscTextArea{
                         width: calc(100% - 40px);
+                        height: 44px;
+                        border-radius: 5px 0 0 5px;
+                    }
+                    .DiscSent{
+                        height: 44px;
+                        float: right;
+                        width: 40px;
+                        border-radius:0 5px 5px 0;
                     }
                 }
                 .beautyDiscIgMem{display: flex;
                 padding: 0 0 10px 0;
                 font-size: $subTitleWord;
+                border-bottom: 2px solid #fff;
+                    p{
+                        padding-left: 10px;
+                    }
                 }
                 .beautyDiscIgMemTextContainer{
-                    color: white;
+                    color: #111;
+                    display: flex;
+                    padding: 5px 0;
+                    img{
+                        width: 50px;
+                        height: 50px;
+                    }
                     .discussMemPost{
-                        display: flex;
+                        // display: flex;
+                        padding-left: 10px;
+                        .beautyDiscIgMName{
+                            // font-size: $subTitleWord;
+                            font-weight: 900;
+                        }
+                        .beautyDiscIgNameText{
+                            // font-size: $contentWord;
+                            font-weight: 200;
+                        }
                     }
                 }
             }

@@ -120,13 +120,13 @@
             <div class="btnCustStep custStep0 custSelected" id="custStage">
                 <h4>花車配備</h4>
             </div>
-            <div class="btnCustStep custStep6" id="custDate">
+            <div class="btnCustStep custStep1" id="custDate">
                 <h4>日期地點</h4>
             </div>
-            <div class="btnCustStep custStep7" id="custHost">
+            <div class="btnCustStep custStep2" id="custHost">
                 <h4>主持人</h4>
             </div>
-            <div class="btnCustStep custStep8" id="custInfo">
+            <div class="btnCustStep custStep3" id="custInfo">
                 <h4>訂單資訊</h4>
             </div>
         </div>
@@ -134,33 +134,7 @@
         <div class="custWrap">
             <!-- 客製舞台 -->
             <div class="custStage">
-                <!-- 客製舞台步驟 -->
-                <div class="custStageStep">
-                    <div class="btnCustStageStep custStageStep0 custStageSelected" id="stagePattern">
-                        <h5>壹</h5>
-                        <p>內塗裝</p>
-                    </div>
-                    <div class="btnCustStageStep custStageStep1" id="stageAudio">
-                        <h5>貳</h5>
-                        <p>音響鋼管</p>
-                    </div>
-                    <div class="btnCustStageStep custStageStep2" id="stageLight">
-                        <h5>參</h5>
-                        <p>燈光</p>
-                    </div>
-                    <div class="btnCustStageStep custStageStep3" id="stageEffect">
-                        <h5>肆</h5>
-                        <p>特效</p>
-                    </div>
-                    <div class="btnCustStageStep custStageStep4" id="stageDance">
-                        <h5>伍</h5>
-                        <p>表演</p>
-                    </div>
-                    <div class="btnCustStageStep custStageStep5" id="stageSubtitle">
-                        <h5>陸</h5>
-                        <p>字幕機</p>
-                    </div>
-                </div>
+                
                 <!-- 舞台 -->
                 <div class="stage">
                     <div class="stageView col-md-6">
@@ -261,203 +235,203 @@
                         </div>
                     </div>
 
+                    <!-- 客製舞台步驟 -->
                     <div class="custAllItem col-md-6">
-                        <!-- 內塗裝 -->
-                        <div class="custItem0 patternItem">
-                            <div class="custItemTitle">
-                                <h5>內塗裝</h5>
-                            </div>
-                            <div class="custItemContent">
-                                <label for="patternUpload"></label>
-                                <input type="file" name="patternUpload" id="patternUpload">
-                                <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_01.jpg" alt="">
-                                <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_02.jpg" alt="">
-                                <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_03.jpg" alt="">
-                                <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_04.jpg" alt="">
-                                <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_05.jpg" alt="">
-                                <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_06.jpg" alt="">
-                                <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_07.jpg" alt="">
-                                <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_08.jpg" alt="">
-                            </div>
-                            <div class="custItemControl">
-                                <div class="btnZoomIn">
-                                    <img src="images/customized/cust_stage_innerPattern/cust_stage_control_zoomIn.svg" alt="">
+                        <!-- 客製舞台步驟 -->
+                        <ul class="custStageStep">
+                            <li class="btnCustStageStep custStageSelected" id="stagePattern">
+                                <div class="stageInfoRotate">
+                                    <img src="../images/customized/new_cust/stage_item_pattern_icon.svg" alt="">
+                                    <p>塗裝</p>
                                 </div>
-                                <div class="btnZoomOut">
-                                    <img src="images/customized/cust_stage_innerPattern/cust_stage_control_zoomOut.svg" alt="">
+                            </li>
+                            <li class="btnCustStageStep" id="stageDance">
+                                <div class="stageInfoRotate">
+                                    <img src="../images/customized/new_cust/stage_item_dance_icon.svg" alt="">
+                                    <p></p>
                                 </div>
-                                <div class="btnRot">
-                                    <img src="images/customized/cust_stage_innerPattern/cust_stage_control_rotate.svg" alt="">
+                            </li>
+                            <li class="btnCustStageStep" id="stageEffect">
+                                <div class="stageInfoRotate">
+                                    <img src="../images/customized/new_cust/stage_item_effect_icon.svg" alt="">
+                                    <p></p>
                                 </div>
-                                <div class="btnDel">
-                                    <img src="images/customized/cust_stage_innerPattern/cust_stage_control_delete.svg" alt="">
+                            </li>
+                            <li class="btnCustStageStep" id="stageSubtitle">
+                                <div class="stageInfoRotate">
+                                    <img src="../images/customized/new_cust/stage_item_subtitle_icon.svg" alt="">
+                                    <p></p>
                                 </div>
-                            </div>
-                        </div>
+                            </li>
+                            <li class="btnCustStageStep" id="stageaudioNPole">
+                                <div class="stageInfoRotate">
+                                    <img src="../images/customized/new_cust/stage_item_audio_icon.svg" alt="">
+                                    <p></p>
+                                </div>
+                            </li>
+                            <!-- <li class="btnCustStageStep">
+                                <img src="../images/customized/new_cust/stage_item_pole_icon.svg" alt="">
+                                <p>鋼管</p>
+                            </li> -->
+                        </ul>
 
-                        <!-- 音響與鋼管 -->
-                        <div class="custItem audioPoleItem">
-                            <div class="custItemTitle">
-                                <h5>音響鋼管</h5>
-                            </div>
-                            <div class="custItemContent">
-                                <div class="custItemContentInfo">
-                                    <img src="images/customized/cust_stage_audioAndPole/audio_01.png" alt="">
-                                    <p>鄰居會罵型</p>
-                                    <p>$8000</p>
-                                </div>      
-                                <div class="custItemContentInfo">
-                                    <img src="images/customized/cust_stage_audioAndPole/audio_02.png" alt="">
-                                    <p>震耳欲聾型</p>
-                                    <p>$13000</p>
-                                </div>      
-                                <div class="custItemContentInfo">
-                                    <img src="images/customized/cust_stage_audioAndPole/audio_03.png" alt="">
-                                    <p>毀天滅地型</p>
-                                    <p>$21000</p>
-                                </div>      
-                                <div class="custItemContentInfo">
-                                    <img src="images/customized/cust_stage_audioAndPole/pole.png" alt="">
-                                    <p>一枝獨秀款</p>
-                                    <p>$25000</p>
-                                </div>      
-                                <div class="custItemContentInfo">
-                                    <img src="images/customized/cust_stage_audioAndPole/pole_3.png" alt="">
-                                    <p>三人小團體</p>
-                                    <p>$25000</p>
-                                </div>      
-                                <div class="custItemContentInfo">
-                                    <img src="images/customized/cust_stage_audioAndPole/pole_5.png" alt="">
-                                    <p>五福大臨門</p>
-                                    <p>$25000</p>
-                                </div>   
-                            </div>
-                        </div>
-
-                        <!-- 燈光 -->
-                        <div class="custItem lightItem">
-                            <div class="custItemTitle">
-                                <h5>燈光</h5>
-                            </div>
-                            <div class="custItemContent">
-                                <div class="custItemContentInfo">
-                                    <img src="images/customized/cust_stage_light/light_01.png" alt="">
-                                    <p>毀天滅地型</p>
-                                    <p>$25000</p>
-                                </div> 
-                                <div class="custItemContentInfo">
-                                    <img src="images/customized/cust_stage_light/light_02.png" alt="">
-                                    <p>毀天滅地型</p>
-                                    <p>$25000</p>
-                                </div> 
-                                <div class="custItemContentInfo">
-                                    <img src="images/customized/cust_stage_light/light_03.png" alt="">
-                                    <p>毀天滅地型</p>
-                                    <p>$25000</p>
-                                </div> 
-                            </div>
-                            <div class="lightControl">
-                                <div class="colorPicker"></div>
-                                <div class="brightPicker"></div>
-                            </div>
-                        </div>
-
-                        <!-- 特效 -->
-                        <div class="custItem effectItem">
-                            <div class="custItemTitle">
-                                <h5>特效</h5>
-                            </div>
-                            <div class="custItemContent">
-                                <div class="custItemContentInfo">
-                                    <img src="images/customized/cust_stage_effect/effects_01.png" alt="">
-                                    <p>火焰之舞</p>
-                                    <p>$3000</p>
-                                </div> 
-                                <div class="custItemContentInfo">
-                                    <img src="images/customized/cust_stage_effect/effects_02.png" alt="">
-                                    <p>火力四射</p>
-                                    <p>$5000</p>
-                                </div> 
-                                <div class="custItemContentInfo">
-                                    <img src="images/customized/cust_stage_effect/effects_03.png" alt="">
-                                    <p>火力全開</p>
-                                    <p>$6000</p>
+                        <div class="custStageAll">
+                            <!-- 塗裝 -->
+                            <div class="custItem patternItem">
+                                <div class="custItemContent">
+                                    <label for="patternUpload"></label>
+                                    <input type="file" name="patternUpload" id="patternUpload">
+                                    <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_01.jpg" alt="">
+                                    <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_02.jpg" alt="">
+                                    <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_03.jpg" alt="">
+                                    <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_04.jpg" alt="">
+                                    <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_05.jpg" alt="">
+                                    <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_06.jpg" alt="">
+                                    <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_07.jpg" alt="">
+                                    <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_08.jpg" alt="">
                                 </div>
-                                <div class="custItemContentInfo">
-                                    <img src="images/customized/cust_stage_effect/firework_01.png" alt="">
-                                    <p>雷霆萬鈞</p>
-                                    <p>$13000</p>
-                                </div> 
-                                <div class="custItemContentInfo">
-                                    <img src="images/customized/cust_stage_effect/firework_02.png" alt="">
-                                    <p>萬紫千紅</p>
-                                    <p>$18000</p>
-                                </div> 
-                                <div class="custItemContentInfo">
-                                    <img src="images/customized/cust_stage_effect/firework_03.png" alt="">
-                                    <p>龍翔九天</p>
-                                    <p>$25000</p>
+                                <div class="custItemControl">
+                                    <div class="btnZoomIn">
+                                        <img src="images/customized/cust_stage_innerPattern/cust_stage_control_zoomIn.svg" alt="">
+                                    </div>
+                                    <div class="btnZoomOut">
+                                        <img src="images/customized/cust_stage_innerPattern/cust_stage_control_zoomOut.svg" alt="">
+                                    </div>
+                                    <div class="btnRot">
+                                        <img src="images/customized/cust_stage_innerPattern/cust_stage_control_rotate.svg" alt="">
+                                    </div>
+                                    <div class="btnDel">
+                                        <img src="images/customized/cust_stage_innerPattern/cust_stage_control_delete.svg" alt="">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="custItemControl effectControl">
-                                <div class="sizePicker"></div>
-                            </div>
-                        </div>
-
-                        <!-- 表演 -->
-                        <div class="custItem danceItem">
-                            <div class="custItemTitle">
-                                <h5>表演</h5>
-                            </div>
-                            <div class="custItemContent">
-                                <div class="custItemContentInfo">
-                                    <img src="images/customized/cust_stage_dance/dance_01.png" alt="">
-                                    <p>辣台妹鋼管</p>
-                                    <p>$7000</p>
-                                </div>      
-                                <div class="custItemContentInfo">
-                                    <img src="images/customized/cust_stage_dance/dance_02.png" alt="">
-                                    <p>超熱情森巴</p>
-                                    <p>$10000</p>
-                                </div>      
-                                <div class="custItemContentInfo">
-                                    <img src="images/customized/cust_stage_dance/dance_03.png" alt="">
-                                    <p>極短裙搖擺</p>
-                                    <p>$12000</p>
-                                </div>      
-                                <div class="custItemContentInfo">
-                                    <img src="images/customized/cust_stage_dance/dance_04.png" alt="">
-                                    <p>鄰居小妹妹</p>
-                                    <p>$12000</p>
-                                </div>      
-                                <div class="custItemContentInfo">
-                                    <img src="images/customized/cust_stage_dance/dance_05.png" alt="">
-                                    <p>雙人對跳</p>
-                                    <p>$13000</p>
-                                </div>      
-                                <div class="custItemContentInfo">
-                                    <img src="images/customized/cust_stage_dance/dance_06.png" alt="">
-                                    <p>舞龍舞獅</p>
-                                    <p>$22000</p>
-                                </div>   
-                            </div>
-                        </div>
-
-                        <!-- 字幕機 -->
-                        <div class="custItem subtitleItem">
-                            <div class="custItemTitle">
-                                <h5>字幕機</h5>
-                            </div>
-                            <div class="custItemContent">
-                                <div class="custItemContentInfo">
-                                    <textarea name="subtileItemInfo" cols="30" rows="3"></textarea>
-                                    <input class="commonBtn" type="submit">
+                            <!-- 舞團 -->
+                            <div class="custItem danceItem">
+                                <div class="custItemContent">
+                                    <div class="custItemContentInfo">
+                                        <img src="images/customized/cust_stage_dance/dance_01.png" alt="">
+                                        <p>辣台妹鋼管</p>
+                                        <p>$7000</p>
+                                    </div>      
+                                    <div class="custItemContentInfo">
+                                        <img src="images/customized/cust_stage_dance/dance_02.png" alt="">
+                                        <p>超熱情森巴</p>
+                                        <p>$10000</p>
+                                    </div>      
+                                    <div class="custItemContentInfo">
+                                        <img src="images/customized/cust_stage_dance/dance_03.png" alt="">
+                                        <p>極短裙搖擺</p>
+                                        <p>$12000</p>
+                                    </div>      
+                                    <div class="custItemContentInfo">
+                                        <img src="images/customized/cust_stage_dance/dance_04.png" alt="">
+                                        <p>鄰居小妹妹</p>
+                                        <p>$12000</p>
+                                    </div>      
+                                    <div class="custItemContentInfo">
+                                        <img src="images/customized/cust_stage_dance/dance_05.png" alt="">
+                                        <p>雙人對跳</p>
+                                        <p>$13000</p>
+                                    </div>      
+                                    <div class="custItemContentInfo">
+                                        <img src="images/customized/cust_stage_dance/dance_06.png" alt="">
+                                        <p>舞龍舞獅</p>
+                                        <p>$22000</p>
+                                    </div>   
                                 </div>
                             </div>
-                            <div class="lightControl">
-                                <div class="colorPicker"></div>
-                                <div class="brightPicker"></div>
+                            <!-- 特效 -->
+                            <div class="custItem effectItem">
+                                <div class="custItemContent">
+                                    <div class="custItemContentInfo">
+                                        <img src="images/customized/cust_stage_effect/effects_01.png" alt="">
+                                        <p>火焰之舞</p>
+                                        <p>$3000</p>
+                                    </div> 
+                                    <div class="custItemContentInfo">
+                                        <img src="images/customized/cust_stage_effect/effects_02.png" alt="">
+                                        <p>火力四射</p>
+                                        <p>$5000</p>
+                                    </div> 
+                                    <div class="custItemContentInfo">
+                                        <img src="images/customized/cust_stage_effect/effects_03.png" alt="">
+                                        <p>火力全開</p>
+                                        <p>$6000</p>
+                                    </div>
+                                    <div class="custItemContentInfo">
+                                        <img src="images/customized/cust_stage_effect/firework_01.png" alt="">
+                                        <p>雷霆萬鈞</p>
+                                        <p>$13000</p>
+                                    </div> 
+                                    <div class="custItemContentInfo">
+                                        <img src="images/customized/cust_stage_effect/firework_02.png" alt="">
+                                        <p>萬紫千紅</p>
+                                        <p>$18000</p>
+                                    </div> 
+                                    <div class="custItemContentInfo">
+                                        <img src="images/customized/cust_stage_effect/firework_03.png" alt="">
+                                        <p>龍翔九天</p>
+                                        <p>$25000</p>
+                                    </div>
+                                </div>
+                                <div class="custItemControl">
+                                    <div class="sizePicker"></div>
+                                </div>
                             </div>
+                            <!-- 字幕 -->
+                            <div class="custItem subtitleItem">
+                                <div class="custItemContent">
+                                    <div class="custItemContentInfo">
+                                        <textarea name="subtileItemInfo" cols="30" rows="3"></textarea>
+                                        <input class="commonBtnSmall" type="submit">
+                                    </div>
+                                </div>
+                                <div class="custItemControl">
+                                    <div class="colorPicker"></div>
+                                </div>
+                            </div>
+                            <!-- 音響 -->
+                            <div class="custItem audioPoleItem">
+                                <div class="custItemContent">
+                                    <div class="custItemContentInfo">
+                                        <img src="images/customized/cust_stage_audioAndPole/audio_01.png" alt="">
+                                        <p>鄰居會罵型</p>
+                                        <p>$8000</p>
+                                    </div>      
+                                    <div class="custItemContentInfo">
+                                        <img src="images/customized/cust_stage_audioAndPole/audio_02.png" alt="">
+                                        <p>震耳欲聾型</p>
+                                        <p>$13000</p>
+                                    </div>      
+                                    <div class="custItemContentInfo">
+                                        <img src="images/customized/cust_stage_audioAndPole/audio_03.png" alt="">
+                                        <p>毀天滅地型</p>
+                                        <p>$21000</p>
+                                    </div>      
+                                    <div class="custItemContentInfo">
+                                        <img src="images/customized/cust_stage_audioAndPole/pole.png" alt="">
+                                        <p>一枝獨秀款</p>
+                                        <p>$25000</p>
+                                    </div>      
+                                    <div class="custItemContentInfo">
+                                        <img src="images/customized/cust_stage_audioAndPole/pole_3.png" alt="">
+                                        <p>三人小團體</p>
+                                        <p>$25000</p>
+                                    </div>      
+                                    <div class="custItemContentInfo">
+                                        <img src="images/customized/cust_stage_audioAndPole/pole_5.png" alt="">
+                                        <p>五福大臨門</p>
+                                        <p>$25000</p>
+                                    </div> 
+                                </div>
+                            </div>
+                            <!-- 鋼管 -->
+                            <!-- <div class="custItem poleItem disN">
+                                <div class="custItemContent">
+                                
+                                </div>
+                            </div> -->
+
                         </div>
                     </div>
 
@@ -713,12 +687,11 @@
             <div class="nextStep commonBtnSmall"></div>
         </div>
         
-        
     </div>
 
     
 
-    <!-- 主頁籤內容切換 -->
+    <!-- 步驟切換 -->
     <script src="js/custStepPage.js"></script>
     <!-- 雷達圖內容 -->
     <script src="js/custRadarChart.js"></script>
