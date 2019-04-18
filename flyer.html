@@ -150,9 +150,6 @@
         <article class="firstScreen">
             <div class="wrap">
                 <h2 class="titleBgi">客製活動宣傳單</h2>
-                <div class="title">
-                    <p> 客製宣傳單功能為免費功能，有購買花車的客戶可以更可匯入花車內容，輕鬆幫你邀請朋友參加活動，還有統計參加人數，快來試試看吧！</p>
-                </div>
                 <div class="stepsBar">
                     <div class="stepBox">
                         <div class="circle step">壹</div>
@@ -250,9 +247,6 @@
                     </div>
                 </div>
             </div>
-            <div class="mouse">
-                <p class="scroll"></p>
-            </div>
         </article>
     </div>
     
@@ -286,7 +280,7 @@
                         <div class="cardContent"></div>
                     </div>
                 </div>
-
+                
                 <div class="card three">
                     <div class="ElongationBox">
                         <div class="blockBox">
@@ -401,14 +395,13 @@
         // 宣傳單燈箱
         function envelopeLightBox() {
             let flyers = document.getElementsByClassName('flyer');
-            for (let i = 0; i < flyers.length; i++) {
-                flyers[i].addEventListener('click', function () {
-                    document.querySelector('.blackBox').style.setProperty('display', 'block');
-                    document.getElementById('hiddenEnvelopeLightBox').addEventListener('click', function () {
-                        document.querySelector('.blackBox').style.setProperty('display', 'none');
-                    })
-                    //點擊QRcodeICON
-                    document.getElementById('QrcodeIcon').addEventListener('click', function (e) {
+            //點擊 close BOX 
+            document.getElementById('hiddenEnvelopeLightBox').addEventListener('click', function () {
+                        //document.querySelector('.blackBox').style.setProperty('display', 'none');
+                        document.querySelector('.blackBox').style.display= 'none';
+                    });
+             //點擊QRcodeICON
+             document.getElementById('QrcodeIcon').addEventListener('click', function (e) {
                         let style = window.getComputedStyle(this.getElementsByTagName('div')[0])
                             .getPropertyValue('display');
                         if (style != "none") {
@@ -422,31 +415,35 @@
                         }
                         e.stopPropagation();
                     })
-                    //點擊更多頁面ICON
-                    document.getElementById('envelopeIcon').addEventListener('click', function (e) {
-                        let envelopeContent = document.querySelector('.envelopeContent')
-                        let style = window.getComputedStyle(envelopeContent).getPropertyValue('left')
-                        if (style !== '0px') {
-                            e.target.setAttribute('src', 'images/icon/iconBack.png');
-                            document.querySelector('.envelopeContent').style.setProperty('opacity',
-                                '1');
-                            document.querySelector('.envelopeContent').style.setProperty('left', '0');
-                            document.querySelector('.envelopeContent').style.setProperty('transition',
-                                '1s');
-                        } else {
-                            e.target.setAttribute('src', 'images/icon/iconMore.png');
-                            document.querySelector('.envelopeContent').style.setProperty('opacity',
-                                '0');
-                            document.querySelector('.envelopeContent').style.setProperty('left',
-                                '-150%');
-                            document.querySelector('.envelopeContent').style.setProperty('transition',
-                                '1s');
-                        }
-                    })
-                    document.querySelector('.flyerArea').addEventListener('mouseover', function () {
-                        document.querySelector('.envelopeHeader').style.setProperty('bottom', '-10%');
-                        document.querySelector('.envelopeHeader').style.setProperty('transition', '1s');
-                    })
+            //點擊更多頁面ICON
+            document.getElementById('envelopeIcon').addEventListener('click', function (e) {
+                let envelopeContent = document.querySelector('.envelopeContent')
+                let style = window.getComputedStyle(envelopeContent).getPropertyValue('left')
+                if (style !== '0px') {
+                    e.target.setAttribute('src', 'images/icon/iconBack.png');
+                    document.querySelector('.envelopeContent').style.setProperty('opacity',
+                        '1');
+                    document.querySelector('.envelopeContent').style.setProperty('left', '0');
+                    document.querySelector('.envelopeContent').style.setProperty('transition',
+                        '1s');
+                } else {
+                    e.target.setAttribute('src', 'images/icon/iconMore.png');
+                    document.querySelector('.envelopeContent').style.setProperty('opacity',
+                        '0');
+                    document.querySelector('.envelopeContent').style.setProperty('left',
+                        '-150%');
+                    document.querySelector('.envelopeContent').style.setProperty('transition',
+                        '1s');
+                }
+            })
+            
+            document.querySelector('.flyerArea').addEventListener('mouseover', function () {
+                document.querySelector('.envelopeHeader').style.setProperty('bottom', '-10%');
+                document.querySelector('.envelopeHeader').style.setProperty('transition', '1s');
+            })
+            for (let i = 0; i < flyers.length; i++) {
+                flyers[i].addEventListener('click', function () {
+                    document.querySelector('.blackBox').style.setProperty('display', 'block');
                 })
             }
         }
