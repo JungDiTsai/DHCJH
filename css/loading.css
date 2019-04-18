@@ -1,156 +1,146 @@
 .loading {
-  position: relative;
   width: 100%;
   height: 100vh;
+  background-size: cover;
   background-color: #3b3a3a;
-  background-image: url(../images/loadingBgi.jpg);
+  background-image: url(../images/loading/load1.png);
   background-repeat: no-repeat;
   background-position: center center;
 }
 
-.loading .lampFirst {
-  position: absolute;
-  left: 51.5%;
-  width: 15%;
-  height: 400vh;
-  background-image: radial-gradient(ellipse, rgba(235, 177, 4, 0.8), rgba(246, 205, 81, 0.2) 25%, rgba(255, 255, 255, 0) 50%);
-  top: -185vh;
-  -webkit-transform: perspective(25vh) rotateX(60deg) translateX(0);
-          transform: perspective(25vh) rotateX(60deg) translateX(0);
-  -webkit-transition: -webkit-transform 2s;
-  transition: -webkit-transform 2s;
-  transition: transform 2s;
-  transition: transform 2s, -webkit-transform 2s;
-  /* z-index: 50; */
-  pointer-events: none;
-}
-
-.loading .lampSec {
-  position: absolute;
-  left: 34%;
-  width: 15%;
-  height: 400vh;
-  background-image: radial-gradient(ellipse, rgba(255, 184, 143, 0.7), rgba(245, 132, 27, 0.2) 25%, rgba(255, 255, 255, 0) 50%);
-  top: -185vh;
-  -webkit-transform: perspective(25vh) rotateX(60deg) translateX(0);
-          transform: perspective(25vh) rotateX(60deg) translateX(0);
-  -webkit-transition: -webkit-transform 2s;
-  transition: -webkit-transform 2s;
-  transition: transform 2s;
-  transition: transform 2s, -webkit-transform 2s;
-  pointer-events: none;
-}
-
-.loading .lampThree {
-  position: absolute;
-  left: 70.5%;
-  width: 15%;
-  height: 400vh;
-  background-image: radial-gradient(ellipse, rgba(255, 184, 143, 0.7), rgba(245, 132, 27, 0.2) 25%, rgba(255, 255, 255, 0) 50%);
-  top: -185vh;
-  -webkit-transform: perspective(25vh) rotateX(60deg) translateX(0);
-          transform: perspective(25vh) rotateX(60deg) translateX(0);
-  -webkit-transition: -webkit-transform 2s;
-  transition: -webkit-transform 2s;
-  transition: transform 2s;
-  transition: transform 2s, -webkit-transform 2s;
-  pointer-events: none;
-}
-
-.loading .light {
+.loading .loadingCar {
+  width: 100%;
+  height: 100vh;
+  background-size: auto 100%;
+  margin: auto;
+  background-image: url(../images/load.png);
+  background-repeat: no-repeat;
+  background-position: center center;
   position: relative;
-  border: 10px solid red;
-  top: 9%;
+}
+
+.loading .loadingCar .light .sec {
+  position: absolute;
+  top: 40px;
+  left: 10%;
+}
+
+.loading .loadingCar .light .three {
+  position: absolute;
+  top: 40px;
   left: 30%;
-  width: 199px;
 }
 
-.loading .light .first {
+.loading .link {
+  display: block;
+  left: 0;
+  right: 0;
+  text-decoration: none;
+  font-size: 2.25rem;
+  font-weight: 1000;
+  text-align: center;
+  cursor: pointer;
+  color: #4b4a4a;
+  margin: auto;
+  width: 100px;
   position: absolute;
-  left: 0.8%;
-  top: -48px;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  -webkit-transform: perspective(25vh) rotateX(0deg) translateX(0);
-          transform: perspective(25vh) rotateX(0deg) translateX(0);
+  -webkit-box-shadow: 0px 0px 10px 10px red;
+          box-shadow: 0px 0px 10px 10px red;
+  background-color: whitesmoke;
 }
 
-.loading .light .sec {
-  position: absolute;
-  left: 33.5%;
-  top: -48px;
-  /* border: 1px solid red; */
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  /* transform: perspective(25vh) rotateX(30deg) rotateY(20deg); */
-  -webkit-transform: perspective(25vh) rotateX(0deg) translateX(0);
-          transform: perspective(25vh) rotateX(0deg) translateX(0);
+.loading .link:hover {
+  -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+  animation: neon2 1.5s ease-in-out infinite alternate;
+  color: yellow;
+  -webkit-box-shadow: 0px 0px 10px 5px blue;
+          box-shadow: 0px 0px 10px 5px blue;
 }
 
-.loading .light .three {
-  position: absolute;
-  left: 67%;
-  top: -48px;
-  /* border: 1px solid red; */
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  /* transform: perspective(25vh) rotateX(30deg) rotateY(20deg); */
-  -webkit-transform: perspective(25vh) rotateX(0deg) translateX(0);
-          transform: perspective(25vh) rotateX(0deg) translateX(0);
+.loading .front {
+  top: 33vh;
 }
 
-@-webkit-keyframes neon2 {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
-  }
-  to {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff4e22, 0 0 35px #ff5202, 0 0 40px #ff5202, 0 0 50px #ff5202 F, 0 0 75px #ff5202;
-  }
+.loading .back {
+  top: 53vh;
 }
 
 @media all and (min-width: 768px) {
-  .loading .light .loading .light {
-    top: 23.5%;
-    left: 39%;
-  }
-  .loading .light .loading .lampFirst, .loading .light .loading .lampSec, .loading .light .loading .lampThree {
+  .loading .loadingCar .lampFirst {
+    position: absolute;
     width: 15%;
-    height: 432vh;
+    height: 400vh;
+    background-image: radial-gradient(ellipse, rgba(235, 177, 4, 0.8), rgba(246, 205, 81, 0.2) 25%, rgba(255, 255, 255, 0) 50%);
+    top: -185vh;
+    -webkit-transform: perspective(25vh) rotateX(60deg) translateX(0);
+            transform: perspective(25vh) rotateX(60deg) translateX(0);
+    -webkit-transition: -webkit-transform 2s;
+    transition: -webkit-transform 2s;
+    transition: transform 2s;
+    transition: transform 2s, -webkit-transform 2s;
+    pointer-events: none;
   }
-  .loading .light .loading .lampFirst {
-    left: 45.5%;
+  .loading .loadingCar .lampSec {
+    left: 10%;
+    position: absolute;
+    width: 15%;
+    height: 400vh;
+    background-image: radial-gradient(ellipse, rgba(255, 184, 143, 0.7), rgba(245, 132, 27, 0.2) 25%, rgba(255, 255, 255, 0) 50%);
+    top: -185vh;
+    -webkit-transform: perspective(25vh) rotateX(60deg) translateX(0);
+            transform: perspective(25vh) rotateX(60deg) translateX(0);
+    -webkit-transition: -webkit-transform 2s;
+    transition: -webkit-transform 2s;
+    transition: transform 2s;
+    transition: transform 2s, -webkit-transform 2s;
+    pointer-events: none;
   }
-  .loading .light .loading .lampSec {
-    left: 37%;
-  }
-  .loading .light .loading .lampThree {
-    left: 54.5%;
-  }
-  .loading .light .loading .front {
-    top: 36vh;
-  }
-  .loading .light .loading .back {
-    top: 45vh;
+  .loading .loadingCar .lampThree {
+    left: 20%;
+    position: absolute;
+    width: 15%;
+    height: 400vh;
+    background-image: radial-gradient(ellipse, rgba(255, 184, 143, 0.7), rgba(245, 132, 27, 0.2) 25%, rgba(255, 255, 255, 0) 50%);
+    top: -185vh;
+    -webkit-transform: perspective(25vh) rotateX(60deg) translateX(0);
+            transform: perspective(25vh) rotateX(60deg) translateX(0);
+    -webkit-transition: -webkit-transform 2s;
+    transition: -webkit-transform 2s;
+    transition: transform 2s;
+    transition: transform 2s, -webkit-transform 2s;
+    pointer-events: none;
   }
 }
 
 @media all and (min-width: 992px) {
-  .loading .light .loading .light {
-    top: 30.2%;
-    left: 42%;
+  .loading .link {
+    float: left;
   }
-  .loading .light .loading .lampFirst, .loading .light .loading .lampSec, .loading .light .loading .lampThree {
-    width: 15%;
-    height: 446vh;
+  .loading .front {
+    top: 59vh;
+    left: 19%;
+    right: auto;
   }
-  .loading .light .loading .lampFirst {
-    left: 44.5%;
+  .loading .back {
+    top: 59vh;
+    left: 67%;
+    right: auto;
   }
-  .loading .light .loading .lampSec {
-    left: 39%;
+}
+
+@media all and (min-width: 1200px) {
+  .loading .link {
+    float: left;
   }
-  .loading .light .loading .lampThree {
-    left: 51.5%;
+  .loading .front {
+    top: 59vh;
+    left: 31%;
+    right: auto;
+  }
+  .loading .back {
+    top: 59vh;
+    left: 56%;
+    right: auto;
   }
 }
 /*# sourceMappingURL=loading.css.map */
