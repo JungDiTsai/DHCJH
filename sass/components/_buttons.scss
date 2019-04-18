@@ -1,7 +1,6 @@
 .commonBtn{
     font-size: $buttonWord;
     font-family: $fontFamily;
-<<<<<<< HEAD
     width: 150px;
     height: 75px;
     background: #323;
@@ -32,58 +31,6 @@
     border:none;
     z-index:2;
     box-shadow: 0 0 2px 4px $fontColor;
-=======
-    width: 180px;
-    height: 90px;
-    background: url(../images/smallBtnNeonLight.gif) center no-repeat;
-    background-size: cover;
-    color: $fontColor;
-    border-radius: 10px; 
-    line-height:90px; 
-    border:none;
-    box-shadow: 0 0 4px 3px $fontColor;
-    z-index:9999;
-    cursor: pointer;
-    &:hover{
-        transform: scale(1.05);
-        box-shadow: 0px 0px 25px $fontColor,
-                    0 0 2px 2px #fff;
-    }
-}
-.commonBtnSmall{
-    font-size: $smallButtonWord;
-    font-family: $fontFamily;
-    width: 120px;
-    height: 70px;
-    background: url(../images/smallBtnNeonLightSub.gif) center no-repeat;
-    background-size: cover;
-    color: $fontColor;
-    border-radius: 10px; 
-    line-height:70px; 
-    border:none;
-    z-index:9999;
-    box-shadow: 0 0 3px 2px $fontColor;
-    cursor: pointer;
-    &:hover{
-        transform: scale(1.05);
-        box-shadow: 0px 0px 25px $fontColor,
-                    0 0 0 1px #fff;
-    }
-}
-.commonBtnSmall{
-    font-size: $smallButtonWord;
-    font-family: $fontFamily;
-    width: 120px;
-    height: 70px;
-    background: url(../images/smallBtnNeonLightSub.gif) center no-repeat;
-    background-size: cover;
-    color: $fontColor;
-    border-radius: 10px; 
-    line-height:70px; 
-    border:none;
-    z-index:9999;
-    box-shadow: 0 0 3px 2px $fontColor;
->>>>>>> 8e0bb60beb40f7304e0952b73a20ab9954ec6ba6
     cursor: pointer;
     &:hover{
         transform: scale(1.05);
