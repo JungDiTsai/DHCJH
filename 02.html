@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/rollStyle.css">
+    <link rel="stylesheet" href="css/intro.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <style type="text/css">
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+
+<body onload="draw();">
+
+    <input type="checkbox" id=menu_control>
+    <header>    
+        <!-- 放bar選單 -->
+        <label for="menu_control" class="menubtn" >
+            <div id="nav-icon2">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </label>
+        <nav class="mainNav">
+            <li class="mainNavCell"><a href="customized_01.html">電子花車客製</a></li>
+            <li class="mainNavCell"><a href="flyer.html">客製化宣傳單</a></li>
+            <h1 class="navLogo"><a href="index.html"><img src="images/logo.png" alt="台灣大舞台"></a></h1>
+            <li class="mainNavCell"><a href="beautyPageant.html">花車選美</a></li>
+            <li class="mainNavCell"><a href="intro.html">花車特色介紹</a></li>
+            <div class="navMemBtn"> 
+                <i class="far fa-user-circle"></i>
+            </div>
+        </nav>       
+    </header>
+
+    
+    
+    <div class="box"></div>
+    <!-- 登入燈箱 -->
+    <div class="loginBox">
+        <i class="fas fa-times"></i>
+        <h3>登入</h3>
+        <div class="inputBox">
+            <i class="fas fa-user fa-1x"></i><input type="text" id="username" placeholder="User">
+        </div>
+        <div class="inputBox">
+            <i class="fas fa-key fa-1x"></i><input type="password" id="password" placeholder="Password">
+        </div>
+        <a href="memberCenter.html"><button class="commonBtn">登入</button></a>
+        <p><a class="showRegistered">註冊</a> / <a class="showForgotPSW">忘記密碼</a></p>
+    </div>
+    <!-- 註冊燈箱 -->
+    <div class="registeredBox">
+        <i class="fas fa-times"></i>
+        <h3>立即註冊</h3>
+        <table>
+            <tr>
+                <th>會員帳號</th>
+                <td><input type="text"></td>
+            </tr>
+            <tr><td colspan="2" class="prompt"><span>此帳號已有人使用 !</span></td></tr>
+            <tr>
+                <th>會員密碼</th>
+                <td><input type="password"></td>
+            </tr>
+            <tr>
+                <th>會員姓名</th>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <th>會員電話</th>
+                <td><input type="tel"></td>
+            </tr>
+            <tr>
+                <th>會員信箱</th>
+                <td><input type="email"></td>
+            </tr>
+            <tr>
+                <th>性別</th>
+                <td>
+                    <label>
+                        <input type="radio" name="sex" value="">
+                        <i class="fas fa-venus fa-2x"></i>
+                    </label>
+                    <label>
+                        <input type="radio" name="sex" value="">
+                        <i class="fas fa-mars fa-2x"></i>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2"><input type="submit" value="註冊帳號" class="commonBtn"></th>
+            </tr>
+        </table>
+        <div><a class="backLogin">回到登入</a></div>
+    </div>
+    <!-- 忘記密碼燈箱 -->
+    <div class="forgotBox">
+        <i class="fas fa-times"></i>
+        <h3>忘記密碼</h3>
+        <p>請輸入您註冊時的會員信箱，我們會將新的密碼寄至您的信箱。</p>
+        <div>會員信箱<input type="email"></div>
+        <input type="submit" value="寄送密碼" class="commonBtn">
+        <div><a class="backLogin">回到登入</a></div>
+    </div>
+
+    <!-- beauty pageant -->	
+    <div id='wrapper'>
+        <div id='scroller'> <!-- For iScroll functionality -->
+            
+            <div id='layer1' class='layer hide' data-params='30,600,200'> <!-- Each layer of depth defined by class "layer" -->
+                <div class='yellow dot'>
+                    <div class='content'>
+                        <h4>2019 世界花車選美金牌</h4>
+                    </div>
+                </div>
+                <div class='green dot'>
+                    <div class='content'>
+                        <h4>2018 亞洲花車選美金牌</h4>
+                    </div>
+                </div>
+                <div class='blue dot'>
+                    <div class='content'>
+                        <h4>2017 品牌創立之初</h4>
+                    </div>
+                </div>
+            </div>
+            <div id='layer2' class='green layer hide' data-params='500,1600,10000'>
+                <h4>感謝有這個機會讓「台灣car好」能代表台灣參加世界選美，
+                        並在72個國家596支參賽隊伍中奪的金牌，這份殊榮不只是
+                        肯定我們團隊，也證明了台灣文化的魅力。</h4>
+            </div>
+            <div id='layer3' class='blue layer hide' data-params='1500,10000,800'>
+                <h4>草創初期之活動</h4>
+            </div>
+            
+        </div> <!-- scroller -->
+    </div> <!-- wrapper -->
+        <!-- <script src="js/pushIn.js" type="text/javascript"></script> -->
+    <div class="clear"></div>
+    <!-- -----團隊介紹---------------- --> 
+    
+    <div class="introTime">
+        <h2 class="titleBgi introTimeTitle">團隊介紹</h2>   
+       <div class="introStage">
+       
+           <div class="people">
+               <img class="peopleFirst" src="../images/intro/intropeople1-1.png" alt="">
+                <img class="peopleSec" src="../images/intro/intropeople2-1.png" alt="">
+                <img class="peopleThree" src="../images/intro/intropeople3-1.png" alt="">
+                <img class="peopleFourth" src="../images/intro/intropeople4-1.png" alt="">
+                <img class="peopleFiv" src="../images/intro/intropeople5-1.png" alt="">
+
+            </div>
+            <!-- 跑馬燈 -->
+            <div class="led">
+                <marquee direction="right" height="30" scrollamount="5" behavior="alternate">團隊介紹</marquee>
+            </div>
+        </div>
+    </div>
+    <script>
+        
+        /* 登入燈箱 JS*/
+        // 點擊icon開啟登入燈箱----------------------------
+        document.querySelector('.fa-user-circle').addEventListener('click', function (e){
+            // 顯示登入燈箱
+            let loginBox = document.querySelector('.loginBox');
+            let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
+            if(style=="block"){
+                loginBox.style.setProperty('display',"none");
+                e.target.style.setProperty('color',"#2cffff");
+            }else{
+                loginBox.style.setProperty('display',"block");
+                e.target.style.setProperty('color',"rgb(252, 211, 28)");
+            }
+        })
+        // 點擊關閉----------------------------
+        document.querySelector('.loginBox .fa-times').addEventListener('click', function () {
+            let loginBox = document.querySelector('.loginBox');
+            let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
+            if(style=="block"){
+                loginBox.style.setProperty('display',"none");
+            }
+        })
+        // 點擊註冊------------------------------
+        document.querySelector('.loginBox .showRegistered').addEventListener('click', function () {
+            // 隱藏登入燈箱
+            let loginBox = document.querySelector('.loginBox');
+            loginBox.style.setProperty('display',"none");
+            // 顯示註冊燈箱
+            let registeredBox = document.querySelector('.registeredBox');
+            let style = window.getComputedStyle(registeredBox, null).getPropertyValue('display');
+            if(style=="none"){
+                registeredBox.style.setProperty('display',"block");
+            }
+        })
+        // 點擊忘記密碼------------------------------
+        document.querySelector('.loginBox .showForgotPSW').addEventListener('click', function () {
+            // 隱藏登入燈箱
+            let loginBox = document.querySelector('.loginBox');
+            loginBox.style.setProperty('display',"none");
+            // 顯示忘記密碼燈箱
+            let forgotBox = document.querySelector('.forgotBox');
+            let style = window.getComputedStyle(forgotBox, null).getPropertyValue('display');
+            if(style=="none"){
+                forgotBox.style.setProperty('display',"block");
+            }
+        })
+
+        /* 註冊燈箱 JS*/
+        // 點擊關閉----------------------------
+        document.querySelector('.registeredBox .fa-times').addEventListener('click',function(){
+            let registeredBox = document.querySelector('.registeredBox');
+            let style = window.getComputedStyle(registeredBox, null).getPropertyValue('display');
+            if(style=="block"){
+                registeredBox.style.setProperty('display',"none");
+            }
+        })
+        // 點擊回到登入----------------------------
+        document.querySelector('.registeredBox .backLogin').addEventListener('click',function(){
+            // 隱藏註冊燈箱
+            let registeredBox = document.querySelector('.registeredBox');
+            registeredBox.style.setProperty('display',"none");
+            // 顯示登入燈箱
+            let loginBox = document.querySelector('.loginBox');
+            let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
+            if(style=="none"){
+                loginBox.style.setProperty('display',"block");
+            }
+        })
+
+        /* 忘記密碼燈箱 JS*/
+        // 點擊關閉----------------------------
+        document.querySelector('.forgotBox .fa-times').addEventListener('click',function(){
+            let forgotBox = document.querySelector('.forgotBox');
+            let style = window.getComputedStyle(forgotBox, null).getPropertyValue('display');
+            if(style=="block"){
+                forgotBox.style.setProperty('display',"none");
+            }
+        })
+        // 點擊回到登入----------------------------
+        document.querySelector('.forgotBox .backLogin').addEventListener('click',function(){
+            // 隱藏忘記密碼燈箱
+            let forgotBox = document.querySelector('.forgotBox');
+            forgotBox.style.setProperty('display',"none");
+            // 顯示登入燈箱
+            let loginBox = document.querySelector('.loginBox');
+            let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
+            if(style=="none"){
+                loginBox.style.setProperty('display',"block");
+            }
+        })
+
+        /* 忘記密碼燈箱 JS*/
+        // 點擊關閉----------------------------
+        document.querySelector('.forgotBox .fa-times').addEventListener('click',function(){
+            let forgotBox = document.querySelector('.forgotBox');
+            let style = window.getComputedStyle(forgotBox, null).getPropertyValue('display');
+            if(style=="block"){
+                forgotBox.style.setProperty('display',"none");
+            }
+        })
+        // 點擊回到登入----------------------------
+        document.querySelector('.forgotBox .backLogin').addEventListener('click',function(){
+            // 隱藏忘記密碼燈箱
+            let forgotBox = document.querySelector('.forgotBox');
+            forgotBox.style.setProperty('display',"none");
+            // 顯示登入燈箱
+            let loginBox = document.querySelector('.loginBox');
+            let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
+            if(style=="none"){
+                loginBox.style.setProperty('display',"block");
+            }
+        })
+        
+        //螢幕寬度
+        let screenWidth = document.body.clientWidth;
+        if(screenWidth<=768){
+            
+        }
+    </script>
+</body>
+<script src="js/three.js"></script>
+<script src="js/loaders/OBJLoader.js"></script>
+<script src="js/loaders/MTLLoader.js"></script>
+<script src="js/controls/OrbitControls.js"></script>
+<script src="js/libs/stats.min.js"></script>
+<script src="js/libs/dat.gui.min.js"></script>
+<script src="js/navmenu.js"></script>
+<script>
+    var renderer;
+    function initRender() {
+        
+        renderer = new THREE.WebGLRenderer({ antialias: true ,alpha: true } );
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        //告诉渲染器需要阴影效果
+        renderer.setClearColor(0xffffff,0);
+        document.body.appendChild(renderer.domElement);
+    }
+
+    var camera;
+    function initCamera() {
+        camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.set(0, 10, 100);
+        camera.lookAt(new THREE.Vector3(0, 0, 0));
+    }
+
+    var scene;
+    function initScene() {
+       scene = new THREE.Scene();
+    }
+
+
+
+    //初始化dat.GUI简化试验流程
+
+    var gui;
+    function initGui() {
+        //声明一个保存需求修改的相关数据的对象
+        gui = {
+        };
+        var datGui = new dat.GUI();
+        //将设置属性添加到gui当中，gui.add(对象，属性，最小值，最大值）
+    }
+
+
+
+    var light;
+    function initLight() {
+        scene.add(new THREE.AmbientLight(0x444444));
+        light = new THREE.PointLight(0x666666);
+        light.position.set(1000, 100, 1000);
+        //告诉平行光需要开启阴影投射
+        light.castShadow = true;
+        scene.add(light);
+    }
+
+
+
+    function initModel() {
+        //辅助工具
+        var helper = new THREE.AxesHelper(50);
+        scene.add(helper);
+        var mtlLoader = new THREE.MTLLoader();
+        mtlLoader.setPath('three/car/');
+        //加载mtl文件
+        mtlLoader.load('truck_daf.mtl', function (material) {
+            var objLoader = new THREE.OBJLoader();
+            //设置当前加载的纹理
+            objLoader.setMaterials(material);
+            objLoader.setPath('three/car/');
+            objLoader.load('truck_daf.obj', function (object) {
+                //将模型缩放并添加到场景当中
+                object.scale.set(30, 30, 30);
+                scene.add(object);
+            })
+        });
+        var mtlLoader = new THREE.MTLLoader();
+        mtlLoader.setPath('three/car/earth/19-world/');
+        //加载mtl文件
+        mtlLoader.load('earth.mtl', function (material) {
+            var objLoader = new THREE.OBJLoader();
+            //设置当前加载的纹理
+            objLoader.setMaterials(material);
+            objLoader.setPath('three/car/earth/19-world/');
+            objLoader.load('earth.obj', function (object) {
+                //将模型缩放并添加到场景当中
+                object.scale.set(30, 30, 30);
+                scene.add(object);
+            })
+        });
+
+    }
+    //初始化性能插件
+    var stats;
+    function initStats() {
+        stats = new Stats();
+        document.body.appendChild(stats.dom);
+    }
+
+
+
+    //用户交互插件 鼠标左键按住旋转，右键按住平移，滚轮缩放
+    var controls;
+    function initControls() {
+        controls = new THREE.OrbitControls(camera, renderer.domElement);
+        // 如果使用animate方法时，将此函数删除
+        // controls.addEventListener( 'change', render );
+        // 使动画循环使用时阻尼或自转 意思是否有惯性
+        controls.enableDamping = true;
+        //动态阻尼系数 就是鼠标拖拽旋转灵敏度
+        //controls.dampingFactor = 0.25;
+        //是否可以缩放
+        controls.enableZoom = true;
+        //是否自动旋转
+        // controls.enableRotate = false;
+        //關閉旋轉功能
+        controls.autoRotate = false;
+        //设置相机距离原点的最远距离
+        controls.minDistance = 1;
+        //设置相机距离原点的最远距离
+        controls.maxDistance = 200;
+        //是否开启右键拖拽
+        controls.enablePan = false;
+    }
+    function render() {
+        renderer.render(scene, camera);
+
+    }
+
+    //窗口变动触发的函数
+    function onWindowResize() {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        render();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+    }
+
+
+
+    function animate() {
+        //更新控制器
+        render();
+        //更新性能插件
+        stats.update();
+        controls.update();
+        requestAnimationFrame(animate);
+    }
+
+
+
+    function draw() {
+        initGui();
+        initRender();
+        initScene();
+        initCamera();
+        initLight();
+        initModel();
+        initControls();
+        initStats();
+        animate();
+        window.onresize = onWindowResize;
+    }
+
+</script>
+
+</html>

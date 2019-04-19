@@ -28,7 +28,7 @@ html {
 }
 
 body {
-	height: 1000%;
+	height: 500%;
 }
 
 * {
@@ -43,6 +43,9 @@ body {
 	display: block;
 	width: 100%;
 	overflow: auto;
+	z-index: -1;
+	pointer-events: none;
+	
 }
 
 #scroller, .layer {
