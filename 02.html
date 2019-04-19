@@ -342,8 +342,8 @@
     var light;
     function initLight() {
         scene.add(new THREE.AmbientLight(0x444444));
-        light = new THREE.PointLight(0xffffff);
-        light.position.set(0, 50, 0);
+        light = new THREE.PointLight(0x666666);
+        light.position.set(1000, 100, 1000);
         //告诉平行光需要开启阴影投射
         light.castShadow = true;
         scene.add(light);
@@ -369,6 +369,21 @@
                 scene.add(object);
             })
         });
+        var mtlLoader = new THREE.MTLLoader();
+        mtlLoader.setPath('three/car/earth/19-world/');
+        //加载mtl文件
+        mtlLoader.load('earth.mtl', function (material) {
+            var objLoader = new THREE.OBJLoader();
+            //设置当前加载的纹理
+            objLoader.setMaterials(material);
+            objLoader.setPath('three/car/earth/19-world/');
+            objLoader.load('earth.obj', function (object) {
+                //将模型缩放并添加到场景当中
+                object.scale.set(30, 30, 30);
+                scene.add(object);
+            })
+        });
+
     }
     //初始化性能插件
     var stats;
@@ -392,7 +407,7 @@
         //是否可以缩放
         controls.enableZoom = true;
         //是否自动旋转
-        controls.enableRotate = false;
+        // controls.enableRotate = false;
         //關閉旋轉功能
         controls.autoRotate = false;
         //设置相机距离原点的最远距离
