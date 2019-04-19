@@ -182,13 +182,18 @@ $(document).ready(function(){
     $('.nextStep').text('下一步');
     // 上一步
     $('.previousStep').bind('click', function(){
-        index--;
-        controlContent(index);
+        if( index > 0 ){
+            index--;
+            controlContent(index);
+        }
     });
     // 下一步
     $('.nextStep').bind('click', function(){
-        index++;
-        controlContent(index);
+        if( index < 3 ){
+            index++;
+            controlContent(index);
+        }
+        
     });
 
     //讓點選index與下方共用
@@ -274,7 +279,7 @@ function controlContent(index){
 // ======================================================
 var month_olympic = [31,29,31,30,31,30,31,31,30,31,30,31];
 var month_normal = [31,28,31,30,31,30,31,31,30,31,30,31];
-var month_name = ["January","Febrary","March","April","May","June","July","Auguest","September","October","November","December"];
+var month_name = ["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"];
 var holder = document.getElementById("days");
 var prev = document.getElementById("prev");
 var next = document.getElementById("next");
@@ -322,7 +327,7 @@ function refreshDate(){
 }
 refreshDate(); //执行该函数
 
-prev.onclick = function(e){
+prevMon.onclick = function(e){
     e.preventDefault();
     my_month--;
     if(my_month<0){
@@ -331,7 +336,7 @@ prev.onclick = function(e){
     }
     refreshDate();
 }
-next.onclick = function(e){
+nextMon.onclick = function(e){
     e.preventDefault();
     my_month++;
     if(my_month>11){
@@ -340,3 +345,59 @@ next.onclick = function(e){
     }
     refreshDate();
 }
+
+// ======================================================
+//主持人輪播
+// ======================================================
+document.querySelector('.sliderBox').addEventListener('click',function(){
+    let allDiv = document.querySelectorAll('.sliderBox>div')
+    for (let key in allDiv) {
+        let style = allDiv[key].style.left;
+        switch (style) {
+            case "50%":
+                allDiv[key].style.setProperty("left","30%");
+                allDiv[key].style.setProperty("transition",".5s");
+                allDiv[key].style.setProperty("transform","translateX(-50%) translateY(-50%) scale(0.7)");
+                allDiv[key].style.setProperty("z-index","2");
+                break;
+            case "30%":
+                allDiv[key].style.setProperty("left","20%");
+                allDiv[key].style.setProperty("transition",".5s");
+                allDiv[key].style.setProperty("transform","translateX(-50%) translateY(-50%) scale(0.5)");
+                allDiv[key].style.setProperty("z-index","1");
+                break;
+            case "20%":
+                allDiv[key].style.setProperty("left","40%");
+                allDiv[key].style.setProperty("transition",".5s");
+                allDiv[key].style.setProperty("transform","translateX(-50%) translateY(-50%) scale(0.3)");
+                allDiv[key].style.setProperty("z-index","1");
+                break;
+            case "40%":
+                allDiv[key].style.setProperty("left","60%");
+                allDiv[key].style.setProperty("transition",".5s");
+                allDiv[key].style.setProperty("transform","translateX(-50%) translateY(-50%) scale(0.3)");
+                allDiv[key].style.setProperty("z-index","1");
+                break;
+            case "60%":
+                allDiv[key].style.setProperty("left","80%");
+                allDiv[key].style.setProperty("transition",".5s");
+                allDiv[key].style.setProperty("transform","translateX(-50%) translateY(-50%) scale(0.5)");
+                allDiv[key].style.setProperty("z-index","1");
+                break;
+            case "80%":
+                allDiv[key].style.setProperty("left","70%");
+                allDiv[key].style.setProperty("transition",".5s");
+                allDiv[key].style.setProperty("transform","translateX(-50%) translateY(-50%) scale(0.7)");
+                allDiv[key].style.setProperty("z-index","2");
+                break;
+            case "70%":
+                allDiv[key].style.setProperty("left","50%");
+                allDiv[key].style.setProperty("transition",".5s");
+                allDiv[key].style.setProperty("transform","translateX(-50%) translateY(-50%) scale(1)");
+                allDiv[key].style.setProperty("z-index","3");
+                break;
+            default:
+                break;
+        }
+    }
+})

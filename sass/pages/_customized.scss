@@ -4,7 +4,7 @@
     padding-top: 100px;
     background-image: url(../images/customized/customized_bg.jpg);
     background-position: center;
-    // min-height: 100vh;
+    min-height: 100vh;
 }
 //title
 // replace with titleBgi
@@ -699,7 +699,7 @@
     .stage{
         display: flex;
         align-items: center;
-        margin: 40px auto;
+        margin: 20px auto;
     }
 }
 @media screen and (min-width:992px) {
@@ -739,7 +739,7 @@
         width: 380px;
         .btnCustStageStep{
             width: 55px;
-            top: 10px;
+            top: 12px;
             .stageInfoRotate{
                 justify-content: center;
                 p{
@@ -777,8 +777,9 @@
     //舞團客製內容
     .danceItem, .audioPoleItem{
         .custItemContent{
+            // background-image: url(../images/customized/new_cust/stage_item_content_woc.svg);
             width: 380px;
-            height: 420px;
+            height: 425px;
             // padding: 30px 0px 0px;
         }
     }
@@ -830,8 +831,54 @@
 
 // custmoized_02
 // calendar
+.calendar{
+	width:350px;
+    height:350px;
+    margin: 0 auto;
+	box-shadow: 1px 2px 10px #000;
+    background-color: #403a60;
+    border-radius: 8px;
+}
+.caleHeader{
+    text-align: center;
+    h3{
+        padding-top: 10px;
+        color: $logoColor;
+        font-size: $buttonWord;
+    }
+    h4{
+        padding-top: 5px;
+        font-size: 18px;
+        color: #fff;
+    }
+}
+.caleList ul{
+	width:100%;
+	font-family:arial;
+	font-weight:bold;
+    font-size:14px;
+    li{
+        width:14.28%;
+        height:36px;
+        line-height:36px;
+        list-style-type:none;
+        display:block;
+        box-sizing:border-box;
+        float:left;
+        text-align:center;
+    }
+}
+.weekday{
+	color:#a8a8a8;
+}
+.available{
+	color:#565656;
+}
 
-
+.choice{
+	border:1px solid #6ac13c;
+	background:#e9f8df;
+}
 // .date{
 //     box-shadow: 1px 2px 10px #000;
 //     background-color: #403a60;
@@ -987,44 +1034,44 @@
     }
 }
 @media screen and (min-width:992px){
-    .date{
-        padding-top: 30px;
-        width: 480px;
-        height: 530px;
-    }
-    .selectDate{
-        font-size: $thrTitleWord;
-        select{
-            font-size: $thrTitleWord;
-        }
-    }
-    .caleHeader{
-        h5{
-            font-size: $thrTitleWord; 
-            &::before, &::after{
-                width: 20px;
-                height: 20px;
-                border-left: 3px solid #fff;
-                border-bottom: 3px solid #fff;
-            }
-        }
-    }
-    .calendar{
-        color: #fff;
-        table{
-            width: 400px;
-            height: 360px;
-            font-size: 24px;
-        }
-    }
-    .choice{
-        &::before{
-            bottom:17px;
-            left: 5px;
-            width: 50px;
-            height: 50px;
-        }
-    }
+    // .date{
+    //     padding-top: 30px;
+    //     width: 480px;
+    //     height: 530px;
+    // }
+    // .selectDate{
+    //     font-size: $thrTitleWord;
+    //     select{
+    //         font-size: $thrTitleWord;
+    //     }
+    // }
+    // .caleHeader{
+    //     h5{
+    //         font-size: $thrTitleWord; 
+    //         &::before, &::after{
+    //             width: 20px;
+    //             height: 20px;
+    //             border-left: 3px solid #fff;
+    //             border-bottom: 3px solid #fff;
+    //         }
+    //     }
+    // }
+    // .calendar{
+    //     color: #fff;
+    //     table{
+    //         width: 400px;
+    //         height: 360px;
+    //         font-size: 24px;
+    //     }
+    // }
+    // .choice{
+    //     &::before{
+    //         bottom:17px;
+    //         left: 5px;
+    //         width: 50px;
+    //         height: 50px;
+    //     }
+    // }
     .infoNLoc{
 
         width: 45%;
@@ -1074,16 +1121,24 @@
 .host{
     background-image: url(../images/customized/host/host_bg.jpg);
 }
-.hostInfoDetail{
-
+.sliderBox{
+    width: 350px;
+    margin: auto;
+    height: 560px;
     position: relative;
-    background-image: url(../images/customized/host/host_info.jpg);
-    width: 278px;
-    height: 546px;
-    margin: 20px auto 0px;
+}
+.hostInfoDetail{
+    top: 48%;
+    transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+    background-image: url(../images/customized/host/host_info_02.jpg);
+    background-position: center;
+    width: 260px;
+    height: 510px;
+    margin: auto;
     text-align: center;
     img{
-        padding-top: 40px;
+        padding-top: 30px;
     }
     ul, h6{
         padding-left: 32px;
@@ -1092,6 +1147,39 @@
     h6{
         font-size: 20px;
     }
+    &:hover{
+        box-shadow: 0px 0px 10px $logoColor;
+        box-shadow: 0px 0px 15px $logoColor;
+        box-shadow: 0px 0px 20px $logoColor;
+        box-shadow: 0px 0px 25px $logoColor;
+    }
+}
+.hostInfo0{
+    z-index: 3;
+}
+.hostInfo1{
+    z-index: 2;
+    transform: translateX(-50%) translateY(-50%) scale(0.7);
+}
+.hostInfo2{
+    z-index: 1;
+    transform: translateX(-50%) translateY(-50%) scale(0.5);
+}
+.hostInfo3{
+    z-index: 1;
+    transform: translateX(-50%) translateY(-50%) scale(0.4);
+}
+.hostInfo4{
+    z-index: 1;
+    transform: translateX(-50%) translateY(-50%) scale(0.4);
+}
+.hostInfo5{
+    z-index: 1;
+    transform: translateX(-50%) translateY(-50%) scale(0.5);
+}
+.hostInfo6{
+    z-index: 2;
+    transform: translateX(-50%) translateY(-50%) scale(0.7);
 }
 // codepen radar chart start
 .card {
@@ -1111,6 +1199,22 @@
 @media screen and (min-width:768px){
     .hostInfo{
         padding-top: 20px;
+    }
+    .sliderBox{
+        width: 700px;
+    }
+}
+@media screen and (min-width:992px){
+    .sliderBox{
+        width: 900px;
+    }
+}
+@media screen and (min-width:1200px){
+    .hostInfo{
+        height: 540px;
+    }
+    .sliderBox{
+        width: 1200px;
     }
 }
 // 訂單資訊
@@ -1173,6 +1277,8 @@
 .btnStep{
     display: flex;
     justify-content: space-around;
+    text-align: center;
+    padding: 10px 0px 30px;
 }
 @media screen and (min-width:768px){
     .orderInfo{
@@ -1190,7 +1296,28 @@
     }
 }
 @media screen and (min-width:1200px){
-    .hostInfo, .orderInfo{
+    .custTitleWrap{
+        width: 1200px;
+        margin: 80px auto 0px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        .titleBgi{
+            position: static;
+            margin-top: 0;
+            margin-left: 0;
+        }
+        .custTitle{
+            float: left;
+            top: 50px;
+            margin-right: 50px;
+        }
+        .custStep{
+            padding-top: 0;
+            margin: 0;
+        }
+    }
+    .orderInfo{
         height: 660px;
     }
     .orderInfo{
@@ -1199,6 +1326,11 @@
     }
     .orderStage{
         transform: scale(0.75);
+    }
+    .btnStep{
+        width: 1200px;
+        margin: auto;
+        // justify-content: space-around;
     }
 }
 

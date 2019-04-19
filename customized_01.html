@@ -112,10 +112,12 @@
 
     <!-- customized start -->
     <div class="custBg">
+        
+        <!-- 客製步驟 -->
+        <div class="custTitleWrap">
         <div class="custTitle titleBgi">
             <h3>客製舞台</h3>
         </div>
-        <!-- 客製步驟 -->
         <div class="custStep">
             <div class="btnCustStep custStep0 custSelected" id="custStage">
                 <h4>花車配備</h4>
@@ -129,6 +131,7 @@
             <div class="btnCustStep custStep3" id="custInfo">
                 <h4>訂單資訊</h4>
             </div>
+        </div>
         </div>
 
         <div class="custWrap">
@@ -442,7 +445,7 @@
             <div class="dateNLoc">
                 <!-- calendar -->
                 <div class="calendar">
-                    <div class="selectDate">
+                    <!-- <div class="selectDate">
                         <div class="dateOption">日期
                             <select name="day" id="day">
                                 <option value="不限">不限</option>
@@ -460,16 +463,16 @@
                                 <option value="喪葬">喪葬</option>
                             </select>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="caleHeader">
                         <h3 id="calendarTitle">Month</h3>
                         <h4 id="calendarYear">Year</h4>
-                        <button id="prev"></button>
-                        <button id="next"></button>
+                        <button id="prevMon"></button>
+                        <button id="nextMon"></button>
                     </div>
-                    <div class="body">
+                    <div class="calebody">
                         <div class="weekday caleList">
-                            <ul class="date">
+                            <ul class="weekdate">
                             <li>一</li>
                             <li>二</li>
                             <li>三</li>
@@ -488,8 +491,7 @@
                 
                 <div class="infoNLoc"> 
                     <div class="dateChoose">
-                        <p>選擇日期：2019-05-09(四)</p>
-                        <p>宜：嫁娶  忌：開市</p>
+                        <p>選擇日期：2019-05-09(四)<span></span></span></p>
                     </div>
                     <!-- loc -->
                     <div class="loc">
@@ -506,20 +508,112 @@
 
             <!-- 主持人 -->
             <div class="hostInfo">
-                <div class="hostInfoDetail">
-                    <img src="images/customized/host/host_01.jpg" alt="">
-                    <h6>王春嬌  NTD6000</h6>
-                    <ul>
-                        <li>上百場廟會主持經驗</li>
-                        <li>岬北宮主任委員</li>
-                        <li>宮廟杯最佳主持人獎</li>
-                    </ul>
-                    <!-- codepen radar chart start -->
-                    <div class="card">
-                        <!-- Canvas for Chart.js -->
-                        <canvas id="canvas" width="280" height="180"></canvas>
+                <div class="sliderBox">
+                    <div class="hostInfoDetail hostInfo0" style="left:50%;">
+                        <img src="images/customized/host/host_01.jpg" alt="">
+                        <h6>王春嬌  NTD6000</h6>
+                        <ul>
+                            <li>上百場廟會主持經驗</li>
+                            <li>岬北宮主任委員</li>
+                            <li>宮廟杯最佳主持人獎</li>
+                        </ul>
+                        <!-- codepen radar chart start -->
+                        <div class="card">
+                            <!-- Canvas for Chart.js -->
+                            <canvas id="canvas" width="280" height="180"></canvas>
+                        </div>
+                        <!-- codepen radar chart end -->
                     </div>
-                    <!-- codepen radar chart end -->
+                    <div class="hostInfoDetail hostInfo1" style="left:30%;">
+                        <img src="images/customized/host/host_01.jpg" alt="">
+                        <h6>王春嬌  NTD6000</h6>
+                        <ul>
+                            <li>上百場廟會主持經驗</li>
+                            <li>岬北宮主任委員</li>
+                            <li>宮廟杯最佳主持人獎</li>
+                        </ul>
+                        <!-- codepen radar chart start -->
+                        <div class="card">
+                            <!-- Canvas for Chart.js -->
+                            <!-- <canvas id="canvas" width="280" height="180"></canvas> -->
+                        </div>
+                        <!-- codepen radar chart end -->
+                    </div>
+                    <div class="hostInfoDetail hostInfo2" style="left:20%;">
+                        <img src="images/customized/host/host_01.jpg" alt="">
+                        <h6>王春嬌  NTD6000</h6>
+                        <ul>
+                            <li>上百場廟會主持經驗</li>
+                            <li>岬北宮主任委員</li>
+                            <li>宮廟杯最佳主持人獎</li>
+                        </ul>
+                        <!-- codepen radar chart start -->
+                        <div class="card">
+                            <!-- Canvas for Chart.js -->
+                            <!-- <canvas id="canvas" width="280" height="180"></canvas> -->
+                        </div>
+                        <!-- codepen radar chart end -->
+                    </div>
+                    <div class="hostInfoDetail hostInfo3" style="left:40%;">
+                        <img src="images/customized/host/host_01.jpg" alt="">
+                        <h6>王春嬌  NTD6000</h6>
+                        <ul>
+                            <li>上百場廟會主持經驗</li>
+                            <li>岬北宮主任委員</li>
+                            <li>宮廟杯最佳主持人獎</li>
+                        </ul>
+                        <!-- codepen radar chart start -->
+                        <div class="card">
+                            <!-- Canvas for Chart.js -->
+                            <!-- <canvas id="canvas" width="280" height="180"></canvas> -->
+                        </div>
+                        <!-- codepen radar chart end -->
+                    </div>
+                    <div class="hostInfoDetail hostInfo4" style="left:60%;">
+                        <img src="images/customized/host/host_01.jpg" alt="">
+                        <h6>王春嬌  NTD6000</h6>
+                        <ul>
+                            <li>上百場廟會主持經驗</li>
+                            <li>岬北宮主任委員</li>
+                            <li>宮廟杯最佳主持人獎</li>
+                        </ul>
+                        <!-- codepen radar chart start -->
+                        <div class="card">
+                            <!-- Canvas for Chart.js -->
+                            <!-- <canvas id="canvas" width="280" height="180"></canvas> -->
+                        </div>
+                        <!-- codepen radar chart end -->
+                    </div>
+                    <div class="hostInfoDetail hostInfo5" style="left:80%;">
+                        <img src="images/customized/host/host_01.jpg" alt="">
+                        <h6>王春嬌  NTD6000</h6>
+                        <ul>
+                            <li>上百場廟會主持經驗</li>
+                            <li>岬北宮主任委員</li>
+                            <li>宮廟杯最佳主持人獎</li>
+                        </ul>
+                        <!-- codepen radar chart start -->
+                        <div class="card">
+                            <!-- Canvas for Chart.js -->
+                            <!-- <canvas id="canvas" width="280" height="180"></canvas> -->
+                        </div>
+                        <!-- codepen radar chart end -->
+                    </div>
+                    <div class="hostInfoDetail hostInfo6" style="left:70%;">
+                        <img src="images/customized/host/host_01.jpg" alt="">
+                        <h6>王春嬌  NTD6000</h6>
+                        <ul>
+                            <li>上百場廟會主持經驗</li>
+                            <li>岬北宮主任委員</li>
+                            <li>宮廟杯最佳主持人獎</li>
+                        </ul>
+                        <!-- codepen radar chart start -->
+                        <div class="card">
+                            <!-- Canvas for Chart.js -->
+                            <!-- <canvas id="canvas" width="280" height="180"></canvas> -->
+                        </div>
+                        <!-- codepen radar chart end -->
+                    </div>
                 </div>
             </div>
 
