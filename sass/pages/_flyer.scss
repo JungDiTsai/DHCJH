@@ -207,6 +207,29 @@
     }
 
     .backBlock {
+<<<<<<< HEAD
+=======
+      border: 3px solid rgb(255, 255, 255);
+      border-radius: 10px;
+      box-shadow: 
+        0 0 5px 1px rgb(114, 143, 177),
+        0 0 5px 1px rgb(1, 51, 109) inset,
+        0 0 2px 3px rgb(192, 219, 255),
+        0 0 2px 3px rgb(192, 209, 255) inset,
+        0 0 5px rgb(1, 51, 109),
+        0 0 5px rgb(36, 57, 175),
+        0 0 5px rgb(25, 35, 179),
+        0 0 5px rgb(31, 44, 167),
+        0 0 10px rgb(123, 155, 196),
+        0 0 5px 5px rgb(212, 230, 247),
+        0 0 5px 5px rgb(212, 218, 247) inset,
+        0 0 15px 15px rgb(19, 43, 110),
+        0 0 15px 15px rgb(19, 43, 110) inset;
+
+      margin: auto;
+      width: 100%;
+      padding-top: 71.3947990543735%;
+>>>>>>> 62670ebf0b18288219dec0866288c721f6731a77
       position: relative;
       box-sizing: border-box;
       border: 3px solid rgb(255, 255, 255);
@@ -800,4 +823,9 @@
     transition: 1s;
     transform: rotateZ(10deg);
   }
+<<<<<<< HEAD
 }
+=======
+}
+
+>>>>>>> 62670ebf0b18288219dec0866288c721f6731a77
