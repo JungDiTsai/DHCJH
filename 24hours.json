@@ -1,0 +1,26 @@
+[
+    {
+        "time":"2016-06-01 00:00:00",
+        "src":"images/flyer/1.jpg"
+    },
+    {
+        "time":"2016-07-01 00:00:00",
+        "src":"images/flyer/2.jpg"
+    },
+    {
+        "time":"2016-08-01 00:00:00",
+        "src":"images/flyer/3.jpg"
+    },
+    {
+        "time":"2016-09-01 00:00:00",
+        "src":"images/flyer/4.jpg"
+    },
+    {
+        "time":"2016-10-01 00:00:00",
+        "src":"images/flyer/5.jpg"
+    },
+    {
+        "time":"2016-11-01 00:00:00",
+        "src":"images/flyer/6.jpg"
+    }
+]

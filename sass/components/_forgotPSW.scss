@@ -2,7 +2,8 @@
     display: none;
     width: 300px;
     height: 400px;
-    background: $loginBackColor;
+    background: #fff;
+    border:5px solid $loginBackColor;
     position: fixed;
     top:0;
     left: 0;
@@ -12,12 +13,13 @@
     z-index: 1;
     border-radius: 10px;
     box-sizing: border-box;
-    box-shadow: 0 0 10px #fff;
+    box-shadow: 0 0 10px $loginBackColor;
+    box-shadow:0 0 10px  #666 inset;
     padding:25px;
     text-align: center;
 
     .fa-times{
-        color:#fff;
+        color:$loginBackColor;
         position: absolute;
         right: 10px;
         top: 10px;
@@ -29,7 +31,7 @@
     h3{
         margin: 0;
         font-size: $thrTitleWord;
-        color:#fff;
+        color:$loginBackColor;
     }
     p{
         margin-top: 10px;
@@ -39,7 +41,7 @@
     }
     div{
         margin-top: 50px;
-        color: #fff;
+        color: $loginBackColor;
         input{
             margin-left: 20px;
         }
@@ -50,11 +52,12 @@
             }
         }
     }
-    .commonBtn{
+    .commonBtnSmall{
         margin-top: 30px;
         width: 100px;
         height: 50px;
         border-radius: 5px;
+        line-height: 50px;
     }
 }
 

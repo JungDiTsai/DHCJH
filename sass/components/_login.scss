@@ -2,7 +2,8 @@
     display: none;
     width: 300px;
     height: 350px;
-    background: $loginBackColor;
+    background: #fff;
+    border:5px solid $loginBackColor;
     position: fixed;
     top:0;
     left: 0;
@@ -14,21 +15,22 @@
     padding: 30px 40px;
     box-sizing: border-box;
     text-align: center;
-    box-shadow: 0 0 10px #fff;
+    box-shadow: 0 0 10px $loginBackColor;
+    box-shadow:0 0 10px  #666 inset;
     .fa-times{
-        color:#fff;
+        color:$loginBackColor;
         position: absolute;
         right: 10px;
         top: 10px;
         cursor: pointer;
         &:hover{
-            color:rgb(243, 210, 23);
+            color:#000;
         }
     }
     h3{
         margin-top:0px;
         font-size: $thrTitleWord;
-        color:#fff;
+        color:$loginBackColor;
     }
     .inputBox{
         background: $loginInputBackColor;
@@ -48,20 +50,20 @@
         }
     }
 
-    .commonBtn{
-        margin-top: 20px;
+    .commonBtnSmall{
+        margin-top: 40px;
         width: 80px;
         height: 40px;
         border-radius: 5px;
-        
+        line-height: 40px;
     }
 
     p{
         margin-top:30px;
-        color:#fff;
+        color:$loginBackColor;
         a{
             cursor: pointer;
-            color:#fff;
+            color:$loginBackColor;
             text-decoration: none;
             &:hover{
                 color:rgb(243, 210, 23);
