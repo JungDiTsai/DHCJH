@@ -2,10 +2,14 @@
 // bg
 .custBg{
     padding-top: 100px;
-    background-image: url(../images/customized/customized_bg.jpg);
+    background-image: url(../images/customized/customized_bg_02.jpg);
     background-position: center;
     min-height: 100vh;
+    .titleBgi{
+        background-image: url(../images/titleNeonLightRedNew.gif);
+    }
 }
+
 //title
 // replace with titleBgi
 // .custTitle{
@@ -107,19 +111,25 @@
         margin: auto;
     }
     // 下舞台
-    .front{ width: 130px; transform: translateX(-85px) translateZ(75px);background: url(../images/2.png)center no-repeat;background-size:cover;}
-    .front1{  width: 40px; transform:  translateZ(75px);background: #faf}
-    .front2{  width: 130px; transform: translateX(85px) translateZ(75px);background: url(../images/5.png)center no-repeat;background-size:cover;}
+    .front{ 
+        width: 300px; 
+        transform: translateX(0px) translateZ(75px);
+        // background: #fff center no-repeat;
+        background: url(../images/customized/cust_stage_innerPattern/pattern_test_02.jpg) center no-repeat;
+        background-size:cover;
+        &:hover{
+            border: #f00 dashed 2px;
+            box-shadow: 0px 0px 8px $fontColor;
+        }
+    }
+    // .front1{  width: 40px; transform:  translateZ(75px);background: #faf}
+    // .front2{  width: 130px; transform: translateX(85px) translateZ(75px);background: url(../images/5.png)center no-repeat;background-size:cover;}
      .back{transform:  translateZ(-75px);background: url(../images/3.png)center no-repeat;background-size:cover;}
        .up{ 
            transform: rotateX(90deg)  translateZ(20px); 
            height: 150px;
-           background: #fff center no-repeat;
+           background: url(../images/stage_floor.jpg) center no-repeat;
            background-size:cover;
-           &:hover{
-                border: #f00 dashed 3px;
-                box-shadow: 0px 0px 8px 8px $fontColor;
-            }
         }
      .down{ transform: rotateX(270deg)  translateZ(20px); height: 150px;background: url(../images/3.png)center no-repeat;background-size:cover;}
      .left{ transform: rotateY(270deg) translateZ(150px); width: 150px;background: url(../images/3.png)center no-repeat;background-size:cover;}
@@ -134,27 +144,29 @@
         transform:  translateZ(-69px) translateY(-65px);
         border:#000 solid 1px;
         background: #fff center no-repeat;
+        background: url(../images/customized/cust_stage_innerPattern/pattern_test_03.jpg) center no-repeat;
         background-size:cover;
         &:hover{
-            border: #f00 dashed 3px;
-            box-shadow: 0px 0px 8px 8px $fontColor;
+            border: #f00 dashed 2px;
+            box-shadow: 0px 0px 8px $fontColor;
         }
     }
     .stairsC2{width: 6px; height: 95px;transform: translateY(-65px) translatez(-73px) translateX(126px) rotateY(90deg);background: #646464;}
     .stairsC3{width: 6px; height: 95px;transform: translateY(-65px) translatez(-73px) translateX(-126px) rotateY(90deg);background: #646464;}
     .stairsC4{width: 250px; height: 6px;transform: translateZ(-73px)translateY(-112px) rotateX(90deg);background: #646464;}
     // 上壁屏
-    .stairsD{ width: 50px; height: 205px;transform: translateZ(20px)translateX(-95px)translateY(-160px) rotateX(-60deg);background: url(../images/6.png)center no-repeat;background-size:cover;}
-    .stairsE{ width: 50px; height: 205px;transform: translateZ(20px)translateX(95px)translateY(-160px) rotateX(-60deg);background: url(../images/7.png)center no-repeat;background-size:cover;}
+    // .stairsD{ width: 50px; height: 205px;transform: translateZ(20px)translateX(-95px)translateY(-160px) rotateX(-60deg);background: url(../images/6.png)center no-repeat;background-size:cover;}
+    // .stairsE{ width: 50px; height: 205px;transform: translateZ(20px)translateX(95px)translateY(-160px) rotateX(-60deg);background: url(../images/7.png)center no-repeat;background-size:cover;}
     .stairsF{ 
-        width: 140px;
+        width: 240px;
         height: 205px;
         transform: translateZ(20px)translateY(-160px) rotateX(-60deg);
-        background: #fff center no-repeat;
+        // background: #fff center no-repeat;
+        background: url(../images/customized/cust_stage_innerPattern/pattern_test_01.jpg) center no-repeat;
         background-size:cover;
         &:hover{
-            border: #f00 dashed 3px;
-            box-shadow: 0px 0px 8px 8px $fontColor;
+            border: #f00 dashed 2px;
+            box-shadow: 0px 0px 8px $fontColor;
         }
         
     }
@@ -163,7 +175,32 @@
     .stairsF3{width:2px; height: 208px;transform: translateZ(18px) translateY(-160px) translateX(120px) rotateY(-90deg) rotateZ(60deg);background: #646464;}
     .stairsF4{width:240px; height: 2px;transform: translateZ(108px) translateY(-212px) ;background: #646464;}
     // 跑馬燈
-    .subtitles{ width:200px ;height:20px;transform: translateY(-100px) translateZ(-67px);font-size: 18px;line-height: 1;text-align: center;background: #000;color:#fff;}
+    .subtitles{ 
+        width: 200px;
+        height: 20px;
+        padding: 0px 5px;
+        transform: translateY(-100px) translateZ(-67px);
+        font-size: 18px;
+        line-height: 1;
+        white-space: nowrap;
+        background: #000;
+        color:#fff;
+        overflow: hidden;
+    }
+    p{
+        animation: marquee 7s linear infinite;
+    }
+    @keyframes marquee{
+        0% {
+         left: 100%;
+         transform: translateX(100%);
+        }
+        
+        100% {
+         left: 0;
+         transform: translateX(-100%);
+        }
+    }
     .subtitles1{width:2px ;height:20px;transform: translateY(-100px) translateZ(-67px)translateX(100px)rotateY(90deg);background: #646464;}
     .subtitles2{width:2px ;height:20px;transform: translateY(-100px) translateZ(-67px)translateX(-100px)rotateY(90deg);background: #646464;}
 
@@ -187,7 +224,9 @@
     .triangleC{
         width: 10px;
         height: 75px;
-        background: rgba(30,30,30,.9);
+        // background: rgba(30,30,30,.9);
+        background: url(../images/stairs_side.jpg) center no-repeat;
+        background-size: 100%;
         transform:translateZ(75px)  translateX(-25px) translateZ(30px) rotateX(53deg)
     }
     .triangleD{
@@ -209,77 +248,67 @@
     .triangleF{
         width: 10px;
         height: 75px;
-        background: rgba(30,30,30,.9);
+        // background: rgba(30,30,30,.9);
+        background: url(../images/stairs_side.jpg) center no-repeat;
+        background-size: 100%;
         transform:translateZ(75px)  translateX(25px) translateZ(30px) rotateX(53deg)
     }
     
     // 樓梯 位置調整translateZ(75px)
-    .ladderA{
+    .ladder{
         width: 40px;
-        border: 1px solid #6e6e6e;
+        // border: 1px solid #6e6e6e;
         height: 10px;
-        background: #faf;
-        transform:translateZ(75px)  translateY(-10px) translateZ(10px) rotateX(90deg);
+        // background: url(../images/customized/cust_stage_light/stage_light_control.gif) center no-repeat;
+        // background-size: 100%;
+        background: #333;
+    }
+    .ladderB, .ladderD, .ladderF, .ladderH{
+        background: url(../images/stairs.jpg) center no-repeat;
+        background-size: 100%;
+    }
+    .ladderA{
+        transform:translateZ(75px)  translateY(-20px) translateZ(0px) rotateX(90deg);
     }
     .ladderB{
-        width: 40px;
-        border: 1px solid #6e6e6e;
-        height: 10px;
-        background: #faf;
-        transform:translateZ(75px)  translateY(-5px) translateZ(15px) ;
+        transform:translateZ(75px)  translateY(-15px) translateZ(5px);
     }
     .ladderC{
-        width: 40px;
-        border: 1px solid #6e6e6e;
-        height: 10px;
-        background: #faf;
-        transform:translateZ(75px)  translateY(0px) translateZ(20px) rotateX(90deg);
+        transform:translateZ(75px)  translateY(-10px) translateZ(10px) rotateX(90deg);
     }
     .ladderD{
-        width: 40px;
-        border: 1px solid #6e6e6e;
-        height: 10px;
-        background: #faf;
-        transform:translateZ(75px)  translateY(5px) translateZ(25px) ;
+        transform:translateZ(75px)  translateY(-5px) translateZ(15px) ;
     }
     .ladderE{
-        width: 40px;
-        border: 1px solid #6e6e6e;
-        height: 10px;
-        background: #faf;
-        transform:translateZ(75px)  translateY(10px) translateZ(30px) rotateX(90deg);
+        transform:translateZ(75px)  translateY(0px) translateZ(20px) rotateX(90deg);
     }
     .ladderF{
-        width: 40px;
-        border: 1px solid #6e6e6e;
-        height: 10px;
-        background: #faf;
+        transform:translateZ(75px)  translateY(5px) translateZ(25px) ;
+    }
+    .ladderG{
+        transform:translateZ(75px)  translateY(10px) translateZ(30px) rotateX(90deg);
+    }
+    .ladderH{
         transform:translateZ(75px)  translateY(15px) translateZ(35px) ;
     }
         /* 燈柱 位置調整 translateY(-210px) translateZ(115px) */
-    .headlightbox{    
+    .headlightbox{
         width: 150px;
         height: 10px;
-        background: #00f;
+        background: #333;
+        box-shadow: 1px 1px 5px $logoColor;
+        box-shadow: 1px 1px 8px $logoColor;
+    }
+    .headlightbox0{    
         transform:translateY(-210px) translateZ(115px) translateY(5px)rotateX(90deg);
     }
     .headlightbox1{
-        
-        width: 150px;
-        height: 10px;
-        background: #00f;
         transform:translateY(-210px) translateZ(115px) translateY(5px) rotateX(90deg) ;
     }
     .headlightbox2{
-        width: 150px;
-        height: 10px;
-        background: #00f;
         transform:translateY(-210px) translateZ(115px) translateZ(5px) ;
     }
     .headlightbox3{
-        width: 150px;
-        height: 10px;
-        background: #00f;
         transform:translateY(-210px) translateZ(115px) translateZ(-5px) ;
     }
     .headlightbox4{
@@ -300,196 +329,364 @@
         height: 0;
         border-style: solid;
         border-width: 0 10px 20px 10px;
-        border-color: transparent transparent #007bff transparent;
+        border-color: transparent transparent #333 transparent;
         background: none;
-        transform:translateY(-210px) translateZ(115px)  translateY(5px) translateZ(5px)rotateX(30deg)
+    }
+    .headlight0{
+        transform:translateY(-210px) translateZ(115px)  translateY(5px) translateZ(5px)rotateX(30deg);
     }
     .headlight1{
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 0 10px 20px 10px;
-        border-color: transparent transparent #007bff transparent;
-        background: none;
-        transform:translateY(-210px) translateZ(115px)  translateY(5px) translateZ(-5px) rotateX(-30deg)
+        transform:translateY(-210px) translateZ(115px)  translateY(5px) translateZ(-5px) rotateX(-30deg);
     }
     .headlight2{
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 0 10px 20px 10px;
-        border-color: transparent transparent #007bff transparent;
-        background: none;
-        transform:translateY(-210px) translateZ(115px)  translateY(5px) translateX(5px) rotateY(90deg) rotateX(30deg)
+        transform:translateY(-210px) translateZ(115px)  translateY(5px) translateX(5px) rotateY(90deg) rotateX(30deg);
     }
     .headlight3{
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 0 10px 20px 10px;
-        border-color: transparent transparent #007bff transparent;
-        background: none;
-        transform:translateY(-210px) translateZ(115px)  translateY(5px) translateX(-5px) rotateY(-90deg) rotateX(30deg)
+        transform:translateY(-210px) translateZ(115px)  translateY(5px) translateX(-5px) rotateY(-90deg) rotateX(30deg);
     }
     
     /* 左邊投射燈 位置調整 translateY(-210px) translateZ(115px) */
     .headlight4{
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 0 10px 20px 10px;
-        border-color: transparent transparent #007bff transparent;
-        background: none;
-        transform:translateY(-210px) translateZ(115px) translateX(-50px) translateY(5px) translateZ(5px)rotateX(30deg)
+        transform:translateY(-210px) translateZ(115px) translateX(-50px) translateY(5px) translateZ(5px)rotateX(30deg);
     }
     .headlight5{
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 0 10px 20px 10px;
-        border-color: transparent transparent #007bff transparent;
-        background: none;
-        transform:translateY(-210px) translateZ(115px) translateX(-50px) translateY(5px) translateZ(-5px) rotateX(-30deg)
+        transform:translateY(-210px) translateZ(115px) translateX(-50px) translateY(5px) translateZ(-5px) rotateX(-30deg);
     }
     .headlight6{
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 0 10px 20px 10px;
-        border-color: transparent transparent #007bff transparent;
-        background: none;
-        transform:translateY(-210px) translateZ(115px) translateX(-50px) translateY(5px) translateX(5px) rotateY(90deg) rotateX(30deg)
+        transform:translateY(-210px) translateZ(115px) translateX(-50px) translateY(5px) translateX(5px) rotateY(90deg) rotateX(30deg);
     }
     .headlight7{
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 0 10px 20px 10px;
-        border-color: transparent transparent #007bff transparent;
-        background: none;
-        transform:translateY(-210px) translateZ(115px) translateX(-50px) translateY(5px) translateX(-5px) rotateY(-90deg) rotateX(30deg)
+        transform:translateY(-210px) translateZ(115px) translateX(-50px) translateY(5px) translateX(-5px) rotateY(-90deg) rotateX(30deg);
     }
     
     /* 右邊投射燈 位置調整 translateY(-210px) translateZ(115px) */
     .headlight8{
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 0 10px 20px 10px;
-        border-color: transparent transparent #007bff transparent;
-        background: none;
-        transform:translateY(-210px) translateZ(115px) translateX(50px) translateY(5px) translateZ(5px)rotateX(30deg)
+        transform:translateY(-210px) translateZ(115px) translateX(50px) translateY(5px) translateZ(5px)rotateX(30deg);
     }
     .headlight9{
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 0 10px 20px 10px;
-        border-color: transparent transparent #007bff transparent;
-        background: none;
-        transform:translateY(-210px) translateZ(115px) translateX(50px) translateY(5px) translateZ(-5px) rotateX(-30deg)
+        transform:translateY(-210px) translateZ(115px) translateX(50px) translateY(5px) translateZ(-5px) rotateX(-30deg);
     }
     .headlight10{
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 0 10px 20px 10px;
-        border-color: transparent transparent #007bff transparent;
-        background: none;
-        transform:translateY(-210px) translateZ(115px) translateX(50px) translateY(5px) translateX(5px) rotateY(90deg) rotateX(30deg)
+        transform:translateY(-210px) translateZ(115px) translateX(50px) translateY(5px) translateX(5px) rotateY(90deg) rotateX(30deg);
     }
     .headlight11{
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 0 10px 20px 10px;
-        border-color: transparent transparent #007bff transparent;
-        background: none;
-        transform:translateY(-210px) translateZ(115px) translateX(50px) translateY(5px) translateX(-5px) rotateY(-90deg) rotateX(30deg)
+        transform:translateY(-210px) translateZ(115px) translateX(50px) translateY(5px) translateX(-5px) rotateY(-90deg) rotateX(30deg);
+    }
+    .audioItem01, .audioItem02, .audioItem03{
+        display: none;
     }
     /* 左音箱 位置調整前三個 translateZ(40px)translateX(-120px) translateY(-50px)*/
-    .audioBox{
-        width: 30px;
-        height: 60px;
-        background: url(../images/audio1.png)center no-repeat;background-size:cover;
-        transform:translateZ(40px)translateX(-120px) translateY(-50px)  rotateY(-30deg) translateZ(10px)
+    .audioItem01{
+            .audioBox0{
+            width: 30px;
+            height: 60px;
+            z-index: 1;
+            background: url(../images/audio1.png)center no-repeat;
+            background-size:cover;
+            transform:translateZ(40px)translateX(-120px) translateY(-50px)  rotateY(-30deg) translateZ(10px);
+        }
+        .audioBox1{
+            width: 30px;
+            height: 60px;
+            background: #000;
+            transform:translateZ(40px)translateX(-120px) translateY(-50px) rotateY(-30deg) translateZ(-10px)
+        }
+        .audioBox2{
+            width: 20px;
+            height: 60px;
+            background: #000;
+            transform:translateZ(40px)translateX(-120px) translateY(-50px) rotateY(-30deg) translateX(-15px) rotateY(90deg)
+        }
+        .audioBox3{
+            width: 20px;
+            height: 60px;
+            background: #000;
+            transform:translateZ(40px)translateX(-120px) translateY(-50px) rotateY(-30deg) translateX(15px) rotateY(90deg)
+        }
+        .audioBox4{
+            width: 30px;
+            height: 20px;
+            background: #000;
+            transform:translateZ(40px)translateX(-120px) translateY(-50px)  translateY(-30px) rotateY(-30deg) rotateX(90deg)
+        }
+        /* 右音箱 位置調整前三個 translateZ(40px)translateX(120px) translateY(-50px)*/
+        .audioBox5{
+            width: 30px;
+            height: 60px;
+            z-index: 1;
+            background: url(../images/audio1.png)center no-repeat;background-size:cover;
+            transform:translateZ(40px)translateX(120px) translateY(-50px)  rotateY(30deg) translateZ(10px)
+        }
+        .audioBox6{
+            width: 30px;
+            height: 60px;
+            background: #000;
+            transform:translateZ(40px)translateX(120px) translateY(-50px) rotateY(30deg) translateZ(-10px)
+        }
+        .audioBox7{
+            width: 20px;
+            height: 60px;
+            background: #000;
+            transform:translateZ(40px)translateX(120px) translateY(-50px) rotateY(30deg) translateX(-15px) rotateY(90deg)
+        }
+        .audioBox8{
+            width: 20px;
+            height: 60px;
+            background: #000;
+            transform:translateZ(40px)translateX(120px) translateY(-50px) rotateY(30deg) translateX(15px) rotateY(90deg)
+        }
+        .audioBox9{
+            width: 30px;
+            height: 20px;
+            background: #000;
+            transform:translateZ(40px)translateX(120px) translateY(-50px)  translateY(-30px) rotateY(30deg) rotateX(90deg);
+        }
     }
-    .audioBox1{
-        width: 30px;
-        height: 60px;
-        background: #000;
-        transform:translateZ(40px)translateX(-120px) translateY(-50px) rotateY(-30deg) translateZ(-10px)
+    .audioItem02{
+        .audioBox0{
+            width: 20px;
+            height: 100px;
+            z-index: 1;
+            background: url(../images/audio2.png)center no-repeat;
+            background-size:cover;
+            transform:translateZ(40px)translateX(-115px) translateY(-70px)  rotateY(-30deg) translateZ(10px);
+        }
+        .audioBox1{
+            width: 20px;
+            height: 100px;
+            background: #000;
+            transform:translateZ(40px)translateX(-120px) translateY(-70px) rotateY(-30deg) translateZ(-10px)
+        }
+        .audioBox2{
+            width: 20px;
+            height: 100px;
+            background: #000;
+            transform:translateZ(10px)translateX(-115px) translateY(-70px) rotateY(-30deg) translateX(-15px) rotateY(90deg)
+        }
+        .audioBox3{
+            width: 20px;
+            height: 100px;
+            background: #000;
+            transform:translateZ(40px)translateX(-120px) translateY(-70px) rotateY(-30deg) translateX(15px) rotateY(90deg)
+        }
+        .audioBox4{
+            width: 30px;
+            height: 20px;
+            background: #000;
+            transform:translateZ(40px)translateX(-120px) translateY(-70px)  translateY(-30px) rotateY(-30deg) rotateX(90deg)
+        }
+        /* 右音箱 位置調整前三個 translateZ(40px)translateX(120px) translateY(-50px)*/
+        .audioBox5{
+            width: 20px;
+            height: 100px;
+            z-index: 1;
+            background: url(../images/audio2.png)center no-repeat;background-size:cover;
+            transform:translateZ(40px)translateX(120px) translateY(-70px)  rotateY(30deg) translateZ(10px)
+        }
+        .audioBox6{
+            width: 20px;
+            height: 100px;
+            background: #000;
+            transform:translateZ(40px)translateX(120px) translateY(-70px) rotateY(30deg) translateZ(-10px)
+        }
+        .audioBox7{
+            width: 20px;
+            height: 100px;
+            background: #000;
+            transform:translateZ(40px)translateX(125px) translateY(-70px) rotateY(30deg) translateX(-15px) rotateY(90deg)
+        }
+        .audioBox8{
+            width: 20px;
+            height: 100px;
+            background: #000;
+            transform:translateZ(40px)translateX(110px) translateY(-70px) rotateY(30deg) translateX(15px) rotateY(90deg)
+        }
+        .audioBox9{
+            width: 30px;
+            height: 20px;
+            background: #000;
+            transform:translateZ(40px)translateX(120px) translateY(-70px)  translateY(-30px) rotateY(30deg) rotateX(90deg);
+        }
     }
-    .audioBox2{
-        width: 20px;
-        height: 60px;
-        background: #000;
-        transform:translateZ(40px)translateX(-120px) translateY(-50px) rotateY(-30deg) translateX(-15px) rotateY(90deg)
+    .audioItem03{
+        .audioBox0{
+            width: 40px;
+            height: 70px;
+            z-index: 1;
+            background: url(../images/audio3.png)center no-repeat;
+            background-size:cover;
+            transform:translateZ(40px)translateX(-115px) translateY(-55px)  rotateY(-30deg) translateZ(10px);
+        }
+        .audioBox1{
+            width: 40px;
+            height: 70px;
+            background: #000;
+            transform:translateZ(-10px)translateX(-120px) translateY(-55px) rotateY(-30deg) translateZ(-10px)
+        }
+        .audioBox2{
+            width: 40px;
+            height: 70px;
+            background: #000;
+            transform:translateZ(10px)translateX(-115px) translateY(-55px) rotateY(-30deg) translateX(-15px) rotateY(90deg)
+        }
+        .audioBox3{
+            width: 40px;
+            height: 70px;
+            background: #000;
+            transform:translateZ(30px)translateX(-110px) translateY(-55px) rotateY(-30deg) translateX(15px) rotateY(90deg)
+        }
+        .audioBox4{
+            width: 40px;
+            height: 40px;
+            background: #000;
+            transform:translateZ(40px)translateX(-120px) translateY(-70px)  translateY(-30px) rotateY(-30deg) rotateX(90deg)
+        }
+        /* 右音箱 位置調整前三個 translateZ(40px)translateX(120px) translateY(-50px)*/
+        .audioBox5{
+            width: 40px;
+            height: 70px;
+            z-index: 1;
+            background: url(../images/audio3.png)center no-repeat;background-size:cover;
+            transform:translateZ(40px)translateX(120px) translateY(-55px)  rotateY(30deg) translateZ(10px)
+        }
+        .audioBox6{
+            width: 40px;
+            height: 70px;
+            background: #000;
+            transform:translateZ(10px)translateX(120px) translateY(-55px) rotateY(30deg) translateZ(-10px)
+        }
+        .audioBox7{
+            width: 40px;
+            height: 70px;
+            background: #000;
+            transform:translateZ(40px)translateX(110px) translateY(-55px) rotateY(30deg) translateX(-15px) rotateY(90deg)
+        }
+        .audioBox8{
+            width: 40px;
+            height: 70px;
+            background: #000;
+            transform:translateZ(30px)translateX(120px) translateY(-55px) rotateY(30deg) translateX(15px) rotateY(90deg)
+        }
+        .audioBox9{
+            width: 40px;
+            height: 40px;
+            background: #000;
+            transform:translateZ(40px)translateX(120px) translateY(-70px)  translateY(-30px) rotateY(30deg) rotateX(90deg);
+        }
     }
-    .audioBox3{
-        width: 20px;
-        height: 60px;
-        background: #000;
-        transform:translateZ(40px)translateX(-120px) translateY(-50px) rotateY(-30deg) translateX(15px) rotateY(90deg)
+    
+    .poleItem{
+        width: 15px;
+        height: 150px;
+        background: url(../images/customized/cust_stage_audioAndPole/pole_select.png)center no-repeat;background-size:cover;
+        transform: translateZ(0px)translateX(0px) translateY(-90px)  rotateY(0deg);
     }
-    .audioBox4{
-        width: 30px;
-        height: 20px;
-        background: #000;
-        transform:translateZ(40px)translateX(-120px) translateY(-50px)  translateY(-30px) rotateY(-30deg) rotateX(90deg)
+    // 鋼管
+    .pole1, .pole2, .pole3{
+        display: none;
     }
-    /* 右音箱 位置調整前三個 translateZ(40px)translateX(120px) translateY(-50px)*/
-    .audioBox5{
-        width: 30px;
-        height: 60px;
-        background: url(../images/audio1.png)center no-repeat;background-size:cover;
-        transform:translateZ(40px)translateX(120px) translateY(-50px)  rotateY(30deg) translateZ(10px)
+    .pole2{
+        & :first-child{
+            transform: translateX(50px) translateY(-90px);
+        }
+        & :last-child{
+            transform: translateX(-50px) translateY(-90px);
+        }
     }
-    .audioBox6{
-        width: 30px;
-        height: 60px;
-        background: #000;
-        transform:translateZ(40px)translateX(120px) translateY(-50px) rotateY(30deg) translateZ(-10px)
+    .pole3{
+        & :first-child{
+            transform: translateX(100px) translateY(-90px);
+        }
+        & :nth-child(2){
+            transform: translateX(50px) translateY(-90px);
+        }
+        & :nth-last-child(2){
+            transform: translateX(-50px) translateY(-90px);
+        }
+        & :last-child{
+            transform: translateX(-100px) translateY(-90px);
+        }
     }
-    .audioBox7{
-        width: 20px;
-        height: 60px;
-        background: #000;
-        transform:translateZ(40px)translateX(120px) translateY(-50px) rotateY(30deg) translateX(-15px) rotateY(90deg)
+    // 特效
+    .fireEffect01, .fireEffect02, .fireEffect03{
+        display: none;
     }
-    .audioBox8{
-        width: 20px;
-        height: 60px;
-        background: #000;
-        transform:translateZ(40px)translateX(120px) translateY(-50px) rotateY(30deg) translateX(15px) rotateY(90deg)
+    .fireEffect01{
+        img{
+            padding: 0px 30px;
+            width: 60px;
+            transform: translateZ(0px)translateX(0px) translateY(-85px)  rotateY(0deg);
+        }
     }
-    .audioBox9{
-        width: 30px;
-        height: 20px;
-        background: #000;
-        transform:translateZ(40px)translateX(120px) translateY(-50px)  translateY(-30px) rotateY(30deg) rotateX(90deg)
+    .fireEffect02{
+        img{
+            padding: 0px 30px;
+            width: 30px;
+            transform: translateZ(0px)translateX(0px) translateY(-55px)  rotateY(0deg);
+        }
     }
-    img{
-        width: 80px;
-        position: absolute;
-        top:0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-        animation: turn2 6s alternate infinite;
+    .fireEffect03{
+        img{
+            padding: 0;
+            width: 120px;
+            transform: translateZ(0px)translateX(0px) translateY(-80px)  rotateY(0deg);
+        }
     }
-    .img2{
-        width: 80px;
-        position: absolute;
-        top:0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-        animation: turn3 6s alternate infinite;
+    .fireworkEffect01, .fireworkEffect02, .fireworkEffect03{
+        display: none;
+        img{
+            position: absolute;
+            width: 200px;
+            z-index: -1;
+        }
+    }
+    .fireworkEffect01{
+        & :first-child{
+            transform: translateZ(0px)translateX(50px) translateY(-235px)  rotateY(0deg);
+        }
+        & :nth-child(2){
+            transform: translateZ(0px)translateX(-210px) translateY(-260px)  rotateY(0deg);
+        }
+        & :last-child{
+            transform: translateZ(0px)translateX(-230px) translateY(-155px)  rotateY(0deg);
+        }
+    }
+    .fireworkEffect02{
+        & :first-child{
+            transform: translateZ(0px)translateX(50px) translateY(-255px)  rotateY(0deg);
+        }
+        & :nth-child(2){
+            transform: translateZ(0px)translateX(-220px) translateY(-265px)  rotateY(0deg);
+        }
+        & :nth-child(3){
+            transform: translateZ(0px)translateX(60px) translateY(-105px)  rotateY(0deg);
+        }
+        & :nth-child(4){
+            transform: translateZ(0px)translateX(90px) translateY(-205px)  rotateY(0deg);
+        }
+        & :nth-child(5){
+            transform: translateZ(0px)translateX(-200px) translateY(-245px)  rotateY(0deg);
+        }
+        & :last-child{
+            transform: translateZ(0px)translateX(-230px) translateY(-155px)  rotateY(0deg);
+        }
+    }
+    .fireworkEffect03{
+        & :first-child{
+            transform: translateZ(0px)translateX(30px) translateY(-245px)  rotateY(0deg);
+        }
+        & :nth-child(2){
+            transform: translateZ(0px)translateX(-190px) translateY(-265px)  rotateY(0deg);
+        }
+        & :nth-child(3){
+            transform: translateZ(0px)translateX(0px) translateY(-205px)  rotateY(0deg);
+        }
+        & :last-child{
+            transform: translateZ(0px)translateX(-210px) translateY(-155px)  rotateY(0deg);
+        }
     }
 }
+
 // 客製舞台步驟
 .custStageStep{
     margin: auto;
@@ -840,6 +1037,7 @@
     border-radius: 8px;
 }
 .caleHeader{
+    position: relative;
     text-align: center;
     h3{
         padding-top: 10px;
@@ -848,117 +1046,58 @@
     }
     h4{
         padding-top: 5px;
-        font-size: 18px;
+        font-size: 20px;
         color: #fff;
+    }
+    #prevMon, #nextMon{
+        cursor: pointer;
+        font-size: 22px;
+        color: #fff;
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        top: 50%;
+    }
+    #prevMon{
+        left: 10%;
+    }
+    #nextMon{
+        right: 10%;
     }
 }
 .caleList ul{
-	width:100%;
-	font-family:arial;
-	font-weight:bold;
-    font-size:14px;
+    width:100%;
+    font-size:18px;
+    display: flex;
+    flex-wrap: wrap;
     li{
-        width:14.28%;
-        height:36px;
-        line-height:36px;
-        list-style-type:none;
+        width: calc(100%/7);
+        height:40px;
+        line-height:40px;
         display:block;
         box-sizing:border-box;
-        float:left;
+        // float:left;
         text-align:center;
     }
 }
-.weekday{
+.weekdate{
+    color: #fff;
+}
+.dayBefore{
 	color:#a8a8a8;
 }
 .available{
-	color:#565656;
+    color:#fff;
+    li{
+        cursor: pointer;
+    }
+    
+}
+.choice{
+    border-radius: 8px;
+	background-color: #f7539c;
 }
 
-.choice{
-	border:1px solid #6ac13c;
-	background:#e9f8df;
-}
-// .date{
-//     box-shadow: 1px 2px 10px #000;
-//     background-color: #403a60;
-//     width: 320px;
-//     height: 360px;
-//     margin: 20px auto;
-//     border-radius: 10px;
-// }
-// .selectDate{
-//     padding-top: 20px;
-//     color: #fff;
-//     display: flex;
-//     justify-content: space-around;
-//     select{
-//         background-color: #fff;
-//         border-radius: 4px;
-//         font-family: wangHangMing;
-//         color: #403a60;
-//         font-size: 16px;
-//     }
-// }
-// .caleHeader{
-//     padding-top: 10px;
-//     text-align: center;
-//     color: #fff;
-//     h5{
-//         font-size: $buttonWord; 
-//         &::before, &::after{
-//             content: "";
-//             display: inline-block;
-//             position: relative;
-//             width: 10px;
-//             height: 10px;
-//             border-left: 2px solid #fff;
-//             border-bottom: 2px solid #fff;
-//             vertical-align: middle;
-//             cursor: pointer;
-//         }
-//         &::before{
-//             right: 90px;
-//             transform: rotate(45deg);
-//         }
-//         &::after{
-//             left: 90px;
-//             transform: rotate(-135deg);
-//         }
-//     }
-// }
-// .calendar{
-//     color: #fff;
-//     table{
-//         margin: 20px auto;
-//         width: 280px;
-//         height: 250px;
-//         text-align: center;
-//         font-size: 16px;
-//         td{
-//             cursor: pointer;
-//         }
-//     }
-// }
-// .fullApply{
-//     color: #6e688e;
-// }
-// .choice{
-//     position: relative;
-//     z-index: 2;
-//     &::before{
-//         content: "";
-//         position: absolute;
-//         bottom:13px;
-//         left: 3px;
-//         z-index: -1;
-//         display: block;
-//         background-color: #f7539c;
-//         width: 35px;
-//         height: 35px;
-//         border-radius: 50%;
-//     }
-// }
 .infoNLoc{
     padding-top: 20px;
     width: 80%;
@@ -1005,7 +1144,7 @@
 //tablet
 @media screen and (min-width:768px) {
     .dateNLoc{
-        padding-top: 20px;
+        padding: 40px 0px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -1034,46 +1173,34 @@
     }
 }
 @media screen and (min-width:992px){
-    // .date{
-    //     padding-top: 30px;
-    //     width: 480px;
-    //     height: 530px;
-    // }
-    // .selectDate{
-    //     font-size: $thrTitleWord;
-    //     select{
-    //         font-size: $thrTitleWord;
-    //     }
-    // }
-    // .caleHeader{
-    //     h5{
-    //         font-size: $thrTitleWord; 
-    //         &::before, &::after{
-    //             width: 20px;
-    //             height: 20px;
-    //             border-left: 3px solid #fff;
-    //             border-bottom: 3px solid #fff;
-    //         }
-    //     }
-    // }
-    // .calendar{
-    //     color: #fff;
-    //     table{
-    //         width: 400px;
-    //         height: 360px;
-    //         font-size: 24px;
-    //     }
-    // }
-    // .choice{
-    //     &::before{
-    //         bottom:17px;
-    //         left: 5px;
-    //         width: 50px;
-    //         height: 50px;
-    //     }
-    // }
-    .infoNLoc{
+    // calendar
+    .calendar{
+        width:450px;
+        height:490px;
+    }
+    .caleHeader{
+        padding-bottom: 10px;
+        h3{
+            padding-top: 20px;
+            font-size: $thrTitleWord;
+        }
+        h4{
+            padding-top: 10px;
+            font-size: 22px;
+        }
+        #prevMon, #nextMon{
+            font-size: $subTitleWord;
+        }
+    }
+    .caleList ul{
+        font-size: 26px;
+        li{
+            height: 60px;
+            line-height: 60px;
+        }
+    }
 
+    .infoNLoc{
         width: 45%;
         margin: 0 auto;
         p{
@@ -1112,7 +1239,7 @@
 @media screen and (min-width:1200px){
     .dateNLoc{
         width: 1200px;
-        height: 660px;
+        padding: 30px 0px 25px; 
         margin: auto;
     }  
 }
@@ -1211,7 +1338,7 @@
 }
 @media screen and (min-width:1200px){
     .hostInfo{
-        height: 540px;
+        height: 530px;
     }
     .sliderBox{
         width: 1200px;
@@ -1220,7 +1347,6 @@
 // 訂單資訊
 .orderDateNloc{
     margin: auto;
-    padding-top: 20px;
     width: 80%;
     font-size: 18px;
     color: #fff;
@@ -1267,8 +1393,7 @@
     display: flex;
     align-items: center;
     img{
-        width:40%;
-        height: 40%;
+        width:35%;
     }
     ul{
         padding-left: 15px;
@@ -1318,11 +1443,7 @@
         }
     }
     .orderInfo{
-        height: 660px;
-    }
-    .orderInfo{
         width: 1200px;
-        padding-top: 20px;
     }
     .orderStage{
         transform: scale(0.75);
@@ -1337,7 +1458,10 @@
 
 
 
-
+// 被選擇
+.custItemSelect{
+    opacity: .5;
+}
 
 //隱藏
 .disN{
