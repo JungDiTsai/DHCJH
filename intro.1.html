@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="css/rollStyle.css">
     <link rel="stylesheet" href="css/intro.css">
     <!-- font awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -12,14 +13,9 @@
     <link rel="stylesheet" href="css/index.css">
     <!-- font awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">.
-    <style type="text/css">
-        canvas {
-            display: block;
-        }
-    </style>
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
-<body onload="draw();">
+<body>
     <input type="checkbox" id=menu_control>
     <header>    
         <!-- 放bar選單 -->
@@ -116,13 +112,68 @@
         <div><a class="backLogin">回到登入</a></div>
     </div>
 
-    <!-- intro first scene-->	
-    
-    <div id="canvasScene"></div>
-
+    <!-- beauty pageant -->	
+    <div id='wrapper'>
+        <div id='scroller'> <!-- For iScroll functionality -->
+            
+            <div id='layer1' class='layer hide' data-params='30,600,200'> <!-- Each layer of depth defined by class "layer" -->
+                <div class='yellow dot'>
+                    <div class='content'>
+                        <h4>2019 世界花車選美金牌</h4>
+                    </div>
+                </div>
+                <div class='green dot'>
+                    <div class='content'>
+                        <h4>2018 亞洲花車選美金牌</h4>
+                    </div>
+                </div>
+                <div class='blue dot'>
+                    <div class='content'>
+                        <h4>2017 品牌創立之初</h4>
+                    </div>
+                </div>
+            </div>
+            <div id='layer2' class='green layer hide' data-params='500,1600,10000'>
+                <h4>感謝有這個機會讓「台灣car好」能代表台灣參加世界選美，
+                        並在72個國家596支參賽隊伍中奪的金牌，這份殊榮不只是
+                        肯定我們團隊，也證明了台灣文化的魅力。</h4>
+            </div>
+            <div id='layer3' class='blue layer hide' data-params='1500,10000,800'>
+                <h4>草創初期之活動</h4>
+            </div>
+            
+        </div> <!-- scroller -->
+    </div> <!-- wrapper -->
+        <script src="js/pushIn.js" type="text/javascript"></script>
+    <div class="clear"></div>
     <!-- -----團隊介紹---------------- --> 
     
-  
+    <div class="introTime">
+        <h2 class="titleBgi introTimeTitle">團隊介紹</h2>   
+       <div class="introStage">
+       
+           <div class="people">
+               <img class="peopleFirst" src="../images/intro/intropeople1-1.png" alt="">
+                <img class="peopleSec" src="../images/intro/intropeople2-1.png" alt="">
+                <img class="peopleThree" src="../images/intro/intropeople3-1.png" alt="">
+                <img class="peopleFourth" src="../images/intro/intropeople4-1.png" alt="">
+                <img class="peopleFiv" src="../images/intro/intropeople5-1.png" alt="">
+
+            </div>
+            <!-- 跑馬燈 -->
+            <div class="led">
+                <marquee direction="right" height="30" scrollamount="5" behavior="alternate">團隊介紹</marquee>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <script>
         
         /* 登入燈箱 JS*/
@@ -244,14 +295,7 @@
             
         }
     </script>
+    <script>
+    </script>
 </body>
-<script src="js/three.js"></script>
-<script src="js/loaders/OBJLoader.js"></script>
-<script src="js/loaders/MTLLoader.js"></script>
-<script src="js/controls/OrbitControls.js"></script>
-<script src="js/libs/stats.min.js"></script>
-<script src="js/libs/dat.gui.min.js"></script>
-<script src="js/libs/Tween.js"></script>
-<script src="js/Projector.js"></script>
-<script src="js/introthree.js"></script>
 </html>
