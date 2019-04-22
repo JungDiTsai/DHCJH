@@ -1,10 +1,11 @@
 .registeredBox{
     display: none;
-    max-width: 500px;
+    max-width: 450px;
     height: 500px;
-    background: $loginBackColor;
+    background: #fff;
+    border:5px solid $loginBackColor;
     position: fixed;
-    top:0;
+    top:50px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -12,29 +13,30 @@
     z-index: 1;
     border-radius: 10px;
     box-sizing: border-box;
-    box-shadow: 0 0 10px #fff;
+    box-shadow: 0 0 10px $loginBackColor;
+    box-shadow:0 0 10px  #666 inset;
     padding:25px;
     text-align: center;
     .fa-times{
-        color:#fff;
+        color:$loginBackColor;
         position: absolute;
         right: 10px;
         top: 10px;
         cursor: pointer;
         &:hover{
-            color:rgb(243, 210, 23);
+            color:#000;
         }
     }
     h3{
         margin: 0;
         font-size: $thrTitleWord;
-        color:#fff;
+        color:$loginBackColor;;
     }
     table{
         width: 100%;
         margin: 20px auto;
         border: 1px solid #fff;
-        color:#fff;
+        color:$loginBackColor;;
         .prompt{
             font-size:12px;
             color:rgb(226, 111, 111);
@@ -42,11 +44,12 @@
         td,th{
             padding:5px;
         }
-        .commonBtn{
+        .commonBtnSmall{
             margin: 10px;
             width: 100px;
             height: 50px;
             border-radius: 5px;
+            line-height: 50px;
         }
         label{
             margin-right:30px;
@@ -57,14 +60,14 @@
                 z-index: -1;
             }
             input:checked+i{
-                color:yellow;
+                color:rgb(40, 24, 134);
             }
             i:hover{cursor: pointer;}
         }
     }
     div{
         margin-top: 50px;
-        color: #fff;
+        color: $loginBackColor;;
         input{
             margin-left: 20px;
         }

@@ -12,7 +12,7 @@ $('.owl-carousel').owlCarousel({
   autoplayHoverPause: true,
   nav:false,
   autoplayTimeout: 1000,
-  center:true,
+  // center:true,
   responsive:{
       0:{
           items:3
