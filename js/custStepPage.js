@@ -1,181 +1,7 @@
-// $(document).ready(function(){
-//     //四大步驟更換
-//     // var _index = 0;
-//     $('.btnCustStep').click(function(){
-//         // _index = $(this).index();
-//         $(this).addClass('custSelected').siblings().removeClass('custSelected');
-//     });
-
-// // 如果點選步驟，就增加--，移除--
-// $('#custStage').click(function(){
-//     $('.hostInfo, .dateNLoc, .orderInfo').addClass('disN');
-//     $('.custStageStep, .stage').removeClass('disN');
-// });
-// $('#custDate').click(function(){
-//     $('.custStageStep, .stage, .hostInfo, .orderInfo').addClass('disN');
-//     $('.dateNLoc').removeClass('disN');
-// });
-// $('#custHost').click(function(){
-//     $('.custStageStep, .stage, .dateNLoc, .orderInfo').addClass('disN');
-//     $('.hostInfo').removeClass('disN');
-// });
-// $('#custInfo').click(function(){
-//     $('.custStageStep, .stage, .dateNLoc, .hostInfo').addClass('disN');
-//     $('.orderInfo').removeClass('disN');
-// });
-
-// //客製舞台步驟更換
-// $('.btnCustStageStep').click(function(){
-//     $(this).addClass('custStageSelected').siblings().removeClass('custStageSelected');
-// });
-
-// // 如果點選客製舞台步驟，就增加--，移除--
-// $('#stagePattern').click(function(){
-//     $('.audioPoleItem, .lightItem, .effectItem, .danceItem, .subtitleItem').addClass('disN');
-//     $('.patternItem').removeClass('disN');
-// });
-// $('#stageAudio').click(function(){
-//     $('.patternItem, .lightItem, .effectItem, .danceItem, .subtitleItem').addClass('disN');
-//     $('.audioPoleItem').removeClass('disN');
-// });
-// $('#stageLight').click(function(){
-//     $('.patternItem, .audioPoleItem, .effectItem, .danceItem, .subtitleItem').addClass('disN');
-//     $('.lightItem').removeClass('disN');
-// });
-// $('#stageEffect').click(function(){
-//     $('.patternItem, .audioPoleItem, .lightItem, .danceItem, .subtitleItem').addClass('disN');
-//     $('.effectItem').removeClass('disN');
-// });
-// $('#stageDance').click(function(){
-//     $('.patternItem, .audioPoleItem, .lightItem, .effectItem, .subtitleItem').addClass('disN');
-//     $('.danceItem').removeClass('disN');
-// });
-// $('#stageSubtitle').click(function(){
-//     $('.patternItem, .audioPoleItem, .lightItem, .effectItem, .danceItem').addClass('disN');
-//     $('.subtitleItem').removeClass('disN');
-// });
-    
-    
-//     //內塗裝點選下一步
-//     if($('#stagePattern').hasClass('custStageSelected')){
-//         $('.nextStep').click(function(){
-//             //重新選擇變成上一步
-//             $('.previousStep').text('上一步');
-//             //跳轉音響鋼管頁面
-//             $('.patternItem, .lightItem, .effectItem, .danceItem, .subtitleItem').addClass('disN');
-//             $('.audioPoleItem').removeClass('disN');
-//             //滅燈亮燈
-//             $('#stagePattern').removeClass('custStageSelected').next().addClass('custStageSelected');
-//             console.log("01");
-//         })
-//     }
-
-//     // //音響鋼管點選下一步
-//     if($('#stageAudio').hasClass('custStageSelected')){
-//         $('.nextStep').click(function(){
-//             //跳轉燈光頁
-//             $('.patternItem, .audioPoleItem, .effectItem, .danceItem, .subtitleItem').addClass('disN');
-//             $('.lightItem').removeClass('disN');
-//             //滅燈亮燈
-//             $('#stagePattern').removeClass('custStageSelected').next().addClass('custStageSelected');
-//             console.log("02");
-//         })
-//     }
-// });
-
-// ======================================================
-//客製步驟功能
-// ======================================================
-// var index = 0;
-// var temp = 0;
-// $(document).ready(function(){
-//     $('.dateNLoc, .hostInfo, .orderInfo').addClass('disN');
-//     $('.audioPoleItem, .lightItem, .effectItem, .danceItem, .subtitleItem').addClass('disN');
-//     $('.previousStep').text('重新選擇');
-//     $('.nextStep').text('下一步');
-//     // 上一步
-//     $('.previousStep').bind('click', function(){
-//         index = temp;
-//         index--;
-//         temp = index;
-//         console.log(index);
-//         controlContent(index);
-//     });
-//     // 下一步
-//     $('.nextStep').bind('click', function(){
-//         index = temp;
-//         index++;
-//         temp = index;
-//         console.log(index);
-//         controlContent(index);
-//     });
-
-//     //讓點選index與下方共用
-//     $('.btnCustStageStep').click(function(index){
-//         temp = index = $(this).index();
-//         console.log(index);
-//         $(this).addClass('custStageSelected').siblings().removeClass('custStageSelected');
-//         controlContent(index);
-//     });
-    
-//     $('.btnCustStep').click(function(){
-//         index = $(this).index();
-//         if(index > 0){
-//             index = index+5;
-//         }else{
-//             index = index;
-//         }
-//         $(this).addClass('custSelected').siblings().removeClass('custSelected');
-//         controlContent(index);
-//         temp = index;
-//     });
-    
-// });
-
-
-// function controlContent(index){
-//     var stepContents = ["patternItem", "audioPoleItem", "lightItem", "effectItem", "danceItem", "subtitleItem", "dateNLoc", "hostInfo", "orderInfo"];
-//     var key;
-//     for (key in stepContents){
-//         var stepContent = stepContents[key];
-//         if (key == index ){
-//             if( stepContent == "patternItem"  ){
-//                 $('.previousStep').text('重新選擇');
-//             }else{
-//                 $('.previousStep').text('上一步');
-//             }
-//             if( stepContent == 'orderInfo'){
-//                 $('.nextStep').text('結帳');
-//             }else{
-//                 $('.nextStep').text('下一步');
-//             }
-//             if(index < 6){
-//                 $('.custStage').removeClass('disN');
-//                 $(`.${stepContent}`).removeClass('disN');
-//                 $(`.custStageStep${key}`).addClass('custStageSelected');
-//                 $('.custStep0').addClass('custSelected');
-//                 $(".custStep6, .custStep7, .custStep8").removeClass('custSelected');
-//             }else
-//                 $('.custStage').addClass('disN');
-//                 $(`.${stepContent}`).removeClass('disN');
-//                 $(`.custStep${key}`).addClass('custSelected');
-//         }else{
-//             if( index < 6 ){
-//                 $(`.${stepContent}`).addClass('disN');
-//                 $(`.custStageStep${key}`).removeClass('custStageSelected');
-//             }else{
-//                 $(`.${stepContent}`).addClass('disN');
-//                 $(`.custStep${key}`).removeClass('custSelected');
-//             }
-//         }
-//     }
-// }
-
-
 $(document).ready(function(){
     
     $('.danceItem, .effectItem, .subtitleItem, .audioPoleItem, .dateNLoc, .hostInfo, .orderInfo').addClass('disN');
-
+    
     // 客製花車步驟---start
     var index = 0;
     $('.previousStep').text('重新選擇');
@@ -189,11 +15,13 @@ $(document).ready(function(){
     });
     // 下一步
     $('.nextStep').bind('click', function(){
-        if( index < 3 ){
+        if( index <= 2 ){
             index++;
             controlContent(index);
         }
-        
+        else if( index == 3){
+            location.href ='checkout.html';
+        }
     });
 
     //讓點選index與下方共用
@@ -245,6 +73,83 @@ $(document).ready(function(){
         }
     });
     // 客製花車內容步驟tab---end
+
+    // ======================================================
+    // 客製化流程
+    // ======================================================
+
+    // 特效-----火
+    $('#fireEffect01').click(function(){
+        $('.fireEffect01').fadeToggle(1000);
+        $('.fireEffect02, .fireEffect03').hide();
+        $(this).toggleClass('custItemSelect').siblings().removeClass('custItemSelect');
+    })
+    $('#fireEffect02').click(function(){
+        $('.fireEffect02').fadeToggle(1000);
+        $('.fireEffect01, .fireEffect03').hide();
+        $(this).toggleClass('custItemSelect').siblings().removeClass('custItemSelect');
+    })
+    $('#fireEffect03').click(function(){
+        $('.fireEffect03').fadeToggle(1000);
+        $('.fireEffect01, .fireEffect02').hide();
+        $(this).toggleClass('custItemSelect').siblings().removeClass('custItemSelect');
+    })
+    // 特效-----煙火
+    $('#fireworkEffect01').click(function(){
+        $('.fireworkEffect01').fadeToggle();
+        $('.fireworkEffect02, .fireworkEffect03').hide();
+        $(this).toggleClass('custItemSelect').siblings().removeClass('custItemSelect');
+    })
+    $('#fireworkEffect02').click(function(){
+        $('.fireworkEffect02').fadeToggle();
+        $('.fireworkEffect01, .fireworkEffect03').hide();
+        $(this).toggleClass('custItemSelect').siblings().removeClass('custItemSelect');
+    })
+    $('#fireworkEffect03').click(function(){
+        $('.fireworkEffect03').fadeToggle();
+        $('.fireworkEffect01, .fireworkEffect02').hide();
+        $(this).toggleClass('custItemSelect').siblings().removeClass('custItemSelect');
+    })
+    // 字幕
+    // var subInfo = $.trim($('#subtileItemInfo').val());
+    $('#subInfoSubmit').click(function(){
+        // console.log($.trim($('#subtileItemInfo').val()));
+        $('.subtitles p').html($.trim($('#subtileItemInfo').val()));
+    });
+    // 音響
+    $('#audioItem01').click(function(){
+        $('.audioItem01').toggle();
+        $('.audioItem02, .audioItem03').hide();
+    })
+    $('#audioItem02').click(function(){
+        $('.audioItem02').toggle();
+        $('.audioItem01, .audioItem03').hide();
+    })
+    $('#audioItem03').click(function(){
+        $('.audioItem03').toggle();
+        $('.audioItem01, .audioItem02').hide();
+    })
+    // 鋼管
+    $('#pole1').click(function(){
+        $('.pole1').toggle();
+        $('.pole2, .pole3').hide();
+    })
+    $('#pole2').click(function(){
+        $('.pole2').toggle();
+        $('.pole1, .pole3').hide();
+    })
+    $('#pole3').click(function(){
+        $('.pole3').toggle();
+        $('.pole1, .pole2').hide();
+    })
+
+    //更換日期-----有問題
+    $('.available li').click(function(){
+        $(this).addClass('choice').siblings().removeClass('choice');
+    });
+    // 更改地址
+    $('.map iframe').attr("src", 'https://maps.google.com.tw/maps?f=q&hl=zh-TW&geocode=&q=中央大學資策會&z=16&output=embed&t=');
+    changeLoc();
 });
 
 function controlContent(index){
@@ -273,6 +178,9 @@ function controlContent(index){
         }
     }
 }
+
+
+
 
 // ======================================================
 //日曆
@@ -313,7 +221,7 @@ function refreshDate(){
     }
     for(var i=1; i<=totalDay; i++){
         if((i<my_day && my_year==my_date.getFullYear() && my_month==my_date.getMonth()) || my_year<my_date.getFullYear() || ( my_year==my_date.getFullYear() && my_month<my_date.getMonth())){ 
-            myclass = " class='weekday'"; //当该日期在今天之前时，以浅灰色字体显示
+            myclass = " class='dayBefore'"; //当该日期在今天之前时，以浅灰色字体显示
         }else if (i==my_day && my_year==my_date.getFullYear() && my_month==my_date.getMonth()){
             myclass = " class='choice'"; //当天日期以绿色背景突出显示
         }else{
@@ -344,6 +252,23 @@ nextMon.onclick = function(e){
         my_month = 0;
     }
     refreshDate();
+}
+
+// ======================================================
+// 更改地址
+// ======================================================
+// var loc = $('#locText').val();
+function changeLoc(){
+    // var loc = "tokyo";
+    var loc = $('#locText').val();
+    $('#locBtn').click(function(){
+        alert(loc);
+    })
+    // var locSrc = `https://maps.google.com.tw/maps?f=q&hl=zh-TW&geocode=&q=${$('#locText').val()}&z=16&output=embed&t=`;
+    // $('.locInput :submit').click(function(){
+    //     $('.map iframe').attr("src", locSrc);
+    // })
+    
 }
 
 // ======================================================
