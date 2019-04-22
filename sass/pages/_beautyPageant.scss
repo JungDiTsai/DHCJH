@@ -182,17 +182,18 @@ li{
   .dotpanel{
     position: absolute;
     height:auto;;
-    width: 60px;
-    right: 24px;
+    width: 76px;
+    right: -14px;
     top: 10px;
-    text-align: center;
+    text-align: left;
     // border: 1px solid #f00;
-    background-image: linear-gradient(180deg, transparent, transparent 5%, #fff 100%);
+    background-image: linear-gradient(270deg, transparent, #fff 90%, #fff 100%);
     z-index: 2;
-    border-radius: 0 0 3px 3px;
+    border-radius:3px 0px 0px 3px;
     li{
       z-index: 1;
       cursor: pointer;
+      display: inline-block;
       &:hover{
         color: $logoColor;
       }
@@ -242,7 +243,7 @@ li{
         padding: 0 0 10px 0;
           .beautyDiscIgTopic{
             height: 50px;
-            width: 100%;
+            width: 200%;
             margin-left: 5px;
             .beautyDiscIgMName{
               font-size: 18px;
@@ -257,7 +258,7 @@ li{
               line-height: 25px;
               height: 25px;
               max-width: 100%;
-              color:#666;
+              color:#555;
             }
           }
           img{
