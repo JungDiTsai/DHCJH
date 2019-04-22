@@ -44,7 +44,6 @@
         }
 
         #QrcodeIcon {
-
             position: absolute;
             right: 90px;
             top: -50px;
@@ -62,6 +61,7 @@
                 left: 0;
 
                 p {
+                    width:60px;
                     padding: 0 10px;
                     &:hover {
                         background: rgb(46, 233, 240);
@@ -205,6 +205,7 @@
                 box-sizing: border-box;
 
                 button {
+                    outline: none;
                     width: 100px;
                     height: 50px;
                     cursor: pointer;

@@ -1,8 +1,9 @@
 .forgotBox{
     display: none;
     width: 300px;
-    height: 400px;
-    background: $loginBackColor;
+    height: 370px;
+    background: #fff;
+    border:5px solid $loginBackColor;
     position: fixed;
     top:0;
     left: 0;
@@ -12,12 +13,13 @@
     z-index: 1;
     border-radius: 10px;
     box-sizing: border-box;
-    box-shadow: 0 0 10px #fff;
+    box-shadow: 0 0 10px $loginBackColor;
+    box-shadow:0 0 10px  #666 inset;
     padding:25px;
     text-align: center;
 
     .fa-times{
-        color:#fff;
+        color:$loginBackColor;
         position: absolute;
         right: 10px;
         top: 10px;
@@ -29,17 +31,18 @@
     h3{
         margin: 0;
         font-size: $thrTitleWord;
-        color:#fff;
+        color:$loginBackColor;
     }
     p{
         margin-top: 10px;
-        font-size: 14px;
-        color:rgb(216, 216, 126);
+        font-size: 16px;
+        color:rgb(71, 71, 45);
         
     }
     div{
-        margin-top: 50px;
-        color: #fff;
+        margin-top: 40px;
+        color: $loginBackColor;
+
         input{
             margin-left: 20px;
         }
@@ -50,11 +53,12 @@
             }
         }
     }
-    .commonBtn{
-        margin-top: 30px;
+    .commonBtnSmall{
+        margin-top: 10px;
         width: 100px;
         height: 50px;
         border-radius: 5px;
+        line-height: 50px;
     }
 }
 
