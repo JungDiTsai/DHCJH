@@ -37,29 +37,7 @@
 
 <body>
     <input type="checkbox" id=menu_control>
-    <header>
-        <!-- 放bar選單 -->
-        <label for="menu_control" class="menubtn">
-            <div id="nav-icon2">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </label>
-        <nav class="mainNav">
-            <li class="mainNavCell"><a href="customized_01.html">電子花車客製</a></li>
-            <li class="mainNavCell"><a href="flyer.html">客製化宣傳單</a></li>
-            <h1 class="navLogo"><a href="index.html"><img src="images/logo.png" alt="台灣大舞台"></a></h1>
-            <li class="mainNavCell"><a href="beautyPageant.html">花車選美</a></li>
-            <li class="mainNavCell"><a href="intro.html">花車特色介紹</a></li>
-            <div class="navMemBtn">
-                <i class="far fa-user-circle"></i>
-            </div>
-        </nav>
-    </header>
+    <?php require_once("php/header.php");?>
     <div class="box"></div>
 
     <?php require_once("php/loginLightBox.php");?>

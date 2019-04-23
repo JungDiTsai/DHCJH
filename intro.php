@@ -1,0 +1,375 @@
+<!DOCTYPE html5>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/intro.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet"  href="css/base.css" />
+    <link rel="stylesheet"  href="css/demo.css" />
+</head>
+<body onload="draw();">
+    <input type="checkbox" id=menu_control>
+    <header>    
+        <!-- 放bar選單 -->
+        <label for="menu_control" class="menubtn" >
+            <div id="nav-icon2">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </label>
+        <nav class="mainNav">
+            <li class="mainNavCell"><a href="customized_01.html">電子花車客製</a></li>
+            <li class="mainNavCell"><a href="flyer.html">客製化宣傳單</a></li>
+            <h1 class="navLogo"><a href="index.html"><img src="images/logo.png" alt="台灣大舞台"></a></h1>
+            <li class="mainNavCell"><a href="beautyPageant.html">花車選美</a></li>
+            <li class="mainNavCell"><a href="intro.html">花車特色介紹</a></li>
+            <div class="navMemBtn"> 
+                <i class="far fa-user-circle"></i>
+            </div>
+        </nav>       
+    </header>
+
+    
+    
+    <div class="box"></div>
+    <!-- 登入燈箱 -->
+    <div class="loginBox">
+        <i class="fas fa-times"></i>
+        <h3>登入</h3>
+        <div class="inputBox">
+            <i class="fas fa-user fa-1x"></i><input type="text" id="username" placeholder="User">
+        </div>
+        <div class="inputBox">
+            <i class="fas fa-key fa-1x"></i><input type="password" id="password" placeholder="Password">
+        </div>
+        <a href="memberCenter.html"><button class="commonBtn">登入</button></a>
+        <p><a class="showRegistered">註冊</a> / <a class="showForgotPSW">忘記密碼</a></p>
+    </div>
+    <!-- 註冊燈箱 -->
+    <div class="registeredBox">
+        <i class="fas fa-times"></i>
+        <h3>立即註冊</h3>
+        <table>
+            <tr>
+                <th>會員帳號</th>
+                <td><input type="text"></td>
+            </tr>
+            <tr><td colspan="2" class="prompt"><span>此帳號已有人使用 !</span></td></tr>
+            <tr>
+                <th>會員密碼</th>
+                <td><input type="password"></td>
+            </tr>
+            <tr>
+                <th>會員姓名</th>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <th>會員電話</th>
+                <td><input type="tel"></td>
+            </tr>
+            <tr>
+                <th>會員信箱</th>
+                <td><input type="email"></td>
+            </tr>
+            <tr>
+                <th>性別</th>
+                <td>
+                    <label>
+                        <input type="radio" name="sex" value="">
+                        <i class="fas fa-venus fa-2x"></i>
+                    </label>
+                    <label>
+                        <input type="radio" name="sex" value="">
+                        <i class="fas fa-mars fa-2x"></i>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2"><input type="submit" value="註冊帳號" class="commonBtn"></th>
+            </tr>
+        </table>
+        <div><a class="backLogin">回到登入</a></div>
+    </div>
+    <!-- 忘記密碼燈箱 -->
+    <div class="forgotBox">
+        <i class="fas fa-times"></i>
+        <h3>忘記密碼</h3>
+        <p>請輸入您註冊時的會員信箱，我們會將新的密碼寄至您的信箱。</p>
+        <div>會員信箱<input type="email"></div>
+        <input type="submit" value="寄送密碼" class="commonBtn">
+        <div><a class="backLogin">回到登入</a></div>
+    </div>
+
+    <!-- intro first scene-->	
+    
+    <div id="canvasScene"></div>
+    
+
+    <section class="page-wrapper" id="coidea">
+
+            <div class="slider">
+              
+              <ul class="slider-list">
+                
+                <li class="slider-list__item slider-list__item_active">
+                  <span class="back__element">
+                    <img src="images/intro/stagepurple.png" />
+                  </span>
+                  <span class="main__element">
+                    <!-- <img src="assets/img/ladysteel.png" /> -->
+                  </span>
+                  <span class="front__element">
+                    <img src="images/intro/rocklady.png" />
+                  </span>
+                  <span class="title__element">
+                    <span class="title">2019巴西嘉年華</span>
+                  </span>
+                  <span class="more__element">
+                    <span class="content">
+                      <span class="headline">2019年2月21日</span>
+                      <span class="excerpt">里約熱內盧嘉年華大遊行</span>
+                      <!-- <span class="link">
+                        <div class="fill"></div>
+                        <a href="#">Open catalog</a>
+                      </span> -->
+                    </span>
+                  </span>
+                 </li>
+      
+                <li class="slider-list__item">
+                  <span class="back__element">
+                    <img src="assets/img/back_grapes_001.png" />
+                  </span>
+                  <span class="main__element">
+                    <img src="assets/img/bottle_grapes_001.png" />
+                  </span>
+                  <span class="front__element">
+                    <img src="assets/img/front_grapes_001.png" />
+                  </span>
+                  <span class="title__element">
+                    <span class="title">grapes</span>
+                  </span>
+                  <span class="more__element">
+                    <span class="content">
+                      <span class="headline">2017年2月12日</span>
+                      <span class="excerpt">威尼斯嘉年華會</span>
+                      <!-- <span class="link">
+                        <div class="fill fill-dark"></div>
+                        <a href="#">Open catalog</a>
+                      </span> -->
+                    </span>
+                  </span>
+                 </li>
+      
+                 <li class="slider-list__item">
+                  <span class="back__element">
+                    <img src="assets/img/back_strawberry_003.png" />
+                  </span>
+                  <span class="main__element">
+                    <img src="assets/img/bottle_strawberry_003.png" />
+                  </span>
+                  <span class="front__element">
+                    <img src="assets/img/front_strawberry_003.png" />
+                  </span>
+                  <span class="title__element">
+                    <span class="title">strawberry</span>
+                  </span>
+                  <span class="more__element">
+                    <span class="content">
+                      <span class="headline">2016年2月13日</span>
+                      <span class="excerpt">法國尼斯嘉年華</span>
+                      <!-- <span class="link">
+                          <div class="fill"></div>
+                        <a href="#">Open catalog</a>
+                      </span> -->
+                    </span>
+                  </span>
+                 </li>
+                 
+              </ul>
+              
+              <div class="slider__nav-bar">
+                <a class="nav-control"></a>
+                <a class="nav-control"></a>
+                <a class="nav-control"></a>
+              </div>
+              
+              <div class="slider__controls">
+                <a class="slider__arrow slider__arrow_prev"></a>
+                <a class="slider__arrow slider__arrow_next"></a>
+              </div>
+      
+            </div>      
+      
+          </section>
+
+    <!-- -----團隊介紹---------------- --> 
+    
+    <div class="introTime">
+        <h2 class="titleBgi introTimeTitle">團隊介紹</h2>   
+        <div class="introStage">
+        
+            <div class="people">
+                <img class="peopleFirst" src="../images/intro/intropeople1-1.png" alt="">
+                    <img class="peopleSec" src="../images/intro/intropeople2-1.png" alt="">
+                    <img class="peopleThree" src="../images/intro/intropeople3-1.png" alt="">
+                    <img class="peopleFourth" src="../images/intro/intropeople4-1.png" alt="">
+                    <img class="peopleFiv" src="../images/intro/intropeople5-1.png" alt="">
+
+                </div>
+                <!-- 跑馬燈 -->
+                <div class="led">
+                    <marquee direction="right" height="30" scrollamount="5" behavior="alternate">團隊介紹</marquee>
+                </div>
+            </div>
+        </div>
+    <script>
+    
+    </script>
+  
+    <script>
+        
+        /* 登入燈箱 JS*/
+        // 點擊icon開啟登入燈箱----------------------------
+        document.querySelector('.fa-user-circle').addEventListener('click', function (e){
+            // 顯示登入燈箱
+            let loginBox = document.querySelector('.loginBox');
+            let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
+            if(style=="block"){
+                loginBox.style.setProperty('display',"none");
+                e.target.style.setProperty('color',"#2cffff");
+            }else{
+                loginBox.style.setProperty('display',"block");
+                e.target.style.setProperty('color',"rgb(252, 211, 28)");
+            }
+        })
+        // 點擊關閉----------------------------
+        document.querySelector('.loginBox .fa-times').addEventListener('click', function () {
+            let loginBox = document.querySelector('.loginBox');
+            let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
+            if(style=="block"){
+                loginBox.style.setProperty('display',"none");
+            }
+        })
+        // 點擊註冊------------------------------
+        document.querySelector('.loginBox .showRegistered').addEventListener('click', function () {
+            // 隱藏登入燈箱
+            let loginBox = document.querySelector('.loginBox');
+            loginBox.style.setProperty('display',"none");
+            // 顯示註冊燈箱
+            let registeredBox = document.querySelector('.registeredBox');
+            let style = window.getComputedStyle(registeredBox, null).getPropertyValue('display');
+            if(style=="none"){
+                registeredBox.style.setProperty('display',"block");
+            }
+        })
+        // 點擊忘記密碼------------------------------
+        document.querySelector('.loginBox .showForgotPSW').addEventListener('click', function () {
+            // 隱藏登入燈箱
+            let loginBox = document.querySelector('.loginBox');
+            loginBox.style.setProperty('display',"none");
+            // 顯示忘記密碼燈箱
+            let forgotBox = document.querySelector('.forgotBox');
+            let style = window.getComputedStyle(forgotBox, null).getPropertyValue('display');
+            if(style=="none"){
+                forgotBox.style.setProperty('display',"block");
+            }
+        })
+
+        /* 註冊燈箱 JS*/
+        // 點擊關閉----------------------------
+        document.querySelector('.registeredBox .fa-times').addEventListener('click',function(){
+            let registeredBox = document.querySelector('.registeredBox');
+            let style = window.getComputedStyle(registeredBox, null).getPropertyValue('display');
+            if(style=="block"){
+                registeredBox.style.setProperty('display',"none");
+            }
+        })
+        // 點擊回到登入----------------------------
+        document.querySelector('.registeredBox .backLogin').addEventListener('click',function(){
+            // 隱藏註冊燈箱
+            let registeredBox = document.querySelector('.registeredBox');
+            registeredBox.style.setProperty('display',"none");
+            // 顯示登入燈箱
+            let loginBox = document.querySelector('.loginBox');
+            let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
+            if(style=="none"){
+                loginBox.style.setProperty('display',"block");
+            }
+        })
+
+        /* 忘記密碼燈箱 JS*/
+        // 點擊關閉----------------------------
+        document.querySelector('.forgotBox .fa-times').addEventListener('click',function(){
+            let forgotBox = document.querySelector('.forgotBox');
+            let style = window.getComputedStyle(forgotBox, null).getPropertyValue('display');
+            if(style=="block"){
+                forgotBox.style.setProperty('display',"none");
+            }
+        })
+        // 點擊回到登入----------------------------
+        document.querySelector('.forgotBox .backLogin').addEventListener('click',function(){
+            // 隱藏忘記密碼燈箱
+            let forgotBox = document.querySelector('.forgotBox');
+            forgotBox.style.setProperty('display',"none");
+            // 顯示登入燈箱
+            let loginBox = document.querySelector('.loginBox');
+            let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
+            if(style=="none"){
+                loginBox.style.setProperty('display',"block");
+            }
+        })
+
+        /* 忘記密碼燈箱 JS*/
+        // 點擊關閉----------------------------
+        document.querySelector('.forgotBox .fa-times').addEventListener('click',function(){
+            let forgotBox = document.querySelector('.forgotBox');
+            let style = window.getComputedStyle(forgotBox, null).getPropertyValue('display');
+            if(style=="block"){
+                forgotBox.style.setProperty('display',"none");
+            }
+        })
+        // 點擊回到登入----------------------------
+        document.querySelector('.forgotBox .backLogin').addEventListener('click',function(){
+            // 隱藏忘記密碼燈箱
+            let forgotBox = document.querySelector('.forgotBox');
+            forgotBox.style.setProperty('display',"none");
+            // 顯示登入燈箱
+            let loginBox = document.querySelector('.loginBox');
+            let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
+            if(style=="none"){
+                loginBox.style.setProperty('display',"block");
+            }
+        })
+        
+        //螢幕寬度
+        let screenWidth = document.body.clientWidth;
+        if(screenWidth<=768){
+            
+        }
+    </script>
+</body>
+<script src="js/three.js"></script>
+<script src="js/loaders/OBJLoader.js"></script>
+<script src="js/loaders/MTLLoader.js"></script>
+<script src="js/controls/OrbitControls.js"></script>
+<script src="js/libs/stats.min.js"></script>
+<script src="js/libs/dat.gui.min.js"></script>
+<script src="js/libs/Tween.js"></script>
+<script src="js/Projector.js"></script>
+<script src="js/introthree.js"></script>
+<script src="js/demo.js"></script>
+<script src="js/anime.min.js"></script>
+</html>
