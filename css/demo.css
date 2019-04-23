@@ -214,6 +214,7 @@ body {
   letter-spacing: 0.1em;
   color: #eef2f3;
   text-align: center;
+  text-shadow: 2px 2px salmon;
 }
 .slider-list__item .more__element {
   position: absolute;
