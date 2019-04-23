@@ -126,13 +126,16 @@
     padding-top: 25px;
     font-size: 24px;
     font-family: "wangHangMing"; 
-    img{
+    h1{
+      img{
         position: fixed;
         top: 10px;
         left: 10px;
         width: auto;
         height: 60px;
+      }
     }
+    
     a{text-decoration: none;color: $fontColor;}
     li{
         margin: 30px auto;
@@ -153,15 +156,18 @@
         font-size: 44px;
         height: 44px;
         width: 44px;
-        i{
-            color:$logoColor;
-            position: absolute;
-            cursor: pointer;
-            width: 44px;
-            top: 0;
+        img{
+          cursor: pointer;
+          position: absolute;
+          width: 34px;
+          top: 2px;
+          right: 0;
             &:hover{
-                animation: jitter 1.5s linear infinite;
-            }
+              animation: jitter 1.5s linear infinite;
+          }
+        }
+        p{
+          display: none;
         }
     }
 }
@@ -243,6 +249,7 @@ footer{
             line-height: 16px;
             margin-top:8px; 
             cursor: pointer;
+            display: block;
           }
         }
         li{
