@@ -9,9 +9,10 @@ window.addEventListener("load", function () {
     xhr.onload = function () {
         if (xhr.status == 200) { //server端可以正確的執行
             if(xhr.responseText!="notFound"){
-                LoginState = xhr.responseText;
+                LoginState =  JSON.parse(xhr.responseText);
+                console.log("LoginState:已輸入值")
             }
-            console.log();
+            console.log("Session:"+xhr.responseText)
         } else { //其它
             alert(xhr.status);
         }
@@ -36,8 +37,11 @@ function sendLogin() {
         if (xhr.status == 200) { //server端可以正確的執行
             if(xhr.responseText=="帳號密碼錯誤"){
                 alert(xhr.responseText);
-            }else{
-                console.log(xhr.responseText);
+            }
+            else if(xhr.responseText=="你的帳號已被凍結"){
+                alert(xhr.responseText);
+            }
+            else{
                 window.location.reload();
             }
         } else { //其它

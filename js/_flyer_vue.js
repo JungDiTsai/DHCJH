@@ -3,12 +3,11 @@ new Vue({
    data: {
         message: 'Hello, VueJS!',
         place:"",
-        setting: ["url", 1, 0, "date", 16, 0, "rgb(0,0,0)","place","content","people","join"],
+        setting: ["url", 1, 0,'', 16, 0, "rgb(0,0,0)","place","content",0,0],
         stepIndex:0,
         screenWidth: document.body.clientWidth
    },
    methods: {
-       
         // 檔案上傳
         updateInput(e){
             let file = e.target.files[0];
@@ -42,6 +41,15 @@ new Vue({
        clickSelectBox(){
                 //(1)---------------------------------------將設定寫到資料庫
                 this.setting[0]=document.getElementById('A4page').value;
+                console.log(this.setting);
+                //比對Order 對照訂單
+                let number = 0;
+                for (let i = 0; i < LoginState.length; i++) {
+                    if(LoginState[i][16].search(OrderNo)!= -1){
+                        number = i;
+                    }
+                }
+                console.log("第"+number+"筆訂單");
 
                   //產生XMLHttpRequest物件
                   var xhr = new XMLHttpRequest();
@@ -57,14 +65,13 @@ new Vue({
                   } 
                   //設定好所要連結的程式
                   
-                  var url = "php/components/_upoadSetting.php?flyerSetting=" + JSON.stringify(this.setting) + "&member= " + JSON.stringify(LoginState)+"&OrderNo="+OrderNo;
-                //   console.log("OrderNo:"+OrderNo);
+                  var url = "php/components/_upoadSetting.php?flyerSetting=" + JSON.stringify(this.setting) + "&member= " + JSON.stringify(LoginState[number]);
 
                   xhr.open("get", url, true);
                   //送出資料
                   xhr.send(null);
                 
-                // (2)---------------------------------------上傳檔案
+                // (2)---------------------------------------上傳檔案--(儲存預備圖)
                 //產生XMLHttpRequest物件
                 // var xhr = new XMLHttpRequest();
                 // //註冊callback function
@@ -283,7 +290,8 @@ new Vue({
                     this.stepIndex=3;
                     break;
                 case 3:
-                    if(LoginState!="notFound"){
+                    if(OrderNo!="notFound"){
+                        //會員----------------------------------------------------------------
                         document.getElementById('selectOpen').style.display="block";
                         html2canvas(document.getElementById('A4page')).then(function (canvas) {
                             
@@ -314,6 +322,7 @@ new Vue({
 
                         });
                     }else{
+                        //24小時----------------------------------------------------------------
                         html2canvas(document.getElementById('A4page')).then(function (canvas) {
                             document.getElementById('A4page').appendChild(canvas); //將A4page的物件轉為canvas
                             let img = document.getElementsByTagName('canvas')[0].toDataURL(); //將canvas轉為base64編碼               
@@ -343,7 +352,12 @@ new Vue({
                             //送出資料
                             var data_info = "imgURL=" + img;
                             xhr.send(data_info);
+
+
                         });
+
+                        window.location.hash="#showflyer2";
+
                     }
                     
                     break;
@@ -364,7 +378,7 @@ new Vue({
         //垃圾桶-----------------------------------------
         clickTrash:function(){
             document.getElementById('A4page').innerHTML = '<img src="" alt=""><h5></h5>';
-            setting = ["url", 1, 0, 'date', 16, 0,"rgb(0,0,0)","place","content","people","join"];
+            setting = ["url", 1, 0, '', 16, 0,"rgb(0,0,0)","place","content",0,0];
         },
         //放大-----------------------------------------
         clickPlus(){

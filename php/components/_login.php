@@ -1,11 +1,10 @@
 <?php
 	session_start();
 	require_once("_connectDHC.php");
-	// $memId = $_POST["memId"];   
-	// $memPsw = $_POST["memPsw"];
-	$memId = "test";   
-	$memPsw = "test";
-
+	$memId = $_POST["memId"];   
+	$memPsw = $_POST["memPsw"];
+	// $memId = "test";   
+	// $memPsw = "test";
 	$errMsg = "";
 
 	try {
@@ -24,11 +23,11 @@
 		echo "帳號密碼錯誤";
 	}
 	else{
-		$data = $member->fetchAll(PDO::FETCH_ASSOC);
+		$data = $member->fetchAll();
 		if($data[0]["memState"]==0){ //判斷帳號狀態
-			print_r($data);
-			// echo json_encode($data,true);
-			$_SESSION["member"]=$data;
+			echo json_encode($data);
+
+			$_SESSION["member"]= json_encode($data);
 		}else{
 			echo "你的帳號已被凍結";
 		}

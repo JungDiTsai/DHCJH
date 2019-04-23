@@ -38,31 +38,8 @@
 
 <body>
     <input type="checkbox" id=menu_control>
-    <header>
-        <!-- 放bar選單 -->
-        <label for="menu_control" class="menubtn">
-            <div id="nav-icon2">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </label>
-        <nav class="mainNav">
-            <li class="mainNavCell"><a href="customized_01.html">電子花車客製</a></li>
-            <li class="mainNavCell"><a href="flyer.html">客製化宣傳單</a></li>
-            <h1 class="navLogo"><a href="index.html"><img src="images/logo.png" alt="台灣大舞台"></a></h1>
-            <li class="mainNavCell"><a href="beautyPageant.html">花車選美</a></li>
-            <li class="mainNavCell"><a href="intro.html">花車特色介紹</a></li>
-            <div class="navMemBtn">
-                <i class="far fa-user-circle"></i>
-            </div>
-        </nav>
-    </header>
-    <div class="box"></div>
-
+    
+    <?php require_once("php/header.php");?>
     <?php require_once("php/loginLightBox.php");?>
     <!-- flyer內容 -->
     <div id="app">
@@ -180,7 +157,7 @@
                             <p>如有舞台客製訂單者，可指定訂單，即可匯入宣傳單內，無訂單者，也可以免費體驗客製宣傳單估能。<br><br>＊公開體驗宣傳單將於發布達24小時移除＊</p>
                         </div>
                         <div>
-                            <button class="commonBtnSmall">匯入訂單</button>
+                            <button class="commonBtnSmall" id="enterOrder">匯入訂單</button>
                             <button class="commonBtnSmall start">免費體驗</button>
                         </div>
                     </div>
@@ -312,6 +289,42 @@
     <script src="js/_flyer_vue.js"></script>
     <script src="js/_flyer_tweenMax.js"></script>
     <script>
+        //匯入訂單
+        document.getElementById('enterOrder').addEventListener('click',function(){
+            if(LoginState=="notFound"){
+                 // 顯示登入燈箱
+                let loginBox = document.querySelector('.loginBox');
+                let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
+                if (style == "block") {
+                    loginBox.style.setProperty('display', "none");
+                } else {
+                    loginBox.style.setProperty('display', "block");
+                }
+            }else{
+                let str = '';
+                 for (let i = 0; i < LoginState.length; i++) {
+                     if(i==LoginState.length-1){
+                         str +=LoginState[i][16];
+                     }else{
+                         str +=LoginState[i][16]+',';
+                     }
+
+                 }
+                 let enterData = prompt(`請輸入你要匯入訂單的 "完整名稱"  ${str}`,'');
+                 if(str.match(enterData)==null||str.match(enterData)==""){
+                     alert('沒有這個訂單請重新輸入');
+                 }else{
+                     OrderNo = enterData;
+                     console.log(OrderNo);
+                     alert('已匯入您的訂單');
+                     let clothCurtain = document.querySelector('.clothCurtain');
+                     clothCurtain.style.setProperty('animation', `blurFadeInOut 2s ease-in backwards`);
+                     setTimeout(function () {
+                         clothCurtain.style.display = "none"
+                     }, 2000);
+                 }
+            }
+        })
         //點擊檢舉輸入原因 傳到後端
         function flyerReport(){
             let str = prompt("請輸入檢舉原因","");
@@ -489,7 +502,13 @@
         });
         $('#selectDay input').on('change', function () {
             $('#selectDay p').html('活動日期' + ' : <span>' + this.value + '</span>');
-            $('#A4page h5').text(this.value);
+            let arr = this.value.split("/");
+            let date = arr[1];
+            let month = arr[0];
+            let year = arr[2];
+            let newarr= [arr[2],arr[0],arr[1]];
+            console.log(newarr);
+            $('#A4page h5').text(newarr.join("-"));
         })
     </script>
     <!-- 拖拉功能 -->
