@@ -24,6 +24,6 @@ switch($_FILES['updateInput']['error']){
 			break;
 	default:
 			echo "請聯絡網站維護人員<br>";
-			echo "error code : ", $_FILES['upFile']['error'],"<br>";
+			echo "error code : ", $_FILES['updateInput']['error'],"<br>";
 }
 ?>

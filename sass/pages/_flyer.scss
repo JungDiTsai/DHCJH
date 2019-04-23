@@ -272,7 +272,10 @@
           position: absolute;
           right: 5px;
           bottom: 5px;
-
+          img{
+            width: 40px;
+            height: 40px;
+          }
         }
       }
 
@@ -446,7 +449,7 @@
         }
 
         #textPlace {
-          padding: 20px 20px;
+          padding: 0px 20px;
           height: 100%;
           // display: flex;
           align-items: center;
@@ -575,6 +578,7 @@
 }
 
 @media screen and (min-width: 768px) {
+  
   .firstScreen {
     min-height: 100vh;
     .wrap{
@@ -652,6 +656,7 @@
             }
             #textPlace {
               // display: block;
+              padding: 20px;
               display: none;
               input {width: 50%;}
               p{font-size: 21px;text-align: center;}
@@ -680,6 +685,11 @@
           }
         }
       }
+    }
+  }
+  .thrScreen {
+    .wrap {
+      ul li img{width: 201px;height: 284px;}
     }
   }
 }

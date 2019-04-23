@@ -1837,6 +1837,11 @@ header {
   bottom: 5px;
 }
 
+.firstScreen .doIt .backBlock #A4page #A4qrcode img {
+  width: 40px;
+  height: 40px;
+}
+
 .firstScreen .doIt .backBlock #tool {
   margin: auto;
   text-align: center;
@@ -2008,7 +2013,7 @@ header {
 }
 
 .firstScreen .doIt .whiteBlock #toolBox #textPlace {
-  padding: 20px 20px;
+  padding: 0px 20px;
   height: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -2226,6 +2231,7 @@ header {
     font-size: 24px;
   }
   .firstScreen .wrap .doIt .whiteBlock #toolBox #textPlace {
+    padding: 20px;
     display: none;
   }
   .firstScreen .wrap .doIt .whiteBlock #toolBox #textPlace input {
@@ -2253,6 +2259,10 @@ header {
   }
   .firstScreen .wrap .doIt .whiteBlock .btnBar button {
     margin-right: 20px;
+  }
+  .thrScreen .wrap ul li img {
+    width: 201px;
+    height: 284px;
   }
 }
 

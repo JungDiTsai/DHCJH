@@ -32,7 +32,8 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js'></script>
     <!-- QR code.js -->
     <script src="js/jquery-qrcode-0.14.0.min.js"></script>
-    <!-- color picker -->
+    <!-- 螢幕截圖 -->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 </head>
 
 <body>
@@ -103,10 +104,10 @@
                 </div>
                 <div class="doIt">
                     <div class="backBlock">
-                        <div id="A4page">
-                            <img src="" alt="" v-on:mousedown="dragA4Img">
+                        <div id="A4page" value="">
+                            <img src="" alt="">
                             <h5></h5>
-                            <div id="A4qrcode"></div>
+                            <div id="A4qrcode"><img src="" alt=""></div>
                         </div>
                         <div id="tool">
                             <i class="fas fa-search-plus" v-on:click="clickPlus"></i>
@@ -116,14 +117,14 @@
                             <i class="fas fa-palette" v-on:click="clickColorPicker"></i>
                             <i class="fas fa-trash-alt" v-on:click="clickTrash"></i>
                             <div id="colorPicker">
-                                <div style="background: rgb(255, 105, 0);" v-on:click="bindColor"></div>
-                                <div style="background: rgb(252, 185, 0);" v-on:click="bindColor"></div>
-                                <div style="background: rgb(123, 220, 181);" v-on:click="bindColor"></div>
-                                <div style="background: rgb(0, 208, 132);" v-on:click="bindColor"></div>
-                                <div style="background: rgb(142, 209, 252)" v-on:click="bindColor"></div>
-                                <div style="background: rgb(6, 147, 227)" v-on:click="bindColor"></div>
-                                <div style="background: rgb(247, 141, 167)" v-on:click="bindColor"></div>
-                                <input type="text" placeholder="rgb(255,255,255)" v-on:click="bindColor">
+                                <div style="background: rgb(255, 105, 0);" v-on:click="clickColor"></div>
+                                <div style="background: rgb(252, 185, 0);" v-on:click="clickColor"></div>
+                                <div style="background: rgb(123, 220, 181);" v-on:click="clickColor"></div>
+                                <div style="background: rgb(0, 208, 132);" v-on:click="clickColor"></div>
+                                <div style="background: rgb(142, 209, 252)" v-on:click="clickColor"></div>
+                                <div style="background: rgb(6, 147, 227)" v-on:click="clickColor"></div>
+                                <div style="background: rgb(247, 141, 167)" v-on:click="clickColor"></div>
+                                <input type="text" placeholder="rgb(255,255,255)" v-on:input="bindColor" v-model="setting[6]">
                             </div>
                         </div>
                     </div>
@@ -242,17 +243,20 @@
     <article class="thrScreen">
         <h2 class="titleBgi">小試身手</h2>
         <div class="wrap">
-            <ul>
-                <li><img src="images/flyer/1.jpg"></li>
-                <li><img src="images/flyer/2.jpg"></li>
-                <li><img src="images/flyer/3.jpg"></li>
-                <li><img src="images/flyer/4.jpg"></li>
-                <li><img src="images/flyer/5.jpg"></li>
-                <li><img src="images/flyer/1.jpg"></li>
-                <li><img src="images/flyer/2.jpg"></li>
-                <li><img src="images/flyer/3.jpg"></li>
-                <li><img src="images/flyer/4.jpg"></li>
-                <li><img src="images/flyer/5.jpg"></li>
+            <ul id="showflyer2">
+                <?php
+                    $json = file_get_contents("php/components/24hours.json");
+                    $jsonData = json_decode ($json, true);
+                    $number = count($jsonData);
+                    $i=0;
+                    while($i<$number){
+
+                ?>
+                <li><img src="<?php echo $jsonData[$i]["src"] ?>"></li>
+                <?php
+                $i++;
+                }
+                ?>	 
             </ul>
         </div>
     </article>
@@ -270,7 +274,7 @@
                 </div>
             </div>
             <div class="flyerArea">
-                <img src="images/flyer/1.png" alt="宣傳單">
+                <img src="images/flyer/1.jpg" alt="宣傳單">
                 <div class="envelopeHeader">
                     <h4>闖闖看淘氣大舞台</h4>
                     <span>活動時間 2019-08-28</span>
@@ -528,21 +532,14 @@
                 // label: 'https://www.silvia.com',
                 // fontname: 'tahoma',
                 // fontcolor: 'tomato',
-                size: 75,
+                size: 60,
                 fill: '#456789',
-            });
-            $('#A4qrcode').text('');
-            $('#A4qrcode').qrcode({ //產生QRCode
-                text: `https://www.google.com.tw/maps/search/${theURL}`,
-                mode: 0,
-                // mode:1,
-                // label: 'https://www.silvia.com',
-                // fontname: 'tahoma',
-                // fontcolor: 'tomato',
-                size: 40,
                 background: '#fff',
                 fill: '#000',
             });
+            let img = document.querySelector('#QRCODE canvas').toDataURL();
+            console.log(img);
+            document.querySelector('#A4qrcode img').src = img;
         })
     </script>
 
