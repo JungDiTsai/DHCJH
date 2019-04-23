@@ -198,16 +198,27 @@ header{
         margin: auto;
         display: flex;
         .navMemBtn{
-          width: 44px;
-          height: 44px;;
-          right: 0px;
+          display: flex;
+          width: 88px;
+          height: 24px;;
+          right: 50px;
           margin: 0;
-          i{
-            top: 0;
-            right: 0;
+          position: fixed;
+          top: 38px;
+          img{
             height: 24px;
-            font-size: 24px;
-            line-height: 44px;
+            width: 24px;
+            text-align: center;
+            position: initial;
+            display: inline-block;
+          }
+          p{
+            font-size: 16px;
+            color: $logoColor;
+            width: 100%;
+            line-height: 16px;
+            margin-top:8px; 
+            cursor: pointer;
           }
         }
         li{
@@ -259,10 +270,7 @@ header{
         }
        
         i{color:$logoColor;}
-        .navMemBtn{  
-            position: absolute;
-            top: 30px;
-        }
+
     }
    
     // html{background-image: url("../images/navigator.png");
