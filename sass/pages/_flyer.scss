@@ -202,6 +202,7 @@
 
         .commonBtnSmall {
           margin-left: 20px;
+          outline: none;
         }
       }
     }
@@ -513,13 +514,47 @@
     opacity: 0;
     display: fixed;
     background-image: url("../images/titleNeonLightBlueNew.gif");
-}
+  }
   .wrap {
     max-width: 1200px;
     height: 2600px;
     margin: auto;
     z-index: 0;
     position: relative;  
+
+    .bigCarcouselBox{
+      .card{
+        .ElongationBox{
+          .cardContent{
+            padding: 20px;
+            tr{
+             
+              th{
+                text-align: left;
+                // border:1px solid #000;
+                width: 30%;
+                padding: 10px 0;
+              }
+              td{
+                // border:1px solid #000;
+                width: 70%;
+                text-align: justify;
+                padding: 10px 0;
+                button{
+                  float: right;
+                  outline: none;
+                  height: 30px;
+                  width: 50px;
+                  line-height: 30px;
+                  padding: 5px 15px;
+                  box-sizing: content-box;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
 
     .owl-carousel {
       z-index: 0;
@@ -688,6 +723,9 @@
     }
   }
   .thrScreen {
+    .titleBgi{
+      margin-top: 80px;
+    }
     .wrap {
       ul li img{width: 201px;height: 284px;}
     }

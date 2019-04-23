@@ -38,14 +38,8 @@
 
 <body>
     <input type="checkbox" id=menu_control>
-<<<<<<< HEAD
-    <?php require_once("php/header.php");?>
-    <div class="box"></div>
-
-=======
     
     <?php require_once("php/header.php");?>
->>>>>>> 2ca1ccaa2c0c9a01c0626fcfaa3d7dfba7508175
     <?php require_once("php/loginLightBox.php");?>
     <!-- flyer內容 -->
     <div id="app">
@@ -185,6 +179,28 @@
                             <img src="images/flyer/flyerPin.png" alt="">
                         </div>
                         <div class="cardContent">
+                            <table>
+                                <tr>
+                                    <th>主持人</th>
+                                    <td>潘佳麗</td>
+                                </tr>
+                                <tr>
+                                    <th>地點</th>
+                                    <td>高雄市</td>
+                                </tr>
+                                <tr>
+                                    <th>活動時間</th>
+                                    <td>2019-04-23</td>
+                                </tr>
+                                <tr>
+                                    <th>簡介</th>
+                                    <td>從小朋友喜歡的兒童汽車、氣墊遊戲及特色胖卡市集，舞台活動更邀請到波力、MOMO哥哥姐姐們及BabyBoss職業體驗城等知名卡童玩偶陪伴大家一起玩樂</td>
+                                </tr>
+                                <tr>
+                                    <th>參加人數</th>
+                                    <td><span>24</span>人<button class="commonBtnSmall">參加</button></td>
+                                </tr>
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -196,7 +212,30 @@
                             <img src="images/flyer/flyerPin.png" alt="">
                             <img src="images/flyer/flyerPin.png" alt="">
                         </div>
-                        <div class="cardContent"></div>
+                        <div class="cardContent">
+                        <table>
+                                <tr>
+                                    <th>主持人</th>
+                                    <td>潘佳麗</td>
+                                </tr>
+                                <tr>
+                                    <th>地點</th>
+                                    <td>高雄市</td>
+                                </tr>
+                                <tr>
+                                    <th>活動時間</th>
+                                    <td>2019-04-23</td>
+                                </tr>
+                                <tr>
+                                    <th>簡介</th>
+                                    <td>從小朋友喜歡的兒童汽車、氣墊遊戲及特色胖卡市集，舞台活動更邀請到波力、MOMO哥哥姐姐們及BabyBoss職業體驗城等知名卡童玩偶陪伴大家一起玩樂</td>
+                                </tr>
+                                <tr>
+                                    <th>參加人數</th>
+                                    <td><span>24</span>人<button class="commonBtnSmall">參加</button></td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
 
@@ -207,7 +246,30 @@
                             <img src="images/flyer/flyerPin.png" alt="">
                             <img src="images/flyer/flyerPin.png" alt="">
                         </div>
-                        <div class="cardContent"></div>
+                        <div class="cardContent">
+                        <table>
+                                <tr>
+                                    <th>主持人</th>
+                                    <td>潘佳麗</td>
+                                </tr>
+                                <tr>
+                                    <th>地點</th>
+                                    <td>高雄市</td>
+                                </tr>
+                                <tr>
+                                    <th>活動時間</th>
+                                    <td>2019-04-23</td>
+                                </tr>
+                                <tr>
+                                    <th>簡介</th>
+                                    <td>從小朋友喜歡的兒童汽車、氣墊遊戲及特色胖卡市集，舞台活動更邀請到波力、MOMO哥哥姐姐們及BabyBoss職業體驗城等知名卡童玩偶陪伴大家一起玩樂</td>
+                                </tr>
+                                <tr>
+                                    <th>參加人數</th>
+                                    <td><span>24</span>人<button class="commonBtnSmall">參加</button></td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
