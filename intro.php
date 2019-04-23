@@ -38,12 +38,12 @@
                     <img src="images/intro/rocklady.png" />
                   </span>
                   <span class="title__element">
-                    <span class="title">2019巴西嘉年華</span>
+                    <p class="title">2019巴西嘉年華</p>
                   </span>
                   <span class="more__element">
                     <span class="content">
-                      <span class="headline">2019年2月21日</span>
-                      <span class="excerpt">里約熱內盧嘉年華大遊行</span>
+                      <p class="headline">2019年2月21日</p>
+                      <p class="excerpt">里約熱內盧嘉年華大遊行</p>
                       <!-- <span class="link">
                         <div class="fill"></div>
                         <a href="#">Open catalog</a>
@@ -54,21 +54,21 @@
       
                 <li class="slider-list__item">
                   <span class="back__element">
-                    <img src="assets/img/back_grapes_001.png" />
+                    <img src="images/intro/stageyellow.png" />
                   </span>
                   <span class="main__element">
-                    <img src="assets/img/bottle_grapes_001.png" />
+                    <!-- <img src="assets/img/bottle_grapes_001.png" /> -->
                   </span>
                   <span class="front__element">
-                    <img src="assets/img/front_grapes_001.png" />
+                    <img src="images/intro/ladysteel.png" />
                   </span>
                   <span class="title__element">
-                    <span class="title">grapes</span>
+                    <p class="title">2017威尼斯嘉年華</p>
                   </span>
                   <span class="more__element">
                     <span class="content">
-                      <span class="headline">2017年2月12日</span>
-                      <span class="excerpt">威尼斯嘉年華會</span>
+                      <p class="headline">2017年2月12日</p>
+                      <p class="excerpt">威尼斯嘉年華會</p>
                       <!-- <span class="link">
                         <div class="fill fill-dark"></div>
                         <a href="#">Open catalog</a>
@@ -79,21 +79,21 @@
       
                  <li class="slider-list__item">
                   <span class="back__element">
-                    <img src="assets/img/back_strawberry_003.png" />
+                    <img src="images/intro/stagered.png" />
                   </span>
                   <span class="main__element">
-                    <img src="assets/img/bottle_strawberry_003.png" />
+                    <!-- <img src="assets/img/bottle_strawberry_003.png" /> -->
                   </span>
                   <span class="front__element">
-                    <img src="assets/img/front_strawberry_003.png" />
+                    <img src="images/intro/rockman.png" />
                   </span>
                   <span class="title__element">
-                    <span class="title">strawberry</span>
+                    <span class="title">2016尼斯嘉年華</span>
                   </span>
                   <span class="more__element">
                     <span class="content">
-                      <span class="headline">2016年2月13日</span>
-                      <span class="excerpt">法國尼斯嘉年華</span>
+                      <p class="headline">2016年2月13日</p>
+                      <p class="excerpt">法國尼斯嘉年華</p>
                       <!-- <span class="link">
                           <div class="fill"></div>
                         <a href="#">Open catalog</a>
@@ -126,11 +126,11 @@
         <div class="introStage">
         
             <div class="people">
-                <img class="peopleFirst" src="../images/intro/intropeople1-1.png" alt="">
-                    <img class="peopleSec" src="../images/intro/intropeople2-1.png" alt="">
-                    <img class="peopleThree" src="../images/intro/intropeople3-1.png" alt="">
-                    <img class="peopleFourth" src="../images/intro/intropeople4-1.png" alt="">
-                    <img class="peopleFiv" src="../images/intro/intropeople5-1.png" alt="">
+                <img class="peopleFirst" src="images/intro/intropeople1-1.png" alt="">
+                    <img class="peopleSec" src="images/intro/intropeople2-1.png" alt="">
+                    <img class="peopleThree" src="images/intro/intropeople3-1.png" alt="">
+                    <img class="peopleFourth" src="images/intro/intropeople4-1.png" alt="">
+                    <img class="peopleFiv" src="images/intro/intropeople5-1.png" alt="">
 
                 </div>
                 <!-- 跑馬燈 -->
@@ -147,7 +147,7 @@
         
         /* 登入燈箱 JS*/
         // 點擊icon開啟登入燈箱----------------------------
-        document.querySelector('.fa-user-circle').addEventListener('click', function (e){
+        document.querySelector('.fas.fa-user').addEventListener('click', function (e){
             // 顯示登入燈箱
             let loginBox = document.querySelector('.loginBox');
             let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
