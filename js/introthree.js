@@ -1,5 +1,5 @@
 var renderer;
-var widthw = window.innerWidth;
+var widthw = window.innerHeight;
 var widthd = document.body.clientWidth;
 var widthwh = document.documentElement.scrollWidth;
 console.log(widthw);
@@ -17,7 +17,7 @@ function initRender() {
 var camera;
 function initCamera() {
     camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
-    camera.position.set(10, 10, 100);
+    camera.position.set(20, 100, 1000);
     camera.lookAt(new THREE.Vector3(0, 0, 0));
 }
 
@@ -54,7 +54,7 @@ function initLight() {
     scene.add(light);
 }
 
-//地球模型
+//卡車模型
 var modelearth;
 var modelcar;
 function initModel() {
@@ -72,15 +72,16 @@ function initModel() {
         objLoader.load('truck_daf.obj', function (object) {
             //将模型缩放并添加到场景当中
             object.scale.set(1.2 , 1.2 , 1.2 );
-            object.position.x=15;
-            object.position.y= -8;
+            object.position.x=85;
+            object.position.y= -50;
             object.position.z= -30;
-            object.rotation.set(-0.07*Math.PI,-0.1*Math.PI,0);
+            object.rotation.set(-0.07*Math.PI,-0.2*Math.PI,0);
             modelcar = object;
             tween.start();
             scene.add(object);
         })
     });
+    //地球模型
     var mtlLoader = new THREE.MTLLoader();
     mtlLoader.setPath('three/car/earth/earth2k/');
     //加载mtl文件
@@ -92,8 +93,8 @@ function initModel() {
         objLoader.load('Earth2K.obj', function (object) {
             //将模型缩放并添加到场景当中
             object.scale.set(22, 22, 22);
-            object.position.x=0;
-            object.position.y=-80;
+            object.position.x=65;
+            object.position.y=-128;
             object.position.z=15;
             modelearth = object;
             scene.add(object);
@@ -185,7 +186,7 @@ function animate() {
     controls.update();
     requestAnimationFrame(animate);
     TWEEN.update();
-    modelearth.rotation.x -=0.01*(0.25*Math.PI);
+    modelearth.rotation.z -=0.01*(0.25*Math.PI);
     // modelearth.rotation.y+=0.01*(0.25*Math.PI);
     // modelearth.rotation.y -=0.004;
     cloud.rotation.y += 0.001;
@@ -196,11 +197,11 @@ function animate() {
 }
 
 //create tween
-var posSrc= {x: 15, y: -8,z:-30};
-var tween = new TWEEN.Tween(posSrc).to({x: 25, y: -8,z:-10}, 5000);
+var posSrc= {x: 85, y: -48  ,z:-30};
+var tween = new TWEEN.Tween(posSrc).to({x: 85, y: -50,z:-10}, 5000);
 tween.easing(TWEEN.Easing.Sinusoidal.InOut);
 
-var tweenBack = new TWEEN.Tween(posSrc).to({x: 15, y: -8,z:-30}, 5000);
+var tweenBack = new TWEEN.Tween(posSrc).to({x: 85, y: -48,z:-30}, 5000);
 tweenBack.easing(TWEEN.Easing.Sinusoidal.InOut);
 
 tween.chain(tweenBack);

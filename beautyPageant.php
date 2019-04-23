@@ -13,7 +13,7 @@
 </head>
 <body>
     <input type="checkbox" id=menu_control>
-    <?php exclude "header.php"?>
+    <?php require_once("php/header.php");?>
     <div class="box"></div>
     <!-- 登入燈箱 -->
     <div class="loginBox">
