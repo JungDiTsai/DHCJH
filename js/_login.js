@@ -1,13 +1,18 @@
 //判斷登入
-let LoginState="";
-console.log("LoginState")
+let LoginState="notFound";
+let OrderNo="notFound";
+console.log(LoginState)
 window.addEventListener("load", function () {
     //產生XMLHttpRequest物件
     let xhr = new XMLHttpRequest();
     //註冊callback function
     xhr.onload = function () {
         if (xhr.status == 200) { //server端可以正確的執行
-            console.log(xhr.responseText);
+            if(xhr.responseText!="notFound"){
+                LoginState =  JSON.parse(xhr.responseText);
+                console.log("LoginState:已輸入值")
+            }
+            console.log("Session:"+xhr.responseText)
         } else { //其它
             alert(xhr.status);
         }
@@ -30,8 +35,15 @@ function sendLogin() {
     //註冊callback function
     xhr.onload = function () {
         if (xhr.status == 200) { //server端可以正確的執行
-            // console.log(JSON.parse(xhr.responseText));
-              console.log(xhr.responseText)
+            if(xhr.responseText=="帳號密碼錯誤"){
+                alert(xhr.responseText);
+            }
+            else if(xhr.responseText=="你的帳號已被凍結"){
+                alert(xhr.responseText);
+            }
+            else{
+                window.location.reload();
+            }
         } else { //其它
             alert(xhr.status);
         }
@@ -43,6 +55,9 @@ function sendLogin() {
     var data_info = "memId=" + document.getElementById("memId").value + "&memPsw="+ document.getElementById("memPsw").value;
     //送出資料
     xhr.send(data_info);
+
+
+
 }
 
 

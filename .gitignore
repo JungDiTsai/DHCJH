@@ -10,7 +10,7 @@ test.css
 test.scss
 test
 .sass-cache/
-
+.css
 bower_components
 
 views/libs

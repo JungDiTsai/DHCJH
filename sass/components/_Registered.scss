@@ -37,8 +37,9 @@
         margin: 20px auto;
         border: 1px solid #fff;
         color:$loginBackColor;;
+        font-size: 18px;
         .prompt{
-            font-size:12px;
+            font-size:14px;
             color:rgb(226, 111, 111);
         }
         td,th{
@@ -66,7 +67,7 @@
         }
     }
     div{
-        margin-top: 50px;
+        margin-top: 10px;
         color: $loginBackColor;;
         input{
             margin-left: 20px;
