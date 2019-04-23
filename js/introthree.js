@@ -1,4 +1,10 @@
 var renderer;
+var widthw = window.innerWidth;
+var widthd = document.body.clientWidth;
+var widthwh = document.documentElement.scrollWidth;
+console.log(widthw);
+console.log(widthd);
+console.log(widthwh);
 function initRender() {
     
     renderer = new THREE.WebGLRenderer({ antialias: true ,alpha: true } );
