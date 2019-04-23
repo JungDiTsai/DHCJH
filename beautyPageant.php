@@ -14,7 +14,6 @@
 <body>
     <input type="checkbox" id=menu_control>
     <?php require_once("php/header.php");?>
-    <div class="box"></div>
     <?php require_once("php/loginLightBox.php");?>
     <!-- beauty pageant 第一屏幕 -->
     <div class="beautyPageantWrap">
