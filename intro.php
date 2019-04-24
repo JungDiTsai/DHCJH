@@ -42,8 +42,8 @@
                   </span>
                   <span class="more__element">
                     <span class="content">
-                      <p class="headline">2019年2月21日</p>
-                      <p class="excerpt">里約熱內盧嘉年華大遊行</p>
+                      <p class="headline">在地與國際</p>
+                      <p class="excerpt">「台灣大舞台」代表台灣參加 巴西嘉年華， 並在72個國家596支參賽隊 伍中奪的金牌， 這份殊榮不只是肯定我們團 隊，也證明了台灣文化的魅 力。</p>
                       <!-- <span class="link">
                         <div class="fill"></div>
                         <a href="#">Open catalog</a>
@@ -67,8 +67,8 @@
                   </span>
                   <span class="more__element">
                     <span class="content">
-                      <p class="headline">2017年2月12日</p>
-                      <p class="excerpt">威尼斯嘉年華會</p>
+                      <p class="headline">酬神與謝神</p>
+                      <p class="excerpt">威尼斯嘉年華會是義大利威尼斯最重要的慶典之一，每年都在大齋首日前2個禮拜開始，並在懺悔節結束；此慶典是以各式各樣精美製作的面具而聞名於世。</p>
                       <!-- <span class="link">
                         <div class="fill fill-dark"></div>
                         <a href="#">Open catalog</a>
@@ -88,12 +88,12 @@
                     <img src="images/intro/rockman.png" />
                   </span>
                   <span class="title__element">
-                    <span class="title">2016尼斯嘉年華</span>
+                    <span class="title">2016閃閃嘉年華</span>
                   </span>
                   <span class="more__element">
                     <span class="content">
-                      <p class="headline">2016年2月13日</p>
-                      <p class="excerpt">法國尼斯嘉年華</p>
+                      <p class="headline">台灣大舞台</p>
+                      <p class="excerpt">閃閃嘉年華，我們試圖以舞台車嫣然綻放的壯觀意象，隱喻為台灣人民蓬勃的生命氣息，以乘載著島國文化之獨特美學，去呼應台灣搖滾的生猛力道。</p>
                       <!-- <span class="link">
                           <div class="fill"></div>
                         <a href="#">Open catalog</a>

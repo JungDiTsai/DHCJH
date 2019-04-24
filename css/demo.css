@@ -138,7 +138,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 10vw;
+  font-size: 9vw;
   color: #000;
   will-change: transform;
   z-index: 1;
@@ -238,6 +238,7 @@ body {
   text-align: left;
 }
 .slider-list__item .more__element .content .headline {
+  text-align: center;
   position: relative;
   display: block;
   max-width: 240px;
@@ -254,7 +255,9 @@ body {
   letter-spacing: 0.1em;
   font-size: 16px;
   line-height: 24px;
-  padding: 8px 0 16px;
+  padding: 8px 10px 16px;
+  background-color: rgba(255, 255, 255, 0.19);
+  border-radius: 25px;
 }
 .slider-list__item .more__element .content .link {
   position: relative;

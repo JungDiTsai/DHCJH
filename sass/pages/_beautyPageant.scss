@@ -363,6 +363,11 @@ li{
       .beautyDiscContainer{
         max-width: 1200px;
         height: auto;
+        .beautyDiscFilter{
+          max-width: 1200px;
+          height: 50px;
+          outline: 1px solid #f00;
+        }
         .beautyDiscStageContainer{
           display: flex;
           flex-wrap: wrap;
