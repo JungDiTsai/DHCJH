@@ -9,7 +9,7 @@ function initRender() {
     
     renderer = new THREE.WebGLRenderer({ antialias: true ,alpha: true } );
     renderer.setSize(window.innerWidth, window.innerHeight);
-    //告诉渲染器需要阴影效果
+    //告訴渲染器需要陰影效果
     renderer.setClearColor(0x000000,0.9);
     document.getElementById('canvasScene').appendChild(renderer.domElement);
 }
@@ -31,15 +31,15 @@ function initScene() {
 
 
 
-//初始化dat.GUI简化试验流程
+//初始化dat.GUI簡化試驗流程
 
 var gui;
 function initGui() {
-    //声明一个保存需求修改的相关数据的对象
+    //聲明一個保存需求修改的相關數據的對象
     gui = {
     };
     var datGui = new dat.GUI();
-    //将设置属性添加到gui当中，gui.add(对象，属性，最小值，最大值）
+    //將設置屬性添加到gui當中，gui.add(對象，屬性，最小值，最大值）
 }
 
 
@@ -49,7 +49,7 @@ function initLight() {
     scene.add(new THREE.AmbientLight(0xffffff));
     light = new THREE.PointLight(0xffffff,3,0);
     light.position.set(-900,500,60);
-    //告诉平行光需要开启阴影投射
+    //告訴平行光需要開啟陰影投射
     light.castShadow = true;
     scene.add(light);
 }
@@ -58,24 +58,24 @@ function initLight() {
 var modelearth;
 var modelcar;
 function initModel() {
-    //辅助工具
+    //輔助工具
     var helper = new THREE.AxesHelper(50);
     scene.add(helper);
     var mtlLoader = new THREE.MTLLoader();
     mtlLoader.setPath('three/car/02/');
-    //加载mtl文件
+    //加載mtl文件
     mtlLoader.load('truck_daf.mtl', function (material) {
-        var objLoader = new THREE.OBJLoader();
-        //设置当前加载的纹理
+        var objLoader = new THREE.OBJLoader();    
+    //設置當前加載的紋理
         objLoader.setMaterials(material);
         objLoader.setPath('three/car/02/');
         objLoader.load('truck_daf.obj', function (object) {
-            //将模型缩放并添加到场景当中
-            object.scale.set(1.2 , 1.2 , 1.2 );
-            object.position.x=85;
-            object.position.y= -50;
+        //將模型縮放並添加到場景當中
+            object.scale.set(1 , 1 , 1 );
+            object.position.x=92;
+            object.position.y= -58;
             object.position.z= -30;
-            object.rotation.set(-0.07*Math.PI,-0.2*Math.PI,0);
+            object.rotation.set(-0.07*Math.PI,-0.3*Math.PI,0);
             modelcar = object;
             tween.start();
             scene.add(object);
@@ -84,14 +84,11 @@ function initModel() {
     //地球模型
     var mtlLoader = new THREE.MTLLoader();
     mtlLoader.setPath('three/car/earth/earth2k/');
-    //加载mtl文件
     mtlLoader.load('Earth2K.mtl', function (material) {
         var objLoader = new THREE.OBJLoader();
-        //设置当前加载的纹理
         objLoader.setMaterials(material);
         objLoader.setPath('three/car/earth/earth2k/');
         objLoader.load('Earth2K.obj', function (object) {
-            //将模型缩放并添加到场景当中
             object.scale.set(22, 22, 22);
             object.position.x=65;
             object.position.y=-128;
@@ -129,27 +126,27 @@ function initStats() {
 
 
 
-//用户交互插件 鼠标左键按住旋转，右键按住平移，滚轮缩放
+//用戶交互插件 鼠標左鍵按住旋轉，右鍵按住平移，滾輪縮放
 var controls;
 function initControls() {
     controls = new THREE.OrbitControls(camera, renderer.domElement);
-    // 如果使用animate方法时，将此函数删除
+    // 如果使用animate方法時，將此函數刪除
     // controls.addEventListener( 'change', render );
-    // 使动画循环使用时阻尼或自转 意思是否有惯性
+    // 使動畫循環使用時阻尼或自轉 意思是否有慣性
     controls.enableDamping = true;
-    //动态阻尼系数 就是鼠标拖拽旋转灵敏度
+    //動態阻尼係數 就是鼠標拖拽旋轉靈敏度
     //controls.dampingFactor = 0.25;
-    //是否可以缩放
-    controls.enableZoom = false;
-    //是否自动旋转
+    //是否可以縮放
+    controls.enableZoom = false;   
+    //是否自動旋轉
     controls.enableRotate = false;
     //關閉旋轉功能
-    controls.autoRotate = false;
-    //设置相机距离原点的最远距离
-    controls.minDistance = 1;
-    //设置相机距离原点的最远距离
+    controls.autoRotate = false;   
+    //設置相機距離原點的最近距離
+    controls.minDistance = 1;   
+    //設置相機距離原點的最遠距離
     controls.maxDistance = 200;
-    //是否开启右键拖拽
+    //右鍵拖曳
     controls.enablePan = true;
 }
 function render() {
@@ -157,7 +154,7 @@ function render() {
 
 }
 
-//窗口变动触发的函数
+//windowresize
 function onWindowResize() {
     camera.aspect = window.innerWidth / window.innertHeight;
     camera.updateProjectionMatrix();
@@ -186,36 +183,40 @@ function animate() {
     controls.update();
     requestAnimationFrame(animate);
     TWEEN.update();
-    modelearth.rotation.z -=0.01*(0.25*Math.PI);
-    // modelearth.rotation.y+=0.01*(0.25*Math.PI);
-    // modelearth.rotation.y -=0.004;
+    modelearth.rotation.z -=0.007*(0.25*Math.PI);
     cloud.rotation.y += 0.001;
     cloud.rotation.x += -0.001;
     cloud.rotation.z += 0.001;
-    // modelearth.rotation.y +=0.01;
-    // modelearth.rotation.z +=0.01;
 }
 
 //create tween
-var posSrc= {x: 85, y: -48  ,z:-30};
-var tween = new TWEEN.Tween(posSrc).to({x: 85, y: -50,z:-10}, 5000);
+var posSrc= {x: 84, y: -50,z:0,u: -0.07*Math.PI,v: -0.4*Math.PI,w:0};
+//posSrc
+var tween = new TWEEN.Tween(posSrc).to({x: 78, y: -50,z:0,u: -0.05*Math.PI,v: -0.35*Math.PI,w:0}, 3000);
 tween.easing(TWEEN.Easing.Sinusoidal.InOut);
-
-var tweenBack = new TWEEN.Tween(posSrc).to({x: 85, y: -48,z:-30}, 5000);
+var tweenBack = new TWEEN.Tween(posSrc).to({x: 84, y: -50,z:0,u: -0.07*Math.PI,v: -0.4*Math.PI,w:0}, 3000);
 tweenBack.easing(TWEEN.Easing.Sinusoidal.InOut);
+
+
+
 
 tween.chain(tweenBack);
 tweenBack.chain(tween);
+
 
 
 var onUpdate = function () {
     modelcar.position.x =posSrc.x;
     modelcar.position.y =posSrc.y;
     modelcar.position.z =posSrc.z;
+    modelcar.rotation.x =posSrc.u;
+    modelcar.rotation.y =posSrc.v;
+    modelcar.rotation.z =posSrc.w;
 };
 
 tween.onUpdate(onUpdate);
 tweenBack.onUpdate(onUpdate);
+
 
 
 function draw() {
@@ -236,59 +237,4 @@ function draw() {
 
 
 
-        // //滑鼠選擇對象
-    // document.addEventListener('mousedown', onDocumentMouseDown, false);
-    // var projector =new THREE.Projector();
-    // function onDocumentMouseDown(event) {
-
-    //     var vector = new THREE.Vector3(( event.clientX / window.innerWidth ) * 2 - 1, -( event.clientY / window.innerHeight ) * 2 + 1, 0.5);
-    //     vector = vector.unproject(camera);
-
-    //     var raycaster = new THREE.Raycaster(camera.position, vector.sub(camera.position).normalize());
-
-    //     var intersects = raycaster.intersectObjects([modelearth, modelcar]);
-
-    //     if (intersects.length > 0) {
-
-    //     console.log(intersects[0]);
-
-    //     intersects[0].object.material.transparent = true;
-    //     intersects[0].object.material.opacity = 0.1;
-    //     }
-    // }
-     //以下尚未研究 
-    // function manualCameraMove(e){
-    //     // console.log('now it is manual mode ~');
-    //     // console.log(signal);
-    //     console.log('positionZ i got here is...' + positionZ);
-    //     if(document.body.scrollTop < 000){
-    //         if(e.deltaY > 0){
-    //             esignal = true;
-    //             positionZ -= 60;
-    //             camera.position.z = positionZ;
-    //             if(positionZ < 0){
-    //                 positionZ = 0;
-    //             } 
-    //         }else if(e.deltaY < 0){
-    //             esignal = false;
-    //             // console.log('i am running..........................');
-    //             positionZ += 60;
-    //             camera.position.z = positionZ;
-    //             // console.log(parseInt(window.getComputedStyle(bigdot).getPropertyValue('top')));
-    //             if(parseInt(window.getComputedStyle(bigdot).getPropertyValue('top')) == 175){
-    //                 dotManualMove(esignal);
-    //             }
-    //         } 
-    //         return ImgDriver(esignal);
-    //     }else if(positionZ == 9000){
-    //         if(e.deltaY > 0){
-    //             esignal = true;
-    //             positionZ -= 60;
-    //             camera.position.z = positionZ;
-    //         }else if(e.deltaY < 0){
-    //             esignal = false;
-    //             window.removeEventListener('mousewheel',manualCameraMove);
-    //             window.addEventListener('mousewheel',driver);
-    //         }
-    //     }
-    // }
+     

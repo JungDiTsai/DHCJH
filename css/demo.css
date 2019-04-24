@@ -70,8 +70,8 @@ body {
   left: 16px;
   width: 64px;
   height: 64px;
-  background-image: url(/images/intro/assets/arrow__left-white.png);
-  background-image: url(/images/intro/assets/arrow__left-white.png);
+  background-image: url(../images/intro/assets/arrow__left-white.png);
+  background-image: url(../images/intro/assets/arrow__left-white.png);
   /* background-image: url(/arrow__left-white.png); */
   background-repeat: no-repeat;
   background-position: center center;
@@ -81,8 +81,8 @@ body {
   right: 16px;
   width: 64px;
   height: 64px;
-  background-image: url(/images/intro/assets/arrow__right-white.png);
-  /* background-image: url(/arrow__right-white.png); */
+  background-image: url(../images/intro/assets/arrow__right-white.png);
+  background-image: url(../images/intro/assets/arrow__right-white.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: auto 64px;
@@ -96,7 +96,7 @@ body {
   height: 32px;
   transition: 0.2s;
   cursor: pointer;
-  background-image: url(/images/intro/assets/dot-black.png);
+  background-image: url(../images/intro/assets/dot-black.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 26px 26px;
@@ -138,7 +138,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 10vw;
+  font-size: 9vw;
   color: #000;
   will-change: transform;
   z-index: 1;
@@ -214,7 +214,7 @@ body {
   letter-spacing: 0.1em;
   color: #eef2f3;
   text-align: center;
-  text-shadow: 2px 2px salmon;
+  text-shadow: 2px 2px salmon,-1px -1px cornsilk;
 }
 .slider-list__item .more__element {
   position: absolute;
@@ -238,6 +238,7 @@ body {
   text-align: left;
 }
 .slider-list__item .more__element .content .headline {
+  text-align: center;
   position: relative;
   display: block;
   max-width: 240px;
@@ -254,7 +255,9 @@ body {
   letter-spacing: 0.1em;
   font-size: 16px;
   line-height: 24px;
-  padding: 8px 0 16px;
+  padding: 8px 10px 16px;
+  background-color: rgba(255, 255, 255, 0.19);
+  border-radius: 25px;
 }
 .slider-list__item .more__element .content .link {
   position: relative;
