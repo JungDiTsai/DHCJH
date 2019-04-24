@@ -50,7 +50,7 @@ body {
   border-radius: 90px;
   text-align: center;
   background: #dde3e6;
-  z-index: 100;
+  z-index: 49;
 }
 .slider__arrow {
   position: absolute;
@@ -60,7 +60,7 @@ body {
   height: 64px;
   transition: 0.2s;
   cursor: pointer;
-  z-index: 100;
+  z-index: 49;
   opacity: 0.8;
 }
 .slider__arrow:hover {
