@@ -124,10 +124,16 @@
             <h2 class="titleBgi">花車大選美</h2>
             <div class="beautyDiscFilter">
                 <!-- 選項篩選 全部時間 排序 上傳時間  還有一個上傳按鈕-->
-                排序:<select name="排序" id="beautyFilterList">
-                    <option value="上傳時間">上傳時間</option>
-                    <option value="上傳時間">喜歡數</option>
-                </select>
+                <form action="" method="" action="">
+                    <div class="beautyDiscFilterBox">
+                    排序:<select name="" id="">
+                            <option value="" disabled selected hidden>顯示順序</option>
+                            <option value="">上傳時間</option>
+                            <option value="">喜歡數</option>
+                        </select>
+                    </div>
+                </form>
+                <i class="fas fa-plus-circle" alt="參加選美"></i>
             </div>
             <div class="beautyDiscStageContainer">
                 <div class="beautyDiscIg">
