@@ -1213,7 +1213,14 @@ ul.tryCustTabs li a.tryCustActive {
 }
 #introFlyer2,#introFlyer3{
   display: none;
+  transform: scale(.8)
 }
+
+//宣傳單hover下去
+#introFlyer2,#introFlyer3:hover{
+  transform: scale(1);
+}
+
 
 .introFlyerFunction{
   position: absolute;

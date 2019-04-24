@@ -33,14 +33,12 @@ var tl_06 = TweenMax.to('#introFlyerFunctionThree' , 0.35 ,{
     x:90,
     ease: Back.easeOut.config(1.7)
 });
-var tl_07 = TweenMax.to('#introFlyer2' , 0.35 ,{ 
+var tl_07 = TweenMax.to('#introFlyer2' , 0.3 ,{ 
     x:-220,
-    scale:.8,
     ease: Back.easeOut.config(1.7)
 });
-var tl_08 = TweenMax.to('#introFlyer3' , 0.35 ,{ 
+var tl_08 = TweenMax.to('#introFlyer3' , 0.3 ,{ 
     x:220,
-    scale:.8,
     ease: Back.easeOut.config(1.7)
 });
 
