@@ -1,8 +1,19 @@
 //客服機器人＆遊戲
+/*.noscroll{
+  position: fixed;
+  width: 100%;
+}
+.scrollLightBox{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  overflow-y: scroll;
+}*/
 #gameHub{
   opacity:0.85;
   position: fixed;
-  left: 0px;
+  left: -360px;
   bottom: 100px;
   width: 80px;
   height: 90px;
@@ -22,88 +33,24 @@
 #customerServiceGirl{
   position:fixed;
   vertical-align: middle;
-<<<<<<< HEAD
   ////outline: 5px red solid：
-=======
-  //outline: 5px red solid：
->>>>>>> 8e0bb60beb40f7304e0952b73a20ab9954ec6ba6
   width:100px;
   right: -10px;
-  bottom: -40px;
+  bottom: -400px;
   z-index:3;
   img{
     width:100%; 
-<<<<<<< HEAD
   }
   animation:serviceGirl 12s  ease infinite;
   
 }
 
-=======
-  }
-  animation:serviceGirl 12s  ease infinite;
-  
-}
-@media screen and (min-width:992px) {
-  .perspective{
-    perspective: 300px;
-    transform: scale(1.3);
-    margin-top:80px;
-  }
-  #introWords{
-    margin-top:40vh;
-    z-index:1;
-    h2{
-      font-size: 32px;
-    }
-    h3{
-      font-size: 24px;
-    }
-  }
-  #equipCarStage{
-    .commonBtn{
-      margin-left: 110px;
-    }
-  }
-  
-  #customerServiceGirl{
-    position:fixed;
-    vertical-align: middle;
-    //outline: 5px red solid：
-    width:140px;
-    right: 80px;
-    bottom: -40px;
-    z-index:3;
-    img{
-      width:100%; 
-    }
-    animation:serviceGirl 12s 1s ease infinite;
-    
-  }
-  #gameHub{
-    padding:10px;
-    opacity:0.9;
-    font-size:20px;
-    width: 120px;
-    height: 140px;
-    //outline: 5px red solid;
-    img{
-      margin: 20px auto;
-    }
-  }
-  
-}
->>>>>>> 8e0bb60beb40f7304e0952b73a20ab9954ec6ba6
 //使用者客服問答區
 #gameAndService{
   position: fixed;
   width: 100%;
   height: 100%;
-<<<<<<< HEAD
   //  //outline: #007bff 5px solid;
-=======
-  //  outline: #007bff 5px solid;
->>>>>>> 8e0bb60beb40f7304e0952b73a20ab9954ec6ba6
  
 }
 #customerTextArea{
@@ -243,7 +190,6 @@
     text-align: center;
     margin: auto;
     width: 80vw;
-    height: 100vh;
     max-width: 1200px;
 }
 #carIntroWrap{
@@ -255,11 +201,7 @@
     background-position: center;
     background-size: cover;
     z-index: 0;
-<<<<<<< HEAD
     height: 100vh;
-=======
-    //height: 100vh;
->>>>>>> 8e0bb60beb40f7304e0952b73a20ab9954ec6ba6
     min-height: 600px;
     ////outline: 5px red solid;
   }
@@ -274,6 +216,7 @@
     height: 100vh;
     min-height: 600px;
     z-index: -2;
+    opacity:.8;
     //outline: 7px green solid;
   }
   //首頁第一屏 背景圖們 條狀
@@ -313,19 +256,21 @@
   margin: auto;
   top: 0;
   bottom: 0;
-  left: 0;
+  left: -100vw;
   right: 0;
   margin-top: -120px;
   height: 100vh;
   min-height: 600px;
   width: 80%;
   //outline: 5px red solid;
+  transition: 1.6s cubic-bezier(.25,-0.98,.69,1.58);
 }
 
   //////////
 .perspective{
   position:absolute;
   margin:auto;
+  margin-top:8.5vh;
   top: 0;
   bottom: 0;
   left: 0;
@@ -339,24 +284,28 @@
 #introWords{
   //outline: 5px pink solid;
   position: absolute;
+  transform:scale(.2);
   width: 80%;
   margin:auto;
-  margin-top:320px;
-  float:left;
+  margin-top:52vh;
   font-family: "wangHangMing";
-  font-size: 24px;
+  font-size: 32px;
   color: #ffffbd;
   font-weight: bolder;
   h2{
-      font-weight: 400;
+      font-weight: 200;
+      text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
   }
   h3{
-      margin-top: 10px;
+      margin-top: 18px;
       font-size: 20px;
+      font-weight: 200;
+      text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
   }
   .commonBtn{
       margin:20px auto;
   }
+  transition: 1s cubic-bezier(.25,-1.04,.69,1.58);
 }
 @keyframes turn{
     0%{transform:translateY(100px) rotateX(0deg) rotateY(180deg) rotateZ(0deg)}
@@ -380,7 +329,7 @@
     margin-left: 180px;
   }
   .perspective{
-    perspective: 500px;
+    perspective: 900px;
     transform: scale(1.5);
     left: -100px;
   }
@@ -391,7 +340,7 @@
   }
 }
 // 整個舞台
-.groupA{
+.groupIntro{
     position: absolute;
     top: 0;
     right: 0;
@@ -403,7 +352,7 @@
     // //outline: 2px solid #f00;
     transform-style: preserve-3d;
     transform: translateY(100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-    animation: turn 10s alternate infinite;
+    //animation: turn 10s alternate infinite;
 
     div{
         box-sizing: border-box;
@@ -785,45 +734,45 @@
     background-position: center;
     background-size: cover;
     z-index: 0;
-<<<<<<< HEAD
-    //height:100vh;
-=======
     height:100vh;
->>>>>>> 8e0bb60beb40f7304e0952b73a20ab9954ec6ba6
     min-height: 600px;
     ////outline: 5px red solid;
   }
+  #equipIntroTabsSection{
+    transform: scale(.5);
+  }
   #equipCarStage{
-    outline: red 5px solid;
-<<<<<<< HEAD
+    //outline: red 5px solid;
     margin:auto;
-    margin-top:150px;
+    margin-top:100px;
     position: relative;
     width: 90vw;
-    margin-top: -50px; 
+    margin-top: -185px; 
+    //outline: red 5px solid;
+  }
+  .popOut{
+    transform: scale(.5);
   }
   
   .EquipIntroWrapper {
+    //outline: blue 5px solid;
     display: flex;
     flex-wrap: wrap;
-    margin:10px auto auto auto ;
+    margin:-40px auto auto auto;
     width:100%;
-    font-family:sans-serif;
-    color:rgb(99, 95, 78);
+    height: 100vh;
+    font-family:$contentFontFamily;
+    color:#fff;
     font-size:14px;
     line-height:24px;
     max-width:1200px;
     min-width:230px;
     //overflow:hidden;
     text-align: center;
-=======
-    
->>>>>>> 8e0bb60beb40f7304e0952b73a20ab9954ec6ba6
     .commonBtn{
-      margin: 200px auto 30px auto;
+      margin: -110px auto ;
       
     }
-<<<<<<< HEAD
 
   }
 
@@ -831,6 +780,7 @@
   
   .introTabs {
     margin:0px 30px;
+    font-family:$contentFontFamily;
     .tabLi {
       list-style:none;
       float:left;
@@ -843,15 +793,17 @@
       position:relative;
       text-transform:uppercase;
       font-size: 18px;
-      color:#fff;
+      font-family:$contentFontFamily;
+      color:#222;
       height:80px;
       line-height:100px;
-      background:linear-gradient(165deg,transparent 29%, #98927C 20%);
+      background:linear-gradient(165deg,transparent 29%, #fffc98 20%);
       
       &:hover, &.active {
-         background: linear-gradient(165deg,transparent 29%, #F2EEE2 20%);
-         color:#98927C;
+         background: linear-gradient(165deg,transparent 29%, #222 20%);
+         color:#fff;
          font-weight: bold;
+         transition: .7s ease;
       }
       
       &:before{
@@ -886,10 +838,17 @@
   .tabgroup {
     box-shadow:2px 2px 2px 2px rgba(0,0,0,.1);
     margin:0px 30px;
+    transition:  .4s ease;
     h2{
-        text-align: center;
-        margin-bottom: 10px;
-        font-size: 28px;
+      font-family:$contentFontFamily;
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 28px;
+      transition:  .4s ease;
+    }
+    p{
+      font-family:$contentFontFamily;
+      transition:  .4s ease;
     }
     div {
       padding:30px;
@@ -897,23 +856,25 @@
       width: 100%;
       max-width:500px;
       min-width:210px;
-      background:#F2EEE2;
+      font-family:$contentFontFamily;
+      background:#222;
       box-shadow:0 3px 10px rgba(0,0,0,.3);
       border-color:rgb(128, 119, 89);
       border-width:10px  0px 10px 0px;
       border-style:groove;
+      transition: .4s ease ;
     }
-=======
->>>>>>> 8e0bb60beb40f7304e0952b73a20ab9954ec6ba6
   }
   .clearfix:after {
     content:"";
     display:table;
     clear:both;
   }
+  #equipBtnOne{
+    display: none;
+  }
   //包住所有被件及背景舞台的div
   
-<<<<<<< HEAD
   #introCarStage{
     width: 100%;
     position:absolute;
@@ -930,6 +891,7 @@
     left: 0;
     margin-left:-4px; 
     animation: introInnerBlockShine 2.4s ease infinite;
+    transition:  .4s ease;
   }
   @keyframes introInnerBlockShine{
     0%{ opacity:1;  }
@@ -937,147 +899,12 @@
     50%{ opacity:1;  }
     75%{ opacity:0.6; }
     100%{opacity:1;}
-=======
-  .EquipIntroWrapper {
-    display: flex;
-    flex-wrap: wrap;
-    margin:20px auto;
-    width:90%;
-    font-family:sans-serif;
-    color:rgb(99, 95, 78);
-    font-size:14px;
-    line-height:24px;
-    max-width:1200px;
-    min-width:230px;
-    //overflow:hidden;
-    height: 100vh;
-    text-align: center;
+  }
 
->>>>>>> 8e0bb60beb40f7304e0952b73a20ab9954ec6ba6
-  }
-  
-  .introTabs {
-    margin:0px 30px;
-    .tabLi {
-      list-style:none;
-      float:left;
-      width:16.66666666666667%;
-    }
-    a {
-      display:block;
-      text-align:center;
-      text-decoration:none;
-      position:relative;
-      text-transform:uppercase;
-      font-size: 18px;
-      color:#fff;
-      height:80px;
-      line-height:100px;
-      background:linear-gradient(165deg,transparent 29%, #98927C 20%);
-      
-      &:hover, &.active {
-         background: linear-gradient(165deg,transparent 29%, #F2EEE2 20%);
-         color:#98927C;
-         font-weight: bold;
-      }
-      
-      &:before{
-        content:'';
-        position:absolute;
-        z-index:11;
-        left:100%;
-        top:-60%;
-        height:58px;
-        line-height:90px;
-        width:0;
-        border-bottom: 70px solid rgba(0,0,0,.1);
-        border-right: 7px solid transparent;
-      }
-      &.active:before{
-        content:'';
-        position:absolute;
-        z-index:11;
-        left:100%;
-        top:-60%;
-        height:58px;
-        line-height:90px;
-        width:0;
-        border-bottom: 70px solid rgba(0,0,0,.2);
-        border-right: 20px solid transparent;
-      }
-      // &:last-child:before, &.active:last-child:before{
-      //   border: none;
-      // }
-    }
-  }
-  .tabgroup {
-    box-shadow:2px 2px 2px 2px rgba(0,0,0,.1);
-    margin:0px 30px;
-    h2{
-        text-align: center;
-        margin-bottom: 10px;
-        font-size: 28px;
-    }
-    div {
-      padding:30px;
-      height: 200px;
-      width: 100%;
-      max-width:500px;
-      min-width:210px;
-      background:#F2EEE2;
-      box-shadow:0 3px 10px rgba(0,0,0,.3);
-      border-color:rgb(128, 119, 89);
-      border-width:10px  0px 10px 0px;
-      border-style:groove;
-    }
-  }
-  .clearfix:after {
-    content:"";
-    display:table;
-    clear:both;
-  }
-  //包住所有被件及背景舞台的div
-  #equipCarStage{
-      position: relative;
-      width: 90vw;
-      margin-top: -220px
-  }
-  #introCarStage{
-    width: 100%;
-    position:absolute;
-    //outline: red 5px solid;
-    top: 0;
-    left: 0;
-
-<<<<<<< HEAD
   #introPoleBlock{
     width: 3%;
     position:absolute;
     ////outline: blue 5px solid;
-=======
-  }
-  #introInnerBlock{
-    width: 102%;
-    position:absolute;
-    //outline: blue 5px solid;
-    top: 0;
-    left: 0;
-    margin-left:-4px; 
-    animation: introInnerBlockShine 2.4s ease infinite;
-  }
-  @keyframes introInnerBlockShine{
-    0%{ opacity:1;  }
-    25%{ opacity:0.4; }
-    50%{ opacity:1;  }
-    75%{ opacity:0.6; }
-    100%{opacity:1;}
-  }
-
-  #introPoleBlock{
-    width: 3%;
-    position:absolute;
-    //outline: blue 5px solid;
->>>>>>> 8e0bb60beb40f7304e0952b73a20ab9954ec6ba6
     margin: auto;
     top: 15vw;
     right: 0;
@@ -1103,7 +930,6 @@
     left: 0;   
     filter: drop-shadow(0px 0px 4px rgba(36, 36, 36, 0.9));
     animation: introDanceBlock 10s ease infinite;
-<<<<<<< HEAD
   }
   @keyframes introDanceBlock{
     0%{ transform:translateX(0px) scale(1);  }
@@ -1114,18 +940,6 @@
     60%{ transform:translate(0px,5vw) scale(1.15); }
     100%{transform:translateX(0px) scale(1);}
   }
-=======
-  }
-  @keyframes introDanceBlock{
-    0%{ transform:translateX(0px) scale(1);  }
-    10%{ transform:translateX(5px) scale(1.05); }
-    25%{ transform:translateX(-5px) scale(1.02);  }
-    20%{ transform:translateX(0px) scale(1); }
-    30%{ transform:translateX(10px) scale(1.05); }
-    60%{ transform:translate(0px,5vw) scale(1.15); }
-    100%{transform:translateX(0px) scale(1);}
-  }
->>>>>>> 8e0bb60beb40f7304e0952b73a20ab9954ec6ba6
   .introSpecialBlock{
     position:absolute;
     margin: auto;    
@@ -1228,44 +1042,113 @@
 #tryCustormiseWrap{
   padding-top:$paddingTop; 
   position: relative;
-  background-image: url(../images/darkBrick.jpg);
-<<<<<<< HEAD
+  background-color: #111;
+  //background-image: url(../images/darkBrick.jpg);
   background-repeat: repeat;
-=======
-  background-repeat: no-repeat;
->>>>>>> 8e0bb60beb40f7304e0952b73a20ab9954ec6ba6
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
   z-index: 0;
-<<<<<<< HEAD
-=======
-
->>>>>>> 8e0bb60beb40f7304e0952b73a20ab9954ec6ba6
+  height:100vh;
   min-height: 600px;
   ////outline: 5px red solid;
   .titleBgi{
-    background: url(../images/titleNeonLightGreen.gif) center no-repeat;
+    background: url(../images/titleNeonLightBrownNew.gif) center no-repeat;
     background-size: cover;
+  }
+}
+.tryCustEquipWrap {
+  margin: 0 auto;
+}
+ul.tryCustTabs {
+  width: 300px;
+  height: 70px;
+  margin: 0 auto;
+  list-style: none;
+  overflow: hidden;
+  padding: 0;
+}
+ul.tryCustTabs li {
+  float: left;
+  width: 150px;
+}
+ul.tryCustTabs li a {
+  position: relative;
+  display: block;
+  height: 60px;
+  margin-top: 40px;
+  padding: 8px 0 0 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  background: #6edeef;
+  -webkit-box-shadow: 8px 12px 25px 2px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 8px 12px 25px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 8px 12px 25px 2px rgba(0, 0, 0, 0.4);
+  border: 0px solid #000000;
+  -webkit-transition: padding 0.2s ease, margin 0.2s ease;
+  -moz-transition: padding 0.2s ease, margin 0.2s ease;
+  -o-transition: padding 0.2s ease, margin 0.2s ease;
+  -ms-transition: padding 0.2s ease, margin 0.2s ease;
+  transition: padding 0.2s ease, margin 0.2s ease;
+}
+.tryCustTabs li:first-child a {
+  z-index: 3;
+  -webkit-border-top-left-radius: 8px;
+  -moz-border-radius-topleft: 8px;
+  border-top-left-radius: 8px;
+}
+.tryCustTabs li:nth-child(2) a {
+  z-index: 2;
+}
+.tryCustTabs li:last-child a {
+  z-index: 1;
+  -webkit-box-shadow: 2px 8px 25px -2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 2px 8px 25px -2px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 8px 25px -2px rgba(0, 0, 0, 0.3);
+  -webkit-border-top-right-radius: 8px;
+  -moz-border-radius-topright: 8px;
+  border-top-right-radius: 8px;
+}
+ul.tryCustTabs li a:hover {
+  margin: 35px 0 0 0;
+  padding: 10px 0 5px 0;
+}
+ul.tryCustTabs li a.tryCustActive {
+  margin: 30px 0 0 0;
+  padding: 8px 0 8px 0;
+  background: #545f60;
+  color: #6edeef;
+  /*color: #ff6831;*/
+  z-index: 4;
+  outline: none;
+}
+.tryCustGroup:before,
+.tryCustGroup:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+.tryCustGroup:after {
+  clear: both;
+}
+#tryCustEquipContent {
+  width: 300px;
+  height: 100px;
+  margin: 0 auto;
+  background: #545f60;
+  -webkit-box-shadow: 2px 8px 25px -2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 2px 8px 25px -2px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 8px 25px -2px rgba(0, 0, 0, 0.3);
+  -webkit-border-bottom-right-radius: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  -moz-border-radius-bottomright: 8px;
+  -moz-border-radius-bottomleft: 8px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
 
-  }
-  a{
-    ////outline: #007bff 5px solid;
-    margin:30px auto ;
-  }
-}
-#tryPerspective{
-  height: 40vh;
-}
-#groupB{
-  transform: scale(1.5);
-}
-.stage{
-  margin: 0px auto;
-}
-.custBg{
-  padding-top:0px; 
-}
 
 
 //引入客製頁面
@@ -1275,174 +1158,136 @@
 #tryCustormiseFlyerWrap{
   padding-top:$paddingTop; 
   position: relative;
-  background-image: url(../images/darkBgi.jpg);
+  background-color:#111 ;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center;
   background-size: cover;
   z-index: 0;
-  //height: 100vh;
+  height: 100vh;
   min-height: 600px;
   ////outline: 5px red solid;
   .titleBgi{
-    background: url(../images/titleNeonLightGreen.gif) center no-repeat;
+    //background: url(../images/titleNeonLightGreen.gif) center no-repeat;
     background-size: cover;
+    
   }
   @include fontStyle;
   color: $fontColor;
   .commonBtn{
-    margin: 20px;
-  }
-  #flyerContentDetail{
     margin: auto;
-    width:250px;
-    background-color:white;
-    text-align: center;
-    vertical-align: middle;
-    padding: 5px;
-    h4{
-      font-size: 20px;
-    }
+    margin-top: 60vh;
   }
-  #introFlyers{
-    ////outline: #007bff 5px solid;
-    margin: auto;
-    img{
-      margin: auto;
-      width:250px;
-    }
-  }
-  
 }
-
-.flyerFeature{
-  position: relative;
-  ////outline: 5px rgb(0, 216, 134) solid;
-  margin: 5px auto;
-  width: 100%;
-  vertical-align: middle;
-
-  img{
-    vertical-align: middle;
-    width:80%;
-    display: inline-block;
-    ////outline: 5px rgb(0, 50, 216) solid;
-   
-  }
-  div{
-    display: inline-block;
-    vertical-align: middle;
-    ////outline: 5px rgb(216, 0, 205) solid;
-  }
-
-}
-//flyer頁面引入
-.bigCarcouselBox {
-  transition: 2s;
+.introFlyer img{
+  width: 220px;
   opacity: 0;
-  width: 300px;
-  height: 423.98px;
+  box-shadow: 0px 0px 10px rgba(31, 31, 31, 0.8);
+}
+.introFlyerBoard{
+  position: absolute;
+  width: 100px;
+  height: 100px;
   margin: auto;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -30px;
-  .icard {
-  position: absolute;
-  left: 0;
-  right: 0;
+  margin-top:29vh;
   top: 0;
   bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  border:10px rgb(190, 130, 0) groove;
+  background-image: url(../images/woodboard.jpg);
+  padding: 10px;
+  box-shadow: 0px 0px 20px rgba(255, 244, 179, 0.8);
+  font-family: $contentFontFamily;
+  h2{
+    margin: 8px auto;
+    font-size: 24px;
+    font-family: $contentFontFamily;
+  }
+  h3{
+    //outline: red 5px solid;
+    margin-top:20px; 
+    font-family: $contentFontFamily;
+  }
+}
+#introFlyer2,#introFlyer3{
+  display: none;
+}
+
+.introFlyerFunction{
+  position: absolute;
   margin: auto;
-  height: 423.98px;
-  width: 300px;
-  box-shadow: 0 0 20px #000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0px;
+  height: 0px;
+  vertical-align: middle;
+  border-radius: 40px;
+  line-height: 1.1;
+  opacity: 0;
+  color: #111;
+  font-weight:bolder;
+  opacity: 0;
   cursor: pointer;
+  background-color: rgb(253, 228, 0);
+  box-shadow: 0px 0px 10px rgba(26, 26, 26, 0.8);
+  animation: shinningBtnFlyer 3s 2s infinite;
+  transition: ease;
+  //animation: none;
+}
+@keyframes shinningBtnFlyer{
+  0%{filter: drop-shadow(0px 0px 5px #ffff8e);background-color:rgb(253, 228, 0);}
+  50%{filter: drop-shadow(0px 0px 30px #ffff8e);background-color:#e96d00;}
+  100%{filter: drop-shadow(0px 0px 5px #ffff8e);background-color:rgb(253, 228, 0);}
+}
 
-  .iElongationBox {
-    height: 423.98px;
-    width: 300px;
-    position: relative;
 
-    .iblockBox {
-      height: 423.98px;
-      width: 300px;
-      background: url(../images/flyer/flyerBoard.jpg) center center no-repeat;
-      background-size: cover;
-      position: relative;
-
-      img:nth-of-type(1) {
-        width: 280px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-      }
-
-      img:nth-of-type(2) {
-        width: 30px;
-        position: absolute;
-        left: 0px;
-        top: 0px;
-      }
-
-      img:nth-of-type(3) {
-        width: 30px;
-        position: absolute;
-        right: 0px;
-        top: 0px;
-      }
-    }
+.introFlyerFunction:hover{
+  background-color: #fea100;
+  box-shadow: 0px 0px 25px rgba(34, 34, 34, 1);
+  transform:scale(1.05);
+  transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#flyerFunctionDetailSection{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width:90vw;
+  max-width:500px;
+  height: 32vh;
+  max-height:350px;
+  background-image:url(../images/processDetailBgi.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  h3{
+    margin: auto;
+    margin-top: 6.5vh;
+    font-size: 24px;
+    text-align:center;
   }
-
-  .icardContent {
-    transition: 1s;
-    z-index: -1;
+  p{
+    font-family: $contentFontFamily;
+    width: 240px;
+    margin: auto;
+    margin-top: 1.2vh
+  }
+  .closebtn {
     position: absolute;
-    top: 0;
-    right: 0%;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 0 20px #666 inset;
-  }
+    top: 8px;
+    right: 40px;
+    font-size: 30px;
+    color: #e5dccb;
+    cursor: pointer; }
 }
-
-
-.icard.one {
-  transition: 1.5s;
-  z-index: 4;
-  transform: scale(1.5);
-
-  .icardContent {
-    transform: translateX(100%);
-  }
-}
-
-.icard.two {
-  z-index: 3;
-  transition: 1.5s;
-  transform: rotateZ(0deg);
-}
-
-.icard.three {
-  z-index: 2;
-  transition: 1.5s;
-  transform: rotateZ(0deg);
-}
-
-&:hover .icard.two {
-  transition: 1s;
-  transform: rotateZ(-10deg);
-}
-
-&:hover .icard.three {
-  transition: 1s;
-  transform: rotateZ(10deg);
-}
-
+#flyerFunctionDetailSection,#flyerFunctionDetail1,#flyerFunctionDetail2,#flyerFunctionDetail3{
+  display: none;
 }
 
 
@@ -1460,315 +1305,656 @@
   min-height: 600px;
   ////outline: 5px red solid;
   .titleBgi{
-    background: url(../images/titleNeonLightPink.gif) center no-repeat;
+    background: url(../images/titleNeonLightBlueNew.gif) center no-repeat;
     background-size: cover;
+    margin-top: 40px;
   }
   @include fontStyle;
   .commonBtn{
-    margin: 20px;
-  }
-  
-}
-//引入選美
-
-.ibeautyRankingContainer{
-  margin-top: -400px;
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  margin:auto;
-  height: 1080px;
-}
-.beautyRankingbg {
-  position: absolute;
-  transform: scale(1);
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  transition: opacity .7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  opacity: 0;
-  filter: alpha(opacity=0);
-  h3{
-      font-size: $subTitleWord;
-      color:$fontColor;
+      margin: auto;
       text-align: center;
-      filter: drop-shadow(0px 3px 10px rgba(228, 252, 162, 0.7));
-      
   }
-   img{
-       width: 100%;  
-       height: auto;
-       max-height: 277px;
-       margin-top: 150px;
-       filter:drop-shadow(3px 2px 20px rgba(245, 132, 132, 0.7));
-   }
-}
-.beautyRankingSocialBtns{
-    display: flex;
-    text-align: center;
-    .fa-heart,.fa-heart{
-      color:red;}
-  p{
-      color:white;
-      flex-grow: 1;
-      height: 44px;
-      width:50%;
-      line-height: 44px;
-      text-align: left;
+  border: none;
+  .dcontainer{
+      width: 100vw;
   }
-    i{
-      justify-content:space-between;
-      width:25%;
-      height: 44px;
-      font-size: 28px;
-      flex-grow: 1;
-      align-content: center;
-      color:white;
-      line-height: 44px;
-    }
+  button{
+      display:none;
+  }
 }
-
-.fadeIn {
-  opacity: 100;
-  filter: alpha(opacity=100);
+#beautyContestStages{
+  position: relative;
 }
-
-.pagination {
-  width: auto;
-  display: table;
-  margin: 0 auto
+.rankTitle{
+  font-size: 28px;
+  font-family: $contentFontFamily;
+  margin: 2px;
+  color: rgb(255, 255, 255);
 }
-
-.paginationPanel {
+.crown{
+  //outline: 5px red solid;
+  width: 100px;
+  height: 50px;
+  margin: auto;
+  margin-top: 2vh;
+  img{
+      width: 80%;
+      margin: auto;
+  }
+}
+#firstPlaceStage,
+#secondPlaceStage,
+#thirdPlaceStage,
+#forthPlaceStage,
+#fifthPlaceStage {
+  overflow: hidden;
+  img{
+      width: 85%;
+      margin: auto;
+      filter: drop-shadow(0px 0px 5px rgb(255, 253, 185));
+  }
+}
+.dontChange{
+  
+  img{
+      width: 30%;
+  }
+}
+.likeContainer{
+  margin-top: 30px;
+  width: 40px;
+  height: 24px;
+  //outline: 5px red solid;
+  img{
+      width:26px;
+      height: 23px;
+      display: inline-block;
+      margin-bottom:0; 
+      filter: drop-shadow(0px 0px 3px rgb(255, 253, 185));  
+  }
+}
+#contestLikes{
+  //outline: 5px blue solid; 
+  height: 60px;
+  span{
+    font-size: 28px;  
+    font-family: "微軟正黑體";
+  }   
+}
+.slick-current{
+  transform: scale(1.1);
+  transition: .8s ease;  
+}
+.slick-current:focus {
+  outline:none;
+}
+.beautyContestStages{
+  //background-color: rgb(255, 148, 148);
+  text-align: center;
+  margin: 2vh;
+  height: 55vh;
+}
+#beautyContestWrap{
+  padding-top: 50px;
+ 
+  margin: 0;
+}
+#beautyContestSlider{
   width: 100%;
-  position: relative;
-  margin-top: 590px;
-  z-index: 1;
-  height: auto;
+  font-family: "微軟正黑";
+  left: 100vw;
 }
-
-.pagination li {
-  border-radius: 15px;
-  height: 15px;
-  width: 50px;
-  background: $fontColor;
-  float: left;
-  margin-right: 10px;
-  list-style-type: none
-}
-
-.pagination li.active {
-  background: $logoColor;
-}
-
-.pagination li:last-child {
-  margin-right: 0
-}
-.dotflip{
-  text-align:center;
-  position: relative;
-}
-.dotpanel{
-  position: absolute;
-  height:auto;;
-  width:100px;
-  right: 0;
-  display:none;
-  p{
-  font-size: $contentWord;
-  }
-}
-@media screen and (min-width:1200px){
-  .paginationPanel{
-      display: none;
-  }
-  .beautyPageantWrap{
-      background-size: cover;
-      height: 1080px;
-      width: 100%;
-      .beautyRankingHeader{
-          display: flex;
-          .beautyRankingSlogan{
-              padding-top:250px;
-              padding-bottom: 50px;
-              color: $fontColor;
-              flex-grow:1;
-              text-align: center;
-              font-size: $titleWord;
-              ;
-          } 
-      }
-  }
-  #beautyRankingimgs{
-      display: flex;
-      .beautyRankingbg{
-          width: 33%;
-          opacity: 1;
-          position: initial;
-          flex-grow: 1;
-          height: auto;
-          transition: 1s;
-          p{
-              color: $fontColor;
-              font-size: $contentWord;
-              letter-spacing: .1em;
-          }
-          img{
-              margin: 0px;
-              width: 100%;
-              height: auto;
-              padding: 30px;
-              box-sizing: border-box ;
-          }
-      }
-  }
+.slick-initialized{
+  overflow:visible;
+  width: 100vw;
 }
 
 
 //首頁第六屏 wrapper （客製與出貨流程）
 #processWrap{
+  background: url(../images/processBgi.jpg) center no-repeat contain;
   padding-top:$paddingTop; 
   position: relative;
-  width: 100%;
-  height: 100vh;
-  background-color: #3498db;
-  overflow: hidden;
-  animation: colors 30s infinite linear;
+  width: 100vw;
+  z-index: 0;
+  height:100vh;
+  min-height: 600px; 
   .titleBgi{
-    background: url(../images/titleNeonLightGreen.gif) center no-repeat;
+    background: url(../images/titleNeonLightBlueNew.gif) center no-repeat;
     background-size: cover;
+  } 
+}
+#parallaxContainer{ 
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+  .processPara{
+      position: absolute;
+      margin: auto;   
+      transition: 1.3s ease ; 
+      transform: scale(.2);
   }
+  #paraItem1{
+      left: 4vw;
+      top: 35vh;
+      width: 10vw;
+      min-width: 65px;
+      animation: swingPara 5s reverse infinite;
+      opacity: .85;
+  }
+  #paraItem2{
+      right: 30vw;
+      top: 45vh;
+      width: 20vw;
+      min-width: 80px;
+      animation: swingPara 3s infinite;
+  }
+  #paraItem3{ /*鋼管*/
+      left: 79vw;
+      top: 42vh;
+      width: 5vw;
+      min-width: 50px;
+      transform: rotate(200deg);
+      animation: swingPara 5s infinite;
+  }
+  #paraItem4{ /*行星*/
+      left: 70vw;
+      top: 7vh;
+      width: 10vw;
+      opacity: .85;
+      min-width: 50px;
+      animation: swingPara 5s infinite;
+  }
+  #paraItem5{  /*音響*/
+      left: 20vw;
+      top: 15vh;
+      width: 8vw;
+      min-width: 50px;
+      animation: swingPara 10s linear reverse infinite;
+  }
+  #paraItem6{ /*音響*/
+      left: 50vw;
+      top: 35vh;
+      width: 12vw;
+      min-width: 80px;
+      opacity: .85;
+      min-width: 60px;
+      animation: swingPara 8s infinite;
+  }
+  #paraItem7{ /*行星*/
+      left: 30vw;
+      top: 50vh;
+      width: 5vw;
+      min-width: 60px;
+      animation: swingPara 15s infinite;
+  }
+  #paraItem8{ /*人造衛星*/
+      left: 80vw;
+      top: 5vh;
+      width: 10vw;
+      min-width: 40px;
+      animation: swingPara 12s infinite;
+      opacity: .85;
+      
+  }
+  #paraItem9{ /*螢幕*/
+      left: 40vw;
+      top: -2vh;
+      width: 10vw;
+      min-width: 80px;
+      animation: swingPara 12s infinite;
+      opacity: .85;
+      filter: drop-shadow(0px 0px 15px rgba(255, 179, 179, 0.568));
+      animation: swingPara 20s linear reverse infinite;  
+  }
+  #paraItem10{  /*火*/
+      left: 20vw;
+      top: 45vh;
+      width: 8vw;
+      min-width: 70px;
+      animation: swingPara 15s infinite;
+      opacity: .65;
+      filter: drop-shadow(0px 0px 15px rgba(255, 179, 179, 0.568)); 
+      animation: swingPara 30s linear reverse infinite;
+  }
+  #paraItem11{  /*車*/
+      left: 65vw;
+      top: 25vh;
+      width: 15vw;
+      min-width: 70px;
+      animation: swingPara 15s infinite;
+      opacity: .7;
+      filter: drop-shadow(0px 0px 15px rgba(255, 254, 254, 0.363)); 
+      animation: swingPara 30s linear reverse infinite;
+  }
+  .processPara img{
+      position: absolute;
+      margin: auto;
+      transition:  .58s  cubic-bezier(0.65, 0.82, 0.165, 1);
+      
+  }
+.button {
+text-align: center;
+text-transform: uppercase;
+text-decoration: none;
+font-size: 18px;
+font-weight: bolder;
+font-family: "Segoe UI";
+letter-spacing: 1px;
+animation: shinningBtn 3.2s ease infinite;
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@keyframes shinningBtn{
+  0%{filter: drop-shadow(0px 0px 10px #ffffc0);background-color:#e94200;transform: scale(1);}
+  50%{filter: drop-shadow(0px 0px 50px #ffffc0);background-color:#e96d00; color:#122;transform: scale(1.1);}
+  100%{filter: drop-shadow(0px 0px 10px #ffffc0);background-color:#e94200;transform: scale(1);}
 }
-#asters {
+.button:before {
+border-radius: 100px;
+border: 0px solid #e90000;
+box-shadow: 0 0 15px rgba(0, 255, 204, 0.15), 0 0 15px rgba(0, 255, 204, 0.15) inset;
+content: "";
+display: block;
+position: absolute;
+left: 50%;
+top: 50%;
+height: 110px;
+width: 110px;
+margin-left: -57px;
+margin-top: -57px;
+opacity: 1;
+transform: scale(1);
+transition: all 200ms;
+
+}
+.button:hover:before {
+border: 2px solid #e90000;
+transform: scale(1.2);
+opacity: .6;
+filter: drop-shadow(0px 0px 8px #e90000)
+}
+.button.circle {
+background: #e90000;
+border: none;
+border-radius: 900px;
+color: #e4ecfa;
+cursor: pointer;
+display: block;
+width: 100px;
+height: 100px;
+line-height: 100px;
+position: relative;
+margin: auto;
+margin-top: 25px;
+transition: 0.5s;
+}
+.button.circle:hover {
+background: #fee900;
+padding: -2px;
+font-size: 24px;
+color: #001;
+
+}
+.btnContainer {
+position: absolute;
+margin: auto;
+top: -25vh;
+bottom: 0;
+right: 0;
+left: 0;
+width: 110px;
+height: 110px;
+}
+#processWrap{
+/*padding-top:140px;*/ 
+position: relative;
+width: 100%;
+height: 100vh;
+overflow: hidden;
+
+}
+@keyframes shineProcessBgi{
+      0%{opacity: 0.6;}
+      25%{opacity: 0.1;}
+      50%{opacity: 0.4;}
+      75%{opacity: 0.2;}
+      100%{opacity: 0.6;}
+  }
+#processShineBgi{
+background: url(../images/processBgiShine.jpg) center no-repeat;
+position: absolute;
+width: 100%;
+height: 100vh;
+overflow: hidden;
+animation: shineProcessBgi 17s ease infinite;
+}
+#processShineBgi2{
+position: absolute;
+width: 100%;
+height: 100vh;
+overflow: hidden;
+}
+.processShineBgi2{
+background:rgba(255, 255, 147, 0.746);
+animation: shineExplosion .9s ease 1 forwards;
+}
+@keyframes shineExplosion{
+      0%{opacity: 0;}
+      30%{opacity: 0.4;}
+      100%{opacity: 0;}
+  }
+#processWrap .titleBgi{
   position: relative;
-  margin: auto;
-  width: 100px;
-  height: 200%;
-  animation: rotate 30s infinite linear reverse;
+  font-size: 24px;
+  text-align: center;
+  line-height: 80px;
+  width: 200px;
+  height: 80px;
+  background: url(../images/titleNeonLightDarkBlueNew.gif) center no-repeat;
+  background-size: cover;
+  color: rgb(255, 249, 197);
+  border-radius: 10px;  
+  outline: none;
+  border:none;
+  margin:10px auto;
+}
+@media screen and (min-width:1200px) {
+  .titleBgi{
+      margin-top: 20px;
+      margin-left: 24vw;
+  }
 
 }
-
-#stars {
+#earth {
+  width: 40vw;
+  min-width: 300px;
+  max-width: 600px;
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-#stars .star {
-  position: absolute;
-  width: 2px;
-  height: 2px;
-  border-radius: 50%;
-  background-color: white;
-  animation: starscolors 30s infinite linear;
-}
-#processIntro{
-  @include fontStyle;
-  z-index: 100;
-  ////outline: 5px rgb(229, 247, 187) solid;
-  width: 60vw;
-  height: 240px;
-  max-width: 500px;
-  margin: auto;
-}
-
-
-#earthContainer{
-  position: absolute;
-  margin: auto;
-  left: 0;
   right: 0;
-  width: 400px;
-  height: 100px;
-  bottom: 0;
-  overflow: hidden;
-  ////outline: 5px red solid;
-}
-#earth{
-  background-image: url(../images/processEarth.jpg);
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center;
-  background-size: cover;
-  width: 400px;
-  height: 400px;
-  border-radius: 100%;
-  position: absolute;
-  margin: auto;
   left: 0;
-  right: 0;
-  bottom: -300px;
-  animation: rotate 30s infinite linear reverse;
-  box-shadow: 0px 0px 30px 1px rgba(0, 31, 169, 0.1);
-}
-#truck{
-  width: 280px;
-  position: absolute;
+  bottom: -80vh;
   margin: auto;
-  left: 0;
+  opacity: .6;
+  
+}
+#earthRotate{
+  width: 40vw;
+  min-width: 300px;
+  max-width: 600px;
+  position: absolute;
+  top: 0;
   right: 0;
-  bottom: 60px;
-  ////outline: #f1c40f 5px solid;
+  left: 0;
+  bottom: -80vh;
+  margin: auto;
+  
+  animation: earthRotate 90s infinite;
 }
-#carBody{
-  background-image: url(../images/processCarUp.png);
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center;
-  background-size: 100%;
-  margin-bottom:-55px; 
-  width: 280px;
-  height: 200px;
-  animation: truck 1.2s infinite ease;
-}
-#carTire{
-  background-image: url(../images/processCarTire.png);
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center;
-  background-size: 100%;
-  width: 280px;
-  height: 60px;
+@keyframes earthRotate{
+  from{transform: rotate(0deg);}
+  to{transform: rotate(360deg);}
 }
 
-.sun {
-  position: absolute;
-  top: -120px;
-  width: 100px;
-  height: 100px;
-  background-color: #f1c40f;
-  border-radius: 50%;
-  box-shadow: 0px 0px 21px 1px rgba(241,196,15,1);
+@keyframes swingPara{
+  0%{transform: rotate(0deg) translate(0vh,0vh);}
+  
+  50%{transform: rotate(5deg) translate(2vh,2vh);}
+
+  100%{transform: rotate(0deg) translate(0vh,0vh);}
+}
+  #explosion{
+      position: absolute;
+      width: 80vw;
+      max-width: 500px;
+      height: 80vw;
+      max-height: 500px;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      display: none;
+  }
+  #explosion img{
+      width: 100%;
+      opacity: .85;
+      margin-top: 12vh;
+  }
+  #completeCar{
+      position: absolute;
+      width: 50vw;
+      max-width: 300px;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      animation: truckGo 1s ease infinite;
+      display: none;
+  }
+  @keyframes truckGo{
+  0%{transform: translateY(15vh);}
+  50%{transform: translateY(17vh);}
+  100%{transform: translateY(15vh);}
+  }
+  .processBoard{
+      position: absolute;
+      background-image: url(../images/processDetailBorad1.png);
+      background-position: center;
+      background-size: contain;
+      width: 350px;
+      height: 200px;
+      margin: auto;
+      top: -20vh;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      animation: shinningProcessBoard 1.12s ease infinite;
+      transform: scale(.85);
+      h4{
+        margin-top:45px;
+        color: #fff;
+        text-align: center;
+        font-size: 30px;
+        font-family: $contentFontFamily;
+      }
+      p{
+        color: #fff;
+        width: 160px;
+        text-align: center;
+        font-size: 22px;
+        margin: auto;
+        margin-top:0px; 
+        line-height: 1.4;
+        font-family: $contentFontFamily;
+    }   
+  }
+  #processDetail{
+      background-image: url(../images/processDetailBorad1.png);
+      transform: scale(.55);
+      transition:1.8s cubic-bezier(.13,-0.44,.58,1.85) ;
+      
+  }
+  #processDetail2{
+      background-image: url(../images/processDetailBorad2.png);
+      display: none;
+      transition:1.5s  cubic-bezier(.13,-0.44,.58,1.85) ;
+      animation: shinningProcessBoard 1.14s ease infinite;
+  }
+  #processDetail3{
+      background-image: url(../images/processDetailBorad3.png);
+      display: none;
+      transition:1.2s  cubic-bezier(.13,-0.44,.58,1.85) ;
+      animation: shinningProcessBoard 1.14s ease infinite;
+  }
+  #processDetail4{
+    margin: auto;
+    position: absolute;
+    top: 34vh;
+    left: 0;
+    right: 0;
+    display: none;
+    text-align: center;
+  }
+
+  @keyframes shinningProcessBoard{
+  0%{filter: drop-shadow(0px 0px 2px rgba(255, 255, 170, 0.5));}
+  50%{filter: drop-shadow(0px 0px 30px rgba(255, 255, 170, 0.4));}
+  100%{filter: drop-shadow(0px 0px 2px rgba(255, 255, 170, 0.5));}
+}
+//服務流程的花車
+#processLastStage{
+  position: relative;
+  display: none;
+  #equipCarStage{
+    margin-top: -80vh;
+  }
+  #introCarStage{
+    width: 100%;
+    position:absolute;
+    ////outline: red 5px solid;
+    top: 0;
+    left: 0;
+  }
+  #introInnerBlock{
+    width: 102%;
+    position:absolute;
+    ////outline: blue 5px solid;
+    top: 0;
+    left: 0;
+    margin-left:-4px; 
+    animation: introInnerBlockShine 2.4s ease infinite;
+    transition:  .4s ease;
+    display: block;
+  }
+
+  #introPoleBlock{
+    width: 3%;
+    position:absolute;
+    ////outline: blue 5px solid;
+    margin: auto;
+    top: 15vw;
+    right: 0;
+    left: 0;
+    filter: drop-shadow(0px 0px 5px rgb(255, 244, 203));
+    display: block;
+    animation: introPoleBlockScale 3s ease infinite;
+  }
+  #processDanceBlock{
+    width: 11%;
+    position:absolute;
+   
+    margin: auto;
+    top: 36vw;
+    right: 0;
+    left: 0;   
+    filter: drop-shadow(0px 0px 4px rgba(36, 36, 36, 0.9));
+    animation: introDanceBlock 10s ease infinite;
+    display: block;
+  }
+
+  .introSpecialBlock{
+    position:absolute;
+    margin: auto;    
+    display: block;
+  }
+  .introSpecialBlock.one{
+      width: 50%;
+      left: 0;
+      top: -60px
+  }
+  .introSpecialBlock.two{
+    width: 70%;
+    right: 0px;
+    top: -90px;
+}
+  .introSpecialBlock.three{
+    width: 15%;
+    right: 78px;
+    top: 132px;
+    display: block;
+}
+.introSpecialBlock.four{
+    width: 15%;
+    left: 78px;
+    transform: scaleX(-1) rotate(5deg);
+    top: 132px;
+    display: block;
+}
+#introScreenBlock{
+    width: 52vw;
+    height: 6vw;
+    position:absolute;
+    margin: auto;  
+    top: 26.2vw;
+    right: 0;
+    left: 0;  
+    overflow: hidden;
+    display: block;
+    span{
+        width: 600px;
+        height: 6vw;
+        position:absolute;
+        font-size: 4vw;
+        line-height: 6vw;
+        color: #F2EEE2;
+        animation: introScreenWords 18s linear infinite;
+    }
+}
+.introSoundsBlock{
+    width: 14%;
+    position:absolute;
+    margin: auto;  
+    top: 28vw;
+    display: block;
+}
+.introSoundsBlock.one{
+    right: 5vw;
+    animation: introSoundsScale 1.5s ease reverse infinite;
+    filter: drop-shadow(0px 0px 7px rgb(255, 244, 203));
+    display: block;
+}
+.introSoundsBlock.two{
+    left: 5vw;
+    animation: introSoundsScale 1.5s ease reverse infinite;
+    filter: drop-shadow(0px 0px 7px rgb(255, 244, 203));
+    display: block;
 }
 
-.moon {
-  position: absolute;
-  background-image: url(../images/processMoon.jpg);
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center;
-  background-size: cover;
-  bottom: -120px;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  transform: rotate(30deg);
-  box-shadow: 0px 0px 21px 1px rgba(241,196,15,1);
+  #lyrics{
+    width: 52vw;
+    height: 6vw;
+    position:absolute;
+    margin: auto;  
+    top: 26.2vw;
+    right: 0;
+    left: 0;  
+    overflow: hidden;
+    display: block;
+    span{
+        width: 800px;
+        height: 6vw;
+        position:absolute;
+        font-size: 4vw;
+        line-height: 6vw;
+        color: #F2EEE2;
+        animation: lyrics 19s linear infinite;
+    }
 }
+
+}
+
+
+
+
+
 footer{
   padding-top:15px;
   width: 100%;
   height: 115px;
-  background-image: url(../images/footerBgi.jpg);
+  background-image: url(../images/footerBgi2.jpg);
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center;
@@ -1792,7 +1978,7 @@ footer{
 
 
 
-@media screen and (min-width:768px) {
+/*@media screen and (min-width:768px) {
   #earth{
   width: 600px;
   height: 600px;
@@ -1808,14 +1994,13 @@ footer{
   bottom: 0;
   overflow: hidden;
   }
-}
+}*/
 
 @media screen and (min-width:768px) {
 
 
   #introFlyerFeature{
     margin-top: 30px;
-<<<<<<< HEAD
   }
   footer{
     p{
@@ -1831,13 +2016,16 @@ footer{
   
   #introWords{
     width: 40%;
-    margin-left:-100px;
-    z-index:100;
+    top: 0;
+    bottom:0;
+    right: 14vw;
+    margin-top:48vh;
+    z-index:1;
     h2{
-      font-size: 32px;
+      font-size: 42px;
     }
     h3{
-      font-size: 24px;
+      font-size: 32px;
     }
   }
   #carEquipmentsIntroWrap{
@@ -1875,7 +2063,7 @@ footer{
 //舞台配件介紹 col-lg 頭
 @media screen and (min-width:992px) {
   .EquipIntroWrapper {
-    margin:120px auto auto auto;
+    margin:6vh auto auto auto;
   }
   //包住所有被件及背景舞台的div
     #equipCarStage{
@@ -1962,8 +2150,6 @@ footer{
   @keyframes introScreenWords{
     from{transform: translateX(100px);}
     to{transform: translateX(-700px);}
-=======
->>>>>>> 8e0bb60beb40f7304e0952b73a20ab9954ec6ba6
   }
   .introSoundsBlock{
     width: 14%;
@@ -2006,26 +2192,27 @@ footer{
 //舞台配件介紹 col-lg 尾
 @media screen and (min-width:992px) {
   .perspective{
-    perspective: 300px;
-    transform: scale(1.3);
-    margin-top:80px;
+    transform: scale(1.6);
+    margin-top:50px;
   }
-  #introWords{
-    z-index:1;
-    h2{
-      font-size: 32px;
+  
+  #carEquipmentsIntroWrap{
+    #equipBtnOne{
+      display: block;
+      margin-left: 20vw;
     }
-    h3{
-      font-size: 24px;
-    }
-  }
-  #equipCarStage{
-    width: 55%;
-    .commonBtn{
-      margin-left: 110px;
+    #equipBtnTwo{
+      display: none;
     }
   }
-<<<<<<< HEAD
+ #beautyContestSlider{
+   margin-top: 0vh;
+ }
+ #beautyContestWrap{
+   .commonBtn{
+     margin-top: -50px;
+   }
+ }
   
   #customerServiceGirl{
     position:fixed;
@@ -2033,7 +2220,6 @@ footer{
     ////outline: 5px red solid：
     width:140px;
     right: 80px;
-    bottom: -40px;
     z-index:3;
     img{
       width:100%; 
@@ -2051,32 +2237,68 @@ footer{
     img{
       margin: 20px auto;
     }
-=======
-  .introTabs {
-    margin:0px 0px 0px 60px;
   }
-
-  .tabgroup {
-    box-shadow:2px 2px 2px 2px rgba(0,0,0,.1);
-    h2{
-        margin-bottom: 20px;
-        font-size: 30px;
-    }
-    div {
-      height: 320px;
-      font-size:20px;
-      line-height:30px;
-      margin:0px 0px 0px 30px;
-
+  #beautyContestWrap{
+    .dcontainer{
+      width: 80vw;
     }
   }
 
+  #processWrap{
+    .titleBgi{
+        margin-top: 20px;
+        margin-left: 24vw;
+       // outline: red 5px solid;
+    }
+
+}
+  #tryCustormiseFlyerWrap{
+    #introFlyerBoard{
+      margin-top:29vh; 
+    }
+    .commonBtn{
+      margin-top: 55vh;
+    }
+    #introFlyer2,#introFlyer3{
+      display: block;
+    }
+  }
+  #beautyContestWrap,
+  #carEquipmentsIntroWrap,
+  #tryCustormiseWrap,
+  #tryCustormiseFlyerWrap,
+  #beautyContestWrap,
+  #processWrap{
+    padding-top:$lgPaddingTop;
+  }
   
 }
-@media screen and (min-width:1200px){
-  #equipCarStage{
-    margin-top:0px;
->>>>>>> 8e0bb60beb40f7304e0952b73a20ab9954ec6ba6
+@media screen and (min-width:1500px) {
+  
+  #beautyContestSlider{
+    margin-top: 9vh;
+  }
+  #beautyContestWrap,
+  #carEquipmentsIntroWrap,
+  #tryCustormiseWrap,
+  #tryCustormiseFlyerWrap,
+  #beautyContestWrap,
+  #processWrap{
+    padding-top:160px;
+  }
+  #carEquipmentsIntroWrap{
+    #equipBtnOne{
+      display: none;
+    }
+    #equipBtnTwo{
+      display: block;
+    }
+    .EquipIntroWrapper{
+      margin-top: 100px;
+      .commonBtn{
+        margin-top: -160px;
+      }
+    }
   }
   
 }
