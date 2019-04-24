@@ -49,12 +49,13 @@ li{
     .beautyRankingHeader{
       #beautyRankingimgsMonthBtn{
         transition: .5s;
+        color: #999;
         &:focus{
           outline: none;
         }
       }
       #beautyRankingimgsBtn{
-        transform: scale(1.2);
+        transform: scale(1);
         transition: .5s;
         &:focus{
           outline: none;
@@ -89,15 +90,24 @@ li{
          margin-top: 150px;
          filter:drop-shadow(3px 2px 20px rgba(245, 132, 132, 0.7));
      }
+     p{
+      text-align: center;
+      color: white;
+      opacity: 0.7;;
+     }
   }
   .beautyRankingSocialBtns{
       display: flex;
       text-align: center;
+      justify-content:center;
+      padding: 0px 30px;
+      max-width: 87%;
+      margin-left: 6.5%;
       .fa-heart,.fa-heart{
-        color:red;}
+        color:#eee ;}
     p{
         color:white;
-        flex-grow: 1;
+        // flex-grow: 1;
         height: 44px;
         width:50%;
         line-height: 44px;
@@ -105,13 +115,21 @@ li{
     }
       i{
         justify-content:space-between;
-        width:50%;
+        width:44px;
         height: 44px;
         font-size: 28px;
         flex-grow: 1;
         align-content: center;
-        color:white;
+        color:#eee;
         line-height: 44px;
+        text-align: left;
+        &:nth-child(4){
+          flex-grow: 3;
+          text-align: right;
+        }
+      }
+      .fa-bookmark::before,.fa-external-link-alt::before,.fa-comment::before,.fa-heart::before{
+        cursor: pointer;
       }
   }
   
@@ -152,25 +170,30 @@ li{
     margin-right: 0
   }
   .dotflip{
-    text-align:center;
+    text-align:right;
     position: relative;
-    width: 150px;
+    width: 100%;
     z-index: 0;
+    margin-right: 5px; 
+    i{
+      line-height: 44px;
+    }
   }
   .dotpanel{
     position: absolute;
     height:auto;;
-    width:76px;
-    right: 0px;
+    width: 76px;
+    right: -14px;
+    top: 10px;
+    text-align: left;
     // border: 1px solid #f00;
-    background-image: linear-gradient(180deg, transparent, transparent 5%, #fff 100%);
-    top: 0px;
-    padding-top:30px; 
+    background-image: linear-gradient(270deg, transparent, #fff 90%, #fff 100%);
     z-index: 2;
-    border-radius: 0 0 3px 3px;
+    border-radius:3px 0px 0px 3px;
     li{
       z-index: 1;
       cursor: pointer;
+      display: inline-block;
       &:hover{
         color: $logoColor;
       }
@@ -192,10 +215,22 @@ li{
         width: 100%;
         background-color: #fff700c2;
         border-radius: 10px;
-        padding: 10px;
+        padding: 26px;
         margin: 50px 0;
         filter: drop-shadow(0 0 8px #fff);
+        .likeCount{
+          margin-left: 5px;
+          letter-spacing:0.1em;
+        }
         .beautyRankingSocialBtns {
+          display: flex;
+          text-align: center;
+          justify-content:center;
+          // padding: 0px 30px;
+          max-width: 100%;
+          margin-left: 5px;
+          padding: 0px;
+          margin-top: 0px;
           i{
             color: #111;
           }
@@ -206,78 +241,117 @@ li{
         .beautyDiscIgMem{
         display: flex;
         padding: 0 0 10px 0;
+          .beautyDiscIgTopic{
+            height: 50px;
+            width: 200%;
+            margin-left: 5px;
+            .beautyDiscIgMName{
+              font-size: 18px;
+              width: 100%;
+              line-height: 25px;
+              height: 25px;
+              max-width: 100%;
+            }
+            .beautyDiscIgMNameCar{
+              font-size: 18px;
+              width: 100%;
+              line-height: 25px;
+              height: 25px;
+              max-width: 100%;
+              color:#555;
+            }
+          }
           img{
-            width: 44px;
-            height: 44px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
-            margin: 0 15px;
+            margin-left: 5px;
           }
           p{
-            max-width: calc(100% - 44px );
-            line-height: 44PX;
+            max-width: calc(100% - 50px );
+            line-height: 50PX;
             font-size: $buttonWord;
             letter-spacing:0.1em;
             font-weight: 900;
+            margin-left: 5px;
           }
         }
-        .beautyDiscIgMemTextContainer{
-          display: flex;
-          width: 100%;
-          padding: 5px 0;
-          img{
-            width: 44px;
-            height: 44px;
-            margin: 0 15px;
-            border-radius: 50%;
-          }
-          .beautyDiscIgMName{
-            line-height: 44PX;
-            font-size: $buttonWord;
-            letter-spacing:0.1em;
-            font-weight: 900;
-          }
-          .beautyDiscIgNameText{
-            margin-left: 20px;
-            line-height: 44PX;
-            font-size: $contentWord;
+        .beautyDiscIgMemTextContainerWrap{
+          margin: 20px 0px;
+          font-family: '微軟正黑';
+          overflow-y:hidden;
+          .beautyDiscIgMemTextContainer{
+            display: flex;
+            width: 100%;
+            margin-top: 8px;
+            img{
+              width: 28px;
+              height: 28px;
+              border-radius: 50%;
+              margin-left: 5px;
+            }
+            .beautyDiscIgMName{
+              line-height: 28PX;
+              font-size: contentWord;
+              letter-spacing:0.1em;
+              font-weight: 900;
+              padding-left: 5px;
+            }
+            .beautyDiscIgNameText{
+              margin-left: 20px;
+              line-height: 28PX;
+              font-size: $contentWord;
+              color: #444;
+            }
           }
         }
         .beautyDiscIgMemStage{
           img{
             width: 100%;
-            background-color: #fff;
+            filter: drop-shadow(2px 2px 4px #444);
           }
         }
         .beautyDiscForm{
           display: flex;
           width: 100%;
           img{
-          margin: 0 15px;
-          width: 44px;
-          height: 44px;
+          width: 28px;
+          height: 28px;
           border-radius: 50%;
+          line-height: 28px;
+          margin-left:5px; 
           }
           form{
             width: 100%;
             height: 44px;
             .DiscTextArea{
-              line-height: 34px;
+              line-height: 28px;
               width: calc(100% - 10px);
-              margin: 5px 0;
-              position: relative;
-              border-radius: 5px 0px 0px 5px;
+              margin: 0;
+              margin-left: 5px;
+              border-radius: 5px;
+              border: 2px solid rgb(0, 195, 137);
+              &:focus{
+                outline: none;
+                border-radius: 5px;
+                border: 2px solid rgb(255, 121, 81);
+                &+.DiscSent{
+                  background-color: rgb(0, 195, 137);
+                }
+              }
             }
             .DiscSent{
               position: absolute;
-              right: 24px;
+              right: 34px;
               width: 44px;
-              font-size: $buttonWord;
-              line-height: 31px;
-              height: 32px;
-              margin: 8px 0;
+              font-size: 14px;
+              height: 28px;
+              margin: 0;
               border-radius: 5px;
               color: #fff;
-              background-color: #666;
+              background-color: rgb(255, 121, 81);
+              margin-top: -30px;
+              cursor: pointer;     
             }
           }
         }
@@ -289,6 +363,11 @@ li{
       .beautyDiscContainer{
         max-width: 1200px;
         height: auto;
+        .beautyDiscFilter{
+          max-width: 1200px;
+          height: 50px;
+          outline: 1px solid #f00;
+        }
         .beautyDiscStageContainer{
           display: flex;
           flex-wrap: wrap;
@@ -339,7 +418,7 @@ li{
               width: 150px;
               height: 80px;
               font-size: $titleWord;
-              z-index: 1;
+              z-index: 0;
               cursor: pointer;
               font-family: 'wangHangMing';
               box-shadow: 0px 4px 5px $fontColor;
@@ -413,8 +492,8 @@ li{
             }
            
             .beautyRankingSlogan{
-                padding-top:250px;
-                padding-bottom: 30px;
+                padding-top:264px;
+                padding-bottom: 16px;
                 color: $logoColor;
                 flex-grow:1;
                 text-align: center;
@@ -429,49 +508,68 @@ li{
     #beautyRankingimgs{
         display: flex;
         transition: .5s;
+        flex-wrap: nowrap;
         .beautyRankingbg{
-            width: 33%;
+            width: calc(100% - 60px);
             opacity: 1;
             position: initial;
             flex-grow: 1;
             height: auto;
             transition: 1s;
+            box-sizing: border-box ;
+            text-align: center;
             p{
-                color: $fontColor;
-                font-size: $contentWord;
-                letter-spacing: .1em;
-            }
+              text-align: left;
+              color: white;
+              opacity: 0.7;
+              margin-left:calc(6.5% + 30px);
+              font-family: '微軟正黑';
+              font-size: 12px;
+             }
             img{
                 margin: 0px;
-                width: 100%;
+                width: calc(100% - 60px);
                 height: auto;
-                padding: 30px;
-                box-sizing: border-box ;
+                padding: 0px;
+                padding-bottom: 0px;
+            }
+            h3{
+              padding-bottom: 15px;
+              margin-top: -15px;
             }
         }
     }
     #beautyRankingimgsMonth{
       display: none;
       transition: .5s;
-        .beautyRankingbg{
-          width: 33%;
-          opacity: 1;
-          position: initial;
-          flex-grow: 1;
-          height: auto;
-          transition: 1s;
-          p{
-              color: $fontColor;
-              font-size: $contentWord;
-              letter-spacing: .1em;
-          }
-          img{
-              margin: 0px;
-              width: 100%;
-              height: auto;
-              padding: 30px;
-              box-sizing: border-box ;
-          }
-      }
+      .beautyRankingbg{
+        width: 33%;
+        opacity: 1;
+        position: initial;
+        flex-grow: 1;
+        height: auto;
+        transition: 1s;
+        box-sizing: border-box ;
+        text-align: center;
+        p{
+          text-align: left;
+          color: white;
+          opacity: 0.7;
+          margin-left:calc(6.5% + 30px);
+          font-family: '微軟正黑';
+          font-size: 12px;
+         }
+        img{
+            margin: 0px;
+            width: calc(100% - 60px);
+            height: auto;
+            padding: 0px;
+            padding-bottom: 0px;
+        }
+        h3{
+          padding-bottom: 15px;
+          margin-top: -15px;
+        }
+    }
   }
 }
