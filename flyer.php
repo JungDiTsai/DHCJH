@@ -42,6 +42,7 @@
 
     <?php require_once("php/header.php");?>
     <?php require_once("php/loginLightBox.php");?>
+    <?php require_once("php/components/_connectDHC.php"); ?>
     <!-- flyer內容 -->
     <div id="app">
         <article class="firstScreen">
@@ -87,7 +88,7 @@
                             <h5></h5>
                             <div id="A4qrcode"><img src="" alt=""></div>
                         </div>
-                        <div id="moveBtn">
+                        <div id="moveBtn" v-if="stepIndex!=0">
                             <span v-on:click="moveLeft">&larr;</span>
                             <span v-on:click="moveTop">&uarr;</span>
                             <span v-on:click="moveBottom">&darr;</span>
@@ -128,13 +129,22 @@
                                         <input type="file" name="updateInput" v-on:change="updateInput">
                                     </form>
                                 </label>
-                                <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_02.jpg" alt="">
-                                <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_03.jpg" alt="">
-                                <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_04.jpg" alt="">
-                                <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_05.jpg" alt="">
-                                <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_06.jpg" alt="">
-                                <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_07.jpg" alt="">
-                                <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_08.jpg" alt="">
+                                <?php
+                                    try {
+                                        $sql = 'SELECT flyImg from flyimg where flyStatus="啟用";';
+                                        $products = $pdo->query($sql);
+                                        
+                                     } catch (PDOException $e) {
+                                        $errMsg = '';
+                                        $errMsg .=  '錯誤原因' . $e->getMessage() . '<br>'; 
+                                        $errMsg .=  '錯誤行號' . $e->getLine() . '<br>';
+                                        echo $errMsg;
+                                     }
+                                     $products = $products->fetchAll(PDO::FETCH_ASSOC);
+                                     foreach ($products as $key => $row) {                 
+                                ?>
+                                    <img src="<?php echo  $row['flyImg'];?>" alt="">
+                                <?php } ?>
                             </div>
                             <div id="selectDay">
                                 <label>
@@ -177,11 +187,25 @@
     <article class="secScreen">
         <h2 class="titleBgi">客製宣傳單</h2>
         <div class="wrap">
+        <?php
+            try {
+                $sql = 'select * from flyer left outer join orders on flyer.orderno= orders.orderno join host on orders.hostNo = host.hostNo where flyeStatus != 0  order by flyer.orderno desc limit 3;';
+                $products = $pdo->query($sql);
+         
+             } catch (PDOException $e) {
+                $errMsg = '';
+                $errMsg .=  '錯誤原因' . $e->getMessage() . '<br>'; 
+                $errMsg .=  '錯誤行號' . $e->getLine() . '<br>';
+                echo $errMsg;
+             }
+             $number =  $products->rowCount();
+             $products = $products->fetchAll(PDO::FETCH_ASSOC);
+        ?>
             <div class="bigCarcouselBox">
                 <div class="card one">
                     <div class="ElongationBox">
                         <div class="blockBox">
-                            <img src="images/flyer/2.jpg" alt="">
+                            <img src="<?php echo $products[$number-1]['flyerImgUrl'] ?>" alt="">
                             <img src="images/flyer/flyerPin.png" alt="">
                             <img src="images/flyer/flyerPin.png" alt="">
                         </div>
@@ -189,23 +213,33 @@
                             <table>
                                 <tr>
                                     <th>主持人</th>
-                                    <td>潘佳麗</td>
+                                    <td><?php echo $products[$number-1]['hostName'] ?></td>
                                 </tr>
                                 <tr>
                                     <th>地點</th>
-                                    <td>高雄市</td>
+                                    <td><?php echo $products[$number-1]['flyeradd'] ?></td>
                                 </tr>
                                 <tr>
                                     <th>活動時間</th>
-                                    <td>2019-04-23</td>
+                                    <td><?php echo $products[$number-1]['flyeDate'] ?></td>
                                 </tr>
                                 <tr>
                                     <th>簡介</th>
-                                    <td>從小朋友喜歡的兒童汽車、氣墊遊戲及特色胖卡市集，舞台活動更邀請到波力、MOMO哥哥姐姐們及BabyBoss職業體驗城等知名卡童玩偶陪伴大家一起玩樂</td>
+                                    <td><?php echo $products[$number-1]['flyerText'] ?></td>
                                 </tr>
                                 <tr>
                                     <th>參加人數</th>
-                                    <td><span>24</span>人<button class="commonBtnSmall">參加</button></td>
+                                    <td>
+                                        <span>
+                                            <?php 
+                                                if($products[$number-1]['peopleStatus'] != 0){
+                                                    echo $products[$number-1]['peopleNumber'];
+                                                }else{
+                                                    echo "-";
+                                                }
+                                            ?>
+                                        </span>人<button class="commonBtnSmall joinAct" order="<?php echo $products[$number-1]['orderNo'] ?>">參加</button>
+                                    </td>
                                 </tr>
                             </table>
                         </div>
@@ -215,7 +249,7 @@
                 <div class="card two">
                     <div class="ElongationBox">
                         <div class="blockBox">
-                            <img src="images/flyer/3.jpg" alt="">
+                            <img src="<?php echo $products[$number-2]['flyerImgUrl'] ?>" alt="">
                             <img src="images/flyer/flyerPin.png" alt="">
                             <img src="images/flyer/flyerPin.png" alt="">
                         </div>
@@ -223,23 +257,33 @@
                         <table>
                                 <tr>
                                     <th>主持人</th>
-                                    <td>潘佳麗</td>
+                                    <td><?php echo $products[$number-2]['hostName'] ?></td>
                                 </tr>
                                 <tr>
                                     <th>地點</th>
-                                    <td>高雄市</td>
+                                    <td><?php echo $products[$number-2]['flyeradd'] ?></td>
                                 </tr>
                                 <tr>
                                     <th>活動時間</th>
-                                    <td>2019-04-23</td>
+                                    <td><?php echo $products[$number-2]['flyeDate'] ?></td>
                                 </tr>
                                 <tr>
                                     <th>簡介</th>
-                                    <td>從小朋友喜歡的兒童汽車、氣墊遊戲及特色胖卡市集，舞台活動更邀請到波力、MOMO哥哥姐姐們及BabyBoss職業體驗城等知名卡童玩偶陪伴大家一起玩樂</td>
+                                    <td><?php echo $products[$number-2]['flyerText'] ?></td>
                                 </tr>
                                 <tr>
                                     <th>參加人數</th>
-                                    <td><span>24</span>人<button class="commonBtnSmall">參加</button></td>
+                                    <td>
+                                        <span>
+                                            <?php 
+                                                if($products[$number-2]['peopleStatus'] != 0){
+                                                    echo $products[$number-2]['peopleNumber'];
+                                                }else{
+                                                    echo "-";
+                                                }
+                                            ?>
+                                        </span>人<button class="commonBtnSmall joinAct" order="<?php echo $products[$number-2]['orderNo'] ?>">參加</button>
+                                    </td>
                                 </tr>
                             </table>
                         </div>
@@ -249,7 +293,7 @@
                 <div class="card three">
                     <div class="ElongationBox">
                         <div class="blockBox">
-                            <img src="images/flyer/1.jpg" alt="">
+                            <img src="<?php echo $products[$number-3]['flyerImgUrl'] ?>" alt="">
                             <img src="images/flyer/flyerPin.png" alt="">
                             <img src="images/flyer/flyerPin.png" alt="">
                         </div>
@@ -257,23 +301,33 @@
                         <table>
                                 <tr>
                                     <th>主持人</th>
-                                    <td>潘佳麗</td>
+                                    <td><?php echo $products[$number-3]['hostName'] ?></td>
                                 </tr>
                                 <tr>
                                     <th>地點</th>
-                                    <td>高雄市</td>
+                                    <td><?php echo $products[$number-3]['flyeradd'] ?></td>
                                 </tr>
                                 <tr>
                                     <th>活動時間</th>
-                                    <td>2019-04-23</td>
+                                    <td><?php echo $products[$number-3]['flyeDate'] ?></td>
                                 </tr>
                                 <tr>
                                     <th>簡介</th>
-                                    <td>從小朋友喜歡的兒童汽車、氣墊遊戲及特色胖卡市集，舞台活動更邀請到波力、MOMO哥哥姐姐們及BabyBoss職業體驗城等知名卡童玩偶陪伴大家一起玩樂</td>
+                                    <td><?php echo $products[$number-3]['flyerText'] ?></td>
                                 </tr>
                                 <tr>
                                     <th>參加人數</th>
-                                    <td><span>24</span>人<button class="commonBtnSmall">參加</button></td>
+                                    <td>
+                                        <span>
+                                            <?php 
+                                                if($products[$number-3]['peopleStatus'] != 0){
+                                                    echo $products[$number-3]['peopleNumber'];
+                                                }else{
+                                                    echo "-";
+                                                }
+                                            ?>
+                                        </span>人<button class="commonBtnSmall joinAct" order="<?php echo $products[$number-3]['orderNo'] ?>">參加</button>
+                                    </td>
                                 </tr>
                             </table>
                         </div>
@@ -282,14 +336,14 @@
             </div>
             <div class="owl-carousel owl-theme">
             <?php
-                require_once("php/components/_connectDHC.php");
+                
                 $errMsg='';
                 try {
-                    $sql = 'SELECT * FROM flyer';
+                    $sql = 'SELECT * FROM flyer where flyeStatus != 0;';
                     $products = $pdo->query($sql);
                     foreach( $products as $i=>$prodRow){
             ?>
-                    <div class="item"><img order="<?php echo $prodRow['flyerNo']?>" src="<?php echo $prodRow['flyerImgUrl'] ?>" class="flyer"></div>
+                    <div class="item"><img order="<?php echo $prodRow['orderNo']?>" src="<?php echo $prodRow['flyerImgUrl'] ?>" class="flyer"></div>
             <?php   }
                  } catch (PDOException $e) {
                     $errMsg .=  '錯誤原因' . $e->getMessage() . '<br>'; 
@@ -331,37 +385,38 @@
             <div id="QrcodeIcon">
                 <img src="images/icon/QRcodeIcon.png" alt="查看更多">
                 <div>
-                    <p onclick="flyerReport()">檢舉</p>
+                    <p onclick="flyerReport()" order="" id="flyerReport">檢舉</p>
                 </div>
             </div>
             <div class="flyerArea">
                 <img src="images/flyer/member_3.jpg" alt="宣傳單">
                 <div class="envelopeHeader">
-                    <h4>闖闖看淘氣大舞台</h4>
-                    <span>活動時間 2019-08-28</span>
+                    <h4></h4>
+                    <span></span>
                 </div>
             </div>
             <div class="envelopeContent">
                 <div class="envelopeTitle">
                     <div class="titleImg"><img src="images/member2.jpg" alt=""></div>
                     <div class="titleName">
-                        <p>Christina</p><span>參加人數 <mark>24</mark> 人</span>
+                        <p></p>
+                        <span>參加人數 <mark></mark> 人</span>
                     </div>
                 </div>
                 <div class="envelopeDetail">
                     <p>主持人</p>
-                    <p>潘佳麗</p>
+                    <p></p>
                     <p>地點</p>
-                    <p>桃園市桃園區八德路中壢巷54號</p>
+                    <p></p>
                     <p>活動時間</p>
-                    <p>2019-08-29</p>
+                    <p></p>
                     <span>
                         簡介<br>
-                        從小朋友喜歡的兒童汽車、氣墊遊戲及特色胖卡市集，舞台活動更邀請到波力、MOMO哥哥姐姐們及BabyBoss職業體驗城等知名卡童玩偶陪伴大家一起玩樂，更首創300公分高的馬卡龍色系大舞台地景唷。
+                        <span>從小朋友喜歡的兒童汽車、氣墊遊戲及特色胖卡市集，舞台活動更邀請到波力、MOMO哥哥姐姐們及BabyBoss職業體驗城等知名卡童玩偶陪伴大家一起玩樂，更首創300公分高的馬卡龍色系大舞台地景唷。</span>
                     </span>
                 </div>
                 <div class="envelopeBar">
-                    <button class="commonBtnSmall">我要參加</button>
+                    <button class="commonBtnSmall joinAct" order="">我要參加</button>
                 </div>
             </div>
         </div>
@@ -373,28 +428,6 @@
     <script src="js/_flyer_vue.js"></script>
     <script src="js/_flyer_tweenMax.js"></script>
     <script>
-        // //ajax更換燈箱詳情內容
-        // window.addEventListener("load", function () {
-        //     $.ajax({
-        //         url: 'php/components/_getBigFlyer.php',
-        //         type: 'GET',
-        //         data: {
-        //         },
-        //         success: function(response) {
-        //             console.log(JSON.parse(response));
-        //             let data = JSON.parse(response);
-        //             for (let i = 0; i < data.length; i++) {
-        //                 let div = document.createElement('div');
-        //                 div.classList.add('item');
-        //                 document.getElementsByClassName('owl-theme')[0].appendChild(div);
-        //             }
-        //             // <div class="item"><img src="images/flyer/1.jpg" class="flyer"></div>
-        //         },
-        //         error: function(xhr) {
-        //           alert('Ajax request 發生錯誤');
-        //         }
-        //       });
-        // })
         //匯入訂單
         document.getElementById('enterOrder').addEventListener('click',function(){
             if(LoginState=="notFound"){
@@ -437,9 +470,37 @@
         })
         //點擊檢舉輸入原因 傳到後端
         function flyerReport(){
-            let str = prompt("請輸入檢舉原因","");
-            console.log(str);
+            if(LoginState!="notFound"){
+                let str = prompt("請輸入檢舉原因","");
+                let orderNo = document.getElementById('flyerReport').getAttribute('order');
+                console.log(orderNo);  
 
+                  var xhr = new XMLHttpRequest();
+                  xhr.onreadystatechange = function(){
+                    if( xhr.readyState == XMLHttpRequest.DONE ){ //server端執行完畢
+                      if( xhr.status == 200){ //server端可以正確的執行
+                           console.log(xhr.responseText);
+                      }else{ //其它
+                          alert( xhr.status );
+                      }
+                    }
+                  } 
+                  //設定好所要連結的程式
+                  var url = "php/components/_sendFinform.php?orderNo=" + orderNo +"&str="+str;
+                  xhr.open("get", url, true);
+                  //送出資料
+                  xhr.send(null);
+                
+            }else{
+                // 顯示登入燈箱
+                let loginBox = document.querySelector('.loginBox');
+                let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
+                if (style == "block") {
+                    loginBox.style.setProperty('display', "none");
+                } else {
+                    loginBox.style.setProperty('display', "block");
+                }
+            }
         }
         //點擊免費體驗
         document.querySelector('.start').addEventListener('click', function () {
@@ -455,7 +516,6 @@
 
             //點擊 close BOX 
             document.getElementById('hiddenEnvelopeLightBox').addEventListener('click', function () {
-                //document.querySelector('.blackBox').style.setProperty('display', 'none');
                 document.querySelector('.blackBox').style.display = 'none';
             });
             //點擊QRcodeICON
@@ -468,7 +528,7 @@
                 } else {
                     this.getElementsByTagName('div')[0].style.setProperty('display',
                         'inline-block');
-                    this.getElementsByTagName('div')[0].style.setProperty('z-index', 100);
+                    this.getElementsByTagName('div')[0].style.setProperty('z-index',30);
 
                 }
                 e.stopPropagation();
@@ -503,6 +563,33 @@
             let flyers = document.getElementsByClassName('item');
             for (let i = 0; i < flyers.length; i++) {
                 flyers[i].addEventListener('click', function (e) {
+
+                    let orderNo = e.target.getAttribute('order');
+
+                      var xhr = new XMLHttpRequest();
+                      xhr.onreadystatechange = function(){
+                        if( xhr.readyState == XMLHttpRequest.DONE ){ 
+                          if( xhr.status == 200){ 
+                               let data = JSON.parse(xhr.responseText);
+                               document.querySelector('#QrcodeIcon div p').setAttribute('order',orderNo);
+                               document.querySelector('.envelopeHeader h4').innerText= data['orderName'];
+                               document.querySelector('.envelopeHeader span').innerText= data['flyeDate'];
+                               document.querySelector('.titleName p').innerText= data['memName'];
+                               document.querySelector('.titleName mark').innerText= data['peopleNumber'];
+                               document.querySelector('.envelopeDetail p:nth-of-type(2)').innerText= data['hostName'];
+                               document.querySelector('.envelopeDetail p:nth-of-type(4)').innerText= data['flyeradd'];
+                               document.querySelector('.envelopeDetail p:nth-of-type(6)').innerText= data['flyeDate'];
+                               document.querySelector('.envelopeDetail span').innerText= data['flyerText'];
+                          }else{ //其它
+                              alert( xhr.status );
+                          }
+                        }
+                      } 
+                      //設定好所要連結的程式
+                      var url = "php/components/_getFlyerDetail.php?orderNo=" + orderNo;
+                      xhr.open("get", url, true);
+                      //送出資料
+                      xhr.send(null);
                     document.querySelector('.blackBox').style.setProperty('display', 'block');
                 })
             }
