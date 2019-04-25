@@ -1,21 +1,20 @@
 <?php
-$errMsg="";
-
 
 try {
-    $dsn = "mysql:host=localhost;port=3306;dbname=dhc;charset=utf8";
-    $user = "Jung";
-    $password = "626425";
-    $options = array(PDO::ATTR_CASE=>PDO::CASE_NATURAL, PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION);
-	$pdo = new PDO( $dsn, $user, $password, $options);   
-	$sql = "select * from message join member m join orders o on(m.memno=o.memno);";
-	$products=$pdo->query($sql);  //下指令
+$dsn = "mysql:host=localhost;port=3306;dbname=dhc;charset=utf8";
+$user = "Jung";
+$password = "626425";
+$options = array(PDO::ATTR_CASE=>PDO::CASE_NATURAL, PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION);
+$pdo = new PDO( $dsn, $user, $password, $options);   
+$sql = "select * from message join member m join orders o on(m.memno=o.memno);";
+$products=$pdo->query($sql);  //下指令
 } catch (PDOException $e) {
-	$errMsg .=  "錯誤原因" . $e->getMessage() . "<br>"; 
-	$errMsg .=  "錯誤行號" . $e->getLine() . "<br>";
+$errMsg .= '錯誤原因' . $e->getMessage() . '<br>'; 
+$errMsg .= '錯誤行號' . $e->getLine() . '<br>';
 }
-
-echo $errMsg;  
+$number = $products->rowCount();
+$products = $products->fetchAll(PDO::FETCH_ASSOC);
+echo json_encode($products);
 ?>
 <!DOCTYPE html>
 <html>
