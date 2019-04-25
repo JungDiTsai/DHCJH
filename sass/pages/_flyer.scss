@@ -253,7 +253,6 @@
         0 0 15px 15px rgb(19, 43, 110) inset;
       width: 100%;
       padding: 20px;
-      margin-bottom: 20px;
 
       #A4page {
         margin: auto;
@@ -263,6 +262,7 @@
         overflow: hidden;
         box-shadow: 0 0 10px #000;
         position: relative;
+        margin-bottom: 10px;
 
         img {
           height: 100%;
@@ -299,7 +299,7 @@
       }
 
       #tool {
-        margin: auto;
+        margin:auto;
         text-align: center;
 
         i {

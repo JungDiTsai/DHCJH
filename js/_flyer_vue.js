@@ -183,6 +183,22 @@ new Vue({
                 // let data_info = new FormData( document.getElementById('updateInput') );
                 // //送出資料
                 // xhr.send(data_info);
+                
+
+
+                  $.ajax({
+                      url: '.php',
+                      type: 'GET',
+                      data: {
+                        user_name: $('#').val()
+                      },
+                      success: function(response) {
+                          console.log(response);
+                      },
+                      error: function(xhr) {
+                        alert('Ajax request 發生錯誤');
+                      }
+                    });
 
                 
             
