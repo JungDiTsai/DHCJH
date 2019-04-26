@@ -114,39 +114,42 @@
             if(changePSW[0].style.opacity==1){
                 
                 
-                if(changePSW[0].querySelector('input').value==LoginState[0]['memId']&&changePSW[1].querySelector('input').value==changePSW[2].querySelector('input').value){
+                if(changePSW[0].querySelector('input').value==LoginState[0][2]&&changePSW[1].querySelector('input').value==changePSW[2].querySelector('input').value){
                     let data =new Array();
 
-                    data[1] = document.querySelectorAll('#memberData tr')[0].getElementsByTagName('input')[0].value;
+                    data[0] = document.querySelectorAll('#memberData tr')[0].getElementsByTagName('input')[0].value;
 
-                    data[2] = changePSW[2].querySelector('input').value;
+                    data[1] = changePSW[2].querySelector('input').value;
 
-                    data[3] = document.querySelectorAll('#memberData tr')[5].getElementsByTagName('input')[0].value;
+                    data[2] = document.querySelectorAll('#memberData tr')[5].getElementsByTagName('input')[0].value;
 
-                    data[4] = document.querySelectorAll('#memberData tr')[6].getElementsByTagName('input')[0].value;
+                    data[3] = document.querySelectorAll('#memberData tr')[6].getElementsByTagName('input')[0].value;
 
-                    data[5] = document.querySelectorAll('#memberData tr')[7].getElementsByTagName('input')[0].value;
+                    data[4] = document.querySelectorAll('#memberData tr')[7].getElementsByTagName('input')[0].value;
+
+                    data[5] = LoginState[0][0];
                     
                     //產生XMLHttpRequest物件
                     let xhr = new XMLHttpRequest();
                     //註冊callback function
                     xhr.onload = function(){
                         if( xhr.status == 200){ //server端可以正確的行
-                            console.log(xhr.responseText);
+                            alert("修改成功");
+                            window.location.reload();
                         }else{ //其它
                             alert( xhr.status );
                         }
                     }  
                     //設定好所要連結的程式
                     var url = "php/components/_memberUpdate.php";
-                    xhr.open("Post", url, true);
-                    xhr.setRequestHeader("content-type","applicationx-www-text-urlencoded");
+                    xhr.open("POST", url, true);
+                    xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
                     //送出資料
-                    var data_info = "member=" + JSON.stringify(data);
+                    var data_info = "member="+JSON.stringify(data);
                     xhr.send( data_info );
                     
 
-                }else if(changePSW[0].querySelector('input').value==LoginState[0]['memId']&&changePSW[1].querySelector('input').value!=changePSW[2].querySelector('input').value){
+                }else if(changePSW[0].querySelector('input').value==LoginState[0]['2']&&changePSW[1].querySelector('input').value!=changePSW[2].querySelector('input').value){
                     alert("輸入的新密碼不同");
                 }else{
                     alert("密碼錯誤");

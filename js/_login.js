@@ -12,7 +12,6 @@ window.addEventListener("load", function () {
                 document.querySelector('.fa-user').src = LoginState[0]['memImgUrl'];
                 document.querySelector('.fa-user').setAttribute("id","bigMember");
                 console.log("LoginState:已輸入值");
-
             }
             console.log("Session:"+xhr.responseText)
         } else { //其它
