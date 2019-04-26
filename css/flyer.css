@@ -1668,6 +1668,10 @@ footer img {
   margin: auto;
 }
 
+.firstScreen .wrap .titleBgi {
+  opacity: 0;
+}
+
 .firstScreen #selectOpen {
   display: none;
   position: fixed;
@@ -2229,6 +2233,9 @@ footer img {
   background-image: url("../images/titleNeonLightDarkBlueNew.gif");
   margin-top: 0;
   margin-bottom: 50px;
+  opacity: 0;
+  -webkit-transform: translateX(300%);
+          transform: translateX(300%);
 }
 
 .thrScreen .wrap {
@@ -2258,6 +2265,9 @@ footer img {
   padding: 0;
   margin: 0 40px 15px 0;
   display: inline-block;
+  opacity: 0;
+  -webkit-transform: translateX(-10%);
+          transform: translateX(-10%);
 }
 
 .thrScreen .wrap li img {

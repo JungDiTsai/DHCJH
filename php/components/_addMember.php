@@ -17,6 +17,7 @@
        $products->execute();
     //    $number = $products->rowCount();
     //    echo "異動 $number 筆資料";
+        echo "註冊成功";
     } catch (PDOException $e) {
         // echo $_REQUEST['flyerSetting'];
         $errMsg .=  '錯誤原因' . $e->getMessage() . '<br>'; 

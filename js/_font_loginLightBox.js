@@ -1,16 +1,22 @@
 /* 登入燈箱 JS*/
         // 點擊icon開啟登入燈箱----------------------------
         document.querySelector('.fa-user').addEventListener('click', function (e) {
-            // 顯示登入燈箱
-            let loginBox = document.querySelector('.loginBox');
-            let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
-            if (style == "block") {
-                document.getElementById('lightWrap').style.setProperty('display', "none");
-                loginBox.style.setProperty('display', "none");
-            } else {
-                loginBox.style.setProperty('display', "block");
-                document.getElementById('lightWrap').style.setProperty('display', "block");
+
+            if( LoginState == "notFound"){
+                // 顯示登入燈箱
+                let loginBox = document.querySelector('.loginBox');
+                let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
+                if (style == "block") {
+                    document.getElementById('lightWrap').style.setProperty('display', "none");
+                    loginBox.style.setProperty('display', "none");
+                } else {
+                    loginBox.style.setProperty('display', "block");
+                    document.getElementById('lightWrap').style.setProperty('display', "block");
+                }
+            }else{
+                window.location.href = "memberCenter.php";
             }
+            
         })
         // 點擊關閉----------------------------
         document.querySelector('.loginBox .fa-times').addEventListener('click', function () {

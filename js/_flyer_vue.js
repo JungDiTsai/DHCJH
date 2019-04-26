@@ -3,7 +3,7 @@ new Vue({
    data: {
         message: 'Hello, VueJS!',
         place:"",
-        setting: ["url", 1, 0,'', 16, 0, "rgb(0,0,0)","place","content",'停用','停用'],
+        setting: ["url", 1, 0,'', 16, 0, "rgb(0,0,0)","place","content",0,0],
         stepIndex:0,
         moveSetting:[0,0,5,5,5,5],
         screenWidth: document.body.clientWidth
@@ -410,7 +410,7 @@ new Vue({
                             //讀取檔案----------------------
                             xhr.onload = function () {
                                 if (xhr.status == 200) {
-                                    console.log("回傳圖片的位置: "+xhr.responseText);
+                                    location.reload();
                             document.getElementById('A4page').value = xhr.responseText;
                                 } else{
                                     alert();
@@ -445,7 +445,9 @@ new Vue({
                                    //新增到小試身手
                                     let li = document.createElement('li');
                                     li.innerHTML = `<img src="${imgSrc}"></img>`;
+                                    li.style.setProperty('opacity',1)
                                     document.getElementById('showflyer2').appendChild(li);
+                                    window.location.hash="#showflyer2";
                                 } else{
                                     alert(xhr.status);
                                 }
@@ -464,7 +466,7 @@ new Vue({
 
                         });
 
-                        window.location.hash="#showflyer2";
+                        
 
                     }
                     
@@ -485,8 +487,15 @@ new Vue({
        //對A4的每個工具設定
         //垃圾桶-----------------------------------------
         clickTrash:function(){
-            document.getElementById('A4page').innerHTML = '<img src="" alt=""><h5></h5>';
-            setting = ["url", 1, 0, '', 16, 0,"rgb(0,0,0)","place","content",'停用','停用'];
+            switch (this.stepIndex) {
+                case 0:
+                    document.querySelector('#A4page img').src = '';
+                    break;
+                case 1:
+                    document.querySelector('#A4page h5').innerText = '';
+                    break;
+            }
+            setting = ["url", 1, 0, '', 16, 0,"rgb(0,0,0)","place","content",0,0];
         },
         //放大-----------------------------------------
         clickPlus(){
