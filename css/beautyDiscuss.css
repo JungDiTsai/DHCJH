@@ -4518,16 +4518,18 @@ footer img {
   top: 0;
   overflow-y: scroll;
 }*/
+a {
+  text-decoration: none;
+}
+
 #gameHub {
   opacity: 0.85;
   position: fixed;
   left: -360px;
   bottom: 100px;
-  width: 80px;
-  height: 90px;
-  background-color: #444;
+  width: 120px;
+  height: 80px;
   text-align: center;
-  border: 5px #ebebeb solid;
   color: #ffffa3;
   vertical-align: middle;
   z-index: 3;
@@ -4537,7 +4539,7 @@ footer img {
 
 #gameHub img {
   width: 120%;
-  margin: 5px auto;
+  margin: 5px auto auto auto;
 }
 
 #customerServiceGirl {
@@ -4553,6 +4555,43 @@ footer img {
 
 #customerServiceGirl img {
   width: 100%;
+}
+
+.showUpHints {
+  width: 200px;
+  padding: 20px;
+  height: 140px;
+  background: #eee;
+  position: absolute;
+  opacity: .1;
+  right: 20px;
+  bottom: -200px;
+  border-radius: 20px;
+  z-index: 1;
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.showUpHints p {
+  color: #121;
+  width: 160px;
+}
+
+.showUpHints:after {
+  position: absolute;
+  content: "";
+  bottom: -30px;
+  left: 70%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-width: 15px;
+  border-style: solid;
+  border-top-color: #eee;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
 }
 
 #gameAndService {
@@ -4957,15 +4996,15 @@ footer img {
 }
 
 #introWords h2 {
-  font-weight: 200;
-  text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+  font-weight: 300;
+  text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.9);
 }
 
 #introWords h3 {
   margin-top: 18px;
   font-size: 20px;
   font-weight: 200;
-  text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+  text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.9);
 }
 
 #introWords .commonBtn {
@@ -6046,7 +6085,7 @@ footer img {
 }
 
 #introScreenBlock {
-  width: 52vw;
+  width: 51.8vw;
   height: 6vw;
   position: absolute;
   margin: auto;
@@ -6173,7 +6212,7 @@ footer img {
 }
 
 #lyrics {
-  width: 52vw;
+  width: 51.8vw;
   height: 6vw;
   position: absolute;
   margin: auto;
@@ -6372,7 +6411,7 @@ ul.tryCustTabs li a.tryCustActive {
 .introFlyerBoard {
   position: absolute;
   width: 100px;
-  height: 100px;
+  height: 120px;
   margin: auto;
   margin-top: 29vh;
   top: 0;
@@ -6405,7 +6444,7 @@ ul.tryCustTabs li a.tryCustActive {
           transform: scale(0.8);
 }
 
-#introFlyer2, #introFlyer3:hover {
+#introFlyer2:hover, #introFlyer3:hover {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
@@ -6576,6 +6615,8 @@ ul.tryCustTabs li a.tryCustActive {
 .rankTitle {
   font-size: 28px;
   font-family: "微軟正黑體";
+  text-shadow: 0px 0px 10px #000;
+  font-weight: bolder;
   margin: 2px;
   color: white;
 }
@@ -6597,6 +6638,7 @@ ul.tryCustTabs li a.tryCustActive {
 #thirdPlaceStage,
 #forthPlaceStage,
 #fifthPlaceStage {
+  text-shadow: 0px 0px 5px #000;
   overflow: hidden;
 }
 
@@ -6619,6 +6661,7 @@ ul.tryCustTabs li a.tryCustActive {
   margin-top: 30px;
   width: 40px;
   height: 24px;
+  cursor: pointer;
 }
 
 .likeContainer img {
@@ -6685,6 +6728,7 @@ ul.tryCustTabs li a.tryCustActive {
 #processWrap .titleBgi {
   background: url(../images/titleNeonLightBlueNew.gif) center no-repeat;
   background-size: cover;
+  font-size: 32px;
 }
 
 #parallaxContainer {
@@ -6699,8 +6743,6 @@ ul.tryCustTabs li a.tryCustActive {
   margin: auto;
   -webkit-transition: 1.3s ease;
   transition: 1.3s ease;
-  -webkit-transform: scale(0.2);
-          transform: scale(0.2);
 }
 
 #paraItem1 {
@@ -7055,7 +7097,7 @@ ul.tryCustTabs li a.tryCustActive {
 
 #processWrap .titleBgi {
   position: relative;
-  font-size: 24px;
+  font-size: 32px;
   text-align: center;
   line-height: 80px;
   width: 200px;
@@ -7074,6 +7116,17 @@ ul.tryCustTabs li a.tryCustActive {
     margin-top: 20px;
     margin-left: 24vw;
   }
+}
+
+#earthGroup {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: -400px;
+  -webkit-transform: scale(0.3);
+          transform: scale(0.3);
 }
 
 #earth {
@@ -7414,7 +7467,7 @@ ul.tryCustTabs li a.tryCustActive {
 }
 
 #processLastStage #introScreenBlock {
-  width: 52vw;
+  width: 51.8vw;
   height: 6vw;
   position: absolute;
   margin: auto;
@@ -7461,7 +7514,7 @@ ul.tryCustTabs li a.tryCustActive {
 }
 
 #processLastStage #lyrics {
-  width: 52vw;
+  width: 51.8vw;
   height: 6vw;
   position: absolute;
   margin: auto;
@@ -7486,19 +7539,36 @@ ul.tryCustTabs li a.tryCustActive {
 footer {
   padding-top: 15px;
   width: 100%;
-  height: 115px;
-  background-image: url(../images/footerBgi2.jpg);
+  height: 26vw;
+  background-color: #0a0a0a;
+}
+
+footer #footerBgiNew {
+  background-image: url(../images/footerBgiNew.png);
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center;
   background-size: cover;
+  width: 100%;
+  height: 33vw;
+  position: absolute;
+  margin: auto;
+  bottom: 0;
+}
+
+footer #footerWords {
+  position: absolute;
+  margin: auto;
+  right: 0;
+  left: 0;
+  bottom: 3vw;
 }
 
 footer p {
-  font-size: 16px;
+  font-size: 12px;
   color: #fff;
   text-align: center;
-  padding-top: 0px;
+  font-family: "微軟正黑體";
 }
 
 footer div {
@@ -7532,10 +7602,9 @@ footer img {
   #introFlyerFeature {
     margin-top: 30px;
   }
-  footer p {
-    display: block;
-    text-align: center;
-    margin: auto;
+  footer #footerWords {
+    bottom: 4.5vw;
+    font-size: 16px;
   }
 }
 
@@ -7651,11 +7720,11 @@ footer img {
     top: 120px;
   }
   #introScreenBlock {
-    width: 360px;
+    width: 350px;
     height: 50px;
     position: absolute;
     margin: auto;
-    top: 167px;
+    top: 172px;
     right: 0;
     left: 0;
     overflow: hidden;
@@ -7694,26 +7763,26 @@ footer img {
     width: 14%;
     position: absolute;
     margin: auto;
-    top: 200px;
+    top: 190px;
   }
   .introSoundsBlock.one {
-    right: 43px;
+    right: 40px;
     animation: introSoundsScale 1.5s ease reverse infinite;
     -webkit-filter: drop-shadow(0px 0px 7px #fff4cb);
             filter: drop-shadow(0px 0px 7px #fff4cb);
   }
   .introSoundsBlock.two {
-    left: 43px;
+    left: 40px;
     animation: introSoundsScale 1.5s ease reverse infinite;
     -webkit-filter: drop-shadow(0px 0px 7px #fff4cb);
             filter: drop-shadow(0px 0px 7px #fff4cb);
   }
   #lyrics {
-    width: 360px;
+    width: 350px;
     height: 50px;
     position: absolute;
     margin: auto;
-    top: 167px;
+    top: 172px;
     right: 0;
     left: 0;
     overflow: hidden;
@@ -7761,6 +7830,23 @@ footer img {
   #customerServiceGirl img {
     width: 100%;
   }
+  .showUpHints {
+    width: 250px;
+    padding: 20px;
+    height: 120px;
+    right: 60px;
+  }
+  .showUpHints p {
+    width: 210px;
+  }
+  .showUpHints:after {
+    position: absolute;
+    content: "";
+    bottom: -30px;
+    left: 70%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
   #gameHub {
     padding: 10px;
     opacity: 0.9;
@@ -7769,7 +7855,7 @@ footer img {
     height: 140px;
   }
   #gameHub img {
-    margin: 20px auto;
+    margin: 10px auto;
   }
   #beautyContestWrap .dcontainer {
     width: 80vw;

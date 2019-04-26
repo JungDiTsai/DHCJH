@@ -1,3 +1,16 @@
+<?php
+try{
+    $dsn = "mysql:host=localhost;port=3306;dbname=dhc;charset=utf8";
+    $user = "root";
+    $password = "root";
+    $options = array(PDO::ATTR_CASE=>PDO::CASE_NATURAL, PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION);
+    $pdo = new PDO($dsn, $user, $password, $options);
+    $sql = "SELECT * FROM orders  ORDER BY orderVote DESC LIMIT 3";
+    $beautyContest = $pdo->query($sql);
+}catch(PDOException $e){
+    echo $e->getMessage();
+}
+?>
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -283,14 +296,19 @@
         <!--game and customer service wrapper-->
        
         <a href="game.html">
-                <div id="gameHub">
-                    <span>玩遊戲<br>
-                            拿優惠
-                    </span>
-                    <img src="images/gameCar.png" alt="遊戲"></img>
-                </div>
-            </a>
-            
+            <div id="gameHub">
+                <span>玩遊戲<br>
+                        拿優惠
+                </span>
+                <img src="images/gameCar.png" alt="遊戲">
+            </div>
+        </a>
+        
+        
+        <!--
+        
+        
+        -->
         <div id="customerService">
             
             <div class="chatrobot" style="display: none;">
@@ -322,7 +340,7 @@
                 <span>玩遊戲<br>
                         拿優惠
                 </span>
-                <img src="images/gameCar.png" alt="遊戲"></img>
+                <img src="images/gameCar.png" alt="遊戲">
             </div>
         </a>
         
@@ -454,6 +472,9 @@
                 <h2 class="titleBgi">
                     花車介紹
                 </h2>
+                <div id="hint1" class="showUpHints">
+                    <p>哩賀～偶是客服美女，這頁可以認識偶們花車客製的特色喔～快點選配件按鈕看看吧！</p>
+                </div>
                 <!--配件介紹背板-->
                 <div id="trigger2"></div>
                 <div class="EquipIntroWrapper">
@@ -491,9 +512,12 @@
                             <h2>塗裝 Painting</h2>
                             <p>高彩度、高畫質的內塗裝，提供多樣款式給你打造專屬於你的華麗電子花車！</p>
                         </div>
-                        <p id="equipBtnOne" class="commonBtn">
-                            立即客製
-                        </p>
+                        <a href="customized_01.html">
+                            <p id="equipBtnOne" class="commonBtn">
+                                立即客製
+                            </p> 
+                        </a>
+                        
                     </section>  
                         
                     </div>
@@ -533,6 +557,10 @@
         <!--FullPage Section3-->
         <div class="section">
             <div id="tryCustormiseWrap" > 
+                <div id="triggerB"></div>
+                <div id="hint2" class="showUpHints">
+                    <p>心動了嗎？趕快客製看看～做一台專屬於你的電子花車！阿有問題都可以點偶問問題喔～</p>
+                </div>
                 <h2 class="titleBgi">
                     客製試試看
                 </h2>
@@ -565,12 +593,31 @@
             </div>
         </div>
         
-        
+        <?php
+        try{
+            $dsn = "mysql:host=localhost;port=3306;dbname=dhc;charset=utf8";
+            $user = "root";
+            $password = "root";
+            $options = array(PDO::ATTR_CASE=>PDO::CASE_NATURAL, PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION);
+            $pdo = new PDO($dsn, $user, $password, $options);
+            $sql = "SELECT * FROM flyer  ORDER BY flyeDate DESC LIMIT 3";
+            $flyer = $pdo->query($sql);
+        }catch(PDOException $e){
+            echo $e->getMessage();
+        }
+        ?>
         <!--FullPage Section4-->
         <div class="section">
         <!--forth wrapper try to customise a ivitation poster -->
+        <?php  
+            while($flyerRow = $flyer->fetchAll()){
+        ?>        
             <div id="tryCustormiseFlyerWrap"> 
-                    <h2 class="titleBgi">客製宣傳單</h2>
+                <h2 class="titleBgi">客製宣傳單</h2>
+                <div id="hint3" class="showUpHints">
+                    <p>偶們還免費提供宣傳單的客製喔！趕快按下立即體驗的按鈕唄～</p>
+                </div>
+
                 <div class="dcontainer">
                     <div id="trigger"></div>
                     <section id="sec2">
@@ -633,12 +680,17 @@
                     </div>
                 </div>
             </div>
+            <?php
+            }
+            ?>
         </div>
+        
         
         <!--FullPage Section5-->
         <div class="section">
             <!--fifth wrapper : Beauty pageant -->
             <div id="beautyContestWrap">
+                
                 <div class="titleBgi">
                     花車選美
                 </div>
@@ -647,20 +699,27 @@
                     <div id="beautyContestSlider">
                         
                         
-        
+                    <?php
+                    while($beautyContestRow = $beautyContest->fetchAll()){
+                    ?>
                         <!--第一名花車-->
                         <div class="beautyContestStages slick-slide slick-active slick-current slick-center">
+                            
                             <div class="crown">
                                 <img src="images/crownFirstPlace.png" alt="">
                             </div>
                             <div class="rankTitle">第 一 名</div>
                             <div id="firstPlaceStage">
-                            <img src="images/newVersionStage1.png" alt="選美車車"> 
+                            <img src="<?php echo $beautyContestRow[0]['orderImgUrl']; ?>" alt="選美車車"> 
+                            <!--<img src="images/newVersionStage1.png" alt="選美車車"> -->
                             </div>
                             
                             <div id="contestLikes"> <!--撈排名資料 與喜歡數的欄位-->
-                                <span class="likeContainer"><img src="images/like.png" alt="喜歡收藏"></span>
-                                <span >520個喜歡</span>
+                                <span class="likeContainer">
+                                    <img class="likeHeart" src="images/like.png" alt="喜歡收藏">
+                                    <span style="display:none"><?php echo $beautyContestRow[0]['orderNo'] ?></span>
+                                </span>
+                                <span ><?php echo $beautyContestRow[0]['orderVote']; ?>個喜歡</span>
                             </div>
                         </div>
                         <!--第二名花車-->
@@ -670,35 +729,48 @@
                             </div>
                             <div class="rankTitle">第 二 名</div>
                             <div id="secondPlaceStage">
-                            <img src="images/newVersionStage2.png" alt="選美車車"> 
+                            <img src="<?php echo $beautyContestRow[1]['orderImgUrl']; ?>" alt="選美車車"> 
                             </div>
                             
                             <div id="contestLikes"> <!--撈排名資料 與喜歡數的欄位-->
-                                <span class="likeContainer"><img src="images/like.png" alt="喜歡收藏"></span>
-                                <span >482個喜歡</span>
+                                <span class="likeContainer">
+                                    <img class="likeHeart" src="images/like.png" alt="喜歡收藏">
+                                    <span style="display:none"><?php echo $beautyContestRow[1]['orderNo'] ?></span>
+                                </span>
+                                <span ><?php echo $beautyContestRow[1]['orderVote']; ?>個喜歡</span>
                             </div>
                         </div>
         
                         <!--第三名花車-->
                         <div class="beautyContestStages slick-slide slick-active">
                             <div class="crown">
-                                <img src="images/crown.png" alt="">
+                                <img src="images/crown.png" alt="皇冠">
                             </div>
                             <div class="rankTitle">第 三 名</div>
                             <div id="thirdPlaceStage">
-                            <img src="images/newVersionStage3.png" alt="選美車車"> 
+                            <img src="<?php echo $beautyContestRow[2]['orderImgUrl']; ?>" alt="選美車車"> 
                             </div>
                             
                             <div id="contestLikes"> <!--撈排名資料 與喜歡數的欄位-->
-                                <span class="likeContainer"><img src="images/like.png" alt="喜歡收藏"></span>
-                                <span >431個喜歡</span>
+                                <span class="likeContainer">
+                                    <img class="likeHeart" src="images/like.png" alt="喜歡收藏">
+                                    <span style="display:none"><?php echo $beautyContestRow[2]['orderNo'] ?></span>
+                                </span>
+                                <span ><?php echo $beautyContestRow[2]['orderVote']; ?>個喜歡</span>
                             </div>
                         </div>
+                        <?php
+                        }
+                        ?>
+                    </div>
+                    <div id="hint4" class="showUpHints">
+                        <p>阿你的花車素不素跟偶一樣美～那就快來參加花車選美比賽吧！</p>
                     </div>
                 </div>   
                 <div class="commonBtn">立馬去看</div>  
             </div>
         </div>
+        
 
         <!--FullPage Section6-->
         
@@ -708,11 +780,17 @@
             <div id="processShineBgi"></div>
             <div id="processShineBgi2"></div>
             <div id="trigger6"></div>
+            <div id="hint5" class="showUpHints">
+                <p>把 "START" 點下去！看會發生什麼事？</p>
+            </div>
             <h2 class="titleBgi">
                 服務流程
             </h2>
-            <img id="earthRotate" class="earthGroup" src="images/earthRotate.png" alt="旋轉地球">
-            <img id="earth" class="earthGroup" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1037366/planet2.png">
+            <div id="earthGroup">
+                <img id="earthRotate" class="earthGroup" src="images/earthRotate.png" alt="旋轉地球">
+                <img id="earth" class="earthGroup" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1037366/planet2.png">
+            </div>
+            
             
             <section id="parallaxContainer" data-hover-only="true" data-scalar-x="50" data-scalar-y="50" data-limit-y="100" data-limit-x="100" style="transform: translate3d(0px, 0px, 0px) rotate(0.0001deg); transform-style: preserve-3d; backface-visibility: hidden; position: relative; pointer-events: none;">
                 <div class="processPara getBigSet1" data-depth="0.05">
@@ -778,10 +856,12 @@
                     <!--<img id="pipe" src="images/pipe.png" alt="鋼管">-->
                 </div>
             </div>
+            <a href="customized_01.html">
+                <div id="processDetail4" class="commonBtn">
+                    立馬客製!
+                </div>    
+            </a>
             
-            <div id="processDetail4" class="commonBtn">
-                立馬客製!
-            </div>
             <div id="processDetail3" class="processBoard">
                 <h4>Step 3.</h4>
                 <p>活動全程專人服務至活動結束</p>
@@ -805,12 +885,11 @@
         <div class="section fp-auto-height">
             <!--  footer  -->
             <footer>
-                <p>Copyright © 2019 Taiwan Great Stage Inc.</p>
-                <p>All rights reserved</p>
-                <div>
-                    <a href="#"><img src="images/facebook (1).png" alt="FB"></a> 
-                    <a href="#"><img src="images/instagram (1).png" alt="IG"></a> 
-                    <a href="#"><img src="images/youtube (1).png" alt="YouTube"></a>        
+                <div id="footerBgiNew">
+                    <div id="footerWords" >
+                        <p>Copyright © 2019 Taiwan Great Stage Inc.</p>
+                        <p>All rights reserved</p> 
+                    </div>          
                 </div>
             </footer>
         </div>
@@ -1195,6 +1274,37 @@
     })(jQuery);
 </script>
 
+<!--選美投票-->
+<script>
+        var hearts = document.getElementsByClassName("likeHeart");
+        for(let i=0; i< hearts.length; i++){
+            hearts[i].onclick = function(e){
+
+                let orderNo = e.target.nextElementSibling.innerText;
+                let amount;
+    
+
+                if(e.target.src.indexOf("images/like.png") != -1 ){
+                    e.target.src = "images/likeAlready.png";
+                    amount = 1;
+                }else{
+                    e.target.src = "images/like.png";
+                    amount = -1;
+                }
+                let url = "updateVotes.php?orderNo=" + orderNo + "&amount=" + amount;
+                var xhr2 = new XMLHttpRequest();
+                xhr2.onload = function(){
+                    //console.log(xhr2.responseText);
+                    var str = e.target.parentNode.nextElementSibling.innerHTML.replace("個喜歡","");
+                    console.log("------",parseInt(str)+ amount +"個喜歡" );
+                    e.target.parentNode.nextElementSibling.innerHTML = parseInt(str)+ amount +"個喜歡";
+                }
+                xhr2.open("get",url,true);
+                xhr2.send(null);
+            }
+        }
+    </script>
+    
 
 
     <script type="text/javascript" src="js/slick.min.js"></script>
@@ -1204,7 +1314,7 @@
             centerMode: true,
             infinite: false,
             centerPadding: '60px',
-            focusOnSelect: true,
+            focusOnSelect: false,
             slidesToShow: 3,
             responsive: [
                 {
@@ -1214,7 +1324,7 @@
                     centerMode: true,
                     centerPadding: '40px',
                     slidesToShow: 3,
-                    focusOnSelect: true
+                    //focusOnSelect: true
                 }
                 },
                 {
@@ -1224,7 +1334,7 @@
                     centerMode: true,
                     centerPadding: '60px',
                     slidesToShow: 1,
-                    focusOnSelect: true
+                    //focusOnSelect: true
                 }
                 }
             ]
