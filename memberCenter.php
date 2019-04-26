@@ -11,25 +11,55 @@
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 <body>
-    <!-- header -->
-    <input type="checkbox" id=menu_control>
-    <header>    
-        <!-- 放bar選單 -->
-        <label for="menu_control" class="menubtn" >
-                <div class="menuandcross"></div>
-        </label>
-        <nav class="mainNav">
-            <li class="mainNavCell"><a href="customized_01.html">電子花車客製</a></li>
-            <li class="mainNavCell"><a href="flyer.html">客製化宣傳單</a></li>
-            <h1 class="navLogo"><a href="index.html"><img src="images/logo.png" alt="台灣大舞台"></a></h1>
-            <li class="mainNavCell"><a href="beautyPageant.html">花車選美</a></li>
-            <li class="mainNavCell"><a href="intro.html">花車特色介紹</a></li>
-            <div class="navMemBtn">
-                <i class="far fa-user-circle"></i>
-            </div>
-        </nav>       
-    </header>
-    <div class="box"></div>
+
+    <?php require_once("php/header.php");?>
+    <?php require_once("php/components/_connectDHC.php"); ?>
+    <script>
+        //判斷登入
+            let LoginState="notFound";
+            let OrderNo="notFound";
+            window.addEventListener("load", function () {
+                //產生XMLHttpRequest物件
+                let xhr = new XMLHttpRequest();
+                //註冊callback function
+                xhr.onload = function () {
+                    if (xhr.status == 200) { //server端可以正確的執行
+                        if(xhr.responseText!="notFound"){
+                            LoginState =  JSON.parse(xhr.responseText);
+                            document.querySelector('.fa-user').src = LoginState[0]['memImgUrl'];
+                            document.querySelector('.fa-user').setAttribute("id","bigMember");
+                            console.log("LoginState:已輸入值");
+                        
+                        }
+                        console.log("Session:"+xhr.responseText)
+                    } else { //其它
+                        alert(xhr.status);
+                    }
+                }
+                //設定好所要連結的程式
+                xhr.open("get", "php/components/_JudgeLogin.php", true);
+                xhr.send(null);
+            })
+
+        //登出
+        function LoginOut() {
+            //產生XMLHttpRequest物件
+            let xhr = new XMLHttpRequest();
+            //註冊callback function
+            xhr.onload = function () {
+                if (xhr.status == 200) { //server端可以正確的執行
+                    alert('已成功登出');
+                    window.location.href="index.php";
+                } else { //其它
+                    alert(xhr.status);
+                }
+            }
+            //設定好所要連結的程式
+            xhr.open("get", "php/components/_logout.php", true);
+            xhr.send(null);
+        }
+    </script>
+
     <!-- 並排 -->
     <div class="wrap">
         <!-- 會員中心側邊攔 -->

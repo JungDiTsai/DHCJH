@@ -236,6 +236,12 @@ table {
   height: 44px;
 }
 
+#bigMember {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
 #nav-icon2 span {
   display: block;
   position: absolute;
@@ -396,13 +402,10 @@ table {
   cursor: pointer;
   position: absolute;
   width: 34px;
-  top: 2px;
-  right: 0;
 }
 
 .mainNav .navMemBtn img:hover {
-  -webkit-animation: jitter 1.5s linear infinite;
-          animation: jitter 1.5s linear infinite;
+  animation: jitter 5s linear infinite alternate-reverse;
 }
 
 .mainNav .navMemBtn p {
@@ -451,6 +454,10 @@ footer img {
 }
 
 @media screen and (min-width: 1200px) {
+  #bigMember {
+    -webkit-transform: translateY(-25%) translateX(-25%);
+            transform: translateY(-25%) translateX(-25%);
+  }
   .menubtn {
     display: none;
   }
@@ -612,39 +619,43 @@ footer img {
 
 @-webkit-keyframes jitter {
   0% {
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg);
+    border-radius: 30% 70% 30% 70%;
   }
-  25% {
-    -webkit-transform: rotateZ(-15deg);
-            transform: rotateZ(-15deg);
+  20% {
+    border-radius: 50% 40% 50% 60%;
   }
-  75% {
-    -webkit-transform: rotateZ(15deg);
-            transform: rotateZ(15deg);
+  40% {
+    border-radius: 45% 50% 55% 50%;
+  }
+  60% {
+    border-radius: 50% 35% 50% 65%;
+  }
+  80% {
+    border-radius: 40% 45% 60% 55%;
   }
   100% {
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg);
+    border-radius: 54% 70% 46% 30%;
   }
 }
 
 @keyframes jitter {
   0% {
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg);
+    border-radius: 30% 70% 30% 70%;
   }
-  25% {
-    -webkit-transform: rotateZ(-15deg);
-            transform: rotateZ(-15deg);
+  20% {
+    border-radius: 50% 40% 50% 60%;
   }
-  75% {
-    -webkit-transform: rotateZ(15deg);
-            transform: rotateZ(15deg);
+  40% {
+    border-radius: 45% 50% 55% 50%;
+  }
+  60% {
+    border-radius: 50% 35% 50% 65%;
+  }
+  80% {
+    border-radius: 40% 45% 60% 55%;
   }
   100% {
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg);
+    border-radius: 54% 70% 46% 30%;
   }
 }
 
