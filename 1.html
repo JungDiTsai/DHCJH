@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.7.1/countUp.min.js'></script>
+</head>
+<style>
+    
+</style>
+
+<body>
+    <h1 id='MyNumber'>0</h1>
+</body>
+<script>
+    var countOptions = {
+        useEasing: true,
+        separator: ''
+    }
+
+    var count = new CountUp('MyNumber', 0, 2016, 0, 10, countOptions)
+
+    // start the counting and give it a callback when done
+    count.start()
+</script>
+
+</html>

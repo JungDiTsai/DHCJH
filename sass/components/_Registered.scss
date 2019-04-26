@@ -10,7 +10,7 @@
     right: 0;
     bottom: 0;
     margin: auto;
-    z-index: 1;
+    z-index: 50;
     border-radius: 10px;
     box-sizing: border-box;
     box-shadow: 0 0 10px $loginBackColor;
@@ -37,8 +37,9 @@
         margin: 20px auto;
         border: 1px solid #fff;
         color:$loginBackColor;;
+        font-size: 18px;
         .prompt{
-            font-size:12px;
+            font-size:14px;
             color:rgb(226, 111, 111);
         }
         td,th{
@@ -66,7 +67,7 @@
         }
     }
     div{
-        margin-top: 50px;
+        margin-top: 10px;
         color: $loginBackColor;;
         input{
             margin-left: 20px;

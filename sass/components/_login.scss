@@ -1,4 +1,12 @@
-.loginBox{
+#lightWrap{
+    display: none;
+    position: fixed;
+    background: rgba(0,0,0,.7);
+    width: 100%;
+    height:100%;
+    z-index: 2;
+}
+.loginBox,.loginbox1{
     display: none;
     width: 300px;
     height: 350px;
@@ -10,7 +18,7 @@
     right: 0;
     bottom: 0;
     margin: auto;
-    z-index: 1;
+    z-index: 50;
     border-radius: 10px;
     padding: 30px 40px;
     box-sizing: border-box;
@@ -36,13 +44,15 @@
         background: $loginInputBackColor;
         border-radius: 10px;
         margin-top: 10px;
-        padding: 5px 10px;
+        padding: 10px 15px;
         i{
             color:#fff;
+            
         }
         input{
             height:20px;
             margin-left: 10px;
+            width: 80%;
             background: $loginInputBackColor;
             outline: none;
             border: none;
@@ -51,7 +61,7 @@
     }
 
     .commonBtnSmall{
-        margin-top: 40px;
+        margin-top: 20px;
         width: 80px;
         height: 40px;
         border-radius: 5px;
@@ -59,7 +69,7 @@
     }
 
     p{
-        margin-top:30px;
+        margin-top:20px;
         color:$loginBackColor;
         a{
             cursor: pointer;

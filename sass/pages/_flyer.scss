@@ -1,10 +1,16 @@
+
 .firstScreen {
-  background: #000 center no-repeat;
+  
+  background: #000 center;
   background-size: cover;
   margin: 0;
+  position: relative;
 
   .wrap {
     margin: auto;
+    .titleBgi{
+      opacity: 0;
+    }
   }
   #selectOpen {
     display:none;
@@ -125,6 +131,8 @@
         margin: 10px auto 10px;
         color: #fff;
         text-shadow: 0 0 2px #000;
+        position: relative;
+        z-index: 1;
       }
 
       .step {
@@ -170,7 +178,6 @@
     padding: 20px;
     
     .clothCurtain {
-      display: none;
       background: rgba(0, 0, 0, 0.7);
       position: absolute;
       top: 0;
@@ -202,11 +209,16 @@
 
         .commonBtnSmall {
           margin-left: 20px;
+          outline: none;
         }
       }
     }
 
     .backBlock {
+<<<<<<< HEAD
+=======
+      
+>>>>>>> 82ea2a532ef86d0a74139e59382680cf19209207
       border: 3px solid rgb(255, 255, 255);
       border-radius: 10px;
       box-shadow: 
@@ -247,7 +259,6 @@
         0 0 15px 15px rgb(19, 43, 110) inset;
       width: 100%;
       padding: 20px;
-      margin-bottom: 20px;
 
       #A4page {
         margin: auto;
@@ -256,8 +267,8 @@
         background: #fff;
         overflow: hidden;
         box-shadow: 0 0 10px #000;
-        margin-bottom: 20px;
         position: relative;
+        margin-bottom: 10px;
 
         img {
           height: 100%;
@@ -267,17 +278,34 @@
           position: absolute;
           top: 5px;
           left: 5px;
+          text-shadow: 0 0 1px #000;
         }
         #A4qrcode{
           position: absolute;
           right: 5px;
           bottom: 5px;
+          img{
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
 
+      #moveBtn{
+        text-align: center;
+        padding: 10px;
+        span{
+          font-size: 20px;
+          color:#fff;
+          cursor: pointer;
+          &:hover {
+            color: yellow;
+          }
         }
       }
 
       #tool {
-        margin: auto;
+        margin:auto;
         text-align: center;
 
         i {
@@ -325,7 +353,7 @@
       height: 100%;
       box-sizing: border-box;
       margin: auto;
-      margin-top: 10px;
+      margin-top: 20px;
 
       div:nth-of-type(1) {
         display: flex;
@@ -446,7 +474,7 @@
         }
 
         #textPlace {
-          padding: 20px 20px;
+          padding: 0px 20px;
           height: 100%;
           // display: flex;
           align-items: center;
@@ -510,13 +538,47 @@
     opacity: 0;
     display: fixed;
     background-image: url("../images/titleNeonLightBlueNew.gif");
-}
+  }
   .wrap {
     max-width: 1200px;
     height: 2600px;
     margin: auto;
     z-index: 0;
     position: relative;  
+
+    .bigCarcouselBox{
+      .card{
+        .ElongationBox{
+          .cardContent{
+            padding: 20px;
+            tr{
+             
+              th{
+                text-align: left;
+                // border:1px solid #000;
+                width: 30%;
+                padding: 10px 0;
+              }
+              td{
+                // border:1px solid #000;
+                width: 70%;
+                text-align: justify;
+                padding: 10px 0;
+                button{
+                  float: right;
+                  outline: none;
+                  height: 30px;
+                  width: 50px;
+                  line-height: 30px;
+                  padding: 5px 15px;
+                  box-sizing: content-box;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
 
     .owl-carousel {
       z-index: 0;
@@ -536,14 +598,17 @@
 }
 
 .thrScreen {
-  background: #000 center fixed;
-  background-size: cover;
+  cursor: url(./cur2.ico), auto;
+  background:#000;
   padding-top: 20px;
+  padding-bottom: 100px;
 
   .titleBgi {
     background-image: url("../images/titleNeonLightDarkBlueNew.gif");
     margin-top: 0;
     margin-bottom: 50px;
+    opacity: 0;
+    transform: translateX(300%)
   }
 
   .wrap {
@@ -565,6 +630,8 @@
       padding: 0;
       margin: 0 40px 15px 0;
       display: inline-block;
+      opacity: 0;
+      transform: translateX(-10%);
     }
 
     li img {
@@ -574,7 +641,11 @@
   }
 }
 
+
+
+
 @media screen and (min-width: 768px) {
+  
   .firstScreen {
     min-height: 100vh;
     .wrap{
@@ -652,6 +723,7 @@
             }
             #textPlace {
               // display: block;
+              padding: 20px;
               display: none;
               input {width: 50%;}
               p{font-size: 21px;text-align: center;}
@@ -680,6 +752,14 @@
           }
         }
       }
+    }
+  }
+  .thrScreen {
+    .titleBgi{
+      margin-top: 80px;
+    }
+    .wrap {
+      ul li img{width: 201px;height: 284px;}
     }
   }
 }
@@ -821,4 +901,7 @@
     transform: rotateZ(10deg);
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 82ea2a532ef86d0a74139e59382680cf19209207

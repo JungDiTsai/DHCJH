@@ -1,7 +1,7 @@
 .forgotBox{
     display: none;
     width: 300px;
-    height: 400px;
+    height: 370px;
     background: #fff;
     border:5px solid $loginBackColor;
     position: fixed;
@@ -10,7 +10,7 @@
     right: 0;
     bottom: 0;
     margin: auto;
-    z-index: 1;
+    z-index: 50;
     border-radius: 10px;
     box-sizing: border-box;
     box-shadow: 0 0 10px $loginBackColor;
@@ -35,13 +35,14 @@
     }
     p{
         margin-top: 10px;
-        font-size: 14px;
-        color:rgb(216, 216, 126);
+        font-size: 16px;
+        color:rgb(71, 71, 45);
         
     }
     div{
-        margin-top: 50px;
+        margin-top: 40px;
         color: $loginBackColor;
+
         input{
             margin-left: 20px;
         }
@@ -53,12 +54,15 @@
         }
     }
     .commonBtnSmall{
-        margin-top: 30px;
+        margin-top: 10px;
         width: 100px;
         height: 50px;
         border-radius: 5px;
         line-height: 50px;
     }
+}
+#IdStatus{
+    display: none;
 }
 
 
