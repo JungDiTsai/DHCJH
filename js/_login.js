@@ -1,6 +1,6 @@
 //判斷登入
-let LoginState="notFound";
-let OrderNo="notFound";
+LoginState="notFound";
+OrderNo="notFound";
 window.addEventListener("load", function () {
     //產生XMLHttpRequest物件
     let xhr = new XMLHttpRequest();

@@ -619,7 +619,7 @@ footer img {
 
 @-webkit-keyframes jitter {
   0% {
-    border-radius: 30% 70% 30% 70%;
+    border-radius: 40% 55% 60% 45%;
   }
   20% {
     border-radius: 50% 40% 50% 60%;
@@ -634,13 +634,13 @@ footer img {
     border-radius: 40% 45% 60% 55%;
   }
   100% {
-    border-radius: 54% 70% 46% 30%;
+    border-radius: 54% 50% 46% 40%;
   }
 }
 
 @keyframes jitter {
   0% {
-    border-radius: 30% 70% 30% 70%;
+    border-radius: 40% 55% 60% 45%;
   }
   20% {
     border-radius: 50% 40% 50% 60%;
@@ -655,7 +655,7 @@ footer img {
     border-radius: 40% 45% 60% 55%;
   }
   100% {
-    border-radius: 54% 70% 46% 30%;
+    border-radius: 54% 50% 46% 40%;
   }
 }
 
@@ -1055,6 +1055,7 @@ footer img {
   background: #323;
   background-size: cover;
   color: #ffffbd;
+  outline: none;
   border-radius: 20px;
   line-height: 75px;
   border: none;
@@ -1081,6 +1082,7 @@ footer img {
   color: #ffffbd;
   border-radius: 15px;
   line-height: 60px;
+  outline: none;
   border: none;
   z-index: 2;
   -webkit-box-shadow: 0 0 2px 4px #ffffbd;
@@ -1992,7 +1994,7 @@ footer img {
 
 @keyframes jitter {
   0% {
-    border-radius: 30% 70% 30% 70%;
+    border-radius: 40% 55% 60% 45%;
   }
   20% {
     border-radius: 50% 40% 50% 60%;
@@ -2007,7 +2009,7 @@ footer img {
     border-radius: 40% 45% 60% 55%;
   }
   100% {
-    border-radius: 54% 70% 46% 30%;
+    border-radius: 54% 50% 46% 40%;
   }
 }
 
@@ -2247,6 +2249,7 @@ footer img {
   background: #323;
   background-size: cover;
   color: #ffffbd;
+  outline: none;
   border-radius: 20px;
   line-height: 75px;
   border: none;
@@ -2273,6 +2276,7 @@ footer img {
   color: #ffffbd;
   border-radius: 15px;
   line-height: 60px;
+  outline: none;
   border: none;
   z-index: 2;
   -webkit-box-shadow: 0 0 2px 4px #ffffbd;
