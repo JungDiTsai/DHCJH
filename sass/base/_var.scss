@@ -1,4 +1,3 @@
-
 //共用的部分
 $smallButtonWord:16px;
 $buttonWord:18px; //按鈕
@@ -6,13 +5,20 @@ $contentWord:16px; //內文
 $titleWord:32px;  //大標題
 $subTitleWord:24px; //次標題
 $thrTitleWord:30px; //次標題2
-$buttonWord:18px; //按鈕 h4
+$buttonWord:24px; //按鈕 h4
 $contentWord:16px; //內文 p
 $lineHeight:1.5; //行距
 $fontFamily:"wangHangMing"; //字體
-$paddingTop:50px;
+$contentFontFamily:"微軟正黑體";
+$paddingTop:80px;
+$lgPaddingTop:100px;
 $fontColor:#ffffbd;
 @font-face{
     font-family: "wangHangMing";
     src: url("../font/WCL-02.ttf");
+}
+
+@font-face{
+    font-family: "微軟正黑體";
+    src:"https://fonts.googleapis.com/css?family=Noto+Sans+TC"; 
 }
