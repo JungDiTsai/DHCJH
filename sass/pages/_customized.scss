@@ -103,7 +103,7 @@
             border: #f00 dashed 2px;
             box-shadow: 0px 0px 8px $fontColor;
         }
-    // }
+    }
     // .front1{  width: 40px; transform:  translateZ(75px);background: #faf}
     // .front2{  width: 130px; transform: translateX(85px) translateZ(75px);background: url(../images/5.png)center no-repeat;background-size:cover;}
      .back{transform:  translateZ(-75px);background: url(../images/3.png)center no-repeat;background-size:cover;}
@@ -556,7 +556,6 @@
             transform:translateZ(40px)translateX(120px) translateY(-70px)  translateY(-30px) rotateY(30deg) rotateX(90deg);
         }
     }
-}
     // 鋼管
     .poleItem{
         width: 15px;
@@ -595,21 +594,18 @@
     }
     .fireEffect1{
         img{
-            padding: 0px 30px;
             width: 60px;
             transform: translateZ(0px)translateX(0px) translateY(-85px)  rotateY(0deg);
         }
     }
     .fireEffect2{
         img{
-            padding: 0px 30px;
             width: 30px;
             transform: translateZ(0px)translateX(0px) translateY(-55px)  rotateY(0deg);
         }
     }
     .fireEffect3{
         img{
-            padding: 0;
             width: 120px;
             transform: translateZ(0px)translateX(0px) translateY(-80px)  rotateY(0deg);
         }
@@ -1465,8 +1461,12 @@
     }
     table{
         width: 100%;
+        
         th{
             text-align-last: left;
+        }
+        th, td{
+            color: #fff;
         }
     }
     &::after{

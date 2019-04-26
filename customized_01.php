@@ -1,3 +1,7 @@
+<?php require_once("php/header.php"); ?>
+<?php require_once("php/loginLightBox.php"); ?>
+<script src="js/_login.js"></script>
+
 <?php
     $errMsg="";
     try{
@@ -45,6 +49,7 @@
     <link rel="stylesheet" href="css/customized.css">
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/_font_loginLightBox.js"></script>
 </head>
 <body>
     <!-- header -->
@@ -63,12 +68,14 @@
         </label>
         <nav class="mainNav">
             <li class="mainNavCell"><a href="customized_01.html">電子花車客製</a></li>
-            <li class="mainNavCell"><a href="flyer.html">客製化宣傳單</a></li>
+            <li class="mainNavCell"><a href="flyer.php">客製化宣傳單</a></li>
             <h1 class="navLogo"><a href="index.html"><img src="images/logo.png" alt="台灣大舞台"></a></h1>
             <li class="mainNavCell"><a href="beautyPageant.html">花車選美</a></li>
             <li class="mainNavCell"><a href="intro.html">花車特色介紹</a></li>
             <div class="navMemBtn"> 
-                <i class="far fa-user-circle"></i>
+                <img  class="fas fa-user fa-1x" src="images/icon/loginIcon.png" alt="">
+                <!-- <i class="fas fa-user"></i> -->
+                <p onclick="LoginOut()">登出</p>
             </div>
         </nav>       
     </header>
