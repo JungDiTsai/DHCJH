@@ -35,6 +35,8 @@
     <script src="js/jquery-qrcode-0.14.0.min.js"></script>
     <!-- 螢幕截圖 -->
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <!-- 數字跳動 js -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.9.3/countUp.min.js'></script>
 </head>
 
 <body>
@@ -185,7 +187,7 @@
     
     
     <article class="secScreen">
-        <h2 class="titleBgi">客製宣傳單</h2>
+        <h2 class="titleBgi">最新宣傳</h2>
         <div class="wrap">
         <?php
             try {
@@ -231,13 +233,7 @@
                                     <th>參加人數</th>
                                     <td>
                                         <span>
-                                            <?php 
-                                                if($products[$number-1]['peopleStatus'] != 0){
-                                                    echo $products[$number-1]['peopleNumber'];
-                                                }else{
-                                                    echo "-";
-                                                }
-                                            ?>
+                                            <?php echo $products[$number-1]['peopleNumber']; ?>
                                         </span>人<button class="commonBtnSmall joinAct" order="<?php echo $products[$number-1]['orderNo'] ?>">參加</button>
                                     </td>
                                 </tr>
@@ -275,13 +271,7 @@
                                     <th>參加人數</th>
                                     <td>
                                         <span>
-                                            <?php 
-                                                if($products[$number-2]['peopleStatus'] != 0){
-                                                    echo $products[$number-2]['peopleNumber'];
-                                                }else{
-                                                    echo "-";
-                                                }
-                                            ?>
+                                            <?php echo $products[$number-2]['peopleNumber']; ?> 
                                         </span>人<button class="commonBtnSmall joinAct" order="<?php echo $products[$number-2]['orderNo'] ?>">參加</button>
                                     </td>
                                 </tr>
@@ -319,13 +309,7 @@
                                     <th>參加人數</th>
                                     <td>
                                         <span>
-                                            <?php 
-                                                if($products[$number-3]['peopleStatus'] != 0){
-                                                    echo $products[$number-3]['peopleNumber'];
-                                                }else{
-                                                    echo "-";
-                                                }
-                                            ?>
+                                            <?php echo $products[$number-3]['peopleNumber']; ?>
                                         </span>人<button class="commonBtnSmall joinAct" order="<?php echo $products[$number-3]['orderNo'] ?>">參加</button>
                                     </td>
                                 </tr>
@@ -400,7 +384,7 @@
                     <div class="titleImg"><img src="images/member2.jpg" alt=""></div>
                     <div class="titleName">
                         <p></p>
-                        <span>參加人數 <mark></mark> 人</span>
+                        <span>參加人數 <mark id='MyNumber'></mark> 人</span>
                     </div>
                 </div>
                 <div class="envelopeDetail">
@@ -428,6 +412,50 @@
     <script src="js/_flyer_vue.js"></script>
     <script src="js/_flyer_tweenMax.js"></script>
     <script>
+        //點擊參加活動
+        function joinAct(){
+            
+            let joinAct = document.querySelectorAll('.joinAct');
+            
+            for (let i = 0; i < joinAct.length; i++) {
+                joinAct[i].addEventListener('click',function(e){
+                    let orderNo = e.target.getAttribute('order');
+
+                    //依統計人數狀態拒絕執行或執行
+                    
+                    var xhr = new XMLHttpRequest();
+                    //註冊callback function
+                    xhr.onreadystatechange = function(){
+                        if( xhr.readyState == XMLHttpRequest.DONE ){ //server端執行完畢
+                          if( xhr.status == 200){ //server端可以正確的執行
+                               alert(xhr.responseText);
+                          }else{ //其它
+                              alert( xhr.status );
+                          }
+                        }
+                    } 
+                    //設定好所要連結的程式
+                    var url = "php/components/_joinAct.php?orderNo=" + orderNo ;
+                    xhr.open("get", url, true);
+                    //送出資料
+                    xhr.send(null);
+                    
+                })
+            }
+        }
+        joinAct();
+        //跳動數字function
+        function JumpNumber(number){
+            var countOptions = {
+            useEasing: true,
+            separator: ''
+        }
+
+            var count = new CountUp('MyNumber', 0, number, 0, 5, countOptions)
+
+            // start the counting and give it a callback when done
+            count.start()
+        }
         //匯入訂單
         document.getElementById('enterOrder').addEventListener('click',function(){
             if(LoginState=="notFound"){
@@ -471,25 +499,28 @@
         //點擊檢舉輸入原因 傳到後端
         function flyerReport(){
             if(LoginState!="notFound"){
+                let MymemNo = LoginState[0]['memNo'];
                 let str = prompt("請輸入檢舉原因","");
                 let orderNo = document.getElementById('flyerReport').getAttribute('order');
-                console.log(orderNo);  
-
-                  var xhr = new XMLHttpRequest();
-                  xhr.onreadystatechange = function(){
-                    if( xhr.readyState == XMLHttpRequest.DONE ){ //server端執行完畢
-                      if( xhr.status == 200){ //server端可以正確的執行
-                           console.log(xhr.responseText);
-                      }else{ //其它
-                          alert( xhr.status );
-                      }
-                    }
-                  } 
-                  //設定好所要連結的程式
-                  var url = "php/components/_sendFinform.php?orderNo=" + orderNo +"&str="+str;
-                  xhr.open("get", url, true);
-                  //送出資料
-                  xhr.send(null);
+                if(str==""){
+                    alert('您沒有輸入原因，請重新輸入');
+                }else{
+                    var xhr = new XMLHttpRequest();
+                    xhr.onreadystatechange = function(){
+                        if( xhr.readyState == XMLHttpRequest.DONE ){ //server端執行完畢
+                            if( xhr.status == 200){ //server端可以正確的執行
+                               alert(xhr.responseText);
+                            }else{ //其它
+                              alert( xhr.status );
+                            }
+                        }
+                    } 
+                    //設定好所要連結的程式
+                    var url = "php/components/_sendFinform.php?orderNo=" + orderNo +"&str=" + str + "&MymemNo=" + MymemNo;
+                    xhr.open("get", url, true);
+                    //送出資料
+                    xhr.send(null);
+                }
                 
             }else{
                 // 顯示登入燈箱
@@ -535,6 +566,8 @@
             })
             //點擊更多頁面ICON
             document.getElementById('envelopeIcon').addEventListener('click', function (e) {
+                
+                
                 let envelopeContent = document.querySelector('.envelopeContent')
                 let style = window.getComputedStyle(envelopeContent).getPropertyValue('left')
                 if (style !== '0px') {
@@ -545,6 +578,8 @@
                     document.querySelector('.envelopeContent').style.setProperty('left', '0');
                     document.querySelector('.envelopeContent').style.setProperty('transition',
                         '1s');
+                    let number=document.querySelector('.titleName mark').innerText;
+                    JumpNumber(parseInt(number));
                 } else {
                     e.target.setAttribute('src', 'images/icon/iconMore.png');
                     document.querySelector('.envelopeContent').style.setProperty('opacity',
@@ -554,6 +589,7 @@
                     document.querySelector('.envelopeContent').style.setProperty('transition',
                         '1s');
                 }
+                return false;
             })
 
             document.querySelector('.flyerArea').addEventListener('mouseover', function () {
@@ -563,7 +599,7 @@
             let flyers = document.getElementsByClassName('item');
             for (let i = 0; i < flyers.length; i++) {
                 flyers[i].addEventListener('click', function (e) {
-
+                    
                     let orderNo = e.target.getAttribute('order');
 
                       var xhr = new XMLHttpRequest();
@@ -571,7 +607,8 @@
                         if( xhr.readyState == XMLHttpRequest.DONE ){ 
                           if( xhr.status == 200){ 
                                let data = JSON.parse(xhr.responseText);
-                               document.querySelector('#QrcodeIcon div p').setAttribute('order',orderNo);
+                               document.querySelector('#QrcodeIcon div p').setAttribute('order',data['orderNo']);
+                               document.querySelector('.envelopeBar button').setAttribute('order',data['orderNo']);
                                document.querySelector('.envelopeHeader h4').innerText= data['orderName'];
                                document.querySelector('.envelopeHeader span').innerText= data['flyeDate'];
                                document.querySelector('.titleName p').innerText= data['memName'];

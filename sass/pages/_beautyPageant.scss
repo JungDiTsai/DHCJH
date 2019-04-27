@@ -279,7 +279,9 @@ li{
         .beautyDiscIgMemTextContainerWrap{
           margin: 20px 0px;
           font-family: '微軟正黑';
-          overflow-y:hidden;
+          overflow-x:hidden;
+          max-height: 78px;
+
           .beautyDiscIgMemTextContainer{
             display: flex;
             width: 100%;

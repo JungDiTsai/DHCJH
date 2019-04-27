@@ -1,0 +1,24 @@
+@import "base/_reset.scss";
+@import "base/_var.scss";
+@import "base/_color.scss";
+@import "layout/grid.scss";
+@import "abstracts/_mixins.scss";
+@import "abstracts/_mixins.scss";
+@import "layout/_header.scss";
+@import "components/_buttons.scss";
+<<<<<<< HEAD
+@import "components/_titlebackground.scss";
+@import "pages/api.scss"; 
+@import "pages/game.scss";
+@import "headerNav.scss";
+@import "pages/loading.scss";
+
+
+
+
+
+=======
+@import "pages/_api.scss";
+@import "pages/_game.scss";
+@import "pages/_loading.scss";
+>>>>>>> first

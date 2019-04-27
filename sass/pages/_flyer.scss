@@ -8,6 +8,9 @@
 
   .wrap {
     margin: auto;
+    .titleBgi{
+      opacity: 0;
+    }
   }
   #selectOpen {
     display:none;
@@ -212,7 +215,10 @@
     }
 
     .backBlock {
+<<<<<<< HEAD
+=======
       
+>>>>>>> 82ea2a532ef86d0a74139e59382680cf19209207
       border: 3px solid rgb(255, 255, 255);
       border-radius: 10px;
       box-shadow: 
@@ -601,6 +607,8 @@
     background-image: url("../images/titleNeonLightDarkBlueNew.gif");
     margin-top: 0;
     margin-bottom: 50px;
+    opacity: 0;
+    transform: translateX(300%)
   }
 
   .wrap {
@@ -622,6 +630,8 @@
       padding: 0;
       margin: 0 40px 15px 0;
       display: inline-block;
+      opacity: 0;
+      transform: translateX(-10%);
     }
 
     li img {
@@ -891,3 +901,7 @@
     transform: rotateZ(10deg);
   }
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 82ea2a532ef86d0a74139e59382680cf19209207

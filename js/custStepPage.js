@@ -11,15 +11,43 @@ $(document).ready(function(){
         if( index > 0 ){
             index--;
             controlContent(index);
+        }else if( index == 0){
+            //舞台回到中心
+            $('.stageView .groupA').css({
+                'transform' : `translateY(100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)`
+            });
+            //移除背景圖
+            $('.stairsF, .stairsC1, .front').css('backgroundImage', "none");
+            //移除舞團、移除選取
+            $('.danceDetail1, .danceDetail2, .danceDetail3, .danceDetail4, .danceDetail5, .danceDetail6').hide();
+            $('#danceDetail1, #danceDetail2, #danceDetail3, #danceDetail4, #danceDetail5, #danceDetail6').removeClass('custItemSelect');
+            //移除火焰煙火、移除選取
+            $('.fireEffect1, .fireEffect2, .fireEffect3').hide();
+            $('#fireEffect1, #fireEffect2, #fireEffect3').removeClass('custItemSelect');
+            $('.fireworkEffect01, .fireworkEffect02, .fireworkEffect03').hide();
+            $('#fireworkEffect1, #fireworkEffect2, #fireworkEffect3').removeClass('custItemSelect');
+            //還原字幕
+            $('#subtileItemInfo').val('');
+            $('.subtitles p').html('跑馬燈');
+            //移除音響鋼管、移除選取
+            $('.audioItem01, .audioItem02, .audioItem03').hide();
+            $('#audioItem1, #audioItem2, #audioItem3').removeClass('custItemSelect');
+            $('.pole1, .pole2, .pole3').hide();
+            $('#pole1, #pole2, #pole3').removeClass('custItemSelect');
         }
     });
     // 下一步
     $('.nextStep').bind('click', function(){
-        if( index <= 2 ){
+        if( index < 2 ){
             index++;
             controlContent(index);
+        }else if( index == 2){
+            index++;
+            controlContent(index);
+            getOrderInfo();
         }
         else if( index == 3){
+            saveCustImg();
             location.href ='checkout.html';
         }
     });
@@ -29,6 +57,9 @@ $(document).ready(function(){
         index = $(this).index();
         $(this).addClass('custSelected').siblings().removeClass('custSelected');
         controlContent(index);
+        if( index == 3){
+            getOrderInfo();
+        }
     });
     // 客製花車步驟---end
 
@@ -77,76 +108,311 @@ $(document).ready(function(){
     // ======================================================
     // 客製化流程
     // ======================================================
-
     // 特效-----火
-    $('#fireEffect01').click(function(){
-        $('.fireEffect01').fadeToggle(1000);
-        $('.fireEffect02, .fireEffect03').hide();
-        $(this).toggleClass('custItemSelect').siblings().removeClass('custItemSelect');
+    $('#fireEffect1').click(function(){
+        $('.fireEffect1').fadeToggle(1000);
+        $('.fireEffect2, .fireEffect3').hide();
+        if($(this).hasClass('custItemSelect')){
+            $(this).removeClass('custItemSelect')
+        }else{
+            $(this).addClass('custItemSelect')
+            $('#fireEffect2, #fireEffect3').removeClass('custItemSelect');
+        }
     })
-    $('#fireEffect02').click(function(){
-        $('.fireEffect02').fadeToggle(1000);
-        $('.fireEffect01, .fireEffect03').hide();
-        $(this).toggleClass('custItemSelect').siblings().removeClass('custItemSelect');
+    $('#fireEffect2').click(function(){
+        $('.fireEffect2').fadeToggle(1000);
+        $('.fireEffect1, .fireEffect3').hide();
+        if($(this).hasClass('custItemSelect')){
+            $(this).removeClass('custItemSelect')
+        }else{
+            $(this).addClass('custItemSelect')
+            $('#fireEffect1, #fireEffect3').removeClass('custItemSelect');
+        }
     })
-    $('#fireEffect03').click(function(){
-        $('.fireEffect03').fadeToggle(1000);
-        $('.fireEffect01, .fireEffect02').hide();
-        $(this).toggleClass('custItemSelect').siblings().removeClass('custItemSelect');
+    $('#fireEffect3').click(function(){
+        $('.fireEffect3').fadeToggle(1000);
+        $('.fireEffect1, .fireEffect2').hide();
+        if($(this).hasClass('custItemSelect')){
+            $(this).removeClass('custItemSelect')
+        }else{
+            $(this).addClass('custItemSelect')
+            $('#fireEffect1, #fireEffect2').removeClass('custItemSelect');
+        }
     })
     // 特效-----煙火
-    $('#fireworkEffect01').click(function(){
+    $('#fireworkEffect1').click(function(){
         $('.fireworkEffect01').fadeToggle();
         $('.fireworkEffect02, .fireworkEffect03').hide();
-        $(this).toggleClass('custItemSelect').siblings().removeClass('custItemSelect');
+        if($(this).hasClass('custItemSelect')){
+            $(this).removeClass('custItemSelect')
+        }else{
+            $(this).addClass('custItemSelect')
+            $('#fireworkEffect2, #fireworkEffect3').removeClass('custItemSelect');
+        }
     })
-    $('#fireworkEffect02').click(function(){
+    $('#fireworkEffect2').click(function(){
         $('.fireworkEffect02').fadeToggle();
         $('.fireworkEffect01, .fireworkEffect03').hide();
-        $(this).toggleClass('custItemSelect').siblings().removeClass('custItemSelect');
+        if($(this).hasClass('custItemSelect')){
+            $(this).removeClass('custItemSelect')
+        }else{
+            $(this).addClass('custItemSelect')
+            $('#fireworkEffect1, #fireworkEffect3').removeClass('custItemSelect');
+        }
     })
-    $('#fireworkEffect03').click(function(){
+    $('#fireworkEffect3').click(function(){
         $('.fireworkEffect03').fadeToggle();
         $('.fireworkEffect01, .fireworkEffect02').hide();
-        $(this).toggleClass('custItemSelect').siblings().removeClass('custItemSelect');
+        if($(this).hasClass('custItemSelect')){
+            $(this).removeClass('custItemSelect')
+        }else{
+            $(this).addClass('custItemSelect')
+            $('#fireworkEffect1, #fireworkEffect2').removeClass('custItemSelect');
+        }
     })
+
     // 字幕
-    // var subInfo = $.trim($('#subtileItemInfo').val());
-    $('#subInfoSubmit').click(function(){
-        // console.log($.trim($('#subtileItemInfo').val()));
-        $('.subtitles p').html($.trim($('#subtileItemInfo').val()));
-    });
+    document.getElementById('subtileItemInfo').addEventListener('input', function(){
+        var subInfo = $('#subtileItemInfo').val();
+        $('.subtitles p').html(subInfo);
+    })
+
+    // 字幕顏色
+    var hueBg = $(".color-picker .hue .bg"),
+            i,
+            h = 0,
+            s = 100,
+            l = 50,
+            a = 1;
+        for (i = 0; i <= 360; i += 1) {
+            hueBg.append("<span style='background:hsla(" + i + ", " + s + "%, " + l + "%, " + a + ");'></span>");
+        }
+        $(".color-picker .hue .range input[type=range]").change(function () {
+            h = $(this).val();
+            var hue = "hsla(" + h + ", " + s + "%, " + l + "%, " + a + ")",
+            rgb = $(".subtitles p").css("color"),
+            hex_16_bytes = rgb.split("(")[1].split(")")[0].split(", "),
+            hex = [];
+            hex[0] = parseInt(hex_16_bytes[0]).toString(16);
+            hex[1] = parseInt(hex_16_bytes[1]).toString(16);
+            hex[2] = parseInt(hex_16_bytes[2]).toString(16);
+            if (hex[0].length < 2) {
+                hex[0] = "0" + hex[0];
+            }
+            if (hex[1].length < 2) {
+                hex[1] = "0" + hex[1];
+            }
+            if (hex[2].length < 2) {
+                hex[2] = "0" + hex[2];
+            }
+            $(".color-codes .hex").text("#" + hex.join(""))
+            $(".color-codes .hsl").text(hue);
+            $(".color-codes .rgb").text(rgb);
+            $(".subtitles p").css({
+                color : hue
+            });
+        });
+        $(".color-picker .hue .range input[type=range]").mousemove(function () {
+            h = $(this).val();
+            var hue = "hsla(" + h + ", " + s + "%, " + l + "%, " + a + ")",
+                rgb = $(".subtitles p").css("color"),
+                hex_16_bytes = rgb.split("(")[1].split(")")[0].split(", "),
+                hex = [];
+            hex[0] = parseInt(hex_16_bytes[0]).toString(16);
+            hex[1] = parseInt(hex_16_bytes[1]).toString(16);
+            hex[2] = parseInt(hex_16_bytes[2]).toString(16);
+            if (hex[0].length < 2) {
+                hex[0] = "0" + hex[0];
+            }
+            if (hex[1].length < 2) {
+                hex[1] = "0" + hex[1];
+            }
+            if (hex[2].length < 2) {
+                hex[2] = "0" + hex[2];
+            }
+            $(".color-codes .hex").text("#" + hex.join(""))
+            $(".color-codes .hsl").text(hue);
+            $(".color-codes .rgb").text(rgb);
+            $(".subtitles p").css({
+                color : hue
+            });
+            
+            $(".color-picker .lightness .bg").css({
+                background: hue,
+                background: "-o-linear-gradient(left,  #000000 0%, " + hue + " 50%, #ffffff 100%)",
+                background: "-moz-linear-gradient(left,  #000000 0%, " + hue + " 50%, #ffffff 100%)",
+                background: "-webkit-linear-gradient(left,  #000000 0%, " + hue + " 50%, #ffffff 100%)",
+                background: "linear-gradient(to right,  #000000 0%, " + hue + " 50%, #ffffff 100%)"
+            });
+        });
+        
+        $(".color-picker .lightness .range input[type=range]").change(function () {
+            l = $(this).val();
+            var hue = "hsla(" + h + ", " + s + "%, " + l + "%, " + a + ")",
+                rgb = $(".subtitles p").css("color"),
+                hex_16_bytes = rgb.split("(")[1].split(")")[0].split(", "),
+                hex = [];
+            hex[0] = parseInt(hex_16_bytes[0]).toString(16);
+            hex[1] = parseInt(hex_16_bytes[1]).toString(16);
+            hex[2] = parseInt(hex_16_bytes[2]).toString(16);
+            if (hex[0].length < 2) {
+                hex[0] = "0" + hex[0];
+            }
+            if (hex[1].length < 2) {
+                hex[1] = "0" + hex[1];
+            }
+            if (hex[2].length < 2) {
+                hex[2] = "0" + hex[2];
+            }
+            $(".color-codes .hex").text("#" + hex.join(""))
+            $(".color-codes .hsl").text(hue);
+            $(".color-codes .rgb").text(rgb);
+            $(".subtitles p").css({
+                color : hue
+            });
+        });
+        $(".color-picker .lightness .range input[type=range]").mousemove(function () {
+            l = $(this).val();
+            var hue = "hsla(" + h + ", " + s + "%, " + l + "%, " + a + ")",
+                rgb = $(".subtitles p").css("color"),
+                hex_16_bytes = rgb.split("(")[1].split(")")[0].split(", "),
+                hex = [];
+            hex[0] = parseInt(hex_16_bytes[0]).toString(16);
+            hex[1] = parseInt(hex_16_bytes[1]).toString(16);
+            hex[2] = parseInt(hex_16_bytes[2]).toString(16);
+            if (hex[0].length < 2) {
+                hex[0] = "0" + hex[0];
+            }
+            if (hex[1].length < 2) {
+                hex[1] = "0" + hex[1];
+            }
+            if (hex[2].length < 2) {
+                hex[2] = "0" + hex[2];
+            }
+            $(".color-codes .hex").text("#" + hex.join(""))
+            $(".color-codes .hsl").text(hue);
+            $(".color-codes .rgb").text(rgb);
+            $(".subtitles p").css({
+                color : hue
+            });
+        });
     // 音響
-    $('#audioItem01').click(function(){
+    $('#audioItem1').click(function(){
         $('.audioItem01').toggle();
         $('.audioItem02, .audioItem03').hide();
+        if($(this).hasClass('custItemSelect')){
+            $(this).removeClass('custItemSelect')
+        }else{
+            $(this).addClass('custItemSelect')
+            $('#audioItem2, #audioItem3').removeClass('custItemSelect');
+        }
     })
-    $('#audioItem02').click(function(){
+    $('#audioItem2').click(function(){
         $('.audioItem02').toggle();
         $('.audioItem01, .audioItem03').hide();
+        if($(this).hasClass('custItemSelect')){
+            $(this).removeClass('custItemSelect')
+        }else{
+            $(this).addClass('custItemSelect')
+            $('#audioItem1, #audioItem3').removeClass('custItemSelect');
+        }
     })
-    $('#audioItem03').click(function(){
+    $('#audioItem3').click(function(){
         $('.audioItem03').toggle();
         $('.audioItem01, .audioItem02').hide();
+        if($(this).hasClass('custItemSelect')){
+            $(this).removeClass('custItemSelect')
+        }else{
+            $(this).addClass('custItemSelect')
+            $('#audioItem1, #audioItem2').removeClass('custItemSelect');
+        }
     })
     // 鋼管
     $('#pole1').click(function(){
         $('.pole1').toggle();
         $('.pole2, .pole3').hide();
+        if($(this).hasClass('custItemSelect')){
+            $(this).removeClass('custItemSelect')
+        }else{
+            $(this).addClass('custItemSelect')
+            $('#pole2, #pole3').removeClass('custItemSelect');
+        }
     })
     $('#pole2').click(function(){
         $('.pole2').toggle();
         $('.pole1, .pole3').hide();
+        if($(this).hasClass('custItemSelect')){
+            $(this).removeClass('custItemSelect')
+        }else{
+            $(this).addClass('custItemSelect')
+            $('#pole1, #pole3').removeClass('custItemSelect');
+        }
     })
     $('#pole3').click(function(){
         $('.pole3').toggle();
         $('.pole1, .pole2').hide();
+        if($(this).hasClass('custItemSelect')){
+            $(this).removeClass('custItemSelect')
+        }else{
+            $(this).addClass('custItemSelect')
+            $('#pole1, #pole2').removeClass('custItemSelect');
+        }
     })
-
-    //更換日期-----有問題
-    $('.available li').click(function(){
-        $(this).addClass('choice').siblings().removeClass('choice');
-    });
+    // 舞團
+    $('#danceDetail1').click(function(){
+        $('.danceDetail1').toggle();
+        $('.danceDetail2, .danceDetail3, .danceDetail4, .danceDetail5, .danceDetail6').hide();
+        if($(this).hasClass('custItemSelect')){
+            $(this).removeClass('custItemSelect')
+        }else{
+            $(this).addClass('custItemSelect').siblings().removeClass('custItemSelect');
+        }
+    })
+    $('#danceDetail2').click(function(){
+        $('.danceDetail2').toggle();
+        $('.danceDetail1, .danceDetail3, .danceDetail4, .danceDetail5, .danceDetail6').hide();
+        if($(this).hasClass('custItemSelect')){
+            $(this).removeClass('custItemSelect')
+        }else{
+            $(this).addClass('custItemSelect').siblings().removeClass('custItemSelect');
+        }
+    })
+    $('#danceDetail3').click(function(){
+        $('.danceDetail3').toggle();
+        $('.danceDetail1, .danceDetail2, .danceDetail4, .danceDetail5, .danceDetail6').hide();
+        if($(this).hasClass('custItemSelect')){
+            $(this).removeClass('custItemSelect')
+        }else{
+            $(this).addClass('custItemSelect').siblings().removeClass('custItemSelect');
+        }
+    })
+    $('#danceDetail4').click(function(){
+        $('.danceDetail4').toggle();
+        $('.danceDetail1, .danceDetail2, .danceDetail3, .danceDetail5, .danceDetail6').hide();
+        if($(this).hasClass('custItemSelect')){
+            $(this).removeClass('custItemSelect')
+        }else{
+            $(this).addClass('custItemSelect').siblings().removeClass('custItemSelect');
+        }
+    })
+    $('#danceDetail5').click(function(){
+        $('.danceDetail5').toggle();
+        $('.danceDetail1, .danceDetail2, .danceDetail3, .danceDetail4, .danceDetail6').hide();
+        if($(this).hasClass('custItemSelect')){
+            $(this).removeClass('custItemSelect')
+        }else{
+            $(this).addClass('custItemSelect').siblings().removeClass('custItemSelect');
+        }
+    })
+    $('#danceDetail6').click(function(){
+        $('.danceDetail6').toggle();
+        $('.danceDetail1, .danceDetail2, .danceDetail3, .danceDetail4, .danceDetail5').hide();
+        if($(this).hasClass('custItemSelect')){
+            $(this).removeClass('custItemSelect')
+        }else{
+            $(this).addClass('custItemSelect').siblings().removeClass('custItemSelect');
+        }
+    })
     // 更改地址
     $('.map iframe').attr("src", 'https://maps.google.com.tw/maps?f=q&hl=zh-TW&geocode=&q=中央大學資策會&z=16&output=embed&t=');
     changeLoc();
@@ -185,144 +451,410 @@ function controlContent(index){
 // ======================================================
 //日曆
 // ======================================================
-var month_olympic = [31,29,31,30,31,30,31,31,30,31,30,31];
-var month_normal = [31,28,31,30,31,30,31,31,30,31,30,31];
-var month_name = ["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"];
-var holder = document.getElementById("days");
-var prev = document.getElementById("prev");
-var next = document.getElementById("next");
-var ctitle = document.getElementById("calendarTitle");
-var cyear = document.getElementById("calendarYear");
-var my_date = new Date();
-var my_year = my_date.getFullYear();
-var my_month = my_date.getMonth();
-var my_day = my_date.getDate();
-//取得某年某月的第一天是星期幾
-function dayStart(month, year) {
-    var tmpDate = new Date(year, month, 1);
-    return (tmpDate.getDay());
-}
-//计算某年是不是闰年，通过求年份除以4的余数即可
-function daysMonth(month, year) {
-    var tmp = year % 4;
-    if (tmp == 0) {
-        return (month_olympic[month]);
-    } else {
-        return (month_normal[month]);
-    }
-}
-function refreshDate(){
-    var str = "";
-    var totalDay = daysMonth(my_month, my_year); //获取该月总天数
-    var firstDay = dayStart(my_month, my_year); //获取该月第一天是星期几
-    var myclass;
-    for(var i=1; i<firstDay; i++){ 
-        str += "<li></li>"; //为起始日之前的日期创建空白节点
-    }
-    for(var i=1; i<=totalDay; i++){
-        if((i<my_day && my_year==my_date.getFullYear() && my_month==my_date.getMonth()) || my_year<my_date.getFullYear() || ( my_year==my_date.getFullYear() && my_month<my_date.getMonth())){ 
-            myclass = " class='dayBefore'"; //当该日期在今天之前时，以浅灰色字体显示
-        }else if (i==my_day && my_year==my_date.getFullYear() && my_month==my_date.getMonth()){
-            myclass = " class='choice'"; //当天日期以绿色背景突出显示
-        }else{
-            myclass = " class='available'"; //当该日期在今天之后时，以深灰字体显示
+    var yy = new Date().getFullYear(); //年
+    var mm = new Date().getMonth(); //月份
+    var dd = new Date().getDate();//今天日期
+    var arrmm = new Array();
+    arrmm[0] = "一月";
+    arrmm[1] = "二月";
+    arrmm[2] = "三月";
+    arrmm[3] = "四月";
+    arrmm[4] = "五月";
+    arrmm[5] = "六月";
+    arrmm[6] = "七月";
+    arrmm[7] = "八月";
+    arrmm[8] = "九月";
+    arrmm[9] = "十月";
+    arrmm[10] = "十一月";
+    arrmm[11] = "十二月";
+    document.querySelector("#calendarTitle").innerText = arrmm[mm];
+    document.querySelector("#calendarYear").innerText = yy;
+    var dayall = new Date(yy, (mm + 1), 0).getDate();//總天數
+    var bd = new Date(yy + "/" + (mm + 1) + "/1").getDay();//因為回傳月份是0-11 所以要+1  抓星期他只有1-12月
+    
+
+  
+    var dayfunction = () => {
+        for (var i = 1; i < 7; i++) {
+            var text = "";
+            if (i == 1) {
+                if (i - bd < 1) {
+                    for (var p = 0; p < bd; p++) {
+                        text += "<td class='tdclass-1'></td>";
+                    }
+                }
+                for (var o = 1; o <= 7 - bd; o++) {
+                    text += "<td class='tdclass'>" + o + "</td>";
+                }
+            }
+            else if (i == 2) {
+                for (var o = 8 - bd; o <= 14 - bd; o++) {
+                    text += "<td class='tdclass'>" + o + "</td>";
+                }
+            }
+            else if (i == 3) {
+                for (var o = 15 - bd; o <= 21 - bd; o++) {
+                    text += "<td class='tdclass'>" + o + "</td>";
+                }
+            }
+            else if (i == 4) {
+                for (var o = 22 - bd; o <= 28 - bd; o++) {
+                    text += "<td class='tdclass'>" + o + "</td>";
+                }
+            }
+            else if (i == 5) {
+                if (bd > 4 && dayall > 28) {
+                    for (var o = 29 - bd; o <= 35 - bd; o++) {
+                        text += "<td class='tdclass'>" + o + "</td>";
+                    }
+                    var tr = document.createElement("tr");
+                    document.querySelector("#caleBody").appendChild(tr).innerHTML = text;
+                    text = "";
+                    for (var o = 36 - bd; o <= dayall; o++) {
+                        text += "<td class='tdclass'>" + o + "</td>";
+                    }
+                } else {
+                    for (var o = 29 - bd; o <= dayall; o++) {
+                        text += "<td class='tdclass'>" + o + "</td>";
+                    }
+                }
+            }
+
+            var tr = document.createElement("tr");
+            document.querySelector("#caleBody").appendChild(tr).innerHTML = text;
         }
-        str += `<li ${myclass}>${i}</li>`; //创建日期节点
     }
-    holder.innerHTML = str; //设置日期显示
-    ctitle.innerHTML = month_name[my_month]; //设置英文月份显示
-    cyear.innerHTML = my_year; //设置年份显示
-}
-refreshDate(); //执行该函数
+    dayfunction();
+    document.querySelector("#prevMon").addEventListener("click", (e) => {
+        var num = arrmm.indexOf(document.querySelector("#calendarTitle").innerText);
+        dayall = new Date(yy, num, 0).getDate();//總天數
+        document.querySelector("#caleBody").innerHTML = "";
+        if (num - 1 < 0) {
+            num = 12;
+            yy--;
+        }
+        bd = new Date(yy + "/" + num + "/1").getDay();
+        dayfunction(bd, dayall);
+        document.querySelector("#calendarTitle").innerText = arrmm[num - 1];
+        document.querySelector("#calendarYear").innerText = yy;
+        load();
+    })
+    document.querySelector("#nextMon").addEventListener("click", (e) => {
+        var num = arrmm.indexOf(document.querySelector("#calendarTitle").innerText);
+        if (num == 0) {
+            dayall = new Date(yy, 2, 0).getDate()
+            bd = new Date(yy + "/" + 2 + "/1").getDay();
+        } else if (num == 11) {
+            dayall = new Date(yy, num + 1, 0).getDate();//總天數
+            bd = new Date(yy + "/" + (num + 1) + "/1").getDay();
+        } else if (num == 10) {
+            dayall = new Date(yy, num, 0).getDate();//總天數
+            bd = new Date(yy + "/" + (num) + "/1").getDay();
+        }
+        else {
+            dayall = new Date(yy, num + 2, 0).getDate();//總天數
+            bd = new Date(yy + "/" + (num + 2) + "/1").getDay();
+        }
+        document.querySelector("#caleBody").innerHTML = "";
+        if (num + 1 > 11) {
+            num = -1;
+            yy++;
+        }
+        dayfunction(bd, dayall);
+        document.querySelector("#calendarTitle").innerText = arrmm[num + 1];
+        document.querySelector("#calendarYear").innerText = yy;
+        load();
+    })
 
-prevMon.onclick = function(e){
-    e.preventDefault();
-    my_month--;
-    if(my_month<0){
-        my_year--;
-        my_month = 11;
-    }
-    refreshDate();
-}
-nextMon.onclick = function(e){
-    e.preventDefault();
-    my_month++;
-    if(my_month>11){
-        my_year++;
-        my_month = 0;
-    }
-    refreshDate();
-}
+    var today = new Date();//今天日期
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1; //January is 0!
+    var yyyy = today.getFullYear();
 
+    if (dd < 10) {
+    dd = dd;
+    }
+
+    if (mm < 10) {
+    mm =  mm;
+    }
+
+    today =  dd;
+
+
+    var len;
+    var arr = new Array();
+    function load() {
+        len = document.getElementsByClassName("tdclass");
+        var ss;
+        for (var k = 0; k <= len.length - 1; k++) {
+            ss = document.getElementsByClassName("tdclass")[k];
+            ss.addEventListener("click", tdclass);
+            ss.style.color="rgb(255, 255, 255)";
+            ss.style.cursor="pointer";
+
+            var numF = arrmm.indexOf(document.querySelector("#calendarTitle").innerText);
+            var num = arrmm.indexOf(document.querySelector("#calendarTitle").innerText)+1;
+            if (document.querySelector("#calendarYear").innerText < yyyy   ) {
+                ss.style.color="rgb(173, 173, 173)";
+                ss.style.cursor="default";
+                ss.removeEventListener("click", tdclass);
+            }
+            //今年且小於此月 不等於今日
+            if( num<mm && document.querySelector("#calendarYear").innerText == yyyy ){
+                ss.removeEventListener("click", tdclass);
+                ss.style.color="rgb(168, 168, 168)";
+                ss.style.cursor="default";
+                
+                //不等於今日
+                // if(ss.innerText ==  today && num == mm && document.querySelector("#calendarYear").innerText == yyyy ){
+                //     ss.style.color="rgb(0, 0, 0)";
+                //     ss.style.background = "yellow";
+                //     // ss.style.cursor = "not-allowed";
+                //     ss.addEventListener("click", tdclass);
+                // }
+            }
+            //同年同月 但小於今天
+            if(ss.innerText<= today &&  num==mm && document.querySelector("#calendarYear").innerText == yyyy){
+                ss.style.color="rgb(168, 168, 168)";
+                ss.style.cursor="default";
+                ss.removeEventListener("click", tdclass);
+            }
+            arr[k] = ss;
+        }
+    }
+    function tdclass(e) {
+        for(var i = 0 ; i<=len.length-1 ; i++){
+            if( arr[i].style.color != "rgb(168, 168, 168)"){
+                arr[i].style.color="rgb(255, 255, 255)";
+                arr[i].style.background="rgb(64, 58, 96)";
+            }
+        }
+        e.target.style.background = "rgb(247, 83, 156)";
+        e.target.style.borderRadius = "50%";
+        e.target.style.color = "rgb(255, 255, 255)";
+        var value = document.querySelector("#calendarTitle").innerText;
+        var mmtext = Number(arrmm.indexOf(value));//月
+        mmtext += 1;
+        datevalue = document.querySelector("#calendarYear").innerText + "-" + ('00' + mmtext).slice(-2) + "-" + ('00' + e.target.innerText).slice(-2);
+        // 獲取日期
+        $('.dateChoose span').text(datevalue);
+        // 訂單獲取日期
+        $('.orderDate span').text(datevalue);
+        // console.log(datevalue);
+    }
+    load();
 // ======================================================
 // 更改地址
 // ======================================================
-// var loc = $('#locText').val();
 function changeLoc(){
-    // var loc = "tokyo";
-    var loc = $('#locText').val();
     $('#locBtn').click(function(){
-        alert(loc);
+        var loc = $('#locText').val();
+        var locSrc = `https://maps.google.com.tw/maps?f=q&hl=zh-TW&geocode=&q=${$('#locText').val()}&z=16&output=embed&t=`;
+        $('.map iframe').attr("src", locSrc);
+        //訂單獲取地址
+        $('.orderLoc span').text(loc);
     })
-    // var locSrc = `https://maps.google.com.tw/maps?f=q&hl=zh-TW&geocode=&q=${$('#locText').val()}&z=16&output=embed&t=`;
-    // $('.locInput :submit').click(function(){
-    //     $('.map iframe').attr("src", locSrc);
-    // })
-    
 }
 
 // ======================================================
 //主持人輪播
 // ======================================================
-document.querySelector('.sliderBox').addEventListener('click',function(){
-    let allDiv = document.querySelectorAll('.sliderBox>div')
-    for (let key in allDiv) {
-        let style = allDiv[key].style.left;
-        switch (style) {
-            case "50%":
-                allDiv[key].style.setProperty("left","30%");
-                allDiv[key].style.setProperty("transition",".5s");
-                allDiv[key].style.setProperty("transform","translateX(-50%) translateY(-50%) scale(0.7)");
-                allDiv[key].style.setProperty("z-index","2");
-                break;
-            case "30%":
-                allDiv[key].style.setProperty("left","20%");
-                allDiv[key].style.setProperty("transition",".5s");
-                allDiv[key].style.setProperty("transform","translateX(-50%) translateY(-50%) scale(0.5)");
-                allDiv[key].style.setProperty("z-index","1");
-                break;
-            case "20%":
-                allDiv[key].style.setProperty("left","40%");
-                allDiv[key].style.setProperty("transition",".5s");
-                allDiv[key].style.setProperty("transform","translateX(-50%) translateY(-50%) scale(0.3)");
-                allDiv[key].style.setProperty("z-index","1");
-                break;
-            case "40%":
-                allDiv[key].style.setProperty("left","60%");
-                allDiv[key].style.setProperty("transition",".5s");
-                allDiv[key].style.setProperty("transform","translateX(-50%) translateY(-50%) scale(0.3)");
-                allDiv[key].style.setProperty("z-index","1");
-                break;
-            case "60%":
-                allDiv[key].style.setProperty("left","80%");
-                allDiv[key].style.setProperty("transition",".5s");
-                allDiv[key].style.setProperty("transform","translateX(-50%) translateY(-50%) scale(0.5)");
-                allDiv[key].style.setProperty("z-index","1");
-                break;
-            case "80%":
-                allDiv[key].style.setProperty("left","70%");
-                allDiv[key].style.setProperty("transition",".5s");
-                allDiv[key].style.setProperty("transform","translateX(-50%) translateY(-50%) scale(0.7)");
-                allDiv[key].style.setProperty("z-index","2");
-                break;
-            case "70%":
-                allDiv[key].style.setProperty("left","50%");
-                allDiv[key].style.setProperty("transition",".5s");
-                allDiv[key].style.setProperty("transform","translateX(-50%) translateY(-50%) scale(1)");
-                allDiv[key].style.setProperty("z-index","3");
-                break;
-            default:
-                break;
-        }
+$num = $('.hostInfoDetail').length;
+$even = $num / 2;
+$odd = ($num + 1) / 2;
+
+if ($num % 2 == 0) {
+  $('.hostInfoDetail:nth-child(' + $even + ')').addClass('active');
+  $('.hostInfoDetail:nth-child(' + $even + ')').prev().addClass('prev');
+  $('.hostInfoDetail:nth-child(' + $even + ')').next().addClass('next');
+} else {
+  $('.hostInfoDetail:nth-child(' + $odd + ')').addClass('active');
+  $('.hostInfoDetail:nth-child(' + $odd + ')').prev().addClass('prev');
+  $('.hostInfoDetail:nth-child(' + $odd + ')').next().addClass('next');
+}
+
+$('.hostInfoDetail').click(function() {
+//   $slide = $('.active').width();
+//   console.log($('.active').position().left);
+  
+//   if ($(this).hasClass('next')) {
+//     $('.hostSliderBox').stop(false, true).animate({left: '-=' + $slide});
+//   } else if ($(this).hasClass('prev')) {
+//     $('.hostSliderBox').stop(false, true).animate({left: '+=' + $slide});
+//   }
+  
+  $(this).removeClass('prev next');
+  $(this).siblings().removeClass('prev active next');
+  
+  $(this).addClass('active');
+  $(this).prev().addClass('prev');
+  $(this).next().addClass('next');
+});
+
+// document.querySelector('.sliderBox').addEventListener('click',function(){
+//     let allDiv = document.querySelectorAll('.sliderBox>div')
+//     for (let key in allDiv) {
+//         let style = allDiv[key].style.left;
+//         switch (style) {
+//             case "50%":
+//                 allDiv[key].style.setProperty("left","30%");
+//                 allDiv[key].style.setProperty("transition",".5s");
+//                 allDiv[key].style.setProperty("transform","translateX(-50%) translateY(-50%) scale(0.7)");
+//                 allDiv[key].style.setProperty("z-index","2");
+//                 break;
+//             case "30%":
+//                 allDiv[key].style.setProperty("left","20%");
+//                 allDiv[key].style.setProperty("transition",".5s");
+//                 allDiv[key].style.setProperty("transform","translateX(-50%) translateY(-50%) scale(0.5)");
+//                 allDiv[key].style.setProperty("z-index","1");
+//                 break;
+//             case "20%":
+//                 allDiv[key].style.setProperty("left","40%");
+//                 allDiv[key].style.setProperty("transition",".5s");
+//                 allDiv[key].style.setProperty("transform","translateX(-50%) translateY(-50%) scale(0.3)");
+//                 allDiv[key].style.setProperty("z-index","1");
+//                 break;
+//             case "40%":
+//                 allDiv[key].style.setProperty("left","60%");
+//                 allDiv[key].style.setProperty("transition",".5s");
+//                 allDiv[key].style.setProperty("transform","translateX(-50%) translateY(-50%) scale(0.3)");
+//                 allDiv[key].style.setProperty("z-index","1");
+//                 break;
+//             case "60%":
+//                 allDiv[key].style.setProperty("left","80%");
+//                 allDiv[key].style.setProperty("transition",".5s");
+//                 allDiv[key].style.setProperty("transform","translateX(-50%) translateY(-50%) scale(0.5)");
+//                 allDiv[key].style.setProperty("z-index","1");
+//                 break;
+//             case "80%":
+//                 allDiv[key].style.setProperty("left","70%");
+//                 allDiv[key].style.setProperty("transition",".5s");
+//                 allDiv[key].style.setProperty("transform","translateX(-50%) translateY(-50%) scale(0.7)");
+//                 allDiv[key].style.setProperty("z-index","2");
+//                 break;
+//             case "70%":
+//                 allDiv[key].style.setProperty("left","50%");
+//                 allDiv[key].style.setProperty("transition",".5s");
+//                 allDiv[key].style.setProperty("transform","translateX(-50%) translateY(-50%) scale(1)");
+//                 allDiv[key].style.setProperty("z-index","3");
+//                 break;
+//             default:
+//                 break;
+//         }
+//     }
+// })
+// ======================================================
+// 獲取訂單資訊
+// ======================================================
+function getOrderInfo(){
+    // 獲取日期
+    // 獲取地址
+    // var loc = $('#locText').val();
+    // $('.orderLoc span').text(loc);
+    // 獲取塗裝
+    var none = 'none';
+    var bg0 = $('.stairsF').css('backgroundImage');
+    var bg1 = $('.stairsC1').css('backgroundImage');
+    var bg2 = $('.front').css('backgroundImage');
+    var patternPrice = 0;
+    // console.log(bg0);
+    // console.log(bg1);
+    // console.log(bg2);
+    if( bg0 != none || bg1 != none || bg2 != none ){
+        patternPrice = 10000; 
+        $('#orderPattern :nth-child(2)').text('如圖');
+        $('#orderPattern :last-child').text(patternPrice);
+    }else{
+        $('#orderPattern :nth-child(2)').text('無');
+        $('#orderPattern :last-child').text(patternPrice);
     }
-})
+    // 獲取舞團
+    var orderDanceName = "無";
+    var orderDancePrice = 0;
+    if( $('.danceItem').children().children().hasClass('custItemSelect') ){
+        orderDanceName = $('.danceItem .custItemSelect p:nth-last-of-type(2)').text();
+        orderDancePrice = ($('.danceItem .custItemSelect p:last-of-type').text()).replace(/[^\d]/g, '');
+    }
+        $('#orderDance :nth-child(2)').text(orderDanceName);
+        $('#orderDance :last-child').text(orderDancePrice);
+    // 獲取特效---火焰
+    var orderFireName = "無";
+    var orderFirePrice = 0;
+    if( $('#fireEffect1').hasClass('custItemSelect') || $('#fireEffect2').hasClass('custItemSelect') || $('#fireEffect3').hasClass('custItemSelect') ){
+        orderFireName =  $('.fireInfo.custItemSelect:lt(1) p:nth-last-of-type(2)').text();
+        orderFirePrice = ($('.fireInfo.custItemSelect:lt(1) p:last-of-type').text()).replace(/[^\d]/g, '');
+    }
+        $('#orderFire :nth-child(2)').text(orderFireName);
+        $('#orderFire :last-child').text(orderFirePrice);
+    // 獲取特效---煙火--------?
+    var orderFireworkName = "無";
+    var orderFireworkPrice = 0;
+    if( $('#fireworkEffect1').hasClass('custItemSelect') || $('#fireworkEffect2').hasClass('custItemSelect') || $('#fireworkEffect3').hasClass('custItemSelect') ){
+        orderFireworkName = $('.fireworkInfo.custItemSelect p:nth-last-of-type(2)').text();
+        orderFireworkPrice = ($('.fireworkInfo.custItemSelect p:last-of-type').text()).replace(/[^\d]/g, '');
+        // console.log(orderFireworkName);
+    }
+        $('#orderFirework :nth-child(2)').text(orderFireworkName);
+        $('#orderFirework :last-child').text(orderFireworkPrice);
+        
+    // 獲取音響
+    var orderAudioName =  "無";
+    var orderAudioPrice = 0;
+    if( $('#audioItem1').hasClass('custItemSelect') || $('#audioItem2').hasClass('custItemSelect') || $('#audioItem3').hasClass('custItemSelect') ){
+        orderAudioName =  $('.audioInfo.custItemSelect p:nth-last-of-type(2)').text();
+        orderAudioPrice = ($('.audioInfo.custItemSelect p:last-of-type').text()).replace(/[^\d]/g, '');
+    }
+        $('#orderAudio :nth-child(2)').text(orderAudioName);
+        $('#orderAudio :last-child').text(orderAudioPrice);
+    // 獲取鋼管
+    var orderPoleName = "無";
+    var orderPolePrice = 0;
+    if( $('#pole1').hasClass('custItemSelect') || $('#pole2').hasClass('custItemSelect') || $('#pole3').hasClass('custItemSelect')){
+        orderPoleName =  $('.poleInfo.custItemSelect p:nth-last-of-type(2)').text();
+        orderPolePrice = ($('.poleInfo.custItemSelect p:last-of-type').text()).replace(/[^\d]/g, '');
+    }
+        $('#orderPole :nth-child(2)').text(orderPoleName);
+        $('#orderPole :last-child').text(orderPolePrice);
+    // 獲取主持人
+    var orderHostName =  $('.active h6 span:first-of-type').text();
+    var orderHostPrice = ($('.active h6 span:last-of-type').text()).replace(/[^\d]/g, '');
+        $('#orderHost :nth-child(2)').text(orderHostName);
+        $('#orderHost :last-child').text(orderHostPrice);
+    // 金額總計
+    var subtotal = 0;
+    subtotal = parseInt(patternPrice) + parseInt(orderDancePrice) + parseInt(orderFirePrice) + parseInt(orderFireworkPrice) + parseInt(orderAudioPrice) + parseInt(orderPolePrice) + parseInt(orderHostPrice);
+    // console.log(subtotal);
+    $('.orderSub span').text(subtotal);
+}
+// ======================================================
+// 照片存檔
+// ======================================================
+function saveCustImg(){
+
+    var orderStage = document.getElementById('orderStage');
+    $('.back').css({
+        'transform' : " translateX(0px) translateZ(75px)"});
+
+    domtoimage.toJpeg(orderStage)
+        .then(function (dataUrl) {
+            // console.log(dataUrl);
+            let img = dataUrl
+
+            // 產生XMLHttpRequest物件
+            let xhr = new XMLHttpRequest();
+
+            //設定好所要連結的程式
+            var url = "_saveCustImg.php";
+            xhr.open("Post", url, true);
+            xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+            //送出資料
+            var data_info = "imgURL=" + img;
+            xhr.send(data_info);
+        })
+        .catch(function (error) {
+            console.error('oops, something went wrong!', error);
+    });
+}
+
+

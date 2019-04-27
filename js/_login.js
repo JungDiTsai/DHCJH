@@ -1,7 +1,6 @@
 //判斷登入
-let LoginState="notFound";
-let OrderNo="notFound";
-console.log(LoginState)
+LoginState="notFound";
+OrderNo="notFound";
 window.addEventListener("load", function () {
     //產生XMLHttpRequest物件
     let xhr = new XMLHttpRequest();
@@ -10,7 +9,9 @@ window.addEventListener("load", function () {
         if (xhr.status == 200) { //server端可以正確的執行
             if(xhr.responseText!="notFound"){
                 LoginState =  JSON.parse(xhr.responseText);
-                console.log("LoginState:已輸入值")
+                document.querySelector('.fa-user').src = LoginState[0]['memImgUrl'];
+                document.querySelector('.fa-user').setAttribute("id","bigMember");
+                console.log("LoginState:已輸入值");
             }
             console.log("Session:"+xhr.responseText)
         } else { //其它
@@ -22,15 +23,9 @@ window.addEventListener("load", function () {
     xhr.send(null);
 })
 
-
-
-
-
-
-
 //登入
 function sendLogin() {
-    //產生XMLHttpRequest物件
+        //產生XMLHttpRequest物件
     let xhr = new XMLHttpRequest();
     //註冊callback function
     xhr.onload = function () {
@@ -55,9 +50,6 @@ function sendLogin() {
     var data_info = "memId=" + document.getElementById("memId").value + "&memPsw="+ document.getElementById("memPsw").value;
     //送出資料
     xhr.send(data_info);
-
-
-
 }
 
 
@@ -69,7 +61,8 @@ function LoginOut() {
     //註冊callback function
     xhr.onload = function () {
         if (xhr.status == 200) { //server端可以正確的執行
-            console.log(xhr.responseText);
+            alert('已成功登出');
+            window.location.reload();
         } else { //其它
             alert(xhr.status);
         }
@@ -88,7 +81,8 @@ function registered(){
     //註冊callback function
     xhr.onload = function () {
         if (xhr.status == 200) { //server端可以正確的執行
-                console.log(xhr.responseText);
+            alert(xhr.responseText);
+            window.location.reload();
         } else { //其它
             alert(xhr.status);
         }
@@ -104,7 +98,6 @@ function registered(){
     let addMemName = document.getElementById('addMemName').value;
     let addMemSex = document.querySelector('.addMemSex:checked').value;
     let addMem = [addMemID,addMemPsw,addMemName,addMemTel,addMemMail,addMemSex];
-    console.log(addMem);
     var data_info = "addMember=" + JSON.stringify(addMem);
     //送出資料
     xhr.send(data_info);
