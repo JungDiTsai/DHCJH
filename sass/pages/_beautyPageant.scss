@@ -40,12 +40,18 @@ li{
     background-size: cover;
     background-repeat: no-repeat;   
 }
+#beautyRankingimgsMonth{
+  display: none;
+}
 .beautyRankingContainer{
     position: relative;
     width: 100%;
     max-width: 1200px;
     margin:auto;
     height: auto;
+    #beautyRankingimgs{
+      height: auto;
+    }
     .beautyRankingHeader{
       #beautyRankingimgsMonthBtn{
         transition: .5s;
@@ -132,7 +138,7 @@ li{
         cursor: pointer;
       }
   }
-  
+
   .fadeIn {
     opacity: 100;
     filter: alpha(opacity=100);
@@ -180,6 +186,7 @@ li{
     }
   }
   .dotpanel{
+    display: none;
     position: absolute;
     height:auto;;
     width: 76px;
