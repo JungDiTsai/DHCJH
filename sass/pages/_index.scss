@@ -14,6 +14,7 @@ a{
   text-decoration: none;
 }
 #gameHub{
+  transform: scale(.75);
   opacity:0.85;
   position: fixed;
   left: -360px;
@@ -55,7 +56,7 @@ a{
   right: 20px;
   bottom: -200px;
   border-radius:20px;
-  z-index: 1;
+  z-index: 2;
   box-shadow:0px 0px 5px rgba(0, 0, 0, 0.2);
   p{
     color:#121;
@@ -300,7 +301,7 @@ a{
 }
 
   //////////
-.perspective{
+.perspectiveIntro{
   position:absolute;
   margin:auto;
   margin-top:8.5vh;
@@ -361,7 +362,7 @@ a{
     width: 50%;
     margin-left: 180px;
   }
-  .perspective{
+  .perspectiveIntro{
     perspective: 900px;
     transform: scale(1.5);
     left: -100px;
@@ -832,7 +833,7 @@ a{
       line-height:100px;
       background:linear-gradient(165deg,transparent 29%, #fffc98 20%);
       
-      &:hover, &.active {
+      &:hover, &.activeTabs {
          background: linear-gradient(165deg,transparent 29%, #222 20%);
          color:#fff;
          font-weight: bold;
@@ -851,7 +852,7 @@ a{
         border-bottom: 70px solid rgba(0,0,0,.1);
         border-right: 7px solid transparent;
       }
-      &.active:before{
+      &.activeTabs:before{
         content:'';
         position:absolute;
         z-index:11;
@@ -1083,15 +1084,24 @@ a{
   background-size: cover;
   z-index: 0;
   height:100vh;
+  overflow: hidden;
   min-height: 600px;
   ////outline: 5px red solid;
   .titleBgi{
     background: url(../images/titleNeonLightBrownNew.gif) center no-repeat;
     background-size: cover;
   }
+  .commonBtn{
+    margin: auto;
+  }
+}
+
+.stageTry{
+  margin: auto;
 }
 .tryCustEquipWrap {
-  margin: 0 auto;
+  margin: 18px auto;
+  outline: red solid 5px;
 }
 ul.tryCustTabs {
   width: 300px;
@@ -1168,7 +1178,7 @@ ul.tryCustTabs li a.tryCustActive {
 }
 #tryCustEquipContent {
   width: 300px;
-  height: 100px;
+  height: 120px;
   margin: 0 auto;
   background: #545f60;
   -webkit-box-shadow: 2px 8px 25px -2px rgba(0, 0, 0, 0.3);
@@ -1182,6 +1192,20 @@ ul.tryCustTabs li a.tryCustActive {
   border-bottom-left-radius: 8px;
 }
 
+.perspective{
+    margin: auto;
+    max-width: 500px;
+    height: 400px;
+    position: relative;
+    perspective: 900px;
+}
+#perspectiveTry{
+  height: 150px;
+}
+
+#danceDetail{
+  outline:red 5px solid;
+}
 
 
 //引入客製頁面
@@ -2258,7 +2282,7 @@ footer{
 }
 //舞台配件介紹 col-lg 尾
 @media screen and (min-width:992px) {
-  .perspective{
+  .perspectiveIntro{
     transform: scale(1.6);
     margin-top:50px;
   }

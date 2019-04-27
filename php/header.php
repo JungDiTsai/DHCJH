@@ -17,7 +17,7 @@
         <li class="mainNavCell"><a href="beautyPageant.html">花車選美</a></li>
         <li class="mainNavCell"><a href="intro.html">花車特色介紹</a></li>
         <div class="navMemBtn"> 
-            <img  class="fas fa-user fa-1x" src="images/icon/loginIcon.png" alt="">
+            <img id="hi"  class="fas fa-user fa-1x" src="images/icon/loginIcon.png" alt="">
             <!-- <i class="fas fa-user"></i> -->
             <p >登出</p>
         </div>

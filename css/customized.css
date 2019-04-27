@@ -791,7 +791,9 @@ footer img {
   width: 300px;
   -webkit-transform: translateX(0px) translateZ(75px);
           transform: translateX(0px) translateZ(75px);
-  background: url(../images/customized/cust_stage_innerPattern/pattern_test_02.jpg) center no-repeat;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 }
 
@@ -852,10 +854,10 @@ footer img {
   height: 95px;
   -webkit-transform: translateZ(-69px) translateY(-65px);
           transform: translateZ(-69px) translateY(-65px);
-  border: #000 solid 1px;
-  background: #fff center no-repeat;
-  background: url(../images/customized/cust_stage_innerPattern/pattern_test_03.jpg) center no-repeat;
-  background-size: cover;
+  background-color: #fff;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .groupA .stairsC1:hover {
@@ -893,7 +895,9 @@ footer img {
   height: 205px;
   -webkit-transform: translateZ(20px) translateY(-160px) rotateX(-60deg);
           transform: translateZ(20px) translateY(-160px) rotateX(-60deg);
-  background: url(../images/customized/cust_stage_innerPattern/pattern_test_01.jpg) center no-repeat;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 }
 
@@ -1242,16 +1246,16 @@ footer img {
   width: 20px;
   height: 60px;
   background: #000;
-  -webkit-transform: translateZ(40px) translateX(-120px) translateY(-50px) rotateY(-30deg) translateX(-15px) rotateY(90deg);
-          transform: translateZ(40px) translateX(-120px) translateY(-50px) rotateY(-30deg) translateX(-15px) rotateY(90deg);
+  -webkit-transform: translateZ(40px) translateX(-120px) translateY(-50px) rotateY(-30deg) translateX(-10px) rotateY(90deg);
+          transform: translateZ(40px) translateX(-120px) translateY(-50px) rotateY(-30deg) translateX(-10px) rotateY(90deg);
 }
 
 .groupA .audioItem01 .audioBox3 {
   width: 20px;
   height: 60px;
   background: #000;
-  -webkit-transform: translateZ(40px) translateX(-120px) translateY(-50px) rotateY(-30deg) translateX(15px) rotateY(90deg);
-          transform: translateZ(40px) translateX(-120px) translateY(-50px) rotateY(-30deg) translateX(15px) rotateY(90deg);
+  -webkit-transform: translateZ(40px) translateX(-120px) translateY(-50px) rotateY(-30deg) translateX(10px) rotateY(90deg);
+          transform: translateZ(40px) translateX(-120px) translateY(-50px) rotateY(-30deg) translateX(10px) rotateY(90deg);
 }
 
 .groupA .audioItem01 .audioBox4 {
@@ -1284,16 +1288,16 @@ footer img {
   width: 20px;
   height: 60px;
   background: #000;
-  -webkit-transform: translateZ(40px) translateX(120px) translateY(-50px) rotateY(30deg) translateX(-15px) rotateY(90deg);
-          transform: translateZ(40px) translateX(120px) translateY(-50px) rotateY(30deg) translateX(-15px) rotateY(90deg);
+  -webkit-transform: translateZ(40px) translateX(120px) translateY(-50px) rotateY(30deg) translateX(-10px) rotateY(90deg);
+          transform: translateZ(40px) translateX(120px) translateY(-50px) rotateY(30deg) translateX(-10px) rotateY(90deg);
 }
 
 .groupA .audioItem01 .audioBox8 {
   width: 20px;
   height: 60px;
   background: #000;
-  -webkit-transform: translateZ(40px) translateX(120px) translateY(-50px) rotateY(30deg) translateX(15px) rotateY(90deg);
-          transform: translateZ(40px) translateX(120px) translateY(-50px) rotateY(30deg) translateX(15px) rotateY(90deg);
+  -webkit-transform: translateZ(40px) translateX(120px) translateY(-50px) rotateY(30deg) translateX(10px) rotateY(90deg);
+          transform: translateZ(40px) translateX(120px) translateY(-50px) rotateY(30deg) translateX(10px) rotateY(90deg);
 }
 
 .groupA .audioItem01 .audioBox9 {
@@ -1330,16 +1334,16 @@ footer img {
   width: 20px;
   height: 100px;
   background: #000;
-  -webkit-transform: translateZ(10px) translateX(-115px) translateY(-70px) rotateY(-30deg) translateX(-15px) rotateY(90deg);
-          transform: translateZ(10px) translateX(-115px) translateY(-70px) rotateY(-30deg) translateX(-15px) rotateY(90deg);
+  -webkit-transform: translateZ(40px) translateX(-110px) translateY(-70px) rotateY(-30deg) translateX(-15px) rotateY(90deg);
+          transform: translateZ(40px) translateX(-110px) translateY(-70px) rotateY(-30deg) translateX(-15px) rotateY(90deg);
 }
 
 .groupA .audioItem02 .audioBox3 {
   width: 20px;
   height: 100px;
   background: #000;
-  -webkit-transform: translateZ(40px) translateX(-120px) translateY(-70px) rotateY(-30deg) translateX(15px) rotateY(90deg);
-          transform: translateZ(40px) translateX(-120px) translateY(-70px) rotateY(-30deg) translateX(15px) rotateY(90deg);
+  -webkit-transform: translateZ(40px) translateX(-125px) translateY(-70px) rotateY(-30deg) translateX(15px) rotateY(90deg);
+          transform: translateZ(40px) translateX(-125px) translateY(-70px) rotateY(-30deg) translateX(15px) rotateY(90deg);
 }
 
 .groupA .audioItem02 .audioBox4 {
@@ -1402,32 +1406,32 @@ footer img {
   z-index: 1;
   background: url(../images/audio3.png) center no-repeat;
   background-size: cover;
-  -webkit-transform: translateZ(40px) translateX(-115px) translateY(-55px) rotateY(-30deg) translateZ(10px);
-          transform: translateZ(40px) translateX(-115px) translateY(-55px) rotateY(-30deg) translateZ(10px);
+  -webkit-transform: translateZ(40px) translateX(-120px) translateY(-55px) rotateY(-30deg) translateZ(20px);
+          transform: translateZ(40px) translateX(-120px) translateY(-55px) rotateY(-30deg) translateZ(20px);
 }
 
 .groupA .audioItem03 .audioBox1 {
   width: 40px;
   height: 70px;
   background: #000;
-  -webkit-transform: translateZ(-10px) translateX(-120px) translateY(-55px) rotateY(-30deg) translateZ(-10px);
-          transform: translateZ(-10px) translateX(-120px) translateY(-55px) rotateY(-30deg) translateZ(-10px);
+  -webkit-transform: translateZ(40px) translateX(-120px) translateY(-55px) rotateY(-30deg) translateZ(-20px);
+          transform: translateZ(40px) translateX(-120px) translateY(-55px) rotateY(-30deg) translateZ(-20px);
 }
 
 .groupA .audioItem03 .audioBox2 {
   width: 40px;
   height: 70px;
   background: #000;
-  -webkit-transform: translateZ(10px) translateX(-115px) translateY(-55px) rotateY(-30deg) translateX(-15px) rotateY(90deg);
-          transform: translateZ(10px) translateX(-115px) translateY(-55px) rotateY(-30deg) translateX(-15px) rotateY(90deg);
+  -webkit-transform: translateZ(40px) translateX(-120px) translateY(-55px) rotateY(-30deg) translateX(-20px) rotateY(90deg);
+          transform: translateZ(40px) translateX(-120px) translateY(-55px) rotateY(-30deg) translateX(-20px) rotateY(90deg);
 }
 
 .groupA .audioItem03 .audioBox3 {
   width: 40px;
   height: 70px;
   background: #000;
-  -webkit-transform: translateZ(30px) translateX(-110px) translateY(-55px) rotateY(-30deg) translateX(15px) rotateY(90deg);
-          transform: translateZ(30px) translateX(-110px) translateY(-55px) rotateY(-30deg) translateX(15px) rotateY(90deg);
+  -webkit-transform: translateZ(40px) translateX(-120px) translateY(-55px) rotateY(-30deg) translateX(20px) rotateY(90deg);
+          transform: translateZ(40px) translateX(-120px) translateY(-55px) rotateY(-30deg) translateX(20px) rotateY(90deg);
 }
 
 .groupA .audioItem03 .audioBox4 {
@@ -1444,32 +1448,32 @@ footer img {
   z-index: 1;
   background: url(../images/audio3.png) center no-repeat;
   background-size: cover;
-  -webkit-transform: translateZ(40px) translateX(120px) translateY(-55px) rotateY(30deg) translateZ(10px);
-          transform: translateZ(40px) translateX(120px) translateY(-55px) rotateY(30deg) translateZ(10px);
+  -webkit-transform: translateZ(40px) translateX(120px) translateY(-55px) rotateY(30deg) translateZ(20px);
+          transform: translateZ(40px) translateX(120px) translateY(-55px) rotateY(30deg) translateZ(20px);
 }
 
 .groupA .audioItem03 .audioBox6 {
   width: 40px;
   height: 70px;
   background: #000;
-  -webkit-transform: translateZ(10px) translateX(120px) translateY(-55px) rotateY(30deg) translateZ(-10px);
-          transform: translateZ(10px) translateX(120px) translateY(-55px) rotateY(30deg) translateZ(-10px);
+  -webkit-transform: translateZ(40px) translateX(120px) translateY(-55px) rotateY(30deg) translateZ(-20px);
+          transform: translateZ(40px) translateX(120px) translateY(-55px) rotateY(30deg) translateZ(-20px);
 }
 
 .groupA .audioItem03 .audioBox7 {
   width: 40px;
   height: 70px;
   background: #000;
-  -webkit-transform: translateZ(40px) translateX(110px) translateY(-55px) rotateY(30deg) translateX(-15px) rotateY(90deg);
-          transform: translateZ(40px) translateX(110px) translateY(-55px) rotateY(30deg) translateX(-15px) rotateY(90deg);
+  -webkit-transform: translateZ(40px) translateX(120px) translateY(-55px) rotateY(30deg) translateX(-20px) rotateY(90deg);
+          transform: translateZ(40px) translateX(120px) translateY(-55px) rotateY(30deg) translateX(-20px) rotateY(90deg);
 }
 
 .groupA .audioItem03 .audioBox8 {
   width: 40px;
   height: 70px;
   background: #000;
-  -webkit-transform: translateZ(30px) translateX(120px) translateY(-55px) rotateY(30deg) translateX(15px) rotateY(90deg);
-          transform: translateZ(30px) translateX(120px) translateY(-55px) rotateY(30deg) translateX(15px) rotateY(90deg);
+  -webkit-transform: translateZ(40px) translateX(120px) translateY(-55px) rotateY(30deg) translateX(20px) rotateY(90deg);
+          transform: translateZ(40px) translateX(120px) translateY(-55px) rotateY(30deg) translateX(20px) rotateY(90deg);
 }
 
 .groupA .audioItem03 .audioBox9 {
@@ -1523,26 +1527,23 @@ footer img {
           transform: translateX(-100px) translateY(-90px);
 }
 
-.groupA .fireEffect01, .groupA .fireEffect02, .groupA .fireEffect03 {
+.groupA .fireEffect1, .groupA .fireEffect2, .groupA .fireEffect3 {
   display: none;
 }
 
-.groupA .fireEffect01 img {
-  padding: 0px 30px;
+.groupA .fireEffect1 img {
   width: 60px;
   -webkit-transform: translateZ(0px) translateX(0px) translateY(-85px) rotateY(0deg);
           transform: translateZ(0px) translateX(0px) translateY(-85px) rotateY(0deg);
 }
 
-.groupA .fireEffect02 img {
-  padding: 0px 30px;
+.groupA .fireEffect2 img {
   width: 30px;
   -webkit-transform: translateZ(0px) translateX(0px) translateY(-55px) rotateY(0deg);
           transform: translateZ(0px) translateX(0px) translateY(-55px) rotateY(0deg);
 }
 
-.groupA .fireEffect03 img {
-  padding: 0;
+.groupA .fireEffect3 img {
   width: 120px;
   -webkit-transform: translateZ(0px) translateX(0px) translateY(-80px) rotateY(0deg);
           transform: translateZ(0px) translateX(0px) translateY(-80px) rotateY(0deg);
@@ -1621,6 +1622,56 @@ footer img {
 .groupA .fireworkEffect03 :last-child {
   -webkit-transform: translateZ(0px) translateX(-210px) translateY(-155px) rotateY(0deg);
           transform: translateZ(0px) translateX(-210px) translateY(-155px) rotateY(0deg);
+}
+
+.groupA .danceDetail1, .groupA .danceDetail2, .groupA .danceDetail3, .groupA .danceDetail4, .groupA .danceDetail5, .groupA .danceDetail6 {
+  display: none;
+}
+
+.groupA .danceDetail1 img, .groupA .danceDetail2 img, .groupA .danceDetail4 img {
+  width: 60px;
+  -webkit-transform: translateZ(0px) translateX(0px) translateY(-100px) rotateY(0deg);
+          transform: translateZ(0px) translateX(0px) translateY(-100px) rotateY(0deg);
+}
+
+.groupA .danceDetail3 img {
+  width: 60px;
+  -webkit-transform: translateZ(0px) translateX(0px) translateY(-105px) rotateY(0deg);
+          transform: translateZ(0px) translateX(0px) translateY(-105px) rotateY(0deg);
+}
+
+.groupA .danceDetail5 img {
+  width: 90px;
+  -webkit-transform: translateZ(0px) translateX(0px) translateY(-105px) rotateY(0deg);
+          transform: translateZ(0px) translateX(0px) translateY(-105px) rotateY(0deg);
+}
+
+.groupA .danceDetail6 img {
+  width: 80px;
+  -webkit-transform: translateZ(0px) translateX(0px) translateY(-115px) rotateY(0deg);
+          transform: translateZ(0px) translateX(0px) translateY(-115px) rotateY(0deg);
+}
+
+.stageControl {
+  width: 280px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.stageControl img {
+  cursor: pointer;
+  margin-bottom: 20px;
+  width: 40px;
+}
+
+.stageControl .btnRotL {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
 .custStageStep {
@@ -1710,6 +1761,8 @@ footer img {
   padding: 20px 0px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-filter: drop-shadow(0px 0px 8px #c82a2a);
+          filter: drop-shadow(0px 0px 8px #c82a2a);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1718,21 +1771,15 @@ footer img {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  -webkit-filter: drop-shadow(0px 0px 8px #c82a2a);
-          filter: drop-shadow(0px 0px 8px #c82a2a);
 }
 
 .custItemContent label {
   cursor: pointer;
-  background-image: url(../images/customized/cust_stage_innerPattern/pattern_upload.svg);
   width: 90px;
   height: 90px;
   margin: 5px;
   border-radius: 5px;
-}
-
-.custItemContent input[type="file"] {
-  display: none;
+  background-image: url(../images/customized/cust_stage_innerPattern/pattern_upload.svg);
 }
 
 .custItemContent img {
@@ -1741,13 +1788,51 @@ footer img {
   height: 90px;
   margin: 5px;
   border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-.danceItem .custItemContent, .audioPoleItem .custItemContent {
+.patternItem .custItemContent, .danceItem .custItemContent, .effectItem .custItemContent, .audioPoleItem .custItemContent {
   background: url(../images/customized/new_cust/stage_item_content_woc-02.svg) center no-repeat;
   width: 335px;
   height: 392px;
   padding: 30px 0px 0px;
+}
+
+.patternWrap {
+  height: 340px;
+  margin: 0px auto 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  overflow: auto;
+}
+
+.patternWrap input[type="file"] {
+  display: none;
+}
+
+.patternWrap::-webkit-scrollbar {
+  width: 5px;
+}
+
+.patternWrap::-webkit-scrollbar-track {
+  background-image: url(../images/customized/new_cust/stage_item_scrollbar_track.svg);
+}
+
+.patternWrap::-webkit-scrollbar-thumb {
+  background: #e70000;
+}
+
+.patternWrap::-webkit-scrollbar-thumb:hover {
+  background: #ba0000;
+  -webkit-box-shadow: 0px 0px 5px #e70000;
+          box-shadow: 0px 0px 5px #e70000;
 }
 
 .custItemContentInfo {
@@ -1778,9 +1863,10 @@ footer img {
 .custItemControl {
   background: url(../images/customized/new_cust/stage_item_control.svg) center no-repeat;
   width: 340px;
-  height: 67px;
+  height: 90px;
   position: relative;
-  bottom: 20px;
+  bottom: 40px;
+  margin-bottom: -25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1788,55 +1874,103 @@ footer img {
       justify-content: space-around;
 }
 
-.custItemControl img {
-  cursor: pointer;
-  margin-top: 20px;
-  width: 20px;
-}
-
-.custItemControl img:hover {
-  -webkit-filter: drop-shadow(0px 0px 8px #c82a2a);
-          filter: drop-shadow(0px 0px 8px #c82a2a);
-}
-
-.sizePicker {
-  margin: auto;
+.color-picker {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: absolute;
-  height: 8px;
-  width: 70%;
-  border-radius: 20px;
-  top: 28px;
-  right: 25px;
-  background: -webkit-gradient(linear, left top, right top, from(#ffffbd), to(#dfad09));
-  background: linear-gradient(to right, #ffffbd, #dfad09);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.sizePicker:before {
-  content: "大小";
-  position: absolute;
-  color: #fff;
-  left: -43px;
-  bottom: -7px;
+.color-picker .cont {
+  width: 300px;
 }
 
-.colorPicker {
-  margin: auto;
-  position: absolute;
-  height: 8px;
-  width: 70%;
-  border-radius: 20px;
-  top: 30px;
-  left: 65px;
-  background: -webkit-gradient(linear, left top, right top, from(red), color-stop(yellow), color-stop(lime), color-stop(cyan), color-stop(blue), color-stop(magenta), to(red));
-  background: linear-gradient(to right, red, yellow, lime, cyan, blue, magenta, red);
+.color-picker .hue {
+  margin-bottom: 10px;
 }
 
-.colorPicker:before {
-  content: "彩度";
+.color-picker .hue, .color-picker .lightness {
+  position: relative;
+  height: 20px;
+}
+
+.color-picker .hue .bg,
+.color-picker .hue .range,
+.color-picker .lightness .bg,
+.color-picker .lightness .range {
   position: absolute;
-  color: #fff;
-  left: -43px;
-  bottom: -7px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 20px;
+}
+
+.color-picker .hue .bg,
+.color-picker .lightness .bg {
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.color-picker .lightness .bg {
+  background: #000000;
+  background: -webkit-gradient(linear, left top, right top, from(#000000), color-stop(50%, #ff0000), to(#ffffff));
+  background: linear-gradient(to right, #000000 0%, #ff0000 50%, #ffffff 100%);
+}
+
+.color-picker .hue .bg span {
+  display: inline-block;
+  min-width: 1px;
+  height: 20px;
+  margin: 0;
+}
+
+.color-picker .range input[type=range] {
+  -webkit-appearance: none;
+  background: transparent;
+  width: 100%;
+}
+
+.color-picker .range input[type=range]::-webkit-slider-runnable-track {
+  height: 20px;
+  background: transparent;
+}
+
+.color-picker .range input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 26px;
+  width: 10px;
+  background: transparent;
+  border: 3px solid #ffffff;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 5px 2px #000000;
+          box-shadow: 0 0 5px 2px #000000;
+  margin-top: -3px;
+}
+
+.color-picker .range input[type=range]:focus {
+  outline: none;
+}
+
+.color-picker .range input[type=range]:focus::-webkit-slider-runnable-track {
+  background: transparent;
 }
 
 @media screen and (min-width: 768px) {
@@ -1908,8 +2042,8 @@ footer img {
     width: 1200px;
   }
   .perspective {
-    -webkit-transform: scale(1.4);
-            transform: scale(1.4);
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
   }
   .custStageStep {
     width: 380px;
@@ -1939,6 +2073,21 @@ footer img {
     width: 142px;
     height: 85px;
   }
+  .stageControl {
+    width: 380px;
+  }
+  .stageControl img {
+    cursor: pointer;
+    opacity: 0.8;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    width: 50px;
+  }
+  .stageControl img:hover {
+    opacity: 1;
+    -webkit-filter: drop-shadow(0px 0px 10px #c82a2a);
+            filter: drop-shadow(0px 0px 10px #c82a2a);
+  }
   .custItemContent {
     width: 380px;
     height: 350px;
@@ -1951,9 +2100,12 @@ footer img {
     width: 100px;
     height: 100px;
   }
-  .danceItem .custItemContent, .audioPoleItem .custItemContent {
+  .patternItem .custItemContent, .danceItem .custItemContent, .effectItem .custItemContent, .audioPoleItem .custItemContent {
     width: 380px;
     height: 425px;
+  }
+  .patternWrap {
+    height: 370px;
   }
   .custItemContentInfo p {
     font-size: 22px;
@@ -1964,31 +2116,11 @@ footer img {
   }
   .custItemControl {
     width: 380px;
-    height: 75px;
+    height: 100px;
+    bottom: 30px;
   }
-  .custItemControl img {
-    width: 30px;
-  }
-  .sizePicker {
-    height: 10px;
-    width: 70%;
-    top: 35px;
-  }
-  .sizePicker:before {
-    font-size: 22px;
-    left: -60px;
-    bottom: -10px;
-  }
-  .colorPicker {
-    height: 10px;
-    width: 70%;
-    top: 35px;
-    right: 10px;
-  }
-  .colorPicker:before {
-    font-size: 22px;
-    left: -60px;
-    bottom: -10px;
+  .color-picker .hue {
+    margin-bottom: 20px;
   }
 }
 
@@ -2000,82 +2132,47 @@ footer img {
           box-shadow: 1px 2px 10px #000;
   background-color: #403a60;
   border-radius: 8px;
-}
-
-.caleHeader {
-  position: relative;
   text-align: center;
 }
 
-.caleHeader h3 {
+.calendar thead {
+  height: 30%;
+  margin-bottom: 10px;
+}
+
+.calendar tbody {
+  height: 70%;
+}
+
+.calendar th, .calendar td {
+  width: calc(100%/7);
+  height: 50px;
+  line-height: 50px;
+}
+
+#calendarTitle {
   padding-top: 10px;
   color: #2cffff;
   font-size: 24px;
 }
 
-.caleHeader h4 {
-  padding-top: 5px;
+#calendarYear {
+  padding: 10px 0px;
   font-size: 20px;
   color: #fff;
 }
 
-.caleHeader #prevMon, .caleHeader #nextMon {
+#prevMon, #nextMon {
   cursor: pointer;
   font-size: 22px;
   color: #fff;
   background-color: transparent;
   border: none;
-  position: absolute;
-  top: 50%;
+  vertical-align: middle;
 }
 
-.caleHeader #prevMon {
-  left: 10%;
-}
-
-.caleHeader #nextMon {
-  right: 10%;
-}
-
-.caleList ul {
-  width: 100%;
-  font-size: 18px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.caleList ul li {
-  width: calc(100%/7);
-  height: 40px;
-  line-height: 40px;
-  display: block;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  text-align: center;
-}
-
-.weekdate {
+#weekdate {
   color: #fff;
-}
-
-.dayBefore {
-  color: #a8a8a8;
-}
-
-.available {
-  color: #fff;
-}
-
-.available li {
-  cursor: pointer;
-}
-
-.choice {
-  border-radius: 8px;
-  background-color: #f7539c;
 }
 
 .infoNLoc {
@@ -2172,29 +2269,25 @@ footer img {
 
 @media screen and (min-width: 992px) {
   .calendar {
-    width: 450px;
-    height: 490px;
+    width: 420px;
   }
-  .caleHeader {
-    padding-bottom: 10px;
-  }
-  .caleHeader h3 {
-    padding-top: 20px;
+  .calendar #calendarTitle {
     font-size: 30px;
+    height: 40px;
+    line-height: 40px;
   }
-  .caleHeader h4 {
-    padding-top: 10px;
+  .calendar #calendarYear {
     font-size: 22px;
+    height: 40px;
+    line-height: 40px;
   }
-  .caleHeader #prevMon, .caleHeader #nextMon {
+  .calendar th, .calendar td {
     font-size: 24px;
-  }
-  .caleList ul {
-    font-size: 26px;
-  }
-  .caleList ul li {
     height: 60px;
     line-height: 60px;
+  }
+  #prevMon, #nextMon {
+    font-size: 24px;
   }
   .infoNLoc {
     width: 45%;
@@ -2246,18 +2339,31 @@ footer img {
   background-image: url(../images/customized/host/host_bg.jpg);
 }
 
-.sliderBox {
-  width: 350px;
-  margin: auto;
-  height: 560px;
+.hostSliderBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
+  margin: auto;
+  width: 100%;
+  height: 530px;
 }
 
 .hostInfoDetail {
-  top: 48%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: scale(0.6) translateY(-2rem);
+          transform: scale(0.6) translateY(-2rem);
+  opacity: 0;
   position: absolute;
+  left: calc(50%-260px);
+  z-index: 1;
+  cursor: pointer;
+  pointer-events: none;
   background-image: url(../images/customized/host/host_info_02.jpg);
   background-position: center;
   width: 260px;
@@ -2271,73 +2377,56 @@ footer img {
 }
 
 .hostInfoDetail ul, .hostInfoDetail h6 {
-  padding-left: 32px;
-  text-align-last: left;
+  padding-left: 30px;
+  text-align: left;
 }
 
 .hostInfoDetail h6 {
   font-size: 20px;
 }
 
-.hostInfoDetail:hover {
-  -webkit-box-shadow: 0px 0px 10px #2cffff;
-          box-shadow: 0px 0px 10px #2cffff;
-  -webkit-box-shadow: 0px 0px 15px #2cffff;
-          box-shadow: 0px 0px 15px #2cffff;
-  -webkit-box-shadow: 0px 0px 20px #2cffff;
-          box-shadow: 0px 0px 20px #2cffff;
-  -webkit-box-shadow: 0px 0px 25px #2cffff;
-          box-shadow: 0px 0px 25px #2cffff;
+.hostInfoDetail h6 :nth-child(2) {
+  display: inline-block;
+  padding-left: 100px;
 }
 
-.hostInfo0 {
+.active {
   z-index: 3;
+  -webkit-transform: scale(1) translateY(0) translateX(0);
+          transform: scale(1) translateY(0) translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transition: .8s;
+  transition: .8s;
+  -webkit-box-shadow: 0px 0px 30px #2cffff;
+          box-shadow: 0px 0px 30px #2cffff;
 }
 
-.hostInfo1 {
+.prev, .next {
   z-index: 2;
-  -webkit-transform: translateX(-50%) translateY(-50%) scale(0.7);
-          transform: translateX(-50%) translateY(-50%) scale(0.7);
+  -webkit-transform: scale(0.8) translateY(-1rem) translateX(0);
+          transform: scale(0.8) translateY(-1rem) translateX(0);
+  opacity: 0.6;
+  pointer-events: auto;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
-.hostInfo2 {
-  z-index: 1;
-  -webkit-transform: translateX(-50%) translateY(-50%) scale(0.5);
-          transform: translateX(-50%) translateY(-50%) scale(0.5);
+.prev {
+  left: 0px;
 }
 
-.hostInfo3 {
-  z-index: 1;
-  -webkit-transform: translateX(-50%) translateY(-50%) scale(0.4);
-          transform: translateX(-50%) translateY(-50%) scale(0.4);
-}
-
-.hostInfo4 {
-  z-index: 1;
-  -webkit-transform: translateX(-50%) translateY(-50%) scale(0.4);
-          transform: translateX(-50%) translateY(-50%) scale(0.4);
-}
-
-.hostInfo5 {
-  z-index: 1;
-  -webkit-transform: translateX(-50%) translateY(-50%) scale(0.5);
-          transform: translateX(-50%) translateY(-50%) scale(0.5);
-}
-
-.hostInfo6 {
-  z-index: 2;
-  -webkit-transform: translateX(-50%) translateY(-50%) scale(0.7);
-          transform: translateX(-50%) translateY(-50%) scale(0.7);
+.next {
+  right: 0px;
 }
 
 .card {
-  top: 335px;
-  left: 0px;
+  padding-top: 10px;
 }
 
 .tooltip-placeholder {
   color: #aaa;
-  font-size: 14px;
+  font-size: 16px;
   position: fixed;
   padding: 4px 0;
   display: none;
@@ -2348,14 +2437,20 @@ footer img {
   .hostInfo {
     padding-top: 20px;
   }
-  .sliderBox {
+  .hostSliderBox {
     width: 700px;
   }
 }
 
 @media screen and (min-width: 992px) {
-  .sliderBox {
+  .hostSliderBox {
     width: 900px;
+  }
+  .hostSliderBox .prev {
+    left: 100px;
+  }
+  .hostSliderBox .next {
+    right: 100px;
   }
 }
 
@@ -2363,9 +2458,21 @@ footer img {
   .hostInfo {
     height: 530px;
   }
-  .sliderBox {
+  .hostSliderBox {
     width: 1200px;
   }
+  .hostSliderBox .prev {
+    left: 200px;
+  }
+  .hostSliderBox .next {
+    right: 200px;
+  }
+}
+
+#orderStage .stairsF:hover, #orderStage .stairsC1:hover, #orderStage .front:hover {
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .orderDateNloc {
@@ -2402,6 +2509,14 @@ footer img {
 
 .orderDetailCust table {
   width: 100%;
+}
+
+.orderDetailCust table th {
+  text-align-last: left;
+}
+
+.orderDetailCust table th, .orderDetailCust table td {
+  color: #fff;
 }
 
 .orderDetailCust::after {
@@ -2465,6 +2580,12 @@ footer img {
   .orderDateNloc, .orderDetail {
     width: 40%;
   }
+  .orderDateNloc p, .orderDetail p {
+    font-size: 22px;
+  }
+  #orderStage p {
+    font-size: 18px;
+  }
   .orderDetail {
     padding-top: 0;
   }
@@ -2498,17 +2619,182 @@ footer img {
     padding-top: 0;
     margin: 0;
   }
+  .orderDateNloc p {
+    font-size: 24px;
+  }
   .orderInfo {
     width: 1200px;
   }
-  .orderStage {
-    -webkit-transform: scale(0.75);
-            transform: scale(0.75);
+  #orderStage {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
   }
   .btnStep {
     width: 1200px;
     margin: auto;
   }
+}
+
+.checkoutBg {
+  position: fixed;
+  margin: 100px auto 0px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: #ffffbd 8px groove;
+  border-radius: 10px;
+  width: 360px;
+  background-color: #222222;
+  -webkit-box-shadow: 0 0 10px 12px rgba(230, 230, 230, 0.3);
+          box-shadow: 0 0 10px 12px rgba(230, 230, 230, 0.3);
+  z-index: 2;
+  overflow: auto;
+}
+
+.checkoutInfo {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.checkoutInfo img {
+  padding: 20px 0px;
+  width: 80%;
+  height: 80%;
+}
+
+.checkoutInfo p {
+  background-image: url(../images/customized/checkout/checkoutPrice.jpg);
+  background-size: cover;
+  height: 118px;
+  margin: auto;
+  font-size: 24px;
+  color: #000;
+  width: 300px;
+  border-radius: 5px;
+  line-height: 118px;
+  text-shadow: 0px 0px 8px #fff;
+  -webkit-animation: headerNeon 2s infinite;
+          animation: headerNeon 2s infinite;
+}
+
+.checkoutInfoForm, .cardInfo {
+  margin: 30px auto 0px;
+  text-align: center;
+}
+
+.checkoutInfoForm h4, .cardInfo h4 {
+  color: #ffffbd;
+  font-size: 22px;
+  padding: 10px 0px;
+}
+
+.checkoutInfoForm table, .cardInfo table {
+  width: 90%;
+  margin: auto;
+  text-align-last: left;
+}
+
+.checkoutInfoForm table label, .checkoutInfoForm table th, .cardInfo table label, .cardInfo table th {
+  padding-top: 10px;
+  font-size: 18px;
+  color: #ffffbd;
+}
+
+.checkoutInfoForm table select, .cardInfo table select {
+  padding-right: 20px;
+  background: url(../images/customized/checkout/select_bg.svg) no-repeat scroll right center transparent;
+  background-size: 20%;
+}
+
+.checkoutInfoForm table input, .checkoutInfoForm table select, .cardInfo table input, .cardInfo table select {
+  height: 20px;
+  margin-left: 20px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #ffffbd;
+  font-size: 18px;
+  color: #ffffbd;
+}
+
+.checkoutInfoForm table input:focus, .checkoutInfoForm table select:focus, .cardInfo table input:focus, .cardInfo table select:focus {
+  outline: 0;
+}
+
+.checkoutInfoForm table input option, .checkoutInfoForm table select option, .cardInfo table input option, .cardInfo table select option {
+  background-color: #1A1571;
+}
+
+.paymentStep {
+  padding: 50px 0 20px;
+}
+
+.paymentStep .checkOutStep {
+  margin: auto;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .checkoutBg {
+    width: 90%;
+  }
+  .checkoutInfoForm h4, .cardInfo h4 {
+    font-size: 32px;
+    padding: 20px 0px;
+  }
+  .checkoutInfoForm table, .cardInfo table {
+    margin: auto;
+    text-align-last: left;
+  }
+  .checkoutInfoForm table label, .checkoutInfoForm table th, .cardInfo table label, .cardInfo table th {
+    padding-top: 10px;
+    font-size: 22px;
+    color: #ffffbd;
+  }
+  .checkoutInfoForm table input, .cardInfo table input {
+    font-size: 22px;
+  }
+  .cardInfo img {
+    width: 120px;
+  }
+  .checkoutInfo p {
+    width: 500px;
+    height: 195px;
+    line-height: 195px;
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .checkOutAll {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .checkoutInfo, .checkOutAll {
+    width: 1200px;
+    margin: auto;
+  }
+  .checkoutOrder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .checkoutOrder img {
+    width: 50%;
+  }
+}
+
+.patternSelected {
+  border: #f00 dashed 2px;
+  -webkit-box-shadow: 0px 0px 8px #ffffbd;
+          box-shadow: 0px 0px 8px #ffffbd;
 }
 
 .custItemSelect {
