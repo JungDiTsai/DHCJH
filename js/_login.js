@@ -10,7 +10,13 @@ window.addEventListener("load", function () {
         if (xhr.status == 200) { //server端可以正確的執行
             if(xhr.responseText!="notFound"){
                 LoginState =  JSON.parse(xhr.responseText);
+<<<<<<< HEAD
                 console.log("LoginState:已輸入值")
+=======
+                document.querySelector('.fa-user').src = LoginState[0]['memImgUrl'];
+                document.querySelector('.fa-user').setAttribute("id","bigMember");
+                console.log("LoginState:已輸入值");
+>>>>>>> 4bf1bb5c333da914504bfdbfdb5694a559283328
             }
             console.log("Session:"+xhr.responseText)
         } else { //其它

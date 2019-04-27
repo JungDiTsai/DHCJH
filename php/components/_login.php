@@ -27,7 +27,7 @@
 		if($data[0]["memState"]==0){ //判斷帳號狀態
 			echo json_encode($data);
 
-			$_SESSION["member"]= json_encode($data);
+			$_SESSION["member"]= $data;
 		}else{
 			echo "你的帳號已被凍結";
 		}
