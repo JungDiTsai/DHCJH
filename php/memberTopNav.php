@@ -42,10 +42,10 @@
                     //塞值----------------------------
                     //會員ID
                     document.querySelectorAll('#memberData tr')[0].getElementsByTagName('input')[0].value =
-                        LoginState[0]['memId'];
+                        LoginState[0][1];
 
                     //會員PSW
-                    let pswdata = LoginState[0]['memId'].split("").length;
+                    let pswdata = LoginState[0][2].split("").length;
                     let str = '';
                     for (let i = 0; i < pswdata; i++) {
                         str += "*";
@@ -55,15 +55,15 @@
 
                     //會員Mail
                     document.querySelectorAll('#memberData tr')[5].getElementsByTagName('input')[0].value =
-                        LoginState[0]['memEmail'];
+                        LoginState[0][5];
 
                     //Tel
                     document.querySelectorAll('#memberData tr')[6].getElementsByTagName('input')[0].value =
-                        LoginState[0]['memTel'];
+                        LoginState[0][4];
 
                     //會員Name
                     document.querySelectorAll('#memberData tr')[7].getElementsByTagName('input')[0].value =
-                        LoginState[0]['memName'];
+                        LoginState[0][3];
 
                 }
             } else { //其它
@@ -84,7 +84,7 @@
         xhr.onload = function () {
             if (xhr.status == 200) { //server端可以正確的執行
                 alert('已成功登出');
-                window.location.href = "index.php";
+                window.location.href = "flyer.php";
             } else { //其它
                 alert(xhr.status);
             }
@@ -93,4 +93,34 @@
         xhr.open("get", "php/components/_logout.php", true);
         xhr.send(null);
     }
+
+
+    //登入
+function sendLogin() {
+        //產生XMLHttpRequest物件
+    let xhr = new XMLHttpRequest();
+    //註冊callback function
+    xhr.onload = function () {
+        if (xhr.status == 200) { //server端可以正確的執行
+            if(xhr.responseText=="帳號密碼錯誤"){
+                alert(xhr.responseText);
+            }
+            else if(xhr.responseText=="你的帳號已被凍結"){
+                alert(xhr.responseText);
+            }
+            else{
+                window.location.reload();
+            }
+        } else { //其它
+            alert(xhr.status);
+        }
+    }
+    //設定好所要連結的程式
+    var url = "php/components/_login.php";
+    xhr.open("Post", url, true);
+    xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
+    var data_info = "memId=" + document.getElementById("memId").value + "&memPsw="+ document.getElementById("memPsw").value;
+    //送出資料
+    xhr.send(data_info);
+}
 </script>
