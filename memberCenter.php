@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,15 +31,18 @@
                     <img src="images/member2.jpg" alt="">
                 </label>
             </div>
-            <input type="file" name="memberImg" id="memberImgFile">
-            <h3 class="min_view">李三十四</h3>
+            <form id="myform">
+                <input type="file" name="memberImg" id="memberImgFile">
+                <input type="hidden" name="memberNo" value="<?php echo $_SESSION["member"][0][0]?>">
+            </form>
+            <h3 class="min_view"><?php echo $_SESSION["member"][0][3]?></h3>
             <form>
                 <fieldset>
                     <h3>帳號管理</h3>
                     <table id="memberData">
                         <tr>
                             <th>會員帳號</th>
-                            <td><input type="text" value=""></td>
+                            <td><input type="text" value="<?php echo $_SESSION["member"][0][1]?>"></td>
                         </tr>
                         <tr>
                             <th>會員密碼</th>
@@ -61,15 +65,15 @@
                         </tr>
                         <tr>
                             <th>會員信箱</th>
-                            <td><input type="email" value=""></td>
+                            <td><input type="email" value="<?php echo $_SESSION["member"][0][5]?>"></td>
                         </tr>
                         <tr>
                             <th>會員電話</th>
-                            <td><input type="tel" value=""></td>
+                            <td><input type="tel" value="<?php echo $_SESSION["member"][0][4]?>"></td>
                         </tr>
                         <tr>
                             <th>會員姓名</th>
-                            <td><input type="text" value=""></td>
+                            <td><input type="text" value="<?php echo $_SESSION["member"][0][3]?>"></td>
                         </tr>
                         <tr>
                             <th colspan="2"><button class="commonBtnSmall" onclick="return updateMember()" >確定修改</button></th>
@@ -85,6 +89,32 @@
 
     <script src="js/_font_loginLightBox.js"></script>
     <script>
+
+        
+
+        // 上傳會員照片
+            //產生XMLHttpRequest物件
+            document.getElementById('memberImgFile').addEventListener('change',function(){
+                var xhr = new XMLHttpRequest();
+            //註冊callback function
+            xhr.onreadystatechange = function(){
+              if( xhr.readyState == XMLHttpRequest.DONE ){ //server端執行完畢
+                if( xhr.status == 200){ //server端可以正確的執行
+                     console.log(xhr.responseText);
+                     window.location.reload();
+                }else{ //其它
+                    alert( xhr.status );
+                }
+              }
+            } 
+            //設定好所要連結的程式
+            var url = "php/components/_fileUpdate.php";
+            xhr.open("POST", url, true);
+            
+            let data_info = new FormData( document.getElementById('myform') );
+            //送出資料
+            xhr.send(data_info);
+            })
 
         // 點擊會員密碼修改筆----------------
         document.querySelector('.fa-pen').addEventListener('click', function () {
@@ -156,7 +186,36 @@
                 }
                 
             }else{
-                alert("關閉")
+                let data =new Array();
+
+                    data[0] = document.querySelectorAll('#memberData tr')[0].getElementsByTagName('input')[0].value;
+
+                    data[1] = document.querySelectorAll('#memberData tr')[5].getElementsByTagName('input')[0].value;
+
+                    data[2] = document.querySelectorAll('#memberData tr')[6].getElementsByTagName('input')[0].value;
+
+                    data[3] = document.querySelectorAll('#memberData tr')[7].getElementsByTagName('input')[0].value;
+
+                    data[4] = LoginState[0][0];
+                    
+                    //產生XMLHttpRequest物件
+                    let xhr = new XMLHttpRequest();
+                    //註冊callback function
+                    xhr.onload = function(){
+                        if( xhr.status == 200){ //server端可以正確的行
+                            alert("修改成功");
+                            window.location.reload();
+                        }else{ //其它
+                            alert( xhr.status );
+                        }
+                    }  
+                    //設定好所要連結的程式
+                    var url = "php/components/_memberUpdate1.php";
+                    xhr.open("POST", url, true);
+                    xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
+                    //送出資料
+                    var data_info = "member="+JSON.stringify(data);
+                    xhr.send( data_info );
             }
             return false;
         };

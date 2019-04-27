@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,44 +12,13 @@
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 <body>
-    <input type="checkbox" id=menu_control>
-    <header>    
-        <!-- 放bar選單 -->
-        <label for="menu_control" class="menubtn" >
-                <div class="menuandcross"></div>
-        </label>
-        <nav class="mainNav">
-            <li class="mainNavCell"><a href="customized_01.html">電子花車客製</a></li>
-            <li class="mainNavCell"><a href="flyer.html">客製化宣傳單</a></li>
-            <h1 class="navLogo"><a href="index.html"><img src="images/logo.png" alt="台灣大舞台"></a></h1>
-            <li class="mainNavCell"><a href="beautyPageant.html">花車選美</a></li>
-            <li class="mainNavCell"><a href="intro.html">花車特色介紹</a></li>
-            <div class="navMemBtn">
-                <i class="far fa-user-circle"></i>
-            </div>
-        </nav>       
-    </header>
-    <div class="box"></div>
+
+    <?php require_once("php/header.php");?>
+    <?php require_once("php/loginLightBox.php");?>
+    <?php require_once("php/components/_connectDHC.php"); ?>
     <!-- 並排 -->
     <div class="wrap">
-        <!-- 會員中心側邊攔 -->
-        <div id="memberNav" class="col-md-2">
-            <div class="memberImg max_view">
-                <label for="memberImgFile">
-                    <img src="images/member2.jpg" alt="">
-                </label>
-            </div>
-            <h3 class="max_view">李三十四</h3>
-            <ul>
-                <li><a href="memberCenter.html">帳號管理</a></li>
-                <li><a href="memberOrder.html">訂單管理</a></li>
-                <li><a href="memberBeauty.html">我的發表</a></li>
-                <li><a href="memberCollection.html">我的收藏</a></li>
-                <li class="here"><a href="memberFlyer.html">宣傳單管理</a></li>
-                <li><a href="memberCoupons.html">我的優惠券</a></li>
-                <li><a href="index.html">登出</a></li>
-            </ul>
-        </div>
+        <?php require_once("php/memberTopNav.php");?>
         <!-- 我的宣傳單 -->
         <div class="col-md-10">
             <article class="AllflyerBox">
