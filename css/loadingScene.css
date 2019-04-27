@@ -153,7 +153,6 @@
   color: rgba(255, 255, 255, 0.8);
   text-transform: uppercase;
   text-shadow: 0 0 0 10px #ff006c;
-<<<<<<< HEAD
   white-space: nowrap; }
   .neon:before, .neon:after {
     content: attr(data-value);
@@ -169,70 +168,6 @@
     animation: blink-shadow 1.8s ease-out alternate infinite; }
   .neon.pulse:after {
     animation: blinks 1.8s ease-out alternate infinite; }
-=======
-  white-space: nowrap;
-}
-
-.neon:before, .neon:after {
-  content: attr(data-value);
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-.neon:before {
-  color: #ff006c;
-  z-index: -1;
-}
-
-.neon:after {
-  text-shadow: 0 0 10px  #ff006c,  0 0 20px  #ff006c,  0 0 30px  #ff006c,  0 0 40px  #ff006c,  0 0 70px  #ff006c,  0 0 80px  #ff006c,  0 0 100px #ff006c,  0 0 150px #ff006c;
-}
-
-.neon.pulse:before {
-  -webkit-animation: blink-shadow 1.8s ease-out alternate infinite;
-          animation: blink-shadow 1.8s ease-out alternate infinite;
-}
-
-.neon.pulse:after {
-  -webkit-animation: blinks 1.8s ease-out alternate infinite;
-          animation: blinks 1.8s ease-out alternate infinite;
-}
-
-@-webkit-keyframes blinks {
-  0% {
-    opacity: 1;
-  }
-  30% {
-    opacity: .5;
-  }
-  40% {
-    opacity: 0;
-  }
-  50% {
-    opacity: .8;
-  }
-  60% {
-    opacity: 1;
-  }
-  70% {
-    opacity: 0;
-  }
-  75% {
-    opacity: .5;
-  }
-  80% {
-    opacity: .9;
-  }
-  90% {
-    opacity: .1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
->>>>>>> 5577f4b1be9c44363dea47c3bc710139cca03d97
 
 @keyframes blinks {
   0% {
