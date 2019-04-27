@@ -138,7 +138,7 @@
             </div>
             <div class="beautyDiscStageContainer">
              <?php /*require_once("php/beautyDiscIg.php");*/?>
-             <?php require_once("php/test.php");?>
+             <?php require_once("php/beautyDiscIg.php");?>
             </div>
         </div>
     </div>
