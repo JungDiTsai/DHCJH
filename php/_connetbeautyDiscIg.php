@@ -2,13 +2,9 @@
 $errMsg="";
 
 try {
-	$dsn = "mysql:host=localhost;port=3306;dbname=dhc;charset=utf8";
-	$user = "Jung";
-	$password = "626425";
-	$options = array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION);
-	$pdo = new PDO( $dsn, $user, $password, $options);   
+	require_once("../php/components/_connectDHC.php"); 
 	//撈訊息
-	$sql = "SELECT message.messageNo,message.orderNo,message.memNo,message.messageContent,message.messageDate,member.memNo,member.memName,member.memImgUrl from message join member on message.memNo=member.memNo;";
+	$sql = "SELECT message.messageNo,message.orderNo,message.memNo,message.messageContent,message.messageDate,member.memNo,member.memName,member.memImgUrl from message join member on message.memNo=member.memNo ORDER BY messageNo;";
 	$message=$pdo->query($sql);  
 	//撈訂單
 	$sql = "SELECT orders.beautyState,orders.orderNo,orders.memNo,orders.orderName,orders.orderImgUrl,orders.orderVote,member.memNo,member.memName,member.memImgUrl FROM orders join member on orders.memNo=member.memNo where orders.beautyState=1;";
