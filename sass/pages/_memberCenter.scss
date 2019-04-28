@@ -75,12 +75,15 @@
 }
 .memberImg{
     margin: auto ;
+    border-radius: 50%;
     width: 150px;
     height: 150px;
+    overflow: hidden;
     position: relative;
     text-align: center;
     img{
         cursor: pointer;
+        width: 160px;
     }
     &:hover{
         transform: scale(1.05);

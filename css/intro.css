@@ -276,6 +276,7 @@ table {
 .mainNav {
   padding-top: 25px;
   font-size: 24px;
+<<<<<<< HEAD
   font-family: "wangHangMing"; }
   .mainNav h1 img {
     position: fixed;
@@ -313,6 +314,62 @@ table {
         animation: jitter 1.5s linear infinite; }
     .mainNav .navMemBtn p {
       display: none; }
+=======
+  font-family: "wangHangMing";
+}
+
+.mainNav h1 img {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: auto;
+  height: 60px;
+}
+
+.mainNav a {
+  text-decoration: none;
+  color: #ffffbd;
+}
+
+.mainNav li {
+  margin: 30px auto;
+  left: 0;
+  right: 0;
+  width: 150px;
+  text-align: center;
+  display: block;
+  border-bottom: 30px solid  transparent;
+  border-bottom-width: 30px;
+  -o-border-image: url("../images/navTDD.png") 41 round;
+     border-image: url("../images/navTDD.png") 41 round;
+}
+
+.mainNav .navMemBtn {
+  position: fixed;
+  top: 18px;
+  right: 84px;
+  font-size: 44px;
+  height: 44px;
+  width: 44px;
+}
+
+.mainNav .navMemBtn img {
+  cursor: pointer;
+  position: absolute;
+  width: 34px;
+  top: 2px;
+  right: 0;
+}
+
+.mainNav .navMemBtn img:hover {
+  -webkit-animation: jitter 1.5s linear infinite;
+          animation: jitter 1.5s linear infinite;
+}
+
+.mainNav .navMemBtn p {
+  display: none;
+}
+>>>>>>> 1f47017dd37816812d0068b8248892aef269ad88
 
 header {
   position: fixed;
@@ -322,8 +379,16 @@ header {
   height: 80px;
   width: 100%;
   top: 0px;
+<<<<<<< HEAD
   z-index: 99;
   animation: headerNeon 1s infinite; }
+=======
+  z-index: 1;
+  z-index: 3;
+  -webkit-animation: headerNeon 1s infinite;
+          animation: headerNeon 1s infinite;
+}
+>>>>>>> 1f47017dd37816812d0068b8248892aef269ad88
 
 footer {
   padding-top: 15px;
@@ -627,7 +692,7 @@ footer {
     transform: scale(1.05);
     box-shadow: 0px 0px 25px #ffffbd, 0 0 0 1px #fff; }
 
-.loginBox, .loginbox1 {
+.loginBox {
   display: none;
   width: 300px;
   height: 350px;
@@ -639,11 +704,12 @@ footer {
   right: 0;
   bottom: 0;
   margin: auto;
-  z-index: 50;
+  z-index: 3;
   border-radius: 10px;
   padding: 30px 40px;
   box-sizing: border-box;
   text-align: center;
+<<<<<<< HEAD
   box-shadow: 0 0 10px #17F4F0;
   box-shadow: 0 0 10px  #666 inset; }
   .loginBox .fa-times, .loginbox1 .fa-times {
@@ -688,6 +754,75 @@ footer {
       text-decoration: none; }
       .loginBox p a:hover, .loginbox1 p a:hover {
         color: #f3d217; }
+=======
+  -webkit-box-shadow: 0 0 10px #17F4F0;
+          box-shadow: 0 0 10px #17F4F0;
+  -webkit-box-shadow: 0 0 10px  #666 inset;
+          box-shadow: 0 0 10px  #666 inset;
+}
+
+.loginBox .fa-times {
+  color: #17F4F0;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.loginBox .fa-times:hover {
+  color: #000;
+}
+
+.loginBox h3 {
+  margin-top: 0px;
+  font-size: 30px;
+  color: #17F4F0;
+}
+
+.loginBox .inputBox {
+  background: #2d3631;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 10px 15px;
+}
+
+.loginBox .inputBox i {
+  color: #fff;
+}
+
+.loginBox .inputBox input {
+  height: 20px;
+  margin-left: 10px;
+  width: 80%;
+  background: #2d3631;
+  outline: none;
+  border: none;
+  color: #fff;
+}
+
+.loginBox .commonBtnSmall {
+  margin-top: 20px;
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+  line-height: 40px;
+}
+
+.loginBox p {
+  margin-top: 20px;
+  color: #17F4F0;
+}
+
+.loginBox p a {
+  cursor: pointer;
+  color: #17F4F0;
+  text-decoration: none;
+}
+
+.loginBox p a:hover {
+  color: #f3d217;
+}
+>>>>>>> 1f47017dd37816812d0068b8248892aef269ad88
 
 .registeredBox {
   display: none;

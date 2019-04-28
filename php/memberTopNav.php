@@ -2,18 +2,18 @@
 <div id="memberNav" class="col-md-2">
     <div class="memberImg max_view">
         <label for="memberImgFile">
-            <img src="<?php echo $_SESSION["member"][0][6]?>" alt="">
+            <img src="images/member2.jpg" alt="">
         </label>
     </div>
-    <h3 class="max_view"><?php echo $_SESSION["member"][0][3]?></h3>
+    <h3 class="max_view">李三十四</h3>
     <ul>
-        <li class="here"><a href="memberCenter.php">帳號管理</a></li>
-        <li><a href="memberOrder.php">訂單管理</a></li>
-        <li><a href="memberBeauty.php">我的發表</a></li>
-        <li><a href="memberCollection.php">我的收藏</a></li>
-        <li><a href="memberFlyer.php">宣傳單管理</a></li>
-        <li><a href="memberCoupons.php">我的優惠券</a></li>
-        <li><a href="index.php">登出</a></li>
+        <li class="here"><a href="memberCenter.html">帳號管理</a></li>
+        <li><a href="memberOrder.html">訂單管理</a></li>
+        <li><a href="memberBeauty.html">我的發表</a></li>
+        <li><a href="memberCollection.html">我的收藏</a></li>
+        <li><a href="memberFlyer.html">宣傳單管理</a></li>
+        <li><a href="memberCoupons.html">我的優惠券</a></li>
+        <li><a href="index.html">登出</a></li>
     </ul>
 </div>
 
@@ -38,10 +38,9 @@
                     document.querySelector('.fa-user').setAttribute("id", "bigMember");
                     console.log("LoginState:已輸入值");
                     console.log("Session:" + xhr.responseText)
-                    
+
                     //塞值----------------------------
-                    if(location.pathname=="memberCenter.php"){
-                        //會員ID
+                    //會員ID
                     document.querySelectorAll('#memberData tr')[0].getElementsByTagName('input')[0].value =
                         LoginState[0][1];
 
@@ -65,7 +64,6 @@
                     //會員Name
                     document.querySelectorAll('#memberData tr')[7].getElementsByTagName('input')[0].value =
                         LoginState[0][3];
-                    }
 
                 }
             } else { //其它

@@ -79,7 +79,7 @@
       .registeredBox div a:hover {
         color: #f3d217; }
 
-.loginBox, .loginbox1 {
+.loginBox {
   display: none;
   width: 300px;
   height: 350px;
@@ -91,11 +91,12 @@
   right: 0;
   bottom: 0;
   margin: auto;
-  z-index: 50;
+  z-index: 3;
   border-radius: 10px;
   padding: 30px 40px;
   box-sizing: border-box;
   text-align: center;
+<<<<<<< HEAD
   box-shadow: 0 0 10px #17F4F0;
   box-shadow: 0 0 10px  #666 inset; }
   .loginBox .fa-times, .loginbox1 .fa-times {
@@ -140,6 +141,75 @@
       text-decoration: none; }
       .loginBox p a:hover, .loginbox1 p a:hover {
         color: #f3d217; }
+=======
+  -webkit-box-shadow: 0 0 10px #17F4F0;
+          box-shadow: 0 0 10px #17F4F0;
+  -webkit-box-shadow: 0 0 10px  #666 inset;
+          box-shadow: 0 0 10px  #666 inset;
+}
+
+.loginBox .fa-times {
+  color: #17F4F0;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.loginBox .fa-times:hover {
+  color: #000;
+}
+
+.loginBox h3 {
+  margin-top: 0px;
+  font-size: 30px;
+  color: #17F4F0;
+}
+
+.loginBox .inputBox {
+  background: #2d3631;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 10px 15px;
+}
+
+.loginBox .inputBox i {
+  color: #fff;
+}
+
+.loginBox .inputBox input {
+  height: 20px;
+  margin-left: 10px;
+  width: 80%;
+  background: #2d3631;
+  outline: none;
+  border: none;
+  color: #fff;
+}
+
+.loginBox .commonBtnSmall {
+  margin-top: 20px;
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+  line-height: 40px;
+}
+
+.loginBox p {
+  margin-top: 20px;
+  color: #17F4F0;
+}
+
+.loginBox p a {
+  cursor: pointer;
+  color: #17F4F0;
+  text-decoration: none;
+}
+
+.loginBox p a:hover {
+  color: #f3d217;
+}
+>>>>>>> 1f47017dd37816812d0068b8248892aef269ad88
 
 .forgotBox {
   display: none;

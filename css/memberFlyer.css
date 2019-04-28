@@ -276,6 +276,7 @@ table {
 .mainNav {
   padding-top: 25px;
   font-size: 24px;
+<<<<<<< HEAD
   font-family: "wangHangMing"; }
   .mainNav h1 img {
     position: fixed;
@@ -313,6 +314,62 @@ table {
         animation: jitter 1.5s linear infinite; }
     .mainNav .navMemBtn p {
       display: none; }
+=======
+  font-family: "wangHangMing";
+}
+
+.mainNav h1 img {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: auto;
+  height: 60px;
+}
+
+.mainNav a {
+  text-decoration: none;
+  color: #ffffbd;
+}
+
+.mainNav li {
+  margin: 30px auto;
+  left: 0;
+  right: 0;
+  width: 150px;
+  text-align: center;
+  display: block;
+  border-bottom: 30px solid  transparent;
+  border-bottom-width: 30px;
+  -o-border-image: url("../images/navTDD.png") 41 round;
+     border-image: url("../images/navTDD.png") 41 round;
+}
+
+.mainNav .navMemBtn {
+  position: fixed;
+  top: 18px;
+  right: 84px;
+  font-size: 44px;
+  height: 44px;
+  width: 44px;
+}
+
+.mainNav .navMemBtn img {
+  cursor: pointer;
+  position: absolute;
+  width: 34px;
+  top: 2px;
+  right: 0;
+}
+
+.mainNav .navMemBtn img:hover {
+  -webkit-animation: jitter 1.5s linear infinite;
+          animation: jitter 1.5s linear infinite;
+}
+
+.mainNav .navMemBtn p {
+  display: none;
+}
+>>>>>>> 1f47017dd37816812d0068b8248892aef269ad88
 
 header {
   position: fixed;
@@ -322,8 +379,16 @@ header {
   height: 80px;
   width: 100%;
   top: 0px;
+<<<<<<< HEAD
   z-index: 99;
   animation: headerNeon 1s infinite; }
+=======
+  z-index: 1;
+  z-index: 3;
+  -webkit-animation: headerNeon 1s infinite;
+          animation: headerNeon 1s infinite;
+}
+>>>>>>> 1f47017dd37816812d0068b8248892aef269ad88
 
 footer {
   padding-top: 15px;
@@ -591,6 +656,7 @@ footer {
   100% {
     transform: scale(1.02); } }
 
+<<<<<<< HEAD
 .loginBox, .loginbox1 {
   display: none;
   width: 300px;
@@ -772,6 +838,8 @@ footer {
     border-radius: 5px;
     line-height: 50px; }
 
+=======
+>>>>>>> 1f47017dd37816812d0068b8248892aef269ad88
 .wrap {
   margin-top: 80px; }
 
@@ -786,6 +854,7 @@ footer {
   overflow: hidden;
   box-sizing: border-box;
   padding: 0;
+<<<<<<< HEAD
   background: #2c3b42; }
   #memberNav .memberImg {
     margin: 50px auto 0;
@@ -829,6 +898,77 @@ footer {
     content: '';
     display: block;
     clear: left; }
+=======
+  background: #2c3b42;
+}
+
+#memberNav .memberImg {
+  margin: 50px auto 0;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
+#memberNav .memberImg img {
+  width: 160px;
+}
+
+#memberNav h3 {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 32px;
+  color: #fff;
+}
+
+#memberNav ul {
+  width: 1050px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#memberNav ul li {
+  width: 120px;
+  float: left;
+  margin: 0 15px;
+  text-align: center;
+}
+
+#memberNav ul li a {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+#memberNav ul li:hover a {
+  color: #FB4264;
+  text-shadow: 0 0 3vw #F40A35;
+  -webkit-animation: neon 1s ease infinite;
+          animation: neon 1s ease infinite;
+}
+
+#memberNav ul .here {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#memberNav ul .here a {
+  color: #2cffff;
+}
+
+#memberNav ul::after {
+  content: '';
+  display: block;
+  clear: left;
+}
+>>>>>>> 1f47017dd37816812d0068b8248892aef269ad88
 
 #memberImgFile {
   opacity: 0;
@@ -848,6 +988,7 @@ footer {
     top: 0;
     background: #2c3b42;
     line-height: 1.5;
+<<<<<<< HEAD
     box-sizing: border-box;
     padding: 0; }
     #memberNav h3 {
@@ -870,6 +1011,39 @@ footer {
         color: #ffffbd; }
         #memberNav ul li a {
           font-size: 24px; } }
+=======
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0;
+  }
+  #memberNav h3 {
+    margin: 25px 0px 10px;
+    font-size: 30px;
+  }
+  #memberNav ul {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-left: 20%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #memberNav ul .here {
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+  #memberNav ul li {
+    width: 100%;
+    font-size: 18px;
+    margin: 15px 0;
+    text-align: left;
+    color: #ffffbd;
+  }
+  #memberNav ul li a {
+    font-size: 24px;
+  }
+}
+>>>>>>> 1f47017dd37816812d0068b8248892aef269ad88
 
 @media screen and (min-width: 1200px) {
   #memberNav {
