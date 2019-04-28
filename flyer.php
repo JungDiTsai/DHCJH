@@ -368,14 +368,10 @@
                 } else {
                     loginBox.style.setProperty('display', "block");
                 }
-<<<<<<< HEAD
             }else if(LoginState[0]['orderName']==null){
                 alert('請先有花車才能使用此功能喔');
             }
             else{
-=======
-            }else{
->>>>>>> daed1377b0c10a68393a06e028a75b2fc36fd4ff
                 let str = '';
                  for (let i = 0; i < LoginState.length; i++) {
                      if(i==LoginState.length-1){
@@ -388,14 +384,9 @@
                  let enterData = prompt(`請輸入你要匯入訂單的 "完整名稱"  ${str}`,'');
                  if(str.match(enterData)==null||str.match(enterData)==""){
                      alert('沒有這個訂單請重新輸入');
-<<<<<<< HEAD
                  }
                  else{
                     OrderNo = enterData;
-=======
-                 }else{
-                     OrderNo = enterData;
->>>>>>> daed1377b0c10a68393a06e028a75b2fc36fd4ff
                      console.log(OrderNo);
                      alert('已匯入您的訂單');
                      let clothCurtain = document.querySelector('.clothCurtain');
@@ -408,7 +399,6 @@
         })
         //點擊檢舉輸入原因 傳到後端
         function flyerReport(){
-<<<<<<< HEAD
             if(LoginState!="notFound"){
                 let MymemNo = LoginState[0][0];
                 let str = prompt("請輸入檢舉原因","");
@@ -444,11 +434,6 @@
                     loginBox.style.setProperty('display', "block");
                 }
             }
-=======
-            let str = prompt("請輸入檢舉原因","");
-            console.log(str);
-
->>>>>>> daed1377b0c10a68393a06e028a75b2fc36fd4ff
         }
         //點擊免費體驗
         document.querySelector('.start').addEventListener('click', function () {
@@ -512,7 +497,6 @@
             let flyers = document.getElementsByClassName('item');
             for (let i = 0; i < flyers.length; i++) {
                 flyers[i].addEventListener('click', function (e) {
-<<<<<<< HEAD
                     
                     let orderNo = e.target.getAttribute('order');
 
@@ -544,8 +528,6 @@
                       xhr.open("get", url, true);
                       //送出資料
                       xhr.send(null);
-=======
->>>>>>> daed1377b0c10a68393a06e028a75b2fc36fd4ff
                     document.querySelector('.blackBox').style.setProperty('display', 'block');
                 })
             }
