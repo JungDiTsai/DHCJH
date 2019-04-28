@@ -1,6 +1,6 @@
 #carStart,#carEnd{
     position: relative;
-    top: 80vh;
+    top: 40vh;
     left: 50%;
     transform: translate(-50%, -50%);
     background: url(../images/car/vote2.jpg) no-repeat;
@@ -51,7 +51,7 @@
 #carGame {
 	width: 500px;
 	position: absolute;
-	top: 0px;
+	top: 20vh;
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
@@ -64,11 +64,11 @@
             display: block;
             transform: scale(.7);
             vertical-align:top;
-            margin-top: -120px;
+            margin-top: -75px;
         }
         #score {
             font-size: 50px;
-            margin: 5px 0px;
+            // margin: 5px 0px;
         }
         #retry {
             cursor: pointer;

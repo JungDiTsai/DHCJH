@@ -10,23 +10,24 @@
   top: 0;
   overflow-y: scroll;
 }*/
+a{
+  text-decoration: none;
+}
 #gameHub{
   opacity:0.85;
   position: fixed;
-  left: -360px;
+  left: -370px;
   bottom: 100px;
   width: 80px;
-  height: 90px;
-  background-color:#444;
+  height: 65px;
   text-align: center;
   ////outline: 5px red solid;
-  border:5px rgb(235, 235, 235) solid;
   color: #ffffa3;
   vertical-align: middle;
   z-index: 3;
   img{
     width: 120%;
-    margin: 5px auto;
+    margin:5px auto auto auto;
   }
   animation:gameCar 10s ease infinite;
 }
@@ -43,6 +44,38 @@
   }
   animation:serviceGirl 12s  ease infinite;
   
+}
+.showUpHints{
+  width: 200px;
+  padding: 20px;
+  height: 140px;
+  background: #eee;
+  position: absolute;
+  opacity: .1;
+  right: 20px;
+  bottom: -200px;
+  border-radius:20px;
+  z-index: 3;
+  box-shadow:0px 0px 5px rgba(0, 0, 0, 0.2);
+  p{
+    color:#121;
+    width:160px;
+  }
+}
+.showUpHints:after {
+  position:absolute;
+  content:"";
+  bottom:-30px;
+  left:70%;
+  transform:translateX(-50%);
+  width: 0;
+  height: 0;
+  border-width:15px;
+  border-style:solid;
+  border-top-color: #eee;
+  border-right-color: transparent ;
+  border-bottom-color: transparent;
+  border-left-color: transparent ;
 }
 
 //使用者客服問答區
@@ -267,7 +300,7 @@
 }
 
   //////////
-.perspective{
+.perspectiveIntro{
   position:absolute;
   margin:auto;
   margin-top:8.5vh;
@@ -293,14 +326,14 @@
   color: #ffffbd;
   font-weight: bolder;
   h2{
-      font-weight: 200;
-      text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+      font-weight: 300;
+      text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.9);
   }
   h3{
       margin-top: 18px;
       font-size: 20px;
       font-weight: 200;
-      text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+      text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.9);
   }
   .commonBtn{
       margin:20px auto;
@@ -328,7 +361,7 @@
     width: 50%;
     margin-left: 180px;
   }
-  .perspective{
+  .perspectiveIntro{
     perspective: 900px;
     transform: scale(1.5);
     left: -100px;
@@ -799,7 +832,7 @@
       line-height:100px;
       background:linear-gradient(165deg,transparent 29%, #fffc98 20%);
       
-      &:hover, &.active {
+      &:hover, &.activeTabs {
          background: linear-gradient(165deg,transparent 29%, #222 20%);
          color:#fff;
          font-weight: bold;
@@ -818,7 +851,7 @@
         border-bottom: 70px solid rgba(0,0,0,.1);
         border-right: 7px solid transparent;
       }
-      &.active:before{
+      &.activeTabs:before{
         content:'';
         position:absolute;
         z-index:11;
@@ -966,7 +999,7 @@
     top: 70px;
 }
 #introScreenBlock{
-    width: 52vw;
+    width: 51.8vw;
     height: 6vw;
     position:absolute;
     margin: auto;  
@@ -1015,7 +1048,7 @@
   }
 
   #lyrics{
-    width: 52vw;
+    width: 51.8vw;
     height: 6vw;
     position:absolute;
     margin: auto;  
@@ -1050,16 +1083,31 @@
   background-size: cover;
   z-index: 0;
   height:100vh;
+  overflow: hidden;
   min-height: 600px;
   ////outline: 5px red solid;
   .titleBgi{
     background: url(../images/titleNeonLightBrownNew.gif) center no-repeat;
     background-size: cover;
   }
+  .commonBtn{
+    margin: -10px auto auto auto;
+  }
+}
+.stageView{
+  outline:red 5px solid;
+}
+.stageTry{
+  //display: flex;
+  width: 90vw;
+  max-width: 1200px;
 }
 .tryCustEquipWrap {
-  margin: 0 auto;
+  margin: 10px auto;
+  outline: red solid 5px;
 }
+
+
 ul.tryCustTabs {
   width: 300px;
   height: 70px;
@@ -1122,7 +1170,7 @@ ul.tryCustTabs li a.tryCustActive {
   background: #545f60;
   color: #6edeef;
   /*color: #ff6831;*/
-  z-index: 4;
+  z-index: 2;
   outline: none;
 }
 .tryCustGroup:before,
@@ -1135,7 +1183,7 @@ ul.tryCustTabs li a.tryCustActive {
 }
 #tryCustEquipContent {
   width: 300px;
-  height: 100px;
+  height: 150px;
   margin: 0 auto;
   background: #545f60;
   -webkit-box-shadow: 2px 8px 25px -2px rgba(0, 0, 0, 0.3);
@@ -1149,7 +1197,27 @@ ul.tryCustTabs li a.tryCustActive {
   border-bottom-left-radius: 8px;
 }
 
+.perspective{
+    margin: auto;
+    max-width: 500px;
+    height: 400px;
+    position: relative;
+    perspective: 900px;
+}
+#perspectiveTry{
+  height: 140px;
+}
 
+#danceDetail{
+  outline:red 5px solid;
+}
+.custItemContent{
+  background-image: none;
+  filter: none;
+}
+#tryCustEquipInnerSet{
+  overflow-x: scroll;
+}
 
 //引入客製頁面
 
@@ -1187,7 +1255,7 @@ ul.tryCustTabs li a.tryCustActive {
 .introFlyerBoard{
   position: absolute;
   width: 100px;
-  height: 100px;
+  height: 120px;
   margin: auto;
   margin-top:29vh;
   top: 0;
@@ -1217,7 +1285,7 @@ ul.tryCustTabs li a.tryCustActive {
 }
 
 //宣傳單hover下去
-#introFlyer2,#introFlyer3:hover{
+#introFlyer2:hover,#introFlyer3:hover{
   transform: scale(1);
 }
 
@@ -1335,6 +1403,8 @@ ul.tryCustTabs li a.tryCustActive {
 .rankTitle{
   font-size: 28px;
   font-family: $contentFontFamily;
+  text-shadow:0px 0px 10px #000;
+  font-weight: bolder;
   margin: 2px;
   color: rgb(255, 255, 255);
 }
@@ -1354,6 +1424,7 @@ ul.tryCustTabs li a.tryCustActive {
 #thirdPlaceStage,
 #forthPlaceStage,
 #fifthPlaceStage {
+  text-shadow: 0px 0px 5px #000;
   overflow: hidden;
   img{
       width: 85%;
@@ -1371,6 +1442,7 @@ ul.tryCustTabs li a.tryCustActive {
   margin-top: 30px;
   width: 40px;
   height: 24px;
+  cursor: pointer;
   //outline: 5px red solid;
   img{
       width:26px;
@@ -1429,6 +1501,7 @@ ul.tryCustTabs li a.tryCustActive {
   .titleBgi{
     background: url(../images/titleNeonLightBlueNew.gif) center no-repeat;
     background-size: cover;
+    font-size: $titleWord;
   } 
 }
 #parallaxContainer{ 
@@ -1441,7 +1514,6 @@ ul.tryCustTabs li a.tryCustActive {
       position: absolute;
       margin: auto;   
       transition: 1.3s ease ; 
-      transform: scale(.2);
   }
   #paraItem1{
       left: 4vw;
@@ -1653,7 +1725,7 @@ animation: shineExplosion .9s ease 1 forwards;
   }
 #processWrap .titleBgi{
   position: relative;
-  font-size: 24px;
+  font-size: $titleWord;
   text-align: center;
   line-height: 80px;
   width: 200px;
@@ -1673,6 +1745,15 @@ animation: shineExplosion .9s ease 1 forwards;
   }
 
 }
+#earthGroup{
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: -400px;
+  transform: scale(.3);
+}
 #earth {
   width: 40vw;
   min-width: 300px;
@@ -1684,8 +1765,8 @@ animation: shineExplosion .9s ease 1 forwards;
   bottom: -80vh;
   margin: auto;
   opacity: .6;
-  
 }
+
 #earthRotate{
   width: 40vw;
   min-width: 300px;
@@ -1891,7 +1972,7 @@ animation: shineExplosion .9s ease 1 forwards;
     display: block;
 }
 #introScreenBlock{
-    width: 52vw;
+    width: 51.8vw;
     height: 6vw;
     position:absolute;
     margin: auto;  
@@ -1931,7 +2012,7 @@ animation: shineExplosion .9s ease 1 forwards;
 }
 
   #lyrics{
-    width: 52vw;
+    width: 51.8vw;
     height: 6vw;
     position:absolute;
     margin: auto;  
@@ -1960,17 +2041,33 @@ animation: shineExplosion .9s ease 1 forwards;
 footer{
   padding-top:15px;
   width: 100%;
-  height: 115px;
-  background-image: url(../images/footerBgi2.jpg);
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center;
-  background-size: cover;
+  height: 26vw;
+  background-color: #0a0a0a;
+  
+  #footerBgiNew{
+    background-image: url(../images/footerBgiNew.png);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 33vw; 
+    position:absolute;
+    margin:auto;
+    bottom: 0;
+  }
+  #footerWords{
+    position: absolute;
+    margin: auto;
+    right: 0;
+    left: 0;
+    bottom:3vw;
+  }
   p{
-    font-size: $contentWord;
+    font-size:12px;
     color:#fff;
     text-align: center;
-    padding-top: 0px;
+    font-family: $contentFontFamily;
   }
   div{
     ////outline: #ff00aa 5px solid;
@@ -2010,11 +2107,9 @@ footer{
     margin-top: 30px;
   }
   footer{
-    p{
-      display: block;
-      text-align: center;
-      ////outline: #007bff 5px solid;
-      margin: auto;
+    #footerWords{
+      bottom:4.5vw;
+      font-size:$contentWord;   
     }
   }
   
@@ -2064,6 +2159,9 @@ footer{
   }
   #tryCustormiseWrap{
     height: 100vh;
+    .commonBtn{
+      margin: 10vh auto auto auto;
+    }
   }
   
 }
@@ -2136,11 +2234,11 @@ footer{
     top: 120px;
   }
   #introScreenBlock{
-    width: 360px;
+    width: 350px;
     height: 50px;
     position:absolute;
     margin: auto;  
-    top: 167px;
+    top: 172px;
     right: 0;
     left: 0;  
     overflow: hidden;
@@ -2162,25 +2260,25 @@ footer{
     width: 14%;
     position:absolute;
     margin: auto;  
-    top: 200px;
+    top: 190px;
   }
   .introSoundsBlock.one{
-    right: 43px;
+    right: 40px;
     animation: introSoundsScale 1.5s ease reverse infinite;
     filter: drop-shadow(0px 0px 7px rgb(255, 244, 203));
   }
   .introSoundsBlock.two{
-    left: 43px;
+    left: 40px;
     animation: introSoundsScale 1.5s ease reverse infinite;
     filter: drop-shadow(0px 0px 7px rgb(255, 244, 203));
   }
 
   #lyrics{
-    width: 360px;
+    width: 350px;
     height: 50px;
     position:absolute;
     margin: auto;  
-    top: 167px;
+    top: 172px;
     right: 0;
     left: 0;  
     overflow: hidden;
@@ -2195,10 +2293,39 @@ footer{
     }
   }
 
+  //客製試試看
+  .stageTry{
+    display:flex;
+  }
+  #tryCustormiseWrap .perspective{
+    transform:scale(1.5);
+  }
+  .groupA{
+    margin-top: 16vh;
+  }
+  ul.tryCustTabs{
+    width: 380px;
+  }
+  ul.tryCustTabs li{
+    width: 190px;
+    height:80px;
+  }
+  #tryCustEquipContent{
+    
+    width: 380px;
+    height: 370px;
+  }
+  #custItemContent,#effectCustItem{
+    width: 380px;
+    height: 370px;
+    padding: 10px 0px 0px 0px;
+  }
 }
+
+
 //舞台配件介紹 col-lg 尾
 @media screen and (min-width:992px) {
-  .perspective{
+  .perspectiveIntro{
     transform: scale(1.6);
     margin-top:50px;
   }
@@ -2234,6 +2361,22 @@ footer{
     animation:serviceGirl 12s 1s ease infinite;
     
   }
+  .showUpHints{
+    width: 250px;
+    padding: 20px;
+    height: 120px;
+    right: 60px;
+    p{
+      width:210px;
+    }
+  }
+  .showUpHints:after {
+    position:absolute;
+    content:"";
+    bottom:-30px;
+    left:70%;
+    transform:translateX(-50%);
+  }
   #gameHub{
     padding:10px;
     opacity:0.9;
@@ -2242,7 +2385,7 @@ footer{
     height: 140px;
     ////outline: 5px red solid;
     img{
-      margin: 20px auto;
+      margin: 10px auto;
     }
   }
   #beautyContestWrap{
@@ -2303,8 +2446,13 @@ footer{
     .EquipIntroWrapper{
       margin-top: 100px;
       .commonBtn{
-        margin-top: -160px;
+        margin-top: -220px;
       }
+    }
+  }
+  #tryCustormiseWrap{
+    .commonBtn{
+      margin: 12vh auto auto auto;
     }
   }
   

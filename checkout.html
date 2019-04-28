@@ -5,8 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>checkout</title>
-        <!-- header css -->
-        <!-- <link rel="stylesheet" href="css/index.css"> -->
         <!-- font awesome -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
             integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -21,16 +19,25 @@
         <header>    
             <!-- 放bar選單 -->
             <label for="menu_control" class="menubtn" >
-                    <div class="menuandcross"></div>
+                <div id="nav-icon2">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </label>
             <nav class="mainNav">
-                <li class="mainNavCell"><a href="">電子花車客製</a></li>
-                <li class="mainNavCell"><a href="flyer.html">客製宣傳單</a></li>
+                <li class="mainNavCell"><a href="customized_01.html">電子花車客製</a></li>
+                <li class="mainNavCell"><a href="flyer.php">客製化宣傳單</a></li>
                 <h1 class="navLogo"><a href="index.html"><img src="images/logo.png" alt="台灣大舞台"></a></h1>
-                <li class="mainNavCell"><a href="">花車選美</a></li>
-                <li class="mainNavCell"><a href="">花車特色介紹</a></li>
+                <li class="mainNavCell"><a href="beautyPageant.html">花車選美</a></li>
+                <li class="mainNavCell"><a href="intro.html">花車特色介紹</a></li>
                 <div class="navMemBtn"> 
-                    <i class="far fa-user-circle"></i>
+                    <img  class="fas fa-user fa-1x" src="images/icon/loginIcon.png" alt="">
+                    <!-- <i class="fas fa-user"></i> -->
+                    <p onclick="LoginOut()">登出</p>
                 </div>
             </nav>       
         </header>
@@ -113,10 +120,8 @@
             <!-- 訂購人資訊 -->
             <div class="checkoutInfo col-12">
                 <div class="checkoutOrder">
-                    <!-- 花車圖片 -->
-                    <img src="images/carStageEquip.png" alt="">
                     <!-- 總金額 -->
-                    <p><span>拾萬零捌拾圓</span>元</p>
+                    <p><span>62000</span>圓</p>
                 </div>
             </div>
 
@@ -154,11 +159,11 @@
                 <!-- 信用卡資訊 -->
                 <form action="" class="cardInfo col-12 col-lg-6">
                     <h4>付款資訊</h4>
-                    <div class="acceptableCard">
+                    <!-- <div class="acceptableCard">
                         <img src="images/customized/checkout/card_01.png" alt="">
                         <img src="images/customized/checkout/card_02.png" alt="">
                         <img src="images/customized/checkout/card_03.png" alt="">
-                    </div>
+                    </div> -->
                     <table>
                         <tr>
                             <th><label for="cardHolderName">持卡人姓名</label></th>
@@ -166,7 +171,7 @@
                         </tr>
                         <tr>
                             <th><label for="cardNum">信用卡號碼</label></th>
-                            <td><input type="text" id="cardNum"></td>
+                            <td><input type="text" id="cardNum" maxlength="16"></td>
                         </tr>
                         <tr>
                             <th><label for="cardExpiredDate">過期日期</label></th>
@@ -185,9 +190,9 @@
             </div>
 
             <!-- 確認結帳 -->
-            <div class="btnStep">
+            <div class="paymentStep">
                 <div class="checkOutStep commonBtn">確認付款</div>
-            </div>
+            </div>  
 
 
         </div>

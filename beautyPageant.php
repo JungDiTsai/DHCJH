@@ -15,7 +15,6 @@
     <input type="checkbox" id=menu_control>
     <?php require_once("php/header.php");?>
     <?php require_once("php/loginLightBox.php");?>
-    <?php require_once("php/uploadbeauty.php");?>
     <!-- beauty pageant 第一屏幕 -->
     <div class="beautyPageantWrap">
         <div class="beautyRankingContainer">
@@ -525,6 +524,5 @@
     <script src="js/dotReport.js"></script>
     <script src="js/navmenu.js"></script>
     <script src="js/discoBall.js"></script>
-    <script src="js/uploadbeauty.js"></script>
 </body>
 </html>

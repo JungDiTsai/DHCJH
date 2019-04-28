@@ -128,8 +128,10 @@ function drawFrame() {
             if(scoreHeading.textContent ==0){
               
              ////////////成功的話
-				carEnd.style.display='block';
-				price=$('#test').text();
+                carEnd.style.display='block';
+                
+                price=$('#test').text();
+                couponstype=$('#test').attr('couponsType');
 				console.log(price);
                 return false;
             }else{
@@ -155,6 +157,7 @@ function drawFrame() {
 // }
 
 // window.focus();
+
 //判斷登入
 LoginState="notFound";
 OrderNo="notFound";
@@ -165,13 +168,13 @@ window.addEventListener("load", function () {
     xhr.onload = function () {
         if (xhr.status == 200) { //server端可以正確的執行
             if(xhr.responseText!="notFound"){
-                LoginState =  JSON.parse(xhr.responseText);
+                LoginState = (xhr.responseText);
                 document.querySelector('.fa-user').src = LoginState[0]['memImgUrl'];
                 document.querySelector('.fa-user').setAttribute("id","bigMember");
                 console.log("LoginState:已輸入值");
 
             }
-            // console.log("Session:"+xhr.responseText)
+            console.log("Session:"+xhr.responseText)
         } else { //其它
             alert(xhr.status);
         }
@@ -180,6 +183,7 @@ window.addEventListener("load", function () {
     xhr.open("get", "php/components/_JudgeLogin.php", true);
     xhr.send(null);
 })
+
 
 //登入
 function sendLogin() {
@@ -195,24 +199,10 @@ xhr.onload = function () {
 			alert(xhr.responseText);
 		}
 		else{
-			window.location.reload();
+			// window.location.reload();
 			// var price=document.getElementById(' test').value;
 			
-			$.ajax({
-				url:'../carprice.php',
-				data:{ price:price},                   
-				type:'post',
-				error:function(){                                                                 
-
-					alert("失敗");
-
-					},
-				success:function(data){
-					// x.innerHTML=data;
-					console.log(data);
-				   
-				  }   
-				})
+			
 		}
 	} else { //其它
 		alert(xhr.status);
@@ -230,7 +220,7 @@ xhr.send(data_info);
 /* 登入燈箱 JS*/
         // 點擊icon開啟登入燈箱----------------------------
 		carEnd .addEventListener('click', function (e) {
-
+            alert('確定');
             if( LoginState == "notFound"){
                 // 顯示登入燈箱
                 let loginBox = document.querySelector('.loginBox');
@@ -244,7 +234,27 @@ xhr.send(data_info);
                     document.getElementById('lightWrap').style.setProperty('display', "block");
                 }
             }else{
-                window.location.href = "memberCenter.php";
+                // window.location.href = "memberCenter.php";
+                // console.log(price,LoginState[0][0] );
+                $.ajax({
+                    url:'./carprice.php',
+                    data:{ price:price , no:LoginState[0][0] , couponstype:couponstype },  
+                                     
+                    type:'get',
+                    error:function(){                                                                 
+    
+                        alert("失敗");
+    
+                        },
+                    success:function(data){
+                        // x.innerHTML=data;
+                        console.log(data);
+                       
+                      }   
+                    })
+                    carEnd.style.display='none';
+                    carStart.style.display='block';
+                    console.log('close');
             }
             
         })
