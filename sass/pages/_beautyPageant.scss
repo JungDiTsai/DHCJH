@@ -1,3 +1,78 @@
+.loginbox1{
+  display: none;
+  width: 300px;
+  height: 350px;
+  background: #fff;
+  border:5px solid $loginBackColor;
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 50;
+  border-radius: 10px;
+  padding: 30px 40px;
+  box-sizing: border-box;
+  text-align: center;
+  box-shadow: 0 0 10px $loginBackColor;
+  box-shadow:0 0 10px  #666 inset;
+  .fa-times{
+      color:$loginBackColor;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      cursor: pointer;
+      &:hover{
+          color:#000;
+      }
+  }
+  h3{
+      margin-top:0px;
+      font-size: $thrTitleWord;
+      color:$loginBackColor;
+  }
+  .inputBox{
+      background: $loginInputBackColor;
+      border-radius: 10px;
+      margin-top: 10px;
+      padding: 10px 15px;
+      i{
+          color:#fff;
+          
+      }
+      input{
+          height:20px;
+          margin-left: 10px;
+          width: 80%;
+          background: $loginInputBackColor;
+          outline: none;
+          border: none;
+          color:#fff;
+      }
+  }
+
+  .commonBtnSmall{
+      margin-top: 20px;
+      width: 80px;
+      height: 40px;
+      border-radius: 5px;
+      line-height: 40px;
+  }
+
+  p{
+      margin-top:20px;
+      color:$loginBackColor;
+      a{
+          cursor: pointer;
+          color:$loginBackColor;
+          text-decoration: none;
+          &:hover{
+              color:rgb(243, 210, 23);
+          }
+      }
+  }
+}
 #musicContent{
   position: absolute;
   top: 0;
