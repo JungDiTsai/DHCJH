@@ -234,6 +234,7 @@ table {
 
 #nav-icon2 {
   height: 44px;
+  cursor: pointer;
 }
 
 #bigMember {
@@ -383,7 +384,7 @@ table {
   width: 150px;
   text-align: center;
   display: block;
-  border-bottom: 30px solid  transparent;
+  border-bottom: 30px solid  transparent;
   border-bottom-width: 30px;
   -o-border-image: url("../images/navTDD.png") 41 round;
      border-image: url("../images/navTDD.png") 41 round;
@@ -1557,7 +1558,7 @@ footer img {
 }
 
 .AllflyerBox {
-  width: 90%;
+  width: 100%;
   max-width: 800px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1579,11 +1580,16 @@ footer img {
   margin: 20px auto 0px;
   width: 100%;
   text-align: center;
-  font-size: 24px;
+  font-size: 18px;
 }
 
-.AllflyerBox table td {
-  background: #fff;
+.AllflyerBox table tbody tr {
+  cursor: pointer;
+}
+
+.AllflyerBox table tbody tr:hover {
+  background-image: -webkit-gradient(linear, right top, left top, from(#ff8177), color-stop(0%, #ff867a), color-stop(21%, #ff8c7f), color-stop(52%, #f99185), color-stop(78%, #cf556c), to(#b12a5b));
+  background-image: linear-gradient(to left, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
 }
 
 .AllflyerBox table td label .cbox {
@@ -1594,15 +1600,16 @@ footer img {
 
 .AllflyerBox table td label .cbox:checked + .btnBox {
   text-align: right;
-  background: #fff82d;
+  background: #32ff7e;
 }
 
 .AllflyerBox table td label .btnBox {
   display: inline-block;
   width: 40px;
+  line-height: 20px;
   height: 20px;
   vertical-align: middle;
-  background: #32ff7e;
+  background: #fff82d;
   border-radius: 10px;
   text-align: left;
   cursor: pointer;
@@ -1622,8 +1629,6 @@ footer img {
 
 .AllflyerBox table td label .txt {
   display: inline-block;
-  width: 50px;
-  vertical-align: middle;
 }
 
 .detailFlyer {
@@ -1651,26 +1656,30 @@ footer img {
           box-shadow: 1px 5px 20px #ccc;
 }
 
-.detailFlyer p {
-  text-align: center;
+.detailFlyer table {
+  margin: auto;
+  font-size: 18px;
+}
+
+.detailFlyer table tr {
+  max-width: 80%;
+}
+
+.detailFlyer table tr td {
+  padding: 5px 10px;
 }
 
 .detailFlyer .btnBar {
-  width: 50%;
-  margin: 0 auto 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  padding: 50px 0 50px;
+  margin: auto;
+  text-align: center;
 }
 
 .detailFlyer .btnBar button {
   -webkit-box-shadow: 0px 2px 2px #888;
           box-shadow: 0px 2px 2px #888;
   border-radius: 5px;
-  margin: 20px;
+  line-height: 50px;
   cursor: pointer;
 }
 

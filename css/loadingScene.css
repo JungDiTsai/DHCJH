@@ -305,7 +305,7 @@
 }
 
 .neon:after {
-  text-shadow: 0 0 10px  #ff006c,  0 0 20px  #ff006c,  0 0 30px  #ff006c,  0 0 40px  #ff006c,  0 0 70px  #ff006c,  0 0 80px  #ff006c,  0 0 100px #ff006c,  0 0 150px #ff006c;
+  text-shadow: 0 0 10px  #ff006c,  0 0 20px  #ff006c,  0 0 30px  #ff006c,  0 0 40px  #ff006c,  0 0 70px  #ff006c,  0 0 80px  #ff006c,  0 0 100px #ff006c,  0 0 150px #ff006c;
 }
 
 .neon.pulse:before {
