@@ -1,5 +1,4 @@
 .checkoutInfo{
-    padding-top: 20px;
     text-align: center;
     img{
         padding: 20px 0px;
@@ -21,20 +20,19 @@
     }
 }
 .checkoutInfoForm, .cardInfo{
-    margin: 30px auto 0px;
+    margin-top: 30px;
     text-align: center;
     h4{
         color: $fontColor;
-        font-size: 22px;
+        font-size: $subTitleWord;
         padding: 10px 0px;
     }
     table{
-        width: 90%;
         margin: auto;
         text-align-last: left;
         label, th{
             padding-top: 10px;
-            font-size: 18px;
+            font-size: $buttonWord;
             color: $fontColor;
         }
         select{
@@ -50,7 +48,7 @@
             background-color: transparent;
             border: none;
             border-bottom: 1px solid $fontColor;
-            font-size: 18px;
+            font-size: $buttonWord;
             color: $fontColor;
             &:focus {
                 outline : 0;
@@ -61,13 +59,13 @@
         }
     }
 }
-// .cardInfo{
-// }
-.paymentStep{
-    padding: 50px 0 20px;
-    .checkOutStep{
-        margin: auto;
-        text-align: center;
+.cardInfo{
+    img{
+        width: 80px;
+        border-radius: 5px;
+        // &:hover{
+        //     outline: 3px solid $logoColor;
+        // }
     }
 }
 @media screen and (min-width:768px){

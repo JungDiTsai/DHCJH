@@ -1,14 +1,15 @@
 <?php
 	session_start();
 	require_once("_connectDHC.php");
-	$memId = $_POST["memId"];   
-	$memPsw = $_POST["memPsw"];
+	$memId = $_REQUEST["memId"];   
+	$memPsw = $_REQUEST["memPsw"];
 	// $memId = "test";   
 	// $memPsw = "test";
 	$errMsg = "";
 
 	try {
-		$sql = "select * from member join orders on(member.memno=orders.memno) where memId=:memId and memPsw=:memPsw;";
+		$sql = "select * from member left outer join orders on(member.memno=orders.memno) where memId=:memId and memPsw=:memPsw;";
+		// $sql = "select * from member";
 		$member = $pdo->prepare($sql);
 		$member->bindValue(":memId", $memId);
 		$member->bindValue(":memPsw", $memPsw);
@@ -24,11 +25,7 @@
 	}
 	else{
 		$data = $member->fetchAll();
-<<<<<<< HEAD
 		if($data[0]["memStatus"]=='啟用'){ //判斷帳號狀態
-=======
-		if($data[0]["memState"]==0){ //判斷帳號狀態
->>>>>>> daed1377b0c10a68393a06e028a75b2fc36fd4ff
 			echo json_encode($data);
 
 			$_SESSION["member"]= $data;

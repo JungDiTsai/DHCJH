@@ -10,47 +10,20 @@
     <!-- font awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    
 </head>
 <body>
-    <!-- header -->
-    <input type="checkbox" id=menu_control>
-    <header>    
-        <!-- 放bar選單 -->
-        <label for="menu_control" class="menubtn" >
-                <div class="menuandcross"></div>
-        </label>
-        <nav class="mainNav">
-            <li class="mainNavCell"><a href="customized_01.html">電子花車客製</a></li>
-            <li class="mainNavCell"><a href="flyer.html">客製化宣傳單</a></li>
-            <h1 class="navLogo"><a href="index.html"><img src="images/logo.png" alt="台灣大舞台"></a></h1>
-            <li class="mainNavCell"><a href="beautyPageant.html">花車選美</a></li>
-            <li class="mainNavCell"><a href="intro.html">花車特色介紹</a></li>
-            <div class="navMemBtn">
-                <i class="far fa-user-circle"></i>
-            </div>
-        </nav>       
-    </header>
-    <div class="box"></div>
+
+    <?php require_once("php/header.php");?>
+    <?php require_once("php/loginLightBox.php");?>
+    <?php require_once("php/components/_connectDHC.php"); ?>
+    
+
     <!-- 並排 -->
     <div class="wrap">
-        <!-- 會員中心側邊攔 -->
-        <div id="memberNav" class="col-md-2">
-            <div class="memberImg max_view">
-                <label for="memberImgFile">
-                    <img src="images/member2.jpg" alt="">
-                </label>
-            </div>
-            <h3 class="max_view">李三十四</h3>
-            <ul>
-                <li class="here"><a href="memberCenter.html">帳號管理</a></li>
-                <li><a href="memberOrder.html">訂單管理</a></li>
-                <li><a href="memberBeauty.html">我的發表</a></li>
-                <li><a href="memberCollection.html">我的收藏</a></li>
-                <li><a href="memberFlyer.html">宣傳單管理</a></li>
-                <li><a href="memberCoupons.html">我的優惠券</a></li>
-                <li><a href="index.html">登出</a></li>
-            </ul>
-        </div>
+        
+        <?php require_once("php/memberTopNav.php");?>
+
         <!-- 會員中心帳號管理內容開始 -->
         <div id="memberData" class="col-md-10">
             <div class="memberImg min_view">
@@ -58,24 +31,17 @@
                     <img src="images/member2.jpg" alt="">
                 </label>
             </div>
-<<<<<<< HEAD:memberCenter.php
             <form id="myform">
                 <input type="file" name="memberImg" id="memberImgFile">
                 <input type="hidden" name="memberNo" value="<?php echo $_SESSION["member"][0][0]?>">
             </form>
             <h3 class="min_view"><?php echo $_SESSION["member"][0][3]?></h3>
             <form>
-=======
-            <input type="file" name="memberImg" id="memberImgFile">
-            <h3 class="min_view">李三十四</h3>
-            <form action="">
->>>>>>> daed1377b0c10a68393a06e028a75b2fc36fd4ff:memberCenter.html
                 <fieldset>
                     <h3>帳號管理</h3>
-                    <table>
+                    <table id="memberData">
                         <tr>
                             <th>會員帳號</th>
-<<<<<<< HEAD:memberCenter.php
                             <td><input type="text" value="<?php echo $_SESSION["member"][0][1]?>"></td>
                         </tr>
                         <tr>
@@ -84,13 +50,6 @@
                                 <p><?php echo $_SESSION["member"][0][2]?></p>
                                 <i class="fas fa-pen"></i>
                             </td>
-=======
-                            <td><input type="text" value="abcd1234"></td>
-                        </tr>
-                        <tr>
-                            <th>會員密碼</th>
-                            <td class="memPswInfo">**********<i class="fas fa-pen"></i></td>
->>>>>>> daed1377b0c10a68393a06e028a75b2fc36fd4ff:memberCenter.html
                         </tr>
                         <tr class="changePSW" style="opacity: 0;position: absolute;">
                             <td>舊密碼</td>
@@ -106,7 +65,6 @@
                         </tr>
                         <tr>
                             <th>會員信箱</th>
-<<<<<<< HEAD:memberCenter.php
                             <td><input type="email" value="<?php echo $_SESSION["member"][0][5]?>"></td>
                         </tr>
                         <tr>
@@ -116,20 +74,9 @@
                         <tr>
                             <th>會員姓名</th>
                             <td><input type="text" value="<?php echo $_SESSION["member"][0][3]?>"></td>
-=======
-                            <td><input type="email" value="abcd1234@gmail.com"></td>
                         </tr>
                         <tr>
-                            <th>會員電話</th>
-                            <td><input type="tel" value="0911111111"></td>
-                        </tr>
-                        <tr>
-                            <th>會員姓名</th>
-                            <td><input type="text" value="李三十四"></td>
->>>>>>> daed1377b0c10a68393a06e028a75b2fc36fd4ff:memberCenter.html
-                        </tr>
-                        <tr>
-                            <th colspan="2"><input type="submit" value="確定修改" class="commonBtn"></th>
+                            <th colspan="2"><button class="commonBtnSmall" onclick="return updateMember()" >確定修改</button></th>
                         </tr>
                     </table>
                 </fieldset>
@@ -140,8 +87,9 @@
 
 
 
+    <script src="js/_font_loginLightBox.js"></script>
+    <script>
 
-<<<<<<< HEAD:memberCenter.php
         
 
         // 上傳會員照片
@@ -168,10 +116,6 @@
             xhr.send(data_info);
             })
 
-=======
-
-    <script>
->>>>>>> daed1377b0c10a68393a06e028a75b2fc36fd4ff:memberCenter.html
         // 點擊會員密碼修改筆----------------
         document.querySelector('.fa-pen').addEventListener('click', function () {
             let changePSWs = document.querySelectorAll('.changePSW')
@@ -193,8 +137,6 @@
         if(screenWidth<=768){
             
         }
-<<<<<<< HEAD:memberCenter.html
-=======
 
         //點擊送出
         function updateMember(){
@@ -277,7 +219,6 @@
             }
             return false;
         };
->>>>>>> 4bf1bb5c333da914504bfdbfdb5694a559283328:memberCenter.php
     </script>
 </body>
 </html>

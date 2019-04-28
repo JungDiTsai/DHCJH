@@ -26,7 +26,7 @@
   right: 0;
   bottom: 0;
   margin: auto;
-  z-index: 1;
+  z-index: 50;
   border-radius: 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -114,6 +114,15 @@
 
 .registeredBox div a:hover {
   color: #f3d217;
+}
+
+#lightWrap {
+  display: none;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  z-index: 2;
 }
 
 .loginBox, .loginbox1 {
@@ -214,7 +223,7 @@
   right: 0;
   bottom: 0;
   margin: auto;
-  z-index: 1;
+  z-index: 50;
   border-radius: 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -273,6 +282,10 @@
   height: 50px;
   border-radius: 5px;
   line-height: 50px;
+}
+
+#IdStatus {
+  display: none;
 }
 
 .col-1 {
@@ -552,7 +565,7 @@
   width: 150px;
   text-align: center;
   display: block;
-  border-bottom: 30px solid  transparent;
+  border-bottom: 30px solid  transparent;
   border-bottom-width: 30px;
   -o-border-image: url("../images/navTDD.png") 36 repeat;
      border-image: url("../images/navTDD.png") 36 repeat;

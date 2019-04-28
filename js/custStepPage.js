@@ -48,8 +48,7 @@ $(document).ready(function(){
         }
         else if( index == 3){
             saveCustImg();
-            $('.checkoutBg').removeClass('disN');
-            // location.href ='checkout.html';
+            location.href ='checkout.html';
         }
     });
 
@@ -417,8 +416,6 @@ $(document).ready(function(){
     // 更改地址
     $('.map iframe').attr("src", 'https://maps.google.com.tw/maps?f=q&hl=zh-TW&geocode=&q=中央大學資策會&z=16&output=embed&t=');
     changeLoc();
-    // 結帳燈箱
-    $('.checkoutBg').addClass('disN');
 });
 
 function controlContent(index){
@@ -679,6 +676,7 @@ if ($num % 2 == 0) {
 
 $('.hostInfoDetail').click(function() {
 //   $slide = $('.active').width();
+//   console.log($('.active').position().left);
   
 //   if ($(this).hasClass('next')) {
 //     $('.hostSliderBox').stop(false, true).animate({left: '-=' + $slide});
@@ -693,6 +691,59 @@ $('.hostInfoDetail').click(function() {
   $(this).prev().addClass('prev');
   $(this).next().addClass('next');
 });
+
+// document.querySelector('.sliderBox').addEventListener('click',function(){
+//     let allDiv = document.querySelectorAll('.sliderBox>div')
+//     for (let key in allDiv) {
+//         let style = allDiv[key].style.left;
+//         switch (style) {
+//             case "50%":
+//                 allDiv[key].style.setProperty("left","30%");
+//                 allDiv[key].style.setProperty("transition",".5s");
+//                 allDiv[key].style.setProperty("transform","translateX(-50%) translateY(-50%) scale(0.7)");
+//                 allDiv[key].style.setProperty("z-index","2");
+//                 break;
+//             case "30%":
+//                 allDiv[key].style.setProperty("left","20%");
+//                 allDiv[key].style.setProperty("transition",".5s");
+//                 allDiv[key].style.setProperty("transform","translateX(-50%) translateY(-50%) scale(0.5)");
+//                 allDiv[key].style.setProperty("z-index","1");
+//                 break;
+//             case "20%":
+//                 allDiv[key].style.setProperty("left","40%");
+//                 allDiv[key].style.setProperty("transition",".5s");
+//                 allDiv[key].style.setProperty("transform","translateX(-50%) translateY(-50%) scale(0.3)");
+//                 allDiv[key].style.setProperty("z-index","1");
+//                 break;
+//             case "40%":
+//                 allDiv[key].style.setProperty("left","60%");
+//                 allDiv[key].style.setProperty("transition",".5s");
+//                 allDiv[key].style.setProperty("transform","translateX(-50%) translateY(-50%) scale(0.3)");
+//                 allDiv[key].style.setProperty("z-index","1");
+//                 break;
+//             case "60%":
+//                 allDiv[key].style.setProperty("left","80%");
+//                 allDiv[key].style.setProperty("transition",".5s");
+//                 allDiv[key].style.setProperty("transform","translateX(-50%) translateY(-50%) scale(0.5)");
+//                 allDiv[key].style.setProperty("z-index","1");
+//                 break;
+//             case "80%":
+//                 allDiv[key].style.setProperty("left","70%");
+//                 allDiv[key].style.setProperty("transition",".5s");
+//                 allDiv[key].style.setProperty("transform","translateX(-50%) translateY(-50%) scale(0.7)");
+//                 allDiv[key].style.setProperty("z-index","2");
+//                 break;
+//             case "70%":
+//                 allDiv[key].style.setProperty("left","50%");
+//                 allDiv[key].style.setProperty("transition",".5s");
+//                 allDiv[key].style.setProperty("transform","translateX(-50%) translateY(-50%) scale(1)");
+//                 allDiv[key].style.setProperty("z-index","3");
+//                 break;
+//             default:
+//                 break;
+//         }
+//     }
+// })
 // ======================================================
 // 獲取訂單資訊
 // ======================================================
@@ -776,12 +827,6 @@ function getOrderInfo(){
     // console.log(subtotal);
     $('.orderSub span').text(subtotal);
 }
-// ======================================================
-// 資料寫進session--ajax
-// ======================================================
-
-
-
 // ======================================================
 // 照片存檔
 // ======================================================

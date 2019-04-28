@@ -1,10 +1,16 @@
+
 .firstScreen {
-  background: #000 center no-repeat;
+  
+  background: #000 center;
   background-size: cover;
   margin: 0;
+  position: relative;
 
   .wrap {
     margin: auto;
+    .titleBgi{
+      opacity: 0;
+    }
   }
   #selectOpen {
     display:none;
@@ -125,6 +131,8 @@
         margin: 10px auto 10px;
         color: #fff;
         text-shadow: 0 0 2px #000;
+        position: relative;
+        z-index: 1;
       }
 
       .step {
@@ -170,7 +178,6 @@
     padding: 20px;
     
     .clothCurtain {
-      // display: none;
       background: rgba(0, 0, 0, 0.7);
       position: absolute;
       top: 0;
@@ -249,7 +256,6 @@
         0 0 15px 15px rgb(19, 43, 110) inset;
       width: 100%;
       padding: 20px;
-      margin-bottom: 20px;
 
       #A4page {
         margin: auto;
@@ -258,8 +264,8 @@
         background: #fff;
         overflow: hidden;
         box-shadow: 0 0 10px #000;
-        margin-bottom: 20px;
         position: relative;
+        margin-bottom: 10px;
 
         img {
           height: 100%;
@@ -269,6 +275,7 @@
           position: absolute;
           top: 5px;
           left: 5px;
+          text-shadow: 0 0 1px #000;
         }
         #A4qrcode{
           position: absolute;
@@ -281,8 +288,21 @@
         }
       }
 
+      #moveBtn{
+        text-align: center;
+        padding: 10px;
+        span{
+          font-size: 20px;
+          color:#fff;
+          cursor: pointer;
+          &:hover {
+            color: yellow;
+          }
+        }
+      }
+
       #tool {
-        margin: auto;
+        margin:auto;
         text-align: center;
 
         i {
@@ -330,7 +350,7 @@
       height: 100%;
       box-sizing: border-box;
       margin: auto;
-      margin-top: 10px;
+      margin-top: 20px;
 
       div:nth-of-type(1) {
         display: flex;
@@ -575,14 +595,17 @@
 }
 
 .thrScreen {
-  background: #000 center fixed;
-  background-size: cover;
+  cursor: url(./cur2.ico), auto;
+  background:#000;
   padding-top: 20px;
+  padding-bottom: 100px;
 
   .titleBgi {
     background-image: url("../images/titleNeonLightDarkBlueNew.gif");
     margin-top: 0;
     margin-bottom: 50px;
+    opacity: 0;
+    transform: translateX(300%)
   }
 
   .wrap {
@@ -604,6 +627,8 @@
       padding: 0;
       margin: 0 40px 15px 0;
       display: inline-block;
+      opacity: 0;
+      transform: translateX(-10%);
     }
 
     li img {
@@ -612,6 +637,9 @@
     }
   }
 }
+
+
+
 
 @media screen and (min-width: 768px) {
   

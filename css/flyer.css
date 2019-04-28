@@ -236,6 +236,12 @@ table {
   height: 44px;
 }
 
+#bigMember {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
 #nav-icon2 span {
   display: block;
   position: absolute;
@@ -396,13 +402,10 @@ table {
   cursor: pointer;
   position: absolute;
   width: 34px;
-  top: 2px;
-  right: 0;
 }
 
 .mainNav .navMemBtn img:hover {
-  -webkit-animation: jitter 1.5s linear infinite;
-          animation: jitter 1.5s linear infinite;
+  animation: jitter 5s linear infinite alternate-reverse;
 }
 
 .mainNav .navMemBtn p {
@@ -451,6 +454,10 @@ footer img {
 }
 
 @media screen and (min-width: 1200px) {
+  #bigMember {
+    -webkit-transform: translateY(-25%) translateX(-25%);
+            transform: translateY(-25%) translateX(-25%);
+  }
   .menubtn {
     display: none;
   }
@@ -612,39 +619,43 @@ footer img {
 
 @-webkit-keyframes jitter {
   0% {
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg);
+    border-radius: 40% 55% 60% 45%;
   }
-  25% {
-    -webkit-transform: rotateZ(-15deg);
-            transform: rotateZ(-15deg);
+  20% {
+    border-radius: 50% 40% 50% 60%;
   }
-  75% {
-    -webkit-transform: rotateZ(15deg);
-            transform: rotateZ(15deg);
+  40% {
+    border-radius: 45% 50% 55% 50%;
+  }
+  60% {
+    border-radius: 50% 35% 50% 65%;
+  }
+  80% {
+    border-radius: 40% 45% 60% 55%;
   }
   100% {
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg);
+    border-radius: 54% 50% 46% 40%;
   }
 }
 
 @keyframes jitter {
   0% {
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg);
+    border-radius: 40% 55% 60% 45%;
   }
-  25% {
-    -webkit-transform: rotateZ(-15deg);
-            transform: rotateZ(-15deg);
+  20% {
+    border-radius: 50% 40% 50% 60%;
   }
-  75% {
-    -webkit-transform: rotateZ(15deg);
-            transform: rotateZ(15deg);
+  40% {
+    border-radius: 45% 50% 55% 50%;
+  }
+  60% {
+    border-radius: 50% 35% 50% 65%;
+  }
+  80% {
+    border-radius: 40% 45% 60% 55%;
   }
   100% {
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg);
+    border-radius: 54% 50% 46% 40%;
   }
 }
 
@@ -1044,6 +1055,7 @@ footer img {
   background: #323;
   background-size: cover;
   color: #ffffbd;
+  outline: none;
   border-radius: 20px;
   line-height: 75px;
   border: none;
@@ -1070,6 +1082,7 @@ footer img {
   color: #ffffbd;
   border-radius: 15px;
   line-height: 60px;
+  outline: none;
   border: none;
   z-index: 2;
   -webkit-box-shadow: 0 0 2px 4px #ffffbd;
@@ -1082,6 +1095,15 @@ footer img {
           transform: scale(1.05);
   -webkit-box-shadow: 0px 0px 25px #ffffbd, 0 0 0 1px #fff;
           box-shadow: 0px 0px 25px #ffffbd, 0 0 0 1px #fff;
+}
+
+#lightWrap {
+  display: none;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  z-index: 2;
 }
 
 .loginBox, .loginbox1 {
@@ -1182,7 +1204,7 @@ footer img {
   right: 0;
   bottom: 0;
   margin: auto;
-  z-index: 1;
+  z-index: 50;
   border-radius: 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1284,7 +1306,7 @@ footer img {
   right: 0;
   bottom: 0;
   margin: auto;
-  z-index: 1;
+  z-index: 50;
   border-radius: 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1343,6 +1365,10 @@ footer img {
   height: 50px;
   border-radius: 5px;
   line-height: 50px;
+}
+
+#IdStatus {
+  display: none;
 }
 
 .titleBgi {
@@ -1644,13 +1670,18 @@ footer img {
 /* 宣傳單燈箱HTML */
 /* 宣傳單燈箱JS */
 .firstScreen {
-  background: #000 center no-repeat;
+  background: #000 center;
   background-size: cover;
   margin: 0;
+  position: relative;
 }
 
 .firstScreen .wrap {
   margin: auto;
+}
+
+.firstScreen .wrap .titleBgi {
+  opacity: 0;
 }
 
 .firstScreen #selectOpen {
@@ -1772,6 +1803,8 @@ footer img {
   margin: 10px auto 10px;
   color: #fff;
   text-shadow: 0 0 2px #000;
+  position: relative;
+  z-index: 1;
 }
 
 .firstScreen .stepsBar .stepBox .step {
@@ -1860,7 +1893,6 @@ footer img {
   box-shadow: 0 0 5px 1px #728fb1, 0 0 5px 1px #01336d inset, 0 0 2px 3px #c0dbff, 0 0 2px 3px #c0d1ff inset, 0 0 5px #01336d, 0 0 5px #2439af, 0 0 5px #1923b3, 0 0 5px #1f2ca7, 0 0 10px #7b9bc4, 0 0 5px 5px #d4e6f7, 0 0 5px 5px #d4daf7 inset, 0 0 15px 15px #132b6e, 0 0 15px 15px #132b6e inset;
   width: 100%;
   padding: 20px;
-  margin-bottom: 20px;
 }
 
 .firstScreen .doIt .backBlock #A4page {
@@ -1871,8 +1903,8 @@ footer img {
   overflow: hidden;
   -webkit-box-shadow: 0 0 10px #000;
           box-shadow: 0 0 10px #000;
-  margin-bottom: 20px;
   position: relative;
+  margin-bottom: 10px;
 }
 
 .firstScreen .doIt .backBlock #A4page img {
@@ -1883,6 +1915,7 @@ footer img {
   position: absolute;
   top: 5px;
   left: 5px;
+  text-shadow: 0 0 1px #000;
 }
 
 .firstScreen .doIt .backBlock #A4page #A4qrcode {
@@ -1894,6 +1927,21 @@ footer img {
 .firstScreen .doIt .backBlock #A4page #A4qrcode img {
   width: 40px;
   height: 40px;
+}
+
+.firstScreen .doIt .backBlock #moveBtn {
+  text-align: center;
+  padding: 10px;
+}
+
+.firstScreen .doIt .backBlock #moveBtn span {
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.firstScreen .doIt .backBlock #moveBtn span:hover {
+  color: yellow;
 }
 
 .firstScreen .doIt .backBlock #tool {
@@ -1948,7 +1996,7 @@ footer img {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: auto;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .firstScreen .doIt .whiteBlock div:nth-of-type(1) {
@@ -2187,15 +2235,19 @@ footer img {
 }
 
 .thrScreen {
-  background: #000 center fixed;
-  background-size: cover;
+  cursor: url(./cur2.ico), auto;
+  background: #000;
   padding-top: 20px;
+  padding-bottom: 100px;
 }
 
 .thrScreen .titleBgi {
   background-image: url("../images/titleNeonLightDarkBlueNew.gif");
   margin-top: 0;
   margin-bottom: 50px;
+  opacity: 0;
+  -webkit-transform: translateX(300%);
+          transform: translateX(300%);
 }
 
 .thrScreen .wrap {
@@ -2225,6 +2277,9 @@ footer img {
   padding: 0;
   margin: 0 40px 15px 0;
   display: inline-block;
+  opacity: 0;
+  -webkit-transform: translateX(-10%);
+          transform: translateX(-10%);
 }
 
 .thrScreen .wrap li img {

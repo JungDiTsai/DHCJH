@@ -236,6 +236,12 @@ table {
   height: 44px;
 }
 
+#bigMember {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
 #nav-icon2 span {
   display: block;
   position: absolute;
@@ -396,13 +402,10 @@ table {
   cursor: pointer;
   position: absolute;
   width: 34px;
-  top: 2px;
-  right: 0;
 }
 
 .mainNav .navMemBtn img:hover {
-  -webkit-animation: jitter 1.5s linear infinite;
-          animation: jitter 1.5s linear infinite;
+  animation: jitter 5s linear infinite alternate-reverse;
 }
 
 .mainNav .navMemBtn p {
@@ -451,6 +454,10 @@ footer img {
 }
 
 @media screen and (min-width: 1200px) {
+  #bigMember {
+    -webkit-transform: translateY(-25%) translateX(-25%);
+            transform: translateY(-25%) translateX(-25%);
+  }
   .menubtn {
     display: none;
   }
@@ -612,39 +619,43 @@ footer img {
 
 @-webkit-keyframes jitter {
   0% {
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg);
+    border-radius: 40% 55% 60% 45%;
   }
-  25% {
-    -webkit-transform: rotateZ(-15deg);
-            transform: rotateZ(-15deg);
+  20% {
+    border-radius: 50% 40% 50% 60%;
   }
-  75% {
-    -webkit-transform: rotateZ(15deg);
-            transform: rotateZ(15deg);
+  40% {
+    border-radius: 45% 50% 55% 50%;
+  }
+  60% {
+    border-radius: 50% 35% 50% 65%;
+  }
+  80% {
+    border-radius: 40% 45% 60% 55%;
   }
   100% {
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg);
+    border-radius: 54% 50% 46% 40%;
   }
 }
 
 @keyframes jitter {
   0% {
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg);
+    border-radius: 40% 55% 60% 45%;
   }
-  25% {
-    -webkit-transform: rotateZ(-15deg);
-            transform: rotateZ(-15deg);
+  20% {
+    border-radius: 50% 40% 50% 60%;
   }
-  75% {
-    -webkit-transform: rotateZ(15deg);
-            transform: rotateZ(15deg);
+  40% {
+    border-radius: 45% 50% 55% 50%;
+  }
+  60% {
+    border-radius: 50% 35% 50% 65%;
+  }
+  80% {
+    border-radius: 40% 45% 60% 55%;
   }
   100% {
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg);
+    border-radius: 54% 50% 46% 40%;
   }
 }
 
@@ -1044,6 +1055,7 @@ footer img {
   background: #323;
   background-size: cover;
   color: #ffffbd;
+  outline: none;
   border-radius: 20px;
   line-height: 75px;
   border: none;
@@ -1070,6 +1082,7 @@ footer img {
   color: #ffffbd;
   border-radius: 15px;
   line-height: 60px;
+  outline: none;
   border: none;
   z-index: 2;
   -webkit-box-shadow: 0 0 2px 4px #ffffbd;
@@ -1082,6 +1095,15 @@ footer img {
           transform: scale(1.05);
   -webkit-box-shadow: 0px 0px 25px #ffffbd, 0 0 0 1px #fff;
           box-shadow: 0px 0px 25px #ffffbd, 0 0 0 1px #fff;
+}
+
+#lightWrap {
+  display: none;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  z-index: 2;
 }
 
 .loginBox, .loginbox1 {
@@ -1182,7 +1204,7 @@ footer img {
   right: 0;
   bottom: 0;
   margin: auto;
-  z-index: 1;
+  z-index: 50;
   border-radius: 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1284,7 +1306,7 @@ footer img {
   right: 0;
   bottom: 0;
   margin: auto;
-  z-index: 1;
+  z-index: 50;
   border-radius: 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1343,6 +1365,10 @@ footer img {
   height: 50px;
   border-radius: 5px;
   line-height: 50px;
+}
+
+#IdStatus {
+  display: none;
 }
 
 .titleBgi {
@@ -1414,19 +1440,11 @@ li {
   background-repeat: no-repeat;
 }
 
-#beautyRankingimgsMonth {
-  display: none;
-}
-
 .beautyRankingContainer {
   position: relative;
   width: 100%;
   max-width: 1200px;
   margin: auto;
-  height: auto;
-}
-
-.beautyRankingContainer #beautyRankingimgs {
   height: auto;
 }
 
@@ -1595,7 +1613,6 @@ li {
 }
 
 .dotpanel {
-  display: none;
   position: absolute;
   height: auto;
   width: 76px;
@@ -1718,9 +1735,8 @@ li {
 .beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg .beautyDiscIgMemTextContainerWrap {
   margin: 20px 0px;
   font-family: '微軟正黑';
-  overflow-y: scroll;
-  max-height: 76px;
-  height: 76px;
+  overflow-x: hidden;
+  max-height: 78px;
 }
 
 .beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg .beautyDiscIgMemTextContainerWrap .beautyDiscIgMemTextContainer {
@@ -1808,39 +1824,17 @@ li {
   border-radius: 5px;
   color: #fff;
   background-color: #ff7951;
-  margin-top: 3px;
+  margin-top: -30px;
   cursor: pointer;
 }
 
 @media screen and (min-width: 1200px) {
-  .beautyDiscIgMemTextContainerWrap {
-    border-radius: 15px;
-    /*定义滚动条轨道
-      内阴影+圆角*/
-    /*定义滑块
-      内阴影+圆角*/
-  }
-  .beautyDiscIgMemTextContainerWrap::-webkit-scrollbar {
-    width: 16px;
-    height: 16px;
-    background-color: #F5F5F5;
-  }
-  .beautyDiscIgMemTextContainerWrap::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    background-color: #F5F5F5;
-  }
-  .beautyDiscIgMemTextContainerWrap::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: #555;
-  }
   .beautyDiscWrap .beautyDiscContainer {
     max-width: 1200px;
     height: auto;
   }
   .beautyDiscWrap .beautyDiscContainer .beautyDiscFilter {
-    margin-top: 50px;
+    margin-top: 100px;
     max-width: 1200px;
     height: 50px;
     margin-left: 19px;
@@ -1861,7 +1855,7 @@ li {
   .beautyDiscWrap .beautyDiscContainer .beautyDiscFilter .beautyDiscFilterBox {
     width: 160px;
     display: inline-block;
-    height: 48px;
+    height: 50px;
     border-radius: 10px;
     background-color: #F2EB50;
     padding: 7px;
