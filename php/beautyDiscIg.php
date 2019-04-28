@@ -1,3 +1,4 @@
+
 <script>
 	$(document).ready(function(){
 		$.ajax({
@@ -10,6 +11,8 @@
 				//轉成陣列 抓取陣列裡面的資料
 				//需要order的所有留言串
 				//判斷 ORDER是否相同
+				
+				
 				let data = JSON.parse(response);
 				var beautyDiscIgData = '<div class="beautyDiscStageContainer">';
 				var beautyDiscIgMesData ="<div class='beautyDiscIgMemTextContainer'>";
@@ -33,7 +36,7 @@
 					});
 					
 					beautyDiscIgData +=
-					"<div class='beautyDiscIg'>"+
+					"<div id=CarOrder"+n['orderNo']+" class='beautyDiscIg'>"+
 						"<div class='beautyDiscIgMem'>"+
 							"<img src='"+n['memImgUrl']+"' alt=''>"+
 							"<div class='beautyDiscIgTopic'>"+
@@ -67,7 +70,7 @@
 						//留言內容結束
 						
 						"<div class='beautyDiscForm'>"+
-							"<img src='images/beautyPageant/DiscStage/Lisa/lisa.png' alt='Alex'>"+
+							"<img src='<?php if(isset($_SESSION['member'])){print_r($_SESSION['member'][0][6]);}else{ echo "images/member/member.jpg";} ?>' alt='Alex'>"+
 							"<form>"+
 								
 								"<input class='DiscTextArea' type='text' name='messageContent' value='' placeholder='留言回覆...'>"+
@@ -87,21 +90,27 @@
 						let messageContent = btn.previousElementSibling.value;
 						console.log(orderNo);
 						console.log(messageContent);
+						//先抓取留言的"內容"對應"訂單"
+						var index = $('.DiscSent').index(this);
+						console.log(index);
+						$(".beautyDiscIgMemTextContainerWrap").eq(index).prepend("<div class='beautyDiscIgMemTextContainer'>"+"<img src='<?php if(isset($_SESSION['member'])){print_r($_SESSION['member'][0][6]);} ?>' alt=''>"+"<p class='beautyDiscIgMName'>"+"<?php if(isset($_SESSION['member'])){print_r($_SESSION['member'][0][6]);} ?>"+"</p>"+"<p class='beautyDiscIgNameText'>"+messageContent+"</p>"+"</div>")
 
 						let xhr = new XMLHttpRequest();
 						xhr.onload = function (){
-							alert(xhr.responseText);
+							// alert(xhr.responseText);
 
 							//reset
+							
 							btn.nextElementSibling.value="";
 							btn.previousElementSibling.value="";
 						}
 						xhr.open("get", "php/addmessage.php?messageContent=" + messageContent + "&orderNo=" + orderNo);
 						xhr.send(null);
-						console.log("addmessage.php?content=" + messageContent + "&orderNo=" + orderNo);
+						console.log("addmessage.php?messageContent=" + messageContent + "&orderNo=" + orderNo);
 
 					}
 				)};
+				
 				
 			},//sucess
 			error: function(xhr) {
@@ -121,15 +130,3 @@
 
 
 </script>
-
-
-
-
-
-
-
-
-
-
-
-

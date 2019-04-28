@@ -1584,8 +1584,6 @@ footer img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
 }
 
 .cardGroup .card .font .toolBar .fa-heart {
@@ -1602,11 +1600,6 @@ footer img {
 
 .cardGroup .card .font .toolBar .fa-share:hover, .cardGroup .card .font .toolBar .fa-ellipsis-h:hover {
   color: #8a8ae9;
-}
-
-.cardGroup .card .font .toolBar span {
-  font-size: 16px;
-  font-family: Microsoft JhengHei;
 }
 
 .cardGroup .card .back {

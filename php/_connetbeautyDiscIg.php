@@ -4,7 +4,7 @@ $errMsg="";
 try {
 	require_once("../php/components/_connectDHC.php"); 
 	//撈訊息
-	$sql = "SELECT message.messageNo,message.orderNo,message.memNo,message.messageContent,message.messageDate,member.memNo,member.memName,member.memImgUrl from message join member on message.memNo=member.memNo ORDER BY messageNo;";
+	$sql = "SELECT message.messageNo,message.orderNo,message.memNo,message.messageContent,message.messageDate,member.memNo,member.memName,member.memImgUrl from message join member on message.memNo=member.memNo ORDER BY messageNo DESC;";
 	$message=$pdo->query($sql);  
 	//撈訂單
 	$sql = "SELECT orders.beautyState,orders.orderNo,orders.memNo,orders.orderName,orders.orderImgUrl,orders.orderVote,member.memNo,member.memName,member.memImgUrl FROM orders join member on orders.memNo=member.memNo where orders.beautyState=1;";
