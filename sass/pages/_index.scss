@@ -10,24 +10,27 @@
   top: 0;
   overflow-y: scroll;
 }*/
-a{
-  text-decoration: none;
-}
 #gameHub{
   opacity:0.85;
   position: fixed;
   left: -370px;
   bottom: 100px;
   width: 80px;
+<<<<<<< HEAD
   height: 65px;
+=======
+  height: 90px;
+  background-color:#444;
+>>>>>>> 2a56a6aeac411e08b0d3bc10b4d3177a167ca7ec
   text-align: center;
   ////outline: 5px red solid;
+  border:5px rgb(235, 235, 235) solid;
   color: #ffffa3;
   vertical-align: middle;
   z-index: 3;
   img{
     width: 120%;
-    margin:5px auto auto auto;
+    margin: 5px auto;
   }
   animation:gameCar 10s ease infinite;
 }
@@ -45,6 +48,7 @@ a{
   animation:serviceGirl 12s  ease infinite;
   
 }
+<<<<<<< HEAD
 .showUpHints{
   width: 200px;
   padding: 20px;
@@ -77,6 +81,8 @@ a{
   border-bottom-color: transparent;
   border-left-color: transparent ;
 }
+=======
+>>>>>>> 2a56a6aeac411e08b0d3bc10b4d3177a167ca7ec
 
 //使用者客服問答區
 #gameAndService{
@@ -326,14 +332,14 @@ a{
   color: #ffffbd;
   font-weight: bolder;
   h2{
-      font-weight: 300;
-      text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.9);
+      font-weight: 200;
+      text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
   }
   h3{
       margin-top: 18px;
       font-size: 20px;
       font-weight: 200;
-      text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.9);
+      text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
   }
   .commonBtn{
       margin:20px auto;
@@ -999,7 +1005,7 @@ a{
     top: 70px;
 }
 #introScreenBlock{
-    width: 51.8vw;
+    width: 52vw;
     height: 6vw;
     position:absolute;
     margin: auto;  
@@ -1048,7 +1054,7 @@ a{
   }
 
   #lyrics{
-    width: 51.8vw;
+    width: 52vw;
     height: 6vw;
     position:absolute;
     margin: auto;  
@@ -1255,7 +1261,7 @@ ul.tryCustTabs li a.tryCustActive {
 .introFlyerBoard{
   position: absolute;
   width: 100px;
-  height: 120px;
+  height: 100px;
   margin: auto;
   margin-top:29vh;
   top: 0;
@@ -1285,7 +1291,7 @@ ul.tryCustTabs li a.tryCustActive {
 }
 
 //宣傳單hover下去
-#introFlyer2:hover,#introFlyer3:hover{
+#introFlyer2,#introFlyer3:hover{
   transform: scale(1);
 }
 
@@ -1403,8 +1409,6 @@ ul.tryCustTabs li a.tryCustActive {
 .rankTitle{
   font-size: 28px;
   font-family: $contentFontFamily;
-  text-shadow:0px 0px 10px #000;
-  font-weight: bolder;
   margin: 2px;
   color: rgb(255, 255, 255);
 }
@@ -1424,7 +1428,6 @@ ul.tryCustTabs li a.tryCustActive {
 #thirdPlaceStage,
 #forthPlaceStage,
 #fifthPlaceStage {
-  text-shadow: 0px 0px 5px #000;
   overflow: hidden;
   img{
       width: 85%;
@@ -1442,7 +1445,6 @@ ul.tryCustTabs li a.tryCustActive {
   margin-top: 30px;
   width: 40px;
   height: 24px;
-  cursor: pointer;
   //outline: 5px red solid;
   img{
       width:26px;
@@ -1501,7 +1503,6 @@ ul.tryCustTabs li a.tryCustActive {
   .titleBgi{
     background: url(../images/titleNeonLightBlueNew.gif) center no-repeat;
     background-size: cover;
-    font-size: $titleWord;
   } 
 }
 #parallaxContainer{ 
@@ -1514,6 +1515,7 @@ ul.tryCustTabs li a.tryCustActive {
       position: absolute;
       margin: auto;   
       transition: 1.3s ease ; 
+      transform: scale(.2);
   }
   #paraItem1{
       left: 4vw;
@@ -1725,7 +1727,7 @@ animation: shineExplosion .9s ease 1 forwards;
   }
 #processWrap .titleBgi{
   position: relative;
-  font-size: $titleWord;
+  font-size: 24px;
   text-align: center;
   line-height: 80px;
   width: 200px;
@@ -1745,15 +1747,6 @@ animation: shineExplosion .9s ease 1 forwards;
   }
 
 }
-#earthGroup{
-  position: absolute;
-  margin: auto;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: -400px;
-  transform: scale(.3);
-}
 #earth {
   width: 40vw;
   min-width: 300px;
@@ -1765,8 +1758,8 @@ animation: shineExplosion .9s ease 1 forwards;
   bottom: -80vh;
   margin: auto;
   opacity: .6;
+  
 }
-
 #earthRotate{
   width: 40vw;
   min-width: 300px;
@@ -1972,7 +1965,7 @@ animation: shineExplosion .9s ease 1 forwards;
     display: block;
 }
 #introScreenBlock{
-    width: 51.8vw;
+    width: 52vw;
     height: 6vw;
     position:absolute;
     margin: auto;  
@@ -2012,7 +2005,7 @@ animation: shineExplosion .9s ease 1 forwards;
 }
 
   #lyrics{
-    width: 51.8vw;
+    width: 52vw;
     height: 6vw;
     position:absolute;
     margin: auto;  
@@ -2041,33 +2034,17 @@ animation: shineExplosion .9s ease 1 forwards;
 footer{
   padding-top:15px;
   width: 100%;
-  height: 26vw;
-  background-color: #0a0a0a;
-  
-  #footerBgiNew{
-    background-image: url(../images/footerBgiNew.png);
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 33vw; 
-    position:absolute;
-    margin:auto;
-    bottom: 0;
-  }
-  #footerWords{
-    position: absolute;
-    margin: auto;
-    right: 0;
-    left: 0;
-    bottom:3vw;
-  }
+  height: 115px;
+  background-image: url(../images/footerBgi2.jpg);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
   p{
-    font-size:12px;
+    font-size: $contentWord;
     color:#fff;
     text-align: center;
-    font-family: $contentFontFamily;
+    padding-top: 0px;
   }
   div{
     ////outline: #ff00aa 5px solid;
@@ -2107,9 +2084,11 @@ footer{
     margin-top: 30px;
   }
   footer{
-    #footerWords{
-      bottom:4.5vw;
-      font-size:$contentWord;   
+    p{
+      display: block;
+      text-align: center;
+      ////outline: #007bff 5px solid;
+      margin: auto;
     }
   }
   
@@ -2234,11 +2213,11 @@ footer{
     top: 120px;
   }
   #introScreenBlock{
-    width: 350px;
+    width: 360px;
     height: 50px;
     position:absolute;
     margin: auto;  
-    top: 172px;
+    top: 167px;
     right: 0;
     left: 0;  
     overflow: hidden;
@@ -2260,25 +2239,25 @@ footer{
     width: 14%;
     position:absolute;
     margin: auto;  
-    top: 190px;
+    top: 200px;
   }
   .introSoundsBlock.one{
-    right: 40px;
+    right: 43px;
     animation: introSoundsScale 1.5s ease reverse infinite;
     filter: drop-shadow(0px 0px 7px rgb(255, 244, 203));
   }
   .introSoundsBlock.two{
-    left: 40px;
+    left: 43px;
     animation: introSoundsScale 1.5s ease reverse infinite;
     filter: drop-shadow(0px 0px 7px rgb(255, 244, 203));
   }
 
   #lyrics{
-    width: 350px;
+    width: 360px;
     height: 50px;
     position:absolute;
     margin: auto;  
-    top: 172px;
+    top: 167px;
     right: 0;
     left: 0;  
     overflow: hidden;
@@ -2361,22 +2340,6 @@ footer{
     animation:serviceGirl 12s 1s ease infinite;
     
   }
-  .showUpHints{
-    width: 250px;
-    padding: 20px;
-    height: 120px;
-    right: 60px;
-    p{
-      width:210px;
-    }
-  }
-  .showUpHints:after {
-    position:absolute;
-    content:"";
-    bottom:-30px;
-    left:70%;
-    transform:translateX(-50%);
-  }
   #gameHub{
     padding:10px;
     opacity:0.9;
@@ -2385,7 +2348,7 @@ footer{
     height: 140px;
     ////outline: 5px red solid;
     img{
-      margin: 10px auto;
+      margin: 20px auto;
     }
   }
   #beautyContestWrap{

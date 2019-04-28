@@ -26,7 +26,7 @@
   right: 0;
   bottom: 0;
   margin: auto;
-  z-index: 1;
+  z-index: 50;
   border-radius: 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -116,7 +116,20 @@
   color: #f3d217;
 }
 
+<<<<<<< HEAD
 .loginBox {
+=======
+#lightWrap {
+  display: none;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.loginBox, .loginbox1 {
+>>>>>>> 2a56a6aeac411e08b0d3bc10b4d3177a167ca7ec
   display: none;
   width: 300px;
   height: 350px;
@@ -128,7 +141,7 @@
   right: 0;
   bottom: 0;
   margin: auto;
-  z-index: 3;
+  z-index: 50;
   border-radius: 10px;
   padding: 30px 40px;
   -webkit-box-sizing: border-box;
@@ -140,7 +153,11 @@
           box-shadow: 0 0 10px  #666 inset;
 }
 
+<<<<<<< HEAD
 .loginBox .fa-times {
+=======
+.loginBox .fa-times, .loginbox1 .fa-times {
+>>>>>>> 2a56a6aeac411e08b0d3bc10b4d3177a167ca7ec
   color: #17F4F0;
   position: absolute;
   right: 10px;
@@ -148,28 +165,48 @@
   cursor: pointer;
 }
 
+<<<<<<< HEAD
 .loginBox .fa-times:hover {
   color: #000;
 }
 
 .loginBox h3 {
+=======
+.loginBox .fa-times:hover, .loginbox1 .fa-times:hover {
+  color: #000;
+}
+
+.loginBox h3, .loginbox1 h3 {
+>>>>>>> 2a56a6aeac411e08b0d3bc10b4d3177a167ca7ec
   margin-top: 0px;
   font-size: 30px;
   color: #17F4F0;
 }
 
+<<<<<<< HEAD
 .loginBox .inputBox {
+=======
+.loginBox .inputBox, .loginbox1 .inputBox {
+>>>>>>> 2a56a6aeac411e08b0d3bc10b4d3177a167ca7ec
   background: #2d3631;
   border-radius: 10px;
   margin-top: 10px;
   padding: 10px 15px;
 }
 
+<<<<<<< HEAD
 .loginBox .inputBox i {
   color: #fff;
 }
 
 .loginBox .inputBox input {
+=======
+.loginBox .inputBox i, .loginbox1 .inputBox i {
+  color: #fff;
+}
+
+.loginBox .inputBox input, .loginbox1 .inputBox input {
+>>>>>>> 2a56a6aeac411e08b0d3bc10b4d3177a167ca7ec
   height: 20px;
   margin-left: 10px;
   width: 80%;
@@ -179,7 +216,11 @@
   color: #fff;
 }
 
+<<<<<<< HEAD
 .loginBox .commonBtnSmall {
+=======
+.loginBox .commonBtnSmall, .loginbox1 .commonBtnSmall {
+>>>>>>> 2a56a6aeac411e08b0d3bc10b4d3177a167ca7ec
   margin-top: 20px;
   width: 80px;
   height: 40px;
@@ -187,18 +228,30 @@
   line-height: 40px;
 }
 
+<<<<<<< HEAD
 .loginBox p {
+=======
+.loginBox p, .loginbox1 p {
+>>>>>>> 2a56a6aeac411e08b0d3bc10b4d3177a167ca7ec
   margin-top: 20px;
   color: #17F4F0;
 }
 
+<<<<<<< HEAD
 .loginBox p a {
+=======
+.loginBox p a, .loginbox1 p a {
+>>>>>>> 2a56a6aeac411e08b0d3bc10b4d3177a167ca7ec
   cursor: pointer;
   color: #17F4F0;
   text-decoration: none;
 }
 
+<<<<<<< HEAD
 .loginBox p a:hover {
+=======
+.loginBox p a:hover, .loginbox1 p a:hover {
+>>>>>>> 2a56a6aeac411e08b0d3bc10b4d3177a167ca7ec
   color: #f3d217;
 }
 
@@ -214,7 +267,7 @@
   right: 0;
   bottom: 0;
   margin: auto;
-  z-index: 1;
+  z-index: 50;
   border-radius: 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -274,6 +327,13 @@
   border-radius: 5px;
   line-height: 50px;
 }
+<<<<<<< HEAD
+=======
+
+#IdStatus {
+  display: none;
+}
+>>>>>>> 2a56a6aeac411e08b0d3bc10b4d3177a167ca7ec
 
 .col-1 {
   width: 8.333333%;
@@ -552,7 +612,11 @@
   width: 150px;
   text-align: center;
   display: block;
+<<<<<<< HEAD
   border-bottom: 30px solid  transparent;
+=======
+  border-bottom: 30px solid  transparent;
+>>>>>>> 2a56a6aeac411e08b0d3bc10b4d3177a167ca7ec
   border-bottom-width: 30px;
   -o-border-image: url("../images/navTDD.png") 36 repeat;
      border-image: url("../images/navTDD.png") 36 repeat;

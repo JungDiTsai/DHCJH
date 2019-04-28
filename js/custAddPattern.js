@@ -12,9 +12,10 @@ $(document).ready(function(){
         }
         reader.readAsDataURL(file);
     })
-    // 點擊換圖
+    
+     // 點擊換圖
     $('.stairsF, .stairsC1, .front').click(function (){
-        $(this).toggleClass('patternSelected')
+        $(this).addClass('patternSelected')
                .siblings().removeClass('patternSelected');
         if($('.stairsF').hasClass('patternSelected')){
             let img = $('.patternItemContent img');
@@ -36,28 +37,12 @@ $(document).ready(function(){
             temp = 3;
         }
     });
-    // 預設選取，點選圖片立即加載
-    $('.stageView .stairsF').addClass('patternSelected');
-    let img = $('.patternItemContent img');
-    for (let i = 0; i < img.length; i++) {
-        img[i].addEventListener('click',changeBgPattern)
-    }
-    // 預設目標區域外，取消選取
-    $(document).mouseup(function(e){
-        var _con = $('.stairsF, .stairsC1, .front');   // 設置目標區域
-        if(!_con.is(e.target) && _con.has(e.target).length === 0){ 
-            $('.stairsF, .stairsC1, .front').removeClass('patternSelected');
-        }
-    });
-    // 訂單資訊頁取消選取
-    $('#orderStage .stairsF, #orderStage .stairsC1, #orderStage .front').off('click');
+    // $('.stairsF').click();
+    
 });
 
 function changeBgPattern(){
     imgSrc = $(this).attr('src');
-    if(temp == 0){
-        $('.stairsF').css('backgroundImage', `url(${imgSrc})`);
-    }
     if(temp == 1){
         $('.stairsF').css('backgroundImage', `url(${imgSrc})`);
     }
