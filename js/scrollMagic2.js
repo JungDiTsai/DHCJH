@@ -115,6 +115,10 @@ var tlB_02 = new TweenMax.to('#hint2' , 1 ,{
 var tlB_03 = new TweenMax.to('#hint2' , 1.2 ,{ 
     opacity:0,
     delay:2.5,
+var tlB_03 = new TweenMax.to('#hint2' , 1.5 ,{ 
+    opacity:0,
+    y:380,
+    delay:3.5,
 });
 
 var controllerB = new ScrollMagic.Controller();
