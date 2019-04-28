@@ -8,8 +8,8 @@ var carEnd = document.getElementById('carEnd');
 var endButton = document.getElementById('endButton');
 
 var speed = 35,
-	score = 2,
-	trafficSpeed = 10,
+	score = 5,
+	trafficSpeed = 20,
 	playerCarLanes = [27, 195, 365],
 	playerCarCurrentLane = playerCarLanes[1],//195
 	trafficCarsArray = [{lane: playerCarLanes[2], posY: -260}],
@@ -25,7 +25,7 @@ function gogogo(){
     canvasW = canvas.width;
     speed = 35;
 	score = 5;
-	trafficSpeed = 10;
+	trafficSpeed = 20;
 	playerCarLanes = [27, 195, 365];
 	playerCarCurrentLane = playerCarLanes[1];//195
 	trafficCarsArray = [{lane: playerCarLanes[2], posY: -260}];
@@ -42,10 +42,9 @@ ctx.strokeStyle = '#F7F7F9';
 
 // player car 
 var playerCar = new Image();
-// document.querySelector('#blue-car').style.width='1%';
 playerCar.src = document.querySelector('#blue-car').getAttribute('src');
 function drawPlayerCar() {  //.................
-	ctx.drawImage(playerCar, playerCarCurrentLane-27, 500); //blue car 開始位置
+	ctx.drawImage(playerCar, playerCarCurrentLane, 450); //blue car 開始位置
 }
 
 // traffic randomizer紅色車子
@@ -60,7 +59,7 @@ var min = 500;
 (function randomInterval() {
 	var int = Math.floor(Math.random() * (max - min +1 )) + min;
 	timerId = window.setTimeout(function() {
-		// console.log(int);
+		console.log(int);
 		trafficRandomizer();
 		randomInterval();
 	}, int);
@@ -100,20 +99,12 @@ function drawFrame() {
 		var trafficPosY = thisCar.posY += trafficSpeed;
 		ctx.drawImage(trafficCar, trafficLane, trafficPosY);
 		// collision
-		if( trafficLane == playerCarCurrentLane && trafficPosY > 280 ) {
+		if( trafficLane == playerCarCurrentLane && trafficPosY > 238 ) {
 			window.cancelAnimationFrame(drawFrame);
             collision = true;
            //////////失敗的話     
-			var carStart = document.getElementById('carStart');
-            var backpage = document.getElementById('backpage');
-			carStart.style.display='block';
-			carStart.style.float='left';
-			backpage.style.float='left';
-			backpage.style.display='block';
-			backpage.onclick= beforepage;
-			function beforepage(){
-				window.history.back();
-			}
+            var carStart = document.getElementById('carStart');
+            carStart.style.display='block';
             scoreHeading.textContent = 5;
             
             // gogogo();
