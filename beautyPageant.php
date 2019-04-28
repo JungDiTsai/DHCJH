@@ -257,6 +257,6 @@
     <script src="js/dotReport.js"></script>
     <script src="js/navmenu.js"></script>
     <script src="js/discoBall.js"></script>
-    <script src="js/uploadbeauty.js"></script>
+    <!-- <script src="js/uploadbeauty.js"></script> -->
 </body>
 </html>
