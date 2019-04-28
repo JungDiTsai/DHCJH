@@ -1,10 +1,3 @@
-var renderer;
-var widthw = window.innerHeight;
-var widthd = document.body.clientWidth;
-var widthwh = document.documentElement.scrollWidth;
-console.log(widthw);
-console.log(widthd);
-console.log(widthwh);
 function initRender() {
     
     renderer = new THREE.WebGLRenderer({ antialias: true ,alpha: true } );
@@ -59,8 +52,8 @@ var modelearth;
 var modelcar;
 function initModel() {
     //輔助工具
-    var helper = new THREE.AxesHelper(50);
-    scene.add(helper);
+    // var helper = new THREE.AxesHelper(50);
+    // scene.add(helper);
     var mtlLoader = new THREE.MTLLoader();
     mtlLoader.setPath('three/car/02/');
     //加載mtl文件
@@ -117,12 +110,12 @@ function createParticles(size,transparent,opacity,vertexColors,sizeAttenuation,c
 
     
 //初始化性能插件
-var stats;
-function initStats() {
-    stats = new Stats();
-    // document.body.appendChild(stats.dom);
-    document.getElementById('canvasScene').appendChild(stats.dom);
-}
+// var stats;
+// function initStats() {
+//     stats = new Stats();
+//     // document.body.appendChild(stats.dom);
+//     document.getElementById('canvasScene').appendChild(stats.dom);
+// }
 
 
 
@@ -179,7 +172,7 @@ function animate() {
     //更新控制器
     render();
     //更新性能插件
-    stats.update();
+    // stats.update();
     controls.update();
     requestAnimationFrame(animate);
     TWEEN.update();
@@ -229,7 +222,7 @@ function draw() {
     // createSprites();
     createParticles();
     initControls();
-    initStats();
+    // initStats();
     animate();
     onDocumentMouseDown(event);
     window.onresize = onWindowResize;
