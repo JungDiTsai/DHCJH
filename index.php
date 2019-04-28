@@ -34,11 +34,11 @@ try{
     <!-- fullPage.js v2.9.5 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.min.css" rel="stylesheet"  />
-    <script src="node_modules/gsap/src/minified/TweenMax.min.js"></script>
-    <script src="node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
-    <script src="node_modules/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/ScrollMagic.min.js"></script>
+    <script src="js/animation.gsap.min.js"></script>
     <!---開發時除蟲蟲用的 上線時要刪掉--->
-    <script src="node_modules/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
+    <script src="js/debug.addIndicators.min.js"></script>
     <script src="js/scrollMagic2.js" defer></script>
     
     <style>
@@ -119,10 +119,10 @@ try{
         </label>
         <nav class="mainNav">
             <li class="mainNavCell"><a href="customized_01.html">電子花車客製</a></li>
-            <li class="mainNavCell"><a href="flyer.php">客製化宣傳單</a></li>
+            <li class="mainNavCell"><a href="flyer.html">客製化宣傳單</a></li>
             <h1 class="navLogo"><a href="index.html"><img src="images/logo.png" alt="台灣大舞台"></a></h1>
-            <li class="mainNavCell"><a href="beautyPageant.php">花車選美</a></li>
-            <li class="mainNavCell"><a href="intro.php">花車特色介紹</a></li>
+            <li class="mainNavCell"><a href="beautyPageant.html">花車選美</a></li>
+            <li class="mainNavCell"><a href="intro.html">花車特色介紹</a></li>
             <div class="navMemBtn"> 
                 <i class="far fa-user-circle"></i>
             </div>
@@ -361,7 +361,7 @@ try{
                         <!-- slogan ＋ 第一名花車 ＋ 來去客製按鈕 -->
                         <!-- 第一名花車 -->
                         <div id="introCarStageOne" class="col-12 col-lg-8">
-                        <div  class="perspective">
+                        <div  class="perspectiveIntro">
                             <div class="groupIntro ">
                                 <!-- 周邊細項 -->
                                     <!-- ? -->
@@ -480,7 +480,7 @@ try{
                 <div class="EquipIntroWrapper">
                     <div id="equipIntroTabsSection" class="col-12 col-lg-5  popOut ">
                         <ul class="introTabs clearfix" data-tabgroup="first-tab-group">
-                        <li class="tabLi" id="introSpecial"><a href="#tab1" class="active">特效</a></li>
+                        <li class="tabLi" id="introSpecial"><a href="#tab1" class="activeTabs">特效</a></li>
                         <li class="tabLi" id="introDance"><a href="#tab2">舞團</a></li>
                         <li class="tabLi" id="introPole"><a href="#tab3">鋼管</a></li>
                         <li class="tabLi" id="introScreen"><a href="#tab5">銀幕</a></li>
@@ -555,6 +555,43 @@ try{
             </div>
         </div>
         <!--FullPage Section3-->
+        <?php
+        $errMsg=""; 
+        try{
+            $dsn = "mysql:host=localhost;port=3306;dbname=dhc;charset=utf8";
+            $user = "root";
+            $password = "root";
+            $options = array(PDO::ATTR_CASE=>PDO::CASE_NATURAL, PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION);
+            $pdo = new PDO($dsn, $user, $password, $options); 
+
+            $sql = "select * from draw";
+            $draws = $pdo->query($sql);
+            
+            $sql = "select * from troupe";
+            $troupes = $pdo->query($sql);
+            
+            $sql = "select * from effects";
+            $effects = $pdo->query($sql);
+
+            $sql = "select * from fireworks";
+            $fireworks = $pdo->query($sql);
+
+            $sql = "select * from pipe";
+            $pipes = $pdo->query($sql);
+
+            $sql = "select * from audio";
+            $audios = $pdo->query($sql);
+
+            $sql = "select * from host";
+            $hosts = $pdo->query($sql);
+
+        } catch(PDOException $e){
+            $errMsg .=  "錯誤原因" . $e->getMessage() . "<br>"; 
+            $errMsg .=  "錯誤行號" . $e->getLine() . "<br>";
+        }
+        echo $errMsg;
+
+    ?>
         <div class="section">
             <div id="tryCustormiseWrap" > 
                 <div id="triggerB"></div>
@@ -567,30 +604,210 @@ try{
                 <div class="custBg">
                 <div class="dcontainer">
                     <!--客製試試看花車-->
-
+                    <!-- 舞台 -->
+                <div class="stageTry">
+                    <div class="stageView col-12 col-lg-6">
+                        <div id="perspectiveTry" class="perspective">
+                            <div class="groupA">
+                                <!-- 周邊細項 -->
+                                    <!-- ? -->
+                                <div class="stairsA"></div>
+                                    <!-- ? -->
+                                <div class="stairsB"></div>
+                                    <!-- 壁屏 -->
+                                <div class="stairsC1"></div>
+                                <div class="stairsC2"></div>
+                                <div class="stairsC3"></div>
+                                <div class="stairsC4"></div>
+                                <!-- 上壁屏 -->
+                                <div class="stairsF"></div>
+                                <div class="stairsF2"></div>
+                                <div class="stairsF3"></div>
+                                <div class="stairsF4"></div>
+                                <!-- 舞台 -->
+                                <div class="front"></div>
+                                <div class="back"></div>
+                                <div class="up"></div>
+                                <div class="down"></div>
+                                <div class="left"></div>
+                                <div class="right"></div>
+                                <!-- 跑馬燈 -->
+                                <div class="subtitleAll disN">
+                                    <div class="subtitles">
+                                        <p>跑馬燈</p>
+                                    </div>
+                                    <div class="subtitles1"></div>
+                                    <div class="subtitles2"></div>
+                                </div>
+                                <!-- 樓梯三角形 -->
+                                <div class="triangleA"></div>
+                                <div class="triangleB"></div>
+                                <div class="triangleC"></div>
+                                <div class="triangleD"></div>
+                                <div class="triangleE"></div>
+                                <div class="triangleF"></div>
+                                <!-- 樓梯 -->
+                                <div class="ladder ladderA"></div>
+                                <div class="ladder ladderB"></div>
+                                <div class="ladder ladderC"></div>
+                                <div class="ladder ladderD"></div>
+                                <div class="ladder ladderE"></div>
+                                <div class="ladder ladderF"></div>
+                                <div class="ladder ladderG"></div>
+                                <div class="ladder ladderH"></div>
+                                <!-- 燈柱 -->
+                                <div class="headlightbox headlightbox0"></div>
+                                <div class="headlightbox headlightbox1"></div>
+                                <div class="headlightbox headlightbox2"></div>
+                                <div class="headlightbox headlightbox3"></div>
+                                <div class="headlightbox headlightbox4"></div>
+                                <div class="headlightbox headlightbox5"></div>
+                                <!-- 投射燈 -->
+                                <div class="headlightAll disN">
+                                    <!-- 中間投射燈 -->
+                                    <div class="headlight headlight0"></div>
+                                    <div class="headlight headlight1"></div>
+                                    <div class="headlight headlight2"></div>
+                                    <div class="headlight headlight3"></div>
+                                    <!-- 左邊投射燈 -->
+                                    <div class="headlight headlight4"></div>
+                                    <div class="headlight headlight5"></div>
+                                    <div class="headlight headlight6"></div>
+                                    <div class="headlight headlight7"></div>
+                                    <!-- 右邊投射燈 -->
+                                    <div class="headlight headlight8"></div>
+                                    <div class="headlight headlight9"></div>
+                                    <div class="headlight headlight10"></div>
+                                    <div class="headlight headlight11"></div>
+                                </div>
+                                
+                                <!-- 特效 -->
+                                <div class="effectAll">
+                                    <div class="fireEffect">
+                                        <?php 
+                                        $i=1;
+                                        while( $effect = $effects->fetch(PDO::FETCH_ASSOC) ){
+                                        ?>
+                                        <div class="fireEffect<?php echo $i ?>">
+                                            <img src="<?php echo $effect["effectsGif"]; ?>" alt="">
+                                            <img src="<?php echo $effect["effectsGif"]; ?>" alt="">
+                                        </div>
+                                        <?php $i++; } ?>
+                                    </div>
+                                    <div class="fireworkEffect">
+                                        <div class="fireworkEffect01">
+                                            <img src="images/fireworks1.gif" alt="">
+                                            <img src="images/fireworks1.gif" alt="">
+                                            <img src="images/fireworks2.gif" alt="">
+                                        </div>
+                                        <div class="fireworkEffect02">
+                                            <img src="images/fireworks6.gif" alt="">
+                                            <img src="images/fireworks3.gif" alt="">
+                                            <img src="images/fireworks3.gif" alt="">
+                                            <img src="images/fireworks8.gif" alt="">
+                                            <img src="images/fireworks8.gif" alt="">
+                                            <img src="images/fireworks6.gif" alt="">
+                                        </div>
+                                        <div class="fireworkEffect03">
+                                            <img src="images/fireworks2.gif" alt="">
+                                            <img src="images/fireworks7.gif" alt="">
+                                            <img src="images/fireworks7.gif" alt="">
+                                            <img src="images/fireworks2.gif" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 舞團 -->
+                                <div class="danceAll">
+                                <?php
+                                $i = 1;
+                                while( $troupe = $troupes->fetch(PDO::FETCH_ASSOC)){ 
+                                ?>
+                                    <div class="danceDetail<?php echo $i ?>">
+                                        <img src="<?php echo $troupe["troupeGif"]; ?>" alt="">
+                                    </div>
+                                <?php $i++; } ?>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
                     <!--客製配件tabs-->
-                    <div class="tryCustEquipWrap">
+                    <div class="tryCustEquipWrap col-12 col-lg-6">
   
                         <ul class="tryCustTabs tryCustGroup">
-                            <li><a class="tryCustActive" href="#/tryCustEquipInnerSet">塗裝</a></li>
+                            <li><a class="tryCustActive" href="#/tryCustEquipInnerSet">舞團</a></li>
                             
                             <li><a href="#/tryCustEquipSpecial">特效</a></li>
                         </ul>
                         
                         <div id="tryCustEquipContent">
                             <section id="tryCustEquipInnerSet">
-                                塗裝
+                                <!-- 舞團 -->
+                                <div class="custItem danceItem">
+                                    <div id="custItemContent" class="custItemContent">
+                                    <?php 
+                                        $sql = "select * from troupe";
+                                        $troupes = $pdo->query($sql);
+                                        $i=1;
+                                        while ( $troupe = $troupes->fetch(PDO::FETCH_ASSOC)){
+                                    ?>
+                                        <div id="danceDetail<?php echo $i ?>" class="custItemContentInfo">
+                                            <img src="<?php echo $troupe["troupeImgUrl"]; ?>" alt="">
+                                            <p><?php echo $troupe["troupeName"]; ?></p>
+                                            <p>$<?php echo $troupe["troupePrice"]; ?></p>
+                                        </div>
+                                    <?php $i++; }?>
+                                    </div>
+                                </div>
                             </section>
                             <section id="tryCustEquipSpecial" style="display:none">
-                                煙火                         
+                                <!-- 特效 -->
+                                <div id="effectItem" class="custItem effectItem">
+                                    <div id="effectCustItemContent" class="custItemContent effectItem">
+                                        <?php 
+                                            $sql = "select * from effects";
+                                            $effects = $pdo->query($sql);
+                                            $i = 1;
+                                            while( $effect = $effects->fetch(PDO::FETCH_ASSOC) ){
+                                        ?>
+                                        <div id="fireEffect<?php echo $i ?>" class="custItemContentInfo fireInfo">
+                                            <img src="<?php echo $effect["effectsImgUrl"]; ?>" alt="">
+                                            <p><?php echo $effect["effectsName"]; ?></p>
+                                            <p>$<?php echo $effect["effectsPrice"]; ?></p>
+                                        </div>
+                                        <?php $i++; } ?>
+                                        <?php
+                                            $i = 1;
+                                            while( $firework = $fireworks->fetch(PDO::FETCH_ASSOC) ){
+                                        ?>
+                                        <div id="fireworkEffect<?php echo $i ?>" class="custItemContentInfo fireworkInfo">
+                                            <img src="<?php echo $firework["fireworkImgUrl"] ?>" alt="">
+                                            <p><?php echo $firework["fireworkName"] ?></p>
+                                            <p>$<?php echo $firework["fireworkPrice"] ?></p>
+                                        </div>
+                                        <?php $i++; } ?>
+                                    </div>
+                                </div>                         
                             </section>
                         </div>
                         
                     </div>
                     
                 </div>
+                <div class="col-12">
+                    <a  href="customized_01.php">
+                    <div class="commonBtn" > 
+                        下一步 
+                    </div>
+                    </a> 
+                </div>
+                          
+                
                 </div>
             </div>
+            
+        </div>
         </div>
         
         <?php
@@ -1090,8 +1307,8 @@ try{
                 tabgroup = '#'+$this.parents('.introTabs').data('tabgroup'),
                 others = $this.closest('li').siblings().children('a'),
                 target = $this.attr('href');
-            others.removeClass('active');
-            $this.addClass('active');
+            others.removeClass('activeTabs');
+            $this.addClass('activeTabs');
             $(tabgroup).children('div').hide();
             $(target).show();
         })
@@ -1193,6 +1410,11 @@ try{
             scrollingSpeed:800,
         });
     </script>
+
+<!--第三屏客製試試看-->
+<script src="js/introCustTry.js"></script>
+
+
     <!--第四屏客製宣傳單  功能詳細說明按鈕-->
     <script>
             var detailBoard = $('#flyerFunctionDetailSection');

@@ -1,32 +1,27 @@
 $(document).ready(function(){
     if(document.body.clientWidth < 1200){
-        $(".beautyDiscStageContainer").on('click','.dotflip',function(){
+        $(".dotflip").click(function(){
             var x = $('.dotflip').index(this);
             console.log(x);
             $('.dotpanel').eq(x).css('display','block');
             
         });
-       $('.dotpanel').click(function(){
-        $('#dotpanel').css('display','none');
-       });
+        $(".dotpanel").mouseleave(function(){
+            $(this).css({
+                "display":"none",
+            });
+        });
     }else{
-        $(".beautyDiscStageContainer").on('click','.dotflip',function(){
+        $(".dotflip").click(function(){
             var x = $('.dotflip').index(this);
-            // console.log(x);
+            console.log(x);
             $('.dotpanel').eq(x).css('display','block');
             
         });
-        $(".beautyDiscStageContainer").on('mouseleave','.dotpanel',function(){
-            // $('.dotpanel').css('display','none');
-            var x = $('.dotpanel').index(this);
-            console.log(x);
-            $('.dotpanel').eq(x).css('display','none');
-            // var x = $('.dotpanel').index(this);
-            // $(this).css({
-            //     "display":"none",
-            // });
-            //目前先註冊事件 
-            // alert();
+        $(".dotpanel").mouseleave(function(){
+            $(this).css({
+                "display":"none",
+            });
         });
     }   
 });
