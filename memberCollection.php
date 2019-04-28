@@ -25,20 +25,34 @@
       <!-- 我的收藏Card -->
       <article class="cardGroup col-md-10">
         <div class="cardGroupWidth">
+          <?php
+              try {
+                $member =$_SESSION['member'][0][0];
+                $sql = "SELECT * from collection join orders on collection.orderno = orders.orderno join member on member.memNo = orders.memNo where collection.memNo = $member;";
+                $products = $pdo->query($sql);
+             } catch (PDOException $e) {
+                $errMsg = '';
+                $errMsg .=  '錯誤原因' . $e->getMessage() . '<br>'; 
+                $errMsg .=  '錯誤行號' . $e->getLine() . '<br>';
+                echo $errMsg;
+             }
+             $products = $products->fetchAll();
+             foreach ($products as $key => $data) {
+          ?>
           <section class="card">
               <div class="font">
                   <div class="topArea">
                       <div class="headImg">
-                          <img src="images/member/member.jpg" alt="">
+                          <img src="<?php echo $data['memImgUrl'] ?>" alt="">
                       </div>
-                      <h3>Lilian</h3>
+                      <h3><?php echo $data['memName'] ?></h3>
                   </div>
                   <div class="stageImg">
-                    <img src="images/stage_full.png" alt="">
+                    <img src="<?php echo $data['orderImgUrl'] ?>" alt="">
                   </div>
                   <div class="toolBar">
                     <i class="fas fa-heart"></i>
-                    <span>155個喜歡</span>
+                    <span><?php echo $data['orderVote'] ?></span>
                     <i class="fas fa-share"></i>
                     <i class="fas fa-ellipsis-h"></i>
                   </div>  
@@ -50,156 +64,7 @@
                 </div>
               </div>
           </section>
-          <section class="card">
-              <div class="font">
-                 <div class="topArea">
-                      <div class="headImg">
-                          <img src="images/member/member.jpg" alt="">
-                      </div>
-                      <h3>Lilian</h3>
-                  </div>
-                  <div class="stageImg">
-                    <img src="images/stage_full.png" alt="">
-                  </div>
-                  <div class="toolBar">
-                    <i class="fas fa-heart"></i>
-                    <span>155個喜歡</span>
-                    <i class="fas fa-share"></i>
-                    <i class="fas fa-ellipsis-h"></i>
-                  </div>
-              </div>
-              <div class="back">
-                <div class="centerBox">
-                    <div class="unlike">取消追蹤</div>
-                    <div class="return">返回</div>
-                </div>
-              </div>
-          </section>
-          <section class="card">
-                <div class="font">
-                   <div class="topArea">
-                      <div class="headImg">
-                          <img src="images/member/member.jpg" alt="">
-                      </div>
-                      <h3>Lilian</h3>
-                  </div>
-                  <div class="stageImg">
-                    <img src="images/stage_full.png" alt="">
-                  </div>
-                  <div class="toolBar">
-                    <i class="fas fa-heart"></i>
-                    <span>155個喜歡</span>
-                    <i class="fas fa-share"></i>
-                    <i class="fas fa-ellipsis-h"></i>
-                  </div>
-                </div>
-                <div class="back">
-                  <div class="centerBox">
-                      <div class="unlike">取消追蹤</div>
-                      <div class="return">返回</div>
-                  </div>
-                </div>
-          </section>
-          <section class="card">
-              <div class="font">
-                  <div class="topArea">
-                    <div class="headImg">
-                        <img src="images/member/member.jpg" alt="">
-                    </div>
-                    <h3>Lilian</h3>
-                </div>
-                <div class="stageImg">
-                  <img src="images/stage_full.png" alt="">
-                </div>
-                <div class="toolBar">
-                  <i class="fas fa-heart"></i>
-                  <span>155個喜歡</span>
-                  <i class="fas fa-share"></i>
-                  <i class="fas fa-ellipsis-h"></i>
-                </div>
-              </div>
-              <div class="back">
-                <div class="centerBox">
-                    <div class="unlike">取消追蹤</div>
-                    <div class="return">返回</div>
-                </div>
-              </div>
-          </section>
-          <section class="card">
-              <div class="font">
-                 <div class="topArea">
-                    <div class="headImg">
-                        <img src="images/member/member.jpg" alt="">
-                    </div>
-                    <h3>Lilian</h3>
-                </div>
-                <div class="stageImg">
-                  <img src="images/stage_full.png" alt="">
-                </div>
-                <div class="toolBar">
-                  <i class="fas fa-heart"></i>
-                  <span>155個喜歡</span>
-                  <i class="fas fa-share"></i>
-                  <i class="fas fa-ellipsis-h"></i>
-                </div>
-              </div>
-              <div class="back">
-                <div class="centerBox">
-                    <div class="unlike">取消追蹤</div>
-                    <div class="return">返回</div>
-                </div>
-              </div>
-          </section>
-          <section class="card">
-              <div class="font">
-                 <div class="topArea">
-                    <div class="headImg">
-                        <img src="images/member/member.jpg" alt="">
-                    </div>
-                    <h3>Lilian</h3>
-                </div>
-                <div class="stageImg">
-                  <img src="images/stage_full.png" alt="">
-                </div>
-                <div class="toolBar">
-                  <i class="fas fa-heart"></i>
-                  <span>155個喜歡</span>
-                  <i class="fas fa-share"></i>
-                  <i class="fas fa-ellipsis-h"></i>
-                </div>
-              </div>
-              <div class="back">
-                <div class="centerBox">
-                    <div class="unlike">取消追蹤</div>
-                    <div class="return">返回</div>
-                </div>
-              </div>
-          </section>
-          <section class="card">
-              <div class="font">
-                 <div class="topArea">
-                    <div class="headImg">
-                        <img src="images/member/member.jpg" alt="">
-                    </div>
-                    <h3>Lilian</h3>
-                </div>
-                <div class="stageImg">
-                  <img src="images/stage_full.png" alt="">
-                </div>
-                <div class="toolBar">
-                  <i class="fas fa-heart"></i>
-                  <span>155個喜歡</span>
-                  <i class="fas fa-share"></i>
-                  <i class="fas fa-ellipsis-h"></i>
-                </div>
-              </div>
-              <div class="back">
-                <div class="centerBox">
-                    <div class="unlike">取消追蹤</div>
-                    <div class="return">返回</div>
-                </div>
-              </div>
-          </section>
+          <?php } ?>
         </div>
       </article>
     </div>
