@@ -51,76 +51,6 @@
 <body>
 <?php require_once("php/header.php"); ?>
 <?php require_once("php/loginLightBox.php"); ?>
-<!-- header -->
-<input type="checkbox" id=menu_control>
-    <div class="box"></div>
-    <!-- 登入燈箱 -->
-    <div class="loginBox">
-        <i class="fas fa-times"></i>
-        <h3>登入</h3>
-        <div class="inputBox">
-            <i class="fas fa-user fa-1x"></i><input type="text" id="username" placeholder="User">
-        </div>
-        <div class="inputBox">
-            <i class="fas fa-key fa-1x"></i><input type="password" id="password" placeholder="Password">
-        </div>
-        <a href="memberCenter.html"><button class="commonBtn">登入</button></a>
-        <p><a class="showRegistered">註冊</a> / <a class="showForgotPSW">忘記密碼</a></p>
-    </div>
-    <!-- 註冊燈箱 -->
-    <div class="registeredBox">
-        <i class="fas fa-times"></i>
-        <h3>立即註冊</h3>
-        <table>
-            <tr>
-                <th>會員帳號</th>
-                <td><input type="text"></td>
-            </tr>
-            <tr><td colspan="2" class="prompt"><span>此帳號已有人使用 !</span></td></tr>
-            <tr>
-                <th>會員密碼</th>
-                <td><input type="password"></td>
-            </tr>
-            <tr>
-                <th>會員姓名</th>
-                <td><input type="text"></td>
-            </tr>
-            <tr>
-                <th>會員電話</th>
-                <td><input type="tel"></td>
-            </tr>
-            <tr>
-                <th>會員信箱</th>
-                <td><input type="email"></td>
-            </tr>
-            <tr>
-                <th>性別</th>
-                <td>
-                    <label>
-                        <input type="radio" name="sex" value="">
-                        <i class="fas fa-venus fa-2x"></i>
-                    </label>
-                    <label>
-                        <input type="radio" name="sex" value="">
-                        <i class="fas fa-mars fa-2x"></i>
-                    </label>
-                </td>
-            </tr>
-            <tr>
-                <th colspan="2"><input type="submit" value="註冊帳號" class="commonBtn"></th>
-            </tr>
-        </table>
-        <div><a class="backLogin">回到登入</a></div>
-    </div>
-    <!-- 忘記密碼燈箱 -->
-    <div class="forgotBox">
-        <i class="fas fa-times"></i>
-        <h3>忘記密碼</h3>
-        <p>請輸入您註冊時的會員信箱，我們會將新的密碼寄至您的信箱。</p>
-        <div>會員信箱<input type="email"></div>
-        <input type="submit" value="寄送密碼" class="commonBtn">
-        <div><a class="backLogin">回到登入</a></div>
-    </div>
 
     <!-- customized start -->
     <div class="custBg">
@@ -418,7 +348,7 @@
                                     <div id="danceDetail<?php echo $i ?>" class="custItemContentInfo">
                                         <img src="<?php echo $troupe["troupeImgUrl"]; ?>" alt="">
                                         <p><?php echo $troupe["troupeName"]; ?></p>
-                                        <p>$<?php echo $troupe["troupePrice"]; ?></p>
+                                        <p troupeNo="<?php echo $troupe["troupeNo"]; ?>">$<?php echo $troupe["troupePrice"]; ?></p>
                                     </div>
                                 <?php $i++; }?>
                                 </div>
@@ -435,7 +365,7 @@
                                     <div id="fireEffect<?php echo $i ?>" class="custItemContentInfo fireInfo">
                                         <img src="<?php echo $effect["effectsImgUrl"]; ?>" alt="">
                                         <p><?php echo $effect["effectsName"]; ?></p>
-                                        <p>$<?php echo $effect["effectsPrice"]; ?></p>
+                                        <p effectsNo="<?php echo $effect["effectsNo"]; ?>">$<?php echo $effect["effectsPrice"]; ?></p>
                                     </div>
                                     <?php $i++; } ?>
                                     <?php
@@ -445,7 +375,7 @@
                                     <div id="fireworkEffect<?php echo $i ?>" class="custItemContentInfo fireworkInfo">
                                         <img src="<?php echo $firework["fireworkImgUrl"] ?>" alt="">
                                         <p><?php echo $firework["fireworkName"] ?></p>
-                                        <p>$<?php echo $firework["fireworkPrice"] ?></p>
+                                        <p fireworkNo="<?php echo $firework["fireworkNo"]; ?>" >$<?php echo $firework["fireworkPrice"] ?></p>
                                     </div>
                                     <?php $i++; } ?>
                                 </div>
@@ -482,7 +412,7 @@
                                     <div id="audioItem<?php echo $i; ?>" class="custItemContentInfo audioInfo">
                                         <img src="<?php echo $audio["audioImgUrl"]; ?>" alt="">
                                         <p><?php echo $audio["audioName"]; ?></p>
-                                        <p>$<?php echo $audio["audioPrice"]; ?></p>
+                                        <p audioNo="<?php echo $audio["audioNo"]; ?>" >$<?php echo $audio["audioPrice"]; ?></p>
                                     </div>
                                     <?php $i++; } ?>
                                     <?php
@@ -492,7 +422,7 @@
                                     <div id="pole<?php echo $i ?>" class="custItemContentInfo poleInfo">
                                         <img src="<?php echo $pipe["pipeImgUrl"]; ?>" alt="">
                                         <p><?php echo $pipe["pipeName"]; ?></p>
-                                        <p>$<?php echo $pipe["pipePrice"]; ?></p>
+                                        <p pipeNo="<?php echo $pipe["pipeNo"]; ?>" >$<?php echo $pipe["pipePrice"]; ?></p>
                                     </div> 
                                     <?php $i++; } ?>
                                 </div>
@@ -558,7 +488,7 @@
                     ?>
                     <div class="hostInfoDetail">
                         <img src="<?php echo $host["hostImgUrl"] ?>" alt="">
-                        <h6><span><?php echo $host["hostName"]?></span><span>$<?php echo $host["price"]?></span></h6>
+                        <h6><span hostNo="<?php echo $host["hostNo"]?>"><?php echo $host["hostName"]?></span><span>$<?php echo $host["price"]?></span></h6>
                         <ul>
                             <li><?php echo $host["hostContent"]?></li>
                         </ul>
@@ -783,12 +713,12 @@
                                 <td></td>
                             </tr>
                             <tr id="orderFire">
-                                <th>火焰特效：</th>
+                                <th>火焰：</th>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr id="orderFirework">
-                                <th>煙火特效：</th>
+                                <th>煙火：</th>
                                 <td></td>
                                 <td></td>
                             </tr>
@@ -828,13 +758,14 @@
 
     <!-- checkout -->
     <div class="checkoutBg">
-            <div class="custTitle titleBgi">
+            <div class="checkoutTitle titleBgi">
                 <h3>結 帳</h3>
             </div>
             
             
             <!-- 訂購人資訊 -->
             <div class="checkoutInfo col-12">
+                <div id="checkoutClose"></div>
                 <div class="checkoutOrder">
                     <!-- 總金額 -->
                     <p><span>62000</span>圓</p>
@@ -919,11 +850,9 @@
     <!-- 舞台背景功能按鈕 -->
     <script src="js/custFunctionBtn.js?<?php echo time();?>"></script>
     <!-- 雷達圖內容 -->
-    <script src="js/custRadarChart.js"></script>
+    <script src="js/custRadarChart.js?<?php echo time();?>">"></script>
     <!-- for radar chart -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
-    <!-- html2canvas -->
-    <!-- <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script> -->
     <!-- domtoimage -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
     <script src="js/navmenu.js"></script>
