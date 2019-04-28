@@ -24,11 +24,16 @@
 	}
 	else{
 		$data = $member->fetchAll();
+<<<<<<< HEAD
+		if($data[0]["memStatus"]=='啟用'){ //判斷帳號狀態
+=======
 		if($data[0]["memState"]==0){ //判斷帳號狀態
+>>>>>>> daed1377b0c10a68393a06e028a75b2fc36fd4ff
 			echo json_encode($data);
 
 			$_SESSION["member"]= $data;
-		}else{
+		}
+		else{
 			echo "你的帳號已被凍結";
 		}
 

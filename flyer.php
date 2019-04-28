@@ -327,7 +327,7 @@
             </div>
             <div class="envelopeContent">
                 <div class="envelopeTitle">
-                    <div class="titleImg"><img src="images/member2.jpg" alt=""></div>
+                    <div class="titleImg"><img src="" alt=""></div>
                     <div class="titleName">
                         <p>Christina</p><span>參加人數 <mark>24</mark> 人</span>
                     </div>
@@ -368,21 +368,25 @@
                 } else {
                     loginBox.style.setProperty('display', "block");
                 }
-            }else{
+            }else if(LoginState[0]['orderName']==null){
+                alert('請先有花車才能使用此功能喔');
+            }
+            else{
                 let str = '';
                  for (let i = 0; i < LoginState.length; i++) {
                      if(i==LoginState.length-1){
-                         str +=LoginState[i][16];
+                         str +=LoginState[i]['orderName'];
                      }else{
-                         str +=LoginState[i][16]+',';
+                         str +=LoginState[i]['orderName']+',';
                      }
 
                  }
                  let enterData = prompt(`請輸入你要匯入訂單的 "完整名稱"  ${str}`,'');
                  if(str.match(enterData)==null||str.match(enterData)==""){
                      alert('沒有這個訂單請重新輸入');
-                 }else{
-                     OrderNo = enterData;
+                 }
+                 else{
+                    OrderNo = enterData;
                      console.log(OrderNo);
                      alert('已匯入您的訂單');
                      let clothCurtain = document.querySelector('.clothCurtain');
@@ -395,9 +399,41 @@
         })
         //點擊檢舉輸入原因 傳到後端
         function flyerReport(){
-            let str = prompt("請輸入檢舉原因","");
-            console.log(str);
-
+            if(LoginState!="notFound"){
+                let MymemNo = LoginState[0][0];
+                let str = prompt("請輸入檢舉原因","");
+                let orderNo = document.getElementById('flyerReport').getAttribute('order');
+                if(str==""){
+                    alert('您沒有輸入原因，請重新輸入');
+                }else{
+                    var xhr = new XMLHttpRequest();
+                    xhr.onreadystatechange = function(){
+                        if( xhr.readyState == XMLHttpRequest.DONE ){ //server端執行完畢
+                            if( xhr.status == 200){ //server端可以正確的執行
+                               alert(xhr.responseText);
+                            }else{ //其它
+                              alert( xhr.status );
+                            }
+                        }
+                    } 
+                    //設定好所要連結的程式
+                    var url = "php/components/_sendFinform.php?orderNo=" + orderNo +"&str=" + str + "&MymemNo=" + MymemNo;
+                    xhr.open("get", url, true);
+                    //送出資料
+                    xhr.send(null);
+                }
+                
+            }else{
+                // 顯示登入燈箱
+                alert('親愛的訪客您好 , 必須先登入才能使用檢舉功能');
+                let loginBox = document.querySelector('.loginBox');
+                let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
+                if (style == "block") {
+                    loginBox.style.setProperty('display', "none");
+                } else {
+                    loginBox.style.setProperty('display', "block");
+                }
+            }
         }
         //點擊免費體驗
         document.querySelector('.start').addEventListener('click', function () {
@@ -461,6 +497,37 @@
             let flyers = document.getElementsByClassName('item');
             for (let i = 0; i < flyers.length; i++) {
                 flyers[i].addEventListener('click', function (e) {
+                    
+                    let orderNo = e.target.getAttribute('order');
+
+                      var xhr = new XMLHttpRequest();
+                      xhr.onreadystatechange = function(){
+                        if( xhr.readyState == XMLHttpRequest.DONE ){ 
+                          if( xhr.status == 200){
+                              let data = JSON.parse(xhr.responseText);
+                              console.log(data);
+                               document.querySelector('.flyerArea img').src = data[16];
+                               document.querySelector('#QrcodeIcon div p').setAttribute('order',data['orderNo']);
+                               document.querySelector('.envelopeBar button').setAttribute('order',data['orderNo']);
+                               document.querySelector('.envelopeHeader h4').innerText= data['orderName'];
+                               document.querySelector('.envelopeHeader span').innerText= data['flyeDate'];
+                               document.querySelector('.titleImg img').src= data[29];
+                               document.querySelector('.titleName p').innerText= data['memName'];
+                               document.querySelector('.titleName mark').innerText= data['peopleNumber'];
+                               document.querySelector('.envelopeDetail p:nth-of-type(2)').innerText= data['hostName'];
+                               document.querySelector('.envelopeDetail p:nth-of-type(4)').innerText= data['flyeradd'];
+                               document.querySelector('.envelopeDetail p:nth-of-type(6)').innerText= data['flyeDate'];
+                               document.querySelector('.envelopeDetail span').innerText= data['flyerText'];
+                          }else{ //其它
+                              alert( xhr.status );
+                          }
+                        }
+                      } 
+                      //設定好所要連結的程式
+                      var url = "php/components/_getFlyerDetail.php?orderNo=" + orderNo;
+                      xhr.open("get", url, true);
+                      //送出資料
+                      xhr.send(null);
                     document.querySelector('.blackBox').style.setProperty('display', 'block');
                 })
             }

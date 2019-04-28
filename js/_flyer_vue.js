@@ -45,7 +45,7 @@ new Vue({
                 //比對Order 對照訂單
                 let number = 0;
                 for (let i = 0; i < LoginState.length; i++) {
-                    if(LoginState[i][16].search(OrderNo)!= -1){
+                    if(LoginState[i]['orderName'].search(OrderNo)!= -1){
                         number = i;
                     }
                 }
@@ -91,8 +91,7 @@ new Vue({
                 // let data_info = new FormData( document.getElementById('updateInput') );
                 // //送出資料
                 // xhr.send(data_info);
-
-                
+                      
             
             document.getElementById('selectOpen').style.display="none";
        },
@@ -302,7 +301,7 @@ new Vue({
                             //讀取檔案----------------------
                             xhr.onload = function () {
                                 if (xhr.status == 200) {
-                                    console.log("回傳圖片的位置: "+xhr.responseText);
+                                   
                             document.getElementById('A4page').value = xhr.responseText;
                                 } else{
                                     alert();
@@ -316,7 +315,16 @@ new Vue({
                             xhr.open("Post", url, true);
                             xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
                             //送出資料
-                            var data_info = "imgURL=" + img;
+                            //比對Order 對照訂單
+                            let number = 0;
+                            for (let i = 0; i < LoginState.length; i++) {
+                                if(LoginState[i]['orderName'].search(OrderNo)!= -1){
+                                    number = i;
+                                }
+                            }
+                            console.log("第"+number+"筆訂單");
+                            console.log(LoginState[number]['orderNo']);
+                            var data_info = "imgURL=" + img +"&orderNo=" + LoginState[number]['orderNo'];
                             xhr.send(data_info);
 
 
