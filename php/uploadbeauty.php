@@ -3,10 +3,10 @@
         <i class="fas fa-times"></i>
         <h3>選擇訂單</h3>
         <div class="inputBox">
-            <i class="fas fa-user fa-1x"></i><input type="text" id="memId" placeholder="User">
+            <i class="fas fa-user fa-1x"></i><input type="text" id="notyetdeside1" placeholder="User">
         </div>
         <div class="inputBox">
-            <i class="fas fa-key fa-1x"></i><input type="password" id="memPsw" placeholder="Password">
+            <i class="fas fa-key fa-1x"></i><input type="password" id="notyetdeside2" placeholder="Password">
         </div>
         <button class="commonBtnSmall" onclick="sendLogin()">登入</button>
         

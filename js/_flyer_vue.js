@@ -5,86 +5,9 @@ new Vue({
         place:"",
         setting: ["url", 1, 0,'', 16, 0, "rgb(0,0,0)","place","content",0,0],
         stepIndex:0,
-        moveSetting:[0,0,5,5,5,5],
         screenWidth: document.body.clientWidth
    },
    methods: {
-       //往上移動
-          moveBottom(){
-           switch (this.stepIndex) {
-               case 1:
-
-                   this.moveSetting[3]+= 5;
-                   let A4h5 = document.querySelector('#A4page h5');
-                   A4h5.style.setProperty('top', `${this.moveSetting[3]}px`)
-                   break;
-               case 2:
-
-                   this.moveSetting[5]-= 5;
-                   let A4div = document.querySelector('#A4page div');
-                   A4div.style.setProperty('bottom', `${this.moveSetting[5]}px`)
-                   break;
-               default:
-                   break;
-           }
-       },
-       //往上移動
-          moveTop(){
-           switch (this.stepIndex) {
-               case 1:
-
-                   this.moveSetting[3]-= 5;
-                   let A4h5 = document.querySelector('#A4page h5');
-                   A4h5.style.setProperty('top', `${this.moveSetting[3]}px`)
-                   break;
-               case 2:
-
-                   this.moveSetting[5]+= 5;
-                   let A4div = document.querySelector('#A4page div');
-                   A4div.style.setProperty('bottom', `${this.moveSetting[5]}px`)
-                   break;
-               default:
-                   break;
-           }
-       },
-       //往右移動
-       moveRight(){
-           switch (this.stepIndex) {
-               case 1:
-
-                   this.moveSetting[2]+= 5;
-                   let A4h5 = document.querySelector('#A4page h5');
-                   A4h5.style.setProperty('left', `${this.moveSetting[2]}px`)
-                   break;
-               case 2:
-  
-                   this.moveSetting[4]-= 5;
-                   let A4div = document.querySelector('#A4page div');
-                   A4div.style.setProperty('right', `${this.moveSetting[4]}px`)
-                   break;
-               default:
-                   break;
-           }
-       },
-        //往左移動
-        moveLeft(){
-            switch (this.stepIndex) {
-                case 1:
-
-                    this.moveSetting[2]-= 5;
-                    let A4h5 = document.querySelector('#A4page h5');
-                    A4h5.style.setProperty('left', `${this.moveSetting[2]}px`)
-                    break;
-                case 2:
-
-                    this.moveSetting[4]+= 5;
-                    let A4div = document.querySelector('#A4page div');
-                    A4div.style.setProperty('right', `${this.moveSetting[4]}px`)
-                    break;
-                default:
-                    break;
-            }
-        },
         // 檔案上傳
         updateInput(e){
             let file = e.target.files[0];
@@ -97,9 +20,8 @@ new Vue({
                     let aa = e.target.src;
                     e.dataTransfer.setData('image/jpeg', aa)
                 })
-                img.addEventListener('click', function (e) {
-                    let aa = e.target.src;
-                    document.querySelector('#A4page img').src = aa;
+                img.addEventListener('dragend', function (e) {
+                    //拖拉圖片結束後，對圖片設定
                 })
                 document.getElementById('toolinnerBox').appendChild(img);
             })
@@ -169,11 +91,7 @@ new Vue({
                 // let data_info = new FormData( document.getElementById('updateInput') );
                 // //送出資料
                 // xhr.send(data_info);
-                
-
-
-
-                
+                      
             
             document.getElementById('selectOpen').style.display="none";
        },
@@ -427,9 +345,7 @@ new Vue({
                                    //新增到小試身手
                                     let li = document.createElement('li');
                                     li.innerHTML = `<img src="${imgSrc}"></img>`;
-                                    li.style.setProperty('opacity',1)
                                     document.getElementById('showflyer2').appendChild(li);
-                                    window.location.hash="#showflyer2";
                                 } else{
                                     alert(xhr.status);
                                 }
@@ -448,7 +364,7 @@ new Vue({
 
                         });
 
-                        
+                        window.location.hash="#showflyer2";
 
                     }
                     
@@ -469,14 +385,7 @@ new Vue({
        //對A4的每個工具設定
         //垃圾桶-----------------------------------------
         clickTrash:function(){
-            switch (this.stepIndex) {
-                case 0:
-                    document.querySelector('#A4page img').src = '';
-                    break;
-                case 1:
-                    document.querySelector('#A4page h5').innerText = '';
-                    break;
-            }
+            document.getElementById('A4page').innerHTML = '<img src="" alt=""><h5></h5>';
             setting = ["url", 1, 0, '', 16, 0,"rgb(0,0,0)","place","content",0,0];
         },
         //放大-----------------------------------------
