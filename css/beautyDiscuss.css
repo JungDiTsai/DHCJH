@@ -4793,6 +4793,64 @@ footer img {
           transform: scale(0.97);
 }
 
+.custItem {
+  width: 670px;
+  height: 150px;
+}
+
+#custItemContent {
+  background-image: none;
+  width: 670px;
+  height: 150px;
+  -webkit-filter: none;
+          filter: none;
+  padding: 0;
+}
+
+#effectItem {
+  background-image: none;
+  width: 670px;
+  height: 150px;
+  -webkit-filter: none;
+          filter: none;
+  padding: 0;
+}
+
+#effectCustItemContent {
+  background-image: none;
+  padding: 0;
+  width: 670px;
+  height: 150px;
+}
+
+#tryCustEquipSpecial {
+  overflow-x: scroll;
+}
+
+@media screen and (min-width: 992px) {
+  #effectItem, .custItem {
+    background-image: none;
+    width: 380px;
+    height: 370px;
+    -webkit-filter: none;
+            filter: none;
+    padding: 0;
+  }
+  #effectCustItemContent {
+    background-image: none;
+    padding: 10px 0px 0px 0px;
+    width: 380px;
+    height: 370px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #effectCustItemContent {
+    width: 380px;
+    height: 370px;
+  }
+}
+
 /*.noscroll{
   position: fixed;
   width: 100%;
@@ -4809,14 +4867,12 @@ a {
 }
 
 #gameHub {
-  -webkit-transform: scale(0.75);
-          transform: scale(0.75);
   opacity: 0.85;
   position: fixed;
-  left: -360px;
+  left: -370px;
   bottom: 100px;
-  width: 120px;
-  height: 80px;
+  width: 80px;
+  height: 65px;
   text-align: center;
   color: #ffffa3;
   vertical-align: middle;
@@ -4855,7 +4911,7 @@ a {
   right: 20px;
   bottom: -200px;
   border-radius: 20px;
-  z-index: 2;
+  z-index: 3;
   -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
@@ -6563,15 +6619,20 @@ a {
 }
 
 #tryCustormiseWrap .commonBtn {
-  margin: auto;
+  margin: -10px auto auto auto;
+}
+
+.stageView {
+  outline: red 5px solid;
 }
 
 .stageTry {
-  margin: auto;
+  width: 90vw;
+  max-width: 1200px;
 }
 
 .tryCustEquipWrap {
-  margin: 18px auto;
+  margin: 10px auto;
   outline: red solid 5px;
 }
 
@@ -6635,7 +6696,7 @@ ul.tryCustTabs li a.tryCustActive {
   background: #545f60;
   color: #6edeef;
   /*color: #ff6831;*/
-  z-index: 4;
+  z-index: 2;
   outline: none;
 }
 
@@ -6653,7 +6714,7 @@ ul.tryCustTabs li a.tryCustActive {
 
 #tryCustEquipContent {
   width: 300px;
-  height: 120px;
+  height: 150px;
   margin: 0 auto;
   background: #545f60;
   -webkit-box-shadow: 2px 8px 25px -2px rgba(0, 0, 0, 0.3);
@@ -6676,11 +6737,21 @@ ul.tryCustTabs li a.tryCustActive {
 }
 
 #perspectiveTry {
-  height: 150px;
+  height: 140px;
 }
 
 #danceDetail {
   outline: red 5px solid;
+}
+
+.custItemContent {
+  background-image: none;
+  -webkit-filter: none;
+          filter: none;
+}
+
+#tryCustEquipInnerSet {
+  overflow-x: scroll;
 }
 
 #tryCustormiseFlyerWrap {
@@ -7967,6 +8038,9 @@ footer img {
   #tryCustormiseWrap {
     height: 100vh;
   }
+  #tryCustormiseWrap .commonBtn {
+    margin: 10vh auto auto auto;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -8112,6 +8186,33 @@ footer img {
     -webkit-animation: lyrics 19s linear infinite;
             animation: lyrics 19s linear infinite;
   }
+  .stageTry {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #tryCustormiseWrap .perspective {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  .groupA {
+    margin-top: 16vh;
+  }
+  ul.tryCustTabs {
+    width: 380px;
+  }
+  ul.tryCustTabs li {
+    width: 190px;
+  }
+  #tryCustEquipContent {
+    width: 380px;
+    height: 370px;
+  }
+  #custItemContent, #effectCustItem {
+    width: 380px;
+    height: 370px;
+    padding: 10px 0px 0px 0px;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -8220,7 +8321,10 @@ footer img {
     margin-top: 100px;
   }
   #carEquipmentsIntroWrap .EquipIntroWrapper .commonBtn {
-    margin-top: -160px;
+    margin-top: -220px;
+  }
+  #tryCustormiseWrap .commonBtn {
+    margin: 12vh auto auto auto;
   }
 }
 

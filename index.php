@@ -606,7 +606,7 @@ try{
                     <!--客製試試看花車-->
                     <!-- 舞台 -->
                 <div class="stageTry">
-                    <div class="stageView col-md-6">
+                    <div class="stageView col-12 col-lg-6">
                         <div id="perspectiveTry" class="perspective">
                             <div class="groupA">
                                 <!-- 周邊細項 -->
@@ -733,7 +733,7 @@ try{
                         </div>
                     </div>
                     <!--客製配件tabs-->
-                    <div class="tryCustEquipWrap col-12 col-md-6">
+                    <div class="tryCustEquipWrap col-12 col-lg-6">
   
                         <ul class="tryCustTabs tryCustGroup">
                             <li><a class="tryCustActive" href="#/tryCustEquipInnerSet">舞團</a></li>
@@ -745,7 +745,7 @@ try{
                             <section id="tryCustEquipInnerSet">
                                 <!-- 舞團 -->
                                 <div class="custItem danceItem">
-                                    <div class="custItemContent">
+                                    <div id="custItemContent" class="custItemContent">
                                     <?php 
                                         $sql = "select * from troupe";
                                         $troupes = $pdo->query($sql);
@@ -762,17 +762,48 @@ try{
                                 </div>
                             </section>
                             <section id="tryCustEquipSpecial" style="display:none">
-                                煙火                         
+                                <!-- 特效 -->
+                                <div id="effectItem" class="custItem effectItem">
+                                    <div id="effectCustItemContent" class="custItemContent effectItem">
+                                        <?php 
+                                            $sql = "select * from effects";
+                                            $effects = $pdo->query($sql);
+                                            $i = 1;
+                                            while( $effect = $effects->fetch(PDO::FETCH_ASSOC) ){
+                                        ?>
+                                        <div id="fireEffect<?php echo $i ?>" class="custItemContentInfo fireInfo">
+                                            <img src="<?php echo $effect["effectsImgUrl"]; ?>" alt="">
+                                            <p><?php echo $effect["effectsName"]; ?></p>
+                                            <p>$<?php echo $effect["effectsPrice"]; ?></p>
+                                        </div>
+                                        <?php $i++; } ?>
+                                        <?php
+                                            $i = 1;
+                                            while( $firework = $fireworks->fetch(PDO::FETCH_ASSOC) ){
+                                        ?>
+                                        <div id="fireworkEffect<?php echo $i ?>" class="custItemContentInfo fireworkInfo">
+                                            <img src="<?php echo $firework["fireworkImgUrl"] ?>" alt="">
+                                            <p><?php echo $firework["fireworkName"] ?></p>
+                                            <p>$<?php echo $firework["fireworkPrice"] ?></p>
+                                        </div>
+                                        <?php $i++; } ?>
+                                    </div>
+                                </div>                         
                             </section>
                         </div>
-                        <a  href="#">
-                            <div class="commonBtn" >
-                               下一步 
-                            </div>       
-                        </a>
+                        
                     </div>
                     
                 </div>
+                <div class="col-12">
+                    <a  href="customized_01.php">
+                    <div class="commonBtn" > 
+                        下一步 
+                    </div>
+                    </a> 
+                </div>
+                          
+                
                 </div>
             </div>
             
@@ -1381,7 +1412,7 @@ try{
     </script>
 
 <!--第三屏客製試試看-->
-<script src="js/custStepPage.js"></script>
+<script src="js/introCustTry.js"></script>
 
 
     <!--第四屏客製宣傳單  功能詳細說明按鈕-->

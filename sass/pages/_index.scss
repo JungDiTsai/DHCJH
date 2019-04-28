@@ -14,13 +14,12 @@ a{
   text-decoration: none;
 }
 #gameHub{
-  transform: scale(.75);
   opacity:0.85;
   position: fixed;
-  left: -360px;
+  left: -370px;
   bottom: 100px;
-  width: 120px;
-  height: 80px;
+  width: 80px;
+  height: 65px;
   text-align: center;
   ////outline: 5px red solid;
   color: #ffffa3;
@@ -56,7 +55,7 @@ a{
   right: 20px;
   bottom: -200px;
   border-radius:20px;
-  z-index: 2;
+  z-index: 3;
   box-shadow:0px 0px 5px rgba(0, 0, 0, 0.2);
   p{
     color:#121;
@@ -1092,17 +1091,23 @@ a{
     background-size: cover;
   }
   .commonBtn{
-    margin: auto;
+    margin: -10px auto auto auto;
   }
 }
-
+.stageView{
+  outline:red 5px solid;
+}
 .stageTry{
-  margin: auto;
+  //display: flex;
+  width: 90vw;
+  max-width: 1200px;
 }
 .tryCustEquipWrap {
-  margin: 18px auto;
+  margin: 10px auto;
   outline: red solid 5px;
 }
+
+
 ul.tryCustTabs {
   width: 300px;
   height: 70px;
@@ -1165,7 +1170,7 @@ ul.tryCustTabs li a.tryCustActive {
   background: #545f60;
   color: #6edeef;
   /*color: #ff6831;*/
-  z-index: 4;
+  z-index: 2;
   outline: none;
 }
 .tryCustGroup:before,
@@ -1178,7 +1183,7 @@ ul.tryCustTabs li a.tryCustActive {
 }
 #tryCustEquipContent {
   width: 300px;
-  height: 120px;
+  height: 150px;
   margin: 0 auto;
   background: #545f60;
   -webkit-box-shadow: 2px 8px 25px -2px rgba(0, 0, 0, 0.3);
@@ -1200,13 +1205,19 @@ ul.tryCustTabs li a.tryCustActive {
     perspective: 900px;
 }
 #perspectiveTry{
-  height: 150px;
+  height: 140px;
 }
 
 #danceDetail{
   outline:red 5px solid;
 }
-
+.custItemContent{
+  background-image: none;
+  filter: none;
+}
+#tryCustEquipInnerSet{
+  overflow-x: scroll;
+}
 
 //引入客製頁面
 
@@ -2148,6 +2159,9 @@ footer{
   }
   #tryCustormiseWrap{
     height: 100vh;
+    .commonBtn{
+      margin: 10vh auto auto auto;
+    }
   }
   
 }
@@ -2279,7 +2293,36 @@ footer{
     }
   }
 
+  //客製試試看
+  .stageTry{
+    display:flex;
+  }
+  #tryCustormiseWrap .perspective{
+    transform:scale(1.5);
+  }
+  .groupA{
+    margin-top: 16vh;
+  }
+  ul.tryCustTabs{
+    width: 380px;
+  }
+  ul.tryCustTabs li{
+    width: 190px;
+    height:80px;
+  }
+  #tryCustEquipContent{
+    
+    width: 380px;
+    height: 370px;
+  }
+  #custItemContent,#effectCustItem{
+    width: 380px;
+    height: 370px;
+    padding: 10px 0px 0px 0px;
+  }
 }
+
+
 //舞台配件介紹 col-lg 尾
 @media screen and (min-width:992px) {
   .perspectiveIntro{
@@ -2403,8 +2446,13 @@ footer{
     .EquipIntroWrapper{
       margin-top: 100px;
       .commonBtn{
-        margin-top: -160px;
+        margin-top: -220px;
       }
+    }
+  }
+  #tryCustormiseWrap{
+    .commonBtn{
+      margin: 12vh auto auto auto;
     }
   }
   
