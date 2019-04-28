@@ -11,8 +11,8 @@
        $products->bindValue(':memName',$addMember[2]);
        $products->bindValue(':memTel',$addMember[3]);
        $products->bindValue(':memEmail',$addMember[4]);
-       $products->bindValue(':memImgUrl',"");
-       $products->bindValue(':memState',0);
+       $products->bindValue(':memImgUrl',"images/member/member.jpg");
+       $products->bindValue(':memState','啟用');
        $products->bindValue(':memGender',$addMember[5]);
        $products->execute();
     //    $number = $products->rowCount();

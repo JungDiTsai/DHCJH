@@ -381,7 +381,7 @@
             </div>
             <div class="envelopeContent">
                 <div class="envelopeTitle">
-                    <div class="titleImg"><img src="images/member2.jpg" alt=""></div>
+                    <div class="titleImg"><img src="" alt=""></div>
                     <div class="titleName">
                         <p></p>
                         <span>參加人數 <mark id='MyNumber'></mark> 人</span>
@@ -467,16 +467,16 @@
                 } else {
                     loginBox.style.setProperty('display', "block");
                 }
-            }else if(LoginState[0][16]==null){
+            }else if(LoginState[0]['orderName']==null){
                 alert('請先有花車才能使用此功能喔');
             }
             else{
                 let str = '';
                  for (let i = 0; i < LoginState.length; i++) {
                      if(i==LoginState.length-1){
-                         str +=LoginState[i][16];
+                         str +=LoginState[i]['orderName'];
                      }else{
-                         str +=LoginState[i][16]+',';
+                         str +=LoginState[i]['orderName']+',';
                      }
 
                  }
@@ -485,7 +485,7 @@
                      alert('沒有這個訂單請重新輸入');
                  }
                  else{
-                     OrderNo = enterData;
+                    OrderNo = enterData;
                      console.log(OrderNo);
                      alert('已匯入您的訂單');
                      let clothCurtain = document.querySelector('.clothCurtain');
@@ -499,7 +499,7 @@
         //點擊檢舉輸入原因 傳到後端
         function flyerReport(){
             if(LoginState!="notFound"){
-                let MymemNo = LoginState[0]['memNo'];
+                let MymemNo = LoginState[0][0];
                 let str = prompt("請輸入檢舉原因","");
                 let orderNo = document.getElementById('flyerReport').getAttribute('order');
                 if(str==""){
@@ -524,6 +524,7 @@
                 
             }else{
                 // 顯示登入燈箱
+                alert('親愛的訪客您好 , 必須先登入才能使用檢舉功能');
                 let loginBox = document.querySelector('.loginBox');
                 let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
                 if (style == "block") {
@@ -605,12 +606,15 @@
                       var xhr = new XMLHttpRequest();
                       xhr.onreadystatechange = function(){
                         if( xhr.readyState == XMLHttpRequest.DONE ){ 
-                          if( xhr.status == 200){ 
-                               let data = JSON.parse(xhr.responseText);
+                          if( xhr.status == 200){
+                              let data = JSON.parse(xhr.responseText);
+                              console.log(data);
+                               document.querySelector('.flyerArea img').src = data[16];
                                document.querySelector('#QrcodeIcon div p').setAttribute('order',data['orderNo']);
                                document.querySelector('.envelopeBar button').setAttribute('order',data['orderNo']);
                                document.querySelector('.envelopeHeader h4').innerText= data['orderName'];
                                document.querySelector('.envelopeHeader span').innerText= data['flyeDate'];
+                               document.querySelector('.titleImg img').src= data[29];
                                document.querySelector('.titleName p').innerText= data['memName'];
                                document.querySelector('.titleName mark').innerText= data['peopleNumber'];
                                document.querySelector('.envelopeDetail p:nth-of-type(2)').innerText= data['hostName'];
@@ -773,7 +777,6 @@
             });
 
             A4Box.addEventListener('drop', function (e) {
-                e.preventDefault();
                 let thisImg = e.dataTransfer.getData('image/jpeg');
                 let thish5 = e.dataTransfer.getData('text');
                 if(thisImg!=""){

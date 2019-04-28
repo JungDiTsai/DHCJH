@@ -107,13 +107,13 @@ new Vue({
         settingPeople(e){
             console.log(e.target.value);
             if(e.target.value=="open"){
-                this.setting[9] = '啟用';
+                this.setting[9] = 1;
             }
         },
         settingJoin(e){
             console.log(e.target.value);
             if(e.target.value=="open"){
-                this.setting[10] = '啟用';
+                this.setting[10] = 1;
             }
         },
        clickSelectBox(){
@@ -123,7 +123,7 @@ new Vue({
                 //比對Order 對照訂單
                 let number = 0;
                 for (let i = 0; i < LoginState.length; i++) {
-                    if(LoginState[i][16].search(OrderNo)!= -1){
+                    if(LoginState[i]['orderName'].search(OrderNo)!= -1){
                         number = i;
                     }
                 }
@@ -148,20 +148,6 @@ new Vue({
                   xhr.open("get", url, true);
                   //送出資料
                   xhr.send(null);
-                  $.ajax({
-                      url: '.php',
-                      type: 'GET',
-                      data: {
-                        flyerSetting: $('#id').val(),
-                        member:$('#id').val()
-                      },
-                      success: function(response) {
-                          console.log(response);
-                      },
-                      error: function(xhr) {
-                        alert('Ajax request 發生錯誤');
-                      }
-                    });
                 
                 // (2)---------------------------------------上傳檔案--(儲存預備圖)
                 //產生XMLHttpRequest物件
@@ -186,19 +172,6 @@ new Vue({
                 
 
 
-                  $.ajax({
-                      url: '.php',
-                      type: 'GET',
-                      data: {
-                        user_name: $('#').val()
-                      },
-                      success: function(response) {
-                          console.log(response);
-                      },
-                      error: function(xhr) {
-                        alert('Ajax request 發生錯誤');
-                      }
-                    });
 
                 
             
@@ -410,7 +383,7 @@ new Vue({
                             //讀取檔案----------------------
                             xhr.onload = function () {
                                 if (xhr.status == 200) {
-                                    location.reload();
+                                   
                             document.getElementById('A4page').value = xhr.responseText;
                                 } else{
                                     alert();
@@ -424,7 +397,16 @@ new Vue({
                             xhr.open("Post", url, true);
                             xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
                             //送出資料
-                            var data_info = "imgURL=" + img;
+                            //比對Order 對照訂單
+                            let number = 0;
+                            for (let i = 0; i < LoginState.length; i++) {
+                                if(LoginState[i]['orderName'].search(OrderNo)!= -1){
+                                    number = i;
+                                }
+                            }
+                            console.log("第"+number+"筆訂單");
+                            console.log(LoginState[number]['orderNo']);
+                            var data_info = "imgURL=" + img +"&orderNo=" + LoginState[number]['orderNo'];
                             xhr.send(data_info);
 
 

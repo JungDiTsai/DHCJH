@@ -47,7 +47,7 @@
                         <tr>
                             <th>會員密碼</th>
                             <td class="memPswInfo">
-                                <p></p>
+                                <p><?php echo $_SESSION["member"][0][2]?></p>
                                 <i class="fas fa-pen"></i>
                             </td>
                         </tr>
