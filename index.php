@@ -798,7 +798,7 @@ try{
                 <div class="col-12">
                     <a  href="customized_01.php">
                     <div class="commonBtn" > 
-                        立馬客製 
+                        下一步 
                     </div>
                     </a> 
                 </div>

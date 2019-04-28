@@ -5,13 +5,6 @@
   height: 44px;
 }
 
-#bigMember{
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-
-
 #nav-icon2 span {
     display: block;
     position: absolute;
@@ -167,8 +160,10 @@
           cursor: pointer;
           position: absolute;
           width: 34px;
+          top: 2px;
+          right: 0;
             &:hover{
-              animation: jitter 5s linear infinite alternate-reverse;
+              animation: jitter 1.5s linear infinite;
           }
         }
         p{
@@ -184,7 +179,8 @@ header{
     height: 80px;
     width: 100%;
     top: 0px;
-    z-index: 99;
+    z-index: 1;
+    z-index: 3;
     animation: headerNeon 1s infinite; 
 }
 footer{
@@ -213,9 +209,6 @@ footer{
   }
 }
 @media screen and (min-width:1200px){
-    #bigMember{
-      transform: translateY(-25%)translateX(-25%);
-    }
 
     .menubtn{display: none}
     header{
