@@ -9,12 +9,14 @@
     }
 
     $errMsg='';
+    
     try {
         $orderNo =  $member->orderNo;
         $sql ="SELECT * From flyer where orderNo = $orderNo";
         $products = $pdo->query($sql);
         $number = $products->rowCount();
-        echo '存在' $number '筆資料';
+
+
         if($number==1){
             $sql ="UPDATE flyer SET flyerImgUrl='$flyerSetting[0]' where orderNo = $orderNo";
             $products = $pdo->exec($sql);
