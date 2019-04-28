@@ -1,6 +1,6 @@
 window.addEventListener('resize',function(){
     if(window.innerWidth < 1200){
-        stagescale();
+        return;
     }else{
         init();
     }

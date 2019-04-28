@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,7 +38,7 @@
 
 <body>
     <input type="checkbox" id=menu_control>
-
+    
     <?php require_once("php/header.php");?>
     <?php require_once("php/loginLightBox.php");?>
     <!-- flyer內容 -->
@@ -86,12 +85,6 @@
                             <img src="" alt="">
                             <h5></h5>
                             <div id="A4qrcode"><img src="" alt=""></div>
-                        </div>
-                        <div id="moveBtn">
-                            <span v-on:click="moveLeft">&larr;</span>
-                            <span v-on:click="moveTop">&uarr;</span>
-                            <span v-on:click="moveBottom">&darr;</span>
-                            <span v-on:click="moveRight">&rarr;</span>
                         </div>
                         <div id="tool">
                             <i class="fas fa-search-plus" v-on:click="clickPlus"></i>
@@ -281,29 +274,20 @@
                 </div>
             </div>
             <div class="owl-carousel owl-theme">
-            <?php
-                require_once("php/components/_connectDHC.php");
-                $errMsg='';
-                try {
-                    $sql = 'SELECT * FROM flyer';
-                    $products = $pdo->query($sql);
-                    foreach( $products as $i=>$prodRow){
-            ?>
-                    <div class="item"><img order="<?php echo $prodRow['flyerNo']?>" src="<?php echo $prodRow['flyerImgUrl'] ?>" class="flyer"></div>
-            <?php   }
-                 } catch (PDOException $e) {
-                    $errMsg .=  '錯誤原因' . $e->getMessage() . '<br>'; 
-                    $errMsg .=  '錯誤行號' . $e->getLine() . '<br>';
-                }
-            ?>
+                <div class="item"><img src="images/flyer/1.jpg" class="flyer"></div>
+                <div class="item"><img src="images/flyer/2.jpg" class="flyer"></div>
+                <div class="item"><img src="images/flyer/3.jpg" class="flyer"></div>
+                <div class="item"><img src="images/flyer/4.jpg" class="flyer"></div>
+                <div class="item"><img src="images/flyer/1.jpg" class="flyer"></div>
+                <div class="item"><img src="images/flyer/2.jpg" class="flyer"></div>
+                <div class="item"><img src="images/flyer/3.jpg" class="flyer"></div>
+                <div class="item"><img src="images/flyer/4.jpg" class="flyer"></div>
+                <div class="item"><img src="images/flyer/5.jpg" class="flyer"></div>
             </div>
     </article>
-    
     <article class="thrScreen">
-        
         <h2 class="titleBgi">小試身手</h2>
         <div class="wrap">
-            
             <ul id="showflyer2">
                 <?php
                     $json = file_get_contents("php/components/24hours.json");
@@ -322,7 +306,7 @@
         </div>
     </article>
 
-    
+
     <!-- 宣傳單燈箱 -->
     <div class="blackBox">
         <div class="envelopeLightBox">
@@ -335,7 +319,7 @@
                 </div>
             </div>
             <div class="flyerArea">
-                <img src="images/flyer/member_3.jpg" alt="宣傳單">
+                <img src="images/flyer/1.jpg" alt="宣傳單">
                 <div class="envelopeHeader">
                     <h4>闖闖看淘氣大舞台</h4>
                     <span>活動時間 2019-08-28</span>
@@ -373,28 +357,6 @@
     <script src="js/_flyer_vue.js"></script>
     <script src="js/_flyer_tweenMax.js"></script>
     <script>
-        // //ajax更換燈箱詳情內容
-        // window.addEventListener("load", function () {
-        //     $.ajax({
-        //         url: 'php/components/_getBigFlyer.php',
-        //         type: 'GET',
-        //         data: {
-        //         },
-        //         success: function(response) {
-        //             console.log(JSON.parse(response));
-        //             let data = JSON.parse(response);
-        //             for (let i = 0; i < data.length; i++) {
-        //                 let div = document.createElement('div');
-        //                 div.classList.add('item');
-        //                 document.getElementsByClassName('owl-theme')[0].appendChild(div);
-        //             }
-        //             // <div class="item"><img src="images/flyer/1.jpg" class="flyer"></div>
-        //         },
-        //         error: function(xhr) {
-        //           alert('Ajax request 發生錯誤');
-        //         }
-        //       });
-        // })
         //匯入訂單
         document.getElementById('enterOrder').addEventListener('click',function(){
             if(LoginState=="notFound"){
@@ -406,10 +368,7 @@
                 } else {
                     loginBox.style.setProperty('display', "block");
                 }
-            }else if(LoginState[0][16]==null){
-                alert('請先有花車才能使用此功能喔');
-            }
-            else{
+            }else{
                 let str = '';
                  for (let i = 0; i < LoginState.length; i++) {
                      if(i==LoginState.length-1){
@@ -419,11 +378,10 @@
                      }
 
                  }
-                 let enterData = prompt(`請輸入你要匯入訂單的名稱  ${str}`,'');
+                 let enterData = prompt(`請輸入你要匯入訂單的 "完整名稱"  ${str}`,'');
                  if(str.match(enterData)==null||str.match(enterData)==""){
                      alert('沒有這個訂單請重新輸入');
-                 }
-                 else{
+                 }else{
                      OrderNo = enterData;
                      console.log(OrderNo);
                      alert('已匯入您的訂單');
@@ -628,20 +586,16 @@
         let A4Box = document.getElementById('A4page');
 
         for (let i = 1; i < AllToolImg.length; i++) {
-            AllToolImg[i].addEventListener('click', function (e) {
-                let aa = e.target.src;
-                A4Box.getElementsByTagName('img')[0].src = aa;
-            })
+
             //對拖拉圖片設定-------------------------------
             AllToolImg[i].addEventListener('dragstart', function (e) {
                 let aa = e.target.src;
                 console.log(aa);
                 e.dataTransfer.setData('image/jpeg', aa)
             })
-            //對拖拉日期文字做設定-------------------------
-            document.querySelector('#A4page h5').addEventListener('mousedown', function (e) {
-                console.log(e.clientX,e.clientY);
-            });
+            AllToolImg[i].addEventListener('dragend', function (e) {
+                //拖拉圖片結束後，對圖片設定
+            })
 
             //對置入的盒子做設定---------------------------
             A4Box.addEventListener('dragover', function (e) {
@@ -649,12 +603,8 @@
             });
 
             A4Box.addEventListener('drop', function (e) {
-                e.preventDefault();
                 let thisImg = e.dataTransfer.getData('image/jpeg');
-                let thish5 = e.dataTransfer.getData('text');
-                if(thisImg!=""){
-                    this.getElementsByTagName('img')[0].src = thisImg;
-                }
+                this.getElementsByTagName('img')[0].src = thisImg;
             })
         }
 
@@ -679,6 +629,7 @@
             document.querySelector('#A4qrcode img').src = img;
         })
     </script>
+
 </body>
 
 </html>
