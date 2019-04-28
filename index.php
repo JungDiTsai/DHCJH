@@ -34,11 +34,11 @@ try{
     <!-- fullPage.js v2.9.5 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.min.css" rel="stylesheet"  />
-    <script src="node_modules/gsap/src/minified/TweenMax.min.js"></script>
-    <script src="node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
-    <script src="node_modules/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/ScrollMagic.min.js"></script>
+    <script src="js/animation.gsap.min.js"></script>
     <!---開發時除蟲蟲用的 上線時要刪掉--->
-    <script src="node_modules/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
+    <script src="js/debug.addIndicators.min.js"></script>
     <script src="js/scrollMagic2.js" defer></script>
     
     <style>
