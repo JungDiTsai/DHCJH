@@ -33,14 +33,14 @@ function initScene() {
 
 //初始化dat.GUI簡化試驗流程
 
-var gui;
-function initGui() {
-    //聲明一個保存需求修改的相關數據的對象
-    gui = {
-    };
-    var datGui = new dat.GUI();
-    //將設置屬性添加到gui當中，gui.add(對象，屬性，最小值，最大值）
-}
+// var gui;
+// function initGui() {
+//     //聲明一個保存需求修改的相關數據的對象
+//     gui = {
+//     };
+//     var datGui = new dat.GUI();
+//     //將設置屬性添加到gui當中，gui.add(對象，屬性，最小值，最大值）
+// }
 
 
 
@@ -59,8 +59,8 @@ var modelearth;
 var modelcar;
 function initModel() {
     //輔助工具
-    var helper = new THREE.AxesHelper(50);
-    scene.add(helper);
+    // var helper = new THREE.AxesHelper(50);
+    // scene.add(helper);
     var mtlLoader = new THREE.MTLLoader();
     mtlLoader.setPath('three/car/02/');
     //加載mtl文件
@@ -117,12 +117,12 @@ function createParticles(size,transparent,opacity,vertexColors,sizeAttenuation,c
 
     
 //初始化性能插件
-var stats;
-function initStats() {
-    stats = new Stats();
-    // document.body.appendChild(stats.dom);
-    document.getElementById('canvasScene').appendChild(stats.dom);
-}
+// var stats;
+// function initStats() {
+//     stats = new Stats();
+//     // document.body.appendChild(stats.dom);
+//     document.getElementById('canvasScene').appendChild(stats.dom);
+// }
 
 
 
@@ -179,7 +179,7 @@ function animate() {
     //更新控制器
     render();
     //更新性能插件
-    stats.update();
+    // stats.update();
     controls.update();
     requestAnimationFrame(animate);
     TWEEN.update();
@@ -220,7 +220,7 @@ tweenBack.onUpdate(onUpdate);
 
 
 function draw() {
-    initGui();
+    // initGui();
     initRender();
     initScene();
     initCamera();
@@ -229,7 +229,7 @@ function draw() {
     // createSprites();
     createParticles();
     initControls();
-    initStats();
+    // initStats();
     animate();
     onDocumentMouseDown(event);
     window.onresize = onWindowResize;
