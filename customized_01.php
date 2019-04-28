@@ -506,7 +506,7 @@
                     <p class="orderDate">選擇日期：<span></span></p>
                     <p class="orderLoc">活動地點：<span></span></p>
                     <div id="orderStage">
-                        <div class="perspective">
+                        <div id="orderStagePic" class="perspective">
                             <div class="groupA">
                                 <!-- 周邊細項 -->
                                     <!-- ? -->

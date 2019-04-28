@@ -32,8 +32,8 @@ $(document).ready(function(){
             // if(){       //未登入
 
             // }else{      //已登入
-            //     saveCustImg();                              //拍照
-                $('.checkoutBg').removeClass('disN');       //準備結帳
+                saveCustImg();                              //拍照
+                $('.checkoutBg').removeClass('disN')        //準備結帳
             // }
         }
     });
@@ -805,9 +805,6 @@ function getOrderInfo(){
     $('.checkoutOrder p span').text(subtotal);
 
     // 抓取json
-    // var jsonstrDraw = {};
-    // jsonstrDraw.drawNo = orderDrawNo;
-    // console.log(orderDrawNo);
     // var jsonstrTroupe = {};
     // jsonstrTroupe.troupeNo = orderDanceNo;
     // console.log(orderDanceNo);
@@ -834,62 +831,37 @@ function getOrderInfo(){
     // var jsonstrLoc = {};
     // jsonstrLoc.locNo = locValue;
     // console.log(locValue);
+    // var jsonstrTotalMoney = {};
+    // jsonstrTotalMoney.totalMoney = subtotal;
+    // console.log(subtotal);
 }
 // ======================================================
 // 資料寫進json--ajax
 // ======================================================
-function saveOrder (){
-    //塗裝問題
-    var jsonstrTroupe = {};
-    jsonstrTroupe.troupeNo = orderDanceNo;
-    console.log(orderDanceNo);
-    var jsonstrFire = {};
-    jsonstrFire.fireNo = orderFireNo;
-    console.log(orderFireNo);
-    var jsonstrFirework = {};
-    jsonstrFirework.fireworkNo = orderFireworkNo;
-    console.log(orderFireworkNo);
-    var jsonstrAudio = {};
-    jsonstrAudio.audioNo = orderAudioNo;
-    console.log(orderAudioNo);
-    var jsonstrPipe = {};
-    jsonstrPipe.pipeNo = orderPipeNo;
-    console.log(orderPipeNo);
-    var jsonstrHost = {};
-    jsonstrHost.hostNo = orderHostNo;
-    console.log(orderHostNo);
+function saveOrder (){    
     datevalue = $('.orderDate span').text();
-    var jsonstrDate = {};
-    jsonstrDate.dateNo = datevalue;
-    console.log(datevalue);
     locValue = $('.orderLoc span').text();
-    var jsonstrLoc = {};
-    jsonstrLoc.locNo = locValue;
-    console.log(locValue);
-    var jsonstrTotalMoney = {};
-    jsonstrTotalMoney.totalMoney = subtotal;
-    console.log(subtotal);
     //照片儲存
 
     
-    // var order = {
-    //     "orderNo": null,
-    //     "memNo": "memNo",
-    //     "memCouponsNo": "memCouponsNo",
-    //     "totalMoney": orderPipeNo,
-    //     "orderImgUrl": "orderImgUrl",
-    //     "actPlace": locValue,
-    //     "actStart": datevalue,
-    //     "content":[{
-    //         "troupeNo": orderDanceNo,
-    //         "fireNo": orderFireNo,
-    //         "fireworkNo": orderFireworkNo,
-    //         "audioNo": orderPipeNo,
-    //         "pipeNo": orderPipeNo,
-    //         "hostNo": orderHostNo,
-    //     }],
-    //     "orderCompleted": true
-    // };
+    var order = {
+        "orderNo": null,
+        "memNo": "memNo",
+        "memCouponsNo": "memCouponsNo",
+        "totalMoney": orderPipeNo,
+        "orderImgUrl": "orderImgUrl",
+        "actPlace": locValue,
+        "actStart": datevalue,
+        "content":[{
+            "troupeNo": orderDanceNo,
+            "fireNo": orderFireNo,
+            "fireworkNo": orderFireworkNo,
+            "audioNo": orderPipeNo,
+            "pipeNo": orderPipeNo,
+            "hostNo": orderHostNo,
+        }],
+        "orderCompleted": true
+    };
        
     // alert ( JSON.stringify( order ) ); 
     
@@ -899,8 +871,8 @@ function saveOrder (){
         // 資料寫入php
         $.ajax({  
             url: "php/components/_custItemInfo.php",  
-            dataType: "json",
-            type: "POST",
+            dataType: "text",
+            type: "GET",
             data: { 
                 "orderNo": null,
                 "memNo": "memNo",
@@ -909,22 +881,15 @@ function saveOrder (){
                 "orderImgUrl": "orderImgUrl",
                 "actPlace": locValue,
                 "actStart": datevalue,
-                "content":[{
+                "items":{
                     "troupeNo": orderDanceNo,
                     "fireNo": orderFireNo,
                     "fireworkNo": orderFireworkNo,
                     "audioNo": orderPipeNo,
                     "pipeNo": orderPipeNo,
                     "hostNo": orderHostNo,
-                }],
-                // troupeNo : orderDanceNo,
-                // fireNo : orderFireNo,
-                // fireworkNo : orderFireworkNo,
-                // audioNo : orderAudioNo,
-                // pipeNo : orderPipeNo,
-                // hostNo : orderHostNo,
-                // dateNo : datevalue,
-                // locNo : locValue,
+                },
+                
             },
             success: function(data){
                 if ( data == '1'){
@@ -948,20 +913,18 @@ function saveOrder (){
 // ======================================================
 function saveCustImg(){
 
-    var orderStage = document.getElementById('orderStage');
-    // $('.back').css({
-    //     'transform' : " translateX(0px) translateZ(75px)"});
+    var orderStage = document.getElementById('orderStagePic');
 
     domtoimage.toJpeg(orderStage)
         .then(function (dataUrl) {
-            // console.log(dataUrl);
+            console.log(dataUrl);
             let img = dataUrl
 
             // 產生XMLHttpRequest物件
             let xhr = new XMLHttpRequest();
 
             //設定好所要連結的程式
-            var url = "_saveCustImg.php";
+            var url = "php/components/_saveCustImg.php";
             xhr.open("Post", url, true);
             xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
             //送出資料

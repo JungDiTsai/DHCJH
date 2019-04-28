@@ -1,11 +1,5 @@
 <?php
 $errMsg = "";
-// if( isset($_SESSION["memId"]) === false ){  //尚未登入
-//     echo "<center>尚未登入，<a href='login.html'>請登入</a></center><br>";
-//     $_SESSION["where"] = $_SERVER["PHP_SELF"];
-// }else{
-    // $orderMemNo = 1;
-    // $email = "sara168@gmail.com";
     try{
     require_once("connectBooks.php");
 
@@ -16,11 +10,11 @@ $errMsg = "";
     $sql = "INSERT INTO ORDERS VALUES (orderNo=null, memNo=:memNo, memCouponsNo=:memCouponsNo, totalMoney=:totalMoney, orderImgUrl=:orderImgUrl, actPlace=:actPlace, actStart=:actStart)";
     $custOrder = $pdo->prepare($sql);
     $custOrder->bindValue(":memNo", memNo);
-    $custOrder->bindValue(":memCouponsNo", memCouponsNo);
-    $custOrder->bindValue(":totalMoney", subtotal);
-    $custOrder->bindValue(":orderImgUrl", orderImgUrl);
-    $custOrder->bindValue(":actPlace", locValue);
-    $custOrder->bindValue(":actStart", datevalue);
+    $custOrder->bindValue(":memCouponsNo", $_REQUIRE["memCouponsNo"]);
+    $custOrder->bindValue(":totalMoney", $_REQUIRE["subtotal"]);
+    $custOrder->bindValue(":orderImgUrl", $_REQUIRE["orderImgUrl"]);
+    $custOrder->bindValue(":actPlace", $_REQUIRE["locValue"]);
+    $custOrder->bindValue(":actStart", $_REQUIRE["datevalue"]);
 
     $custOrder->execute();
 
@@ -55,5 +49,4 @@ $errMsg = "";
 
 //     //送出json字串
 //     echo json_encode($memRow);
-//   }	
 ?>

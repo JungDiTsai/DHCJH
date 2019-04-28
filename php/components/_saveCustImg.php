@@ -1,5 +1,5 @@
 <?php
-    $upload_dir = "images//";
+    $upload_dir = "../../images//";
     if( ! file_exists($upload_dir ))
     mkdir($upload_dir);
     $img = $_REQUEST["imgURL"]; //取得ajax的值
