@@ -28,7 +28,7 @@
         <div id="memberData" class="col-md-10">
             <div class="memberImg min_view">
                 <label for="memberImgFile">
-                    <img src="images/member2.jpg" alt="">
+                    <img src="<?php echo $_SESSION["member"][0][6]?>" alt="">
                 </label>
             </div>
             <form id="myform">
@@ -203,8 +203,8 @@
                     //註冊callback function
                     xhr.onload = function(){
                         if( xhr.status == 200){ //server端可以正確的行
-                            alert("修改成功");
                             window.location.reload();
+                            alert("修改成功");
                         }else{ //其它
                             alert( xhr.status );
                         }

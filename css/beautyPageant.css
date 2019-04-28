@@ -1056,7 +1056,6 @@ footer img {
   background: #323;
   background-size: cover;
   color: #ffffbd;
-  outline: none;
   border-radius: 20px;
   line-height: 75px;
   border: none;
@@ -1083,7 +1082,6 @@ footer img {
   color: #ffffbd;
   border-radius: 15px;
   line-height: 60px;
-  outline: none;
   border: none;
   z-index: 2;
   -webkit-box-shadow: 0 0 2px 4px #ffffbd;
@@ -1396,6 +1394,92 @@ footer img {
   }
 }
 
+.loginbox1 {
+  display: none;
+  width: 300px;
+  height: 350px;
+  background: #fff;
+  border: 5px solid #17F4F0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 50;
+  border-radius: 10px;
+  padding: 30px 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  -webkit-box-shadow: 0 0 10px #17F4F0;
+          box-shadow: 0 0 10px #17F4F0;
+  -webkit-box-shadow: 0 0 10px  #666 inset;
+          box-shadow: 0 0 10px  #666 inset;
+}
+
+.loginbox1 .fa-times {
+  color: #17F4F0;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.loginbox1 .fa-times:hover {
+  color: #000;
+}
+
+.loginbox1 h3 {
+  margin-top: 0px;
+  font-size: 30px;
+  color: #17F4F0;
+}
+
+.loginbox1 .inputBox {
+  background: #2d3631;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 10px 15px;
+}
+
+.loginbox1 .inputBox i {
+  color: #fff;
+}
+
+.loginbox1 .inputBox input {
+  height: 20px;
+  margin-left: 10px;
+  width: 80%;
+  background: #2d3631;
+  outline: none;
+  border: none;
+  color: #fff;
+}
+
+.loginbox1 .commonBtnSmall {
+  margin-top: 20px;
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+  line-height: 40px;
+}
+
+.loginbox1 p {
+  margin-top: 20px;
+  color: #17F4F0;
+}
+
+.loginbox1 p a {
+  cursor: pointer;
+  color: #17F4F0;
+  text-decoration: none;
+}
+
+.loginbox1 p a:hover {
+  color: #f3d217;
+}
+
 #musicContent {
   position: absolute;
   top: 0;
@@ -1441,11 +1525,19 @@ li {
   background-repeat: no-repeat;
 }
 
+#beautyRankingimgsMonth {
+  display: none;
+}
+
 .beautyRankingContainer {
   position: relative;
   width: 100%;
   max-width: 1200px;
   margin: auto;
+  height: auto;
+}
+
+.beautyRankingContainer #beautyRankingimgs {
   height: auto;
 }
 
@@ -1614,6 +1706,7 @@ li {
 }
 
 .dotpanel {
+  display: none;
   position: absolute;
   height: auto;
   width: 76px;
@@ -1736,8 +1829,9 @@ li {
 .beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg .beautyDiscIgMemTextContainerWrap {
   margin: 20px 0px;
   font-family: '微軟正黑';
-  overflow-x: hidden;
-  max-height: 78px;
+  overflow-y: scroll;
+  max-height: 76px;
+  height: 76px;
 }
 
 .beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg .beautyDiscIgMemTextContainerWrap .beautyDiscIgMemTextContainer {
@@ -1753,6 +1847,8 @@ li {
   height: 28px;
   border-radius: 50%;
   margin-left: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg .beautyDiscIgMemTextContainerWrap .beautyDiscIgMemTextContainer .beautyDiscIgMName {
@@ -1761,6 +1857,7 @@ li {
   letter-spacing: 0.1em;
   font-weight: 900;
   padding-left: 5px;
+  width: 80px;
 }
 
 .beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg .beautyDiscIgMemTextContainerWrap .beautyDiscIgMemTextContainer .beautyDiscIgNameText {
@@ -1768,6 +1865,7 @@ li {
   line-height: 28PX;
   font-size: 16px;
   color: #444;
+  width: 150px;
 }
 
 .beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg .beautyDiscIgMemStage img {
@@ -1825,17 +1923,39 @@ li {
   border-radius: 5px;
   color: #fff;
   background-color: #ff7951;
-  margin-top: -30px;
+  margin-top: 3px;
   cursor: pointer;
 }
 
 @media screen and (min-width: 1200px) {
+  .beautyDiscIgMemTextContainerWrap {
+    border-radius: 15px;
+    /*定义滚动条轨道
+      内阴影+圆角*/
+    /*定义滑块
+      内阴影+圆角*/
+  }
+  .beautyDiscIgMemTextContainerWrap::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+    background-color: #F2EB50;
+  }
+  .beautyDiscIgMemTextContainerWrap::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: #faf6ac;
+  }
+  .beautyDiscIgMemTextContainerWrap::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+    background-color: #555;
+  }
   .beautyDiscWrap .beautyDiscContainer {
     max-width: 1200px;
     height: auto;
   }
   .beautyDiscWrap .beautyDiscContainer .beautyDiscFilter {
-    margin-top: 100px;
+    margin-top: 50px;
     max-width: 1200px;
     height: 50px;
     margin-left: 19px;
@@ -1856,7 +1976,7 @@ li {
   .beautyDiscWrap .beautyDiscContainer .beautyDiscFilter .beautyDiscFilterBox {
     width: 160px;
     display: inline-block;
-    height: 50px;
+    height: 48px;
     border-radius: 10px;
     background-color: #F2EB50;
     padding: 7px;
@@ -1887,7 +2007,7 @@ li {
   .beautyDiscWrap .beautyDiscContainer .beautyDiscStageContainer .beautyDiscIg {
     width: 30%;
     margin: 50px 19px;
-    margin-top: 30px;
+    margin-top: 20px;
   }
   .paginationPanel {
     display: none;

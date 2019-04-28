@@ -42,4 +42,53 @@
     transform: scale(0.97);
     } 
 }
+.custItem{
+    width: 670px;
+    height: 150px;
+}
+#custItemContent{
+    background-image: none;
+    width: 670px;
+    height: 150px;
+    filter: none;
+    padding: 0;
+    //overflow-x: scroll;
+}
+#effectItem{
+    background-image: none;
+    width: 670px;
+    height: 150px;
+    filter: none;
+    padding: 0;
+}
+#effectCustItemContent{
+    background-image: none;
+    padding: 0;
+    width: 670px;
+    height: 150px;
+}
+#tryCustEquipSpecial{
+    overflow-x: scroll;
+}
+@media screen and (min-width:992px) {
+    #effectItem,.custItem{
+        background-image: none;
+        width: 380px;
+        height: 370px;
+        filter: none;
+        padding: 0;
+    }  
+    #effectCustItemContent{
+        background-image: none;
+        padding: 10px 0px 0px 0px;
+        width: 380px;
+        height: 370px;
+    }
+}
+@media screen and (min-width:1200px) {
+    #effectCustItemContent{
+        width: 380px;
+        height: 370px;
+    }
+}
 @import "pages/_index.scss"; //首頁頁面

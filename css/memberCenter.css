@@ -1508,7 +1508,6 @@ footer img {
   background: #323;
   background-size: cover;
   color: #ffffbd;
-  outline: none;
   border-radius: 20px;
   line-height: 75px;
   border: none;
@@ -1535,7 +1534,6 @@ footer img {
   color: #ffffbd;
   border-radius: 15px;
   line-height: 60px;
-  outline: none;
   border: none;
   z-index: 2;
   -webkit-box-shadow: 0 0 2px 4px #ffffbd;
@@ -1646,9 +1644,12 @@ footer img {
   height: 150px;
   position: relative;
   text-align: center;
+  -webkit-clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+          clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
 }
 
 .memberImg img {
+  height: 100%;
   cursor: pointer;
 }
 

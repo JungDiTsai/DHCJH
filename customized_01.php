@@ -44,34 +44,15 @@
     <!-- customzied css -->
     <link rel="stylesheet" href="css/customized.css">
     <!-- jQuery CDN -->
+    
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    
 </head>
 <body>
-    <!-- header -->
+<?php require_once("php/header.php"); ?>
+<?php require_once("php/loginLightBox.php"); ?>
+<!-- header -->
 <input type="checkbox" id=menu_control>
-    <header>    
-        <!-- 放bar選單 -->
-        <label for="menu_control" class="menubtn" >
-            <div id="nav-icon2">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </label>
-        <nav class="mainNav">
-            <li class="mainNavCell"><a href="customized_01.html">電子花車客製</a></li>
-            <li class="mainNavCell"><a href="flyer.html">客製化宣傳單</a></li>
-            <h1 class="navLogo"><a href="index.html"><img src="images/logo.png" alt="台灣大舞台"></a></h1>
-            <li class="mainNavCell"><a href="beautyPageant.html">花車選美</a></li>
-            <li class="mainNavCell"><a href="intro.html">花車特色介紹</a></li>
-            <div class="navMemBtn"> 
-                <i class="far fa-user-circle"></i>
-            </div>
-        </nav>       
-    </header>
     <div class="box"></div>
     <!-- 登入燈箱 -->
     <div class="loginBox">
@@ -590,7 +571,6 @@
             </div>
 
             <!-- 訂單資訊 -->
-            <div id="123">123</div>
             <div class="orderInfo">
                 <div class="orderDateNloc">
                     <p class="orderDate">選擇日期：<span></span></p>
@@ -794,33 +774,33 @@
                         <table>
                             <tr id="orderPattern">
                                 <th>塗裝：</th>
-                                <td>無</td>
-                                <td>0</td>
+                                <td></td>
+                                <td></td>
                             </tr>
                             <tr id="orderDance">
                                 <th>舞團：</th>
-                                <td>無</td>
-                                <td>0</td>
+                                <td></td>
+                                <td></td>
                             </tr>
                             <tr id="orderFire">
                                 <th>火焰特效：</th>
-                                <td>無</td>
-                                <td>0</td>
+                                <td></td>
+                                <td></td>
                             </tr>
                             <tr id="orderFirework">
                                 <th>煙火特效：</th>
-                                <td>無</td>
-                                <td>0</td>
+                                <td></td>
+                                <td></td>
                             </tr>
                             <tr id="orderAudio">
                                 <th>音響：</th>
-                                <td>無</td>
-                                <td>0</td>
+                                <td></td>
+                                <td></td>
                             </tr>
                             <tr id="orderPole">
                                 <th>鋼管：</th>
-                                <td>無</td>
-                                <td>0</td>
+                                <td></td>
+                                <td></td>
                             </tr>
                             <tr>
                                 <th>字幕機：</th>
@@ -829,22 +809,11 @@
                             </tr>
                             <tr id="orderHost">
                                 <th>主持人：</th>
-                                <td>無</td>
-                                <td>0</td>
+                                <td></td>
+                                <td></td>
                             </tr>
                         </table>
                     </div>
-                    <!-- <div class="orderDetailHost">
-                        <h6>主持人</h6>
-                        <div class="orderDetailHostInfo">
-                            <img src="" alt="">
-                            <ul>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                            </ul>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -856,6 +825,90 @@
         </div>
         
     </div>
+
+    <!-- checkout -->
+    <div class="checkoutBg">
+            <div class="custTitle titleBgi">
+                <h3>結 帳</h3>
+            </div>
+            
+            
+            <!-- 訂購人資訊 -->
+            <div class="checkoutInfo col-12">
+                <div class="checkoutOrder">
+                    <!-- 總金額 -->
+                    <p><span>62000</span>圓</p>
+                </div>
+            </div>
+
+            <div class="checkOutAll col-12">    
+                <!-- 訂購人資料 -->
+                <form action="#" class="checkoutInfoForm col-12 col-lg-6">
+                    <h4>訂購人資訊</h4>
+                    <table>
+                        <tr>
+                            <th><label for="orderName">姓名</label></th>
+                            <td>
+                                <input type="text" id="orderName">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="orderEmail">信箱</label></th>
+                            <td><input type="text" id="orderEmail"></td>
+                        </tr>
+                        <tr>
+                            <th><label for="orderPhone">聯絡電話</label></th>
+                            <td><input type="text" id="orderPhone"></td>
+                        </tr>
+                        <tr>
+                            <th>優惠券編號</th>
+                            <td>
+                                <select name="couponUse" id="">
+                                    <option value="">500元</option>
+                                    <option value="">1000元</option>
+                                    <option value="">1500元</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+                <!-- 信用卡資訊 -->
+                <form action="" class="cardInfo col-12 col-lg-6">
+                    <h4>付款資訊</h4>
+                    <!-- <div class="acceptableCard">
+                        <img src="images/customized/checkout/card_01.png" alt="">
+                        <img src="images/customized/checkout/card_02.png" alt="">
+                        <img src="images/customized/checkout/card_03.png" alt="">
+                    </div> -->
+                    <table>
+                        <tr>
+                            <th><label for="cardHolderName">持卡人姓名</label></th>
+                            <td><input type="text" id="cardHolderName"></td>
+                        </tr>
+                        <tr>
+                            <th><label for="cardNum">信用卡號碼</label></th>
+                            <td><input type="text" id="cardNum" maxlength="16"></td>
+                        </tr>
+                        <tr>
+                            <th><label for="cardExpiredDate">過期日期</label></th>
+                            <td><input type="text" id="cardExpiredDate" placeholder="MM/YY"></td>
+                        </tr>
+                        <tr>
+                            <th><label for="cardCVC">CVC</label></th>
+                            <td><input type="text" id="cardCVC"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+
+            <!-- 確認結帳 -->
+            <div class="paymentStep">
+                <div class="checkOutStep commonBtn">確認付款</div>
+            </div>  
+
+
+        </div>
+
 
     
 
@@ -873,8 +926,8 @@
     <!-- <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script> -->
     <!-- domtoimage -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
-    
-
     <script src="js/navmenu.js"></script>
+    <script src="js/_login.js"></script>
+    <script src="js/_font_loginLightBox.js"></script>
 </body>
 </html>

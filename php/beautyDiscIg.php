@@ -1,64 +1,27 @@
-
-
-<!-- <script src="../js/jquery-3.3.1.min.js"></script> -->
 <script>
 	$(document).ready(function(){
-
-		// $xx = '13';
-		//  beautyDiscIgData =`<div>${$xx}</div>`;
-
 		$.ajax({
 			url: 'php/_connetbeautyDiscIg.php',
-			// url: '../php/_connetbeautyDiscIg.php',
 			type: 'GET',
+			data:{
+				DiscTextArea:$('.DiscTextArea').val()
+			},
 			success: function(response){
 				//轉成陣列 抓取陣列裡面的資料
-				// console.log(JSON.parse(response));
-				let data = JSON.parse(response);
-				// //看裡面的key value 三圍陣列;
-				// console.log(data['beautyIntendRow']);
-				// console.log(data['messageRow']);
-				// data['beautyIntendRow'][0]['orderNo']
-				// console.log(data['messageRow'].length);
-					// console.log(beautyDiscIgData);
 				//需要order的所有留言串
-				// $.each(data['beautyIntendRow'],function(i,n){
-				// 	var beautyIntendRowOd = n['orderNo'];//order: index[0]['orderNo']=3,index[1]['orderNo']=4 ,index[2]['orderNo']=5  
-				// 	 console.log(beautyIntendRowOd);
-				// 	//  if(n['order'])
-				// 	$.each(data['messageRow'],function(i,n){
-				// 		// console.log(beautyIntendRowOd); //這是上面beautyIntendRow 的 orderNo
-				// 		// console.log(n['orderNo']);//messageRow 的 orderNo console.log(n['orderNo']); //message index[0]['oderNo']= 3 *4 ; index[4]['oderNo']= 4 *3
-				// 		//判斷 ORDER是否相同
-				// 		var messageRowOd = n['orderNo']
-				// 		if(messageRowOd==beautyIntendRowOd){
-				// 			console.log(n['messageContent']);
-				// 			beautyDiscIgMesData += 
-				// 				"<img src='"+n['memImgUrl']+"' alt='Alex'>"+
-				// 					"<p class='beautyDiscIgMName'>"+n['memName']+"</p>"+
-				// 					"<p class='beautyDiscIgNameText'>"+n['messageContent']+"</p>"+
-				// 			"</div>"
-				// 			beautyDiscIgMesData+="<div>";
-				// 		}else{
-				// 			return '';
-				// 		};
-				// 	});
-					
-				// });
-
+				//判斷 ORDER是否相同
+				let data = JSON.parse(response);
 				var beautyDiscIgData = '<div class="beautyDiscStageContainer">';
 				var beautyDiscIgMesData ="<div class='beautyDiscIgMemTextContainer'>";
-			
-			
-	
+				
 				$.each(data['beautyIntendRow'],function(i,n){
 					var beautyIntendRowOd = n['orderNo'];//order: index[0]['orderNo']=3,index[1]['orderNo']=4 ,index[2]['orderNo']=5  	
-					 console.log(beautyIntendRowOd); 
+					//  console.log(beautyIntendRowOd); 
 					 var beautyDiscIgMesData ="";
 					 $.each(data['messageRow'],function(i,n){
 						var messageRowOd = n['orderNo']
 						if(messageRowOd==beautyIntendRowOd){
-							console.log(n['messageContent']);
+							// console.log(n['messageContent']);
 							beautyDiscIgMesData += "<div class='beautyDiscIgMemTextContainer'>"+
 								"<img src='"+n['memImgUrl']+"' alt='Alex'>"+
 									"<p class='beautyDiscIgMName'>"+n['memName']+"</p>"+
@@ -106,24 +69,57 @@
 						"<div class='beautyDiscForm'>"+
 							"<img src='images/beautyPageant/DiscStage/Lisa/lisa.png' alt='Alex'>"+
 							"<form>"+
-								"<input class='DiscTextArea' type='text' name='欄位名稱' placeholder='留言回覆...'>"+
-								"<input class='DiscSent' type='submit' value='送出'>"+
+								
+								"<input class='DiscTextArea' type='text' name='messageContent' value='' placeholder='留言回覆...'>"+
+								"<input class='DiscSent' type='button' value='送出'>"+
+								"<input type='hidden' name='orderNo' value='"+ n['orderNo'] +"' placeholder='留言回覆...'>"+
 							"</form>"+
 						"</div>";
 						beautyDiscIgData+='</div>';
 				});
-
-				
-				
-				
-				
 				$('.beautyDiscStageContainer').append(beautyDiscIgData);
+				//註冊每個表單接受訊息
+				for(let i=0;i<document.getElementsByClassName("DiscSent").length;i++){
+					console.log('5566');
+					document.getElementsByClassName("DiscSent")[i].addEventListener("click", function(e){
+						let btn = e.target;
+						let orderNo = btn.nextElementSibling.value;
+						let messageContent = btn.previousElementSibling.value;
+						console.log(orderNo);
+						console.log(messageContent);
+
+						let xhr = new XMLHttpRequest();
+						xhr.onload = function (){
+							alert(xhr.responseText);
+
+							//reset
+							btn.nextElementSibling.value="";
+							btn.previousElementSibling.value="";
+						}
+						xhr.open("get", "php/addmessage.php?messageContent=" + messageContent + "&orderNo=" + orderNo);
+						xhr.send(null);
+						console.log("addmessage.php?content=" + messageContent + "&orderNo=" + orderNo);
+
+					}
+				)};
+				
 			},//sucess
 			error: function(xhr) {
 			alert('Ajax request 發生錯誤');
 			}
 		});
 	});
+
+
+</script>
+<script>
+	// $(document).ready(function(){
+	// 		$(".DiscSent").click(function(){
+	// 			var result1 = $(this).siblings('.DiscTextArea').val();
+	// 			alert("result1 = " + result1);
+	// 		});
+
+
 </script>
 
 

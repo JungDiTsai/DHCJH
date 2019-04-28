@@ -25,12 +25,12 @@ $(document).ready(function(){
     });
 
 
-    $('.scaleSlider').on('change', function() {
-        // var effectObject = $('effectAll').();
-        var width = document.getElementById('fire').naturalWidth / 10;
-        $('#fire').width(width*this.value);
-        // console.log(this.value);
-    });
+    // $('.scaleSlider').on('change', function() {
+    //     // var effectObject = $('effectAll').();
+    //     var width = document.getElementById('fire').naturalWidth / 10;
+    //     $('#fire').width(width*this.value);
+    //     // console.log(this.value);
+    // });
     
 
 });

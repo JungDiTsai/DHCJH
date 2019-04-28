@@ -234,6 +234,7 @@ table {
 
 #nav-icon2 {
   height: 44px;
+  cursor: pointer;
 }
 
 #bigMember {
@@ -619,39 +620,43 @@ footer img {
 
 @-webkit-keyframes jitter {
   0% {
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg);
+    border-radius: 40% 55% 60% 45%;
   }
-  25% {
-    -webkit-transform: rotateZ(-15deg);
-            transform: rotateZ(-15deg);
+  20% {
+    border-radius: 50% 40% 50% 60%;
   }
-  75% {
-    -webkit-transform: rotateZ(15deg);
-            transform: rotateZ(15deg);
+  40% {
+    border-radius: 45% 50% 55% 50%;
+  }
+  60% {
+    border-radius: 50% 35% 50% 65%;
+  }
+  80% {
+    border-radius: 40% 45% 60% 55%;
   }
   100% {
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg);
+    border-radius: 54% 50% 46% 40%;
   }
 }
 
 @keyframes jitter {
   0% {
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg);
+    border-radius: 40% 55% 60% 45%;
   }
-  25% {
-    -webkit-transform: rotateZ(-15deg);
-            transform: rotateZ(-15deg);
+  20% {
+    border-radius: 50% 40% 50% 60%;
   }
-  75% {
-    -webkit-transform: rotateZ(15deg);
-            transform: rotateZ(15deg);
+  40% {
+    border-radius: 45% 50% 55% 50%;
+  }
+  60% {
+    border-radius: 50% 35% 50% 65%;
+  }
+  80% {
+    border-radius: 40% 45% 60% 55%;
   }
   100% {
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg);
+    border-radius: 54% 50% 46% 40%;
   }
 }
 
@@ -3641,6 +3646,64 @@ footer img {
           transform: scale(0.97);
 }
 
+.custItem {
+  width: 670px;
+  height: 150px;
+}
+
+#custItemContent {
+  background-image: none;
+  width: 670px;
+  height: 150px;
+  -webkit-filter: none;
+          filter: none;
+  padding: 0;
+}
+
+#effectItem {
+  background-image: none;
+  width: 670px;
+  height: 150px;
+  -webkit-filter: none;
+          filter: none;
+  padding: 0;
+}
+
+#effectCustItemContent {
+  background-image: none;
+  padding: 0;
+  width: 670px;
+  height: 150px;
+}
+
+#tryCustEquipSpecial {
+  overflow-x: scroll;
+}
+
+@media screen and (min-width: 992px) {
+  #effectItem, .custItem {
+    background-image: none;
+    width: 380px;
+    height: 370px;
+    -webkit-filter: none;
+            filter: none;
+    padding: 0;
+  }
+  #effectCustItemContent {
+    background-image: none;
+    padding: 10px 0px 0px 0px;
+    width: 380px;
+    height: 370px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #effectCustItemContent {
+    width: 380px;
+    height: 370px;
+  }
+}
+
 /*.noscroll{
   position: fixed;
   width: 100%;
@@ -3659,10 +3722,10 @@ a {
 #gameHub {
   opacity: 0.85;
   position: fixed;
-  left: -360px;
+  left: -370px;
   bottom: 100px;
-  width: 120px;
-  height: 80px;
+  width: 80px;
+  height: 65px;
   text-align: center;
   color: #ffffa3;
   vertical-align: middle;
@@ -3701,7 +3764,7 @@ a {
   right: 20px;
   bottom: -200px;
   border-radius: 20px;
-  z-index: 1;
+  z-index: 3;
   -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
@@ -4099,7 +4162,7 @@ a {
   transition: 1.6s cubic-bezier(0.25, -0.98, 0.69, 1.58);
 }
 
-.perspective {
+.perspectiveIntro {
   position: absolute;
   margin: auto;
   margin-top: 8.5vh;
@@ -4187,7 +4250,7 @@ a {
     width: 50%;
     margin-left: 180px;
   }
-  .perspective {
+  .perspectiveIntro {
     -webkit-perspective: 900px;
             perspective: 900px;
     -webkit-transform: scale(1.5);
@@ -4914,7 +4977,7 @@ a {
   background: linear-gradient(165deg, transparent 29%, #fffc98 20%);
 }
 
-.introTabs a:hover, .introTabs a.active {
+.introTabs a:hover, .introTabs a.activeTabs {
   background: linear-gradient(165deg, transparent 29%, #222 20%);
   color: #fff;
   font-weight: bold;
@@ -4935,7 +4998,7 @@ a {
   border-right: 7px solid transparent;
 }
 
-.introTabs a.active:before {
+.introTabs a.activeTabs:before {
   content: '';
   position: absolute;
   z-index: 11;
@@ -5399,6 +5462,7 @@ a {
   background-size: cover;
   z-index: 0;
   height: 100vh;
+  overflow: hidden;
   min-height: 600px;
 }
 
@@ -5407,8 +5471,22 @@ a {
   background-size: cover;
 }
 
+#tryCustormiseWrap .commonBtn {
+  margin: -10px auto auto auto;
+}
+
+.stageView {
+  outline: red 5px solid;
+}
+
+.stageTry {
+  width: 90vw;
+  max-width: 1200px;
+}
+
 .tryCustEquipWrap {
-  margin: 0 auto;
+  margin: 10px auto;
+  outline: red solid 5px;
 }
 
 ul.tryCustTabs {
@@ -5471,7 +5549,7 @@ ul.tryCustTabs li a.tryCustActive {
   background: #545f60;
   color: #6edeef;
   /*color: #ff6831;*/
-  z-index: 4;
+  z-index: 2;
   outline: none;
 }
 
@@ -5489,7 +5567,7 @@ ul.tryCustTabs li a.tryCustActive {
 
 #tryCustEquipContent {
   width: 300px;
-  height: 100px;
+  height: 150px;
   margin: 0 auto;
   background: #545f60;
   -webkit-box-shadow: 2px 8px 25px -2px rgba(0, 0, 0, 0.3);
@@ -5500,6 +5578,33 @@ ul.tryCustTabs li a.tryCustActive {
   -moz-border-radius-bottomleft: 8px;
   border-bottom-right-radius: 8px;
   border-bottom-left-radius: 8px;
+}
+
+.perspective {
+  margin: auto;
+  max-width: 500px;
+  height: 400px;
+  position: relative;
+  -webkit-perspective: 900px;
+          perspective: 900px;
+}
+
+#perspectiveTry {
+  height: 140px;
+}
+
+#danceDetail {
+  outline: red 5px solid;
+}
+
+.custItemContent {
+  background-image: none;
+  -webkit-filter: none;
+          filter: none;
+}
+
+#tryCustEquipInnerSet {
+  overflow-x: scroll;
 }
 
 #tryCustormiseFlyerWrap {
@@ -6786,6 +6891,9 @@ footer img {
   #tryCustormiseWrap {
     height: 100vh;
   }
+  #tryCustormiseWrap .commonBtn {
+    margin: 10vh auto auto auto;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -6931,10 +7039,38 @@ footer img {
     -webkit-animation: lyrics 19s linear infinite;
             animation: lyrics 19s linear infinite;
   }
+  .stageTry {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #tryCustormiseWrap .perspective {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  .groupA {
+    margin-top: 16vh;
+  }
+  ul.tryCustTabs {
+    width: 380px;
+  }
+  ul.tryCustTabs li {
+    width: 190px;
+    height: 80px;
+  }
+  #tryCustEquipContent {
+    width: 380px;
+    height: 370px;
+  }
+  #custItemContent, #effectCustItem {
+    width: 380px;
+    height: 370px;
+    padding: 10px 0px 0px 0px;
+  }
 }
 
 @media screen and (min-width: 992px) {
-  .perspective {
+  .perspectiveIntro {
     -webkit-transform: scale(1.6);
             transform: scale(1.6);
     margin-top: 50px;
@@ -7039,7 +7175,10 @@ footer img {
     margin-top: 100px;
   }
   #carEquipmentsIntroWrap .EquipIntroWrapper .commonBtn {
-    margin-top: -160px;
+    margin-top: -220px;
+  }
+  #tryCustormiseWrap .commonBtn {
+    margin: 12vh auto auto auto;
   }
 }
 /*# sourceMappingURL=index.css.map */
