@@ -384,7 +384,7 @@ table {
   width: 150px;
   text-align: center;
   display: block;
-  border-bottom: 30px solid  transparent;
+  border-bottom: 30px solid  transparent;
   border-bottom-width: 30px;
   -o-border-image: url("../images/navTDD.png") 41 round;
      border-image: url("../images/navTDD.png") 41 round;
@@ -421,7 +421,7 @@ header {
   height: 80px;
   width: 100%;
   top: 0px;
-  z-index: 99;
+  z-index: 101;
   -webkit-animation: headerNeon 1s infinite;
           animation: headerNeon 1s infinite;
 }
