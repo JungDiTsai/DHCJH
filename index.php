@@ -115,24 +115,23 @@ try{
         ?>
     <script src="js/_login.js"></script>
     <script src="js/_font_loginLightBox.js"></script>
+
+    <?php 
+    require_once("carAndRobot.php");
+    ?>
     
         <!--game and customer service wrapper-->
        
-        <a href="game.html">
+        <!-- <a href="game.html">
             <div id="gameHub">
                 <span>玩遊戲<br>
                         拿優惠
                 </span>
                 <img src="images/gameCar.png" alt="遊戲">
             </div>
-        </a>
-        
-        
-        <!--
-        
-        
-        -->
-        <div id="customerService">
+        </a> -->
+
+        <!-- <div id="customerService">
             
             <div class="chatrobot" style="display: none;">
                 <div class="chatbox">
@@ -144,9 +143,9 @@ try{
                     </div>
                 </div>
                 
-                <div class="closebtn"><i class="fas fa-times-circle btnCancel">
+                <div class="closebtn"><i class="fas fa-times-circle btnCancel"> -->
                     <!--<img src="images/serviceClose.png" alt="關閉客服">-->
-                </i></div>   
+                <!-- </i></div>   
                 <div class="chattext">
                     <textarea name="robotAsk" class="messagebox"></textarea>
                     <div class="chatbtn">送出</div>
@@ -157,7 +156,7 @@ try{
             <div id="customerServiceGirl" style="cursor: pointer" >
                 <img src="images/custormerService.png" alt="">
             </div>
-        </div>
+        </div> -->
         <!-- <a href="game.html">
             <div id="gameHub">
                 <span>玩遊戲<br>
