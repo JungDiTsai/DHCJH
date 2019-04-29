@@ -37,7 +37,7 @@
                     <?php 
                     try {
                         $member =$_SESSION['member'][0][0];
-                        $sql = "SELECT * from member left outer join orders on member.memno= orders.memno join flyer on orders.orderno = flyer.orderno where member.memno= $member;";
+                        $sql = "SELECT * from member left outer join orders on member.memno= orders.memno join flyer on orders.orderno = flyer.orderno where member.memno = $member and flyer.flyeStatus != 2;";
                         $products = $pdo->query($sql);
                      } catch (PDOException $e) {
                         $errMsg = '';
@@ -82,6 +82,8 @@
                         </td>
                         <td>
                             <?php
+                            if(strtotime(date('Y/m/d'))>strtotime($data['flyeDate'])){ echo '已過期'; }
+                            else{
                                 if($data['peopleStatus']==1){
                             ?>
                                     <label>
@@ -103,6 +105,7 @@
                                         <p class="txt">關閉</p>
                                     </label>
                             <?php
+                                }
                             }
                             ?>
                         </td>
@@ -131,12 +134,18 @@
                 </table>
                 <div class="btnBar">
                     <button class="commonBtn" id="deleteFlyer">刪除</button>
+                    <button class="commonBtn" id="changeFlyer">修改</button>
+
                 </div>
             </article>
         </div>
     </div>
 
     <script>
+        //點擊修改
+        document.getElementById('changeFlyer').addEventListener('click',function(){
+            window.location.href = "flyer.php"
+        })
         //點擊更改宣傳單狀態
         let flyeStatus = document.querySelectorAll('.flyeStatus');
         for (let i = 0; i < flyeStatus.length; i++) {
@@ -156,7 +165,7 @@
                         }
                       } 
                       //設定好所要連結的程式
-                      var url = "php/components/memFlyer_flyerStatus.php?orderNo=" + flyeStatus[i].value + "&setting=" + 1;
+                      var url = "php/components/_memFlyer_flyerStatus.php?orderNo=" + flyeStatus[i].value + "&setting=" + 1;
                       xhr.open("get", url, true);
                       //送出資料
                       xhr.send(null);
@@ -177,7 +186,7 @@
                         }
                       } 
                       //設定好所要連結的程式
-                      var url = "php/components/memFlyer_flyerStatus.php?orderNo=" + flyeStatus[i].value + "&setting=" + 0;
+                      var url = "php/components/_memFlyer_flyerStatus.php?orderNo=" + flyeStatus[i].value + "&setting=" + 0;
                       xhr.open("get", url, true);
                       //送出資料
                       xhr.send(null);
@@ -205,7 +214,7 @@
                         }
                       } 
                       //設定好所要連結的程式
-                      var url = "php/components/memFlyer_flyerStatus.php?orderNo=" + peopleStatus[i].value + "&setting=" + 1;
+                      var url = "php/components/_memFlyer_flyerStatus.php?orderNo=" + peopleStatus[i].value + "&setting=" + 1;
                       xhr.open("get", url, true);
                       //送出資料
                       xhr.send(null);
@@ -226,7 +235,7 @@
                         }
                       } 
                       //設定好所要連結的程式
-                      var url = "php/components/memFlyer_peopleStatus.php?orderNo=" + peopleStatus[i].value + "&setting=" + 0;
+                      var url = "php/components/_memFlyer_peopleStatus.php?orderNo=" + peopleStatus[i].value + "&setting=" + 0;
                       xhr.open("get", url, true);
                       //送出資料
                       xhr.send(null);

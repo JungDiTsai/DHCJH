@@ -14,13 +14,13 @@ new Vue({
            switch (this.stepIndex) {
                case 1:
 
-                   this.moveSetting[3]+= 5;
+                   this.moveSetting[3]+= 20;
                    let A4h5 = document.querySelector('#A4page h5');
                    A4h5.style.setProperty('top', `${this.moveSetting[3]}px`)
                    break;
                case 2:
 
-                   this.moveSetting[5]-= 5;
+                   this.moveSetting[5]-= 20;
                    let A4div = document.querySelector('#A4page div');
                    A4div.style.setProperty('bottom', `${this.moveSetting[5]}px`)
                    break;
@@ -33,13 +33,13 @@ new Vue({
            switch (this.stepIndex) {
                case 1:
 
-                   this.moveSetting[3]-= 5;
+                   this.moveSetting[3]-= 20;
                    let A4h5 = document.querySelector('#A4page h5');
                    A4h5.style.setProperty('top', `${this.moveSetting[3]}px`)
                    break;
                case 2:
 
-                   this.moveSetting[5]+= 5;
+                   this.moveSetting[5]+= 20;
                    let A4div = document.querySelector('#A4page div');
                    A4div.style.setProperty('bottom', `${this.moveSetting[5]}px`)
                    break;
@@ -52,13 +52,13 @@ new Vue({
            switch (this.stepIndex) {
                case 1:
 
-                   this.moveSetting[2]+= 5;
+                   this.moveSetting[2]+= 20;
                    let A4h5 = document.querySelector('#A4page h5');
                    A4h5.style.setProperty('left', `${this.moveSetting[2]}px`)
                    break;
                case 2:
   
-                   this.moveSetting[4]-= 5;
+                   this.moveSetting[4]-= 20;
                    let A4div = document.querySelector('#A4page div');
                    A4div.style.setProperty('right', `${this.moveSetting[4]}px`)
                    break;
@@ -71,13 +71,13 @@ new Vue({
             switch (this.stepIndex) {
                 case 1:
 
-                    this.moveSetting[2]-= 5;
+                    this.moveSetting[2]-= 20;
                     let A4h5 = document.querySelector('#A4page h5');
                     A4h5.style.setProperty('left', `${this.moveSetting[2]}px`)
                     break;
                 case 2:
 
-                    this.moveSetting[4]+= 5;
+                    this.moveSetting[4]+= 20;
                     let A4div = document.querySelector('#A4page div');
                     A4div.style.setProperty('right', `${this.moveSetting[4]}px`)
                     break;
@@ -430,6 +430,7 @@ new Vue({
                                     li.style.setProperty('opacity',1)
                                     document.getElementById('showflyer2').appendChild(li);
                                     window.location.hash="#showflyer2";
+                                    window.location.reload();
                                 } else{
                                     alert(xhr.status);
                                 }

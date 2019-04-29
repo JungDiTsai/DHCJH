@@ -1059,6 +1059,7 @@ footer img {
   border-radius: 20px;
   line-height: 75px;
   border: none;
+  outline: none;
   -webkit-box-shadow: 0 0 3px 4px #ffffbd, 0px 0px 15px #ffffbd;
           box-shadow: 0 0 3px 4px #ffffbd, 0px 0px 15px #ffffbd;
   z-index: 2;
@@ -1083,6 +1084,7 @@ footer img {
   border-radius: 15px;
   line-height: 60px;
   border: none;
+  outline: none;
   z-index: 2;
   -webkit-box-shadow: 0 0 2px 4px #ffffbd;
           box-shadow: 0 0 2px 4px #ffffbd;
@@ -2282,7 +2284,8 @@ footer img {
 }
 
 .thrScreen .wrap li img {
-  max-width: 100%;
+  width: 210px;
+  height: 297px;
   cursor: pointer;
 }
 

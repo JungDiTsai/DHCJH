@@ -59,7 +59,7 @@
               </div>
               <div class="back">
                 <div class="centerBox">
-                    <div class="unlike">取消追蹤</div>
+                    <div class="unlike" value="<?php echo $data['orderNo'] ?>">取消追蹤</div>
                     <div class="return">返回</div>
                 </div>
               </div>
@@ -94,7 +94,29 @@
       let unlikes = document.querySelectorAll('.unlike');
       for (let i = 0; i < unlikes.length; i++) {
         let cards = document.querySelectorAll('.card');
-        unlikes[i].addEventListener('click',function(){
+        unlikes[i].addEventListener('click',function(e){
+          let data = e.target.getAttribute('value');
+
+
+            //產生XMLHttpRequest物件
+            var xhr = new XMLHttpRequest();
+            //註冊callback function
+            xhr.onreadystatechange = function(){
+              if( xhr.readyState == XMLHttpRequest.DONE ){ //server端執行完畢
+                if( xhr.status == 200){ //server端可以正確的執行
+                     console.log(xhr.responseText);
+                }else{ //其它
+                    alert( xhr.status );
+                }
+              }
+            } 
+            //設定好所要連結的程式
+            var url = "php/components/_changeCollection.php?orderNo=" + data;
+            xhr.open("get", url, true);
+            //送出資料
+            xhr.send(null);
+          
+
           cards[i].style.display = `none`;
         });
       }

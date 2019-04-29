@@ -1511,6 +1511,7 @@ footer img {
   border-radius: 20px;
   line-height: 75px;
   border: none;
+  outline: none;
   -webkit-box-shadow: 0 0 3px 4px #ffffbd, 0px 0px 15px #ffffbd;
           box-shadow: 0 0 3px 4px #ffffbd, 0px 0px 15px #ffffbd;
   z-index: 2;
@@ -1535,6 +1536,7 @@ footer img {
   border-radius: 15px;
   line-height: 60px;
   border: none;
+  outline: none;
   z-index: 2;
   -webkit-box-shadow: 0 0 2px 4px #ffffbd;
           box-shadow: 0 0 2px 4px #ffffbd;
@@ -1588,6 +1590,10 @@ footer img {
 .AllflyerBox table tbody tr:hover {
   background-image: -webkit-gradient(linear, right top, left top, from(#ff8177), color-stop(0%, #ff867a), color-stop(21%, #ff8c7f), color-stop(52%, #f99185), color-stop(78%, #cf556c), to(#b12a5b));
   background-image: linear-gradient(to left, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+}
+
+.AllflyerBox table td:first-of-type {
+  width: 10%;
 }
 
 .AllflyerBox table td label .cbox {
@@ -1667,6 +1673,10 @@ footer img {
   padding: 5px 10px;
 }
 
+.detailFlyer table tr td:first-of-type {
+  width: 25%;
+}
+
 .detailFlyer .btnBar {
   padding: 50px 0 50px;
   margin: auto;
@@ -1681,12 +1691,7 @@ footer img {
   cursor: pointer;
 }
 
-.detailFlyer .btnBar button:first-of-type {
-  width: 100px;
-  height: 50px;
-}
-
-.detailFlyer .btnBar button:last-child {
+.detailFlyer .btnBar button {
   width: 100px;
   height: 50px;
 }
