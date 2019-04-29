@@ -9,6 +9,7 @@
     border-radius: 20px; 
     line-height:75px; 
     border:none;
+    outline:none;
     box-shadow: 0 0 3px 4px $fontColor,0px 0px 15px $fontColor;
     z-index:2;
     cursor: pointer;
@@ -29,6 +30,7 @@
     border-radius: 15px; 
     line-height:60px; 
     border:none;
+    outline:none;
     z-index:2;
     box-shadow: 0 0 2px 4px $fontColor;
     cursor: pointer;

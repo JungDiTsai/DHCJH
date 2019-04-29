@@ -33,6 +33,9 @@
             }
         }
         td{
+            &:first-of-type{
+                width: 10%;
+            }
             label{
                 .cbox{
                     position: absolute;
@@ -100,6 +103,9 @@
             max-width: 80%;
             td{
                 padding: 5px 10px;
+                &:first-of-type{
+                    width: 25%;
+                }
             }
         }
     }
@@ -113,22 +119,11 @@
             line-height: 50px;
             cursor: pointer;
         }
-        button:first-of-type{
+        button{
             width: 100px;
             height: 50px;
-            // background-image: linear-gradient(to top, #d299c2 0%, #b84a4a 100%);
-            // &:hover{
-            //     background-image: linear-gradient(to top, #e4abd4 0%, #ff1010 100%);
-            // }
         }
-        button:last-child{
-            width: 100px;
-            height: 50px;
-            // background-image: linear-gradient(to top, #fddb92 0%, #ecfa25 100%);
-            // &:hover{
-            //     background-image: linear-gradient(to bottom, #cfa54a 0%, #faec25 100%);
-            // }
-        }
+  
     }
 }
 
@@ -159,6 +154,7 @@
         h4{
             font-size: 32px;
         }
+        
     }
 }
 @media screen and (min-width:992px) {}

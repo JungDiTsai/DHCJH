@@ -444,7 +444,13 @@ footer {
   border-radius: 20px;
   line-height: 75px;
   border: none;
+<<<<<<< HEAD
+  outline: none;
+  -webkit-box-shadow: 0 0 3px 4px #ffffbd, 0px 0px 15px #ffffbd;
+          box-shadow: 0 0 3px 4px #ffffbd, 0px 0px 15px #ffffbd;
+=======
   box-shadow: 0 0 3px 4px #ffffbd, 0px 0px 15px #ffffbd;
+>>>>>>> d7e0c82ddfa2579e1df68e98da1bf35839f5b1eb
   z-index: 2;
   cursor: pointer; }
   .commonBtn:hover {
@@ -462,6 +468,7 @@ footer {
   border-radius: 15px;
   line-height: 60px;
   border: none;
+  outline: none;
   z-index: 2;
   box-shadow: 0 0 2px 4px #ffffbd;
   cursor: pointer; }

@@ -191,7 +191,7 @@
         <div class="wrap">
         <?php
             try {
-                $sql = 'select * from flyer left outer join orders on flyer.orderno= orders.orderno join host on orders.hostNo = host.hostNo where flyeStatus != 0  order by flyer.orderno desc limit 3;';
+                $sql = 'select * from flyer left outer join orders on flyer.orderno= orders.orderno join host on orders.hostNo = host.hostNo where flyeStatus != 0 and flyeStatus != 2 order by flyer.orderno desc limit 3;';
                 $products = $pdo->query($sql);
          
              } catch (PDOException $e) {
@@ -323,7 +323,7 @@
                 
                 $errMsg='';
                 try {
-                    $sql = 'SELECT * FROM flyer where flyeStatus != 0;';
+                    $sql = 'SELECT * FROM flyer where flyeStatus != 0 and flyeStatus != 2;';
                     $products = $pdo->query($sql);
                     foreach( $products as $i=>$prodRow){
             ?>
@@ -419,6 +419,7 @@
             
             for (let i = 0; i < joinAct.length; i++) {
                 joinAct[i].addEventListener('click',function(e){
+                    
                     let orderNo = e.target.getAttribute('order');
 
                     //依統計人數狀態拒絕執行或執行
@@ -439,7 +440,8 @@
                     xhr.open("get", url, true);
                     //送出資料
                     xhr.send(null);
-                    
+
+                    event.cancelBubble=true;
                 })
             }
         }

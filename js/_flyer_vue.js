@@ -14,13 +14,13 @@ new Vue({
            switch (this.stepIndex) {
                case 1:
 
-                   this.moveSetting[3]+= 5;
+                   this.moveSetting[3]+= 20;
                    let A4h5 = document.querySelector('#A4page h5');
                    A4h5.style.setProperty('top', `${this.moveSetting[3]}px`)
                    break;
                case 2:
 
-                   this.moveSetting[5]-= 5;
+                   this.moveSetting[5]-= 20;
                    let A4div = document.querySelector('#A4page div');
                    A4div.style.setProperty('bottom', `${this.moveSetting[5]}px`)
                    break;
@@ -33,13 +33,13 @@ new Vue({
            switch (this.stepIndex) {
                case 1:
 
-                   this.moveSetting[3]-= 5;
+                   this.moveSetting[3]-= 20;
                    let A4h5 = document.querySelector('#A4page h5');
                    A4h5.style.setProperty('top', `${this.moveSetting[3]}px`)
                    break;
                case 2:
 
-                   this.moveSetting[5]+= 5;
+                   this.moveSetting[5]+= 20;
                    let A4div = document.querySelector('#A4page div');
                    A4div.style.setProperty('bottom', `${this.moveSetting[5]}px`)
                    break;
@@ -52,13 +52,13 @@ new Vue({
            switch (this.stepIndex) {
                case 1:
 
-                   this.moveSetting[2]+= 5;
+                   this.moveSetting[2]+= 20;
                    let A4h5 = document.querySelector('#A4page h5');
                    A4h5.style.setProperty('left', `${this.moveSetting[2]}px`)
                    break;
                case 2:
   
-                   this.moveSetting[4]-= 5;
+                   this.moveSetting[4]-= 20;
                    let A4div = document.querySelector('#A4page div');
                    A4div.style.setProperty('right', `${this.moveSetting[4]}px`)
                    break;
@@ -71,13 +71,13 @@ new Vue({
             switch (this.stepIndex) {
                 case 1:
 
-                    this.moveSetting[2]-= 5;
+                    this.moveSetting[2]-= 20;
                     let A4h5 = document.querySelector('#A4page h5');
                     A4h5.style.setProperty('left', `${this.moveSetting[2]}px`)
                     break;
                 case 2:
 
-                    this.moveSetting[4]+= 5;
+                    this.moveSetting[4]+= 20;
                     let A4div = document.querySelector('#A4page div');
                     A4div.style.setProperty('right', `${this.moveSetting[4]}px`)
                     break;
@@ -119,7 +119,7 @@ new Vue({
        clickSelectBox(){
                 //(1)---------------------------------------將設定寫到資料庫
                 this.setting[0]=document.getElementById('A4page').value;
-                console.log(this.setting);
+                console.log('setting:'+this.setting);
                 //比對Order 對照訂單
                 let number = 0;
                 for (let i = 0; i < LoginState.length; i++) {
@@ -143,11 +143,14 @@ new Vue({
                   } 
                   //設定好所要連結的程式
                   
-                  var url = "php/components/_upoadSetting.php?flyerSetting=" + JSON.stringify(this.setting) + "&member= " + JSON.stringify(LoginState[number]);
+                  var url = "php/components/_upoadSetting.php";
+                  var data_info = "flyerSetting=" + JSON.stringify(this.setting) + "&member= " + JSON.stringify(LoginState[number]);
+                  console.log(data_info);
 
-                  xhr.open("get", url, true);
+                  xhr.open("post", url, true);
+                  xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
                   //送出資料
-                  xhr.send(null);
+                  xhr.send(data_info);
                 
                 // (2)---------------------------------------上傳檔案--(儲存預備圖)
                 //產生XMLHttpRequest物件
@@ -430,6 +433,7 @@ new Vue({
                                     li.style.setProperty('opacity',1)
                                     document.getElementById('showflyer2').appendChild(li);
                                     window.location.hash="#showflyer2";
+                                    window.location.reload();
                                 } else{
                                     alert(xhr.status);
                                 }
