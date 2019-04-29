@@ -1,3 +1,4 @@
+<input type="checkbox" id=menu_control>
 <header>    
     <!-- 放bar選單 -->
     <label for="menu_control" class="menubtn" >
