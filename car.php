@@ -1,19 +1,10 @@
 <?php 
-<<<<<<< HEAD
 //car
    
-=======
-
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
     $errMsg="";
-    
 
     try {
-<<<<<<< HEAD
-=======
-       
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
-        require_once("dhc.php");
+        require_once("back/dhc.php");
         $sql = "select * from coupons order by rand() limit 0,1";
         $back=$pdo->query($sql);  //下指令
         
@@ -73,7 +64,7 @@
         <div id="carGame">
                 <h1 id="score">5</h1>
                 <h2 id="retry">使用←跟→來閃躲來車，閃躲5秒後即可獲得優惠卷哦～</h2>
-                <canvas width="500" height="600"></canvas>
+                <canvas width="500" height="750"></canvas>
         </div>
       
 
@@ -84,11 +75,8 @@
 <script src="js/car.js?<?php echo time();?>"></script>
 
 <script src="js/_font_loginLightBox.js "></script>
-<<<<<<< HEAD
-=======
 <!-- <script src="js/_login.js"></script> -->
 
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
 <?php
 ////收資料
 // $price = $_REQUEST["price"];

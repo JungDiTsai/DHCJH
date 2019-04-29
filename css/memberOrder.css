@@ -378,7 +378,7 @@ table {
   width: 150px;
   text-align: center;
   display: block;
-  border-bottom: 30px solid  transparent;
+  border-bottom: 30px solid  transparent;
   border-bottom-width: 30px;
   -o-border-image: url("../images/navTDD.png") 41 round;
      border-image: url("../images/navTDD.png") 41 round;
@@ -418,12 +418,7 @@ header {
   height: 80px;
   width: 100%;
   top: 0px;
-<<<<<<< HEAD
-  z-index: 1;
-  z-index: 3;
-=======
   z-index: 101;
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
   -webkit-animation: headerNeon 1s infinite;
           animation: headerNeon 1s infinite;
 }
@@ -1042,18 +1037,7 @@ footer img {
   }
 }
 
-<<<<<<< HEAD
-=======
-#lightWrap {
-  display: none;
-  position: fixed;
-  background: rgba(0, 0, 0, 0.7);
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-}
-
-.loginBox, .loginbox1 {
+.loginBox {
   display: none;
   width: 300px;
   height: 350px;
@@ -1065,7 +1049,7 @@ footer img {
   right: 0;
   bottom: 0;
   margin: auto;
-  z-index: 50;
+  z-index: 3;
   border-radius: 10px;
   padding: 30px 40px;
   -webkit-box-sizing: border-box;
@@ -1077,7 +1061,7 @@ footer img {
           box-shadow: 0 0 10px  #eee inset;
 }
 
-.loginBox .fa-times, .loginbox1 .fa-times {
+.loginBox .fa-times {
   color: #17F4F0;
   position: absolute;
   right: 10px;
@@ -1085,28 +1069,28 @@ footer img {
   cursor: pointer;
 }
 
-.loginBox .fa-times:hover, .loginbox1 .fa-times:hover {
+.loginBox .fa-times:hover {
   color: #eee;
 }
 
-.loginBox h3, .loginbox1 h3 {
+.loginBox h3 {
   margin-top: 0px;
   font-size: 30px;
   color: #17F4F0;
 }
 
-.loginBox .inputBox, .loginbox1 .inputBox {
+.loginBox .inputBox {
   background: #2d3631;
   border-radius: 10px;
   margin-top: 10px;
   padding: 10px 15px;
 }
 
-.loginBox .inputBox i, .loginbox1 .inputBox i {
+.loginBox .inputBox i {
   color: #eee;
 }
 
-.loginBox .inputBox input, .loginbox1 .inputBox input {
+.loginBox .inputBox input {
   height: 20px;
   margin-left: 10px;
   width: 80%;
@@ -1116,7 +1100,7 @@ footer img {
   color: #eee;
 }
 
-.loginBox .commonBtnSmall, .loginbox1 .commonBtnSmall {
+.loginBox .commonBtnSmall {
   margin-top: 20px;
   width: 80px;
   height: 40px;
@@ -1124,18 +1108,18 @@ footer img {
   line-height: 40px;
 }
 
-.loginBox p, .loginbox1 p {
+.loginBox p {
   margin-top: 20px;
   color: #17F4F0;
 }
 
-.loginBox p a, .loginbox1 p a {
+.loginBox p a {
   cursor: pointer;
   color: #17F4F0;
   text-decoration: none;
 }
 
-.loginBox p a:hover, .loginbox1 p a:hover {
+.loginBox p a:hover {
   color: #f3d217;
 }
 
@@ -1151,7 +1135,7 @@ footer img {
   right: 0;
   bottom: 0;
   margin: auto;
-  z-index: 50;
+  z-index: 1;
   border-radius: 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1253,7 +1237,7 @@ footer img {
   right: 0;
   bottom: 0;
   margin: auto;
-  z-index: 50;
+  z-index: 1;
   border-radius: 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1314,34 +1298,6 @@ footer img {
   line-height: 50px;
 }
 
-#IdStatus {
-  display: none;
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-  /*background-color: #ddd;*/
-}
-
-/*滑塊*/
-::-webkit-scrollbar-thumb {
-  background-color: #333;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #777;
-}
-
-/*滑道*/
-::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px #333;
-          box-shadow: inset 0 0 6px #333;
-  border-radius: 10px;
-}
-
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
 .wrap {
   margin-top: 80px;
 }

@@ -378,7 +378,7 @@ table {
   width: 150px;
   text-align: center;
   display: block;
-  border-bottom: 30px solid  transparent;
+  border-bottom: 30px solid  transparent;
   border-bottom-width: 30px;
   -o-border-image: url("../images/navTDD.png") 41 round;
      border-image: url("../images/navTDD.png") 41 round;
@@ -418,12 +418,7 @@ header {
   height: 80px;
   width: 100%;
   top: 0px;
-<<<<<<< HEAD
-  z-index: 1;
-  z-index: 3;
-=======
   z-index: 101;
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
   -webkit-animation: headerNeon 1s infinite;
           animation: headerNeon 1s infinite;
 }
@@ -1074,13 +1069,8 @@ footer img {
   cursor: pointer;
 }
 
-<<<<<<< HEAD
 .loginBox .fa-times:hover {
-  color: #000;
-=======
-.loginBox .fa-times:hover, .loginbox1 .fa-times:hover {
   color: #eee;
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
 }
 
 .loginBox h3 {
@@ -1096,13 +1086,8 @@ footer img {
   padding: 10px 15px;
 }
 
-<<<<<<< HEAD
 .loginBox .inputBox i {
-  color: #fff;
-=======
-.loginBox .inputBox i, .loginbox1 .inputBox i {
   color: #eee;
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
 }
 
 .loginBox .inputBox input {

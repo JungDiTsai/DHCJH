@@ -148,13 +148,8 @@
   cursor: pointer;
 }
 
-<<<<<<< HEAD
 .loginBox .fa-times:hover {
-  color: #000;
-=======
-.loginBox .fa-times:hover, .loginbox1 .fa-times:hover {
   color: #eee;
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
 }
 
 .loginBox h3 {
@@ -170,13 +165,8 @@
   padding: 10px 15px;
 }
 
-<<<<<<< HEAD
 .loginBox .inputBox i {
-  color: #fff;
-=======
-.loginBox .inputBox i, .loginbox1 .inputBox i {
   color: #eee;
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
 }
 
 .loginBox .inputBox input {

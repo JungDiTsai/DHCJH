@@ -37,6 +37,10 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
+  /* background-image: url(../images/car/carGameBgi.jpg);ßß */
+  /* background-size: contain;
+  width: 100px;
+  height: 100px; */
 }
 
 ol, ul {
@@ -128,7 +132,12 @@ main h2 {
 .backlogin{
   margin-top: 30px;
 }
-
+nav{
+  font-size: 21px;
+}
+#logo img{
+  width: 100px;
+}
 @media (min-width: 768px) {
   main {
     margin-top: 50px;
@@ -186,13 +195,9 @@ main h2 {
 #qrcode h2 {
   text-align: left;
 }
-<<<<<<< HEAD
 .tdimg{
   width: 20%;
 }
-=======
-
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
 /* #member,
 #order,
 #ticket,

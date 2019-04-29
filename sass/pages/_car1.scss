@@ -1,3 +1,10 @@
+body{
+    height: 960px;
+    width: 100%;
+    background-image: url(../images/car/carGameBgi.jpg);
+    background-position: (40%,50%);
+
+}
 #carStart,#carEnd{
     position: relative;
     top: 40vh;
@@ -11,11 +18,7 @@
     /* padding-top: 300px; */
     height: 300px;
     line-height: 1.8;
-<<<<<<< HEAD
     z-index: 1;
-=======
-    z-index: 11;
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
         #carStarText,#carEndText{
             width: 80%;
             position: absolute;
@@ -67,11 +70,7 @@
             margin: 0 auto;
             display: block;
             transform: scale(.7);
-<<<<<<< HEAD
-            vertical-align:top;
-=======
             // vertical-align:top;
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
             margin-top: -75px;
         }
         #score {

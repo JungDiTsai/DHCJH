@@ -1,12 +1,7 @@
-<<<<<<< HEAD
 
 <?php 
 //admin
 
-=======
-<?php 
-//admin
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
     $errMsg="";
 
     try {
@@ -14,13 +9,9 @@
         $sql = "select * from administrator";
         $admin=$pdo->query($sql);  //下指令
         
-<<<<<<< HEAD
         // //////////登入
         // $sql = "select * from administrator where adminId='{$memId}' and adminPsw='{$memPsw}'";
         // $admin = $pdo->query($sql);
-=======
-
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
     } catch (PDOException $e) {
         $errMsg .=  "錯誤原因" . $e->getMessage() . "<br>"; 
         $errMsg .=  "錯誤行號" . $e->getLine() . "<br>";
@@ -83,7 +74,6 @@
 
     try {
         require_once("dhc.php");
-<<<<<<< HEAD
         // $sql = "select * from finform";
         $sql = "select f.flyerNo  , f.informReason , b.flyerImgUrl , m.memId , f.informStatus , f.finformWay 
         from finform as f 
@@ -91,10 +81,6 @@
         JOIN member as m on m.memNo = f.memNo";
         $finform=$pdo5->query($sql);  //下指令
 
-=======
-        $sql = "select * from finform";
-        $finform=$pdo5->query($sql);  //下指令
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
         
 
     } catch (PDOException $e) {
@@ -109,14 +95,10 @@
 
     try {
         require_once("dhc.php");
-<<<<<<< HEAD
         $sql = "select a.orderNo , a.informReason , b.orderImgUrl , m.memId , a.informStatus , a.binformWay 
         from binform as a 
         JOIN orders as b on a.orderNo = b.orderNo 
         JOIN member as m on m.memNo = a.memNo";
-=======
-        $sql = "select * from binform";
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
         $binform=$pdo6->query($sql);  //下指令
         
 
@@ -386,16 +368,10 @@
             display:block;
         }
         .back td img{
-<<<<<<< HEAD
             width:100px;
 
         }
         
-=======
-            width:25%;
-
-        }
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
         .back .hoverimg img:hover{
             cursor: pointer; 
         }
@@ -406,18 +382,15 @@
     <div class="container-fluid">
         <div class="row tab-panels">
             <nav class="navbar col-md-2 navbar-expand-md navbar-dark bg-dark text-light  fixed-left">
-                <a class="navbar-brand" href="#"><img src="../images/logo.png" alt=""></a>
-                <a href=""ddddd></a>
+                <a id="logo"class="navbar-brand" href="back2.php"><img src="../images/logo.png" alt="pic"></a>
+               
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                 </button>
                     
                 <div class="collapse navbar-collapse tabs" id="navbarSupportedContent">
                 <ul class="navbar-nav flex-column ">
-<<<<<<< HEAD
                     <!--  -->
-=======
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
                     <li class="nav-item ">
                         <a class="nav-link text-info bb" rel="admin" >管理員帳號管理</a>
                     </li>
@@ -441,7 +414,7 @@
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item menu text-info" rel="flyerMes" >宣傳單檢舉管理</a>
                             <a class="dropdown-item menu text-info" rel="beauty" >選美檢舉管理</a>
-                            <a class="dropdown-item menu text-info" rel="beautyMes" >選美留言檢舉管理</a>
+                            <!-- <a class="dropdown-item menu text-info" rel="beautyMes" >選美留言檢舉管理</a> -->
                         </div>
                     </li>
                    
@@ -458,13 +431,9 @@
                     <li class="nav-item menu">
                         <a class="nav-link text-info" href="#" rel="flyercheck" >宣傳單查詢</a>
                     </li>
-<<<<<<< HEAD
                     
                     
                     <a id="backlogin" class ="nav-link text-info " href="javascript:">登出</a>
-=======
-                    <a class ="nav-link text-info backlogin"href="javascript:">登出</a>
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
                   </ul>
                 </div>
             </nav>
@@ -681,11 +650,7 @@
                                                 <tr class="back">
                                                     <th class="add" name="no"> <?php echo  $drawno ;?> </th>
                                                     <td class="first"> <?php echo $drawtotal["drawName"]; ?></td>
-<<<<<<< HEAD
                                                     <td class="tdimg"><img src="../<?php echo $drawtotal["drawImgUrl"]; ?>" alt="pic"></td>
-=======
-                                                    <td><img src="<?php echo $drawtotal["drawImgUrl"]; ?>" alt="pic"></td>
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
                                                     <td><?php echo $drawtotal["drawPrice"]; ?></td>
                                                   
 
@@ -749,11 +714,7 @@
                                                 <tr class="back">
                                                     <th class="add" name="no"> <?php echo  $audiono ;?> </th>
                                                     <td class="first"> <?php echo $audiototal["audioName"]; ?></td>
-<<<<<<< HEAD
                                                     <td><img src="../<?php echo $audiototal["audioImgUrl"]; ?>" alt="pic"></td>
-=======
-                                                    <td><img src="<?php echo $audiototal["audioImgUrl"]; ?>" alt="pic"></td>
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
                                                     <td><?php echo $audiototal["audioPrice"]; ?></td>
                                                   
 
@@ -818,11 +779,7 @@
                                                 <tr class="back">
                                                     <th class="add" name="no"> <?php echo  $pipeno ;?> </th>
                                                     <td class="first"> <?php echo $pipetotal["pipeName"]; ?></td>
-<<<<<<< HEAD
                                                     <td><img src="../<?php echo $pipetotal["pipeImgUrl"]; ?>" alt="pic"></td>
-=======
-                                                    <td><img src="<?php echo $pipetotal["pipeImgUrl"]; ?>" alt="pic"></td>
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
                                                     <td><?php echo $pipetotal["pipePrice"]; ?></td>
                                                   
 
@@ -887,11 +844,7 @@
                                                 <tr class="back">
                                                     <th class="add" name="no"> <?php echo  $effectsno ;?> </th>
                                                     <td class="first"> <?php echo $effectstotal["effectsName"]; ?></td>
-<<<<<<< HEAD
                                                     <td><img src="../<?php echo $effectstotal["effectsImgUrl"]; ?>" alt="pic"></td>
-=======
-                                                    <td><img src="<?php echo $effectstotal["effectsImgUrl"]; ?>" alt="pic"></td>
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
                                                     <td><?php echo $effectstotal["effectsPrice"]; ?></td>
                                                   
 
@@ -956,11 +909,7 @@
                                                 <tr class="back">
                                                     <th class="add" name="no"> <?php echo  $troupeno ;?> </th>
                                                     <td class="first"> <?php echo $troupetotal["troupeName"]; ?></td>
-<<<<<<< HEAD
                                                     <td><img src="../<?php echo $troupetotal["troupeImgUrl"]; ?>" alt="pic"></td>
-=======
-                                                    <td><img src="<?php echo $troupetotal["troupeImgUrl"]; ?>" alt="pic"></td>
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
                                                     <td><?php echo $troupetotal["troupePrice"]; ?></td>
                                                   
 
@@ -1038,11 +987,7 @@
                                     <td class="first"><?php echo $flyimgTotal["flyTitle"]; ?>
                                     </td>
                                     <td >
-<<<<<<< HEAD
                                         <img src="../<?php echo $flyimgTotal["flyImg"]; ?>" alt="pic">    
-=======
-                                        <img src="<?php echo $flyimgTotal["flyImg"]; ?>" alt="pic">    
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
                                         <!-- <a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-1.jpg" data-lightbox="example-1"><img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-1.jpg" alt="image-1" /></a> -->
                                  
                                     </td>
@@ -1133,11 +1078,7 @@
                                 <tr class="back">
                                     <th class="add" name="no"> <?php echo  $hostno ;?> </th>
                                     <td class="first"><?php echo $hostTotal["hostName"]; ?></td>
-<<<<<<< HEAD
                                     <td ><img src="../<?php echo $hostTotal["hostImgUrl"]; ?>" alt="pic"></td>
-=======
-                                    <td ><img src="<?php echo $hostTotal["hostImgUrl"]; ?>" alt="pic"></td>
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
                                     <td ><?php echo $hostTotal["hostTel"]; ?></td>
                                     <td ><?php echo $hostTotal["hostContent"]; ?></td>
                                     <td ><?php echo $hostTotal["hostA"]; ?></td>
@@ -1176,20 +1117,13 @@
                     <table class="table table-hover">
                             <thead>
                                 <tr>
-<<<<<<< HEAD
                                 <th >宣傳單編號 </th>
                                 
-=======
-                                <th >被檢舉編號 </th>
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
                                  <th scope="col">檢舉原因</th>
                                 <th scope="col">圖片</th>
                                 <th scope="col">檢舉人帳號</th>
                                 <th scope="col">檢舉狀態</th>
-<<<<<<< HEAD
                                 <th scope="col">處置方式</th>
-=======
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
                                <th scope="col">修改</th>
                                 </tr>
                             </thead>
@@ -1198,13 +1132,7 @@
                                 <?php 
                                 $flyermesno=0;
                                 while( $finformTotal = $finform->fetch(PDO::FETCH_ASSOC)){     
-<<<<<<< HEAD
                                
-=======
-                                while( $flyerimgTotal = $flyerimg->fetch(PDO::FETCH_ASSOC)){   
-                                      
-                                while( $mmemnoTotal = $finformmember->fetch(PDO::FETCH_ASSOC)){   
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
                                 $flyermesno++;    
                                 ?>
                                 <!-- php -->
@@ -1214,41 +1142,23 @@
                                     <td class="first"><?php echo $finformTotal["informReason"]; ?>
                                     </td>                                                  
                                     <td class="hoverimg">    
-<<<<<<< HEAD
                                         <a class="example-image-link" href="<?php echo  $finformTotal["flyerImgUrl"] ;?>" data-lightbox=" <?php echo  $flyermesno ;?>">
                                         <img class="example-image" src="../<?php echo  $finformTotal["flyerImgUrl"] ;?>" alt="<?php echo  $flyermesno ;?><?php echo  $flyermesno ;?>" /></a>
                                     </td>
                                     
                                     <th class="" name=""> <?php echo  $finformTotal["memId"] ;?> </th>
-=======
-                                        <a class="example-image-link" href="<?php echo  $flyerimgTotal["flyimg"] ;?>" data-lightbox=" <?php echo  $flyermesno ;?>">
-                                        <img class="example-image" src="../<?php echo  $flyerimgTotal["flyimg"] ;?>" alt="<?php echo  $flyermesno ;?><?php echo  $flyermesno ;?>" /></a>
-                                    </td>
-                                    
-                                    <th class="" name=""> <?php echo  $mmemnoTotal["mmemid"] ;?> </th>
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
                                     <td class="change">
                                     <button type="button" class="<?php if($finformTotal["informStatus"]=="已處理"){
                                         echo 'btn btn-success';}else{ echo 'btn btn-danger';}?> ">
                                         <?php echo $finformTotal["informStatus"]; ?></td>
-<<<<<<< HEAD
                                     <td> <?php echo $finformTotal["finformWay"]; ?></td>
                                     <td class=""><button type="button" class="btn btn-link btnclick"  value=<?php echo $finformTotal["flyerNo"] ; ?> >修改</button></td>
                                     
-=======
-                                
-                                    <td class=""><button type="button" class="btn btn-link btnclick" value=<?php echo $finformTotal["finformNo"] ; ?> >修改</button></td>
-
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
                                 </tr>
                                 
                                <?php
 
-<<<<<<< HEAD
                                };
-=======
-                               }}};
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
                                ?>
                             </tbody>
                             </table>
@@ -1265,20 +1175,13 @@
                     <table class="table table-hover">
                             <thead>
                                 <tr>
-<<<<<<< HEAD
                                 <th >訂單編號 </th>
-=======
-                                <th >花車檢舉編號 </th>
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
                                 
                                 <th scope="col">檢舉原因</th>
                                 <th scope="col">圖片</th>
                                 <th scope="col">檢舉會員</th>
                                 <th scope="col">檢舉狀態</th>
-<<<<<<< HEAD
                                 <th scope="col">處置方式</th>
-=======
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
                                 <th scope="col">修改</th>
                                 </tr>
                             </thead>
@@ -1287,13 +1190,7 @@
                                  <?php 
                                 $binformno=0;
                                 while( $binformTotal = $binform->fetch(PDO::FETCH_ASSOC)){     
-<<<<<<< HEAD
                                     // print_r($binformTotal);
-=======
-                                while( $newjoinTotal = $newjoin->fetch(PDO::FETCH_ASSOC)){    
-                                   
-                                while( $binformmemberTotal = $binformmember->fetch(PDO::FETCH_ASSOC)){    
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
                                 $binformno ++;
                                 ?>
                                 <!-- php -->
@@ -1304,41 +1201,24 @@
                                     </td>
                                   
                                     <td class="hoverimg">    
-<<<<<<< HEAD
                                         <a class="example-image-link" href="<?php echo  $binformTotal["orderImgUrl"] ;?>" data-lightbox=" <?php echo  $binformno ;?>">
                                         <img class="example-image" src="../<?php echo $binformTotal["orderImgUrl"] ;?>" alt="<?php echo  $binformno ;?>" /></a>
                                     </td>
 
                                     <th class="" name=""> <?php echo  $binformTotal["memId"] ;?> </th>
-=======
-                                        <a class="example-image-link" href="<?php echo  $newjoinTotal["img"] ;?>" data-lightbox=" <?php echo  $binformno ;?>">
-                                        <img class="example-image" src="<?php echo $newjoinTotal["img"] ;?>" alt="<?php echo  $binformno ;?>" /></a>
-                                    </td>
-
-                                    <th class="" name=""> <?php echo  $binformmemberTotal["mmemid"] ;?> </th>
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
                                     <td class="change">
                                     <button type="button" class="<?php if($binformTotal["informStatus"]=="已處理"){
                                         echo 'btn btn-success';}else{ echo 'btn btn-danger';}?> ">
                                         <?php echo $binformTotal["informStatus"]; ?></td>
-<<<<<<< HEAD
 
                                     <td class="first"><?php echo $binformTotal["binformWay"]; ?>
                                     <td class=""><button type="button" class="btn btn-link btnclick" value=<?php echo $binformTotal["orderNo"] ; ?> >修改</button></td>
-=======
-                                
-                                    <td class=""><button type="button" class="btn btn-link btnclick" value=<?php echo $binformTotal["binformNo"] ; ?> >修改</button></td>
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
 
                                 </tr>
                                 
                                <?php
 
-<<<<<<< HEAD
                                }
-=======
-                               }}}
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
                                ?>
                                
                                
@@ -1572,25 +1452,15 @@
                                     <th scope="col">優惠卷編號</th>
                                     <th scope="col">投票數量</th>
                                     <th scope="col">宣傳單編號</th>
-<<<<<<< HEAD
                                     
-=======
-                                    <th scope="col">是否參加選美</th>
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
                                     <th scope="col">上傳花車日期</th>
                                     <th scope="col">活動地點</th>
                                     <th scope="col">活動日期</th>
                                     <th scope="col">主持人</th>
                                     <th scope="col">總金額</th>
-<<<<<<< HEAD
                                     <th scope="col">是否參加選美</th>
                                   
                                     <!-- <th scope="col">修改</th> -->
-=======
-                                    <th scope="col">狀態</th>
-                                  
-                                    <th scope="col">修改</th>
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
                                 </tr>
                             </thead>
                             <tbody>
@@ -1607,26 +1477,17 @@
                                     </td>
                                    
                                     <td class="" name=""> <?php echo  $orderTotal["orderName"] ;?> </td>
-<<<<<<< HEAD
                                     <td class="" name=""> <img src="../<?php echo  $orderTotal["orderImgUrl"] ;?>" alt="pic"> </td>
-=======
-                                    <td class="" name=""> <?php echo  $orderTotal["orderImgUrl"] ;?> </td>
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
                                    
                                     <td class="" name=""> <?php echo  $orderTotal["memCouponsNo"] ;?> </td>
                                     <td class="" name=""> <?php echo  $orderTotal["orderVote"] ;?> </td>
                                     <td class="" name=""> <?php echo  $orderTotal["flyerNo"] ;?> </td>
-<<<<<<< HEAD
                                   
-=======
-                                    <td class="" name=""> <?php echo  $orderTotal["beautyState"] ;?> </td>
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
                                     <td class="" name=""> <?php echo  $orderTotal["beautyDate"] ;?> </td>
                                     <td class="" name=""> <?php echo  $orderTotal["actPlace"] ;?> </td>
                                     <td class="" name=""> <?php echo  $orderTotal["actStart"] ;?> </td>
                                     <td class="" name=""> <?php echo  $orderTotal["hostNo"] ;?> </td>
                                     <td class="" name=""> <?php echo  $orderTotal["totalMoney"] ;?> </td>
-<<<<<<< HEAD
 
                                     <td class="">
                                     <?php 
@@ -1645,15 +1506,6 @@
                                    
                                     
                                     <!-- <td class=""><button type="button" class="btn btn-link btnclick" value=<?php echo $orderTotal["orderNo"] ; ?> >修改</button></td> -->
-=======
-                                   
-                                    <td class="change">
-                                    <button type="button" class="<?php if($orderTotal["orderStatus"]=="啟用"){
-                                        echo 'btn btn-success';}else{ echo 'btn btn-danger';}?> ">
-                                        <?php echo $orderTotal["orderStatus"]; ?></td>
-                                    
-                                    <td class=""><button type="button" class="btn btn-link btnclick" value=<?php echo $orderTotal["orderNo"] ; ?> >修改</button></td>
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
                                     
                                 </tr>
                                 
@@ -1685,11 +1537,7 @@
                                     
                                    
                                     <th scope="col">是否使用人數功能</th>
-<<<<<<< HEAD
                                     <th scope="col">人數統計</th>
-=======
-                                    <th scope="col">參加人數</th>
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
 
                                     <th scope="col">活動地址</th>
                                     
@@ -1698,7 +1546,7 @@
                                  
                                     <th scope="col">宣傳單狀態</th>
                                   
-                                    <th scope="col">修改</th>
+                                    <!-- <th scope="col">修改</th> -->
                                 </tr>
                             </thead>
                             <tbody id="">
@@ -1711,7 +1559,6 @@
                                
                                 <tr class="back">
                                     <th class="add" name="no"> <?php echo  $flyercheckTotal["orderNo"] ;?> </th>
-<<<<<<< HEAD
                                    <td class="first"><img src="../<?php echo $flyercheckTotal["flyerImgUrl"]; ?>" alt="">
                                     </td>
                                    
@@ -1722,17 +1569,10 @@
                                         echo'沒有' ;
                                    }  ;?> </td>
                                     <td class="" name=""> <?php echo  $flyercheckTotal["peopleNumber"] ;?> </td>
-=======
-                                   <td class="first"><?php echo $flyercheckTotal["flyerImgUrl"]; ?>
-                                    </td>
-                                   <td class="" name=""> <?php echo  $flyercheckTotal["peopleStatus"] ;?> </td>
-                                    <td class="" name=""> <?php echo  $flyercheckTotal["peopleVote"] ;?> </td>
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
                                     
                                    
                                     <td class="" name=""> <?php echo  $flyercheckTotal["flyeradd"] ;?> </td>
                                     <td class="" name=""> <?php echo  $flyercheckTotal["flyeDate"] ;?> </td>
-<<<<<<< HEAD
  
                                     <td class="change">
                                     <?php 
@@ -1757,18 +1597,6 @@
                                     
                                    
                                     
-=======
-                                   
-                                 
-                                   
-                                   
-                                    <td class="change">
-                                    <button type="button" class="<?php if($flyercheckTotal["flyeStatus"]=="啟用"){
-                                        echo 'btn btn-success';}else{ echo 'btn btn-danger';}?> ">
-                                        <?php echo $flyercheckTotal["flyeStatus"]; ?></td>
-                                    
-                                    <td class=""><button type="button" class="btn btn-link btnclick" value=<?php echo $flyercheckTotal["flyerNo"] ; ?> >修改</button></td>
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
                                     
                                 </tr>
                                 
@@ -1801,14 +1629,10 @@
         <script>
         
         $(document).ready(function () {
-<<<<<<< HEAD
             ////登出
             $('#backlogin').on('click',function(){
                 window.history.back();
             });
-=======
-          
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
 
             panelToShow = 'admin';
             console.log(panelToShow);
@@ -1869,10 +1693,7 @@
              for(var i=0; i<btn.length;i++){
                
                  btn[i].addEventListener('click',function(e){
-<<<<<<< HEAD
                
-=======
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
                      if(e.target.innerHTML=='修改'){
                          alert('修改');
                          console.log($panelchildToShow)   ;
@@ -1881,11 +1702,7 @@
                      pagevalue = e.target.innerHTML;
                      
 
-<<<<<<< HEAD
                     
-=======
-
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
                     //當下的back
                     father = e.target.closest('.back');
 
@@ -1973,7 +1790,6 @@
                         twelve.innerHTML='';
                         twelve.innerHTML=`<input value="${twelvevalue}" >` ;
                     }else if( panelToShow == 'flyerMes' || panelToShow == 'beauty' || panelToShow =='beautyMes'){
-<<<<<<< HEAD
                        //back 1 
                     //    flynum=father.querySelector('.add').innerHTML;
                        
@@ -1989,10 +1805,6 @@
                                     <option >下架</option></select>` ;
                            
 
-=======
-                        // psw.innerHTML='';
-                        // psw.innerHTML=`<input value="${pswvalue}" >` ;
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
 
                     }else if(panelToShow =='accessories' && $panelchildToShow=='draw' || panelToShow =='accessories' && $panelchildToShow=='audio' || panelToShow =='accessories' && $panelchildToShow=='pipe' || panelToShow =='accessories' &&$panelchildToShow=='effects' || panelToShow =='accessories' &&$panelchildToShow=='troupe'){
                         console.log($panelchildToShow);
@@ -2112,13 +1924,9 @@
                     father.querySelector('td:nth-child(12)').innerHTML= newtwelve;
                     
                 }else if(panelToShow == 'flyerMes' || panelToShow == 'beauty' || panelToShow =='beautyMes' ){
-<<<<<<< HEAD
                     var newsix = father.querySelector('td:nth-child(6)').firstChild.value; //上下架;                
                     father.querySelector('td:nth-child(6)').innerHTML= newsix;
                     console.log(newsix);
-=======
-
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
                 }else if(panelToShow =='accessories' && $panelchildToShow=='draw' || panelToShow =='accessories' && $panelchildToShow=='audio' || panelToShow =='accessories' && $panelchildToShow=='pipe' || panelToShow =='accessories' &&$panelchildToShow=='effects' || panelToShow =='accessories' &&$panelchildToShow=='troupe'){
                     // 改得值放入input
                     father.querySelector('.first').innerHTML = newanswer;
@@ -2166,19 +1974,11 @@
                 }else if(panelToShow =='flyerMes' ){
                     console.log('flyerMes');
                     urlvalue='finform.php';
-<<<<<<< HEAD
                     datavalue={  no:num  ,  status:newstatus  , onoff:newsix };
                    
                 }else if(panelToShow == 'beauty'){
                     urlvalue='binform.php';
                     datavalue={   no:num  ,  status:newstatus  , onoff:newsix };
-=======
-                    datavalue={  no:num  ,  status:newstatus };
-                   
-                }else if(panelToShow == 'beauty'){
-                    urlvalue='binform.php';
-                    datavalue={  no:num  ,  status:newstatus };
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
                    
                 }else if(panelToShow =='beautyMes'){
                     urlvalue='minform.php';

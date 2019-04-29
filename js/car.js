@@ -161,7 +161,6 @@ function drawFrame() {
 //判斷登入
 LoginState="notFound";
 OrderNo="notFound";
-<<<<<<< HEAD
 window.addEventListener("load", function () {
     //產生XMLHttpRequest物件
     let xhr = new XMLHttpRequest();
@@ -169,7 +168,7 @@ window.addEventListener("load", function () {
     xhr.onload = function () {
         if (xhr.status == 200) { //server端可以正確的執行
             if(xhr.responseText!="notFound"){
-                LoginState = (xhr.responseText);
+                LoginState = JSON.parse(xhr.responseText);
                 document.querySelector('.fa-user').src = LoginState[0]['memImgUrl'];
                 document.querySelector('.fa-user').setAttribute("id","bigMember");
                 console.log("LoginState:已輸入值");
@@ -184,31 +183,6 @@ window.addEventListener("load", function () {
     xhr.open("get", "php/components/_JudgeLogin.php", true);
     xhr.send(null);
 })
-=======
-// window.addEventListener("load", function () {
-//     //產生XMLHttpRequest物件
-//     let xhr = new XMLHttpRequest();
-//     //註冊callback function
-//     xhr.onload = function () {
-//         if (xhr.status == 200) { //server端可以正確的執行
-//             if(xhr.responseText!="notFound"){
-//                 LoginState =  JSON.parse(xhr.responseText);
-//                 document.querySelector('.fa-user').src = LoginState[0]['memImgUrl'];
-//                 document.querySelector('.fa-user').setAttribute("id","bigMember");
-//                 console.log("LoginState:已輸入值");
-
-//             }
-//             console.log("Session:"+xhr.responseText)
-//         } else { //其它
-//             alert(xhr.status);
-//         }
-//     }
-//     //設定好所要連結的程式
-//     xhr.open("get", "../php/components/_JudgeLogin.php", true);
-// 	xhr.send(null);
-	
-// })
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
 
 
 //登入
@@ -227,12 +201,8 @@ xhr.onload = function () {
 		else{
 			// window.location.reload();
 			// var price=document.getElementById(' test').value;
-<<<<<<< HEAD
-			
-			
-=======
-			LoginState =  JSON.parse(xhr.responseText);
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
+             LoginState = JSON.parse(xhr.responseText);
+            // console.log(xhr.responseText);
 		}
 	} else { //其它
 		alert(xhr.status);
@@ -247,10 +217,6 @@ var data_info = "memId=" + document.getElementById("memId").value + "&memPsw="+ 
 xhr.send(data_info);
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
 /* 登入燈箱 JS*/
         // 點擊icon開啟登入燈箱----------------------------
 		carEnd .addEventListener('click', function (e) {
@@ -269,34 +235,15 @@ xhr.send(data_info);
                 }
             }else{
                 // window.location.href = "memberCenter.php";
-<<<<<<< HEAD
-                console.log(price,LoginState[0][0] );
-                // $.ajax({
-                //     url:'../carprice.php',
-                //     data:{ price:price , no:LoginState[0][0] , couponstype:couponstype },  
-                                     
-                //     type:'get',
-                //     error:function(){                                                                 
-    
-                //         alert("失敗");
-    
-                //         },
-                //     success:function(data){
-                //         // x.innerHTML=data;
-                //         console.log(data);
-                       
-                //       }   
-                //     })
-=======
-                // console.log(price,LoginState[0][0] );
+                console.log(price,LoginState[0][0], couponstype);
                 $.ajax({
-                    url:'../carprice.php',
+                    url:'./carprice.php',
                     data:{ price:price , no:LoginState[0][0] , couponstype:couponstype },  
-                                     
+                    // data:{price:'1'},              
                     type:'get',
                     error:function(){                                                                 
     
-                        alert("失敗");
+                        alert("aa失敗");
     
                         },
                     success:function(data){
@@ -305,7 +252,6 @@ xhr.send(data_info);
                        
                       }   
                     })
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
                     carEnd.style.display='none';
                     carStart.style.display='block';
                     console.log('close');
