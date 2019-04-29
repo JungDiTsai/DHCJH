@@ -1,6 +1,6 @@
 <?php
 try{
-    require_once("php/components/connectDHC.php");
+    require_once("php/components/_connectDHC.php");
     $sql = "SELECT * FROM orders  ORDER BY orderVote DESC LIMIT 3";
     $beautyContest = $pdo->query($sql);
 }catch(PDOException $e){
@@ -376,7 +376,6 @@ try{
         <?php
         $errMsg=""; 
         try{
-            require_once("php/components/connectDHC.php"); 
 
             $sql = "select * from draw";
             $draws = $pdo->query($sql);
@@ -626,7 +625,6 @@ try{
         
         <?php
         try{
-            require_once("php/components/connectDHC.php");
             $sql = "SELECT * FROM flyer  ORDER BY flyeDate DESC LIMIT 3";
             $flyer = $pdo->query($sql);
         }catch(PDOException $e){

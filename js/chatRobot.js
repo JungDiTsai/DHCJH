@@ -1,4 +1,4 @@
-<script src="jquery-3.3.1.min.js"></script>
+
 ///////客服機器人區////
 //打開客服小姐
 $('#customerServiceGirl').click(function(){
