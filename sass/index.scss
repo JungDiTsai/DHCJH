@@ -56,7 +56,7 @@
 }
 .custItemContentInfo{
     p{
-        font-size:18px;
+        font-size:16px;
     }
 }
 #tryCustormiseWrap{
@@ -70,7 +70,7 @@
 #effectItem{
     background-image: none;
     width: 670px;
-    height: 150px;
+    height: 153px;
     filter: none;
     padding: 0;
 }
@@ -96,6 +96,11 @@
         padding: 10px 0px 0px 0px;
         width: 380px;
         height: 370px;
+    }
+    .custItemContentInfo{
+        p{
+            font-size:18px;
+        }
     }
 }
 @media screen and (min-width:1200px) {
