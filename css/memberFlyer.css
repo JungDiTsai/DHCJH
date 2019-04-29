@@ -1655,7 +1655,7 @@ footer img {
 .detailFlyer img {
   display: block;
   margin: 0 auto 10px;
-  max-width: 700px;
+  max-width: 300px;
   -webkit-box-shadow: 1px 5px 20px #ccc;
           box-shadow: 1px 5px 20px #ccc;
 }
@@ -1715,6 +1715,9 @@ footer img {
   }
   .detailFlyer h4 {
     font-size: 32px;
+  }
+  .detailFlyer img {
+    max-width: 500px;
   }
 }
 
