@@ -93,7 +93,7 @@
 						//先抓取留言的"內容"對應"訂單"
 						var index = $('.DiscSent').index(this);
 						console.log(index);
-						$(".beautyDiscIgMemTextContainerWrap").eq(index).prepend("<div class='beautyDiscIgMemTextContainer'>"+"<img src='<?php if(isset($_SESSION['member'])){print_r($_SESSION['member'][0][6]);} ?>' alt=''>"+"<p class='beautyDiscIgMName'>"+"<?php if(isset($_SESSION['member'])){print_r($_SESSION['member'][0][6]);} ?>"+"</p>"+"<p class='beautyDiscIgNameText'>"+messageContent+"</p>"+"</div>")
+						$(".beautyDiscIgMemTextContainerWrap").eq(index).prepend("<div class='beautyDiscIgMemTextContainer'>"+"<img src='<?php if(isset($_SESSION['member'])){print_r($_SESSION['member'][0][6]);} ?>' alt=''>"+"<p class='beautyDiscIgMName'>"+"<?php if(isset($_SESSION['member'])){print_r($_SESSION['member'][0][3]);} ?>"+"</p>"+"<p class='beautyDiscIgNameText'>"+messageContent+"</p>"+"</div>")
 
 						let xhr = new XMLHttpRequest();
 						xhr.onload = function (){
