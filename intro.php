@@ -14,6 +14,7 @@
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet"  href="css/base.css" />
     <link rel="stylesheet"  href="css/demo.css" />
+    <script src="js/jquery-3.3.1.min.js"></script>
 </head>
 <body onload="draw();">
     <input type="checkbox" id=menu_control>
@@ -264,6 +265,7 @@
             
         }
     </script>
+    
 </body>
 <script src="js/three.js"></script>
 <script src="js/loaders/OBJLoader.js"></script>
@@ -276,4 +278,5 @@
 <script src="js/introthree.js"></script>
 <script src="js/demo.js"></script>
 <script src="js/anime.min.js"></script>
+<script src="js/navmenu.js"></script>
 </html>

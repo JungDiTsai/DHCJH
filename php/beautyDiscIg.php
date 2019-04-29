@@ -119,8 +119,9 @@
                 }else{
                     e.target.src = "images/like.png";
                     amount = -1;
-                }
-                let url = "updateVotes.php?orderNo=" + orderNo + "&amount=" + amount;
+				}
+				console.log(orderNo);
+                let url = "updateVotes.php?orderNo=" + <?php if(isset($_SESSION['member'])){print_r($_SESSION['member'][0]['orderNo']);}else{ echo "images/member/member.jpg";} ?> + "&amount=" + amount;
                 var xhr2 = new XMLHttpRequest();
                 xhr2.onload = function(){
                     //console.log(xhr2.responseText);
