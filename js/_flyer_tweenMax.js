@@ -3,7 +3,7 @@ function getRandom(min,max){
 };
 
 TweenMax.to('.firstScreen .titleBgi', 3, {
-    y: 150,
+    y: 125,
     alpha: 1,
     ease: Power3.easeOut,
 })
