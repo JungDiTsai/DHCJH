@@ -331,7 +331,11 @@
   width: 150px;
   text-align: center;
   display: block;
+<<<<<<< HEAD
   border-bottom: 30px solid  transparent;
+=======
+  border-bottom: 30px solid  transparent;
+>>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
   border-bottom-width: 30px;
   -o-border-image: url("../images/navTDD.png") 41 round;
      border-image: url("../images/navTDD.png") 41 round;
@@ -368,7 +372,11 @@ header {
   height: 80px;
   width: 100%;
   top: 0px;
+<<<<<<< HEAD
   z-index: 99;
+=======
+  z-index: 101;
+>>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
   -webkit-animation: headerNeon 1s infinite;
           animation: headerNeon 1s infinite;
 }

@@ -60,7 +60,7 @@ body {
   height: 64px;
   transition: 0.2s;
   cursor: pointer;
-  z-index: 100;
+  z-index: 49;
   opacity: 0.8;
 }
 .slider__arrow:hover {

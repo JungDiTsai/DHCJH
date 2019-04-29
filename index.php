@@ -54,7 +54,6 @@ try{
 <body>
 <!--會員登入 克服 遊戲 header -->
     <!--載入頁面   起-->
-    
     <div id="loadingScene" class="loading">     
         <div class="stars"></div>
         <div id="fog"></div>

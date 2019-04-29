@@ -384,7 +384,11 @@ table {
   width: 150px;
   text-align: center;
   display: block;
+<<<<<<< HEAD
   border-bottom: 30px solid  transparent;
+=======
+  border-bottom: 30px solid  transparent;
+>>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
   border-bottom-width: 30px;
   -o-border-image: url("../images/navTDD.png") 41 round;
      border-image: url("../images/navTDD.png") 41 round;
@@ -421,7 +425,11 @@ header {
   height: 80px;
   width: 100%;
   top: 0px;
+<<<<<<< HEAD
   z-index: 99;
+=======
+  z-index: 101;
+>>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
   -webkit-animation: headerNeon 1s infinite;
           animation: headerNeon 1s infinite;
 }
@@ -2333,6 +2341,7 @@ footer img {
 .groupA .fireworkEffect01, .groupA .fireworkEffect02, .groupA .fireworkEffect03 {
   display: none;
 }
+<<<<<<< HEAD
 
 .groupA .fireworkEffect01 img, .groupA .fireworkEffect02 img, .groupA .fireworkEffect03 img {
   position: absolute;
@@ -2370,6 +2379,45 @@ footer img {
           transform: translateZ(0px) translateX(60px) translateY(-105px) rotateY(0deg);
 }
 
+=======
+
+.groupA .fireworkEffect01 img, .groupA .fireworkEffect02 img, .groupA .fireworkEffect03 img {
+  position: absolute;
+  width: 200px;
+  z-index: -1;
+}
+
+.groupA .fireworkEffect01 :first-child {
+  -webkit-transform: translateZ(0px) translateX(50px) translateY(-235px) rotateY(0deg);
+          transform: translateZ(0px) translateX(50px) translateY(-235px) rotateY(0deg);
+}
+
+.groupA .fireworkEffect01 :nth-child(2) {
+  -webkit-transform: translateZ(0px) translateX(-210px) translateY(-260px) rotateY(0deg);
+          transform: translateZ(0px) translateX(-210px) translateY(-260px) rotateY(0deg);
+}
+
+.groupA .fireworkEffect01 :last-child {
+  -webkit-transform: translateZ(0px) translateX(-230px) translateY(-155px) rotateY(0deg);
+          transform: translateZ(0px) translateX(-230px) translateY(-155px) rotateY(0deg);
+}
+
+.groupA .fireworkEffect02 :first-child {
+  -webkit-transform: translateZ(0px) translateX(50px) translateY(-255px) rotateY(0deg);
+          transform: translateZ(0px) translateX(50px) translateY(-255px) rotateY(0deg);
+}
+
+.groupA .fireworkEffect02 :nth-child(2) {
+  -webkit-transform: translateZ(0px) translateX(-220px) translateY(-265px) rotateY(0deg);
+          transform: translateZ(0px) translateX(-220px) translateY(-265px) rotateY(0deg);
+}
+
+.groupA .fireworkEffect02 :nth-child(3) {
+  -webkit-transform: translateZ(0px) translateX(60px) translateY(-105px) rotateY(0deg);
+          transform: translateZ(0px) translateX(60px) translateY(-105px) rotateY(0deg);
+}
+
+>>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
 .groupA .fireworkEffect02 :nth-child(4) {
   -webkit-transform: translateZ(0px) translateX(90px) translateY(-205px) rotateY(0deg);
           transform: translateZ(0px) translateX(90px) translateY(-205px) rotateY(0deg);
@@ -3936,6 +3984,7 @@ footer img {
   }
 }
 
+<<<<<<< HEAD
 /*.noscroll{
   position: fixed;
   width: 100%;
@@ -3946,15 +3995,30 @@ footer img {
   height: 100%;
   top: 0;
   overflow-y: scroll;
+=======
+/*.noscroll{
+  position: fixed;
+  width: 100%;
+}
+.scrollLightBox{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  overflow-y: scroll;
+>>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
 }*/
 a {
   text-decoration: none;
 }
 
+<<<<<<< HEAD
 a .commonBtn {
   margin: auto;
 }
 
+=======
+>>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
 #gameHub {
   opacity: 0.85;
   position: fixed;
@@ -7060,6 +7124,46 @@ footer #footerBgiNew {
   background-size: cover;
   width: 100%;
   height: 33vw;
+<<<<<<< HEAD
+  position: absolute;
+  margin: auto;
+  bottom: 0;
+}
+
+footer #footerWords {
+  position: absolute;
+  margin: auto;
+  right: 0;
+  left: 0;
+  bottom: 3vw;
+}
+
+footer p {
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  font-family: "微軟正黑體";
+}
+
+footer div {
+  text-align: center;
+}
+
+footer img {
+  border-radius: 100%;
+  margin: 4px;
+  width: 36px;
+}
+
+/*@media screen and (min-width:768px) {
+  #earth{
+  width: 600px;
+  height: 600px;
+  bottom: -500px;
+  }
+  #earthContainer{
+=======
+>>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
   position: absolute;
   margin: auto;
   bottom: 0;
@@ -7463,7 +7567,11 @@ footer img {
   #tryCustormiseFlyerWrap,
   #beautyContestWrap,
   #processWrap {
+<<<<<<< HEAD
     padding-top: 140px;
+=======
+    padding-top: 160px;
+>>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
   }
   #carEquipmentsIntroWrap #equipBtnOne {
     display: none;

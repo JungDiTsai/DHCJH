@@ -13,7 +13,7 @@
         <li <?php if($_SERVER['PHP_SELF']=='/demo-projects/CD106/CD106G1/memberCollection.php'){ echo  'class="here"';} ?>><a href="memberCollection.php">我的收藏</a></li>
         <li <?php if($_SERVER['PHP_SELF']=='/demo-projects/CD106/CD106G1/memberFlyer.php'){ echo  'class="here"';} ?>><a href="memberFlyer.php">宣傳單管理</a></li>
         <li <?php if($_SERVER['PHP_SELF']=='/demo-projects/CD106/CD106G1/memberCoupons.php'){ echo  'class="here"';} ?>><a href="memberCoupons.php">我的優惠券</a></li>
-        <li><a href="index.php">登出</a></li>
+        <li onclick="LoginOut()">登出</li>
     </ul>
 </div>
 

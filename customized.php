@@ -49,6 +49,7 @@
     
 </head>
 <body>
+<input type="checkbox" id=menu_control>
 <?php require_once("php/header.php"); ?>
 <?php require_once("php/loginLightBox.php"); ?>
 
