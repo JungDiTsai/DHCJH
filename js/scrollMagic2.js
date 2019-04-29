@@ -112,6 +112,9 @@ var tlB_02 = new TweenMax.to('#hint2' , 1 ,{
     opacity:1,
     delay:1,
 });
+var tlB_03 = new TweenMax.to('#hint2' , 1.2 ,{ 
+    opacity:0,
+    delay:2.5,
 var tlB_03 = new TweenMax.to('#hint2' , 1.5 ,{ 
     opacity:0,
     y:380,
