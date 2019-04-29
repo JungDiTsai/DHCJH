@@ -2247,8 +2247,6 @@ footer img {
   margin-top: 0;
   margin-bottom: 50px;
   opacity: 0;
-  -webkit-transform: translateX(300%);
-          transform: translateX(300%);
 }
 
 .thrScreen .wrap {
@@ -2399,6 +2397,8 @@ footer img {
     margin-right: 20px;
   }
   .thrScreen .titleBgi {
+    -webkit-transform: translateX(300%);
+            transform: translateX(300%);
     margin-top: 80px;
   }
   .thrScreen .wrap ul li img {
