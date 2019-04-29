@@ -405,7 +405,6 @@
             </div>
         </div>
     </div>
-    <?php require_once("php/footer.php"); ?>
 
     <script src="js/_login.js"></script>
     <script src="js/_font_loginLightBox.js"></script>
