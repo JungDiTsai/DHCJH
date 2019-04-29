@@ -761,88 +761,94 @@
     </div>
 
     <!-- checkout -->
-    <div class="checkoutBg">
-            <div class="checkoutTitle titleBgi">
-                <h3>結 帳</h3>
-            </div>
-            
-            
-            <!-- 訂購人資訊 -->
-            <div class="checkoutInfo col-12">
-                <div id="checkoutClose"></div>
-                <div class="checkoutOrder">
-                    <!-- 總金額 -->
-                    <p><span>62000</span>圓</p>
-                </div>
-            </div>
-
-            <div class="checkOutAll col-12">    
-                <!-- 訂購人資料 -->
-                <form action="#" class="checkoutInfoForm col-12 col-lg-6">
-                    <h4>訂購人資訊</h4>
-                    <table>
-                        <tr>
-                            <th><label for="orderPerName">姓名</label></th>
-                            <td>
-                                <input type="text" id="orderPerName">
-                            </td>
-                        </tr>
-                        <tr>
-                            <th><label for="orderEmail">信箱</label></th>
-                            <td><input type="text" id="orderEmail"></td>
-                        </tr>
-                        <tr>
-                            <th><label for="orderPhone">聯絡電話</label></th>
-                            <td><input type="text" id="orderPhone"></td>
-                        </tr>
-                        <tr>
-                            <th>優惠券編號</th>
-                            <td>
-                                <select name="couponUse" id="">
-                                    <option value="">500元</option>
-                                    <option value="">1000元</option>
-                                    <option value="">1500元</option>
-                                </select>
-                            </td>
-                        </tr>
-                    </table>
-                </form>
-                <!-- 信用卡資訊 -->
-                <form action="" class="cardInfo col-12 col-lg-6">
-                    <h4>付款資訊</h4>
-                    <!-- <div class="acceptableCard">
-                        <img src="images/customized/checkout/card_01.png" alt="">
-                        <img src="images/customized/checkout/card_02.png" alt="">
-                        <img src="images/customized/checkout/card_03.png" alt="">
-                    </div> -->
-                    <table>
-                        <tr>
-                            <th><label for="cardHolderName">持卡人姓名</label></th>
-                            <td><input type="text" id="cardHolderName"></td>
-                        </tr>
-                        <tr>
-                            <th><label for="cardNum">信用卡號碼</label></th>
-                            <td><input type="text" id="cardNum" maxlength="16"></td>
-                        </tr>
-                        <tr>
-                            <th><label for="cardExpiredDate">過期日期</label></th>
-                            <td><input type="text" id="cardExpiredDate" placeholder="MM/YY"></td>
-                        </tr>
-                        <tr>
-                            <th><label for="cardCVC">CVC</label></th>
-                            <td><input type="text" id="cardCVC"></td>
-                        </tr>
-                    </table>
-                </form>
-            </div>
-
-            <!-- 確認結帳 -->
-            <div class="paymentStep">
-                <div class="checkOutStep commonBtnSmall">確認付款</div>
-            </div>  
-
-
+    <div class="checkoutBg disN">
+        <div class="checkoutTitle titleBgi">
+            <h3>結 帳</h3>
         </div>
+        
+        <!-- 訂購人資訊 -->
+        <div class="checkoutInfo col-12">
+            <div id="checkoutClose"></div>
+            <div class="checkoutOrder">
+                <!-- 總金額 -->
+                <p><span>62000</span>圓</p>
+            </div>
+        </div>
+
+        <div class="checkOutAll col-12">    
+            <!-- 訂購人資料 -->
+            <form action="#" class="checkoutInfoForm col-12 col-lg-6">
+                <h4>訂購人資訊</h4>
+                <table>
+                    <tr>
+                        <th><label for="orderPerName">姓名</label></th>
+                        <td>
+                            <input type="text" id="orderPerName">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="orderEmail">信箱</label></th>
+                        <td><input type="text" id="orderEmail"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="orderPhone">聯絡電話</label></th>
+                        <td><input type="text" id="orderPhone"></td>
+                    </tr>
+                    <tr>
+                        <th>優惠券編號</th>
+                        <td>
+                            <select name="couponUse" id="">
+                                <option value="">500元</option>
+                                <option value="">1000元</option>
+                                <option value="">1500元</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <!-- 信用卡資訊 -->
+            <form action="" class="cardInfo col-12 col-lg-6">
+                <h4>付款資訊</h4>
+                <table>
+                    <tr>
+                        <th><label for="cardHolderName">持卡人姓名</label></th>
+                        <td><input type="text" id="cardHolderName"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="cardNum">信用卡號碼</label></th>
+                        <td><input type="text" id="cardNum" maxlength="16"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="cardExpiredDate">過期日期</label></th>
+                        <td><input type="text" id="cardExpiredDate" placeholder="MM/YY"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="cardCVC">CVC</label></th>
+                        <td><input type="text" id="cardCVC"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+        <!-- 確認結帳 -->
+        <div class="paymentStep">
+            <div class="checkoutStep commonBtnSmall">確認付款</div>
+        </div>  
+
+    </div>
+
+    <!-- 結帳完成燈箱 -->
+    <div class="endLightBoxBg disN">
+        <div class="endLightBox disN">
+            <div class="endTitle">
+                <h3>結帳完成</h3>
+                <p>感謝您對於台灣大舞台的支持</p>
+            </div>
+            <a class="commonBtn" href="flyer.php">客製宣傳單</a>
+            <a class="commonBtn" href="beautyPageant.php">參加選美</a>
+            <div class="endBtn commonBtnSmall">返回</div>
+        </div>
+    </div>
 
 
     
@@ -862,7 +868,7 @@
     <!-- API -->
     <script src="js/api.js?<?php echo time();?>"></script>
     <script src="js/navmenu.js"></script>
-    <script src="js/_login.js"></script>
+    <script src="js/_custLogin.js"></script>
     <script src="js/_font_loginLightBox.js"></script>
 </body>
 </html>

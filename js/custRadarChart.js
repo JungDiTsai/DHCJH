@@ -11,8 +11,7 @@ function getHostJSON(){
     xhr.onload=function (){
         if( xhr.status == 200 ){
           test(xhr.responseText);
-          
-          console.log(host);
+          // console.log(host);
         }else{
           alert( xhr.status );
         }

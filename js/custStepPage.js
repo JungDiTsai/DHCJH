@@ -34,18 +34,18 @@ $(document).ready(function(){
             if( datevalue == '' || locValue == ''){
                 alert('請選擇活動日期與地址');  //跳窗
             }else{
-                // if(LoginState=="notFound"){
-                //     // 顯示登入燈箱
-                //     let loginBox = document.querySelector('.loginBox');
-                //     let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
-                //     if (style == "block") {
-                //         loginBox.style.setProperty('display', "none");
-                //     }else{
-                //         loginBox.style.setProperty('display', "block");
-                //     }
-                // }else{
+                if(LoginState=="notFound"){
+                    // 顯示登入燈箱
+                    let loginBox = document.querySelector('.loginBox');
+                    let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
+                    if (style == "block") {
+                        loginBox.style.setProperty('display', "none");
+                    }else{
+                        loginBox.style.setProperty('display', "block");
+                    }
+                }else{
                     $('.checkoutBg').removeClass('disN');  //準備結帳
-                // }
+                }
             }
         }
     });
@@ -414,14 +414,21 @@ $(document).ready(function(){
     $('.map iframe').attr("src", 'https://maps.google.com.tw/maps?f=q&hl=zh-TW&geocode=&q=中央大學資策會&z=16&output=embed&t=');
     changeLoc();
     // 結帳燈箱開關
-    $('.checkoutBg').addClass('disN');
+    // $('.checkoutBg').addClass('disN');
     $('#checkoutClose').click(function(){
         $('.checkoutBg').addClass('disN');
     })
     // 跳轉燈箱
-    $('.checkOutStep').click(function(){
-        saveOrder();
+    $('.checkoutStep').click(function(){
+        saveOrder(
+            endStep()
+        );
     })
+    // 結束
+    $('.endBtn').click(function(){
+        $('.endLightBoxBg').addClass('disN');
+        window.location.reload();
+    });
     
     
 });
@@ -851,7 +858,7 @@ function getOrderInfo(){
 // 資料寫進json--ajax
 // ======================================================
 function saveOrder (){   
-    domtoimage.toPng(orderStage)
+    domtoimage.toPng(orderStagePic)
         .then(function (dataUrl) {
             console.log(dataUrl);
             let img = dataUrl
@@ -870,6 +877,7 @@ function saveOrder (){
             orderName = $('#orderName').val();
             
             var orderInfo = {};
+            orderInfo.memNo = LoginState[0][0];
             orderInfo.totalMoney = subtotal;
             orderInfo.orderName = orderName;
             orderInfo.actPlace = locValue;
@@ -931,6 +939,10 @@ function saveOrder (){
     // xhr.send( null );
 }
 
+function endStep (){
+    $('.checkoutBg').addClass('disN');
+    $('.endLightBoxBg .endLightBox').removeClass('disN');
+}
 
 
 

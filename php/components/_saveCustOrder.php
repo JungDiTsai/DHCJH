@@ -15,7 +15,7 @@
     $file = $upload_dir . $fileNum . ".png";
 
     $success = file_put_contents($file, $data);
-    echo $success ? $file : 'Unable to save the file.';  
+    // echo $success ? $file : 'Unable to save the file.';  
     $orderImgUrl = "images/stageImages/" . $fileNum . ".png";
 
     // 寫入資料庫
@@ -32,33 +32,13 @@
 
         $sql = "INSERT INTO ORDERS (orderNo, memNo, memCouponsNo, totalMoney, orderName, orderImgUrl, orderVote, beautyState, actPlace, actStart, actContent, hostNo ) VALUE (:orderNo, :memNo, :memCouponsNo, :totalMoney, :orderName, :orderImgUrl, :orderVote, :beautyState, :actPlace, :actStart, :actContent, :hostNo )";
         $order = $pdo->prepare( $sql );
-        // $order->bindValue(":orderNo", null);
-        // $order->bindValue(":memNo", 01);
-        // $order->bindValue(":memCouponsNo", 001);
-        // // $order->bindValue(":totalMoney", $orderInfo['totalMoney']);
-        // // $order->bindValue(":orderName", $orderInfo['orderName']);
-        // // $order->bindValue(":orderImgUrl", $file);
-        // $order->bindValue(":totalMoney", 100);
-        // $order->bindValue(":orderName", 100);
-        // $order->bindValue(":orderImgUrl", 100);
-        // $order->bindValue(":orderVote", 0);
-        // $order->bindValue(":beautyState", 1);
-        // // $order->bindValue(":actPlace", $orderInfo['actPlace']);
-        // $order->bindValue(":actStart", $orderInfo['actStart']);
-        // $order->bindValue(":actPlace", 100);
-        // $order->bindValue(":actContent", 01);
-        // // $order->bindValue(":actContent", print_r($orderContent));
-        // $order->bindValue(":hostNo", 100);
-
 
         $order->bindValue(":orderNo", null);
-        $order->bindValue(":memNo", 01);
+        $order->bindValue(":memNo", $orderInfo->memNo);
         $order->bindValue(":memCouponsNo", 001);
         $order->bindValue(":totalMoney", $orderInfo->totalMoney);
         $order->bindValue(":orderName", $orderInfo->orderName);
-        // $order->bindValue(":orderImgUrl", $file);
         $order->bindValue(":orderImgUrl", $orderImgUrl);
-        // $order->bindValue(":orderImgUrl", 'stageImages/22.jpeg');
         $order->bindValue(":orderVote", 0);
         $order->bindValue(":beautyState", 1);
         $order->bindValue(":actPlace", $orderInfo->actPlace);
