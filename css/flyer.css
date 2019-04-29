@@ -384,11 +384,7 @@ table {
   width: 150px;
   text-align: center;
   display: block;
-<<<<<<< HEAD
   border-bottom: 30px solid  transparent;
-=======
-  border-bottom: 30px solid  transparent;
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
   border-bottom-width: 30px;
   -o-border-image: url("../images/navTDD.png") 41 round;
      border-image: url("../images/navTDD.png") 41 round;
@@ -425,11 +421,7 @@ header {
   height: 80px;
   width: 100%;
   top: 0px;
-<<<<<<< HEAD
-  z-index: 99;
-=======
   z-index: 101;
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
   -webkit-animation: headerNeon 1s infinite;
           animation: headerNeon 1s infinite;
 }
@@ -582,61 +574,6 @@ footer img {
   }
 }
 
-<<<<<<< HEAD
-footer {
-  padding-top: 15px;
-  width: 100%;
-  height: 26vw;
-  background-color: #0a0a0a;
-}
-
-footer #footerBgiNew {
-  background-image: url(../images/footerBgiNew.png);
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 33vw;
-  position: absolute;
-  margin: auto;
-  bottom: 0;
-}
-
-footer #footerWords {
-  position: absolute;
-  margin: auto;
-  right: 0;
-  left: 0;
-  bottom: 3vw;
-}
-
-footer p {
-  font-size: 12px;
-  color: #fff;
-  text-align: center;
-  font-family: "微軟正黑體";
-}
-
-footer div {
-  text-align: center;
-}
-
-footer img {
-  border-radius: 100%;
-  margin: 4px;
-  width: 36px;
-}
-
-@media screen and (min-width: 768px) {
-  footer #footerWords {
-    bottom: 4.5vw;
-    font-size: 16px;
-  }
-}
-
-=======
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
 @-webkit-keyframes neon {
   0%,
   100% {
@@ -992,7 +929,6 @@ footer img {
   80% {
     background-color: #3498db;
   }
-<<<<<<< HEAD
   100% {
     background-color: #3498db;
   }
@@ -1004,19 +940,6 @@ footer img {
     text-shadow: 0px 0px 1px #fff;
   }
   100% {
-=======
-  100% {
-    background-color: #3498db;
-  }
-}
-
-@-webkit-keyframes blurFadeInOut {
-  0% {
-    opacity: 1;
-    text-shadow: 0px 0px 1px #fff;
-  }
-  100% {
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
     opacity: 0;
     text-shadow: 0px 0px 50px #fff;
     display: none;
@@ -1507,7 +1430,6 @@ footer img {
   background: rgba(0, 0, 0, 0.5);
   z-index: 15;
 }
-<<<<<<< HEAD
 
 .blackBox .envelopeLightBox {
   position: absolute;
@@ -1520,20 +1442,6 @@ footer img {
   height: 425px;
 }
 
-=======
-
-.blackBox .envelopeLightBox {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  width: 300px;
-  height: 425px;
-}
-
->>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
 .blackBox .envelopeLightBox #hiddenEnvelopeLightBox {
   color: #fff;
   position: absolute;
