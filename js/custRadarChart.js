@@ -1,9 +1,43 @@
-function init(){
-  // let chartRadar = document.getElementsByClassName("chartRadar");
-  for ( let i=0; i<7; i++){
-  var chartRadar = document.getElementsByClassName("chartRadar")[i];
+var exp=0;
+var bilingual = 0;
+var timeCtrl = 0;
+var cooperation = 0;
+var atmosphere = 0;
+var reaction = 0;
+var host;
+
+function getHostJSON(){
+    var xhr = new XMLHttpRequest();
+    xhr.onload=function (){
+        if( xhr.status == 200 ){
+          test(xhr.responseText);
+          
+          console.log(host);
+        }else{
+          alert( xhr.status );
+        }
+    }
+    var url = "php/components/_getHostRadar.php";
+    xhr.open("Get", url, true);
+    xhr.send( null );
+}
+
+  getHostJSON();
+  function test(jsonStr){
+    host = JSON.parse(jsonStr);
+  
+  let chartRadar = document.getElementsByClassName("chartRadar");
+  
+  for ( let i=0; i<chartRadar.length; i++){
+    exp = host[i].hostA;
+    bilingual = host[i].hostB;
+    timeCtrl = host[i].hostC;
+    cooperation = host[i].hostD;
+    atmosphere = host[i].hostE;
+    reaction = host[i].hostF;
+
     
-    var gradientRed = chartRadar.getContext('2d').createLinearGradient(0, 0, 0, 150);
+    var gradientRed = chartRadar[i].getContext('2d').createLinearGradient(0, 0, 0, 150);
     gradientRed.addColorStop(0, 'rgba(255, 85, 184, 0.9)');
     gradientRed.addColorStop(1, 'rgba(255, 135, 135, 0.8)');
     
@@ -15,24 +49,18 @@ function init(){
         
         if (chart.ctx.isPointInPath(e.x, e.y)) {
           var dataset = window.chart.data.datasets[0];
-          dataset.backgroundColor = gradientHoverRed;
+          // dataset.backgroundColor = gradientHoverRed;
           window.chart.update();
-          chartRadar.style.cursor = 'pointer';
+          // chartRadar.style.cursor = 'pointer';
         } else {
           var dataset = window.chart.data.datasets[0];
           dataset.backgroundColor = gradientRed;
           window.chart.update();
-          chartRadar.style.cursor = 'default';
+          // chartRadar.style.cursor = 'default';
         }
       }
     });
     
-    exp = 20;
-    bilingual = 90;
-    timeCtrl = 60;
-    cooperation = 60;
-    atmosphere = 45;
-    reaction = 85;
 
     window.chart = new Chart(document.getElementsByClassName("chartRadar")[i], {
         type: "radar",
@@ -66,8 +94,4 @@ function init(){
         },
     });
   }
-  
-
-  
 }
-window.addEventListener("load", init);

@@ -1,7 +1,7 @@
 <?php
     $errMsg="";
     try{
-        require_once("../connectBooks.php"); 
+        require_once("php/components/_connectDHC.php"); 
 
         $sql = "select * from draw";
         $draws = $pdo->query($sql);
@@ -465,13 +465,14 @@
                     <div class="dateChoose">
                         <p>選擇日期：
                             <span></span>
+                            天氣：<span id="weathertest"></span>
                         </p>
+                        
                     </div>
                     <!-- loc -->
                     <div class="loc">
                         <div class="locInput">
                             <input id="locText" type="text" placeholder="請輸入活動地址">
-                            <input id="locBtn" class="commonBtnSmall" type="submit" value="確認">
                         </div>
                         <div class="map">
                             <iframe src='https://maps.google.com.tw/maps?f=q&hl=zh-TW&geocode=&q=中央大學資策會&z=16&output=embed&t='></iframe>
@@ -698,7 +699,10 @@
                 </div>
                 
                 <div class="orderDetail">
-                    <h5 class="orderSub">金額總計：<span></span>元</h5>
+                    <div class="orderText">
+                        <h5 class="orderSub">金額總計：<span></span>元</h5>
+                        <input id="orderName" type="text" placeholder="花車名稱(八個字以內)" maxlength="8" required>
+                    </div>
                     <div class="orderDetailCust">
                         <h6>舞台配備</h6>
                         <table>
@@ -778,9 +782,9 @@
                     <h4>訂購人資訊</h4>
                     <table>
                         <tr>
-                            <th><label for="orderName">姓名</label></th>
+                            <th><label for="orderPerName">姓名</label></th>
                             <td>
-                                <input type="text" id="orderName">
+                                <input type="text" id="orderPerName">
                             </td>
                         </tr>
                         <tr>
@@ -834,7 +838,7 @@
 
             <!-- 確認結帳 -->
             <div class="paymentStep">
-                <div class="checkOutStep commonBtn">確認付款</div>
+                <div class="checkOutStep commonBtnSmall">確認付款</div>
             </div>  
 
 
@@ -850,11 +854,13 @@
     <!-- 舞台背景功能按鈕 -->
     <script src="js/custFunctionBtn.js?<?php echo time();?>"></script>
     <!-- 雷達圖內容 -->
-    <script src="js/custRadarChart.js?<?php echo time();?>">"></script>
+    <script src="js/custRadarChart.js?<?php echo time();?>"></script>
     <!-- for radar chart -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
     <!-- domtoimage -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+    <!-- API -->
+    <script src="js/api.js?<?php echo time();?>"></script>
     <script src="js/navmenu.js"></script>
     <script src="js/_login.js"></script>
     <script src="js/_font_loginLightBox.js"></script>
