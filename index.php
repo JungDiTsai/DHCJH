@@ -330,7 +330,7 @@ try{
                             <h2>塗裝 Painting</h2>
                             <p>高彩度、高畫質的內塗裝，提供多樣款式給你打造專屬於你的華麗電子花車！</p>
                         </div>
-                        <a href="customized_01.html">
+                        <a href="customized.php">
                             <p id="equipBtnOne" class="commonBtn">
                                 立即客製
                             </p> 
