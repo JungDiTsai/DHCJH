@@ -25,7 +25,7 @@ try{
     <input type="checkbox" id=menu_control>
     <?php require_once("php/header.php");?>
     <?php require_once("php/loginLightBox.php");?>
-    <?php require_once("php/uploadbeauty.php");?>
+    <?php //require_once("php/uploadbeauty.php");// ?>
     <script src="js/_login.js"></script>
     <script src="js/_font_loginLightBox.js"></script>
     <!-- beauty pageant 第一屏幕 -->
