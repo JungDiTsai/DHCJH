@@ -15,6 +15,13 @@ a{
   .commonBtn{
      margin: auto;
   }
+
+}
+.commonBtn{
+  a{
+    text-decoration: none;
+    color:$fontColor;
+  }
 }
 #gameHub{
   opacity:0.85;

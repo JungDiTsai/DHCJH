@@ -329,11 +329,13 @@ try{
                             <h2>塗裝 Painting</h2>
                             <p>高彩度、高畫質的內塗裝，提供多樣款式給你打造專屬於你的華麗電子花車！</p>
                         </div>
-                        <a href="customized.php">
+                        
                             <p id="equipBtnOne" class="commonBtn">
-                                立即客製
+                                <a href="customized.php">
+                                    立即客製
+                                </a>
                             </p> 
-                        </a>
+                        
                         
                     </section>  
                         
@@ -365,11 +367,13 @@ try{
                         <img class="introSpecialBlock four" src="images/fire1.gif" alt="特效＿火2" style="display: block;">
                         <!--<img id="pipe" src="images/pipe.png" alt="鋼管">-->
                     </div>
-                    <a href="customized.php">
+                    
                         <div id="equipBtnTwo" class="commonBtn">
-                            立即客製
+                            <a href="customized.php">
+                                立即客製
+                            </a>
                         </div>
-                    </a>
+                    
                     
                 </div>   
             </div>
@@ -611,11 +615,13 @@ try{
                     
                 </div>
                 <div class="col-12 custBtnTop">
-                    <a href="customized.php">
+                    
                         <div class="commonBtn" > 
-                            馬上客製 
+                            <a href="customized.php">
+                                馬上客製 
+                            </a> 
                         </div>
-                    </a> 
+                    
                 </div>
                           
                 
@@ -701,11 +707,13 @@ try{
                             <p>這個宣傳單還有個超強大的功能～就是可以統計參加人數給您做參考喔！快來試試看！</p>
                         </section>
                     </div>
-                    <a href="flyer.php">
+                    
                         <div class="commonBtn">
-                            立即體驗
+                            <a href="flyer.php">
+                                立即體驗
+                            </a>
                         </div>
-                    </a>
+                    
                     
                 </div>
             </div>
@@ -796,9 +804,13 @@ try{
                         <p>阿你的花車素不素跟偶一樣美～那就快來參加花車選美比賽吧！</p>
                     </div>
                 </div>   
-                <a href="beautyPageant.php">
-                    <div class="commonBtn">立馬去看</div> 
-                </a>
+                
+                    <div class="commonBtn">
+                        <a href="beautyPageant.php">
+                            立馬去看
+                        </a>
+                    </div> 
+                
                  
             </div>
         </div>
@@ -891,11 +903,13 @@ try{
                     <!--<img id="pipe" src="images/pipe.png" alt="鋼管">-->
                 </div>
             </div>
-            <a href="customized.php">
+            
                 <div id="processDetail4" class="commonBtn">
-                    立馬客製!
+                    <a href="customized.php">
+                        立馬客製!
+                    </a>
                 </div>    
-            </a>
+            
             
             <div id="processDetail3" class="processBoard">
                 <h4>Step 3.</h4>
