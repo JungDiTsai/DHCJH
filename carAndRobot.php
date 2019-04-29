@@ -1,4 +1,4 @@
-<a href="game.html">
+<a href="car.php">
     <div id="gameHub">
         <span>玩遊戲<br>
                 拿優惠

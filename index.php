@@ -54,7 +54,6 @@ try{
 <body>
 <!--會員登入 克服 遊戲 header -->
     <!--載入頁面   起-->
-    
     <div id="loadingScene" class="loading">     
         <div class="stars"></div>
         <div id="fog"></div>
@@ -366,9 +365,12 @@ try{
                         <img class="introSpecialBlock four" src="images/fire1.gif" alt="特效＿火2" style="display: block;">
                         <!--<img id="pipe" src="images/pipe.png" alt="鋼管">-->
                     </div>
-                    <div id="equipBtnTwo" class="commonBtn">
-                        立即客製
-                    </div>
+                    <a href="customized.php">
+                        <div id="equipBtnTwo" class="commonBtn">
+                            立即客製
+                        </div>
+                    </a>
+                    
                 </div>   
             </div>
         </div>
@@ -609,10 +611,10 @@ try{
                     
                 </div>
                 <div class="col-12 custBtnTop">
-                    <a  href="customized_01.php">
-                    <div class="commonBtn" > 
-                        馬上客製 
-                    </div>
+                    <a href="customized.php">
+                        <div class="commonBtn" > 
+                            馬上客製 
+                        </div>
                     </a> 
                 </div>
                           
@@ -699,10 +701,12 @@ try{
                             <p>這個宣傳單還有個超強大的功能～就是可以統計參加人數給您做參考喔！快來試試看！</p>
                         </section>
                     </div>
+                    <a href="flyer.php">
+                        <div class="commonBtn">
+                            立即體驗
+                        </div>
+                    </a>
                     
-                    <div class="commonBtn">
-                        立即體驗
-                    </div>
                 </div>
             </div>
             <?php
@@ -792,7 +796,10 @@ try{
                         <p>阿你的花車素不素跟偶一樣美～那就快來參加花車選美比賽吧！</p>
                     </div>
                 </div>   
-                <div class="commonBtn">立馬去看</div>  
+                <a href="beautyPageant.php">
+                    <div class="commonBtn">立馬去看</div> 
+                </a>
+                 
             </div>
         </div>
         
@@ -884,7 +891,7 @@ try{
                     <!--<img id="pipe" src="images/pipe.png" alt="鋼管">-->
                 </div>
             </div>
-            <a href="customized_01.html">
+            <a href="customized.php">
                 <div id="processDetail4" class="commonBtn">
                     立馬客製!
                 </div>    

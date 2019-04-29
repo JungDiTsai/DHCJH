@@ -410,6 +410,7 @@
     <script src="js/_font_loginLightBox.js"></script>
     <script src="js/_flyer_vue.js"></script>
     <script src="js/_flyer_tweenMax.js"></script>
+    <script src="js/navmenu.js"></script>
     <script>
         //點擊參加活動
         function joinAct(){
