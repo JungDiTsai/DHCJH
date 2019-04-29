@@ -104,193 +104,15 @@ try{
     </script>
    
         <!--載入頁面   尾-->
-    <input type="checkbox" id=menu_control>
-    <header>    
-        <!-- 放bar選單 -->
-        <label for="menu_control" class="menubtn" >
-            <div id="nav-icon2">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </label>
-        <nav class="mainNav">
-            <li class="mainNavCell"><a href="customized_01.html">電子花車客製</a></li>
-            <li class="mainNavCell"><a href="flyer.html">客製化宣傳單</a></li>
-            <h1 class="navLogo"><a href="index.html"><img src="images/logo.png" alt="台灣大舞台"></a></h1>
-            <li class="mainNavCell"><a href="beautyPageant.html">花車選美</a></li>
-            <li class="mainNavCell"><a href="intro.html">花車特色介紹</a></li>
-            <div class="navMemBtn"> 
-                <i class="far fa-user-circle"></i>
-            </div>
-        </nav>       
-    </header>
-    <div class="box"></div>
-    <!-- 登入燈箱 -->
-    <div class="loginBox">
-        <i class="fas fa-times"></i>
-        <h3>登入</h3>
-        <div class="inputBox">
-            <i class="fas fa-user fa-1x"></i><input type="text" id="username" placeholder="User">
-        </div>
-        <div class="inputBox">
-            <i class="fas fa-key fa-1x"></i><input type="password" id="password" placeholder="Password">
-        </div>
-        <a href="memberCenter.html"><button class="commonBtn">登入</button></a>
-        <p><a class="showRegistered">註冊</a> / <a class="showForgotPSW">忘記密碼</a></p>
-    </div>
-    <!-- 註冊燈箱 -->
-    <div class="registeredBox">
-        <i class="fas fa-times"></i>
-        <h3>立即註冊</h3>
-        <table>
-            <tr>
-                <th>會員帳號</th>
-                <td><input type="text"></td>
-            </tr>
-            <tr><td colspan="2" class="prompt"><span>此帳號已有人使用 !</span></td></tr>
-            <tr>
-                <th>會員密碼</th>
-                <td><input type="password"></td>
-            </tr>
-            <tr>
-                <th>會員姓名</th>
-                <td><input type="text"></td>
-            </tr>
-            <tr>
-                <th>會員電話</th>
-                <td><input type="tel"></td>
-            </tr>
-            <tr>
-                <th>會員信箱</th>
-                <td><input type="email"></td>
-            </tr>
-            <tr>
-                <th>性別</th>
-                <td>
-                    <label>
-                        <input type="radio" name="sex" value="">
-                        <i class="fas fa-venus fa-2x"></i>
-                    </label>
-                    <label>
-                        <input type="radio" name="sex" value="">
-                        <i class="fas fa-mars fa-2x"></i>
-                    </label>
-                </td>
-            </tr>
-            <tr>
-                <th colspan="2"><input type="submit" value="註冊帳號" class="commonBtn"></th>
-            </tr>
-        </table>
-        <div><a class="backLogin">回到登入</a></div>
-    </div>
-    <!-- 忘記密碼燈箱 -->
-    <div class="forgotBox">
-        <i class="fas fa-times"></i>
-        <h3>忘記密碼</h3>
-        <p>請輸入您註冊時的會員信箱，我們會將新的密碼寄至您的信箱。</p>
-        <div>會員信箱<input type="email"></div>
-        <input type="submit" value="寄送密碼" class="commonBtn">
-        <div><a class="backLogin">回到登入</a></div>
-    </div>
-
-        <input type="checkbox" id=menu_control>
-        <header>    
-            <!-- 放bar選單 -->
-            <label for="menu_control" class="menubtn" >
-                <div id="nav-icon2">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </label>
-            <nav class="mainNav">
-                <li class="mainNavCell"><a href="customized_01.html">電子花車客製</a></li>
-                <li class="mainNavCell"><a href="flyer.html">客製化宣傳單</a></li>
-                <h1 class="navLogo"><a href="index.html"><img src="images/logo.png" alt="台灣大舞台"></a></h1>
-                <li class="mainNavCell"><a href="beautyPageant.html">花車選美</a></li>
-                <li class="mainNavCell"><a href="intro.html">花車特色介紹</a></li>
-                <div class="navMemBtn"> 
-                    <i class="far fa-user-circle"></i>
-                </div>
-            </nav>       
-        </header>
-        <div class="box"></div>
-        <!-- 登入燈箱 -->
-        <div class="loginBox">
-            <i class="fas fa-times"></i>
-            <h3>登入</h3>
-            <div class="inputBox">
-                <i class="fas fa-user fa-1x"></i><input type="text" id="username" placeholder="User">
-            </div>
-            <div class="inputBox">
-                <i class="fas fa-key fa-1x"></i><input type="password" id="password" placeholder="Password">
-            </div>
-            <a href="memberCenter.html"><button class="commonBtn">登入</button></a>
-            <p><a class="showRegistered">註冊</a> / <a class="showForgotPSW">忘記密碼</a></p>
-        </div>
-        <!-- 註冊燈箱 -->
-        <div class="registeredBox">
-            <i class="fas fa-times"></i>
-            <h3>立即註冊</h3>
-            <table>
-                <tr>
-                    <th>會員帳號</th>
-                    <td><input type="text"></td>
-                </tr>
-                <tr><td colspan="2" class="prompt"><span>此帳號已有人使用 !</span></td></tr>
-                <tr>
-                    <th>會員密碼</th>
-                    <td><input type="password"></td>
-                </tr>
-                <tr>
-                    <th>會員姓名</th>
-                    <td><input type="text"></td>
-                </tr>
-                <tr>
-                    <th>會員電話</th>
-                    <td><input type="tel"></td>
-                </tr>
-                <tr>
-                    <th>會員信箱</th>
-                    <td><input type="email"></td>
-                </tr>
-                <tr>
-                    <th>性別</th>
-                    <td>
-                        <label>
-                            <input type="radio" name="sex" value="">
-                            <i class="fas fa-venus fa-2x"></i>
-                        </label>
-                        <label>
-                            <input type="radio" name="sex" value="">
-                            <i class="fas fa-mars fa-2x"></i>
-                        </label>
-                    </td>
-                </tr>
-                <tr>
-                    <th colspan="2"><input type="submit" value="註冊帳號" class="commonBtn"></th>
-                </tr>
-            </table>
-            <div><a class="backLogin">回到登入</a></div>
-        </div>
-        <!-- 忘記密碼燈箱 -->
-        <div class="forgotBox">
-            <i class="fas fa-times"></i>
-            <h3>忘記密碼</h3>
-            <p>請輸入您註冊時的會員信箱，我們會將新的密碼寄至您的信箱。</p>
-            <div>會員信箱<input type="email"></div>
-            <input type="submit" value="寄送密碼" class="commonBtn">
-            <div><a class="backLogin">回到登入</a></div>
-        </div>
     
-    
+        <!--引入header  -->
+        <?php 
+        require_once("php/header.php");
+        ?>
+        <!--引入login  -->
+        <?php 
+        require_once("php/loginLightBox.php");
+        ?>
     
     
         <!--game and customer service wrapper-->
@@ -335,14 +157,14 @@ try{
                 <img src="images/custormerService.png" alt="">
             </div>
         </div>
-        <a href="game.html">
+        <!-- <a href="game.html">
             <div id="gameHub">
                 <span>玩遊戲<br>
                         拿優惠
                 </span>
                 <img src="images/gameCar.png" alt="遊戲">
             </div>
-        </a>
+        </a> -->
         
         
 
@@ -392,7 +214,7 @@ try{
                                 <div class="left"></div>
                                 <div class="right"></div>
                                 <!-- 跑馬燈 -->
-                                <div class="subtitles">跑馬燈</div>
+                                <div class="subtitles">台灣大舞台</div>
                                 <div class="subtitles1"></div>
                                 <div class="subtitles2"></div>
                                 <!-- 樓梯三角形 -->
@@ -606,7 +428,7 @@ try{
                     <!--客製試試看花車-->
                     <!-- 舞台 -->
                 <div class="stageTry">
-                    <div class="stageView col-12 col-lg-6">
+                    <div id="stageView" class="stageView col-12 col-lg-6 tryCustShowAni">
                         <div id="perspectiveTry" class="perspective">
                             <div class="groupA">
                                 <!-- 周邊細項 -->
@@ -634,7 +456,7 @@ try{
                                 <!-- 跑馬燈 -->
                                 <div class="subtitleAll disN">
                                     <div class="subtitles">
-                                        <p>跑馬燈</p>
+                                        <p>客製一下啦！</p>
                                     </div>
                                     <div class="subtitles1"></div>
                                     <div class="subtitles2"></div>
@@ -733,7 +555,7 @@ try{
                         </div>
                     </div>
                     <!--客製配件tabs-->
-                    <div class="tryCustEquipWrap col-12 col-lg-6">
+                    <div id="tryCustEquipWrap" class="tryCustEquipWrap col-12 col-lg-6 tryCustShowAni">
   
                         <ul class="tryCustTabs tryCustGroup">
                             <li><a class="tryCustActive" href="#/tryCustEquipInnerSet">舞團</a></li>
@@ -795,7 +617,7 @@ try{
                     </div>
                     
                 </div>
-                <div class="col-12">
+                <div class="col-12 custBtnTop">
                     <a  href="customized_01.php">
                     <div class="commonBtn" > 
                         下一步 
@@ -923,7 +745,7 @@ try{
                         <div class="beautyContestStages slick-slide slick-active slick-current slick-center">
                             
                             <div class="crown">
-                                <img src="images/crownFirstPlace.png" alt="">
+                                <img src="images/crownFirstPlace.png" alt="皇冠">
                             </div>
                             <div class="rankTitle">第 一 名</div>
                             <div id="firstPlaceStage">
@@ -942,7 +764,7 @@ try{
                         <!--第二名花車-->
                         <div class="beautyContestStages slick-slide slick-active">
                             <div class="crown">
-                                <img src="images/crown.png" alt="">
+                                <img src="images/crown.png" alt="皇冠">
                             </div>
                             <div class="rankTitle">第 二 名</div>
                             <div id="secondPlaceStage">
@@ -1043,6 +865,9 @@ try{
                 </div>
             </section>
             <img id="completeCar" src="images/loadingSceneCar.png" alt="">
+
+            <img id="processWorker1" src="images/processWorker1.gif" alt="組裝工人1">
+            <img id="processWorker2" src="images/processWorker2.gif" alt="組裝工人2">
             
             <div id="explosion">
                 <img src="images/explosion.gif" alt="explosion">
@@ -1067,7 +892,7 @@ try{
                     </div>
                     <img class="introSoundsBlock one" src="images/audio1.png" alt="音響" style="display: none;">
                     <img class="introSoundsBlock two" src="images/audio1.png" alt="音響" style="display: none;">
-                    <img id="processDanceBlock" src="images/danceGirlOne.gif" alt="舞團" >
+                    <img id="processDanceBlock" src="images/dance5.gif" alt="舞團" >
                     <img class="introSpecialBlock three" src="images/fire1.gif" alt="特效＿火" style="display: block;">
                     <img class="introSpecialBlock four" src="images/fire1.gif" alt="特效＿火2" style="display: block;">
                     <!--<img id="pipe" src="images/pipe.png" alt="鋼管">-->
@@ -1111,191 +936,95 @@ try{
             </footer>
         </div>
     </div>
-    
+
+    <!--聊天機器人功能-->        
     <script>
-        /* 登入燈箱 JS*/
-        // 點擊icon開啟登入燈箱----------------------------
-        document.querySelector('.fa-user-circle').addEventListener('click', function (e){
-            // 顯示登入燈箱
-            let loginBox = document.querySelector('.loginBox');
-            let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
-            if(style=="block"){
-                loginBox.style.setProperty('display',"none");
-                e.target.style.setProperty('color',"#2cffff");
-            }else{
-                loginBox.style.setProperty('display',"block");
-                e.target.style.setProperty('color',"rgb(252, 211, 28)");
-            }
-        })
-        // 點擊關閉----------------------------
-        document.querySelector('.loginBox .fa-times').addEventListener('click', function () {
-            let loginBox = document.querySelector('.loginBox');
-            let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
-            if(style=="block"){
-                loginBox.style.setProperty('display',"none");
-            }
-        })
-        // 點擊註冊------------------------------
-        document.querySelector('.loginBox .showRegistered').addEventListener('click', function () {
-            // 隱藏登入燈箱
-            let loginBox = document.querySelector('.loginBox');
-            loginBox.style.setProperty('display',"none");
-            // 顯示註冊燈箱
-            let registeredBox = document.querySelector('.registeredBox');
-            let style = window.getComputedStyle(registeredBox, null).getPropertyValue('display');
-            if(style=="none"){
-                registeredBox.style.setProperty('display',"block");
-            }
-        })
-        // 點擊忘記密碼------------------------------
-        document.querySelector('.loginBox .showForgotPSW').addEventListener('click', function () {
-            // 隱藏登入燈箱
-            let loginBox = document.querySelector('.loginBox');
-            loginBox.style.setProperty('display',"none");
-            // 顯示忘記密碼燈箱
-            let forgotBox = document.querySelector('.forgotBox');
-            let style = window.getComputedStyle(forgotBox, null).getPropertyValue('display');
-            if(style=="none"){
-                forgotBox.style.setProperty('display',"block");
-            }
-        })
+    ///////客服機器人區////
+    //打開客服小姐
+    $('#customerServiceGirl').click(function(){
+        $('.chatrobot').fadeIn(400).css("display","block");    
+        $('#gameAndService').fadeIn(400).addClass('popOutBgiBlack');
+        $('#customerServiceGirl').fadeOut(300);
+        //$('body').addClass('noscroll');
+        //$('.chatrobot').addClass('scrollLightBox');
+    });
+    $('.closebtn').click(function(){
+        $('.chatrobot').fadeOut(400).css("display","none");
+        $('#gameAndService').removeClass('popOutBgiBlack');
+        $('#customerServiceGirl').fadeIn(500);
+        //$('body').removeClass('noscroll');
+        //$('.chatrobot').removeClass('scrollLightBox');
+    });
 
-        /* 註冊燈箱 JS*/
-        // 點擊關閉----------------------------
-        document.querySelector('.registeredBox .fa-times').addEventListener('click',function(){
-            let registeredBox = document.querySelector('.registeredBox');
-            let style = window.getComputedStyle(registeredBox, null).getPropertyValue('display');
-            if(style=="block"){
-                registeredBox.style.setProperty('display',"none");
-            }
-        })
-        // 點擊回到登入----------------------------
-        document.querySelector('.registeredBox .backLogin').addEventListener('click',function(){
-            // 隱藏註冊燈箱
-            let registeredBox = document.querySelector('.registeredBox');
-            registeredBox.style.setProperty('display',"none");
-            // 顯示登入燈箱
-            let loginBox = document.querySelector('.loginBox');
-            let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
-            if(style=="none"){
-                loginBox.style.setProperty('display',"block");
-            }
-        })
+    //送出資料，滑鼠點擊送出
+    var chatbtn = document.querySelector('.chatbtn');
+    var message = document.querySelector(".messagebox");
 
-        /* 忘記密碼燈箱 JS*/
-        // 點擊關閉----------------------------
-        document.querySelector('.forgotBox .fa-times').addEventListener('click',function(){
-            let forgotBox = document.querySelector('.forgotBox');
-            let style = window.getComputedStyle(forgotBox, null).getPropertyValue('display');
-            if(style=="block"){
-                forgotBox.style.setProperty('display',"none");
-            }
-        })
-        // 點擊回到登入----------------------------
-        document.querySelector('.forgotBox .backLogin').addEventListener('click',function(){
-            // 隱藏忘記密碼燈箱
-            let forgotBox = document.querySelector('.forgotBox');
-            forgotBox.style.setProperty('display',"none");
-            // 顯示登入燈箱
-            let loginBox = document.querySelector('.loginBox');
-            let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
-            if(style=="none"){
-                loginBox.style.setProperty('display',"block");
-            }
-        })
-        
-        //螢幕寬度
-        let screenWidth = document.body.clientWidth;
-        if(screenWidth<=768){
-            
+    chatbtn.addEventListener('click',say);
+    function say(e){
+        if (message.value == "") {  //未輸入內容，無法發送
+            e.preventDefault();
+        }else {
+            append("<div class='customMessage'>" + message.value + "</div>");
+            answer(say);
         }
-    </script>
-            
-    <script>
-        ///////客服機器人區////
-        //打開客服小姐
-        $('#customerServiceGirl').click(function(){
-            $('.chatrobot').fadeIn(400).css("display","block");    
-            $('#gameAndService').fadeIn(400).addClass('popOutBgiBlack');
-            $('#customerServiceGirl').fadeOut(300);
-            //$('body').addClass('noscroll');
-            //$('.chatrobot').addClass('scrollLightBox');
-        });
-        $('.closebtn').click(function(){
-            $('.chatrobot').fadeOut(400).css("display","none");
-            $('#gameAndService').removeClass('popOutBgiBlack');
-            $('#customerServiceGirl').fadeIn(500);
-            //$('body').removeClass('noscroll');
-            //$('.chatrobot').removeClass('scrollLightBox');
-        });
-        
-        //送出資料，滑鼠點擊送出
-        var chatbtn = document.querySelector('.chatbtn');
-        var message = document.querySelector(".messagebox");
-        
-        chatbtn.addEventListener('click',say);
-        function say(e){
+    }
+    //當按下 enter 鍵時，會呼叫此函數進行回答
+    message.onkeydown = keyin;
+    function keyin(e) {
+    var keyCode = e.which; // 取出按下的鍵
+        if (keyCode == 13 && !event.shiftKey == 1) { //shift+enter，換行
+            e.returnValue = false;  //停止textarea本身enter換行功能
             if (message.value == "") {  //未輸入內容，無法發送
                 e.preventDefault();
-            }else {
-                append("<div class='customMessage'>" + message.value + "</div>");
-                answer(say);
+            } else {
+                say();
             }
         }
-        //當按下 enter 鍵時，會呼叫此函數進行回答
-        message.onkeydown = keyin;
-        function keyin(e) {
-        var keyCode = e.which; // 取出按下的鍵
-            if (keyCode == 13 && !event.shiftKey == 1) { //shift+enter，換行
-                e.returnValue = false;  //停止textarea本身enter換行功能
-                if (message.value == "") {  //未輸入內容，無法發送
-                    e.preventDefault();
-                } else {
-                    say();
-                }
-            }
-        }
-        
-        // 回答問題 
-        function answer(say){     
-        // alert(message.value);
-        console.log(message.value);
-            var xhr = new XMLHttpRequest();
-        
+    }
 
-            //xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-            xhr.onload = function(){
-                if(xhr.status == 200){
-                    if(xhr.responseText=='不知道怎麼回答ˊˋ'){
-                        var hardToReply = ['誒豆～這個偶不知道耶','哩勒供蝦咪？？', '這個偶不懂耶～偶腦袋不好拍謝','偶看不懂你在寫蝦咪？囧','拍謝啦！看不懂～哇阿餒母湯'];
-                        var replyNumber = Math.floor((Math.random()*5));
-                        alert(hardToReply[replyNumber]);  
-                    }else{
-                        //alert("hiihih"+xhr.responseText);
-                        append( "<div class='avatar'><p class='avatar__text'>" + xhr.responseText + "</p></div>")
-                    }
+    // 回答問題 
+    function answer(say){     
+    // alert(message.value);
+    console.log(message.value);
+        var xhr = new XMLHttpRequest();
+
+
+        //xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.onload = function(){
+            if(xhr.status == 200){
+                if(xhr.responseText=='不知道怎麼回答ˊˋ'){
+                    var hardToReply = ['誒豆～這個偶不知道耶','哩勒供蝦咪？？', '這個偶不懂耶～偶腦袋不好拍謝','偶看不懂你在寫蝦咪？囧','拍謝啦！看不懂～哇阿餒母湯'];
+                    var replyNumber = Math.floor((Math.random()*5));
+                    alert(hardToReply[replyNumber]);  
                 }else{
-                    alert(xhr.status);
+                    //alert("hiihih"+xhr.responseText);
+                    append( "<div class='avatar'><p class='avatar__text'>" + xhr.responseText + "</p></div>")
                 }
+            }else{
+                alert(xhr.status);
             }
-            var say = "robotAsk=" + message.value;
-            xhr.open("get", "php/robot.php?"+say, true);
-            xhr.send(null);
-            message.value = '';
         }
+        var say = "robotAsk=" + message.value;
+        xhr.open("get", "php/robot.php?"+say, true);
+        xhr.send(null);
+        message.value = '';
+    }
 
-        
-        // chatbox 加入對話
-        function append(line){
-            var messageContent = document.querySelector(".chatbox"); // 取出對話框
-            messageContent.innerHTML += line;
-            // document.querySelector(".messagebox").value = '';
-        
-            var scrollHeight = $('.chatbox').prop("scrollHeight"); //scrollbar自動在最下方
-            $('.chatbox').scrollTop(scrollHeight);
-        
-        }
+
+    // chatbox 加入對話
+    function append(line){
+        var messageContent = document.querySelector(".chatbox"); // 取出對話框
+        messageContent.innerHTML += line;
+        // document.querySelector(".messagebox").value = '';
+
+        var scrollHeight = $('.chatbox').prop("scrollHeight"); //scrollbar自動在最下方
+        $('.chatbox').scrollTop(scrollHeight);
+
+    }
+
     </script>
+
     <script src="js/navmenu.js"></script>
     <script>
         //點選個配件tab 
@@ -1465,10 +1194,16 @@ try{
      processPara.fadeOut(450);
      $('#explosion').fadeIn(600);
      setTimeout( function(){$('#processShineBgi2').addClass('processShineBgi2');},590);
-     $('#explosion').fadeOut(1500);
+     $('#explosion').fadeOut(2500);
      setTimeout( function(){$('#completeCar').fadeIn(400);},1400); 
      setTimeout( function(){$('#processDetail').fadeIn(900).css('transform','scale(1)');},300);
+     setTimeout( function(){$('#processWorker1').fadeIn(600).css('transform','scale(1)');},300);
+     setTimeout( function(){$('#processWorker1').css('opacity','1');},300);
+     setTimeout( function(){$('#processWorker2').fadeIn(600).css('transform','scale(1)');},300);
+     setTimeout( function(){$('#processWorker2').css('opacity','1');},300);
      setTimeout( function(){$('#processDetail').fadeOut(400).css('transform','translate(-60vw,0px)');},6000);
+     setTimeout( function(){$('#processWorker1').css('transform','translate(60vw,0px)');},6000);
+     setTimeout( function(){$('#processWorker2').css('transform','translate(-60vw,0px)');},6000);
      setTimeout( function(){$('#processDetail2').fadeIn(900).css('top','-20vh').css('transform','scale(1)');},6000);
      setTimeout( function(){$('#processDetail2').fadeOut(1200).css('transform','translate(0px,60vw)');},13000); 
      setTimeout( function(){$('#completeCar').fadeOut(600).css('transform','translate(0px,60vw)');},13000); 
@@ -1563,6 +1298,10 @@ try{
             });  
         });
     </script>
+    <script src="js/_login.js"></script>
+    <script src="js/_font_loginLightBox.js"></script>
+    <!--聊天機器人功能-->        
+    <script src="js/chatRobot.js"></script>
     <script src="js/parallax.js"></script>
     <script src="js/processTest.js"></script>
     

@@ -4282,7 +4282,7 @@ a {
   width: 130px;
   -webkit-transform: translateX(-85px) translateZ(75px);
           transform: translateX(-85px) translateZ(75px);
-  background: url(../images/2.png) center no-repeat;
+  background: url(../images/17.jpg) center no-repeat;
   background-size: cover;
 }
 
@@ -4290,14 +4290,14 @@ a {
   width: 40px;
   -webkit-transform: translateZ(75px);
           transform: translateZ(75px);
-  background: #faf;
+  background: #00bbd0;
 }
 
 .groupIntro .front2 {
   width: 130px;
   -webkit-transform: translateX(85px) translateZ(75px);
           transform: translateX(85px) translateZ(75px);
-  background: url(../images/5.png) center no-repeat;
+  background: url(../images/17.jpg) center no-repeat;
   background-size: cover;
 }
 
@@ -4353,7 +4353,7 @@ a {
   -webkit-transform: translateZ(-75px) translateY(-65px);
           transform: translateZ(-75px) translateY(-65px);
   border: #000 solid 1px;
-  background: url(../images/5.png) center no-repeat;
+  background: url(../images/12.jpg) center no-repeat;
   background-size: cover;
 }
 
@@ -4363,7 +4363,7 @@ a {
   -webkit-transform: translateZ(-69px) translateY(-65px);
           transform: translateZ(-69px) translateY(-65px);
   border: #000 solid 1px;
-  background: url(../images/5.png) center no-repeat;
+  background: url(../images/12.jpg) center no-repeat;
   background-size: cover;
 }
 
@@ -4372,7 +4372,7 @@ a {
   height: 95px;
   -webkit-transform: translateY(-65px) translatez(-73px) translateX(126px) rotateY(90deg);
           transform: translateY(-65px) translatez(-73px) translateX(126px) rotateY(90deg);
-  background: #646464;
+  background: #311345;
 }
 
 .groupIntro .stairsC3 {
@@ -4380,7 +4380,7 @@ a {
   height: 95px;
   -webkit-transform: translateY(-65px) translatez(-73px) translateX(-126px) rotateY(90deg);
           transform: translateY(-65px) translatez(-73px) translateX(-126px) rotateY(90deg);
-  background: #646464;
+  background: #311345;
 }
 
 .groupIntro .stairsC4 {
@@ -4388,7 +4388,7 @@ a {
   height: 6px;
   -webkit-transform: translateZ(-73px) translateY(-112px) rotateX(90deg);
           transform: translateZ(-73px) translateY(-112px) rotateX(90deg);
-  background: #646464;
+  background: #311345;
 }
 
 .groupIntro .stairsD {
@@ -4396,7 +4396,7 @@ a {
   height: 205px;
   -webkit-transform: translateZ(20px) translateX(-95px) translateY(-160px) rotateX(-60deg);
           transform: translateZ(20px) translateX(-95px) translateY(-160px) rotateX(-60deg);
-  background: url(../images/6.png) center no-repeat;
+  background: url(../images/15.jpg) center no-repeat;
   background-size: cover;
 }
 
@@ -4405,7 +4405,7 @@ a {
   height: 205px;
   -webkit-transform: translateZ(20px) translateX(95px) translateY(-160px) rotateX(-60deg);
           transform: translateZ(20px) translateX(95px) translateY(-160px) rotateX(-60deg);
-  background: url(../images/7.png) center no-repeat;
+  background: url(../images/16.jpg) center no-repeat;
   background-size: cover;
 }
 
@@ -4414,7 +4414,7 @@ a {
   height: 205px;
   -webkit-transform: translateZ(20px) translateY(-160px) rotateX(-60deg);
           transform: translateZ(20px) translateY(-160px) rotateX(-60deg);
-  background: url(../images/2.png) center no-repeat;
+  background: url(../images/14.jpg) center no-repeat;
   background-size: cover;
 }
 
@@ -4432,7 +4432,7 @@ a {
   height: 208px;
   -webkit-transform: translateZ(18px) translateY(-160px) translateX(-120px) rotateY(-90deg) rotateZ(60deg);
           transform: translateZ(18px) translateY(-160px) translateX(-120px) rotateY(-90deg) rotateZ(60deg);
-  background: #646464;
+  background: #311345;
 }
 
 .groupIntro .stairsF3 {
@@ -4440,7 +4440,7 @@ a {
   height: 208px;
   -webkit-transform: translateZ(18px) translateY(-160px) translateX(120px) rotateY(-90deg) rotateZ(60deg);
           transform: translateZ(18px) translateY(-160px) translateX(120px) rotateY(-90deg) rotateZ(60deg);
-  background: #646464;
+  background: #311345;
 }
 
 .groupIntro .stairsF4 {
@@ -4448,7 +4448,7 @@ a {
   height: 2px;
   -webkit-transform: translateZ(108px) translateY(-212px);
           transform: translateZ(108px) translateY(-212px);
-  background: #646464;
+  background: #311345;
 }
 
 .groupIntro .subtitles {
@@ -4468,7 +4468,7 @@ a {
   height: 20px;
   -webkit-transform: translateY(-100px) translateZ(-67px) translateX(100px) rotateY(90deg);
           transform: translateY(-100px) translateZ(-67px) translateX(100px) rotateY(90deg);
-  background: #646464;
+  background: #311345;
 }
 
 .groupIntro .subtitles2 {
@@ -4476,7 +4476,7 @@ a {
   height: 20px;
   -webkit-transform: translateY(-100px) translateZ(-67px) translateX(-100px) rotateY(90deg);
           transform: translateY(-100px) translateZ(-67px) translateX(-100px) rotateY(90deg);
-  background: #646464;
+  background: #311345;
 }
 
 .groupIntro .triangleA {
@@ -4539,7 +4539,7 @@ a {
   width: 40px;
   border: 1px solid #6e6e6e;
   height: 10px;
-  background: #faf;
+  background: #00e5ff;
   -webkit-transform: translateZ(75px) translateY(-10px) translateZ(10px) rotateX(90deg);
           transform: translateZ(75px) translateY(-10px) translateZ(10px) rotateX(90deg);
 }
@@ -4548,7 +4548,7 @@ a {
   width: 40px;
   border: 1px solid #6e6e6e;
   height: 10px;
-  background: #faf;
+  background: #00bbd0;
   -webkit-transform: translateZ(75px) translateY(-5px) translateZ(15px);
           transform: translateZ(75px) translateY(-5px) translateZ(15px);
 }
@@ -4557,7 +4557,7 @@ a {
   width: 40px;
   border: 1px solid #6e6e6e;
   height: 10px;
-  background: #faf;
+  background: #00edfe;
   -webkit-transform: translateZ(75px) translateY(0px) translateZ(20px) rotateX(90deg);
           transform: translateZ(75px) translateY(0px) translateZ(20px) rotateX(90deg);
 }
@@ -4566,7 +4566,7 @@ a {
   width: 40px;
   border: 1px solid #6e6e6e;
   height: 10px;
-  background: #faf;
+  background: #00bbd0;
   -webkit-transform: translateZ(75px) translateY(5px) translateZ(25px);
           transform: translateZ(75px) translateY(5px) translateZ(25px);
 }
@@ -4575,7 +4575,7 @@ a {
   width: 40px;
   border: 1px solid #6e6e6e;
   height: 10px;
-  background: #faf;
+  background: #00edfe;
   -webkit-transform: translateZ(75px) translateY(10px) translateZ(30px) rotateX(90deg);
           transform: translateZ(75px) translateY(10px) translateZ(30px) rotateX(90deg);
 }
@@ -4584,7 +4584,7 @@ a {
   width: 40px;
   border: 1px solid #6e6e6e;
   height: 10px;
-  background: #faf;
+  background: #00bbd0;
   -webkit-transform: translateZ(75px) translateY(15px) translateZ(35px);
           transform: translateZ(75px) translateY(15px) translateZ(35px);
 }
@@ -4592,7 +4592,7 @@ a {
 .groupIntro .headlightbox {
   width: 150px;
   height: 10px;
-  background: #00f;
+  background: #010110;
   -webkit-transform: translateY(-210px) translateZ(115px) translateY(5px) rotateX(90deg);
           transform: translateY(-210px) translateZ(115px) translateY(5px) rotateX(90deg);
 }
@@ -4600,7 +4600,7 @@ a {
 .groupIntro .headlightbox1 {
   width: 150px;
   height: 10px;
-  background: #00f;
+  background: #05050d;
   -webkit-transform: translateY(-210px) translateZ(115px) translateY(5px) rotateX(90deg);
           transform: translateY(-210px) translateZ(115px) translateY(5px) rotateX(90deg);
 }
@@ -4608,7 +4608,7 @@ a {
 .groupIntro .headlightbox2 {
   width: 150px;
   height: 10px;
-  background: #00f;
+  background: #080818;
   -webkit-transform: translateY(-210px) translateZ(115px) translateZ(5px);
           transform: translateY(-210px) translateZ(115px) translateZ(5px);
 }
@@ -4616,7 +4616,7 @@ a {
 .groupIntro .headlightbox3 {
   width: 150px;
   height: 10px;
-  background: #00f;
+  background: #030309;
   -webkit-transform: translateY(-210px) translateZ(115px) translateZ(-5px);
           transform: translateY(-210px) translateZ(115px) translateZ(-5px);
 }
@@ -4624,7 +4624,7 @@ a {
 .groupIntro .headlightbox4 {
   width: 10px;
   height: 10px;
-  background: #00f;
+  background: #0c0c13;
   -webkit-transform: translateY(-210px) translateZ(115px) translateX(75px) rotateY(90deg);
           transform: translateY(-210px) translateZ(115px) translateX(75px) rotateY(90deg);
 }
@@ -4632,7 +4632,7 @@ a {
 .groupIntro .headlightbox5 {
   width: 10px;
   height: 10px;
-  background: #00f;
+  background: #040403;
   -webkit-transform: translateY(-210px) translateZ(115px) translateX(-75px) rotateY(90deg);
           transform: translateY(-210px) translateZ(115px) translateX(-75px) rotateY(90deg);
 }
@@ -4642,7 +4642,7 @@ a {
   height: 0;
   border-style: solid;
   border-width: 0 10px 20px 10px;
-  border-color: transparent transparent #007bff transparent;
+  border-color: transparent transparent #05050d transparent;
   background: none;
   -webkit-transform: translateY(-210px) translateZ(115px) translateY(5px) translateZ(5px) rotateX(30deg);
           transform: translateY(-210px) translateZ(115px) translateY(5px) translateZ(5px) rotateX(30deg);
@@ -4653,7 +4653,7 @@ a {
   height: 0;
   border-style: solid;
   border-width: 0 10px 20px 10px;
-  border-color: transparent transparent #007bff transparent;
+  border-color: transparent transparent #05050d transparent;
   background: none;
   -webkit-transform: translateY(-210px) translateZ(115px) translateY(5px) translateZ(-5px) rotateX(-30deg);
           transform: translateY(-210px) translateZ(115px) translateY(5px) translateZ(-5px) rotateX(-30deg);
@@ -4664,7 +4664,7 @@ a {
   height: 0;
   border-style: solid;
   border-width: 0 10px 20px 10px;
-  border-color: transparent transparent #007bff transparent;
+  border-color: transparent transparent #05050d transparent;
   background: none;
   -webkit-transform: translateY(-210px) translateZ(115px) translateY(5px) translateX(5px) rotateY(90deg) rotateX(30deg);
           transform: translateY(-210px) translateZ(115px) translateY(5px) translateX(5px) rotateY(90deg) rotateX(30deg);
@@ -4675,7 +4675,7 @@ a {
   height: 0;
   border-style: solid;
   border-width: 0 10px 20px 10px;
-  border-color: transparent transparent #007bff transparent;
+  border-color: transparent transparent #05050d transparent;
   background: none;
   -webkit-transform: translateY(-210px) translateZ(115px) translateY(5px) translateX(-5px) rotateY(-90deg) rotateX(30deg);
           transform: translateY(-210px) translateZ(115px) translateY(5px) translateX(-5px) rotateY(-90deg) rotateX(30deg);
@@ -4686,7 +4686,7 @@ a {
   height: 0;
   border-style: solid;
   border-width: 0 10px 20px 10px;
-  border-color: transparent transparent #007bff transparent;
+  border-color: transparent transparent #080a12 transparent;
   background: none;
   -webkit-transform: translateY(-210px) translateZ(115px) translateX(-50px) translateY(5px) translateZ(5px) rotateX(30deg);
           transform: translateY(-210px) translateZ(115px) translateX(-50px) translateY(5px) translateZ(5px) rotateX(30deg);
@@ -4697,7 +4697,7 @@ a {
   height: 0;
   border-style: solid;
   border-width: 0 10px 20px 10px;
-  border-color: transparent transparent #007bff transparent;
+  border-color: transparent transparent #080a12 transparent;
   background: none;
   -webkit-transform: translateY(-210px) translateZ(115px) translateX(-50px) translateY(5px) translateZ(-5px) rotateX(-30deg);
           transform: translateY(-210px) translateZ(115px) translateX(-50px) translateY(5px) translateZ(-5px) rotateX(-30deg);
@@ -4708,7 +4708,7 @@ a {
   height: 0;
   border-style: solid;
   border-width: 0 10px 20px 10px;
-  border-color: transparent transparent #007bff transparent;
+  border-color: transparent transparent #080a12 transparent;
   background: none;
   -webkit-transform: translateY(-210px) translateZ(115px) translateX(-50px) translateY(5px) translateX(5px) rotateY(90deg) rotateX(30deg);
           transform: translateY(-210px) translateZ(115px) translateX(-50px) translateY(5px) translateX(5px) rotateY(90deg) rotateX(30deg);
@@ -4719,7 +4719,7 @@ a {
   height: 0;
   border-style: solid;
   border-width: 0 10px 20px 10px;
-  border-color: transparent transparent #007bff transparent;
+  border-color: transparent transparent #081312 transparent;
   background: none;
   -webkit-transform: translateY(-210px) translateZ(115px) translateX(-50px) translateY(5px) translateX(-5px) rotateY(-90deg) rotateX(30deg);
           transform: translateY(-210px) translateZ(115px) translateX(-50px) translateY(5px) translateX(-5px) rotateY(-90deg) rotateX(30deg);
@@ -4730,7 +4730,7 @@ a {
   height: 0;
   border-style: solid;
   border-width: 0 10px 20px 10px;
-  border-color: transparent transparent #007bff transparent;
+  border-color: transparent transparent #080a12 transparent;
   background: none;
   -webkit-transform: translateY(-210px) translateZ(115px) translateX(50px) translateY(5px) translateZ(5px) rotateX(30deg);
           transform: translateY(-210px) translateZ(115px) translateX(50px) translateY(5px) translateZ(5px) rotateX(30deg);
@@ -4741,7 +4741,7 @@ a {
   height: 0;
   border-style: solid;
   border-width: 0 10px 20px 10px;
-  border-color: transparent transparent #007bff transparent;
+  border-color: transparent transparent #080a12 transparent;
   background: none;
   -webkit-transform: translateY(-210px) translateZ(115px) translateX(50px) translateY(5px) translateZ(-5px) rotateX(-30deg);
           transform: translateY(-210px) translateZ(115px) translateX(50px) translateY(5px) translateZ(-5px) rotateX(-30deg);
@@ -4752,7 +4752,7 @@ a {
   height: 0;
   border-style: solid;
   border-width: 0 10px 20px 10px;
-  border-color: transparent transparent #007bff transparent;
+  border-color: transparent transparent #091512 transparent;
   background: none;
   -webkit-transform: translateY(-210px) translateZ(115px) translateX(50px) translateY(5px) translateX(5px) rotateY(90deg) rotateX(30deg);
           transform: translateY(-210px) translateZ(115px) translateX(50px) translateY(5px) translateX(5px) rotateY(90deg) rotateX(30deg);
@@ -4763,7 +4763,7 @@ a {
   height: 0;
   border-style: solid;
   border-width: 0 10px 20px 10px;
-  border-color: transparent transparent #007bff transparent;
+  border-color: transparent transparent #080a12 transparent;
   background: none;
   -webkit-transform: translateY(-210px) translateZ(115px) translateX(50px) translateY(5px) translateX(-5px) rotateY(-90deg) rotateX(30deg);
           transform: translateY(-210px) translateZ(115px) translateX(50px) translateY(5px) translateX(-5px) rotateY(-90deg) rotateX(30deg);
@@ -5040,15 +5040,16 @@ a {
 #introCarStage {
   width: 100%;
   position: absolute;
-  top: 0;
+  top: -13px;
   left: 0;
 }
 
 #introInnerBlock {
   width: 102%;
   position: absolute;
-  top: 0;
+  top: -16px;
   left: 0;
+  opacity: .9;
   margin-left: -4px;
   -webkit-animation: introInnerBlockShine 2.4s ease infinite;
           animation: introInnerBlockShine 2.4s ease infinite;
@@ -5096,7 +5097,7 @@ a {
   width: 3%;
   position: absolute;
   margin: auto;
-  top: 15vw;
+  top: 21vw;
   right: 0;
   left: 0;
   -webkit-filter: drop-shadow(0px 0px 5px #fff4cb);
@@ -5152,10 +5153,10 @@ a {
 }
 
 #introDanceBlock {
-  width: 15%;
+  width: 12%;
   position: absolute;
   margin: auto;
-  top: 25vw;
+  top: 33vw;
   right: 0;
   left: 0;
   -webkit-filter: drop-shadow(0px 0px 4px rgba(36, 36, 36, 0.9));
@@ -5258,11 +5259,11 @@ a {
 }
 
 #introScreenBlock {
-  width: 51.8vw;
+  width: 46.8vw;
   height: 6vw;
   position: absolute;
   margin: auto;
-  top: 26.2vw;
+  top: 31.2vw;
   right: 0;
   left: 0;
   overflow: hidden;
@@ -5272,7 +5273,7 @@ a {
   width: 600px;
   height: 6vw;
   position: absolute;
-  font-size: 4vw;
+  font-size: 3vw;
   line-height: 6vw;
   color: #F2EEE2;
   -webkit-animation: introScreenWords 18s linear infinite;
@@ -5305,7 +5306,7 @@ a {
   width: 14%;
   position: absolute;
   margin: auto;
-  top: 28vw;
+  top: 35vw;
 }
 
 .introSoundsBlock.one {
@@ -5385,11 +5386,11 @@ a {
 }
 
 #lyrics {
-  width: 51.8vw;
+  width: 45.8vw;
   height: 6vw;
   position: absolute;
   margin: auto;
-  top: 26.2vw;
+  top: 31.2vw;
   right: 0;
   left: 0;
   overflow: hidden;
@@ -5399,7 +5400,7 @@ a {
   width: 800px;
   height: 6vw;
   position: absolute;
-  font-size: 4vw;
+  font-size: 3vw;
   line-height: 6vw;
   color: #F2EEE2;
   -webkit-animation: lyrics 19s linear infinite;
@@ -5452,7 +5453,9 @@ a {
 }
 
 .stageView {
-  outline: red 5px solid;
+  -webkit-transform: scale(0.3);
+          transform: scale(0.3);
+  opacity: 0;
 }
 
 .stageTry {
@@ -5462,7 +5465,9 @@ a {
 
 .tryCustEquipWrap {
   margin: 10px auto;
-  outline: red solid 5px;
+  -webkit-transform: scale(0.3);
+          transform: scale(0.3);
+  opacity: 0;
 }
 
 ul.tryCustTabs {
@@ -5554,6 +5559,7 @@ ul.tryCustTabs li a.tryCustActive {
   -moz-border-radius-bottomleft: 8px;
   border-bottom-right-radius: 8px;
   border-bottom-left-radius: 8px;
+  margin: auto;
 }
 
 .perspective {
@@ -6532,6 +6538,30 @@ ul.tryCustTabs li a.tryCustActive {
   transition: 1.8s cubic-bezier(0.13, -0.44, 0.58, 1.85);
 }
 
+#processWorker1 {
+  width: 60px;
+  position: absolute;
+  top: 60%;
+  right: 15%;
+  opacity: 0;
+  -webkit-transition: 2.4s cubic-bezier(0.075, 1.52, 0.165, 1);
+  transition: 2.4s cubic-bezier(0.075, 1.52, 0.165, 1);
+  -webkit-transform: scale(0.3);
+          transform: scale(0.3);
+}
+
+#processWorker2 {
+  width: 80px;
+  position: absolute;
+  top: 64%;
+  left: 15%;
+  opacity: 0;
+  -webkit-transition: 2.4s cubic-bezier(0.075, 1.52, 0.165, 1);
+  transition: 2.4s cubic-bezier(0.075, 1.52, 0.165, 1);
+  -webkit-transform: scale(0.3);
+          transform: scale(0.3);
+}
+
 #processDetail2 {
   background-image: url(../images/processDetailBorad2.png);
   display: none;
@@ -6623,7 +6653,7 @@ ul.tryCustTabs li a.tryCustActive {
   width: 3%;
   position: absolute;
   margin: auto;
-  top: 15vw;
+  top: 21vw;
   right: 0;
   left: 0;
   -webkit-filter: drop-shadow(0px 0px 5px #fff4cb);
@@ -6634,10 +6664,10 @@ ul.tryCustTabs li a.tryCustActive {
 }
 
 #processLastStage #processDanceBlock {
-  width: 11%;
+  width: 20%;
   position: absolute;
   margin: auto;
-  top: 36vw;
+  top: 30vw;
   right: 0;
   left: 0;
   -webkit-filter: drop-shadow(0px 0px 4px rgba(36, 36, 36, 0.9));
@@ -6682,11 +6712,11 @@ ul.tryCustTabs li a.tryCustActive {
 }
 
 #processLastStage #introScreenBlock {
-  width: 51.8vw;
+  width: 46.8vw;
   height: 6vw;
   position: absolute;
   margin: auto;
-  top: 26.2vw;
+  top: 31.2vw;
   right: 0;
   left: 0;
   overflow: hidden;
@@ -6697,7 +6727,7 @@ ul.tryCustTabs li a.tryCustActive {
   width: 600px;
   height: 6vw;
   position: absolute;
-  font-size: 4vw;
+  font-size: 3vw;
   line-height: 6vw;
   color: #F2EEE2;
   -webkit-animation: introScreenWords 18s linear infinite;
@@ -6729,11 +6759,11 @@ ul.tryCustTabs li a.tryCustActive {
 }
 
 #processLastStage #lyrics {
-  width: 51.8vw;
+  width: 45.8vw;
   height: 6vw;
   position: absolute;
   margin: auto;
-  top: 26.2vw;
+  top: 31.2vw;
   right: 0;
   left: 0;
   overflow: hidden;
@@ -6744,7 +6774,7 @@ ul.tryCustTabs li a.tryCustActive {
   width: 800px;
   height: 6vw;
   position: absolute;
-  font-size: 4vw;
+  font-size: 3vw;
   line-height: 6vw;
   color: #F2EEE2;
   -webkit-animation: lyrics 19s linear infinite;
@@ -6868,7 +6898,7 @@ footer img {
     height: 100vh;
   }
   #tryCustormiseWrap .commonBtn {
-    margin: 10vh auto auto auto;
+    margin: 2vh auto auto auto;
   }
 }
 
@@ -6879,7 +6909,7 @@ footer img {
   #equipCarStage {
     width: 600px;
     margin: auto;
-    margin-top: 30px;
+    margin-top: -50px;
   }
   #introCarStage {
     width: 100%;
@@ -6890,21 +6920,21 @@ footer img {
   #introInnerBlock {
     width: 102%;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -4px;
+    left: 2px;
     margin-left: -8px;
     -webkit-animation: introInnerBlockShine 2.4s ease infinite;
             animation: introInnerBlockShine 2.4s ease infinite;
   }
   #introPoleBlock {
     margin: auto;
-    top: 120px;
+    top: 140px;
   }
   #introDanceBlock {
     width: 15%;
     position: absolute;
     margin: auto;
-    top: 180px;
+    top: 210px;
     right: 0;
     left: 0;
     -webkit-filter: drop-shadow(0px 0px 4px rgba(36, 36, 36, 0.9));
@@ -6927,31 +6957,31 @@ footer img {
   }
   .introSpecialBlock.three {
     width: 25%;
-    right: 80px;
-    top: 120px;
+    right: 101px;
+    top: 164px;
   }
   .introSpecialBlock.four {
     width: 25%;
-    left: 80px;
+    left: 101px;
     -webkit-transform: scaleX(-1) rotate(5deg);
             transform: scaleX(-1) rotate(5deg);
-    top: 120px;
+    top: 164px;
   }
   #introScreenBlock {
-    width: 350px;
+    width: 307px;
     height: 50px;
     position: absolute;
     margin: auto;
-    top: 172px;
+    top: 232px;
     right: 0;
-    left: 0;
+    left: 4px;
     overflow: hidden;
   }
   #introScreenBlock span {
     width: 600px;
     height: 50px;
     position: absolute;
-    font-size: 30px;
+    font-size: 24px;
     line-height: 45px;
     color: #F2EEE2;
     -webkit-animation: introScreenWords 18s linear infinite;
@@ -6981,7 +7011,7 @@ footer img {
     width: 14%;
     position: absolute;
     margin: auto;
-    top: 190px;
+    top: 255px;
   }
   .introSoundsBlock.one {
     right: 40px;
@@ -6996,11 +7026,11 @@ footer img {
             filter: drop-shadow(0px 0px 7px #fff4cb);
   }
   #lyrics {
-    width: 350px;
+    width: 307px;
     height: 50px;
     position: absolute;
     margin: auto;
-    top: 172px;
+    top: 232px;
     right: 0;
     left: 0;
     overflow: hidden;
@@ -7009,7 +7039,7 @@ footer img {
     width: 900px;
     height: 50px;
     position: absolute;
-    font-size: 30px;
+    font-size: 24px;
     line-height: 45px;
     color: #F2EEE2;
     -webkit-animation: lyrics 19s linear infinite;
@@ -7043,6 +7073,9 @@ footer img {
     height: 370px;
     padding: 10px 0px 0px 0px;
   }
+  .tryCustEquipWrap {
+    margin-top: -50px;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -7050,6 +7083,12 @@ footer img {
     -webkit-transform: scale(1.6);
             transform: scale(1.6);
     margin-top: 50px;
+  }
+  #tryCustormiseWrap .custBtnTop {
+    z-index: 3;
+  }
+  #tryCustormiseWrap .commonBtn {
+    margin: -3vh auto auto auto;
   }
   #carEquipmentsIntroWrap #equipBtnOne {
     display: block;
@@ -7059,7 +7098,7 @@ footer img {
     display: none;
   }
   #beautyContestSlider {
-    margin-top: 0vh;
+    margin-top: -2vh;
   }
   #beautyContestWrap .commonBtn {
     margin-top: -50px;
@@ -7110,6 +7149,27 @@ footer img {
     margin-top: 20px;
     margin-left: 24vw;
   }
+  #processWorker1 {
+    width: 80px;
+    top: 60%;
+    right: 35%;
+  }
+  #processWorker2 {
+    width: 100px;
+    top: 64%;
+    left: 35%;
+  }
+  #processLastStage .introSpecialBlock.three {
+    right: 142px;
+    top: 233px;
+  }
+  #processLastStage .introSpecialBlock.four {
+    left: 142px;
+    top: 233px;
+  }
+  #processLastStage #processDanceBlock {
+    top: 24vh;
+  }
   #tryCustormiseFlyerWrap #introFlyerBoard {
     margin-top: 29vh;
   }
@@ -7131,7 +7191,7 @@ footer img {
 
 @media screen and (min-width: 1500px) {
   #beautyContestSlider {
-    margin-top: 9vh;
+    margin-top: 3vh;
   }
   #beautyContestWrap,
   #carEquipmentsIntroWrap,
@@ -7154,7 +7214,20 @@ footer img {
     margin-top: -220px;
   }
   #tryCustormiseWrap .commonBtn {
-    margin: 12vh auto auto auto;
+    margin: 8vh auto auto auto;
+  }
+  .tryCustEquipWrap {
+    margin-top: 47px;
+  }
+  #processWorker1 {
+    width: 90px;
+    top: 58%;
+    right: 40%;
+  }
+  #processWorker2 {
+    width: 110px;
+    top: 62%;
+    left: 40%;
   }
 }
 /*# sourceMappingURL=index.css.map */

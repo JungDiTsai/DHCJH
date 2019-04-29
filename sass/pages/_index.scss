@@ -403,9 +403,9 @@ a{
         margin: auto;
     }
     // 下舞台
-    .front{ width: 130px; transform: translateX(-85px) translateZ(75px);background: url(../images/2.png)center no-repeat;background-size:cover;}
-    .front1{  width: 40px; transform:  translateZ(75px);background: #faf}
-    .front2{  width: 130px; transform: translateX(85px) translateZ(75px);background: url(../images/5.png)center no-repeat;background-size:cover;}
+    .front{ width: 130px; transform: translateX(-85px) translateZ(75px);background: url(../images/17.jpg)center no-repeat;background-size:cover;}
+    .front1{  width: 40px; transform:  translateZ(75px);background: rgb(0, 187, 208);}
+    .front2{  width: 130px; transform: translateX(85px) translateZ(75px);background: url(../images/17.jpg)center no-repeat;background-size:cover;}
      .back{transform:  translateZ(-75px);background: url(../images/3.png)center no-repeat;background-size:cover;}
        .up{ transform: rotateX(90deg)  translateZ(20px); height: 150px;background: url(../images/3.png)center no-repeat;background-size:cover;}
      .down{ transform: rotateX(270deg)  translateZ(20px); height: 150px;background: url(../images/3.png)center no-repeat;background-size:cover;}
@@ -414,23 +414,23 @@ a{
    
     .stairsB{ width: 30px;height:40px;transform:rotateX(270deg) translateY(-85px)  translateZ(20px)}
     // 壁屏
-    .stairsC{ width: 250px;height: 95px;transform:  translateZ(-75px) translateY(-65px);border:#000 solid 1px;background: url(../images/5.png)center no-repeat;background-size:cover;}
-    .stairsC1{width: 250px;height: 95px;transform:  translateZ(-69px) translateY(-65px);border:#000 solid 1px;background: url(../images/5.png)center no-repeat;background-size:cover;}
-    .stairsC2{width: 6px; height: 95px;transform: translateY(-65px) translatez(-73px) translateX(126px) rotateY(90deg);background: #646464;}
-    .stairsC3{width: 6px; height: 95px;transform: translateY(-65px) translatez(-73px) translateX(-126px) rotateY(90deg);background: #646464;}
-    .stairsC4{width: 250px; height: 6px;transform: translateZ(-73px)translateY(-112px) rotateX(90deg);background: #646464;}
+    .stairsC{ width: 250px;height: 95px;transform:  translateZ(-75px) translateY(-65px);border:#000 solid 1px;background: url(../images/12.jpg)center no-repeat;background-size:cover;}
+    .stairsC1{width: 250px;height: 95px;transform:  translateZ(-69px) translateY(-65px);border:#000 solid 1px;background: url(../images/12.jpg)center no-repeat;background-size:cover;}
+    .stairsC2{width: 6px; height: 95px;transform: translateY(-65px) translatez(-73px) translateX(126px) rotateY(90deg);background: #311345;}
+    .stairsC3{width: 6px; height: 95px;transform: translateY(-65px) translatez(-73px) translateX(-126px) rotateY(90deg);background: #311345;}
+    .stairsC4{width: 250px; height: 6px;transform: translateZ(-73px)translateY(-112px) rotateX(90deg);background: #311345;}
     // 上壁屏
-    .stairsD{ width: 50px; height: 205px;transform: translateZ(20px)translateX(-95px)translateY(-160px) rotateX(-60deg);background: url(../images/6.png)center no-repeat;background-size:cover;}
-    .stairsE{ width: 50px; height: 205px;transform: translateZ(20px)translateX(95px)translateY(-160px) rotateX(-60deg);background: url(../images/7.png)center no-repeat;background-size:cover;}
-    .stairsF{ width: 150px; height: 205px;transform: translateZ(20px)translateY(-160px) rotateX(-60deg);background: url(../images/2.png)center no-repeat;background-size:cover;}
+    .stairsD{ width: 50px; height: 205px;transform: translateZ(20px)translateX(-95px)translateY(-160px) rotateX(-60deg);background: url(../images/15.jpg)center no-repeat;background-size:cover;}
+    .stairsE{ width: 50px; height: 205px;transform: translateZ(20px)translateX(95px)translateY(-160px) rotateX(-60deg);background: url(../images/16.jpg)center no-repeat;background-size:cover;}
+    .stairsF{ width: 150px; height: 205px;transform: translateZ(20px)translateY(-160px) rotateX(-60deg);background: url(../images/14.jpg)center no-repeat;background-size:cover;}
     .stairsF1{width: 240px; height: 205px;transform: translateZ(20px)translateY(-162px) rotateX(-60deg);background: url(../images/2.png)center no-repeat;background-size:cover;}
-    .stairsF2{width:2px; height: 208px;transform: translateZ(18px) translateY(-160px) translateX(-120px) rotateY(-90deg) rotateZ(60deg);background: #646464;}
-    .stairsF3{width:2px; height: 208px;transform: translateZ(18px) translateY(-160px) translateX(120px) rotateY(-90deg) rotateZ(60deg);background: #646464;}
-    .stairsF4{width:240px; height: 2px;transform: translateZ(108px) translateY(-212px) ;background: #646464;}
+    .stairsF2{width:2px; height: 208px;transform: translateZ(18px) translateY(-160px) translateX(-120px) rotateY(-90deg) rotateZ(60deg);background: #311345;}
+    .stairsF3{width:2px; height: 208px;transform: translateZ(18px) translateY(-160px) translateX(120px) rotateY(-90deg) rotateZ(60deg);background: #311345;}
+    .stairsF4{width:240px; height: 2px;transform: translateZ(108px) translateY(-212px) ;background: #311345;}
     // 跑馬燈
     .subtitles{ width:200px ;height:20px;transform: translateY(-100px) translateZ(-67px);font-size: 18px;line-height: 1;text-align: center;background: #000;color:#fff;}
-    .subtitles1{width:2px ;height:20px;transform: translateY(-100px) translateZ(-67px)translateX(100px)rotateY(90deg);background: #646464;}
-    .subtitles2{width:2px ;height:20px;transform: translateY(-100px) translateZ(-67px)translateX(-100px)rotateY(90deg);background: #646464;}
+    .subtitles1{width:2px ;height:20px;transform: translateY(-100px) translateZ(-67px)translateX(100px)rotateY(90deg);background: #311345;}
+    .subtitles2{width:2px ;height:20px;transform: translateY(-100px) translateZ(-67px)translateX(-100px)rotateY(90deg);background: #311345;}
 
     // 樓梯三角形 位置調整translateZ(75px)
     .triangleA{
@@ -483,80 +483,80 @@ a{
         width: 40px;
         border: 1px solid #6e6e6e;
         height: 10px;
-        background: #faf;
+        background: rgb(0, 229, 255);
         transform:translateZ(75px)  translateY(-10px) translateZ(10px) rotateX(90deg);
     }
     .ladderB{
         width: 40px;
         border: 1px solid #6e6e6e;
         height: 10px;
-        background: #faf;
+        background: rgb(0, 187, 208);
         transform:translateZ(75px)  translateY(-5px) translateZ(15px) ;
     }
     .ladderC{
         width: 40px;
         border: 1px solid #6e6e6e;
         height: 10px;
-        background: #faf;
+        background: rgb(0, 237, 254);
         transform:translateZ(75px)  translateY(0px) translateZ(20px) rotateX(90deg);
     }
     .ladderD{
         width: 40px;
         border: 1px solid #6e6e6e;
         height: 10px;
-        background: #faf;
+        background: rgb(0, 187, 208);
         transform:translateZ(75px)  translateY(5px) translateZ(25px) ;
     }
     .ladderE{
         width: 40px;
         border: 1px solid #6e6e6e;
         height: 10px;
-        background: #faf;
+        background: rgb(0, 237, 254);
         transform:translateZ(75px)  translateY(10px) translateZ(30px) rotateX(90deg);
     }
     .ladderF{
         width: 40px;
         border: 1px solid #6e6e6e;
         height: 10px;
-        background: #faf;
+        background: rgb(0, 187, 208);
         transform:translateZ(75px)  translateY(15px) translateZ(35px) ;
     }
         /* 燈柱 位置調整 translateY(-210px) translateZ(115px) */
     .headlightbox{    
         width: 150px;
         height: 10px;
-        background: #00f;
+        background: rgb(1, 1, 16);
         transform:translateY(-210px) translateZ(115px) translateY(5px)rotateX(90deg);
     }
     .headlightbox1{
         
         width: 150px;
         height: 10px;
-        background: #00f;
+        background:  rgb(5, 5, 13);
         transform:translateY(-210px) translateZ(115px) translateY(5px) rotateX(90deg) ;
     }
     .headlightbox2{
         width: 150px;
         height: 10px;
-        background: #00f;
+        background:  rgb(8, 8, 24);
         transform:translateY(-210px) translateZ(115px) translateZ(5px) ;
     }
     .headlightbox3{
         width: 150px;
         height: 10px;
-        background: #00f;
+        background: rgb(3, 3, 9);
         transform:translateY(-210px) translateZ(115px) translateZ(-5px) ;
     }
     .headlightbox4{
         width: 10px;
         height: 10px;
-        background: #00f;
+        background:  rgb(12, 12, 19);
         transform:translateY(-210px) translateZ(115px) translateX(75px) rotateY(90deg);
     }
     .headlightbox5{
         width: 10px;
         height: 10px;
-        background: #00f;
+        background:  rgb(4, 4, 3);
         transform:translateY(-210px) translateZ(115px) translateX(-75px) rotateY(90deg);
     }
     /* 中間投射燈 位置調整 translateY(-210px) translateZ(115px) */
@@ -565,7 +565,7 @@ a{
         height: 0;
         border-style: solid;
         border-width: 0 10px 20px 10px;
-        border-color: transparent transparent #007bff transparent;
+        border-color: transparent transparent rgb(5, 5, 13) transparent;
         background: none;
         transform:translateY(-210px) translateZ(115px)  translateY(5px) translateZ(5px)rotateX(30deg)
     }
@@ -574,7 +574,7 @@ a{
         height: 0;
         border-style: solid;
         border-width: 0 10px 20px 10px;
-        border-color: transparent transparent #007bff transparent;
+        border-color: transparent transparent rgb(5, 5, 13) transparent;
         background: none;
         transform:translateY(-210px) translateZ(115px)  translateY(5px) translateZ(-5px) rotateX(-30deg)
     }
@@ -583,7 +583,7 @@ a{
         height: 0;
         border-style: solid;
         border-width: 0 10px 20px 10px;
-        border-color: transparent transparent #007bff transparent;
+        border-color: transparent transparent rgb(5, 5, 13) transparent;
         background: none;
         transform:translateY(-210px) translateZ(115px)  translateY(5px) translateX(5px) rotateY(90deg) rotateX(30deg)
     }
@@ -592,7 +592,7 @@ a{
         height: 0;
         border-style: solid;
         border-width: 0 10px 20px 10px;
-        border-color: transparent transparent #007bff transparent;
+        border-color: transparent transparent rgb(5, 5, 13) transparent;
         background: none;
         transform:translateY(-210px) translateZ(115px)  translateY(5px) translateX(-5px) rotateY(-90deg) rotateX(30deg)
     }
@@ -603,7 +603,7 @@ a{
         height: 0;
         border-style: solid;
         border-width: 0 10px 20px 10px;
-        border-color: transparent transparent #007bff transparent;
+        border-color: transparent transparent rgb(8, 10, 18) transparent;
         background: none;
         transform:translateY(-210px) translateZ(115px) translateX(-50px) translateY(5px) translateZ(5px)rotateX(30deg)
     }
@@ -612,7 +612,7 @@ a{
         height: 0;
         border-style: solid;
         border-width: 0 10px 20px 10px;
-        border-color: transparent transparent #007bff transparent;
+        border-color: transparent transparent rgb(8, 10, 18) transparent;
         background: none;
         transform:translateY(-210px) translateZ(115px) translateX(-50px) translateY(5px) translateZ(-5px) rotateX(-30deg)
     }
@@ -621,7 +621,7 @@ a{
         height: 0;
         border-style: solid;
         border-width: 0 10px 20px 10px;
-        border-color: transparent transparent #007bff transparent;
+        border-color: transparent transparent rgb(8, 10, 18) transparent;
         background: none;
         transform:translateY(-210px) translateZ(115px) translateX(-50px) translateY(5px) translateX(5px) rotateY(90deg) rotateX(30deg)
     }
@@ -630,7 +630,7 @@ a{
         height: 0;
         border-style: solid;
         border-width: 0 10px 20px 10px;
-        border-color: transparent transparent #007bff transparent;
+        border-color: transparent transparent rgb(8, 19, 18) transparent;
         background: none;
         transform:translateY(-210px) translateZ(115px) translateX(-50px) translateY(5px) translateX(-5px) rotateY(-90deg) rotateX(30deg)
     }
@@ -641,7 +641,7 @@ a{
         height: 0;
         border-style: solid;
         border-width: 0 10px 20px 10px;
-        border-color: transparent transparent #007bff transparent;
+        border-color: transparent transparent rgb(8, 10, 18) transparent;
         background: none;
         transform:translateY(-210px) translateZ(115px) translateX(50px) translateY(5px) translateZ(5px)rotateX(30deg)
     }
@@ -650,7 +650,7 @@ a{
         height: 0;
         border-style: solid;
         border-width: 0 10px 20px 10px;
-        border-color: transparent transparent #007bff transparent;
+        border-color: transparent transparent rgb(8, 10, 18) transparent;
         background: none;
         transform:translateY(-210px) translateZ(115px) translateX(50px) translateY(5px) translateZ(-5px) rotateX(-30deg)
     }
@@ -659,7 +659,7 @@ a{
         height: 0;
         border-style: solid;
         border-width: 0 10px 20px 10px;
-        border-color: transparent transparent #007bff transparent;
+        border-color: transparent transparent rgb(9, 21, 18) transparent;
         background: none;
         transform:translateY(-210px) translateZ(115px) translateX(50px) translateY(5px) translateX(5px) rotateY(90deg) rotateX(30deg)
     }
@@ -668,7 +668,7 @@ a{
         height: 0;
         border-style: solid;
         border-width: 0 10px 20px 10px;
-        border-color: transparent transparent #007bff transparent;
+        border-color: transparent transparent rgb(8, 10, 18) transparent;
         background: none;
         transform:translateY(-210px) translateZ(115px) translateX(50px) translateY(5px) translateX(-5px) rotateY(-90deg) rotateX(30deg)
     }
@@ -912,7 +912,7 @@ a{
     width: 100%;
     position:absolute;
     ////outline: red 5px solid;
-    top: 0;
+    top: -13px;
     left: 0;
 
   }
@@ -920,8 +920,9 @@ a{
     width: 102%;
     position:absolute;
     ////outline: blue 5px solid;
-    top: 0;
+    top: -16px;
     left: 0;
+    opacity:.9;
     margin-left:-4px; 
     animation: introInnerBlockShine 2.4s ease infinite;
     transition:  .4s ease;
@@ -939,7 +940,7 @@ a{
     position:absolute;
     ////outline: blue 5px solid;
     margin: auto;
-    top: 15vw;
+    top: 21vw;
     right: 0;
     left: 0;
     filter: drop-shadow(0px 0px 5px rgb(255, 244, 203));
@@ -954,11 +955,11 @@ a{
   }
   
   #introDanceBlock{
-    width: 15%;
+    width: 12%;
     position:absolute;
    
     margin: auto;
-    top: 25vw;
+    top: 33vw;
     right: 0;
     left: 0;   
     filter: drop-shadow(0px 0px 4px rgba(36, 36, 36, 0.9));
@@ -999,11 +1000,11 @@ a{
     top: 70px;
 }
 #introScreenBlock{
-    width: 51.8vw;
+    width: 46.8vw;
     height: 6vw;
     position:absolute;
     margin: auto;  
-    top: 26.2vw;
+    top: 31.2vw;
     right: 0;
     left: 0;  
     overflow: hidden;
@@ -1011,7 +1012,7 @@ a{
         width: 600px;
         height: 6vw;
         position:absolute;
-        font-size: 4vw;
+        font-size: 3vw;
         line-height: 6vw;
         color: #F2EEE2;
         animation: introScreenWords 18s linear infinite;
@@ -1025,7 +1026,7 @@ a{
     width: 14%;
     position:absolute;
     margin: auto;  
-    top: 28vw;
+    top: 35vw;
 }
 .introSoundsBlock.one{
     right: 5vw;
@@ -1048,11 +1049,11 @@ a{
   }
 
   #lyrics{
-    width: 51.8vw;
+    width: 45.8vw;
     height: 6vw;
     position:absolute;
     margin: auto;  
-    top: 26.2vw;
+    top: 31.2vw;
     right: 0;
     left: 0;  
     overflow: hidden;
@@ -1060,7 +1061,7 @@ a{
         width: 800px;
         height: 6vw;
         position:absolute;
-        font-size: 4vw;
+        font-size: 3vw;
         line-height: 6vw;
         color: #F2EEE2;
         animation: lyrics 19s linear infinite;
@@ -1095,7 +1096,9 @@ a{
   }
 }
 .stageView{
-  outline:red 5px solid;
+  //outline:red 5px solid;
+  transform: scale(.3);
+  opacity:0;
 }
 .stageTry{
   //display: flex;
@@ -1104,7 +1107,9 @@ a{
 }
 .tryCustEquipWrap {
   margin: 10px auto;
-  outline: red solid 5px;
+  //outline: red solid 5px;
+  transform: scale(.3);
+  opacity:0;
 }
 
 
@@ -1195,6 +1200,7 @@ ul.tryCustTabs li a.tryCustActive {
   -moz-border-radius-bottomleft: 8px;
   border-bottom-right-radius: 8px;
   border-bottom-left-radius: 8px;
+  margin: auto;
 }
 
 .perspective{
@@ -1865,6 +1871,26 @@ animation: shineExplosion .9s ease 1 forwards;
       transition:1.8s cubic-bezier(.13,-0.44,.58,1.85) ;
       
   }
+  #processWorker1{
+    width: 60px;
+    position: absolute;
+    //outline: red 5px solid;
+    top: 60%;
+    right:15%;
+    opacity: 0;
+    transition: 2.4s cubic-bezier(0.075, 1.52, 0.165, 1);
+    transform: scale(.3);
+  }
+  #processWorker2{
+    width: 80px;
+    position: absolute;
+    //outline:blue 5px solid;
+    top: 64%;
+    left: 15%;
+    opacity: 0;
+    transition: 2.4s cubic-bezier(0.075, 1.52, 0.165, 1);
+    transform: scale(.3);
+  }
   #processDetail2{
       background-image: url(../images/processDetailBorad2.png);
       display: none;
@@ -1923,7 +1949,7 @@ animation: shineExplosion .9s ease 1 forwards;
     position:absolute;
     ////outline: blue 5px solid;
     margin: auto;
-    top: 15vw;
+    top: 21vw;
     right: 0;
     left: 0;
     filter: drop-shadow(0px 0px 5px rgb(255, 244, 203));
@@ -1931,11 +1957,11 @@ animation: shineExplosion .9s ease 1 forwards;
     animation: introPoleBlockScale 3s ease infinite;
   }
   #processDanceBlock{
-    width: 11%;
+    width: 20%;
     position:absolute;
    
     margin: auto;
-    top: 36vw;
+    top: 30vw;
     right: 0;
     left: 0;   
     filter: drop-shadow(0px 0px 4px rgba(36, 36, 36, 0.9));
@@ -1972,11 +1998,11 @@ animation: shineExplosion .9s ease 1 forwards;
     display: block;
 }
 #introScreenBlock{
-    width: 51.8vw;
+    width: 46.8vw;
     height: 6vw;
     position:absolute;
     margin: auto;  
-    top: 26.2vw;
+    top: 31.2vw;
     right: 0;
     left: 0;  
     overflow: hidden;
@@ -1985,7 +2011,7 @@ animation: shineExplosion .9s ease 1 forwards;
         width: 600px;
         height: 6vw;
         position:absolute;
-        font-size: 4vw;
+        font-size: 3vw;
         line-height: 6vw;
         color: #F2EEE2;
         animation: introScreenWords 18s linear infinite;
@@ -2012,11 +2038,11 @@ animation: shineExplosion .9s ease 1 forwards;
 }
 
   #lyrics{
-    width: 51.8vw;
+    width: 45.8vw;
     height: 6vw;
     position:absolute;
     margin: auto;  
-    top: 26.2vw;
+    top: 31.2vw;
     right: 0;
     left: 0;  
     overflow: hidden;
@@ -2025,7 +2051,7 @@ animation: shineExplosion .9s ease 1 forwards;
         width: 800px;
         height: 6vw;
         position:absolute;
-        font-size: 4vw;
+        font-size: 3vw;
         line-height: 6vw;
         color: #F2EEE2;
         animation: lyrics 19s linear infinite;
@@ -2160,7 +2186,7 @@ footer{
   #tryCustormiseWrap{
     height: 100vh;
     .commonBtn{
-      margin: 10vh auto auto auto;
+      margin: 2vh auto auto auto;
     }
   }
   
@@ -2174,7 +2200,7 @@ footer{
     #equipCarStage{
       width: 600px;
       margin:auto;
-      margin-top: 30px
+      margin-top: -50px
   }
   #introCarStage{
     width: 100%;
@@ -2188,14 +2214,14 @@ footer{
     width: 102%;
     position:absolute;
     ////outline: blue 5px solid;
-    top: 0;
-    left: 0;
+    top: -4px;
+    left: 2px;
     margin-left:-8px; 
     animation: introInnerBlockShine 2.4s ease infinite;
   }
   #introPoleBlock{
     margin: auto;
-    top: 120px;
+    top: 140px;
 
   }
 
@@ -2203,7 +2229,7 @@ footer{
     width: 15%;
     position:absolute;
     margin: auto;
-    top: 180px;
+    top: 210px;
     right: 0;
     left: 0;   
     filter: drop-shadow(0px 0px 4px rgba(36, 36, 36, 0.9));
@@ -2224,29 +2250,29 @@ footer{
   }
   .introSpecialBlock.three{
     width: 25%;
-    right: 80px;
-    top: 120px;
+    right: 101px;
+    top: 164px;
   }
   .introSpecialBlock.four{
     width: 25%;
-    left: 80px;
+    left: 101px;
     transform: scaleX(-1) rotate(5deg);
-    top: 120px;
+    top: 164px;
   }
   #introScreenBlock{
-    width: 350px;
+    width: 307px;
     height: 50px;
     position:absolute;
     margin: auto;  
-    top: 172px;
+    top: 232px;
     right: 0;
-    left: 0;  
+    left: 4px;  
     overflow: hidden;
     span{
         width: 600px;
         height: 50px;
         position:absolute;
-        font-size: 30px;
+        font-size: 24px;
         line-height: 45px;
         color: #F2EEE2;
         animation: introScreenWords 18s linear infinite;
@@ -2260,7 +2286,7 @@ footer{
     width: 14%;
     position:absolute;
     margin: auto;  
-    top: 190px;
+    top: 255px;
   }
   .introSoundsBlock.one{
     right: 40px;
@@ -2274,11 +2300,11 @@ footer{
   }
 
   #lyrics{
-    width: 350px;
+    width: 307px;
     height: 50px;
     position:absolute;
     margin: auto;  
-    top: 172px;
+    top: 232px;
     right: 0;
     left: 0;  
     overflow: hidden;
@@ -2286,7 +2312,7 @@ footer{
         width: 900px;
         height: 50px;
         position:absolute;
-        font-size: 30px;
+        font-size: 24px;
         line-height: 45px;
         color: #F2EEE2;
         animation: lyrics 19s linear infinite;
@@ -2320,6 +2346,9 @@ footer{
     height: 370px;
     padding: 10px 0px 0px 0px;
   }
+  .tryCustEquipWrap{
+    margin-top: -50px;
+  }
 }
 
 
@@ -2329,7 +2358,14 @@ footer{
     transform: scale(1.6);
     margin-top:50px;
   }
-  
+  #tryCustormiseWrap{
+    .custBtnTop{
+      z-index:3;
+    }
+    .commonBtn{
+      margin: -3vh auto auto auto; 
+    }
+  }
   #carEquipmentsIntroWrap{
     #equipBtnOne{
       display: block;
@@ -2340,7 +2376,7 @@ footer{
     }
   }
  #beautyContestSlider{
-   margin-top: 0vh;
+   margin-top: -2vh;
  }
  #beautyContestWrap{
    .commonBtn{
@@ -2401,7 +2437,30 @@ footer{
        // outline: red 5px solid;
     }
 
-}
+  }
+  #processWorker1{
+    width: 80px;
+    top: 60%;
+    right:35%;
+
+  }
+  #processWorker2{
+    width: 100px;
+    top: 64%;
+    left: 35%;
+  }
+  #processLastStage .introSpecialBlock.three{
+    right:142px;
+    top:233px;
+  }
+  #processLastStage .introSpecialBlock.four{
+    left:142px;
+    top:233px;
+  }
+  #processLastStage #processDanceBlock{
+    top:24vh;
+  }
+
   #tryCustormiseFlyerWrap{
     #introFlyerBoard{
       margin-top:29vh; 
@@ -2426,7 +2485,7 @@ footer{
 @media screen and (min-width:1500px) {
   
   #beautyContestSlider{
-    margin-top: 9vh;
+    margin-top: 3vh;
   }
   #beautyContestWrap,
   #carEquipmentsIntroWrap,
@@ -2452,8 +2511,21 @@ footer{
   }
   #tryCustormiseWrap{
     .commonBtn{
-      margin: 12vh auto auto auto;
+      margin: 8vh auto auto auto;
     }
   }
-  
+  .tryCustEquipWrap{
+    margin-top: 47px;
+  }
+  #processWorker1{
+    width: 90px;
+    top: 58%;
+    right:40%;
+
+  }
+  #processWorker2{
+    width: 110px;
+    top: 62%;
+    left: 40%;
+  }
 }
