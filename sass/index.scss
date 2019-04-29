@@ -44,7 +44,7 @@
 }
 .custItem{
     width: 670px;
-    height: 150px;
+    height: 153px;
 }
 #custItemContent{
     background-image: none;
@@ -54,6 +54,19 @@
     padding: 0;
     //overflow-x: scroll;
 }
+.custItemContentInfo{
+    p{
+        font-size:18px;
+    }
+}
+#tryCustormiseWrap{
+    .custItemContentInfo{
+        img{
+            background-color:none;
+        }
+    }    
+}
+
 #effectItem{
     background-image: none;
     width: 670px;

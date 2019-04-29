@@ -117,14 +117,7 @@ var tlB_03 = new TweenMax.to('#hint2' , 1 ,{
     opacity:1,
     delay:1,
 });
-<<<<<<< HEAD
 var tlB_04 = new TweenMax.to('#hint2' , 1.5 ,{ 
-=======
-var tlB_03 = new TweenMax.to('#hint2' , 1.2 ,{ 
-    opacity:0,
-    delay:2.5,
-var tlB_03 = new TweenMax.to('#hint2' , 1.5 ,{ 
->>>>>>> d7e0c82ddfa2579e1df68e98da1bf35839f5b1eb
     opacity:0,
     y:380,
     delay:3.5,

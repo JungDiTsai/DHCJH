@@ -226,7 +226,7 @@ a{
     max-width: 1200px;
 }
 #carIntroWrap{
-    padding-top:$paddingTop; 
+    padding-top:80px; 
     position: relative;
     background-image: url(../images/carIntroWrapBgi.jpg);
     background-repeat: no-repeat;
@@ -1093,6 +1093,9 @@ a{
   }
   .commonBtn{
     margin: -10px auto auto auto;
+  }
+  .custBtnTop{
+    z-index:9;
   }
 }
 .stageView{
@@ -2264,7 +2267,7 @@ footer{
     height: 50px;
     position:absolute;
     margin: auto;  
-    top: 232px;
+    top: 231px;
     right: 0;
     left: 4px;  
     overflow: hidden;
@@ -2304,7 +2307,7 @@ footer{
     height: 50px;
     position:absolute;
     margin: auto;  
-    top: 232px;
+    top: 231px;
     right: 0;
     left: 0;  
     overflow: hidden;
@@ -2360,7 +2363,7 @@ footer{
   }
   #tryCustormiseWrap{
     .custBtnTop{
-      z-index:3;
+      z-index:9;
     }
     .commonBtn{
       margin: -3vh auto auto auto; 

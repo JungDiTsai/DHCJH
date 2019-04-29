@@ -104,195 +104,6 @@ try{
     </script>
    
         <!--載入頁面   尾-->
-<<<<<<< HEAD
-=======
-    <input type="checkbox" id=menu_control>
-    <header>    
-        <!-- 放bar選單 -->
-        <label for="menu_control" class="menubtn" >
-            <div id="nav-icon2">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </label>
-        <nav class="mainNav">
-            <li class="mainNavCell"><a href="customized_01.html">電子花車客製</a></li>
-            <li class="mainNavCell"><a href="flyer.php">客製化宣傳單</a></li>
-            <h1 class="navLogo"><a href="index.html"><img src="images/logo.png" alt="台灣大舞台"></a></h1>
-            <li class="mainNavCell"><a href="beautyPageant.php">花車選美</a></li>
-            <li class="mainNavCell"><a href="intro.php">花車特色介紹</a></li>
-            <div class="navMemBtn"> 
-                <i class="far fa-user-circle"></i>
-            </div>
-        </nav>       
-    </header>
-    <div class="box"></div>
-    <!-- 登入燈箱 -->
-    <div class="loginBox">
-        <i class="fas fa-times"></i>
-        <h3>登入</h3>
-        <div class="inputBox">
-            <i class="fas fa-user fa-1x"></i><input type="text" id="username" placeholder="User">
-        </div>
-        <div class="inputBox">
-            <i class="fas fa-key fa-1x"></i><input type="password" id="password" placeholder="Password">
-        </div>
-        <a href="memberCenter.html"><button class="commonBtn">登入</button></a>
-        <p><a class="showRegistered">註冊</a> / <a class="showForgotPSW">忘記密碼</a></p>
-    </div>
-    <!-- 註冊燈箱 -->
-    <div class="registeredBox">
-        <i class="fas fa-times"></i>
-        <h3>立即註冊</h3>
-        <table>
-            <tr>
-                <th>會員帳號</th>
-                <td><input type="text"></td>
-            </tr>
-            <tr><td colspan="2" class="prompt"><span>此帳號已有人使用 !</span></td></tr>
-            <tr>
-                <th>會員密碼</th>
-                <td><input type="password"></td>
-            </tr>
-            <tr>
-                <th>會員姓名</th>
-                <td><input type="text"></td>
-            </tr>
-            <tr>
-                <th>會員電話</th>
-                <td><input type="tel"></td>
-            </tr>
-            <tr>
-                <th>會員信箱</th>
-                <td><input type="email"></td>
-            </tr>
-            <tr>
-                <th>性別</th>
-                <td>
-                    <label>
-                        <input type="radio" name="sex" value="">
-                        <i class="fas fa-venus fa-2x"></i>
-                    </label>
-                    <label>
-                        <input type="radio" name="sex" value="">
-                        <i class="fas fa-mars fa-2x"></i>
-                    </label>
-                </td>
-            </tr>
-            <tr>
-                <th colspan="2"><input type="submit" value="註冊帳號" class="commonBtn"></th>
-            </tr>
-        </table>
-        <div><a class="backLogin">回到登入</a></div>
-    </div>
-    <!-- 忘記密碼燈箱 -->
-    <div class="forgotBox">
-        <i class="fas fa-times"></i>
-        <h3>忘記密碼</h3>
-        <p>請輸入您註冊時的會員信箱，我們會將新的密碼寄至您的信箱。</p>
-        <div>會員信箱<input type="email"></div>
-        <input type="submit" value="寄送密碼" class="commonBtn">
-        <div><a class="backLogin">回到登入</a></div>
-    </div>
-
-        <input type="checkbox" id=menu_control>
-        <header>    
-            <!-- 放bar選單 -->
-            <label for="menu_control" class="menubtn" >
-                <div id="nav-icon2">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </label>
-            <nav class="mainNav">
-                <li class="mainNavCell"><a href="customized_01.html">電子花車客製</a></li>
-                <li class="mainNavCell"><a href="flyer.html">客製化宣傳單</a></li>
-                <h1 class="navLogo"><a href="index.html"><img src="images/logo.png" alt="台灣大舞台"></a></h1>
-                <li class="mainNavCell"><a href="beautyPageant.html">花車選美</a></li>
-                <li class="mainNavCell"><a href="intro.html">花車特色介紹</a></li>
-                <div class="navMemBtn"> 
-                    <i class="far fa-user-circle"></i>
-                </div>
-            </nav>       
-        </header>
-        <div class="box"></div>
-        <!-- 登入燈箱 -->
-        <div class="loginBox">
-            <i class="fas fa-times"></i>
-            <h3>登入</h3>
-            <div class="inputBox">
-                <i class="fas fa-user fa-1x"></i><input type="text" id="username" placeholder="User">
-            </div>
-            <div class="inputBox">
-                <i class="fas fa-key fa-1x"></i><input type="password" id="password" placeholder="Password">
-            </div>
-            <a href="memberCenter.html"><button class="commonBtn">登入</button></a>
-            <p><a class="showRegistered">註冊</a> / <a class="showForgotPSW">忘記密碼</a></p>
-        </div>
-        <!-- 註冊燈箱 -->
-        <div class="registeredBox">
-            <i class="fas fa-times"></i>
-            <h3>立即註冊</h3>
-            <table>
-                <tr>
-                    <th>會員帳號</th>
-                    <td><input type="text"></td>
-                </tr>
-                <tr><td colspan="2" class="prompt"><span>此帳號已有人使用 !</span></td></tr>
-                <tr>
-                    <th>會員密碼</th>
-                    <td><input type="password"></td>
-                </tr>
-                <tr>
-                    <th>會員姓名</th>
-                    <td><input type="text"></td>
-                </tr>
-                <tr>
-                    <th>會員電話</th>
-                    <td><input type="tel"></td>
-                </tr>
-                <tr>
-                    <th>會員信箱</th>
-                    <td><input type="email"></td>
-                </tr>
-                <tr>
-                    <th>性別</th>
-                    <td>
-                        <label>
-                            <input type="radio" name="sex" value="">
-                            <i class="fas fa-venus fa-2x"></i>
-                        </label>
-                        <label>
-                            <input type="radio" name="sex" value="">
-                            <i class="fas fa-mars fa-2x"></i>
-                        </label>
-                    </td>
-                </tr>
-                <tr>
-                    <th colspan="2"><input type="submit" value="註冊帳號" class="commonBtn"></th>
-                </tr>
-            </table>
-            <div><a class="backLogin">回到登入</a></div>
-        </div>
-        <!-- 忘記密碼燈箱 -->
-        <div class="forgotBox">
-            <i class="fas fa-times"></i>
-            <h3>忘記密碼</h3>
-            <p>請輸入您註冊時的會員信箱，我們會將新的密碼寄至您的信箱。</p>
-            <div>會員信箱<input type="email"></div>
-            <input type="submit" value="寄送密碼" class="commonBtn">
-            <div><a class="backLogin">回到登入</a></div>
-        </div>
-    
->>>>>>> d7e0c82ddfa2579e1df68e98da1bf35839f5b1eb
     
         <!--引入header  -->
         <?php 
@@ -302,7 +113,8 @@ try{
         <?php 
         require_once("php/loginLightBox.php");
         ?>
-    
+    <script src="js/_login.js"></script>
+    <script src="js/_font_loginLightBox.js"></script>
     
         <!--game and customer service wrapper-->
        
@@ -809,7 +621,7 @@ try{
                 <div class="col-12 custBtnTop">
                     <a  href="customized_01.php">
                     <div class="commonBtn" > 
-                        下一步 
+                        馬上客製 
                     </div>
                     </a> 
                 </div>
@@ -1176,27 +988,27 @@ try{
     function answer(say){     
     // alert(message.value);
     console.log(message.value);
-        var xhr = new XMLHttpRequest();
+        var xhr3 = new XMLHttpRequest();
 
 
         //xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        xhr.onload = function(){
-            if(xhr.status == 200){
-                if(xhr.responseText=='不知道怎麼回答ˊˋ'){
+        xhr3.onload = function(){
+            if(xhr3.status == 200){
+                if(xhr3.responseText=='不知道怎麼回答ˊˋ'){
                     var hardToReply = ['誒豆～這個偶不知道耶','哩勒供蝦咪？？', '這個偶不懂耶～偶腦袋不好拍謝','偶看不懂你在寫蝦咪？囧','拍謝啦！看不懂～哇阿餒母湯'];
                     var replyNumber = Math.floor((Math.random()*5));
                     alert(hardToReply[replyNumber]);  
                 }else{
                     //alert("hiihih"+xhr.responseText);
-                    append( "<div class='avatar'><p class='avatar__text'>" + xhr.responseText + "</p></div>")
+                    append( "<div class='avatar'><p class='avatar__text'>" + xhr3.responseText + "</p></div>")
                 }
             }else{
-                alert(xhr.status);
+                alert(xhr3.status);
             }
         }
         var say = "robotAsk=" + message.value;
-        xhr.open("get", "php/robot.php?"+say, true);
-        xhr.send(null);
+        xhr3.open("get", "php/robot.php?"+say, true);
+        xhr3.send(null);
         message.value = '';
     }
 
@@ -1403,7 +1215,7 @@ try{
  }); 
 </script>
 
-<!--客制花車試試看的Tabs-->
+<!--客制花車試試看的Tabsvar content = this.hash.replace('/','');-->
 <script>
     (function($) {
 
@@ -1487,10 +1299,141 @@ try{
             });  
         });
     </script>
-    <script src="js/_login.js"></script>
-    <script src="js/_font_loginLightBox.js"></script>
-    <!--聊天機器人功能-->        
-    <script src="js/chatRobot.js"></script>
+    
+    <script>
+    //判斷登入
+    LoginState="notFound";
+    OrderNo="notFound";
+    window.addEventListener("load", function () {
+    //產生XMLHttpRequest物件
+    let xhr = new XMLHttpRequest();
+    //註冊callback function
+    xhr.onload = function () {
+        if (xhr.status == 200) { //server端可以正確的執行
+            if(xhr.responseText!="notFound"){
+                LoginState =  JSON.parse(xhr.responseText);
+                document.querySelector('.fa-user').src = LoginState[0]['memImgUrl'];
+                document.querySelector('.fa-user').setAttribute("id","bigMember");
+                console.log("LoginState:已輸入值");
+            }
+            console.log("Session:"+xhr.responseText)
+        } else { //其它
+            alert(xhr.status);
+        }
+    }
+    //設定好所要連結的程式
+    xhr.open("get", "php/components/_JudgeLogin.php", true);
+    xhr.send(null);
+})
+
+//登入
+function sendLogin() {
+        //產生XMLHttpRequest物件
+    let xhr = new XMLHttpRequest();
+    //註冊callback function
+    xhr.onload = function () {
+        if (xhr.status == 200) { //server端可以正確的執行
+            if(xhr.responseText=="帳號密碼錯誤"){
+                alert(xhr.responseText);
+            }
+            else if(xhr.responseText=="你的帳號已被凍結"){
+                alert(xhr.responseText);
+            }
+            else{
+                window.location.reload();
+            }
+        } else { //其它
+            alert(xhr.status);
+        }
+    }
+    //設定好所要連結的程式
+    var url = "php/components/_login.php";
+    xhr.open("Post", url, true);
+    xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
+    var data_info = "memId=" + document.getElementById("memId").value + "&memPsw="+ document.getElementById("memPsw").value;
+    //送出資料
+    xhr.send(data_info);
+}
+
+
+
+//登出
+function LoginOut() {
+    //產生XMLHttpRequest物件
+    let xhr = new XMLHttpRequest();
+    //註冊callback function
+    xhr.onload = function () {
+        if (xhr.status == 200) { //server端可以正確的執行
+            alert('已成功登出');
+            window.location.reload();
+        } else { //其它
+            alert(xhr.status);
+        }
+    }
+    //設定好所要連結的程式
+    xhr.open("get", "php/components/_logout.php", true);
+    xhr.send(null);
+}
+
+
+
+//註冊帳號
+function registered(){
+    //產生XMLHttpRequest物件
+    let xhr = new XMLHttpRequest();
+    //註冊callback function
+    xhr.onload = function () {
+        if (xhr.status == 200) { //server端可以正確的執行
+            alert(xhr.responseText);
+            window.location.reload();
+        } else { //其它
+            alert(xhr.status);
+        }
+    }
+    //設定好所要連結的程式
+    var url = "php/components/_addMember.php";
+    xhr.open("Post", url, true);
+    xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
+    let addMemID = document.getElementById('addMemID').value;
+    let addMemPsw = document.getElementById('addMemPsw').value;
+    let addMemMail = document.getElementById('addMemMail').value;
+    let addMemTel = document.getElementById('addMemTel').value;
+    let addMemName = document.getElementById('addMemName').value;
+    let addMemSex = document.querySelector('.addMemSex:checked').value;
+    let addMem = [addMemID,addMemPsw,addMemName,addMemTel,addMemMail,addMemSex];
+    var data_info = "addMember=" + JSON.stringify(addMem);
+    //送出資料
+    xhr.send(data_info);
+
+}
+
+//檢查帳號
+    document.getElementById('addMemID').addEventListener('change',function(e){
+        console.log(e.target.value);
+    //產生XMLHttpRequest物件
+    let xhr = new XMLHttpRequest();
+    //註冊callback function
+    xhr.onload = function () {
+        if (xhr.status == 200) { //server端可以正確的執行
+            if(xhr.responseText == "已有此帳號"){
+                document.getElementById('IdStatus2').style.display="table-row";
+                console.log(xhr.responseText);
+                document.getElementById('registeredButton').disabled=true;
+            }else{
+                document.getElementById('IdStatus2').style.display="none" ;
+                document.getElementById('registeredButton').disabled=false;
+                console.log(xhr.responseText);
+            }
+        } else { //其它
+            alert(xhr.status);
+        }
+    }
+    //設定好所要連結的程式
+    xhr.open("get", "php/components/_checkId.php?memId="+e.target.value, true);
+    xhr.send(null);
+    })
+    
+    </script>
     <script src="js/parallax.js"></script>
     <script src="js/processTest.js"></script>
     
