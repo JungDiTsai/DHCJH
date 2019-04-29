@@ -384,7 +384,7 @@
                             <div class="custItem subtitleItem">
                                 <div class="custItemContent">
                                     <div class="custItemContentInfo">
-                                        <textarea id="subtileItemInfo" cols="30" rows="3" placeholder="請輸入您想要呈現的文字"></textarea>
+                                        <textarea id="subtileItemInfo" cols="30" rows="3" maxlength="30" placeholder="請輸入您想要呈現的文字"></textarea>
                                     </div>
                                 </div>
                                 <div class="custItemControl">
@@ -465,7 +465,7 @@
                     <div class="dateChoose">
                         <p>選擇日期：
                             <span></span>
-                            天氣：<span id="weathertest"></span>
+                            <span id="weather">天氣</span>
                         </p>
                         
                     </div>
@@ -837,6 +837,19 @@
 
     </div>
 
+    <!-- 結帳等待燈箱 -->
+    <div class="waitLightBox disN">
+        <div class="waitTitle">
+            <h4>結帳中，請稍後</h4>
+        </div>
+    </div>
+    <!-- 未填寫日期地址燈箱 -->
+    <div class="mustLightBox disN">
+        <div class="mustTitle">
+            <h4>請選擇活動日期與地址</h4>
+        </div>
+        <div class="mustBtn commonBtnSmall">確定</div>
+    </div>
     <!-- 結帳完成燈箱 -->
     <div class="endLightBoxBg disN">
         <div class="endLightBox disN">
@@ -868,7 +881,7 @@
     <!-- API -->
     <script src="js/api.js?<?php echo time();?>"></script>
     <script src="js/navmenu.js"></script>
-    <script src="js/_custLogin.js"></script>
+    <script src="js/_custLogin.js?<?php echo time();?>"></script>
     <script src="js/_font_loginLightBox.js"></script>
 </body>
 </html>
