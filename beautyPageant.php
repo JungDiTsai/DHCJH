@@ -117,7 +117,10 @@
         </div> 
         <div id="musicContent">
             <canvas id="canvasMusic"></canvas>
-            <audio id="audioMusic" controls autoplay loop style="display : none" src="audios\backloop.mp3"></audio>
+            <audio id="audioMusic" volume="0.1" controls autoplay loop style="display : none" src="audios\backloop.mp3"></audio>
+            <script>
+            document.getElementById('audioMusic').volume=0.1;
+            </script>
         </div>
     </div>
     
@@ -130,17 +133,16 @@
                 <!-- 選項篩選 全部時間 排序 上傳時間  還有一個上傳按鈕-->
                 <form action="" method="" action="">
                     <div class="beautyDiscFilterBox">
-                    排序:<select name="" id="">
-                            <option value="" disabled selected hidden>顯示順序</option>
-                            <option value="">上傳時間</option>
-                            <option value="">喜歡數</option>
+                    排序:<select name="listList" id="listList">
+                            <option value="0" disabled selected hidden>顯示順序</option>
+                            <option value="1">上傳時間</option>
+                            <option value="2">喜歡數</option>
                         </select>
                     </div>
                 </form>
                 <i class="fas fa-plus-circle" alt="參加選美"></i>
             </div>
-            <div class="beautyDiscStageContainer">
-             <?php /*require_once("php/beautyDiscIg.php");*/?>
+            <div class="beautyDiscStageContainerWrap">
              <?php require_once("php/beautyDiscIg.php");?>
             </div>
         </div>
