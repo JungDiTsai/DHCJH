@@ -387,7 +387,7 @@ table {
   width: 150px;
   text-align: center;
   display: block;
-  border-bottom: 30px solid  transparent;
+  border-bottom: 30px solid  transparent;
   border-bottom-width: 30px;
   -o-border-image: url("../images/navTDD.png") 41 round;
      border-image: url("../images/navTDD.png") 41 round;
@@ -428,11 +428,15 @@ header {
   width: 100%;
   top: 0px;
 <<<<<<< HEAD
+<<<<<<< HEAD
   z-index: 1;
   z-index: 3;
 =======
   z-index: 99;
 >>>>>>> ee1f6061ae65be512238b8b9aa6e483557bd014f
+=======
+  z-index: 101;
+>>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
   -webkit-animation: headerNeon 1s infinite;
           animation: headerNeon 1s infinite;
 }
@@ -1100,6 +1104,7 @@ footer img {
   border-radius: 20px;
   line-height: 75px;
   border: none;
+  outline: none;
   -webkit-box-shadow: 0 0 3px 4px #ffffbd, 0px 0px 15px #ffffbd;
           box-shadow: 0 0 3px 4px #ffffbd, 0px 0px 15px #ffffbd;
   z-index: 2;
@@ -1124,6 +1129,7 @@ footer img {
   border-radius: 15px;
   line-height: 60px;
   border: none;
+  outline: none;
   z-index: 2;
   -webkit-box-shadow: 0 0 2px 4px #ffffbd;
           box-shadow: 0 0 2px 4px #ffffbd;
@@ -1141,7 +1147,7 @@ footer img {
   display: none;
   width: 300px;
   height: 350px;
-  background: #fff;
+  background: #000;
   border: 5px solid #17F4F0;
   position: fixed;
   top: 0;
@@ -1157,8 +1163,8 @@ footer img {
   text-align: center;
   -webkit-box-shadow: 0 0 10px #17F4F0;
           box-shadow: 0 0 10px #17F4F0;
-  -webkit-box-shadow: 0 0 10px  #666 inset;
-          box-shadow: 0 0 10px  #666 inset;
+  -webkit-box-shadow: 0 0 10px  #eee inset;
+          box-shadow: 0 0 10px  #eee inset;
 }
 
 .loginBox .fa-times {
@@ -1177,7 +1183,7 @@ footer img {
 .loginBox h3 {
 =======
 .loginBox .fa-times:hover, .loginbox1 .fa-times:hover {
-  color: #000;
+  color: #eee;
 }
 
 .loginBox h3, .loginbox1 h3 {
@@ -1206,7 +1212,7 @@ footer img {
 .loginBox .inputBox input {
 =======
 .loginBox .inputBox i, .loginbox1 .inputBox i {
-  color: #fff;
+  color: #eee;
 }
 
 .loginBox .inputBox input, .loginbox1 .inputBox input {
@@ -1217,7 +1223,7 @@ footer img {
   background: #2d3631;
   outline: none;
   border: none;
-  color: #fff;
+  color: #eee;
 }
 
 <<<<<<< HEAD
@@ -1255,7 +1261,7 @@ footer img {
   display: none;
   max-width: 450px;
   height: 500px;
-  background: #fff;
+  background: #000;
   border: 5px solid #17F4F0;
   position: fixed;
   top: 50px;
@@ -1296,8 +1302,8 @@ footer img {
 .registeredBox table {
   width: 100%;
   margin: 20px auto;
-  border: 1px solid #fff;
-  color: #17F4F0;
+  border: 1px solid #000;
+  color: #eee;
   font-size: 18px;
 }
 
@@ -1329,7 +1335,7 @@ footer img {
 }
 
 .registeredBox table label input:checked + i {
-  color: #281886;
+  color: #51F3F0;
 }
 
 .registeredBox table label i:hover {
@@ -1357,7 +1363,7 @@ footer img {
   display: none;
   width: 300px;
   height: 370px;
-  background: #fff;
+  background: #000;
   border: 5px solid #17F4F0;
   position: fixed;
   top: 0;
@@ -1398,7 +1404,7 @@ footer img {
 .forgotBox p {
   margin-top: 10px;
   font-size: 16px;
-  color: #47472d;
+  color: #eee;
 }
 
 .forgotBox div {
@@ -1742,11 +1748,11 @@ li {
   -ms-flex-line-pack: center;
       align-content: center;
   color: #eee;
-  line-height: 44px;
+  line-height: 30px;
   text-align: left;
 }
 
-.beautyRankingSocialBtns i:nth-child(4) {
+.beautyRankingSocialBtns i:nth-child(5) {
   -webkit-box-flex: 3;
       -ms-flex-positive: 3;
           flex-grow: 3;
@@ -1888,6 +1894,11 @@ li {
   padding: 0 0 10px 0;
 }
 
+.beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg .beautyDiscIgMem .beautyDiscIgMemStage {
+  width: 302px;
+  height: 302px;
+}
+
 .beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg .beautyDiscIgMem .beautyDiscIgTopic {
   height: 50px;
   width: 200%;
@@ -1976,20 +1987,26 @@ li {
 >>>>>>> ee1f6061ae65be512238b8b9aa6e483557bd014f
 }
 
-.beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg .beautyDiscIgMemStage img {
+.beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg img {
   width: 100%;
   -webkit-filter: drop-shadow(2px 2px 4px #444);
           filter: drop-shadow(2px 2px 4px #444);
 }
 
-.beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg .beautyDiscForm {
+.beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg .likeHeart {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.beautyDiscWrap .beautyDiscStageContainer .beautyDiscForm {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
 
-.beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg .beautyDiscForm img {
+.beautyDiscWrap .beautyDiscStageContainer .beautyDiscForm img {
   width: 28px;
   height: 28px;
   border-radius: 50%;
@@ -1997,12 +2014,12 @@ li {
   margin-left: 5px;
 }
 
-.beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg .beautyDiscForm form {
+.beautyDiscWrap .beautyDiscStageContainer .beautyDiscForm form {
   width: 100%;
   height: 44px;
 }
 
-.beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg .beautyDiscForm form .DiscTextArea {
+.beautyDiscWrap .beautyDiscStageContainer .beautyDiscForm form .DiscTextArea {
   line-height: 28px;
   width: calc(100% - 10px);
   margin: 0;
@@ -2011,17 +2028,17 @@ li {
   border: 2px solid #00c389;
 }
 
-.beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg .beautyDiscForm form .DiscTextArea:focus {
+.beautyDiscWrap .beautyDiscStageContainer .beautyDiscForm form .DiscTextArea:focus {
   outline: none;
   border-radius: 5px;
   border: 2px solid #ff7951;
 }
 
-.beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg .beautyDiscForm form .DiscTextArea:focus + .DiscSent {
+.beautyDiscWrap .beautyDiscStageContainer .beautyDiscForm form .DiscTextArea:focus + .DiscSent {
   background-color: #00c389;
 }
 
-.beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg .beautyDiscForm form .DiscSent {
+.beautyDiscWrap .beautyDiscStageContainer .beautyDiscForm form .DiscSent {
   position: absolute;
   right: 34px;
   width: 44px;
@@ -2273,6 +2290,10 @@ li {
     font-family: '微軟正黑';
     font-size: 12px;
   }
+  #beautyRankingimgs .beautyRankingbg .likeHeart {
+    width: 30px;
+    height: 30px;
+  }
   #beautyRankingimgs .beautyRankingbg img {
     margin: 0px;
     width: calc(100% - 60px);
@@ -2310,6 +2331,14 @@ li {
     margin-left: calc(6.5% + 30px);
     font-family: '微軟正黑';
     font-size: 12px;
+  }
+  #beautyRankingimgsMonth .beautyRankingbg .likeHeart {
+    width: 30px;
+    height: 30px;
+  }
+  #beautyRankingimgsMonth .beautyRankingbg .beautyDiscIgMemStage {
+    width: 302px;
+    height: 302px;
   }
   #beautyRankingimgsMonth .beautyRankingbg img {
     margin: 0px;

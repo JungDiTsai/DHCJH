@@ -170,11 +170,32 @@
     <article class="secScreen">
         <h2 class="titleBgi">客製宣傳單</h2>
         <div class="wrap">
+<<<<<<< HEAD
+=======
+        <?php
+            try {
+                $sql = 'select * from flyer left outer join orders on flyer.orderno= orders.orderno join host on orders.hostNo = host.hostNo where flyeStatus != 0 and flyeStatus != 2 order by flyer.orderno desc limit 3;';
+                $products = $pdo->query($sql);
+         
+             } catch (PDOException $e) {
+                $errMsg = '';
+                $errMsg .=  '錯誤原因' . $e->getMessage() . '<br>'; 
+                $errMsg .=  '錯誤行號' . $e->getLine() . '<br>';
+                echo $errMsg;
+             }
+             $number =  $products->rowCount();
+             $products = $products->fetchAll(PDO::FETCH_ASSOC);
+        ?>
+>>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
             <div class="bigCarcouselBox">
                 <div class="card one">
                     <div class="ElongationBox">
                         <div class="blockBox">
+<<<<<<< HEAD
                             <img src="images/flyer/2.jpg" alt="">
+=======
+                            <img src="<?php echo $products[$number-3]['flyerImgUrl'] ?>" alt="">
+>>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
                             <img src="images/flyer/flyerPin.png" alt="">
                             <img src="images/flyer/flyerPin.png" alt="">
                         </div>
@@ -182,6 +203,7 @@
                             <table>
                                 <tr>
                                     <th>主持人</th>
+<<<<<<< HEAD
                                     <td>潘佳麗</td>
                                 </tr>
                                 <tr>
@@ -199,6 +221,29 @@
                                 <tr>
                                     <th>參加人數</th>
                                     <td><span>24</span>人<button class="commonBtnSmall">參加</button></td>
+=======
+                                    <td><?php echo $products[$number-3]['hostName'] ?></td>
+                                </tr>
+                                <tr>
+                                    <th>地點</th>
+                                    <td><?php echo $products[$number-3]['flyeradd'] ?></td>
+                                </tr>
+                                <tr>
+                                    <th>活動時間</th>
+                                    <td><?php echo $products[$number-3]['flyeDate'] ?></td>
+                                </tr>
+                                <tr>
+                                    <th>簡介</th>
+                                    <td><?php echo $products[$number-3]['flyerText'] ?></td>
+                                </tr>
+                                <tr>
+                                    <th>參加人數</th>
+                                    <td>
+                                        <span>
+                                            <?php echo $products[$number-3]['peopleNumber']; ?>
+                                        </span>人<button class="commonBtnSmall joinAct" order="<?php echo $products[$number-3]['orderNo'] ?>">參加</button>
+                                    </td>
+>>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
                                 </tr>
                             </table>
                         </div>
@@ -242,7 +287,11 @@
                 <div class="card three">
                     <div class="ElongationBox">
                         <div class="blockBox">
+<<<<<<< HEAD
                             <img src="images/flyer/1.jpg" alt="">
+=======
+                            <img src="<?php echo $products[$number-1]['flyerImgUrl'] ?>" alt="">
+>>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
                             <img src="images/flyer/flyerPin.png" alt="">
                             <img src="images/flyer/flyerPin.png" alt="">
                         </div>
@@ -250,6 +299,7 @@
                         <table>
                                 <tr>
                                     <th>主持人</th>
+<<<<<<< HEAD
                                     <td>潘佳麗</td>
                                 </tr>
                                 <tr>
@@ -267,6 +317,29 @@
                                 <tr>
                                     <th>參加人數</th>
                                     <td><span>24</span>人<button class="commonBtnSmall">參加</button></td>
+=======
+                                    <td><?php echo $products[$number-1]['hostName'] ?></td>
+                                </tr>
+                                <tr>
+                                    <th>地點</th>
+                                    <td><?php echo $products[$number-1]['flyeradd'] ?></td>
+                                </tr>
+                                <tr>
+                                    <th>活動時間</th>
+                                    <td><?php echo $products[$number-1]['flyeDate'] ?></td>
+                                </tr>
+                                <tr>
+                                    <th>簡介</th>
+                                    <td><?php echo $products[$number-1]['flyerText'] ?></td>
+                                </tr>
+                                <tr>
+                                    <th>參加人數</th>
+                                    <td>
+                                        <span>
+                                            <?php echo $products[$number-1]['peopleNumber']; ?>
+                                        </span>人<button class="commonBtnSmall joinAct" order="<?php echo $products[$number-1]['orderNo'] ?>">參加</button>
+                                    </td>
+>>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
                                 </tr>
                             </table>
                         </div>
@@ -274,6 +347,7 @@
                 </div>
             </div>
             <div class="owl-carousel owl-theme">
+<<<<<<< HEAD
                 <div class="item"><img src="images/flyer/1.jpg" class="flyer"></div>
                 <div class="item"><img src="images/flyer/2.jpg" class="flyer"></div>
                 <div class="item"><img src="images/flyer/3.jpg" class="flyer"></div>
@@ -283,6 +357,23 @@
                 <div class="item"><img src="images/flyer/3.jpg" class="flyer"></div>
                 <div class="item"><img src="images/flyer/4.jpg" class="flyer"></div>
                 <div class="item"><img src="images/flyer/5.jpg" class="flyer"></div>
+=======
+            <?php
+                
+                $errMsg='';
+                try {
+                    $sql = 'SELECT * FROM flyer where flyeStatus != 0 and flyeStatus != 2;';
+                    $products = $pdo->query($sql);
+                    foreach( $products as $i=>$prodRow){
+            ?>
+                    <div class="item"><img order="<?php echo $prodRow['orderNo']?>" src="<?php echo $prodRow['flyerImgUrl'] ?>" class="flyer"></div>
+            <?php   }
+                 } catch (PDOException $e) {
+                    $errMsg .=  '錯誤原因' . $e->getMessage() . '<br>'; 
+                    $errMsg .=  '錯誤行號' . $e->getLine() . '<br>';
+                }
+            ?>
+>>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
             </div>
     </article>
     <article class="thrScreen">
@@ -351,12 +442,61 @@
         </div>
     </div>
 
-
     <script src="js/_login.js"></script>
     <script src="js/_font_loginLightBox.js"></script>
     <script src="js/_flyer_vue.js"></script>
     <script src="js/_flyer_tweenMax.js"></script>
+    <script src="js/navmenu.js"></script>
     <script>
+<<<<<<< HEAD
+=======
+        //點擊參加活動
+        function joinAct(){
+            
+            let joinAct = document.querySelectorAll('.joinAct');
+            
+            for (let i = 0; i < joinAct.length; i++) {
+                joinAct[i].addEventListener('click',function(e){
+                    
+                    let orderNo = e.target.getAttribute('order');
+
+                    //依統計人數狀態拒絕執行或執行
+                    
+                    var xhr = new XMLHttpRequest();
+                    //註冊callback function
+                    xhr.onreadystatechange = function(){
+                        if( xhr.readyState == XMLHttpRequest.DONE ){ //server端執行完畢
+                          if( xhr.status == 200){ //server端可以正確的執行
+                               alert(xhr.responseText);
+                          }else{ //其它
+                              alert( xhr.status );
+                          }
+                        }
+                    } 
+                    //設定好所要連結的程式
+                    var url = "php/components/_joinAct.php?orderNo=" + orderNo ;
+                    xhr.open("get", url, true);
+                    //送出資料
+                    xhr.send(null);
+
+                    event.cancelBubble=true;
+                })
+            }
+        }
+        joinAct();
+        //跳動數字function
+        function JumpNumber(number){
+            var countOptions = {
+            useEasing: true,
+            separator: ''
+        }
+
+            var count = new CountUp('MyNumber', 0, number, 0, 5, countOptions)
+
+            // start the counting and give it a callback when done
+            count.start()
+        }
+>>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
         //匯入訂單
         document.getElementById('enterOrder').addEventListener('click',function(){
             if(LoginState=="notFound"){

@@ -8,6 +8,85 @@ new Vue({
         screenWidth: document.body.clientWidth
    },
    methods: {
+<<<<<<< HEAD
+=======
+       //往上移動
+          moveBottom(){
+           switch (this.stepIndex) {
+               case 1:
+
+                   this.moveSetting[3]+= 20;
+                   let A4h5 = document.querySelector('#A4page h5');
+                   A4h5.style.setProperty('top', `${this.moveSetting[3]}px`)
+                   break;
+               case 2:
+
+                   this.moveSetting[5]-= 20;
+                   let A4div = document.querySelector('#A4page div');
+                   A4div.style.setProperty('bottom', `${this.moveSetting[5]}px`)
+                   break;
+               default:
+                   break;
+           }
+       },
+       //往上移動
+          moveTop(){
+           switch (this.stepIndex) {
+               case 1:
+
+                   this.moveSetting[3]-= 20;
+                   let A4h5 = document.querySelector('#A4page h5');
+                   A4h5.style.setProperty('top', `${this.moveSetting[3]}px`)
+                   break;
+               case 2:
+
+                   this.moveSetting[5]+= 20;
+                   let A4div = document.querySelector('#A4page div');
+                   A4div.style.setProperty('bottom', `${this.moveSetting[5]}px`)
+                   break;
+               default:
+                   break;
+           }
+       },
+       //往右移動
+       moveRight(){
+           switch (this.stepIndex) {
+               case 1:
+
+                   this.moveSetting[2]+= 20;
+                   let A4h5 = document.querySelector('#A4page h5');
+                   A4h5.style.setProperty('left', `${this.moveSetting[2]}px`)
+                   break;
+               case 2:
+  
+                   this.moveSetting[4]-= 20;
+                   let A4div = document.querySelector('#A4page div');
+                   A4div.style.setProperty('right', `${this.moveSetting[4]}px`)
+                   break;
+               default:
+                   break;
+           }
+       },
+        //往左移動
+        moveLeft(){
+            switch (this.stepIndex) {
+                case 1:
+
+                    this.moveSetting[2]-= 20;
+                    let A4h5 = document.querySelector('#A4page h5');
+                    A4h5.style.setProperty('left', `${this.moveSetting[2]}px`)
+                    break;
+                case 2:
+
+                    this.moveSetting[4]+= 20;
+                    let A4div = document.querySelector('#A4page div');
+                    A4div.style.setProperty('right', `${this.moveSetting[4]}px`)
+                    break;
+                default:
+                    break;
+            }
+        },
+>>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
         // 檔案上傳
         updateInput(e){
             let file = e.target.files[0];
@@ -41,7 +120,7 @@ new Vue({
        clickSelectBox(){
                 //(1)---------------------------------------將設定寫到資料庫
                 this.setting[0]=document.getElementById('A4page').value;
-                console.log(this.setting);
+                console.log('setting:'+this.setting);
                 //比對Order 對照訂單
                 let number = 0;
                 for (let i = 0; i < LoginState.length; i++) {
@@ -65,11 +144,14 @@ new Vue({
                   } 
                   //設定好所要連結的程式
                   
-                  var url = "php/components/_upoadSetting.php?flyerSetting=" + JSON.stringify(this.setting) + "&member= " + JSON.stringify(LoginState[number]);
+                  var url = "php/components/_upoadSetting.php";
+                  var data_info = "flyerSetting=" + JSON.stringify(this.setting) + "&member= " + JSON.stringify(LoginState[number]);
+                  console.log(data_info);
 
-                  xhr.open("get", url, true);
+                  xhr.open("post", url, true);
+                  xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
                   //送出資料
-                  xhr.send(null);
+                  xhr.send(data_info);
                 
                 // (2)---------------------------------------上傳檔案--(儲存預備圖)
                 //產生XMLHttpRequest物件
@@ -357,6 +439,11 @@ new Vue({
                                     let li = document.createElement('li');
                                     li.innerHTML = `<img src="${imgSrc}"></img>`;
                                     document.getElementById('showflyer2').appendChild(li);
+<<<<<<< HEAD
+=======
+                                    window.location.hash="#showflyer2";
+                                    window.location.reload();
+>>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
                                 } else{
                                     alert(xhr.status);
                                 }

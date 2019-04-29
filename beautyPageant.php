@@ -1,3 +1,12 @@
+<?php
+try{
+    require_once("php/components/_connectDHC.php");
+    $sql = "SELECT * FROM orders  ORDER BY orderVote DESC ";
+    $beautyContest = $pdo->query($sql);
+}catch(PDOException $e){
+    echo $e->getMessage();
+}
+?>
 <?php session_start();?>
 <!DOCTYPE html>
 <html>
@@ -24,6 +33,13 @@
 >>>>>>> ee1f6061ae65be512238b8b9aa6e483557bd014f
     <!-- beauty pageant 第一屏幕 -->
     <div class="beautyPageantWrap">
+    <div id="musicContent">
+            <canvas id="canvasMusic"></canvas>
+            <audio id="audioMusic" volume="0.1" controls autoplay loop style="display : none" src="audios\backloop.mp3"></audio>
+            <script>
+            document.getElementById('audioMusic').volume=0.1;
+            </script>
+        </div>
         <div class="beautyRankingContainer">
             <div class="beautyRankingHeader">
                 <div class="discoBallContainer">
@@ -40,75 +56,85 @@
             </div>
             <div class="beautyRanking">
                 <div id="beautyRankingimgs">
+                <?php while($beautyContestRow = $beautyContest->fetchAll()){ ?>
                     <div id="beautyRankingbg1" class="beautyRankingbg">
-                        <img src="images/beautyPageant/rank/newVersionStage1.png" alt="">
-                        <h3>霹靂大舞台</h3>
+                        <img src="images/beautyPageant/rank/newVersionStage1.png" alt="選美車車">
+                        <h3><?php echo $beautyContestRow[0]['orderName']; ?></h3>
                         <div class="beautyRankingSocialBtns">
-                            <i class="far fa-heart"></i>
+                            <i><img class="likeHeart" src="images/like.png" alt="喜歡收藏"></i>
+                            <span style="display:none"><?php echo $beautyContestRow[0]['orderNo'] ?></span>
                             <i class="far fa-comment" alt="留言"></i>
                             <i class="fas fa-external-link-alt" alt="分享"></i>
                             <i class="far fa-bookmark" alt="分享"></i>
                         </div>
-                        <p class="likeCount">891個喜歡</p>
+                        <p class="likeCount"><?php echo $beautyContestRow[0]['orderVote']; ?>個喜歡</p>
                     </div>
                     <div id="beautyRankingbg2" class="beautyRankingbg">
                        <img src="images/beautyPageant/rank/newVersionStage2.png"  alt=""onclick="window.location.href='beautyDiscuss.html'">
-                        <h3>超級大舞台</h3>
+                        <h3><?php echo $beautyContestRow[1]['orderName']; ?></h3>
                         <div class="beautyRankingSocialBtns">
-                            <i class="far fa-heart"></i>
+                            <i><img class="likeHeart" src="images/like.png" alt="喜歡收藏"></i>
+                            <span style="display:none"><?php echo $beautyContestRow[1]['orderNo'] ?></span>
                             <i class="far fa-comment" alt="留言"></i>
                             <i class="fas fa-external-link-alt" alt="分享"></i>
                             <i class="far fa-bookmark" alt="分享"></i>
                         </div>
-                        <p class="likeCount">1622個喜歡</p>
+                        <p class="likeCount"><?php echo $beautyContestRow[1]['orderVote']; ?>個喜歡</p>
                     </div>
                     <div id="beautyRankingbg3" class="beautyRankingbg">
                         <img src="images/beautyPageant/rank/newVersionStage3.png" alt="">
-                        <h3>火花大舞台</h3>
+                        <h3><?php echo $beautyContestRow[2]['orderName']; ?></h3>
                         <div class="beautyRankingSocialBtns">
-                            <i class="fas fa-heart"></i>
+                            <i><img class="likeHeart" src="images/like.png" alt="喜歡收藏"></i>
+                            <span style="display:none"><?php echo $beautyContestRow[2]['orderNo'] ?></span>
                             <i class="far fa-comment" alt="留言"></i>
                             <i class="fas fa-external-link-alt" alt="分享"></i>
                             <i class="far fa-bookmark" alt="分享"></i>
                         </div>
-                        <p class="likeCount">384個喜歡</p>
+                        <p class="likeCount"><?php echo $beautyContestRow[2]['orderVote']; ?>個喜歡</p>
                     </div>
                 </div>
                 <div id="beautyRankingimgsMonth">
                     <div id="beautyRankingbg4" class="beautyRankingbg">
                         <img src="images/beautyPageant/rank/newVersionStage2.png" alt="">
-                        <h3>台南大舞台</h3>
+                        <h3><?php echo $beautyContestRow[3]['orderName']; ?></h3>
                         <div class="beautyRankingSocialBtns">
-                            <i class="far fa-heart"></i>
+                             <i><img class="likeHeart" src="images/like.png" alt="喜歡收藏"></i>
+                            <span style="display:none"><?php echo $beautyContestRow[3]['orderNo'] ?></span>
                             <i class="far fa-comment" alt="留言"></i>
                             <i class="fas fa-external-link-alt" alt="分享"></i>
                             <i class="far fa-bookmark" alt="分享"></i>
                         </div>
-                        <p class="likeCount">123個喜歡</p>
+                        <p class="likeCount"><?php echo $beautyContestRow[3]['orderVote']; ?>個喜歡</p>
                     </div>
                     <div id="beautyRankingbg5" class="beautyRankingbg">
                         <img src="images/beautyPageant/rank/newVersionStage3.png" alt="">
-                        <h3>嬤嬤大舞台</h3>
+                        <h3><?php echo $beautyContestRow[4]['orderName']; ?></h3>
                         <div class="beautyRankingSocialBtns">
-                            <i class="far fa-heart"></i>
+                             <i><img class="likeHeart" src="images/like.png" alt="喜歡收藏"></i>
+                            <span style="display:none"><?php echo $beautyContestRow[4]['orderNo'] ?></span>
                             <i class="far fa-comment" alt="留言"></i>
                             <i class="fas fa-external-link-alt" alt="分享"></i>
                             <i class="far fa-bookmark" alt="分享"></i>
                         </div>
-                        <p>789個喜歡</p>
+                        <p><?php echo $beautyContestRow[4]['orderVote']; ?>個喜歡</p>
                     </div>
                     <div id="beautyRankingbg6" class="beautyRankingbg">
                         <img src="images/beautyPageant/rank/newVersionStage1.png" alt="">
-                        <h3>花火大舞台</h3>
+                        <h3><?php echo $beautyContestRow[5]['orderName']; ?></h3>
                         <div class="beautyRankingSocialBtns">
-                            <i class="far fa-heart"></i>
+                             <i><img class="likeHeart" src="images/like.png" alt="喜歡收藏"></i>
+                            <span style="display:none;width:0"><?php echo $beautyContestRow[5]['orderNo'] ?></span>
                             <i class="far fa-comment" alt="留言"></i>
                             <i class="fas fa-external-link-alt" alt="分享"></i>
                             <i class="far fa-bookmark" alt="分享"></i>
                         </div>
-                        <p class="likeCount">456個喜歡</p>
+                        <p class="likeCount"><?php echo $beautyContestRow[5]['orderVote']; ?>個喜歡</p>
                     </div>
                 </div>
+                <?php 
+                }
+                ?>
                 <div class="paginationPanel">
                     <ul class="pagination">
                         <li id="dot0" class="pageDot"></li>
@@ -118,12 +144,7 @@
                 </div>
             </div>
         </div> 
-        <div id="musicContent">
-            <canvas id="canvasMusic"></canvas>
-            <audio id="audioMusic" controls autoplay loop style="display : none" src="audios\backloop.mp3"></audio>
-        </div>
     </div>
-    
     <!-- 第二屏幕 選美大舞台-->
     <div class="beautyDiscWrap">
         
@@ -133,17 +154,16 @@
                 <!-- 選項篩選 全部時間 排序 上傳時間  還有一個上傳按鈕-->
                 <form action="" method="" action="">
                     <div class="beautyDiscFilterBox">
-                    排序:<select name="" id="">
-                            <option value="" disabled selected hidden>顯示順序</option>
-                            <option value="">上傳時間</option>
-                            <option value="">喜歡數</option>
+                    排序:<select name="listList" id="listList">
+                            <option value="0" disabled selected hidden>顯示順序</option>
+                            <option value="1">上傳時間</option>
+                            <option value="2">喜歡數</option>
                         </select>
                     </div>
                 </form>
-                <i class="fas fa-plus-circle" alt="參加選美"></i>
+                <!-- <i class="fas fa-plus-circle" alt="參加選美"></i> 功能開發中 -->
             </div>
-            <div class="beautyDiscStageContainer">
-             <?php /*require_once("php/beautyDiscIg.php");*/?>
+            <div class="beautyDiscStageContainerWrap">
              <?php require_once("php/beautyDiscIg.php");?>
             </div>
         </div>
@@ -158,6 +178,35 @@
                 <a href="#"><img src="images/youtube (1).png" alt="YouTube"></a>        
             </div>
         </footer>
+        <script>
+        var hearts = document.getElementsByClassName("likeHeart");
+        for(let i=0; i< hearts.length; i++){
+            hearts[i].onclick = function(e){
+
+                let orderNo = e.target.parentNode.nextElementSibling.innerText;
+                let amount;
+    
+
+                if(e.target.src.indexOf("images/like.png") != -1 ){
+                    e.target.src = "images/likeAlready.png";
+                    amount = 1;
+                }else{
+                    e.target.src = "images/like.png";
+                    amount = -1;
+                }
+                let url = "updateVotes.php?orderNo=" + orderNo + "&amount=" + amount;
+                var xhr2 = new XMLHttpRequest();
+                xhr2.onload = function(){
+                    //console.log(xhr2.responseText);
+                    var str = e.target.parentNode.parentNode.nextElementSibling.innerHTML.replace("個喜歡","");
+                    console.log("------",parseInt(str)+ amount +"個喜歡" );
+                    e.target.parentNode.parentNode.nextElementSibling.innerHTML = parseInt(str)+ amount +"個喜歡";
+                }
+                xhr2.open("get",url,true);
+                xhr2.send(null);
+            }
+        }
+    </script>
     <script src="js/beautyRankingScale.js"></script>
     <script src="js/beautyPagentSwipe.js"></script>
     <script>

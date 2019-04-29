@@ -529,6 +529,7 @@
     .bigCarcouselBox{
       .card{
         .ElongationBox{
+          
           .cardContent{
             padding: 20px;
             tr{
@@ -585,7 +586,12 @@
   .titleBgi {
     background-image: url("../images/titleNeonLightDarkBlueNew.gif");
     margin-top: 0;
+    // position: absolute;
     margin-bottom: 50px;
+<<<<<<< HEAD
+=======
+    opacity: 0;
+>>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
   }
 
   .wrap {
@@ -610,7 +616,8 @@
     }
 
     li img {
-      max-width: 100%;
+      width: 210px;
+      height: 297px;
       cursor: pointer;
     }
   }
@@ -728,6 +735,7 @@
   }
   .thrScreen {
     .titleBgi{
+      transform: translateX(300%);
       margin-top: 80px;
     }
     .wrap {

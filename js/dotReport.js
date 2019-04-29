@@ -10,13 +10,13 @@ $(document).ready(function(){
         $('#dotpanel').css('display','none');
        });
     }else{
-        $(".beautyDiscStageContainer").on('click','.dotflip',function(){
+        $(".beautyDiscStageContainerWrap").on('click','.dotflip',function(){
             var x = $('.dotflip').index(this);
             // console.log(x);
             $('.dotpanel').eq(x).css('display','block');
             
         });
-        $(".beautyDiscStageContainer").on('mouseleave','.dotpanel',function(){
+        $(".beautyDiscStageContainerWrap").on('mouseleave','.dotpanel',function(){
             // $('.dotpanel').css('display','none');
             var x = $('.dotpanel').index(this);
             console.log(x);

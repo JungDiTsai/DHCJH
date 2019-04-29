@@ -60,6 +60,25 @@ function sendLogin() {
 
 
 
+<<<<<<< HEAD
+=======
+//登出
+function LoginOut() {
+    //產生XMLHttpRequest物件
+    let xhr = new XMLHttpRequest();
+    //註冊callback function
+    xhr.onload = function () {
+        if (xhr.status == 200) { //server端可以正確的執行
+            alert('已成功登出');
+            window.location.href='index.php';
+        } else { //其它
+            alert(xhr.status);
+        }
+    }
+    //設定好所要連結的程式
+    xhr.open("get", "php/components/_logout.php", true);
+    xhr.send(null);
+>>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
 }
 
 
@@ -79,4 +98,41 @@ function LoginOut() {
     //設定好所要連結的程式
     xhr.open("get", "php/components/_logout.php", true);
     xhr.send(null);
+<<<<<<< HEAD
 }
+=======
+    })
+
+
+    //忘記密碼
+    document.getElementById('forgotPSWBtn').addEventListener('click',function(){
+        console.log(document.getElementById('forgotPSW').value);
+        let forgotPSW = document.getElementById('forgotPSW').value;
+          //產生XMLHttpRequest物件
+          var xhr = new XMLHttpRequest();
+          //註冊callback function
+          xhr.onreadystatechange = function(){
+            if( xhr.readyState == XMLHttpRequest.DONE ){ //server端執行完畢
+              if( xhr.status == 200){ //server端可以正確的執行
+                   if(xhr.responseText=='Success!'){
+                        alert('您的密碼已成功送出');
+                   }else if(xhr.responseText=='沒有找到此信箱'){
+                        alert('沒有找到此信箱');
+                   }else{
+                        alert('寄信失敗');
+                   }
+              }else{ //其它
+                  alert( xhr.status );
+              }
+            }
+          } 
+          //設定好所要連結的程式
+          var url = "php/components/_testMail.php?memMail=" + forgotPSW;
+          xhr.open("get", url, true);
+          //送出資料
+          xhr.send(null);
+        
+    })
+        
+    
+>>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a

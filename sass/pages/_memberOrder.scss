@@ -25,7 +25,8 @@
             margin: auto;
             
             tr:hover{
-                background-color: $fontColor;
+                background-color: #afa;
+                cursor: pointer;
             }
             .orderBoxTitle:hover{
                 background-color:#fff;
@@ -69,7 +70,7 @@
                 display: flex;
                 flex-wrap: wrap;
                 padding: 10px 0px;
-                font-size: $buttonWord;
+                font-size: 21px;
                 .big{
                     font-size: 22px;
                 }
@@ -119,37 +120,9 @@
                 }
             }
             .buttonArea{
-                width: 50%;
-                display: flex;
-                text-align: center;
-                justify-content: space-between;
-                margin: 20px auto 10px ;
-                
-                button:last-of-type{
-                    width: 100px;
-                    height: 50px;
-                    // background-image: linear-gradient(to top, #fddb92 0%, #ecfa25 100%);
-                    // box-shadow: 0px 2px 2px #888;
-                    // padding: 5px 10px;
-                    // border-radius: 5px;
-                    // margin-top:5px; 
-                    // cursor: pointer;
-                    // &:hover{
-                    //     background-image: linear-gradient(to bottom, #cfa54a 0%, #faec25 100%);
-                    // }
-                }
-                button:first-of-type{
-                    width: 100px;
-                    height: 50px;
-                    // box-shadow: 0px 2px 2px #888;
-                    // padding: 5px 10px;
-                    // border-radius: 5px;
-                    // margin-top:5px; 
-                    // cursor: pointer;
-                    // background-image: linear-gradient(to top, #d299c2 0%, #b84a4a 100%);
-                    // &:hover{
-                    //     background-image: linear-gradient(to top, #e4abd4 0%, #ff1010 100%);
-                    // }
+                margin:30px auto 10px;
+                button{
+                    outline: none;
                 }
             }
         }
@@ -178,6 +151,8 @@
             }
             .detailStage{
                 table{
+                    margin: auto;
+                    width: 70%;
                     th, td{
                         font-size: 22px;
                     }

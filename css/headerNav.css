@@ -18,7 +18,7 @@
   display: none;
   max-width: 450px;
   height: 500px;
-  background: #fff;
+  background: #000;
   border: 5px solid #17F4F0;
   position: fixed;
   top: 50px;
@@ -59,8 +59,8 @@
 .registeredBox table {
   width: 100%;
   margin: 20px auto;
-  border: 1px solid #fff;
-  color: #17F4F0;
+  border: 1px solid #000;
+  color: #eee;
   font-size: 18px;
 }
 
@@ -92,7 +92,7 @@
 }
 
 .registeredBox table label input:checked + i {
-  color: #281886;
+  color: #51F3F0;
 }
 
 .registeredBox table label i:hover {
@@ -120,7 +120,7 @@
   display: none;
   width: 300px;
   height: 350px;
-  background: #fff;
+  background: #000;
   border: 5px solid #17F4F0;
   position: fixed;
   top: 0;
@@ -136,8 +136,8 @@
   text-align: center;
   -webkit-box-shadow: 0 0 10px #17F4F0;
           box-shadow: 0 0 10px #17F4F0;
-  -webkit-box-shadow: 0 0 10px  #666 inset;
-          box-shadow: 0 0 10px  #666 inset;
+  -webkit-box-shadow: 0 0 10px  #eee inset;
+          box-shadow: 0 0 10px  #eee inset;
 }
 
 .loginBox .fa-times {
@@ -148,8 +148,13 @@
   cursor: pointer;
 }
 
+<<<<<<< HEAD
 .loginBox .fa-times:hover {
   color: #000;
+=======
+.loginBox .fa-times:hover, .loginbox1 .fa-times:hover {
+  color: #eee;
+>>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
 }
 
 .loginBox h3 {
@@ -165,8 +170,13 @@
   padding: 10px 15px;
 }
 
+<<<<<<< HEAD
 .loginBox .inputBox i {
   color: #fff;
+=======
+.loginBox .inputBox i, .loginbox1 .inputBox i {
+  color: #eee;
+>>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
 }
 
 .loginBox .inputBox input {
@@ -176,7 +186,7 @@
   background: #2d3631;
   outline: none;
   border: none;
-  color: #fff;
+  color: #eee;
 }
 
 .loginBox .commonBtnSmall {
@@ -206,7 +216,7 @@
   display: none;
   width: 300px;
   height: 370px;
-  background: #fff;
+  background: #000;
   border: 5px solid #17F4F0;
   position: fixed;
   top: 0;
@@ -247,7 +257,7 @@
 .forgotBox p {
   margin-top: 10px;
   font-size: 16px;
-  color: #47472d;
+  color: #eee;
 }
 
 .forgotBox div {

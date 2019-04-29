@@ -13,27 +13,8 @@ $(document).ready(function(){
             controlContent(index);
         }else if( index == 0){
             //舞台回到中心
-            $('.stageView .groupA').css({
-                'transform' : `translateY(100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)`
-            });
-            //移除背景圖
-            $('.stairsF, .stairsC1, .front').css('backgroundImage', "none");
-            //移除舞團、移除選取
-            $('.danceDetail1, .danceDetail2, .danceDetail3, .danceDetail4, .danceDetail5, .danceDetail6').hide();
-            $('#danceDetail1, #danceDetail2, #danceDetail3, #danceDetail4, #danceDetail5, #danceDetail6').removeClass('custItemSelect');
-            //移除火焰煙火、移除選取
-            $('.fireEffect1, .fireEffect2, .fireEffect3').hide();
-            $('#fireEffect1, #fireEffect2, #fireEffect3').removeClass('custItemSelect');
-            $('.fireworkEffect01, .fireworkEffect02, .fireworkEffect03').hide();
-            $('#fireworkEffect1, #fireworkEffect2, #fireworkEffect3').removeClass('custItemSelect');
-            //還原字幕
-            $('#subtileItemInfo').val('');
-            $('.subtitles p').html('跑馬燈');
-            //移除音響鋼管、移除選取
-            $('.audioItem01, .audioItem02, .audioItem03').hide();
-            $('#audioItem1, #audioItem2, #audioItem3').removeClass('custItemSelect');
-            $('.pole1, .pole2, .pole3').hide();
-            $('#pole1, #pole2, #pole3').removeClass('custItemSelect');
+            custReset();
+            
         }
     });
     // 下一步
@@ -47,9 +28,25 @@ $(document).ready(function(){
             getOrderInfo();
         }
         else if( index == 3){
-            saveCustImg();
-            $('.checkoutBg').removeClass('disN');
-            // location.href ='checkout.html';
+            //判斷登入
+            datevalue = $('.orderDate span').text();
+            locValue = $('.orderLoc span').text();
+            if( datevalue == '' || locValue == ''){
+                alert('請選擇活動日期與地址');  //跳窗
+            }else{
+                if(LoginState=="notFound"){
+                    // 顯示登入燈箱
+                    let loginBox = document.querySelector('.loginBox');
+                    let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
+                    if (style == "block") {
+                        loginBox.style.setProperty('display', "none");
+                    }else{
+                        loginBox.style.setProperty('display', "block");
+                    }
+                }else{
+                    $('.checkoutBg').removeClass('disN');  //準備結帳
+                }
+            }
         }
     });
 
@@ -63,7 +60,6 @@ $(document).ready(function(){
         }
     });
     // 客製花車步驟---end
-
 
     // 客製花車內容步驟tab---start
     $('.btnCustStageStep').click(function(){
@@ -417,8 +413,24 @@ $(document).ready(function(){
     // 更改地址
     $('.map iframe').attr("src", 'https://maps.google.com.tw/maps?f=q&hl=zh-TW&geocode=&q=中央大學資策會&z=16&output=embed&t=');
     changeLoc();
-    // 結帳燈箱
-    $('.checkoutBg').addClass('disN');
+    // 結帳燈箱開關
+    // $('.checkoutBg').addClass('disN');
+    $('#checkoutClose').click(function(){
+        $('.checkoutBg').addClass('disN');
+    })
+    // 跳轉燈箱
+    $('.checkoutStep').click(function(){
+        saveOrder(
+            endStep()
+        );
+    })
+    // 結束
+    $('.endBtn').click(function(){
+        $('.endLightBoxBg').addClass('disN');
+        window.location.reload();
+    });
+    
+    
 });
 
 function controlContent(index){
@@ -448,7 +460,29 @@ function controlContent(index){
     }
 }
 
-
+function custReset(){
+    $('.stageView .groupA').css({
+        'transform' : `translateY(100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)`
+    });
+    //移除背景圖
+    $('.stairsF, .stairsC1, .front').css('backgroundImage', "none");
+    //移除舞團、移除選取
+    $('.danceDetail1, .danceDetail2, .danceDetail3, .danceDetail4, .danceDetail5, .danceDetail6').hide();
+    $('#danceDetail1, #danceDetail2, #danceDetail3, #danceDetail4, #danceDetail5, #danceDetail6').removeClass('custItemSelect');
+    //移除火焰煙火、移除選取
+    $('.fireEffect1, .fireEffect2, .fireEffect3').hide();
+    $('#fireEffect1, #fireEffect2, #fireEffect3').removeClass('custItemSelect');
+    $('.fireworkEffect01, .fireworkEffect02, .fireworkEffect03').hide();
+    $('#fireworkEffect1, #fireworkEffect2, #fireworkEffect3').removeClass('custItemSelect');
+    //還原字幕
+    $('#subtileItemInfo').val('');
+    $('.subtitles p').html('跑馬燈');
+    //移除音響鋼管、移除選取
+    $('.audioItem01, .audioItem02, .audioItem03').hide();
+    $('#audioItem1, #audioItem2, #audioItem3').removeClass('custItemSelect');
+    $('.pole1, .pole2, .pole3').hide();
+    $('#pole1, #pole2, #pole3').removeClass('custItemSelect');
+}
 
 
 // ======================================================
@@ -623,6 +657,10 @@ function controlContent(index){
                 ss.style.cursor="default";
                 ss.removeEventListener("click", tdclass);
             }
+            // if(ss.innerText == datevalueTemp.split("-")[2] && num == datevalueTemp.split("-")[1] && document.querySelector("#yy-sp").innerText == datevalueTemp.split("-")[0]){
+            //     ss.style.background = "rgb(64, 58, 96)";
+            //     ss.style.color = "rgb(255, 255, 255)";
+            // }
             arr[k] = ss;
         }
     }
@@ -639,9 +677,10 @@ function controlContent(index){
         var value = document.querySelector("#calendarTitle").innerText;
         var mmtext = Number(arrmm.indexOf(value));//月
         mmtext += 1;
+        datevaluetemp = document.querySelector("#calendarYear").innerText + "-" + ('00' + mmtext).slice(-2) + "-" + ('00' + e.target.innerText).slice(-2);
         datevalue = document.querySelector("#calendarYear").innerText + "-" + ('00' + mmtext).slice(-2) + "-" + ('00' + e.target.innerText).slice(-2);
         // 獲取日期
-        $('.dateChoose span').text(datevalue);
+        $('.dateChoose p span:first-of-type').text(datevalue);
         // 訂單獲取日期
         $('.orderDate span').text(datevalue);
         // console.log(datevalue);
@@ -651,13 +690,17 @@ function controlContent(index){
 // 更改地址
 // ======================================================
 function changeLoc(){
-    $('#locBtn').click(function(){
+    document.getElementById('locText').addEventListener('input', function(){
         var loc = $('#locText').val();
         var locSrc = `https://maps.google.com.tw/maps?f=q&hl=zh-TW&geocode=&q=${$('#locText').val()}&z=16&output=embed&t=`;
         $('.map iframe').attr("src", locSrc);
         //訂單獲取地址
         $('.orderLoc span').text(loc);
     })
+   
+        
+    // $('#locText').input(function(){
+    // })
 }
 
 // ======================================================
@@ -697,19 +740,12 @@ $('.hostInfoDetail').click(function() {
 // 獲取訂單資訊
 // ======================================================
 function getOrderInfo(){
-    // 獲取日期
-    // 獲取地址
-    // var loc = $('#locText').val();
-    // $('.orderLoc span').text(loc);
     // 獲取塗裝
     var none = 'none';
     var bg0 = $('.stairsF').css('backgroundImage');
     var bg1 = $('.stairsC1').css('backgroundImage');
     var bg2 = $('.front').css('backgroundImage');
     var patternPrice = 0;
-    // console.log(bg0);
-    // console.log(bg1);
-    // console.log(bg2);
     if( bg0 != none || bg1 != none || bg2 != none ){
         patternPrice = 10000; 
         $('#orderPattern :nth-child(2)').text('如圖');
@@ -721,28 +757,33 @@ function getOrderInfo(){
     // 獲取舞團
     var orderDanceName = "無";
     var orderDancePrice = 0;
+    orderDanceNo = 0;
     if( $('.danceItem').children().children().hasClass('custItemSelect') ){
         orderDanceName = $('.danceItem .custItemSelect p:nth-last-of-type(2)').text();
         orderDancePrice = ($('.danceItem .custItemSelect p:last-of-type').text()).replace(/[^\d]/g, '');
+        orderDanceNo = $('.danceItem .custItemSelect p:last-of-type').attr('troupeNo');
     }
         $('#orderDance :nth-child(2)').text(orderDanceName);
         $('#orderDance :last-child').text(orderDancePrice);
     // 獲取特效---火焰
     var orderFireName = "無";
     var orderFirePrice = 0;
+    orderFireNo = 0;
     if( $('#fireEffect1').hasClass('custItemSelect') || $('#fireEffect2').hasClass('custItemSelect') || $('#fireEffect3').hasClass('custItemSelect') ){
         orderFireName =  $('.fireInfo.custItemSelect:lt(1) p:nth-last-of-type(2)').text();
         orderFirePrice = ($('.fireInfo.custItemSelect:lt(1) p:last-of-type').text()).replace(/[^\d]/g, '');
+        orderFireNo = $('.fireInfo.custItemSelect:lt(1) p:last-of-type').attr('effectsNo');
     }
         $('#orderFire :nth-child(2)').text(orderFireName);
         $('#orderFire :last-child').text(orderFirePrice);
     // 獲取特效---煙火--------?
     var orderFireworkName = "無";
     var orderFireworkPrice = 0;
+    orderFireworkNo = 0;
     if( $('#fireworkEffect1').hasClass('custItemSelect') || $('#fireworkEffect2').hasClass('custItemSelect') || $('#fireworkEffect3').hasClass('custItemSelect') ){
         orderFireworkName = $('.fireworkInfo.custItemSelect p:nth-last-of-type(2)').text();
         orderFireworkPrice = ($('.fireworkInfo.custItemSelect p:last-of-type').text()).replace(/[^\d]/g, '');
-        // console.log(orderFireworkName);
+        orderFireworkNo = $('.fireworkInfo.custItemSelect p:last-of-type').attr('fireworkNo');
     }
         $('#orderFirework :nth-child(2)').text(orderFireworkName);
         $('#orderFirework :last-child').text(orderFireworkPrice);
@@ -750,57 +791,108 @@ function getOrderInfo(){
     // 獲取音響
     var orderAudioName =  "無";
     var orderAudioPrice = 0;
+    orderAudioNo = 0;
     if( $('#audioItem1').hasClass('custItemSelect') || $('#audioItem2').hasClass('custItemSelect') || $('#audioItem3').hasClass('custItemSelect') ){
         orderAudioName =  $('.audioInfo.custItemSelect p:nth-last-of-type(2)').text();
         orderAudioPrice = ($('.audioInfo.custItemSelect p:last-of-type').text()).replace(/[^\d]/g, '');
+        orderAudioNo = $('.audioInfo.custItemSelect p:last-of-type').attr('audioNo');
     }
         $('#orderAudio :nth-child(2)').text(orderAudioName);
         $('#orderAudio :last-child').text(orderAudioPrice);
     // 獲取鋼管
     var orderPoleName = "無";
     var orderPolePrice = 0;
+    orderPipeNo = 0;
     if( $('#pole1').hasClass('custItemSelect') || $('#pole2').hasClass('custItemSelect') || $('#pole3').hasClass('custItemSelect')){
         orderPoleName =  $('.poleInfo.custItemSelect p:nth-last-of-type(2)').text();
         orderPolePrice = ($('.poleInfo.custItemSelect p:last-of-type').text()).replace(/[^\d]/g, '');
+        orderPipeNo = $('.poleInfo.custItemSelect p:last-of-type').attr('pipeNo');
     }
         $('#orderPole :nth-child(2)').text(orderPoleName);
         $('#orderPole :last-child').text(orderPolePrice);
     // 獲取主持人
+    orderHostNo = 0;
     var orderHostName =  $('.active h6 span:first-of-type').text();
     var orderHostPrice = ($('.active h6 span:last-of-type').text()).replace(/[^\d]/g, '');
+    orderHostNo = $('.active h6 span:first-of-type').attr('hostNo');
         $('#orderHost :nth-child(2)').text(orderHostName);
         $('#orderHost :last-child').text(orderHostPrice);
     // 金額總計
-    var subtotal = 0;
+    subtotal = 0;
     subtotal = parseInt(patternPrice) + parseInt(orderDancePrice) + parseInt(orderFirePrice) + parseInt(orderFireworkPrice) + parseInt(orderAudioPrice) + parseInt(orderPolePrice) + parseInt(orderHostPrice);
     // console.log(subtotal);
     $('.orderSub span').text(subtotal);
+    // 付款金額總計
+    $('.checkoutOrder p span').text(subtotal);
 }
-// ======================================================
-// 資料寫進session--ajax
-// ======================================================
-
-
-
-// ======================================================
 // 照片存檔
+// function saveCustImg(){
+//     domtoimage.toJpeg(orderStage)
+//         .then(function (dataUrl) {
+//             console.log(dataUrl);
+//             let img = dataUrl
+
+//             // 產生XMLHttpRequest物件
+//             var xhr = new XMLHttpRequest();
+//             xhr.onload=function (){
+//                 if( xhr.status == 200 ){
+//                     console.log(xhr.responseText);
+//                 }else{
+//                     alert( xhr.status );
+//                 }
+//             }
+            
+//             //設定好所要連結的程式
+//             var url = "php/components/_saveCustImg.php";
+//             xhr.open("Post", url, true);
+//             xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+//             //送出資料
+//             var data_info = "imgURL=" + img;
+//             xhr.send(data_info);
+//         })
+//         .catch(function (error) {
+//             console.error('oops, something went wrong!', error);
+//     });
+// }
 // ======================================================
-function saveCustImg(){
-
-    var orderStage = document.getElementById('orderStage');
-    $('.back').css({
-        'transform' : " translateX(0px) translateZ(75px)"});
-
-    domtoimage.toJpeg(orderStage)
+// 資料寫進json--ajax
+// ======================================================
+function saveOrder (){   
+    domtoimage.toPng(orderStagePic)
         .then(function (dataUrl) {
-            // console.log(dataUrl);
+            console.log(dataUrl);
             let img = dataUrl
 
             // 產生XMLHttpRequest物件
-            let xhr = new XMLHttpRequest();
+            var xhr = new XMLHttpRequest();
+            xhr.onload=function (){
+                if( xhr.status == 200 ){
+                    console.log(xhr.responseText);
+                }else{
+                    alert( xhr.status );
+                }
+            }
+            datevalue = $('.orderDate span').text();
+            locValue = $('.orderLoc span').text();
+            orderName = $('#orderName').val();
+            
+            var orderInfo = {};
+            orderInfo.memNo = LoginState[0][0];
+            orderInfo.totalMoney = subtotal;
+            orderInfo.orderName = orderName;
+            orderInfo.actPlace = locValue;
+            orderInfo.actStart = datevalue;
+            orderInfo.hostNo = orderHostNo;
+            // orderContent
+            orderInfo.troupeNo = orderDanceNo;
+            orderInfo.fireNo = orderFireNo;
+            orderInfo.fireworkNo = orderFireworkNo;
+            orderInfo.audioNo = orderAudioNo;
+            orderInfo.pipeNo = orderPipeNo;
 
+            var jsonStr = JSON.stringify(orderInfo);
             //設定好所要連結的程式
-            var url = "_saveCustImg.php";
+            var url = "php/components/_saveCustOrder.php?jsonStr=" + jsonStr;
             xhr.open("Post", url, true);
             xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
             //送出資料
@@ -810,6 +902,48 @@ function saveCustImg(){
         .catch(function (error) {
             console.error('oops, something went wrong!', error);
     });
+
+    
+    // datevalue = $('.orderDate span').text();
+    // locValue = $('.orderLoc span').text();
+    // orderName = $('#orderName').val();
+
+    // var xhr = new XMLHttpRequest();
+    // xhr.onload=function (){
+    //     if( xhr.status == 200 ){
+    //         console.log(xhr.responseText);
+    //     }else{
+    //         alert( xhr.status );
+    //     }
+    // }
+    
+    // var orderInfo = {};
+    // // orderInfo.memId = $id("memId").value;
+    // // orderInfo.memCouponsNo = ;
+    // orderInfo.totalMoney = subtotal;
+    // orderInfo.orderName = orderName;
+    // orderInfo.actPlace = locValue;
+    // orderInfo.actStart = datevalue;
+    // orderInfo.hostNo = orderHostNo;
+    // // orderContent
+    // orderInfo.troupeNo = orderDanceNo;
+    // orderInfo.fireNo = orderFireNo;
+    // orderInfo.fireworkNo = orderFireworkNo;
+    // orderInfo.audioNo = orderAudioNo;
+    // orderInfo.pipeNo = orderPipeNo;
+
+    // var jsonStr = JSON.stringify(orderInfo);
+    // // alert ( jsonStr ); 
+    // var url = "php/components/_saveCustImg.php?jsonStr=" + jsonStr;
+    // xhr.open("Post", url, true);
+    // xhr.send( null );
 }
+
+function endStep (){
+    $('.checkoutBg').addClass('disN');
+    $('.endLightBoxBg .endLightBox').removeClass('disN');
+}
+
+
 
 
