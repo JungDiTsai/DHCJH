@@ -50,7 +50,7 @@
                                 $errMsg .=  '錯誤行號' . $e->getLine() . '<br>';
                              }
                     ?>
-                    <p>您發表的 <span><?php echo $data['orderName']; ?></span> 共有 <?php echo $number; ?>筆 留言<br><a href="beautyPageant.php #CarOrder<?php echo $data['orderNo'];?>">立即查看</a></p>
+                    <p>您發表的 <span><?php echo $data['orderName']; ?></span> 共有 <?php echo $number; ?>筆 留言<br><a href="beautyPageant.php#CarOrder<?php echo $data['orderNo'];?>">立即查看</a></p>
                     <?php } ?>
                </div>
           </div>
@@ -73,7 +73,7 @@
                          $products = $products->fetchAll();
                          foreach ($products as $key => $data) {
                     ?>
-                    <p>您在 <span><?php echo $data['orderName']; ?></span> 的留言<br><a href="beautyPageant.php #CarOrder<?php echo $data['orderNo'];?>">立即查看</a></p>
+                    <p>您在 <span><?php echo $data['orderName']; ?></span> 的留言<br><a href="beautyPageant.php#CarOrder<?php echo $data['orderNo'];?>">立即查看</a></p>
                          <?php } ?>
                 </div>
           </div>

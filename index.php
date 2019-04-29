@@ -1,10 +1,6 @@
 <?php
 try{
-    $dsn = "mysql:host=localhost;port=3306;dbname=dhc;charset=utf8";
-    $user = "root";
-    $password = "root";
-    $options = array(PDO::ATTR_CASE=>PDO::CASE_NATURAL, PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION);
-    $pdo = new PDO($dsn, $user, $password, $options);
+    require_once("php/components/_connectDHC.php");
     $sql = "SELECT * FROM orders  ORDER BY orderVote DESC LIMIT 3";
     $beautyContest = $pdo->query($sql);
 }catch(PDOException $e){
@@ -115,24 +111,23 @@ try{
         ?>
     <script src="js/_login.js"></script>
     <script src="js/_font_loginLightBox.js"></script>
+
+    <?php 
+    require_once("carAndRobot.php");
+    ?>
     
         <!--game and customer service wrapper-->
        
-        <a href="game.html">
+        <!-- <a href="game.html">
             <div id="gameHub">
                 <span>玩遊戲<br>
                         拿優惠
                 </span>
                 <img src="images/gameCar.png" alt="遊戲">
             </div>
-        </a>
-        
-        
-        <!--
-        
-        
-        -->
-        <div id="customerService">
+        </a> -->
+
+        <!-- <div id="customerService">
             
             <div class="chatrobot" style="display: none;">
                 <div class="chatbox">
@@ -144,9 +139,9 @@ try{
                     </div>
                 </div>
                 
-                <div class="closebtn"><i class="fas fa-times-circle btnCancel">
+                <div class="closebtn"><i class="fas fa-times-circle btnCancel"> -->
                     <!--<img src="images/serviceClose.png" alt="關閉客服">-->
-                </i></div>   
+                <!-- </i></div>   
                 <div class="chattext">
                     <textarea name="robotAsk" class="messagebox"></textarea>
                     <div class="chatbtn">送出</div>
@@ -157,7 +152,7 @@ try{
             <div id="customerServiceGirl" style="cursor: pointer" >
                 <img src="images/custormerService.png" alt="">
             </div>
-        </div>
+        </div> -->
         <!-- <a href="game.html">
             <div id="gameHub">
                 <span>玩遊戲<br>
@@ -381,11 +376,6 @@ try{
         <?php
         $errMsg=""; 
         try{
-            $dsn = "mysql:host=localhost;port=3306;dbname=dhc;charset=utf8";
-            $user = "root";
-            $password = "root";
-            $options = array(PDO::ATTR_CASE=>PDO::CASE_NATURAL, PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION);
-            $pdo = new PDO($dsn, $user, $password, $options); 
 
             $sql = "select * from draw";
             $draws = $pdo->query($sql);
@@ -635,11 +625,6 @@ try{
         
         <?php
         try{
-            $dsn = "mysql:host=localhost;port=3306;dbname=dhc;charset=utf8";
-            $user = "root";
-            $password = "root";
-            $options = array(PDO::ATTR_CASE=>PDO::CASE_NATURAL, PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION);
-            $pdo = new PDO($dsn, $user, $password, $options);
             $sql = "SELECT * FROM flyer  ORDER BY flyeDate DESC LIMIT 3";
             $flyer = $pdo->query($sql);
         }catch(PDOException $e){

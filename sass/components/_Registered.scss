@@ -2,7 +2,7 @@
     display: none;
     max-width: 450px;
     height: 500px;
-    background: #fff;
+    background: #000;
     border:5px solid $loginBackColor;
     position: fixed;
     top:50px;
@@ -35,8 +35,8 @@
     table{
         width: 100%;
         margin: 20px auto;
-        border: 1px solid #fff;
-        color:$loginBackColor;;
+        border: 1px solid #000;
+        color:#eee;;
         font-size: 18px;
         .prompt{
             font-size:14px;
@@ -61,7 +61,7 @@
                 z-index: -1;
             }
             input:checked+i{
-                color:rgb(40, 24, 134);
+                color:#51F3F0;
             }
             i:hover{cursor: pointer;}
         }
