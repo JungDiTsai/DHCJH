@@ -200,7 +200,7 @@
         for (let i = 0; i < peopleStatus.length; i++) {
             peopleStatus[i].addEventListener('change',function(){
                 if(peopleStatus[i].checked){
-                    peopleStatus[i].parentNode.querySelector('p').innerText = '啟動';
+                    peopleStatus[i].parentNode.querySelector('p').innerText = '開啟';
 
                     var xhr = new XMLHttpRequest();
                       //註冊callback function
@@ -214,7 +214,7 @@
                         }
                       } 
                       //設定好所要連結的程式
-                      var url = "php/components/_memFlyer_flyerStatus.php?orderNo=" + peopleStatus[i].value + "&setting=" + 1;
+                      var url = "php/components/_memFlyer_peopleStatus.php?orderNo=" + peopleStatus[i].value + "&setting=" + 1;
                       xhr.open("get", url, true);
                       //送出資料
                       xhr.send(null);
@@ -239,6 +239,7 @@
                       xhr.open("get", url, true);
                       //送出資料
                       xhr.send(null);
+                      event.cancelBubble=true;
                 }
             
             })

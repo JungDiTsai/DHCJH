@@ -129,3 +129,36 @@ function registered(){
     xhr.open("get", "php/components/_checkId.php?memId="+e.target.value, true);
     xhr.send(null);
     })
+
+
+    //忘記密碼
+    document.getElementById('forgotPSWBtn').addEventListener('click',function(){
+        console.log(document.getElementById('forgotPSW').value);
+        let forgotPSW = document.getElementById('forgotPSW').value;
+          //產生XMLHttpRequest物件
+          var xhr = new XMLHttpRequest();
+          //註冊callback function
+          xhr.onreadystatechange = function(){
+            if( xhr.readyState == XMLHttpRequest.DONE ){ //server端執行完畢
+              if( xhr.status == 200){ //server端可以正確的執行
+                   if(xhr.responseText=='Success!'){
+                        alert('您的密碼已成功送出');
+                   }else if(xhr.responseText=='沒有找到此信箱'){
+                        alert('沒有找到此信箱');
+                   }else{
+                        alert('寄信失敗');
+                   }
+              }else{ //其它
+                  alert( xhr.status );
+              }
+            }
+          } 
+          //設定好所要連結的程式
+          var url = "php/components/_testMail.php?memMail=" + forgotPSW;
+          xhr.open("get", url, true);
+          //送出資料
+          xhr.send(null);
+        
+    })
+        
+    

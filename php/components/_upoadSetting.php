@@ -7,7 +7,6 @@
     if($flyerSetting[3]==''){
         $flyerSetting[3]= date("Y/m/d");
     }
-
     $errMsg='';
     
     try {
