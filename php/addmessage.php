@@ -8,8 +8,9 @@ try {
 	$options = array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION);
 	$pdo = new PDO( $dsn, $user, $password, $options);   
     //撈訊息
-    $orderNo = $_REQUEST["orderNo"];
-    $memNo =1;
+	$orderNo = $_REQUEST["orderNo"];
+	$memNo=1;
+    $memNo =$_REQUEST["memNo"];
     $messageContent=$_REQUEST["messageContent"];
 	$sql = "INSERT INTO message(orderNo,memNo,messageContent)
 	VALUES($orderNo,$memNo,'$messageContent')";
