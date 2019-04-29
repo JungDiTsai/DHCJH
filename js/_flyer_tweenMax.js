@@ -41,7 +41,7 @@ var animation_02 = new TimelineMax({}).to('.thrScreen .titleBgi', 2, {
          triggerHook: 0.3,
          reverse:false
      }).setTween(animation_01,) //觸發動畫
-     .addIndicators()
+    //  .addIndicators()
      .addTo(controller)
 
  //觸發事件
@@ -50,6 +50,6 @@ var animation_02 = new TimelineMax({}).to('.thrScreen .titleBgi', 2, {
         triggerHook: 0.5,
         reverse:false
     }).setTween(animation_02) //觸發動畫
-    .addIndicators()
+    // .addIndicators()
     .addTo(controller)
 
