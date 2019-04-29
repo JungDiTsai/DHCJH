@@ -65,7 +65,7 @@
         <i class="fas fa-times"></i>
         <h3>忘記密碼</h3>
         <p>請輸入您註冊時的會員信箱，我們會將新的密碼寄至您的信箱。</p>
-        <div>會員信箱<input type="email"></div>
-        <input type="submit" value="寄送密碼" class="commonBtnSmall">
+        <div>會員信箱<input type="email" id="forgotPSW"></div>
+        <input type="submit" value="寄送密碼" class="commonBtnSmall" id="forgotPSWBtn">
         <div><a class="backLogin">回到登入</a></div>
     </div>

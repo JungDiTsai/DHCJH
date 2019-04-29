@@ -6,10 +6,10 @@
 
     $errMsg='';
     try {
-       $sql = "UPDATE flyer SET peopleStatus=$setting where orderNo = $orderNo";
+       $sql = "UPDATE flyer SET peopleStatus = $setting where orderNo = $orderNo";
        $products = $pdo->exec($sql);
        if($setting==1){
-            echo "修改成功 啟動";
+            echo "修改成功 開啟";
        }
        else{
             echo "修改成功 關閉";

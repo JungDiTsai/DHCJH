@@ -1,7 +1,7 @@
 <?php
     $errMsg="";
     try{
-        require_once("../connectBooks.php"); 
+        require_once("php/components/_connectDHC.php"); 
 
         $sql = "select * from draw";
         $draws = $pdo->query($sql);
@@ -51,76 +51,6 @@
 <body>
 <?php require_once("php/header.php"); ?>
 <?php require_once("php/loginLightBox.php"); ?>
-<!-- header -->
-<input type="checkbox" id=menu_control>
-    <div class="box"></div>
-    <!-- 登入燈箱 -->
-    <div class="loginBox">
-        <i class="fas fa-times"></i>
-        <h3>登入</h3>
-        <div class="inputBox">
-            <i class="fas fa-user fa-1x"></i><input type="text" id="username" placeholder="User">
-        </div>
-        <div class="inputBox">
-            <i class="fas fa-key fa-1x"></i><input type="password" id="password" placeholder="Password">
-        </div>
-        <a href="memberCenter.html"><button class="commonBtn">登入</button></a>
-        <p><a class="showRegistered">註冊</a> / <a class="showForgotPSW">忘記密碼</a></p>
-    </div>
-    <!-- 註冊燈箱 -->
-    <div class="registeredBox">
-        <i class="fas fa-times"></i>
-        <h3>立即註冊</h3>
-        <table>
-            <tr>
-                <th>會員帳號</th>
-                <td><input type="text"></td>
-            </tr>
-            <tr><td colspan="2" class="prompt"><span>此帳號已有人使用 !</span></td></tr>
-            <tr>
-                <th>會員密碼</th>
-                <td><input type="password"></td>
-            </tr>
-            <tr>
-                <th>會員姓名</th>
-                <td><input type="text"></td>
-            </tr>
-            <tr>
-                <th>會員電話</th>
-                <td><input type="tel"></td>
-            </tr>
-            <tr>
-                <th>會員信箱</th>
-                <td><input type="email"></td>
-            </tr>
-            <tr>
-                <th>性別</th>
-                <td>
-                    <label>
-                        <input type="radio" name="sex" value="">
-                        <i class="fas fa-venus fa-2x"></i>
-                    </label>
-                    <label>
-                        <input type="radio" name="sex" value="">
-                        <i class="fas fa-mars fa-2x"></i>
-                    </label>
-                </td>
-            </tr>
-            <tr>
-                <th colspan="2"><input type="submit" value="註冊帳號" class="commonBtn"></th>
-            </tr>
-        </table>
-        <div><a class="backLogin">回到登入</a></div>
-    </div>
-    <!-- 忘記密碼燈箱 -->
-    <div class="forgotBox">
-        <i class="fas fa-times"></i>
-        <h3>忘記密碼</h3>
-        <p>請輸入您註冊時的會員信箱，我們會將新的密碼寄至您的信箱。</p>
-        <div>會員信箱<input type="email"></div>
-        <input type="submit" value="寄送密碼" class="commonBtn">
-        <div><a class="backLogin">回到登入</a></div>
-    </div>
 
     <!-- customized start -->
     <div class="custBg">
@@ -418,7 +348,7 @@
                                     <div id="danceDetail<?php echo $i ?>" class="custItemContentInfo">
                                         <img src="<?php echo $troupe["troupeImgUrl"]; ?>" alt="">
                                         <p><?php echo $troupe["troupeName"]; ?></p>
-                                        <p>$<?php echo $troupe["troupePrice"]; ?></p>
+                                        <p troupeNo="<?php echo $troupe["troupeNo"]; ?>">$<?php echo $troupe["troupePrice"]; ?></p>
                                     </div>
                                 <?php $i++; }?>
                                 </div>
@@ -435,7 +365,7 @@
                                     <div id="fireEffect<?php echo $i ?>" class="custItemContentInfo fireInfo">
                                         <img src="<?php echo $effect["effectsImgUrl"]; ?>" alt="">
                                         <p><?php echo $effect["effectsName"]; ?></p>
-                                        <p>$<?php echo $effect["effectsPrice"]; ?></p>
+                                        <p effectsNo="<?php echo $effect["effectsNo"]; ?>">$<?php echo $effect["effectsPrice"]; ?></p>
                                     </div>
                                     <?php $i++; } ?>
                                     <?php
@@ -445,7 +375,7 @@
                                     <div id="fireworkEffect<?php echo $i ?>" class="custItemContentInfo fireworkInfo">
                                         <img src="<?php echo $firework["fireworkImgUrl"] ?>" alt="">
                                         <p><?php echo $firework["fireworkName"] ?></p>
-                                        <p>$<?php echo $firework["fireworkPrice"] ?></p>
+                                        <p fireworkNo="<?php echo $firework["fireworkNo"]; ?>" >$<?php echo $firework["fireworkPrice"] ?></p>
                                     </div>
                                     <?php $i++; } ?>
                                 </div>
@@ -482,7 +412,7 @@
                                     <div id="audioItem<?php echo $i; ?>" class="custItemContentInfo audioInfo">
                                         <img src="<?php echo $audio["audioImgUrl"]; ?>" alt="">
                                         <p><?php echo $audio["audioName"]; ?></p>
-                                        <p>$<?php echo $audio["audioPrice"]; ?></p>
+                                        <p audioNo="<?php echo $audio["audioNo"]; ?>" >$<?php echo $audio["audioPrice"]; ?></p>
                                     </div>
                                     <?php $i++; } ?>
                                     <?php
@@ -492,7 +422,7 @@
                                     <div id="pole<?php echo $i ?>" class="custItemContentInfo poleInfo">
                                         <img src="<?php echo $pipe["pipeImgUrl"]; ?>" alt="">
                                         <p><?php echo $pipe["pipeName"]; ?></p>
-                                        <p>$<?php echo $pipe["pipePrice"]; ?></p>
+                                        <p pipeNo="<?php echo $pipe["pipeNo"]; ?>" >$<?php echo $pipe["pipePrice"]; ?></p>
                                     </div> 
                                     <?php $i++; } ?>
                                 </div>
@@ -535,13 +465,14 @@
                     <div class="dateChoose">
                         <p>選擇日期：
                             <span></span>
+                            天氣：<span id="weathertest"></span>
                         </p>
+                        
                     </div>
                     <!-- loc -->
                     <div class="loc">
                         <div class="locInput">
                             <input id="locText" type="text" placeholder="請輸入活動地址">
-                            <input id="locBtn" class="commonBtnSmall" type="submit" value="確認">
                         </div>
                         <div class="map">
                             <iframe src='https://maps.google.com.tw/maps?f=q&hl=zh-TW&geocode=&q=中央大學資策會&z=16&output=embed&t='></iframe>
@@ -558,7 +489,7 @@
                     ?>
                     <div class="hostInfoDetail">
                         <img src="<?php echo $host["hostImgUrl"] ?>" alt="">
-                        <h6><span><?php echo $host["hostName"]?></span><span>$<?php echo $host["price"]?></span></h6>
+                        <h6><span hostNo="<?php echo $host["hostNo"]?>"><?php echo $host["hostName"]?></span><span>$<?php echo $host["price"]?></span></h6>
                         <ul>
                             <li><?php echo $host["hostContent"]?></li>
                         </ul>
@@ -576,7 +507,7 @@
                     <p class="orderDate">選擇日期：<span></span></p>
                     <p class="orderLoc">活動地點：<span></span></p>
                     <div id="orderStage">
-                        <div class="perspective">
+                        <div id="orderStagePic" class="perspective">
                             <div class="groupA">
                                 <!-- 周邊細項 -->
                                     <!-- ? -->
@@ -768,7 +699,10 @@
                 </div>
                 
                 <div class="orderDetail">
-                    <h5 class="orderSub">金額總計：<span></span>元</h5>
+                    <div class="orderText">
+                        <h5 class="orderSub">金額總計：<span></span>元</h5>
+                        <input id="orderName" type="text" placeholder="花車名稱(八個字以內)" maxlength="8" required>
+                    </div>
                     <div class="orderDetailCust">
                         <h6>舞台配備</h6>
                         <table>
@@ -783,12 +717,12 @@
                                 <td></td>
                             </tr>
                             <tr id="orderFire">
-                                <th>火焰特效：</th>
+                                <th>火焰：</th>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr id="orderFirework">
-                                <th>煙火特效：</th>
+                                <th>煙火：</th>
                                 <td></td>
                                 <td></td>
                             </tr>
@@ -827,87 +761,94 @@
     </div>
 
     <!-- checkout -->
-    <div class="checkoutBg">
-            <div class="custTitle titleBgi">
-                <h3>結 帳</h3>
-            </div>
-            
-            
-            <!-- 訂購人資訊 -->
-            <div class="checkoutInfo col-12">
-                <div class="checkoutOrder">
-                    <!-- 總金額 -->
-                    <p><span>62000</span>圓</p>
-                </div>
-            </div>
-
-            <div class="checkOutAll col-12">    
-                <!-- 訂購人資料 -->
-                <form action="#" class="checkoutInfoForm col-12 col-lg-6">
-                    <h4>訂購人資訊</h4>
-                    <table>
-                        <tr>
-                            <th><label for="orderName">姓名</label></th>
-                            <td>
-                                <input type="text" id="orderName">
-                            </td>
-                        </tr>
-                        <tr>
-                            <th><label for="orderEmail">信箱</label></th>
-                            <td><input type="text" id="orderEmail"></td>
-                        </tr>
-                        <tr>
-                            <th><label for="orderPhone">聯絡電話</label></th>
-                            <td><input type="text" id="orderPhone"></td>
-                        </tr>
-                        <tr>
-                            <th>優惠券編號</th>
-                            <td>
-                                <select name="couponUse" id="">
-                                    <option value="">500元</option>
-                                    <option value="">1000元</option>
-                                    <option value="">1500元</option>
-                                </select>
-                            </td>
-                        </tr>
-                    </table>
-                </form>
-                <!-- 信用卡資訊 -->
-                <form action="" class="cardInfo col-12 col-lg-6">
-                    <h4>付款資訊</h4>
-                    <!-- <div class="acceptableCard">
-                        <img src="images/customized/checkout/card_01.png" alt="">
-                        <img src="images/customized/checkout/card_02.png" alt="">
-                        <img src="images/customized/checkout/card_03.png" alt="">
-                    </div> -->
-                    <table>
-                        <tr>
-                            <th><label for="cardHolderName">持卡人姓名</label></th>
-                            <td><input type="text" id="cardHolderName"></td>
-                        </tr>
-                        <tr>
-                            <th><label for="cardNum">信用卡號碼</label></th>
-                            <td><input type="text" id="cardNum" maxlength="16"></td>
-                        </tr>
-                        <tr>
-                            <th><label for="cardExpiredDate">過期日期</label></th>
-                            <td><input type="text" id="cardExpiredDate" placeholder="MM/YY"></td>
-                        </tr>
-                        <tr>
-                            <th><label for="cardCVC">CVC</label></th>
-                            <td><input type="text" id="cardCVC"></td>
-                        </tr>
-                    </table>
-                </form>
-            </div>
-
-            <!-- 確認結帳 -->
-            <div class="paymentStep">
-                <div class="checkOutStep commonBtn">確認付款</div>
-            </div>  
-
-
+    <div class="checkoutBg disN">
+        <div class="checkoutTitle titleBgi">
+            <h3>結 帳</h3>
         </div>
+        
+        <!-- 訂購人資訊 -->
+        <div class="checkoutInfo col-12">
+            <div id="checkoutClose"></div>
+            <div class="checkoutOrder">
+                <!-- 總金額 -->
+                <p><span>62000</span>圓</p>
+            </div>
+        </div>
+
+        <div class="checkOutAll col-12">    
+            <!-- 訂購人資料 -->
+            <form action="#" class="checkoutInfoForm col-12 col-lg-6">
+                <h4>訂購人資訊</h4>
+                <table>
+                    <tr>
+                        <th><label for="orderPerName">姓名</label></th>
+                        <td>
+                            <input type="text" id="orderPerName">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="orderEmail">信箱</label></th>
+                        <td><input type="text" id="orderEmail"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="orderPhone">聯絡電話</label></th>
+                        <td><input type="text" id="orderPhone"></td>
+                    </tr>
+                    <tr>
+                        <th>優惠券編號</th>
+                        <td>
+                            <select name="couponUse" id="">
+                                <option value="">500元</option>
+                                <option value="">1000元</option>
+                                <option value="">1500元</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <!-- 信用卡資訊 -->
+            <form action="" class="cardInfo col-12 col-lg-6">
+                <h4>付款資訊</h4>
+                <table>
+                    <tr>
+                        <th><label for="cardHolderName">持卡人姓名</label></th>
+                        <td><input type="text" id="cardHolderName"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="cardNum">信用卡號碼</label></th>
+                        <td><input type="text" id="cardNum" maxlength="16"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="cardExpiredDate">過期日期</label></th>
+                        <td><input type="text" id="cardExpiredDate" placeholder="MM/YY"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="cardCVC">CVC</label></th>
+                        <td><input type="text" id="cardCVC"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+        <!-- 確認結帳 -->
+        <div class="paymentStep">
+            <div class="checkoutStep commonBtnSmall">確認付款</div>
+        </div>  
+
+    </div>
+
+    <!-- 結帳完成燈箱 -->
+    <div class="endLightBoxBg disN">
+        <div class="endLightBox disN">
+            <div class="endTitle">
+                <h3>結帳完成</h3>
+                <p>感謝您對於台灣大舞台的支持</p>
+            </div>
+            <a class="commonBtn" href="flyer.php">客製宣傳單</a>
+            <a class="commonBtn" href="beautyPageant.php">參加選美</a>
+            <div class="endBtn commonBtnSmall">返回</div>
+        </div>
+    </div>
 
 
     
@@ -919,15 +860,15 @@
     <!-- 舞台背景功能按鈕 -->
     <script src="js/custFunctionBtn.js?<?php echo time();?>"></script>
     <!-- 雷達圖內容 -->
-    <script src="js/custRadarChart.js"></script>
+    <script src="js/custRadarChart.js?<?php echo time();?>"></script>
     <!-- for radar chart -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
-    <!-- html2canvas -->
-    <!-- <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script> -->
     <!-- domtoimage -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+    <!-- API -->
+    <script src="js/api.js?<?php echo time();?>"></script>
     <script src="js/navmenu.js"></script>
-    <script src="js/_login.js"></script>
+    <script src="js/_custLogin.js"></script>
     <script src="js/_font_loginLightBox.js"></script>
 </body>
 </html>

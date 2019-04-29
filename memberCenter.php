@@ -165,10 +165,10 @@
                     xhr.onload = function(){
                         if( xhr.status == 200){ //server端可以正確的行
                             alert("修改成功");
-                            window.location.reload();
                         }else{ //其它
                             alert( xhr.status );
                         }
+                        window.location.reload(true);
                     }  
                     //設定好所要連結的程式
                     var url = "php/components/_memberUpdate.php";
