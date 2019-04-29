@@ -1,12 +1,4 @@
-var renderer;
-var widthw = window.innerHeight;
-var widthd = document.body.clientWidth;
-var widthwh = document.documentElement.scrollWidth;
-console.log(widthw);
-console.log(widthd);
-console.log(widthwh);
 function initRender() {
-    
     renderer = new THREE.WebGLRenderer({ antialias: true ,alpha: true } );
     renderer.setSize(window.innerWidth, window.innerHeight);
     //告訴渲染器需要陰影效果
@@ -28,9 +20,6 @@ function initScene() {
 //    scene.fog=new THREE.FogExp2(0xffffff,0.002 );
 }
 
-
-
-
 //初始化dat.GUI簡化試驗流程
 
 // var gui;
@@ -41,8 +30,6 @@ function initScene() {
 //     var datGui = new dat.GUI();
 //     //將設置屬性添加到gui當中，gui.add(對象，屬性，最小值，最大值）
 // }
-
-
 
 var light;
 function initLight() {
@@ -114,8 +101,7 @@ function createParticles(size,transparent,opacity,vertexColors,sizeAttenuation,c
     cloud = new THREE.PointCloud(geom,material);
     scene.add(cloud);
 }
-
-    
+ 
 //初始化性能插件
 // var stats;
 // function initStats() {
@@ -123,8 +109,6 @@ function createParticles(size,transparent,opacity,vertexColors,sizeAttenuation,c
 //     // document.body.appendChild(stats.dom);
 //     document.getElementById('canvasScene').appendChild(stats.dom);
 // }
-
-
 
 //用戶交互插件 鼠標左鍵按住旋轉，右鍵按住平移，滾輪縮放
 var controls;
