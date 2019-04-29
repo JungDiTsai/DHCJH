@@ -186,7 +186,9 @@ main h2 {
 #qrcode h2 {
   text-align: left;
 }
-
+.tdimg{
+  width: 20%;
+}
 /* #member,
 #order,
 #ticket,

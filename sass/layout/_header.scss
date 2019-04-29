@@ -3,6 +3,7 @@
 }
 #nav-icon2{
   height: 44px;
+  cursor: pointer;
 }
 
 #nav-icon2 span {
@@ -20,6 +21,7 @@
     -moz-transition: .25s ease-in-out;
     -o-transition: .25s ease-in-out;
     transition: .25s ease-in-out;
+    
   }
   
   #nav-icon2 span:nth-child(even) {

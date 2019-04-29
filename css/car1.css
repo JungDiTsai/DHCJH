@@ -69,6 +69,7 @@ table {
 
 #nav-icon2 {
   height: 44px;
+  cursor: pointer;
 }
 
 #nav-icon2 span {
@@ -3286,7 +3287,7 @@ footer img {
   /* padding-top: 300px; */
   height: 300px;
   line-height: 1.8;
-  z-index: 11;
+  z-index: 1;
 }
 
 #carStart #carStarText, #carStart #carEndText, #carEnd #carStarText, #carEnd #carEndText {

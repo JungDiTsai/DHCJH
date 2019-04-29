@@ -1,7 +1,6 @@
 <?php 
 //car
-    require_once("php/loginLightBox.php");
-    require_once("php/header.php");
+   
     $errMsg="";
     
 

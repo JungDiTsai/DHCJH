@@ -33,14 +33,14 @@ function initScene() {
 
 //初始化dat.GUI簡化試驗流程
 
-var gui;
-function initGui() {
-    //聲明一個保存需求修改的相關數據的對象
-    gui = {
-    };
-    var datGui = new dat.GUI();
-    //將設置屬性添加到gui當中，gui.add(對象，屬性，最小值，最大值）
-}
+// var gui;
+// function initGui() {
+//     //聲明一個保存需求修改的相關數據的對象
+//     gui = {
+//     };
+//     var datGui = new dat.GUI();
+//     //將設置屬性添加到gui當中，gui.add(對象，屬性，最小值，最大值）
+// }
 
 
 
@@ -220,7 +220,7 @@ tweenBack.onUpdate(onUpdate);
 
 
 function draw() {
-    initGui();
+    // initGui();
     initRender();
     initScene();
     initCamera();

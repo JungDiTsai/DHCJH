@@ -25,7 +25,7 @@
     $jsonData = json_decode ($json, true);
     $number = count($jsonData);
     //取得前一天的數值
-    $lastDay = date("Y-m-d H:i:s",strtotime("-1 day"));
+    $lastDay = date("Y-m-d H:i:s",strtotime("-3 day"));
     $now = date("Y-m-d H:i:s");
     //解碼成數組
     //處理過期的圖檔

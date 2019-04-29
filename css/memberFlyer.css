@@ -234,6 +234,7 @@ table {
 
 #nav-icon2 {
   height: 44px;
+  cursor: pointer;
 }
 
 #nav-icon2 span {
@@ -1037,6 +1038,267 @@ footer img {
   }
 }
 
+.loginBox {
+  display: none;
+  width: 300px;
+  height: 350px;
+  background: #fff;
+  border: 5px solid #17F4F0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 3;
+  border-radius: 10px;
+  padding: 30px 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  -webkit-box-shadow: 0 0 10px #17F4F0;
+          box-shadow: 0 0 10px #17F4F0;
+  -webkit-box-shadow: 0 0 10px  #666 inset;
+          box-shadow: 0 0 10px  #666 inset;
+}
+
+.loginBox .fa-times {
+  color: #17F4F0;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.loginBox .fa-times:hover {
+  color: #000;
+}
+
+.loginBox h3 {
+  margin-top: 0px;
+  font-size: 30px;
+  color: #17F4F0;
+}
+
+.loginBox .inputBox {
+  background: #2d3631;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 10px 15px;
+}
+
+.loginBox .inputBox i {
+  color: #fff;
+}
+
+.loginBox .inputBox input {
+  height: 20px;
+  margin-left: 10px;
+  width: 80%;
+  background: #2d3631;
+  outline: none;
+  border: none;
+  color: #fff;
+}
+
+.loginBox .commonBtnSmall {
+  margin-top: 20px;
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+  line-height: 40px;
+}
+
+.loginBox p {
+  margin-top: 20px;
+  color: #17F4F0;
+}
+
+.loginBox p a {
+  cursor: pointer;
+  color: #17F4F0;
+  text-decoration: none;
+}
+
+.loginBox p a:hover {
+  color: #f3d217;
+}
+
+.registeredBox {
+  display: none;
+  max-width: 450px;
+  height: 500px;
+  background: #fff;
+  border: 5px solid #17F4F0;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 1;
+  border-radius: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0 0 10px #17F4F0;
+          box-shadow: 0 0 10px #17F4F0;
+  -webkit-box-shadow: 0 0 10px  #666 inset;
+          box-shadow: 0 0 10px  #666 inset;
+  padding: 25px;
+  text-align: center;
+}
+
+.registeredBox .fa-times {
+  color: #17F4F0;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.registeredBox .fa-times:hover {
+  color: #000;
+}
+
+.registeredBox h3 {
+  margin: 0;
+  font-size: 30px;
+  color: #17F4F0;
+}
+
+.registeredBox table {
+  width: 100%;
+  margin: 20px auto;
+  border: 1px solid #fff;
+  color: #17F4F0;
+  font-size: 18px;
+}
+
+.registeredBox table .prompt {
+  font-size: 14px;
+  color: #e26f6f;
+}
+
+.registeredBox table td, .registeredBox table th {
+  padding: 5px;
+}
+
+.registeredBox table .commonBtnSmall {
+  margin: 10px;
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+  line-height: 50px;
+}
+
+.registeredBox table label {
+  margin-right: 30px;
+}
+
+.registeredBox table label input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.registeredBox table label input:checked + i {
+  color: #281886;
+}
+
+.registeredBox table label i:hover {
+  cursor: pointer;
+}
+
+.registeredBox div {
+  margin-top: 10px;
+  color: #17F4F0;
+}
+
+.registeredBox div input {
+  margin-left: 20px;
+}
+
+.registeredBox div a {
+  cursor: pointer;
+}
+
+.registeredBox div a:hover {
+  color: #f3d217;
+}
+
+.forgotBox {
+  display: none;
+  width: 300px;
+  height: 370px;
+  background: #fff;
+  border: 5px solid #17F4F0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 1;
+  border-radius: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0 0 10px #17F4F0;
+          box-shadow: 0 0 10px #17F4F0;
+  -webkit-box-shadow: 0 0 10px  #666 inset;
+          box-shadow: 0 0 10px  #666 inset;
+  padding: 25px;
+  text-align: center;
+}
+
+.forgotBox .fa-times {
+  color: #17F4F0;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.forgotBox .fa-times:hover {
+  color: #f3d217;
+}
+
+.forgotBox h3 {
+  margin: 0;
+  font-size: 30px;
+  color: #17F4F0;
+}
+
+.forgotBox p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #47472d;
+}
+
+.forgotBox div {
+  margin-top: 40px;
+  color: #17F4F0;
+}
+
+.forgotBox div input {
+  margin-left: 20px;
+}
+
+.forgotBox div a {
+  cursor: pointer;
+}
+
+.forgotBox div a:hover {
+  color: #f3d217;
+}
+
+.forgotBox .commonBtnSmall {
+  margin-top: 10px;
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+  line-height: 50px;
+}
+
 .wrap {
   margin-top: 80px;
 }
@@ -1060,16 +1322,18 @@ footer img {
 
 #memberNav .memberImg {
   margin: 50px auto 0;
-  border-radius: 50%;
   width: 150px;
   height: 150px;
-  overflow: hidden;
   position: relative;
   text-align: center;
+  vertical-align: top;
+  -webkit-clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+          clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
 }
 
 #memberNav .memberImg img {
-  width: 160px;
+  height: 100%;
+  vertical-align: top;
 }
 
 #memberNav h3 {
@@ -1157,6 +1421,8 @@ footer img {
   #memberNav h3 {
     margin: 25px 0px 10px;
     font-size: 30px;
+    text-shadow: 0 0 2px black;
+    color: #fff6f6;
   }
   #memberNav ul {
     width: 100%;
@@ -1244,7 +1510,7 @@ footer img {
 }
 
 .AllflyerBox {
-  width: 90%;
+  width: 100%;
   max-width: 800px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1266,11 +1532,16 @@ footer img {
   margin: 20px auto 0px;
   width: 100%;
   text-align: center;
-  font-size: 24px;
+  font-size: 18px;
 }
 
-.AllflyerBox table td {
-  background: #fff;
+.AllflyerBox table tbody tr {
+  cursor: pointer;
+}
+
+.AllflyerBox table tbody tr:hover {
+  background-image: -webkit-gradient(linear, right top, left top, from(#ff8177), color-stop(0%, #ff867a), color-stop(21%, #ff8c7f), color-stop(52%, #f99185), color-stop(78%, #cf556c), to(#b12a5b));
+  background-image: linear-gradient(to left, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
 }
 
 .AllflyerBox table td label .cbox {
@@ -1281,15 +1552,16 @@ footer img {
 
 .AllflyerBox table td label .cbox:checked + .btnBox {
   text-align: right;
-  background: #fff82d;
+  background: #32ff7e;
 }
 
 .AllflyerBox table td label .btnBox {
   display: inline-block;
   width: 40px;
+  line-height: 20px;
   height: 20px;
   vertical-align: middle;
-  background: #32ff7e;
+  background: #fff82d;
   border-radius: 10px;
   text-align: left;
   cursor: pointer;
@@ -1309,8 +1581,6 @@ footer img {
 
 .AllflyerBox table td label .txt {
   display: inline-block;
-  width: 50px;
-  vertical-align: middle;
 }
 
 .detailFlyer {
@@ -1338,26 +1608,30 @@ footer img {
           box-shadow: 1px 5px 20px #ccc;
 }
 
-.detailFlyer p {
-  text-align: center;
+.detailFlyer table {
+  margin: auto;
+  font-size: 18px;
+}
+
+.detailFlyer table tr {
+  max-width: 80%;
+}
+
+.detailFlyer table tr td {
+  padding: 5px 10px;
 }
 
 .detailFlyer .btnBar {
-  width: 50%;
-  margin: 0 auto 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  padding: 50px 0 50px;
+  margin: auto;
+  text-align: center;
 }
 
 .detailFlyer .btnBar button {
   -webkit-box-shadow: 0px 2px 2px #888;
           box-shadow: 0px 2px 2px #888;
   border-radius: 5px;
-  margin: 20px;
+  line-height: 50px;
   cursor: pointer;
 }
 

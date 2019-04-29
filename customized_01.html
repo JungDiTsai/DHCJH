@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -931,4 +932,939 @@
     
     <script src="js/navmenu.js"></script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>customized_01</title>
+    <!-- header css -->
+    <!-- <link rel="stylesheet" href="css/index.css"> -->
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- customzied css -->
+    <link rel="stylesheet" href="css/customized.css">
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <!-- header -->
+<input type="checkbox" id=menu_control>
+    <header>    
+        <!-- 放bar選單 -->
+        <label for="menu_control" class="menubtn" >
+            <div id="nav-icon2">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </label>
+        <nav class="mainNav">
+            <li class="mainNavCell"><a href="customized_01.html">電子花車客製</a></li>
+            <li class="mainNavCell"><a href="flyer.html">客製化宣傳單</a></li>
+            <h1 class="navLogo"><a href="index.html"><img src="images/logo.png" alt="台灣大舞台"></a></h1>
+            <li class="mainNavCell"><a href="beautyPageant.html">花車選美</a></li>
+            <li class="mainNavCell"><a href="intro.html">花車特色介紹</a></li>
+            <div class="navMemBtn"> 
+                <i class="far fa-user-circle"></i>
+            </div>
+        </nav>       
+    </header>
+    <div class="box"></div>
+    <!-- 登入燈箱 -->
+    <div class="loginBox">
+        <i class="fas fa-times"></i>
+        <h3>登入</h3>
+        <div class="inputBox">
+            <i class="fas fa-user fa-1x"></i><input type="text" id="username" placeholder="User">
+        </div>
+        <div class="inputBox">
+            <i class="fas fa-key fa-1x"></i><input type="password" id="password" placeholder="Password">
+        </div>
+        <a href="memberCenter.html"><button class="commonBtn">登入</button></a>
+        <p><a class="showRegistered">註冊</a> / <a class="showForgotPSW">忘記密碼</a></p>
+    </div>
+    <!-- 註冊燈箱 -->
+    <div class="registeredBox">
+        <i class="fas fa-times"></i>
+        <h3>立即註冊</h3>
+        <table>
+            <tr>
+                <th>會員帳號</th>
+                <td><input type="text"></td>
+            </tr>
+            <tr><td colspan="2" class="prompt"><span>此帳號已有人使用 !</span></td></tr>
+            <tr>
+                <th>會員密碼</th>
+                <td><input type="password"></td>
+            </tr>
+            <tr>
+                <th>會員姓名</th>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <th>會員電話</th>
+                <td><input type="tel"></td>
+            </tr>
+            <tr>
+                <th>會員信箱</th>
+                <td><input type="email"></td>
+            </tr>
+            <tr>
+                <th>性別</th>
+                <td>
+                    <label>
+                        <input type="radio" name="sex" value="">
+                        <i class="fas fa-venus fa-2x"></i>
+                    </label>
+                    <label>
+                        <input type="radio" name="sex" value="">
+                        <i class="fas fa-mars fa-2x"></i>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2"><input type="submit" value="註冊帳號" class="commonBtn"></th>
+            </tr>
+        </table>
+        <div><a class="backLogin">回到登入</a></div>
+    </div>
+    <!-- 忘記密碼燈箱 -->
+    <div class="forgotBox">
+        <i class="fas fa-times"></i>
+        <h3>忘記密碼</h3>
+        <p>請輸入您註冊時的會員信箱，我們會將新的密碼寄至您的信箱。</p>
+        <div>會員信箱<input type="email"></div>
+        <input type="submit" value="寄送密碼" class="commonBtn">
+        <div><a class="backLogin">回到登入</a></div>
+    </div>
+
+    <!-- customized start -->
+    <div class="custBg">
+        
+        <!-- 客製步驟 -->
+        <div class="custTitleWrap">
+        <div class="custTitle titleBgi">
+            <h3>客製舞台</h3>
+        </div>
+        <div class="custStep">
+            <div class="btnCustStep custStep0 custSelected" id="custStage">
+                <h4>花車配備</h4>
+            </div>
+            <div class="btnCustStep custStep1" id="custDate">
+                <h4>日期地點</h4>
+            </div>
+            <div class="btnCustStep custStep2" id="custHost">
+                <h4>主持人</h4>
+            </div>
+            <div class="btnCustStep custStep3" id="custInfo">
+                <h4>訂單資訊</h4>
+            </div>
+        </div>
+        </div>
+
+        <div class="custWrap">
+            <!-- 客製舞台 -->
+            <div class="custStage">
+                
+                <!-- 舞台 -->
+                <div class="stage">
+                    <div class="stageView col-md-6">
+                        <div class="perspective">
+                        <div class="groupA">
+                            <!-- 周邊細項 -->
+                                <!-- ? -->
+                            <div class="stairsA"></div>
+                                <!-- ? -->
+                            <div class="stairsB"></div>
+                                <!-- 壁屏 -->
+                            <!-- <div class="stairsC"></div> -->
+                            <div class="stairsC1"></div>
+                            <div class="stairsC2"></div>
+                            <div class="stairsC3"></div>
+                            <div class="stairsC4"></div>
+                            <!-- 上壁屏 -->
+                            <!-- <div class="stairsD"></div>
+                            <div class="stairsE"></div> -->
+                            <div class="stairsF"></div>
+                            <!-- <div class="stairsF1"></div> -->
+                            <div class="stairsF2"></div>
+                            <div class="stairsF3"></div>
+                            <div class="stairsF4"></div>
+                            <!-- 舞台 -->
+                            <div class="front"></div>
+                            <!-- <div class="front1"></div>
+                            <div class="front2"></div> -->
+                            <div class="back"></div>
+                            <div class="up"></div>
+                            <div class="down"></div>
+                            <div class="left"></div>
+                            <div class="right"></div>
+                            <!-- 跑馬燈 -->
+                            <div class="subtitleAll disN">
+                                <div class="subtitles">
+                                    <p>跑馬燈</p>
+                                </div>
+                                <div class="subtitles1"></div>
+                                <div class="subtitles2"></div>
+                            </div>
+                            <!-- 樓梯三角形 -->
+                            <div class="triangleA"></div>
+                            <div class="triangleB"></div>
+                            <div class="triangleC"></div>
+                            <div class="triangleD"></div>
+                            <div class="triangleE"></div>
+                            <div class="triangleF"></div>
+                            <!-- 樓梯 -->
+                            <div class="ladder ladderA"></div>
+                            <div class="ladder ladderB"></div>
+                            <div class="ladder ladderC"></div>
+                            <div class="ladder ladderD"></div>
+                            <div class="ladder ladderE"></div>
+                            <div class="ladder ladderF"></div>
+                            <div class="ladder ladderG"></div>
+                            <div class="ladder ladderH"></div>
+                            <!-- 燈柱 -->
+                            <div class="headlightbox headlightbox0"></div>
+                            <div class="headlightbox headlightbox1"></div>
+                            <div class="headlightbox headlightbox2"></div>
+                            <div class="headlightbox headlightbox3"></div>
+                            <div class="headlightbox headlightbox4"></div>
+                            <div class="headlightbox headlightbox5"></div>
+                            <!-- 投射燈 -->
+                            <div class="headlightAll disN">
+                                <!-- 中間投射燈 -->
+                                <div class="headlight headlight0"></div>
+                                <div class="headlight headlight1"></div>
+                                <div class="headlight headlight2"></div>
+                                <div class="headlight headlight3"></div>
+                                <!-- 左邊投射燈 -->
+                                <div class="headlight headlight4"></div>
+                                <div class="headlight headlight5"></div>
+                                <div class="headlight headlight6"></div>
+                                <div class="headlight headlight7"></div>
+                                <!-- 右邊投射燈 -->
+                                <div class="headlight headlight8"></div>
+                                <div class="headlight headlight9"></div>
+                                <div class="headlight headlight10"></div>
+                                <div class="headlight headlight11"></div>
+                            </div>
+                            <!-- 音箱 -->
+                            <div class="audioAll">
+                                <div class="audioItem01">
+                                    <!-- 左音箱 -->
+                                    <div class="audioBox0"></div>
+                                    <div class="audioBox1"></div>
+                                    <div class="audioBox2"></div>
+                                    <div class="audioBox3"></div>
+                                    <div class="audioBox4"></div>
+                                    <!-- 右音箱 -->
+                                    <div class="audioBox5"></div>
+                                    <div class="audioBox6"></div>
+                                    <div class="audioBox7"></div>
+                                    <div class="audioBox8"></div>
+                                    <div class="audioBox9"></div>
+                                </div>
+                                <div class="audioItem02">
+                                    <!-- 左音箱 -->
+                                    <div class="audioBox0"></div>
+                                    <div class="audioBox1"></div>
+                                    <div class="audioBox2"></div>
+                                    <div class="audioBox3"></div>
+                                    <div class="audioBox4"></div>
+                                    <!-- 右音箱 -->
+                                    <div class="audioBox5"></div>
+                                    <div class="audioBox6"></div>
+                                    <div class="audioBox7"></div>
+                                    <div class="audioBox8"></div>
+                                    <div class="audioBox9"></div>
+                                </div>
+                                <div class="audioItem03">
+                                    <!-- 左音箱 -->
+                                    <div class="audioBox0"></div>
+                                    <div class="audioBox1"></div>
+                                    <div class="audioBox2"></div>
+                                    <div class="audioBox3"></div>
+                                    <div class="audioBox4"></div>
+                                    <!-- 右音箱 -->
+                                    <div class="audioBox5"></div>
+                                    <div class="audioBox6"></div>
+                                    <div class="audioBox7"></div>
+                                    <div class="audioBox8"></div>
+                                    <div class="audioBox9"></div>
+                                </div>
+                                
+                            </div>    
+                            <!-- 鋼管 -->
+                            <div class="poleAll">
+                                <div class="pole1">
+                                    <div class="poleItem"></div>
+                                </div>
+                                <div class="pole2">
+                                    <div class="poleItem"></div>
+                                    <div class="poleItem"></div>
+                                    <div class="poleItem"></div>
+                                </div>
+                                <div class="pole3">
+                                    <div class="poleItem"></div>
+                                    <div class="poleItem"></div>
+                                    <div class="poleItem"></div>
+                                    <div class="poleItem"></div>
+                                    <div class="poleItem"></div>
+                                </div>
+                            </div>
+                            <!-- 特效 -->
+                            <div class="effectAll">
+                                <div class="fireEffect">
+                                    <div class="fireEffect01">
+                                        <img src="images/fire1.gif" alt="">
+                                        <img src="images/fire1.gif" alt="">
+                                    </div>
+                                    <div class="fireEffect02">
+                                        <img src="images/fire4.gif" alt="">
+                                        <img src="images/fire4.gif" alt="">
+                                    </div>
+                                    <div class="fireEffect03">
+                                        <img src="images/fire5.gif" alt="">
+                                        <img src="images/fire5.gif" alt="">
+                                    </div>
+                                </div>
+                                <div class="fireworkEffect">
+                                    <div class="fireworkEffect01">
+                                        <img src="images/fireworks1.gif" alt="">
+                                        <img src="images/fireworks1.gif" alt="">
+                                        <img src="images/fireworks2.gif" alt="">
+                                    </div>
+                                    <div class="fireworkEffect02">
+                                        <img src="images/fireworks6.gif" alt="">
+                                        <img src="images/fireworks3.gif" alt="">
+                                        <img src="images/fireworks3.gif" alt="">
+                                        <img src="images/fireworks8.gif" alt="">
+                                        <img src="images/fireworks8.gif" alt="">
+                                        <img src="images/fireworks6.gif" alt="">
+                                    </div>
+                                    <div class="fireworkEffect03">
+                                        <img src="images/fireworks2.gif" alt="">
+                                        <img src="images/fireworks7.gif" alt="">
+                                        <img src="images/fireworks7.gif" alt="">
+                                        <img src="images/fireworks2.gif" alt="">
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                            <!-- <img src="images/Fireworks5.gif" alt=""> -->
+                            
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- 客製舞台步驟 -->
+                    <div class="custAllItem col-md-6">
+                        <!-- 客製舞台步驟 -->
+                        <ul class="custStageStep">
+                            <li class="btnCustStageStep custStageSelected" id="stagePattern">
+                                <div class="stageInfoRotate">
+                                    <img src="../images/customized/new_cust/stage_item_pattern_icon.svg" alt="">
+                                    <p>塗裝</p>
+                                </div>
+                            </li>
+                            <li class="btnCustStageStep" id="stageDance">
+                                <div class="stageInfoRotate">
+                                    <img src="../images/customized/new_cust/stage_item_dance_icon.svg" alt="">
+                                    <p></p>
+                                </div>
+                            </li>
+                            <li class="btnCustStageStep" id="stageEffect">
+                                <div class="stageInfoRotate">
+                                    <img src="../images/customized/new_cust/stage_item_effect_icon.svg" alt="">
+                                    <p></p>
+                                </div>
+                            </li>
+                            <li class="btnCustStageStep" id="stageSubtitle">
+                                <div class="stageInfoRotate">
+                                    <img src="../images/customized/new_cust/stage_item_subtitle_icon.svg" alt="">
+                                    <p></p>
+                                </div>
+                            </li>
+                            <li class="btnCustStageStep" id="stageaudioNPole">
+                                <div class="stageInfoRotate">
+                                    <img src="../images/customized/new_cust/stage_item_audio_icon.svg" alt="">
+                                    <p></p>
+                                </div>
+                            </li>
+                            <!-- <li class="btnCustStageStep">
+                                <img src="../images/customized/new_cust/stage_item_pole_icon.svg" alt="">
+                                <p>鋼管</p>
+                            </li> -->
+                        </ul>
+
+                        <div class="custStageAll">
+                            <!-- 塗裝 -->
+                            <div class="custItem patternItem">
+                                <div class="custItemContent">
+                                    <label for="patternUpload"></label>
+                                    <input type="file" name="patternUpload" id="patternUpload">
+                                    <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_01.jpg" alt="">
+                                    <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_02.jpg" alt="">
+                                    <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_03.jpg" alt="">
+                                    <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_04.jpg" alt="">
+                                    <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_05.jpg" alt="">
+                                    <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_06.jpg" alt="">
+                                    <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_07.jpg" alt="">
+                                    <img src="images/customized/cust_stage_innerPattern/cust_stage_pattern_08.jpg" alt="">
+                                </div>
+                                <div class="custItemControl">
+                                    <div class="btnZoomIn">
+                                        <img src="images/customized/cust_stage_innerPattern/cust_stage_control_zoomIn.svg" alt="">
+                                    </div>
+                                    <div class="btnZoomOut">
+                                        <img src="images/customized/cust_stage_innerPattern/cust_stage_control_zoomOut.svg" alt="">
+                                    </div>
+                                    <div class="btnRot">
+                                        <img src="images/customized/cust_stage_innerPattern/cust_stage_control_rotate.svg" alt="">
+                                    </div>
+                                    <div class="btnDel">
+                                        <img src="images/customized/cust_stage_innerPattern/cust_stage_control_delete.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 舞團 -->
+                            <div class="custItem danceItem">
+                                <div class="custItemContent">
+                                    <div class="custItemContentInfo">
+                                        <img src="images/customized/cust_stage_dance/dance_01.png" alt="">
+                                        <p>辣台妹鋼管</p>
+                                        <p>$7000</p>
+                                    </div>      
+                                    <div class="custItemContentInfo">
+                                        <img src="images/customized/cust_stage_dance/dance_02.png" alt="">
+                                        <p>超熱情森巴</p>
+                                        <p>$10000</p>
+                                    </div>      
+                                    <div class="custItemContentInfo">
+                                        <img src="images/customized/cust_stage_dance/dance_03.png" alt="">
+                                        <p>極短裙搖擺</p>
+                                        <p>$12000</p>
+                                    </div>      
+                                    <div class="custItemContentInfo">
+                                        <img src="images/customized/cust_stage_dance/dance_04.png" alt="">
+                                        <p>鄰居小妹妹</p>
+                                        <p>$12000</p>
+                                    </div>      
+                                    <div class="custItemContentInfo">
+                                        <img src="images/customized/cust_stage_dance/dance_05.png" alt="">
+                                        <p>雙人對跳</p>
+                                        <p>$13000</p>
+                                    </div>      
+                                    <div class="custItemContentInfo">
+                                        <img src="images/customized/cust_stage_dance/dance_06.png" alt="">
+                                        <p>舞龍舞獅</p>
+                                        <p>$22000</p>
+                                    </div>   
+                                </div>
+                            </div>
+                            <!-- 特效 -->
+                            <div class="custItem effectItem">
+                                <div class="custItemContent">
+                                    <div id="fireEffect01" class="custItemContentInfo">
+                                        <img src="images/customized/cust_stage_effect/effects_01.png" alt="">
+                                        <p>火焰之舞</p>
+                                        <p>$3000</p>
+                                    </div> 
+                                    <div id="fireEffect02" class="custItemContentInfo">
+                                        <img src="images/customized/cust_stage_effect/effects_02.png" alt="">
+                                        <p>火力四射</p>
+                                        <p>$5000</p>
+                                    </div> 
+                                    <div id="fireEffect03" class="custItemContentInfo">
+                                        <img src="images/customized/cust_stage_effect/effects_03.png" alt="">
+                                        <p>火力全開</p>
+                                        <p>$6000</p>
+                                    </div>
+                                    <div id="fireworkEffect01" class="custItemContentInfo">
+                                        <img src="images/customized/cust_stage_effect/firework_01.png" alt="">
+                                        <p>雷霆萬鈞</p>
+                                        <p>$13000</p>
+                                    </div> 
+                                    <div id="fireworkEffect02" class="custItemContentInfo">
+                                        <img src="images/customized/cust_stage_effect/firework_02.png" alt="">
+                                        <p>萬紫千紅</p>
+                                        <p>$18000</p>
+                                    </div> 
+                                    <div id="fireworkEffect03" class="custItemContentInfo">
+                                        <img src="images/customized/cust_stage_effect/firework_03.png" alt="">
+                                        <p>龍翔九天</p>
+                                        <p>$25000</p>
+                                    </div>
+                                </div>
+                                <div class="custItemControl">
+                                    <div class="sizePicker"></div>
+                                </div>
+                            </div>
+                            <!-- 字幕 -->
+                            <div class="custItem subtitleItem">
+                                <div class="custItemContent">
+                                    <div class="custItemContentInfo">
+                                        <textarea id="subtileItemInfo" cols="30" rows="3"></textarea>
+                                        <input id="subInfoSubmit" class="commonBtnSmall" type="submit">
+                                    </div>
+                                </div>
+                                <div class="custItemControl">
+                                    <div class="colorPicker"></div>
+                                </div>
+                            </div>
+                            <!-- 音響 -->
+                            <div class="custItem audioPoleItem">
+                                <div class="custItemContent">
+                                    <div id="audioItem01" class="custItemContentInfo">
+                                        <img src="images/customized/cust_stage_audioAndPole/audio_01.png" alt="">
+                                        <p>鄰居會罵型</p>
+                                        <p>$8000</p>
+                                    </div>      
+                                    <div id="audioItem02" class="custItemContentInfo">
+                                        <img src="images/customized/cust_stage_audioAndPole/audio_02.png" alt="">
+                                        <p>震耳欲聾型</p>
+                                        <p>$13000</p>
+                                    </div>      
+                                    <div id="audioItem03" class="custItemContentInfo">
+                                        <img src="images/customized/cust_stage_audioAndPole/audio_03.png" alt="">
+                                        <p>毀天滅地型</p>
+                                        <p>$21000</p>
+                                    </div>      
+                                    <div id="pole1" class="custItemContentInfo">
+                                        <img src="images/customized/cust_stage_audioAndPole/pole.png" alt="">
+                                        <p>一枝獨秀款</p>
+                                        <p>$25000</p>
+                                    </div>      
+                                    <div id="pole2" class="custItemContentInfo">
+                                        <img src="images/customized/cust_stage_audioAndPole/pole_3.png" alt="">
+                                        <p>三人小團體</p>
+                                        <p>$25000</p>
+                                    </div>      
+                                    <div id="pole3" class="custItemContentInfo">
+                                        <img src="images/customized/cust_stage_audioAndPole/pole_5.png" alt="">
+                                        <p>五福大臨門</p>
+                                        <p>$25000</p>
+                                    </div> 
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 日期與地點 -->
+            <div class="dateNLoc">
+                <!-- calendar -->
+                <div class="calendar">
+                    <div class="caleHeader">
+                        <h3 id="calendarTitle">Month</h3>
+                        <h4 id="calendarYear">Year</h4>
+                        <button id="prevMon"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+                        <button id="nextMon"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+                    </div>
+                    <div class="calebody">
+                        <div class="dayBefore caleList">
+                            <ul class="weekdate">
+                            <li>一</li>
+                            <li>二</li>
+                            <li>三</li>
+                            <li>四</li>
+                            <li>五</li>
+                            <li>六</li>
+                            <li>日</li>
+                            </ul>
+                        </div>
+                        <div class="available caleList">
+                            <ul id="days">
+                            </ul>
+                        </div>
+                    </div>
+                </div>    
+                
+                <div class="infoNLoc"> 
+                    <div class="dateChoose">
+                        <p>選擇日期：2019-05-09(四)<span></span></span></p>
+                    </div>
+                    <!-- loc -->
+                    <div class="loc">
+                        <div class="locInput">
+                            <input id="locText" type="text" placeholder="請輸入活動地址">
+                            <input class="commonBtnSmall" type="submit" value="確認">
+                            <!-- <button id="locBtn" class="commonBtnSmall">確認</button> -->
+                        </div>
+                        <div class="map">
+                            <iframe src='https://maps.google.com.tw/maps?f=q&hl=zh-TW&geocode=&q=中央大學資策會&z=16&output=embed&t='></iframe>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <!-- 主持人 -->
+            <div class="hostInfo">
+                <div class="sliderBox">
+                    <div class="hostInfoDetail hostInfo0" style="left:50%;">
+                        <img src="images/customized/host/host_01.jpg" alt="">
+                        <h6>王春嬌  NTD6000</h6>
+                        <ul>
+                            <li>上百場廟會主持經驗</li>
+                            <li>岬北宮主任委員</li>
+                            <li>宮廟杯最佳主持人獎</li>
+                        </ul>
+                        <!-- codepen radar chart start -->
+                        <div class="card">
+                            <!-- Canvas for Chart.js -->
+                            <canvas id="canvas" width="280" height="180"></canvas>
+                        </div>
+                        <!-- codepen radar chart end -->
+                    </div>
+                    <div class="hostInfoDetail hostInfo1" style="left:30%;">
+                        <img src="images/customized/host/host_02.jpg" alt="">
+                        <h6>王春嬌  NTD6000</h6>
+                        <ul>
+                            <li>上百場廟會主持經驗</li>
+                            <li>岬北宮主任委員</li>
+                            <li>宮廟杯最佳主持人獎</li>
+                        </ul>
+                        <!-- codepen radar chart start -->
+                        <div class="card">
+                            <!-- Canvas for Chart.js -->
+                            <!-- <canvas id="canvas" width="280" height="180"></canvas> -->
+                        </div>
+                        <!-- codepen radar chart end -->
+                    </div>
+                    <div class="hostInfoDetail hostInfo2" style="left:20%;">
+                        <img src="images/customized/host/host_03.jpg" alt="">
+                        <h6>王春嬌  NTD6000</h6>
+                        <ul>
+                            <li>上百場廟會主持經驗</li>
+                            <li>岬北宮主任委員</li>
+                            <li>宮廟杯最佳主持人獎</li>
+                        </ul>
+                        <!-- codepen radar chart start -->
+                        <div class="card">
+                            <!-- Canvas for Chart.js -->
+                            <!-- <canvas id="canvas" width="280" height="180"></canvas> -->
+                        </div>
+                        <!-- codepen radar chart end -->
+                    </div>
+                    <div class="hostInfoDetail hostInfo3" style="left:40%;">
+                        <img src="images/customized/host/host_04.jpg" alt="">
+                        <h6>王春嬌  NTD6000</h6>
+                        <ul>
+                            <li>上百場廟會主持經驗</li>
+                            <li>岬北宮主任委員</li>
+                            <li>宮廟杯最佳主持人獎</li>
+                        </ul>
+                        <!-- codepen radar chart start -->
+                        <div class="card">
+                            <!-- Canvas for Chart.js -->
+                            <!-- <canvas id="canvas" width="280" height="180"></canvas> -->
+                        </div>
+                        <!-- codepen radar chart end -->
+                    </div>
+                    <div class="hostInfoDetail hostInfo4" style="left:60%;">
+                        <img src="images/customized/host/host_05.jpg" alt="">
+                        <h6>王春嬌  NTD6000</h6>
+                        <ul>
+                            <li>上百場廟會主持經驗</li>
+                            <li>岬北宮主任委員</li>
+                            <li>宮廟杯最佳主持人獎</li>
+                        </ul>
+                        <!-- codepen radar chart start -->
+                        <div class="card">
+                            <!-- Canvas for Chart.js -->
+                            <!-- <canvas id="canvas" width="280" height="180"></canvas> -->
+                        </div>
+                        <!-- codepen radar chart end -->
+                    </div>
+                    <div class="hostInfoDetail hostInfo5" style="left:80%;">
+                        <img src="images/customized/host/host_06.jpg" alt="">
+                        <h6>王春嬌  NTD6000</h6>
+                        <ul>
+                            <li>上百場廟會主持經驗</li>
+                            <li>岬北宮主任委員</li>
+                            <li>宮廟杯最佳主持人獎</li>
+                        </ul>
+                        <!-- codepen radar chart start -->
+                        <div class="card">
+                            <!-- Canvas for Chart.js -->
+                            <!-- <canvas id="canvas" width="280" height="180"></canvas> -->
+                        </div>
+                        <!-- codepen radar chart end -->
+                    </div>
+                    <div class="hostInfoDetail hostInfo6" style="left:70%;">
+                        <img src="images/customized/host/host_07.jpg" alt="">
+                        <h6>王春嬌  NTD6000</h6>
+                        <ul>
+                            <li>上百場廟會主持經驗</li>
+                            <li>岬北宮主任委員</li>
+                            <li>宮廟杯最佳主持人獎</li>
+                        </ul>
+                        <!-- codepen radar chart start -->
+                        <div class="card">
+                            <!-- Canvas for Chart.js -->
+                            <!-- <canvas id="canvas" width="280" height="180"></canvas> -->
+                        </div>
+                        <!-- codepen radar chart end -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- 訂單資訊 -->
+            <div class="orderInfo">
+                <div class="orderDateNloc">
+                    <p>選擇日期：2019-05-09(四)</p>
+                    <p>活動地點：桃園市中壢區中大路300號</p>
+                    <div class="orderStage">
+                        <div class="perspective">
+                            <div class="groupA">
+                                <!-- 周邊細項 -->
+                                    <!-- ? -->
+                                <div class="stairsA"></div>
+                                    <!-- ? -->
+                                <div class="stairsB"></div>
+                                    <!-- 壁屏 -->
+                                <!-- <div class="stairsC"></div> -->
+                                <div class="stairsC1"></div>
+                                <div class="stairsC2"></div>
+                                <div class="stairsC3"></div>
+                                <div class="stairsC4"></div>
+                                <!-- 上壁屏 -->
+                                <!-- <div class="stairsD"></div>
+                                <div class="stairsE"></div> -->
+                                <div class="stairsF"></div>
+                                <!-- <div class="stairsF1"></div> -->
+                                <div class="stairsF2"></div>
+                                <div class="stairsF3"></div>
+                                <div class="stairsF4"></div>
+                                <!-- 舞台 -->
+                                <div class="front"></div>
+                                <!-- <div class="front1"></div>
+                                <div class="front2"></div> -->
+                                <div class="back"></div>
+                                <div class="up"></div>
+                                <div class="down"></div>
+                                <div class="left"></div>
+                                <div class="right"></div>
+                                <!-- 跑馬燈 -->
+                                <div class="subtitleAll disN">
+                                    <div class="subtitles">
+                                        <p>跑馬燈</p>
+                                    </div>
+                                    <div class="subtitles1"></div>
+                                    <div class="subtitles2"></div>
+                                </div>
+                                <!-- 樓梯三角形 -->
+                                <div class="triangleA"></div>
+                                <div class="triangleB"></div>
+                                <div class="triangleC"></div>
+                                <div class="triangleD"></div>
+                                <div class="triangleE"></div>
+                                <div class="triangleF"></div>
+                                <!-- 樓梯 -->
+                                <div class="ladder ladderA"></div>
+                                <div class="ladder ladderB"></div>
+                                <div class="ladder ladderC"></div>
+                                <div class="ladder ladderD"></div>
+                                <div class="ladder ladderE"></div>
+                                <div class="ladder ladderF"></div>
+                                <div class="ladder ladderG"></div>
+                                <div class="ladder ladderH"></div>
+                                <!-- 燈柱 -->
+                                <div class="headlightbox headlightbox0"></div>
+                                <div class="headlightbox headlightbox1"></div>
+                                <div class="headlightbox headlightbox2"></div>
+                                <div class="headlightbox headlightbox3"></div>
+                                <div class="headlightbox headlightbox4"></div>
+                                <div class="headlightbox headlightbox5"></div>
+                                <!-- 投射燈 -->
+                                <div class="headlightAll disN">
+                                    <!-- 中間投射燈 -->
+                                    <div class="headlight headlight0"></div>
+                                    <div class="headlight headlight1"></div>
+                                    <div class="headlight headlight2"></div>
+                                    <div class="headlight headlight3"></div>
+                                    <!-- 左邊投射燈 -->
+                                    <div class="headlight headlight4"></div>
+                                    <div class="headlight headlight5"></div>
+                                    <div class="headlight headlight6"></div>
+                                    <div class="headlight headlight7"></div>
+                                    <!-- 右邊投射燈 -->
+                                    <div class="headlight headlight8"></div>
+                                    <div class="headlight headlight9"></div>
+                                    <div class="headlight headlight10"></div>
+                                    <div class="headlight headlight11"></div>
+                                </div>
+                                <!-- 音箱 -->
+                                <!-- <div class="audioAll"> -->
+                                    <!-- 左音箱 -->
+                                    <!-- <div class="audioBox"></div>
+                                    <div class="audioBox1"></div>
+                                    <div class="audioBox2"></div>
+                                    <div class="audioBox3"></div>
+                                    <div class="audioBox4"></div> -->
+                                    <!-- 右音箱 -->
+                                    <!-- <div class="audioBox5"></div>
+                                    <div class="audioBox6"></div>
+                                    <div class="audioBox7"></div>
+                                    <div class="audioBox8"></div>
+                                    <div class="audioBox9"></div>
+                                </div>     -->
+                                <!-- 鋼管 -->
+                                <div class="poleAll">
+                                    <div class="pole1">
+                                        <div class="poleItem"></div>
+                                    </div>
+                                    <div class="pole2">
+                                        <div class="poleItem"></div>
+                                        <div class="poleItem"></div>
+                                        <div class="poleItem"></div>
+                                    </div>
+                                    <div class="pole3">
+                                        <div class="poleItem"></div>
+                                        <div class="poleItem"></div>
+                                        <div class="poleItem"></div>
+                                        <div class="poleItem"></div>
+                                        <div class="poleItem"></div>
+                                    </div>
+                                </div>
+                                <!-- 特效 -->
+                                <div class="effectAll">
+                                    <div class="fireEffect">
+                                        <div class="fireEffect01">
+                                            <img src="images/fire1.gif" alt="">
+                                            <img src="images/fire1.gif" alt="">
+                                        </div>
+                                        <div class="fireEffect02">
+                                            <img src="images/fire4.gif" alt="">
+                                            <img src="images/fire4.gif" alt="">
+                                        </div>
+                                        <div class="fireEffect03">
+                                            <img src="images/fire5.gif" alt="">
+                                            <img src="images/fire5.gif" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="fireworkEffect">
+                                        <div class="fireworkEffect01">
+                                            <img src="images/fireworks1.gif" alt="">
+                                            <img src="images/fireworks1.gif" alt="">
+                                            <img src="images/fireworks2.gif" alt="">
+                                        </div>
+                                        <div class="fireworkEffect02">
+                                            <img src="images/fireworks6.gif" alt="">
+                                            <img src="images/fireworks3.gif" alt="">
+                                            <img src="images/fireworks3.gif" alt="">
+                                            <img src="images/fireworks8.gif" alt="">
+                                            <img src="images/fireworks8.gif" alt="">
+                                            <img src="images/fireworks6.gif" alt="">
+                                        </div>
+                                        <div class="fireworkEffect03">
+                                            <img src="images/fireworks2.gif" alt="">
+                                            <img src="images/fireworks7.gif" alt="">
+                                            <img src="images/fireworks7.gif" alt="">
+                                            <img src="images/fireworks2.gif" alt="">
+                                        </div>
+                                    </div>
+
+                                </div>
+                                
+                                <!-- <img src="images/Fireworks5.gif" alt=""> -->
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="orderDetail">
+                    <h5>金額總計：108500元</h5>
+                    <div class="orderDetailCust">
+                        <h6>舞台配備</h6>
+                        <table>
+                            <tr>
+                                <td>內塗裝：</td>
+                                <td>如圖</td>
+                                <td>15000</td>
+                            </tr>
+                            <tr>
+                                <td>音響：</td>
+                                <td>驚天動地型</td>
+                                <td>60000</td>
+                            </tr>
+                            <tr>
+                                <td>鋼管：</td>
+                                <td>一支獨秀款</td>
+                                <td>3000</td>
+                            </tr>
+                            <tr>
+                                <td>燈光：</td>
+                                <td>電音夜店風</td>
+                                <td>11000</td>
+                            </tr>
+                            <tr>
+                                <td>特效：</td>
+                                <td>火力四射</td>
+                                <td>6500</td>
+                            </tr>
+                            <tr>
+                                <td>表演：</td>
+                                <td>辣妹鋼管舞</td>
+                                <td>7000</td>
+                            </tr>
+                            <tr>
+                                <td>字幕機：</td>
+                                <td>贈送</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>主持人：</td>
+                                <td>王鳳嬌</td>
+                                <td>6000</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="orderDetailHost">
+                        <h6>主持人</h6>
+                        <div class="orderDetailHostInfo">
+                            <img src="images/customized/host/host_01.jpg" alt="">
+                            <ul>
+                                <li>上百場廟會主持經驗</li>
+                                <li>岬北宮主任委員</li>
+                                <li>宮廟杯最佳主持人獎</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 步驟按鈕 -->
+        <div class="btnStep">
+            <div class="previousStep commonBtnSmall"></div>
+            <div class="nextStep commonBtnSmall"></div>
+        </div>
+        
+    </div>
+
+    
+
+    <!-- 步驟切換 -->
+    <script src="js/custStepPage.js"></script>
+    <!-- 雷達圖內容 -->
+    <script src="js/custRadarChart.js"></script>
+    <!-- for radar chart -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+    
+    <script src="js/navmenu.js"></script>
+</body>
+>>>>>>> ee1f6061ae65be512238b8b9aa6e483557bd014f
 </html>

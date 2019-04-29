@@ -234,7 +234,17 @@ table {
 
 #nav-icon2 {
   height: 44px;
+  cursor: pointer;
 }
+<<<<<<< HEAD
+=======
+
+#bigMember {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+>>>>>>> ee1f6061ae65be512238b8b9aa6e483557bd014f
 
 #nav-icon2 span {
   display: block;
@@ -417,8 +427,12 @@ header {
   height: 80px;
   width: 100%;
   top: 0px;
+<<<<<<< HEAD
   z-index: 1;
   z-index: 3;
+=======
+  z-index: 99;
+>>>>>>> ee1f6061ae65be512238b8b9aa6e483557bd014f
   -webkit-animation: headerNeon 1s infinite;
           animation: headerNeon 1s infinite;
 }
@@ -613,6 +627,7 @@ footer img {
 
 @-webkit-keyframes jitter {
   0% {
+<<<<<<< HEAD
     -webkit-transform: rotateZ(0deg);
             transform: rotateZ(0deg);
   }
@@ -627,11 +642,30 @@ footer img {
   100% {
     -webkit-transform: rotateZ(0deg);
             transform: rotateZ(0deg);
+=======
+    border-radius: 40% 55% 60% 45%;
+  }
+  20% {
+    border-radius: 50% 40% 50% 60%;
+  }
+  40% {
+    border-radius: 45% 50% 55% 50%;
+  }
+  60% {
+    border-radius: 50% 35% 50% 65%;
+  }
+  80% {
+    border-radius: 40% 45% 60% 55%;
+  }
+  100% {
+    border-radius: 54% 50% 46% 40%;
+>>>>>>> ee1f6061ae65be512238b8b9aa6e483557bd014f
   }
 }
 
 @keyframes jitter {
   0% {
+<<<<<<< HEAD
     -webkit-transform: rotateZ(0deg);
             transform: rotateZ(0deg);
   }
@@ -646,6 +680,24 @@ footer img {
   100% {
     -webkit-transform: rotateZ(0deg);
             transform: rotateZ(0deg);
+=======
+    border-radius: 40% 55% 60% 45%;
+  }
+  20% {
+    border-radius: 50% 40% 50% 60%;
+  }
+  40% {
+    border-radius: 45% 50% 55% 50%;
+  }
+  60% {
+    border-radius: 50% 35% 50% 65%;
+  }
+  80% {
+    border-radius: 40% 45% 60% 55%;
+  }
+  100% {
+    border-radius: 54% 50% 46% 40%;
+>>>>>>> ee1f6061ae65be512238b8b9aa6e483557bd014f
   }
 }
 
@@ -1117,28 +1169,48 @@ footer img {
   cursor: pointer;
 }
 
+<<<<<<< HEAD
 .loginBox .fa-times:hover {
   color: #000;
 }
 
 .loginBox h3 {
+=======
+.loginBox .fa-times:hover, .loginbox1 .fa-times:hover {
+  color: #000;
+}
+
+.loginBox h3, .loginbox1 h3 {
+>>>>>>> ee1f6061ae65be512238b8b9aa6e483557bd014f
   margin-top: 0px;
   font-size: 30px;
   color: #17F4F0;
 }
 
+<<<<<<< HEAD
 .loginBox .inputBox {
+=======
+.loginBox .inputBox, .loginbox1 .inputBox {
+>>>>>>> ee1f6061ae65be512238b8b9aa6e483557bd014f
   background: #2d3631;
   border-radius: 10px;
   margin-top: 10px;
   padding: 10px 15px;
 }
 
+<<<<<<< HEAD
 .loginBox .inputBox i {
   color: #fff;
 }
 
 .loginBox .inputBox input {
+=======
+.loginBox .inputBox i, .loginbox1 .inputBox i {
+  color: #fff;
+}
+
+.loginBox .inputBox input, .loginbox1 .inputBox input {
+>>>>>>> ee1f6061ae65be512238b8b9aa6e483557bd014f
   height: 20px;
   margin-left: 10px;
   width: 80%;
@@ -1148,7 +1220,11 @@ footer img {
   color: #fff;
 }
 
+<<<<<<< HEAD
 .loginBox .commonBtnSmall {
+=======
+.loginBox .commonBtnSmall, .loginbox1 .commonBtnSmall {
+>>>>>>> ee1f6061ae65be512238b8b9aa6e483557bd014f
   margin-top: 20px;
   width: 80px;
   height: 40px;
@@ -1167,7 +1243,11 @@ footer img {
   text-decoration: none;
 }
 
+<<<<<<< HEAD
 .loginBox p a:hover {
+=======
+.loginBox p a:hover, .loginbox1 p a:hover {
+>>>>>>> ee1f6061ae65be512238b8b9aa6e483557bd014f
   color: #f3d217;
 }
 
@@ -1344,6 +1424,13 @@ footer img {
   height: 50px;
   border-radius: 5px;
   line-height: 50px;
+<<<<<<< HEAD
+=======
+}
+
+#IdStatus {
+  display: none;
+>>>>>>> ee1f6061ae65be512238b8b9aa6e483557bd014f
 }
 
 .titleBgi {
@@ -1368,6 +1455,126 @@ footer img {
     margin-top: 20px;
     margin-left: 24vw;
   }
+}
+
+<<<<<<< HEAD
+#musicContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  height: 960px;
+  width: 100%;
+}
+
+#thefile {
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+}
+
+#canvasMusic {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#audioMusic {
+  left: 10px;
+  bottom: 10px;
+  width: calc(100% - 20px);
+}
+
+.titleBgi {
+  margin: 0;
+}
+
+=======
+.loginbox1 {
+  display: none;
+  width: 300px;
+  height: 350px;
+  background: #fff;
+  border: 5px solid #17F4F0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 50;
+  border-radius: 10px;
+  padding: 30px 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  -webkit-box-shadow: 0 0 10px #17F4F0;
+          box-shadow: 0 0 10px #17F4F0;
+  -webkit-box-shadow: 0 0 10px  #666 inset;
+          box-shadow: 0 0 10px  #666 inset;
+}
+
+.loginbox1 .fa-times {
+  color: #17F4F0;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.loginbox1 .fa-times:hover {
+  color: #000;
+}
+
+.loginbox1 h3 {
+  margin-top: 0px;
+  font-size: 30px;
+  color: #17F4F0;
+}
+
+.loginbox1 .inputBox {
+  background: #2d3631;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 10px 15px;
+}
+
+.loginbox1 .inputBox i {
+  color: #fff;
+}
+
+.loginbox1 .inputBox input {
+  height: 20px;
+  margin-left: 10px;
+  width: 80%;
+  background: #2d3631;
+  outline: none;
+  border: none;
+  color: #fff;
+}
+
+.loginbox1 .commonBtnSmall {
+  margin-top: 20px;
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+  line-height: 40px;
+}
+
+.loginbox1 p {
+  margin-top: 20px;
+  color: #17F4F0;
+}
+
+.loginbox1 p a {
+  cursor: pointer;
+  color: #17F4F0;
+  text-decoration: none;
+}
+
+.loginbox1 p a:hover {
+  color: #f3d217;
 }
 
 #musicContent {
@@ -1402,6 +1609,7 @@ footer img {
   margin: 0;
 }
 
+>>>>>>> ee1f6061ae65be512238b8b9aa6e483557bd014f
 li {
   list-style: none;
 }
@@ -1415,6 +1623,10 @@ li {
   background-repeat: no-repeat;
 }
 
+#beautyRankingimgsMonth {
+  display: none;
+}
+
 .beautyRankingContainer {
   position: relative;
   width: 100%;
@@ -1423,6 +1635,13 @@ li {
   height: auto;
 }
 
+<<<<<<< HEAD
+=======
+.beautyRankingContainer #beautyRankingimgs {
+  height: auto;
+}
+
+>>>>>>> ee1f6061ae65be512238b8b9aa6e483557bd014f
 .beautyRankingContainer .beautyRankingHeader #beautyRankingimgsMonthBtn {
   -webkit-transition: .5s;
   transition: .5s;
@@ -1588,6 +1807,7 @@ li {
 }
 
 .dotpanel {
+  display: none;
   position: absolute;
   height: auto;
   width: 76px;
@@ -1710,7 +1930,13 @@ li {
 .beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg .beautyDiscIgMemTextContainerWrap {
   margin: 20px 0px;
   font-family: '微軟正黑';
+<<<<<<< HEAD
   overflow-y: hidden;
+=======
+  overflow-y: scroll;
+  max-height: 76px;
+  height: 76px;
+>>>>>>> ee1f6061ae65be512238b8b9aa6e483557bd014f
 }
 
 .beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg .beautyDiscIgMemTextContainerWrap .beautyDiscIgMemTextContainer {
@@ -1726,6 +1952,8 @@ li {
   height: 28px;
   border-radius: 50%;
   margin-left: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg .beautyDiscIgMemTextContainerWrap .beautyDiscIgMemTextContainer .beautyDiscIgMName {
@@ -1734,6 +1962,7 @@ li {
   letter-spacing: 0.1em;
   font-weight: 900;
   padding-left: 5px;
+  width: 80px;
 }
 
 .beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg .beautyDiscIgMemTextContainerWrap .beautyDiscIgMemTextContainer .beautyDiscIgNameText {
@@ -1741,6 +1970,10 @@ li {
   line-height: 28PX;
   font-size: 16px;
   color: #444;
+<<<<<<< HEAD
+=======
+  width: 150px;
+>>>>>>> ee1f6061ae65be512238b8b9aa6e483557bd014f
 }
 
 .beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg .beautyDiscIgMemStage img {
@@ -1798,11 +2031,33 @@ li {
   border-radius: 5px;
   color: #fff;
   background-color: #ff7951;
-  margin-top: -30px;
+  margin-top: 3px;
   cursor: pointer;
 }
 
 @media screen and (min-width: 1200px) {
+  .beautyDiscIgMemTextContainerWrap {
+    border-radius: 15px;
+    /*定义滚动条轨道
+      内阴影+圆角*/
+    /*定义滑块
+      内阴影+圆角*/
+  }
+  .beautyDiscIgMemTextContainerWrap::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+    background-color: #F2EB50;
+  }
+  .beautyDiscIgMemTextContainerWrap::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: #faf6ac;
+  }
+  .beautyDiscIgMemTextContainerWrap::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+    background-color: #555;
+  }
   .beautyDiscWrap .beautyDiscContainer {
     max-width: 1200px;
     height: auto;
@@ -1829,7 +2084,7 @@ li {
   .beautyDiscWrap .beautyDiscContainer .beautyDiscFilter .beautyDiscFilterBox {
     width: 160px;
     display: inline-block;
-    height: 50px;
+    height: 48px;
     border-radius: 10px;
     background-color: #F2EB50;
     padding: 7px;

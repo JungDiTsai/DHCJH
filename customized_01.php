@@ -933,7 +933,10 @@
     <script src="js/navmenu.js"></script>
     <script src="js/_login.js"></script>
     <script src="js/_font_loginLightBox.js"></script>
+<<<<<<< HEAD
     <!-- api -->
     <script src="js/api.js?<?php echo time();?>"></script>
+=======
+>>>>>>> ee1f6061ae65be512238b8b9aa6e483557bd014f
 </body>
 </html>

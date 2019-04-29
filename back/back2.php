@@ -1,5 +1,7 @@
+
 <?php 
 //admin
+
     $errMsg="";
 
     try {
@@ -7,7 +9,9 @@
         $sql = "select * from administrator";
         $admin=$pdo->query($sql);  //下指令
         
-
+        // //////////登入
+        // $sql = "select * from administrator where adminId='{$memId}' and adminPsw='{$memPsw}'";
+        // $admin = $pdo->query($sql);
     } catch (PDOException $e) {
         $errMsg .=  "錯誤原因" . $e->getMessage() . "<br>"; 
         $errMsg .=  "錯誤行號" . $e->getLine() . "<br>";
@@ -70,8 +74,13 @@
 
     try {
         require_once("dhc.php");
-        $sql = "select * from finform";
+        // $sql = "select * from finform";
+        $sql = "select f.flyerNo  , f.informReason , b.flyerImgUrl , m.memId , f.informStatus , f.finformWay 
+        from finform as f 
+        JOIN flyer as b on f.flyerNo = b.flyerNo 
+        JOIN member as m on m.memNo = f.memNo";
         $finform=$pdo5->query($sql);  //下指令
+
         
 
     } catch (PDOException $e) {
@@ -86,7 +95,10 @@
 
     try {
         require_once("dhc.php");
-        $sql = "select * from binform";
+        $sql = "select a.orderNo , a.informReason , b.orderImgUrl , m.memId , a.informStatus , a.binformWay 
+        from binform as a 
+        JOIN orders as b on a.orderNo = b.orderNo 
+        JOIN member as m on m.memNo = a.memNo";
         $binform=$pdo6->query($sql);  //下指令
         
 
@@ -356,9 +368,10 @@
             display:block;
         }
         .back td img{
-            width:25%;
+            width:100px;
 
         }
+        
         .back .hoverimg img:hover{
             cursor: pointer; 
         }
@@ -377,6 +390,7 @@
                     
                 <div class="collapse navbar-collapse tabs" id="navbarSupportedContent">
                 <ul class="navbar-nav flex-column ">
+                    <!--  -->
                     <li class="nav-item ">
                         <a class="nav-link text-info bb" rel="admin" >管理員帳號管理</a>
                     </li>
@@ -417,7 +431,9 @@
                     <li class="nav-item menu">
                         <a class="nav-link text-info" href="#" rel="flyercheck" >宣傳單查詢</a>
                     </li>
-                    <a class ="nav-link text-info backlogin"href="javascript:">登出</a>
+                    
+                    
+                    <a id="backlogin" class ="nav-link text-info " href="javascript:">登出</a>
                   </ul>
                 </div>
             </nav>
@@ -634,7 +650,7 @@
                                                 <tr class="back">
                                                     <th class="add" name="no"> <?php echo  $drawno ;?> </th>
                                                     <td class="first"> <?php echo $drawtotal["drawName"]; ?></td>
-                                                    <td><img src="<?php echo $drawtotal["drawImgUrl"]; ?>" alt="pic"></td>
+                                                    <td class="tdimg"><img src="../<?php echo $drawtotal["drawImgUrl"]; ?>" alt="pic"></td>
                                                     <td><?php echo $drawtotal["drawPrice"]; ?></td>
                                                   
 
@@ -698,7 +714,7 @@
                                                 <tr class="back">
                                                     <th class="add" name="no"> <?php echo  $audiono ;?> </th>
                                                     <td class="first"> <?php echo $audiototal["audioName"]; ?></td>
-                                                    <td><img src="<?php echo $audiototal["audioImgUrl"]; ?>" alt="pic"></td>
+                                                    <td><img src="../<?php echo $audiototal["audioImgUrl"]; ?>" alt="pic"></td>
                                                     <td><?php echo $audiototal["audioPrice"]; ?></td>
                                                   
 
@@ -763,7 +779,7 @@
                                                 <tr class="back">
                                                     <th class="add" name="no"> <?php echo  $pipeno ;?> </th>
                                                     <td class="first"> <?php echo $pipetotal["pipeName"]; ?></td>
-                                                    <td><img src="<?php echo $pipetotal["pipeImgUrl"]; ?>" alt="pic"></td>
+                                                    <td><img src="../<?php echo $pipetotal["pipeImgUrl"]; ?>" alt="pic"></td>
                                                     <td><?php echo $pipetotal["pipePrice"]; ?></td>
                                                   
 
@@ -828,7 +844,7 @@
                                                 <tr class="back">
                                                     <th class="add" name="no"> <?php echo  $effectsno ;?> </th>
                                                     <td class="first"> <?php echo $effectstotal["effectsName"]; ?></td>
-                                                    <td><img src="<?php echo $effectstotal["effectsImgUrl"]; ?>" alt="pic"></td>
+                                                    <td><img src="../<?php echo $effectstotal["effectsImgUrl"]; ?>" alt="pic"></td>
                                                     <td><?php echo $effectstotal["effectsPrice"]; ?></td>
                                                   
 
@@ -893,7 +909,7 @@
                                                 <tr class="back">
                                                     <th class="add" name="no"> <?php echo  $troupeno ;?> </th>
                                                     <td class="first"> <?php echo $troupetotal["troupeName"]; ?></td>
-                                                    <td><img src="<?php echo $troupetotal["troupeImgUrl"]; ?>" alt="pic"></td>
+                                                    <td><img src="../<?php echo $troupetotal["troupeImgUrl"]; ?>" alt="pic"></td>
                                                     <td><?php echo $troupetotal["troupePrice"]; ?></td>
                                                   
 
@@ -971,7 +987,7 @@
                                     <td class="first"><?php echo $flyimgTotal["flyTitle"]; ?>
                                     </td>
                                     <td >
-                                        <img src="<?php echo $flyimgTotal["flyImg"]; ?>" alt="pic">    
+                                        <img src="../<?php echo $flyimgTotal["flyImg"]; ?>" alt="pic">    
                                         <!-- <a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-1.jpg" data-lightbox="example-1"><img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-1.jpg" alt="image-1" /></a> -->
                                  
                                     </td>
@@ -1062,7 +1078,7 @@
                                 <tr class="back">
                                     <th class="add" name="no"> <?php echo  $hostno ;?> </th>
                                     <td class="first"><?php echo $hostTotal["hostName"]; ?></td>
-                                    <td ><img src="<?php echo $hostTotal["hostImgUrl"]; ?>" alt="pic"></td>
+                                    <td ><img src="../<?php echo $hostTotal["hostImgUrl"]; ?>" alt="pic"></td>
                                     <td ><?php echo $hostTotal["hostTel"]; ?></td>
                                     <td ><?php echo $hostTotal["hostContent"]; ?></td>
                                     <td ><?php echo $hostTotal["hostA"]; ?></td>
@@ -1101,11 +1117,13 @@
                     <table class="table table-hover">
                             <thead>
                                 <tr>
-                                <th >被檢舉編號 </th>
+                                <th >宣傳單編號 </th>
+                                
                                  <th scope="col">檢舉原因</th>
                                 <th scope="col">圖片</th>
                                 <th scope="col">檢舉人帳號</th>
                                 <th scope="col">檢舉狀態</th>
+                                <th scope="col">處置方式</th>
                                <th scope="col">修改</th>
                                 </tr>
                             </thead>
@@ -1114,9 +1132,7 @@
                                 <?php 
                                 $flyermesno=0;
                                 while( $finformTotal = $finform->fetch(PDO::FETCH_ASSOC)){     
-                                while( $flyerimgTotal = $flyerimg->fetch(PDO::FETCH_ASSOC)){   
-                                      
-                                while( $mmemnoTotal = $finformmember->fetch(PDO::FETCH_ASSOC)){   
+                               
                                 $flyermesno++;    
                                 ?>
                                 <!-- php -->
@@ -1126,23 +1142,23 @@
                                     <td class="first"><?php echo $finformTotal["informReason"]; ?>
                                     </td>                                                  
                                     <td class="hoverimg">    
-                                        <a class="example-image-link" href="<?php echo  $flyerimgTotal["flyimg"] ;?>" data-lightbox=" <?php echo  $flyermesno ;?>">
-                                        <img class="example-image" src="../<?php echo  $flyerimgTotal["flyimg"] ;?>" alt="<?php echo  $flyermesno ;?><?php echo  $flyermesno ;?>" /></a>
+                                        <a class="example-image-link" href="<?php echo  $finformTotal["flyerImgUrl"] ;?>" data-lightbox=" <?php echo  $flyermesno ;?>">
+                                        <img class="example-image" src="../<?php echo  $finformTotal["flyerImgUrl"] ;?>" alt="<?php echo  $flyermesno ;?><?php echo  $flyermesno ;?>" /></a>
                                     </td>
                                     
-                                    <th class="" name=""> <?php echo  $mmemnoTotal["mmemid"] ;?> </th>
+                                    <th class="" name=""> <?php echo  $finformTotal["memId"] ;?> </th>
                                     <td class="change">
                                     <button type="button" class="<?php if($finformTotal["informStatus"]=="已處理"){
                                         echo 'btn btn-success';}else{ echo 'btn btn-danger';}?> ">
                                         <?php echo $finformTotal["informStatus"]; ?></td>
-                                
-                                    <td class=""><button type="button" class="btn btn-link btnclick" value=<?php echo $finformTotal["finformNo"] ; ?> >修改</button></td>
-
+                                    <td> <?php echo $finformTotal["finformWay"]; ?></td>
+                                    <td class=""><button type="button" class="btn btn-link btnclick"  value=<?php echo $finformTotal["flyerNo"] ; ?> >修改</button></td>
+                                    
                                 </tr>
                                 
                                <?php
 
-                               }}};
+                               };
                                ?>
                             </tbody>
                             </table>
@@ -1159,12 +1175,13 @@
                     <table class="table table-hover">
                             <thead>
                                 <tr>
-                                <th >花車檢舉編號 </th>
+                                <th >訂單編號 </th>
                                 
                                 <th scope="col">檢舉原因</th>
                                 <th scope="col">圖片</th>
                                 <th scope="col">檢舉會員</th>
                                 <th scope="col">檢舉狀態</th>
+                                <th scope="col">處置方式</th>
                                 <th scope="col">修改</th>
                                 </tr>
                             </thead>
@@ -1173,9 +1190,7 @@
                                  <?php 
                                 $binformno=0;
                                 while( $binformTotal = $binform->fetch(PDO::FETCH_ASSOC)){     
-                                while( $newjoinTotal = $newjoin->fetch(PDO::FETCH_ASSOC)){    
-                                   
-                                while( $binformmemberTotal = $binformmember->fetch(PDO::FETCH_ASSOC)){    
+                                    // print_r($binformTotal);
                                 $binformno ++;
                                 ?>
                                 <!-- php -->
@@ -1186,23 +1201,24 @@
                                     </td>
                                   
                                     <td class="hoverimg">    
-                                        <a class="example-image-link" href="<?php echo  $newjoinTotal["img"] ;?>" data-lightbox=" <?php echo  $binformno ;?>">
-                                        <img class="example-image" src="<?php echo $newjoinTotal["img"] ;?>" alt="<?php echo  $binformno ;?>" /></a>
+                                        <a class="example-image-link" href="<?php echo  $binformTotal["orderImgUrl"] ;?>" data-lightbox=" <?php echo  $binformno ;?>">
+                                        <img class="example-image" src="../<?php echo $binformTotal["orderImgUrl"] ;?>" alt="<?php echo  $binformno ;?>" /></a>
                                     </td>
 
-                                    <th class="" name=""> <?php echo  $binformmemberTotal["mmemid"] ;?> </th>
+                                    <th class="" name=""> <?php echo  $binformTotal["memId"] ;?> </th>
                                     <td class="change">
                                     <button type="button" class="<?php if($binformTotal["informStatus"]=="已處理"){
                                         echo 'btn btn-success';}else{ echo 'btn btn-danger';}?> ">
                                         <?php echo $binformTotal["informStatus"]; ?></td>
-                                
-                                    <td class=""><button type="button" class="btn btn-link btnclick" value=<?php echo $binformTotal["binformNo"] ; ?> >修改</button></td>
+
+                                    <td class="first"><?php echo $binformTotal["binformWay"]; ?>
+                                    <td class=""><button type="button" class="btn btn-link btnclick" value=<?php echo $binformTotal["orderNo"] ; ?> >修改</button></td>
 
                                 </tr>
                                 
                                <?php
 
-                               }}}
+                               }
                                ?>
                                
                                
@@ -1436,15 +1452,15 @@
                                     <th scope="col">優惠卷編號</th>
                                     <th scope="col">投票數量</th>
                                     <th scope="col">宣傳單編號</th>
-                                    <th scope="col">是否參加選美</th>
+                                    
                                     <th scope="col">上傳花車日期</th>
                                     <th scope="col">活動地點</th>
                                     <th scope="col">活動日期</th>
                                     <th scope="col">主持人</th>
                                     <th scope="col">總金額</th>
-                                    <th scope="col">狀態</th>
+                                    <th scope="col">是否參加選美</th>
                                   
-                                    <th scope="col">修改</th>
+                                    <!-- <th scope="col">修改</th> -->
                                 </tr>
                             </thead>
                             <tbody>
@@ -1461,24 +1477,35 @@
                                     </td>
                                    
                                     <td class="" name=""> <?php echo  $orderTotal["orderName"] ;?> </td>
-                                    <td class="" name=""> <?php echo  $orderTotal["orderImgUrl"] ;?> </td>
+                                    <td class="" name=""> <img src="../<?php echo  $orderTotal["orderImgUrl"] ;?>" alt="pic"> </td>
                                    
                                     <td class="" name=""> <?php echo  $orderTotal["memCouponsNo"] ;?> </td>
                                     <td class="" name=""> <?php echo  $orderTotal["orderVote"] ;?> </td>
                                     <td class="" name=""> <?php echo  $orderTotal["flyerNo"] ;?> </td>
-                                    <td class="" name=""> <?php echo  $orderTotal["beautyState"] ;?> </td>
+                                  
                                     <td class="" name=""> <?php echo  $orderTotal["beautyDate"] ;?> </td>
                                     <td class="" name=""> <?php echo  $orderTotal["actPlace"] ;?> </td>
                                     <td class="" name=""> <?php echo  $orderTotal["actStart"] ;?> </td>
                                     <td class="" name=""> <?php echo  $orderTotal["hostNo"] ;?> </td>
                                     <td class="" name=""> <?php echo  $orderTotal["totalMoney"] ;?> </td>
+
+                                    <td class="">
+                                    <?php 
+                                        if( $orderTotal["beautyState"]=="1")
+                                        {   echo '有';
+                                      
+                                        }else{ 
+                                            echo '沒有';
+                                           
+                                        }                                                                      
+                                    ?>
                                    
-                                    <td class="change">
-                                    <button type="button" class="<?php if($orderTotal["orderStatus"]=="啟用"){
-                                        echo 'btn btn-success';}else{ echo 'btn btn-danger';}?> ">
-                                        <?php echo $orderTotal["orderStatus"]; ?></td>
+                                                                            
+                                    </td>
+                                       
+                                   
                                     
-                                    <td class=""><button type="button" class="btn btn-link btnclick" value=<?php echo $orderTotal["orderNo"] ; ?> >修改</button></td>
+                                    <!-- <td class=""><button type="button" class="btn btn-link btnclick" value=<?php echo $orderTotal["orderNo"] ; ?> >修改</button></td> -->
                                     
                                 </tr>
                                 
@@ -1510,7 +1537,7 @@
                                     
                                    
                                     <th scope="col">是否使用人數功能</th>
-                                    <th scope="col">參加人數</th>
+                                    <th scope="col">人數統計</th>
 
                                     <th scope="col">活動地址</th>
                                     
@@ -1532,24 +1559,44 @@
                                
                                 <tr class="back">
                                     <th class="add" name="no"> <?php echo  $flyercheckTotal["orderNo"] ;?> </th>
-                                   <td class="first"><?php echo $flyercheckTotal["flyerImgUrl"]; ?>
+                                   <td class="first"><img src="../<?php echo $flyercheckTotal["flyerImgUrl"]; ?>" alt="">
                                     </td>
-                                   <td class="" name=""> <?php echo  $flyercheckTotal["peopleStatus"] ;?> </td>
-                                    <td class="" name=""> <?php echo  $flyercheckTotal["peopleVote"] ;?> </td>
+                                   
+                                   <td class="" name=""> <?php 
+                                   if( $flyercheckTotal["peopleStatus"]=='0'){
+                                       echo '有';
+                                   }else {
+                                        echo'沒有' ;
+                                   }  ;?> </td>
+                                    <td class="" name=""> <?php echo  $flyercheckTotal["peopleNumber"] ;?> </td>
                                     
                                    
                                     <td class="" name=""> <?php echo  $flyercheckTotal["flyeradd"] ;?> </td>
                                     <td class="" name=""> <?php echo  $flyercheckTotal["flyeDate"] ;?> </td>
-                                   
-                                 
-                                   
-                                   
+ 
                                     <td class="change">
-                                    <button type="button" class="<?php if($flyercheckTotal["flyeStatus"]=="啟用"){
-                                        echo 'btn btn-success';}else{ echo 'btn btn-danger';}?> ">
-                                        <?php echo $flyercheckTotal["flyeStatus"]; ?></td>
+                                    <?php 
+                                        if($flyercheckTotal["flyeStatus"]=="1")
+                                        {   $btnstatus='1';
+                                           
+                                        }else{ 
+                                            $btnstatus='2';
+                                           
+                                        }                                                                     
+                                    ?>
+                                    <button type="button" class="<?php if( $btnstatus =='1'){
+                                         echo 'btn btn-success';
+                                         }else { echo'btn btn-danger' ;
+                                         } ?> "> 
+                                         <?php if( $btnstatus =='1'){
+                                            echo '啟用';
+                                            }else { echo'停用' ;
+                                            } 
+                                        ?>                                      
+                                    </td>
                                     
-                                    <td class=""><button type="button" class="btn btn-link btnclick" value=<?php echo $flyercheckTotal["flyerNo"] ; ?> >修改</button></td>
+                                   
+                                    
                                     
                                 </tr>
                                 
@@ -1582,7 +1629,10 @@
         <script>
         
         $(document).ready(function () {
-          
+            ////登出
+            $('#backlogin').on('click',function(){
+                window.history.back();
+            });
 
             panelToShow = 'admin';
             console.log(panelToShow);
@@ -1643,6 +1693,7 @@
              for(var i=0; i<btn.length;i++){
                
                  btn[i].addEventListener('click',function(e){
+               
                      if(e.target.innerHTML=='修改'){
                          alert('修改');
                          console.log($panelchildToShow)   ;
@@ -1651,7 +1702,7 @@
                      pagevalue = e.target.innerHTML;
                      
 
-
+                    
                     //當下的back
                     father = e.target.closest('.back');
 
@@ -1739,8 +1790,21 @@
                         twelve.innerHTML='';
                         twelve.innerHTML=`<input value="${twelvevalue}" >` ;
                     }else if( panelToShow == 'flyerMes' || panelToShow == 'beauty' || panelToShow =='beautyMes'){
-                        // psw.innerHTML='';
-                        // psw.innerHTML=`<input value="${pswvalue}" >` ;
+                       //back 1 
+                    //    flynum=father.querySelector('.add').innerHTML;
+                       
+                       //back 第6個
+                       sixvalue = father.querySelector('td:nth-child(6)').innerHTML;
+                       //加入第6個
+                       let six= father.querySelector('td:nth-child(6)'); 
+                         //加入狀態value
+                        // let newstatus= father.querySelector('.change');               
+                            six.innerHTML='';
+                            six.innerHTML=`<select  class="form-control form-control-sm">
+                                    <option >無</option>
+                                    <option >下架</option></select>` ;
+                           
+
 
                     }else if(panelToShow =='accessories' && $panelchildToShow=='draw' || panelToShow =='accessories' && $panelchildToShow=='audio' || panelToShow =='accessories' && $panelchildToShow=='pipe' || panelToShow =='accessories' &&$panelchildToShow=='effects' || panelToShow =='accessories' &&$panelchildToShow=='troupe'){
                         console.log($panelchildToShow);
@@ -1860,7 +1924,9 @@
                     father.querySelector('td:nth-child(12)').innerHTML= newtwelve;
                     
                 }else if(panelToShow == 'flyerMes' || panelToShow == 'beauty' || panelToShow =='beautyMes' ){
-
+                    var newsix = father.querySelector('td:nth-child(6)').firstChild.value; //上下架;                
+                    father.querySelector('td:nth-child(6)').innerHTML= newsix;
+                    console.log(newsix);
                 }else if(panelToShow =='accessories' && $panelchildToShow=='draw' || panelToShow =='accessories' && $panelchildToShow=='audio' || panelToShow =='accessories' && $panelchildToShow=='pipe' || panelToShow =='accessories' &&$panelchildToShow=='effects' || panelToShow =='accessories' &&$panelchildToShow=='troupe'){
                     // 改得值放入input
                     father.querySelector('.first').innerHTML = newanswer;
@@ -1908,11 +1974,11 @@
                 }else if(panelToShow =='flyerMes' ){
                     console.log('flyerMes');
                     urlvalue='finform.php';
-                    datavalue={  no:num  ,  status:newstatus };
+                    datavalue={  no:num  ,  status:newstatus  , onoff:newsix };
                    
                 }else if(panelToShow == 'beauty'){
                     urlvalue='binform.php';
-                    datavalue={  no:num  ,  status:newstatus };
+                    datavalue={   no:num  ,  status:newstatus  , onoff:newsix };
                    
                 }else if(panelToShow =='beautyMes'){
                     urlvalue='minform.php';

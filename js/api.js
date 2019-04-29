@@ -120,6 +120,7 @@ function showWeather(jsonStr ,todaydata,otherdata){
             }else if(weathertext=='Rain'){
                 weathertext = '<img src="./images/api/3.png" alt="pic">';
             }
+<<<<<<< HEAD
          $id("weather").innerHTML = weathertext;
     }else if(otherdata==(todaydata+4)){
         var weathertext = today.list[32].weather[0].main;
@@ -134,6 +135,14 @@ function showWeather(jsonStr ,todaydata,otherdata){
     }
      
     
+=======
+        }
+   
+ var myPix = new Array("images/api/sun.png","images/api/cloud.jpg","images/api/rain.jpg");
+ var randomNum = Math.floor((Math.random() * myPix.length ));
+ var x = myPix[randomNum];
+ document.getElementById("myPicture").innerHTML = '<img class="myPictureImg"src= " '+ x +' ">';
+>>>>>>> ee1f6061ae65be512238b8b9aa6e483557bd014f
     
     // var dateString = today.list[0].dt_txt ;//撈出年月日
     //  weatherDay = dateString.substr(8,3) //撈出日期
