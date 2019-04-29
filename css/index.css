@@ -3307,6 +3307,13 @@ footer img {
 .orderDateNloc .orderDate, .orderDateNloc .orderLoc {
   font-family: "微軟正黑體";
   padding-top: 10px;
+<<<<<<< HEAD
+}
+
+.orderDateNloc .orderDate span, .orderDateNloc .orderLoc span {
+  font-family: "微軟正黑體";
+=======
+>>>>>>> 608c561f475abaf1311bb29e6052cc695e4f461b
 }
 
 .orderDateNloc .orderDate span, .orderDateNloc .orderLoc span {
@@ -7474,6 +7481,7 @@ footer img {
     margin-top: -220px;
   }
   #tryCustormiseWrap .commonBtn {
+<<<<<<< HEAD
     margin: 8vh auto auto auto;
   }
   .tryCustEquipWrap {
@@ -7488,6 +7496,9 @@ footer img {
     width: 110px;
     top: 62%;
     left: 40%;
+=======
+    margin: 12vh auto auto auto;
+>>>>>>> 608c561f475abaf1311bb29e6052cc695e4f461b
   }
 }
 /*# sourceMappingURL=index.css.map */
