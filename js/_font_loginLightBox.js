@@ -1,16 +1,22 @@
 /* 登入燈箱 JS*/
         // 點擊icon開啟登入燈箱----------------------------
-        document.querySelector('.fa-user-circle').addEventListener('click', function (e) {
-            // 顯示登入燈箱
-            let loginBox = document.querySelector('.loginBox');
-            let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
-            if (style == "block") {
-                loginBox.style.setProperty('display', "none");
-                e.target.style.setProperty('color', "#2cffff");
-            } else {
-                loginBox.style.setProperty('display', "block");
-                e.target.style.setProperty('color', "rgb(252, 211, 28)");
+        document.querySelector('.fa-user').addEventListener('click', function (e) {
+
+            if( LoginState == "notFound"){
+                // 顯示登入燈箱
+                let loginBox = document.querySelector('.loginBox');
+                let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
+                if (style == "block") {
+                    document.getElementById('lightWrap').style.setProperty('display', "none");
+                    loginBox.style.setProperty('display', "none");
+                } else {
+                    loginBox.style.setProperty('display', "block");
+                    document.getElementById('lightWrap').style.setProperty('display', "block");
+                }
+            }else{
+                window.location.href = "memberCenter.php";
             }
+            
         })
         // 點擊關閉----------------------------
         document.querySelector('.loginBox .fa-times').addEventListener('click', function () {
@@ -18,6 +24,7 @@
             let style = window.getComputedStyle(loginBox, null).getPropertyValue('display');
             if (style == "block") {
                 loginBox.style.setProperty('display', "none");
+                document.getElementById('lightWrap').style.setProperty('display', "none");
             }
         })
         // 點擊註冊------------------------------
@@ -52,6 +59,7 @@
             let style = window.getComputedStyle(registeredBox, null).getPropertyValue('display');
             if (style == "block") {
                 registeredBox.style.setProperty('display', "none");
+                document.getElementById('lightWrap').style.setProperty('display', "none");
             }
         })
         // 點擊回到登入----------------------------
@@ -74,6 +82,7 @@
             let style = window.getComputedStyle(forgotBox, null).getPropertyValue('display');
             if (style == "block") {
                 forgotBox.style.setProperty('display', "none");
+                document.getElementById('lightWrap').style.setProperty('display', "none");
             }
         })
         // 點擊回到登入----------------------------

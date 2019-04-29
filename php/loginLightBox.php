@@ -1,4 +1,5 @@
 <!-- 登入燈箱 -->
+<div id="lightWrap"></div>
 <div class="loginBox">
         <i class="fas fa-times"></i>
         <h3>登入</h3>
@@ -19,42 +20,42 @@
         <table>
             <tr>
                 <th>會員帳號</th>
-                <td><input type="text"></td>
+                <td><input type="text" id="addMemID"></td>
             </tr>
-            <tr>
-                <td colspan="2" class="prompt"><span>此帳號已有人使用 !</span></td>
+            <tr id="IdStatus2" style="display:none">
+                <td colspan="2" class="prompt"><span>已有此帳號</span></td>
             </tr>
             <tr>
                 <th>會員密碼</th>
-                <td><input type="password"></td>
+                <td><input type="password"  id="addMemPsw"></td>
             </tr>
             <tr>
                 <th>會員姓名</th>
-                <td><input type="text"></td>
+                <td><input type="text" id="addMemName"></td>
             </tr>
             <tr>
                 <th>會員電話</th>
-                <td><input type="tel"></td>
+                <td><input type="tel" id="addMemTel"></td>
             </tr>
             <tr>
                 <th>會員信箱</th>
-                <td><input type="email"></td>
+                <td><input type="email" id="addMemMail"></td>
             </tr>
             <tr>
                 <th>性別</th>
                 <td>
                     <label>
-                        <input type="radio" name="sex" value="">
+                        <input type="radio" name="sex" value="女" class="addMemSex">
                         <i class="fas fa-venus fa-2x"></i>
                     </label>
                     <label>
-                        <input type="radio" name="sex" value="">
+                        <input type="radio" name="sex" value="男" class="addMemSex">
                         <i class="fas fa-mars fa-2x"></i>
                     </label>
                 </td>
             </tr>
             <tr>
-                <th colspan="2"><input type="submit" value="註冊帳號" class="commonBtnSmall"></th>
+                <th colspan="2"><input type="button" value="註冊帳號" class="commonBtnSmall" id="registeredButton" onclick="registered()"></th>
             </tr>
         </table>
         <div><a class="backLogin">回到登入</a></div>

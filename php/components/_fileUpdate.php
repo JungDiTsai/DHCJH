@@ -1,14 +1,28 @@
 <?php
-switch($_FILES['updateInput']['error']){
+require_once("_connectDHC.php");
+$memberNo=$_REQUEST['memberNo'];
+
+switch($_FILES['memberImg']['error']){
     case 0:
             
-            $dir = "../../images//flyerUpload//";
-            $FileNum=count(glob("$dir/*.*"))+1;
-            $from = $_FILES['updateInput']['tmp_name'];
-            $type = $_FILES['updateInput']['type'];
-			$to = $dir . "$FileNum.png";
+            $dir = "../../images//member//";
+            // $FileNum=count(glob("$dir/*.*"))+1;
+            $from = $_FILES['memberImg']['tmp_name'];
+            $type = $_FILES['memberImg']['type'];
+			$to = $dir . "member_$memberNo.png";
 			copy($from, $to);
-			echo "上傳成功<br>",$FileNum;
+			
+
+			try {
+				$sql = "UPDATE member SET memImgUrl='images/member/member_$memberNo.png' where memNo = $memberNo";
+				$products = $pdo->exec($sql);
+				
+			 } catch (PDOException $e) {
+				$errMsg .=  '錯誤原因' . $e->getMessage() . '<br>'; 
+				$errMsg .=  '錯誤行號' . $e->getLine() . '<br>';
+			 }
+
+			 echo "上傳成功<br>",$to;
 			break;	
 	case 1:
 			echo "上傳檔案太大, 不得超過", ini_get("upload_max_filesize") ,"<br>";

@@ -32,14 +32,7 @@
             th{
                padding: 10px 10px;
                text-align: center;
-               font-size: $buttonWord;
-
-               input[type="submit"]{
-                   width: 100px;
-                   height: 50px;
-                   border-radius: 5px;
-                   margin-top: 10px;
-               }
+               font-size: $contentWord;
             }
             td{     
                 padding: 10px 10px;
@@ -75,15 +68,14 @@
 }
 .memberImg{
     margin: auto ;
-    border-radius: 50%;
     width: 150px;
     height: 150px;
-    overflow: hidden;
     position: relative;
     text-align: center;
+    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
     img{
+        height: 100%;;
         cursor: pointer;
-        width: 160px;
     }
     &:hover{
         transform: scale(1.05);
@@ -92,7 +84,7 @@
 @media screen and (min-width:768px) {
     #memberData{
         padding-top: 150px;
-        
+
         fieldset{
             width: 70%;
             margin:50px auto 0;

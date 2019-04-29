@@ -1,7 +1,6 @@
 //判斷登入
-let LoginState="notFound";
-let OrderNo="notFound";
-console.log(LoginState)
+LoginState="notFound";
+OrderNo="notFound";
 window.addEventListener("load", function () {
     //產生XMLHttpRequest物件
     let xhr = new XMLHttpRequest();
@@ -24,15 +23,9 @@ window.addEventListener("load", function () {
     xhr.send(null);
 })
 
-
-
-
-
-
-
 //登入
 function sendLogin() {
-    //產生XMLHttpRequest物件
+        //產生XMLHttpRequest物件
     let xhr = new XMLHttpRequest();
     //註冊callback function
     xhr.onload = function () {
@@ -57,9 +50,6 @@ function sendLogin() {
     var data_info = "memId=" + document.getElementById("memId").value + "&memPsw="+ document.getElementById("memPsw").value;
     //送出資料
     xhr.send(data_info);
-
-
-
 }
 
 
@@ -71,7 +61,8 @@ function LoginOut() {
     //註冊callback function
     xhr.onload = function () {
         if (xhr.status == 200) { //server端可以正確的執行
-            console.log(xhr.responseText);
+            alert('已成功登出');
+            window.location.reload();
         } else { //其它
             alert(xhr.status);
         }
@@ -80,3 +71,61 @@ function LoginOut() {
     xhr.open("get", "php/components/_logout.php", true);
     xhr.send(null);
 }
+
+
+
+//註冊帳號
+function registered(){
+    //產生XMLHttpRequest物件
+    let xhr = new XMLHttpRequest();
+    //註冊callback function
+    xhr.onload = function () {
+        if (xhr.status == 200) { //server端可以正確的執行
+            alert(xhr.responseText);
+            window.location.reload();
+        } else { //其它
+            alert(xhr.status);
+        }
+    }
+    //設定好所要連結的程式
+    var url = "php/components/_addMember.php";
+    xhr.open("Post", url, true);
+    xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
+    let addMemID = document.getElementById('addMemID').value;
+    let addMemPsw = document.getElementById('addMemPsw').value;
+    let addMemMail = document.getElementById('addMemMail').value;
+    let addMemTel = document.getElementById('addMemTel').value;
+    let addMemName = document.getElementById('addMemName').value;
+    let addMemSex = document.querySelector('.addMemSex:checked').value;
+    let addMem = [addMemID,addMemPsw,addMemName,addMemTel,addMemMail,addMemSex];
+    var data_info = "addMember=" + JSON.stringify(addMem);
+    //送出資料
+    xhr.send(data_info);
+
+}
+
+//檢查帳號
+    document.getElementById('addMemID').addEventListener('change',function(e){
+        console.log(e.target.value);
+    //產生XMLHttpRequest物件
+    let xhr = new XMLHttpRequest();
+    //註冊callback function
+    xhr.onload = function () {
+        if (xhr.status == 200) { //server端可以正確的執行
+            if(xhr.responseText == "已有此帳號"){
+                document.getElementById('IdStatus2').style.display="table-row";
+                console.log(xhr.responseText);
+                document.getElementById('registeredButton').disabled=true;
+            }else{
+                document.getElementById('IdStatus2').style.display="none" ;
+                document.getElementById('registeredButton').disabled=false;
+                console.log(xhr.responseText);
+            }
+        } else { //其它
+            alert(xhr.status);
+        }
+    }
+    //設定好所要連結的程式
+    xhr.open("get", "php/components/_checkId.php?memId="+e.target.value, true);
+    xhr.send(null);
+    })

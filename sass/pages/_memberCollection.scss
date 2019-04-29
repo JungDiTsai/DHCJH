@@ -60,6 +60,7 @@
             }
             .toolBar{
                 font-size: $buttonWord;
+                display: flex;
                 .fa-heart{color: rgb(228, 20, 20);padding:5px 20px;}
                 .fa-share,.fa-ellipsis-h{
                     padding:5px 20px;
