@@ -546,6 +546,7 @@
     .bigCarcouselBox{
       .card{
         .ElongationBox{
+          
           .cardContent{
             padding: 20px;
             tr{
@@ -603,9 +604,9 @@
   .titleBgi {
     background-image: url("../images/titleNeonLightDarkBlueNew.gif");
     margin-top: 0;
+    // position: absolute;
     margin-bottom: 50px;
     opacity: 0;
-    transform: translateX(300%)
   }
 
   .wrap {
@@ -754,6 +755,7 @@
   }
   .thrScreen {
     .titleBgi{
+      transform: translateX(300%);
       margin-top: 80px;
     }
     .wrap {

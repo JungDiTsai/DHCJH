@@ -1,10 +1,11 @@
-@import "base/_reset.scss";
+// @import "base/_reset.scss";
 @import "base/_var.scss";
 @import "base/_color.scss";
 @import "layout/_grid.scss";
 @import "abstracts/_mixins.scss";
 //引入layout
 @import "layout/_header.scss";
+@import "layout/_footer.scss";
 //引入動畫
 @import "abstracts/_animations.scss";
 // 引入元件

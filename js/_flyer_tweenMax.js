@@ -3,7 +3,7 @@ function getRandom(min,max){
 };
 
 TweenMax.to('.firstScreen .titleBgi', 3, {
-    y: 150,
+    y: 100,
     alpha: 1,
     ease: Power3.easeOut,
 })
@@ -15,7 +15,7 @@ TweenMax.to('.firstScreen .titleBgi', 3, {
 let controller = new ScrollMagic.Controller();
  //動畫
 let animation_01 = TweenMax.to('.secScreen .titleBgi', 3, {
-     y: 100,
+     y: 125,
      alpha: 1,
      rotation: 360,
      ease: Elastic.easeOut,
@@ -41,7 +41,7 @@ var animation_02 = new TimelineMax({}).to('.thrScreen .titleBgi', 2, {
          triggerHook: 0.3,
          reverse:false
      }).setTween(animation_01,) //觸發動畫
-     .addIndicators()
+    //  .addIndicators()
      .addTo(controller)
 
  //觸發事件
@@ -50,6 +50,6 @@ var animation_02 = new TimelineMax({}).to('.thrScreen .titleBgi', 2, {
         triggerHook: 0.5,
         reverse:false
     }).setTween(animation_02) //觸發動畫
-    .addIndicators()
+    // .addIndicators()
     .addTo(controller)
 

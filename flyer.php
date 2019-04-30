@@ -207,7 +207,7 @@
                 <div class="card one">
                     <div class="ElongationBox">
                         <div class="blockBox">
-                            <img src="<?php echo $products[$number-1]['flyerImgUrl'] ?>" alt="">
+                            <img src="<?php echo $products[$number-3]['flyerImgUrl'] ?>" alt="">
                             <img src="images/flyer/flyerPin.png" alt="">
                             <img src="images/flyer/flyerPin.png" alt="">
                         </div>
@@ -215,26 +215,26 @@
                             <table>
                                 <tr>
                                     <th>主持人</th>
-                                    <td><?php echo $products[$number-1]['hostName'] ?></td>
+                                    <td><?php echo $products[$number-3]['hostName'] ?></td>
                                 </tr>
                                 <tr>
                                     <th>地點</th>
-                                    <td><?php echo $products[$number-1]['flyeradd'] ?></td>
+                                    <td><?php echo $products[$number-3]['flyeradd'] ?></td>
                                 </tr>
                                 <tr>
                                     <th>活動時間</th>
-                                    <td><?php echo $products[$number-1]['flyeDate'] ?></td>
+                                    <td><?php echo $products[$number-3]['flyeDate'] ?></td>
                                 </tr>
                                 <tr>
                                     <th>簡介</th>
-                                    <td><?php echo $products[$number-1]['flyerText'] ?></td>
+                                    <td><?php echo $products[$number-3]['flyerText'] ?></td>
                                 </tr>
                                 <tr>
                                     <th>參加人數</th>
                                     <td>
                                         <span>
-                                            <?php echo $products[$number-1]['peopleNumber']; ?>
-                                        </span>人<button class="commonBtnSmall joinAct" order="<?php echo $products[$number-1]['orderNo'] ?>">參加</button>
+                                            <?php echo $products[$number-3]['peopleNumber']; ?>
+                                        </span>人<button class="commonBtnSmall joinAct" order="<?php echo $products[$number-3]['orderNo'] ?>">參加</button>
                                     </td>
                                 </tr>
                             </table>
@@ -283,7 +283,7 @@
                 <div class="card three">
                     <div class="ElongationBox">
                         <div class="blockBox">
-                            <img src="<?php echo $products[$number-3]['flyerImgUrl'] ?>" alt="">
+                            <img src="<?php echo $products[$number-1]['flyerImgUrl'] ?>" alt="">
                             <img src="images/flyer/flyerPin.png" alt="">
                             <img src="images/flyer/flyerPin.png" alt="">
                         </div>
@@ -291,26 +291,26 @@
                         <table>
                                 <tr>
                                     <th>主持人</th>
-                                    <td><?php echo $products[$number-3]['hostName'] ?></td>
+                                    <td><?php echo $products[$number-1]['hostName'] ?></td>
                                 </tr>
                                 <tr>
                                     <th>地點</th>
-                                    <td><?php echo $products[$number-3]['flyeradd'] ?></td>
+                                    <td><?php echo $products[$number-1]['flyeradd'] ?></td>
                                 </tr>
                                 <tr>
                                     <th>活動時間</th>
-                                    <td><?php echo $products[$number-3]['flyeDate'] ?></td>
+                                    <td><?php echo $products[$number-1]['flyeDate'] ?></td>
                                 </tr>
                                 <tr>
                                     <th>簡介</th>
-                                    <td><?php echo $products[$number-3]['flyerText'] ?></td>
+                                    <td><?php echo $products[$number-1]['flyerText'] ?></td>
                                 </tr>
                                 <tr>
                                     <th>參加人數</th>
                                     <td>
                                         <span>
-                                            <?php echo $products[$number-3]['peopleNumber']; ?>
-                                        </span>人<button class="commonBtnSmall joinAct" order="<?php echo $products[$number-3]['orderNo'] ?>">參加</button>
+                                            <?php echo $products[$number-1]['peopleNumber']; ?>
+                                        </span>人<button class="commonBtnSmall joinAct" order="<?php echo $products[$number-1]['orderNo'] ?>">參加</button>
                                     </td>
                                 </tr>
                             </table>
@@ -406,11 +406,11 @@
         </div>
     </div>
 
-
     <script src="js/_login.js"></script>
     <script src="js/_font_loginLightBox.js"></script>
     <script src="js/_flyer_vue.js"></script>
     <script src="js/_flyer_tweenMax.js"></script>
+    <script src="js/navmenu.js"></script>
     <script>
         //點擊參加活動
         function joinAct(){

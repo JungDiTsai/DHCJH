@@ -1,10 +1,6 @@
 <?php
 try{
-    $dsn = "mysql:host=localhost;port=3306;dbname=dhc;charset=utf8";
-    $user = "root";
-    $password = "root";
-    $options = array(PDO::ATTR_CASE=>PDO::CASE_NATURAL, PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION);
-    $pdo = new PDO($dsn, $user, $password, $options);
+    require_once("php/components/_connectDHC.php");
     $sql = "select * from robot where locate(robotAsk,:robotAsk)>0";
     $robotAsk = $pdo->prepare($sql);
     $robotAsk -> bindValue(":robotAsk",$_REQUEST["robotAsk"]);

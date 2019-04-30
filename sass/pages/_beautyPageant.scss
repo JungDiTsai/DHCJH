@@ -1,3 +1,6 @@
+footer #footerBgiNew{
+  position: relative;
+}
 .loginbox1{
   display: none;
   width: 300px;
@@ -202,9 +205,9 @@ li{
         flex-grow: 1;
         align-content: center;
         color:#eee;
-        line-height: 44px;
+        line-height: 30px;
         text-align: left;
-        &:nth-child(4){
+        &:nth-child(5){
           flex-grow: 3;
           text-align: right;
         }
@@ -323,6 +326,10 @@ li{
         .beautyDiscIgMem{
         display: flex;
         padding: 0 0 10px 0;
+        .beautyDiscIgMemStage{
+          width: 302px;
+          height: 302px;
+        }
           .beautyDiscIgTopic{
             height: 50px;
             width: 200%;
@@ -392,10 +399,14 @@ li{
             }
           }
         }
-        .beautyDiscIgMemStage{
           img{
             width: 100%;
             filter: drop-shadow(2px 2px 4px #444);
+          }
+          .likeHeart{
+            width: 30px;
+            height:30px;
+            cursor: pointer;
           }
         }
         .beautyDiscForm{
@@ -444,7 +455,7 @@ li{
         }
       }
     }
-  }
+  
 @media screen and (min-width:1200px){
   .beautyDiscIgMemTextContainerWrap{
     border-radius: 15px;
@@ -675,6 +686,10 @@ li{
               font-family: '微軟正黑';
               font-size: 12px;
              }
+             .likeHeart{
+              width: 30px;
+              height:30px;
+            }
             img{
                 margin: 0px;
                 width: calc(100% - 60px);
@@ -688,6 +703,7 @@ li{
             }
         }
     }
+    
     #beautyRankingimgsMonth{
       display: none;
       transition: .5s;
@@ -708,12 +724,21 @@ li{
           font-family: '微軟正黑';
           font-size: 12px;
          }
+         .likeHeart{
+          width: 30px;
+          height:30px;
+        }
+        .beautyDiscIgMemStage{
+          width: 302px;
+          height: 302px;
+        }
         img{
             margin: 0px;
             width: calc(100% - 60px);
             height: auto;
             padding: 0px;
             padding-bottom: 0px;
+            
         }
         h3{
           padding-bottom: 15px;

@@ -72,9 +72,9 @@ var section_01 = new ScrollMagic.Scene({
 //首頁第二屏動畫   
 
 var tlA = new  TimelineMax();
-var tlA_01 = new TweenMax.to('.popOut' , 1.2 ,{ 
+var tlA_01 = new TweenMax.to('.popOut' , 1.4 ,{ 
     scale:1,
-    ease: Elastic.easeOut.config(1, 0.4)
+    ease: Elastic.easeOut.config(1, 0.5)
 });
 var tlA_02 = new TweenMax.to('#hint1' , 1 ,{ 
     y:-380,
@@ -106,23 +106,25 @@ var section_02 = new ScrollMagic.Scene({
 
 var tlB = new  TimelineMax();
 
-var tlB_02 = new TweenMax.to('#hint2' , 1 ,{ 
+var tlB_01 = new TweenMax.to('.tryCustShowAni' , .8 ,{ 
+    scale:1,
+    ease: Elastic.easeOut.config(1, 0.8),
+    opacity:1,
+});
+var tlB_03 = new TweenMax.to('#hint2' , 1 ,{ 
     y:-380,
     ease: Elastic.easeOut.config(1, 0.8),
     opacity:1,
     delay:1,
 });
-var tlB_03 = new TweenMax.to('#hint2' , 1.2 ,{ 
-    opacity:0,
-    delay:2.5,
-var tlB_03 = new TweenMax.to('#hint2' , 1.5 ,{ 
+var tlB_04 = new TweenMax.to('#hint2' , 1.5 ,{ 
     opacity:0,
     y:380,
     delay:3.5,
 });
 
 var controllerB = new ScrollMagic.Controller();
-var animeB = tlB.add(tlB_02).add(tlB_03);
+var animeB = tlB.add(tlB_01).add(tlB_03).add(tlB_04);
 
 var section_0B = new ScrollMagic.Scene({
     triggerElement: "#triggerB",
