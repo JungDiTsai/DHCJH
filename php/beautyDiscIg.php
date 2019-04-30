@@ -77,12 +77,10 @@
 						"</div>"+
 						"<div class='beautyRankingSocialBtns'>"+
 							"<i><img class='likeHeart' src='images/like.png' alt='喜歡收藏'></i>"+
-							"<span class='display:none;'></span>"+
-							"<i class='far fa-comment' alt='留言'></i>"+
-							"<i class='fas fa-external-link-alt' alt='分享'></i>"+
+							"<span style='display:none;'></span>"+
+							"<p class='likeCount'>"+n['orderVote']+"個喜歡</p>"+
 							"<i class='far fa-bookmark' alt='分享'></i>"+
 						"</div>"+
-						"<p class='likeCount'>"+n['orderVote']+"個喜歡</p>"+
 						"<div class='beautyDiscIgMemTextContainerWrap'>"+
 						//留言內容開始
 						// n['memNo']+
@@ -109,9 +107,9 @@
         for(let i=0; i< hearts.length; i++){
             hearts[i].onclick = function(e){
 
-                let orderNo = e.target.parentNode.nextElementSibling.innerText;
+                let orderNo = e.target.parentNode.nextElementSibling.nextElementSibling.innerText;
                 let amount;
-    
+				console.log(orderNo);
 
                 if(e.target.src.indexOf("images/like.png") != -1 ){
                     e.target.src = "images/likeAlready.png";
@@ -121,18 +119,20 @@
                     amount = -1;
 				}
 				console.log(orderNo);
-                let url = "updateVotes.php?orderNo=" + <?php if(isset($_SESSION['member'])){print_r($_SESSION['member'][0]['orderNo']);}else{ echo "images/member/member.jpg";} ?> + "&amount=" + amount;
+				let url = "updateVotes.php?orderNo=" + "<?php if(isset($_SESSION['member'])){print_r($_SESSION['member'][0]['orderNo']);}else{ echo "images/member/member.jpg";} ?>" + "&amount=" + amount;
+				
                 var xhr2 = new XMLHttpRequest();
                 xhr2.onload = function(){
-                    //console.log(xhr2.responseText);
-                    var str = e.target.parentNode.parentNode.nextElementSibling.innerHTML.replace("個喜歡","");
+                    // console.log(xhr2.responseText);
+                    var str = e.target.parentNode.nextElementSibling.nextElementSibling.innerHTML.replace("個喜歡","");
                     console.log("------",parseInt(str)+ amount +"個喜歡" );
-                    e.target.parentNode.parentNode.nextElementSibling.innerHTML = parseInt(str)+ amount +"個喜歡";
+                    e.target.parentNode.nextElementSibling.nextElementSibling.innerHTML = parseInt(str)+ amount +"個喜歡";
                 }
                 xhr2.open("get",url,true);
                 xhr2.send(null);
             }
-        }
+		}
+		
 				//註冊每個表單接受訊息
 				for(let i=0;i<document.getElementsByClassName("DiscSent").length;i++){
 					console.log('5566');
