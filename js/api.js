@@ -1,14 +1,19 @@
 //////先選到月份日期 
+window.addEventListener("load", function(){
+    getInfo();
+    calendar();
+})
 var nextmon= document.getElementById('nextMon');
 nextmon.addEventListener('click',function(){
-    calendar();
+    // calendar();
 });
 function calendar(){
     var custmonth= document.querySelector('#calendarTitle').innerText;
-    // console.log(custmonth);
+    console.log(custmonth);
 
-    var custday = document.querySelectorAll('#days li');
+    var custday = document.querySelectorAll('#caleBody td');   
     var custdayLen = custday.length;
+    console.log(custdayLen);
 
     ////今天日期
     dateObj=new Date();
@@ -22,7 +27,7 @@ function calendar(){
             console.log('點擊',dateNum);
             console.log('原本',todaydata);
 
-            //點日期給天氣
+//             //點日期給天氣
             if(dateNum ==todaydata+1){
                 console.log('1');
                 otherdata=todaydata+1;
@@ -48,14 +53,11 @@ function calendar(){
         
     }
 };
-//天氣
+// 天氣
 function $id(id){
     return document.getElementById(id);
 } 
-window.addEventListener("load", function(){
-    getInfo();
-    calendar();
-})
+
 
 function getInfo(){
 	var xhr = new XMLHttpRequest();
@@ -77,27 +79,117 @@ function showWeather(jsonStr ,todaydata,otherdata){
     today = JSON.parse(jsonStr);
     console.log('get',todaydata ,otherdata );
     if(todaydata==otherdata){
-        $id("weathertest").innerText = today.list[0].weather[0].main;
+         var weathertext=today.list[0].weather[0].main;
+         if(weathertext=='Clouds'){
+              weathertext = '<img src="./images/api/cloud.png" alt="pic">';
+         }else if(weathertext=='Clear'){
+             weathertext = '<img src="./images/api/sun.png" alt="pic">';
+         }else if(weathertext=='Rain'){
+             weathertext = '<img src="./images/api/rain.png" alt="pic">';
+         }
+        $id("weather").innerHTML = weathertext;
     }else if(otherdata== (todaydata+1)){
-        $id("weathertest").innerText = today.list[8].weather[0].main;
+        var weathertext = today.list[8].weather[0].main;
+        if(weathertext=='Clouds'){
+            weathertext = '<img src="./images/api/cloud.png" alt="pic">';
+       }else if(weathertext=='Clear'){
+           weathertext = '<img src="./images/api/sun.png" alt="pic">';
+       }else if(weathertext=='Rain'){
+           weathertext = '<img src="./images/api/rain.png" alt="pic">';
+       }
+         $id("weather").innerHTML = weathertext;
     }else if(otherdata==(todaydata+2)){
-        $id("weathertest").innerText = today.list[16].weather[0].main;
-        console.log(today.list[16].weather[0].main)
+        var weathertext= today.list[16].weather[0].main;
+       
+            if(weathertext=='Clouds'){
+                    weathertext = '<img src="./images/api/2.png" alt="pic">';
+            }else if(weathertext=='Clear'){
+                weathertext = '<img src="./images/api/sun.png" alt="pic">';
+            }else if(weathertext=='Rain'){
+                weathertext = '<img src="./images/api/3.png" alt="pic">';
+            }
+         $id("weather").innerHTML = weathertext;
     }else if(otherdata==(todaydata+3)){
-        $id("weathertest").innerText = today.list[24].weather[0].main;
+        var weathertext = today.list[24].weather[0].main;
+        
+            if(weathertext=='Clouds'){
+                    weathertext = '<img src="./images/api/2.png" alt="pic">';
+            }else if(weathertext=='Clear'){
+                weathertext = '<img src="./images/api/sun.png" alt="pic">';
+            }else if(weathertext=='Rain'){
+                weathertext = '<img src="./images/api/3.png" alt="pic">';
+            }
+         $id("weather").innerHTML = weathertext;
     }else if(otherdata==(todaydata+4)){
-        $id("weathertest").innerText = today.list[32].weather[0].main;
+        var weathertext = today.list[32].weather[0].main;
+            if(weathertext=='Clouds'){
+            weathertext = '<img src="./images/api/2.png" alt="pic">';
+            }else if(weathertext=='Clear'){
+                weathertext = '<img src="./images/api/sun.png" alt="pic">';
+            }else if(weathertext=='Rain'){
+                weathertext = '<img src="./images/api/3.png" alt="pic">';
+            }
+            $id("weather").innerHTML = weathertext;
     }
-     
-    
-    
-    // var dateString = today.list[0].dt_txt ;//撈出年月日
-    //  weatherDay = dateString.substr(8,3) //撈出日期
-    // console.log(weatherDay);
-    // console.log(today.list[0].dt_txt);
-    // console.log(dateString.substr(8,3));
-    // console.log(today.list[16].weather[0].main);
   };
+// function showWeather(jsonStr ,todaydata,otherdata){
+//     today = JSON.parse(jsonStr);
+//     console.log('get',todaydata ,otherdata );
+//     if(todaydata==otherdata){
+//          var weathertext=today.list[0].weather[0].main;
+//          if(weathertext=='Clouds'){
+//               weathertext = '<img src="./images/api/2.png" alt="pic">';
+//          }else if(weathertext=='Clear'){
+//              weathertext = '<img src="./images/api/sun.png" alt="pic">';
+//          }else if(weathertext=='Rain'){
+//              weathertext = '<img src="./images/api/3.png" alt="pic">';
+//          }
+        
+//         $id("weather").innerHTML = weathertext;
+//     }else if(otherdata== (todaydata+1)){
+//         var weathertext = today.list[8].weather[0].main;
+//         if(weathertext=='Clouds'){
+//             weathertext = '<img src="./images/api/2.png" alt="pic">';
+//        }else if(weathertext=='Clear'){
+//            weathertext = '<img src="./images/api/sun.png" alt="pic">';
+//        }else if(weathertext=='Rain'){
+//            weathertext = '<img src="./images/api/3.png" alt="pic">';
+//        }
+//          $id("weather").innerHTML = weathertext;
+//     }else if(otherdata==(todaydata+2)){
+//         var weathertext= today.list[16].weather[0].main;
+       
+//             if(weathertext=='Clouds'){
+//                     weathertext = '<img src="./images/api/2.png" alt="pic">';
+//             }else if(weathertext=='Clear'){
+//                 weathertext = '<img src="./images/api/sun.png" alt="pic">';
+//             }else if(weathertext=='Rain'){
+//                 weathertext = '<img src="./images/api/3.png" alt="pic">';
+//             }
+//          $id("weather").innerHTML = weathertext;
+//     }else if(otherdata==(todaydata+3)){
+//         var weathertext = today.list[24].weather[0].main;
+        
+//             if(weathertext=='Clouds'){
+//                     weathertext = '<img src="./images/api/2.png" alt="pic">';
+//             }else if(weathertext=='Clear'){
+//                 weathertext = '<img src="./images/api/sun.png" alt="pic">';
+//             }else if(weathertext=='Rain'){
+//                 weathertext = '<img src="./images/api/3.png" alt="pic">';
+//             }
+//          $id("weather").innerHTML = weathertext;
+//     }else if(otherdata==(todaydata+4)){
+//         var weathertext = today.list[32].weather[0].main;
+//             if(weathertext=='Clouds'){
+//             weathertext = '<img src="./images/api/2.png" alt="pic">';
+//             }else if(weathertext=='Clear'){
+//                 weathertext = '<img src="./images/api/sun.png" alt="pic">';
+//             }else if(weathertext=='Rain'){
+//                 weathertext = '<img src="./images/api/3.png" alt="pic">';
+//             }
+//             $id("weather").innerHTML = weathertext;
+//     }
+//   };
 
 
 
