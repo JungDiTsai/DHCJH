@@ -33,7 +33,7 @@ try{
     <script src="js/TweenMax.min.js"></script>
     <script src="js/ScrollMagic.min.js"></script>
     <script src="js/animation.gsap.min.js"></script>
-    <!---開發時除蟲蟲用的 上線時要刪掉--->
+    <!---開發時除蟲蟲用的 上線時要刪掉-->
     <script src="js/debug.addIndicators.min.js"></script>
     <script src="js/scrollMagic2.js" defer></script>
     
@@ -584,18 +584,7 @@ try{
                                 <!-- 特效 -->
                                 <div id="effectItem" class="custItem effectItem">
                                     <div id="effectCustItemContent" class="custItemContent effectItem">
-                                        <?php 
-                                            $sql = "select * from effects";
-                                            $effects = $pdo->query($sql);
-                                            $i = 1;
-                                            while( $effect = $effects->fetch(PDO::FETCH_ASSOC) ){
-                                        ?>
-                                        <div id="fireEffect<?php echo $i ?>" class="custItemContentInfo fireInfo">
-                                            <img src="<?php echo $effect["effectsImgUrl"]; ?>" alt="">
-                                            <p><?php echo $effect["effectsName"]; ?></p>
-                                            <p>$<?php echo $effect["effectsPrice"]; ?></p>
-                                        </div>
-                                        <?php $i++; } ?>
+                                        
                                         <?php
                                             $i = 1;
                                             while( $firework = $fireworks->fetch(PDO::FETCH_ASSOC) ){
@@ -604,6 +593,18 @@ try{
                                             <img src="<?php echo $firework["fireworkImgUrl"] ?>" alt="">
                                             <p><?php echo $firework["fireworkName"] ?></p>
                                             <p>$<?php echo $firework["fireworkPrice"] ?></p>
+                                        </div>
+                                        <?php $i++; } ?>
+                                        <?php 
+                                          $sql = "select * from effects";
+                                          $effects = $pdo->query($sql);
+                                          $i = 1;
+                                          while( $effect = $effects->fetch(PDO::FETCH_ASSOC) ){
+                                        ?>
+                                        <div id="fireEffect<?php echo $i ?>" class="custItemContentInfo fireInfo">
+                                            <img src="<?php echo $effect["effectsImgUrl"]; ?>" alt="">
+                                            <p><?php echo $effect["effectsName"]; ?></p>
+                                            <p effectsNo="<?php echo $effect["effectsNo"]; ?>">$<?php echo $effect["effectsPrice"]; ?></p>
                                         </div>
                                         <?php $i++; } ?>
                                     </div>
