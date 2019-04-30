@@ -51,13 +51,13 @@
                         LoginState[0][1];
 
                     //會員PSW
-                    let pswdata = LoginState[0][2].split("").length;
-                    let str = '';
-                    for (let i = 0; i < pswdata; i++) {
-                        str += "*";
-                    }
-                    document.querySelectorAll('#memberData tr')[1].getElementsByTagName('p')[0].innerHTML =
-                        str;
+                    // let pswdata = LoginState[0][2].split("").length;
+                    // let str = '';
+                    // for (let i = 0; i < pswdata; i++) {
+                    //     str += "*";
+                    // }
+                    // document.querySelectorAll('#memberData tr')[1].getElementsByTagName('p')[0].innerHTML =
+                    //     str;
 
                     //會員Mail
                     document.querySelectorAll('#memberData tr')[5].getElementsByTagName('input')[0].value =
