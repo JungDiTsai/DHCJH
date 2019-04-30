@@ -22,7 +22,7 @@ switch($_FILES['memberImg']['error']){
 				$errMsg .=  '錯誤行號' . $e->getLine() . '<br>';
 			 }
 
-			 echo "上傳成功<br>",$to;
+			 echo "images/member/member_$memberNo.png";
 			break;	
 	case 1:
 			echo "上傳檔案太大, 不得超過", ini_get("upload_max_filesize") ,"<br>";

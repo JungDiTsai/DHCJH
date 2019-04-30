@@ -168,7 +168,7 @@ try{
 
     <footer>
             <p>Copyright © 2019 Taiwan Great Stage Inc.</p>
-            <p>All rights reserved</p>
+            <p id="132">All rights reserved</p>
             <div>
                 <a href="#"><img src="images/facebook (1).png" alt="FB"></a> 
                 <a href="#"><img src="images/instagram (1).png" alt="IG"></a> 

@@ -23,7 +23,7 @@
             $sql ="UPDATE flyer set peopleNumber = $peopleNumber+1 where flyerNo = $flyerNo;";
             $products = $pdo->exec($sql);
 
-            echo '你已經報名參加';
+            echo $peopleNumber+1;
         }else{
             echo "此活動暫時不開放參加";
         }

@@ -1,4 +1,8 @@
-<?php session_start(); ?>
+<?php session_start(); 
+    if(!isset($_SESSION['member'])){
+        header('Location: flyer.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,6 +33,7 @@
             <div class="memberImg min_view">
                 <label for="memberImgFile">
                     <img src="<?php echo $_SESSION["member"][0][6]?>" alt="">
+                    <i class="fas fa-camera-retro fa-2x"></i>
                 </label>
             </div>
             <form id="myform">
@@ -42,12 +47,12 @@
                     <table id="memberData">
                         <tr>
                             <th>會員帳號</th>
-                            <td><input type="text" value="<?php echo $_SESSION["member"][0][1]?>"></td>
+                            <td><input type="text" value="<?php echo $_SESSION["member"][0][1]?>" disabled></td>
                         </tr>
                         <tr>
                             <th>會員密碼</th>
                             <td class="memPswInfo">
-                                <p><?php echo $_SESSION["member"][0][2]?></p>
+                                <p><i class="fas fa-key"></i></p>
                                 <i class="fas fa-pen"></i>
                             </td>
                         </tr>
@@ -100,8 +105,8 @@
             xhr.onreadystatechange = function(){
               if( xhr.readyState == XMLHttpRequest.DONE ){ //server端執行完畢
                 if( xhr.status == 200){ //server端可以正確的執行
-                     console.log(xhr.responseText);
-                     window.location.reload();
+                     console.log('上傳會員圖片路徑 :'+xhr.responseText);
+                     window.location.reload(true);
                 }else{ //其它
                     alert( xhr.status );
                 }

@@ -1383,6 +1383,15 @@ footer img {
   vertical-align: top;
 }
 
+#memberNav .memberImg i {
+  left: 0;
+  margin: auto;
+  position: absolute;
+  color: rgba(255, 255, 255, 0.7);
+  right: 0;
+  bottom: 0;
+}
+
 #memberNav h3 {
   margin-top: 25px;
   text-align: center;
@@ -1653,6 +1662,15 @@ footer img {
 .memberImg img {
   height: 100%;
   cursor: pointer;
+}
+
+.memberImg i {
+  left: 0;
+  margin: auto;
+  position: absolute;
+  color: rgba(255, 255, 255, 0.7);
+  right: 0;
+  bottom: 0;
 }
 
 .memberImg:hover {

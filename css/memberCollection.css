@@ -1383,6 +1383,15 @@ footer img {
   vertical-align: top;
 }
 
+#memberNav .memberImg i {
+  left: 0;
+  margin: auto;
+  position: absolute;
+  color: rgba(255, 255, 255, 0.7);
+  right: 0;
+  bottom: 0;
+}
+
 #memberNav h3 {
   margin-top: 25px;
   text-align: center;
@@ -1586,6 +1595,8 @@ footer img {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .cardGroup .card .font .toolBar .fa-heart {
@@ -1595,6 +1606,9 @@ footer img {
 
 .cardGroup .card .font .toolBar .fa-share, .cardGroup .card .font .toolBar .fa-ellipsis-h {
   padding: 5px 20px;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
   height: 20px;
   color: white;
   cursor: pointer;
@@ -1605,8 +1619,7 @@ footer img {
 }
 
 .cardGroup .card .font .toolBar span {
-  font-size: 16px;
-  font-family: Microsoft JhengHei;
+  font-size: 20px;
 }
 
 .cardGroup .card .back {

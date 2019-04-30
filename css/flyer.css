@@ -1653,6 +1653,52 @@ footer img {
   cursor: pointer;
 }
 
+#intoLightBox {
+  display: none;
+  width: 300px;
+  height: 500px;
+  overflow: auto;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  border-radius: 20px;
+  background: #000;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  border: 5px solid #51F3F0;
+  z-index: 5;
+}
+
+#intoLightBox h4 {
+  padding: 20px 0 10px;
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+}
+
+#intoLightBox ul li {
+  color: #fff;
+  list-style: none;
+  padding: 10px 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+#intoLightBox ul li:hover {
+  color: #51F3F0;
+}
+
+#intoLightBox ul label input {
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
+}
+
+#intoLightBox ul label input:checked + li {
+  font-weight: bold;
+  color: yellow;
+}
+
 @media screen and (min-width: 768px) {
   .blackBox .envelopeLightBox #hiddenEnvelopeLightBox {
     right: -40px;

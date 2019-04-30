@@ -1383,6 +1383,15 @@ footer img {
   vertical-align: top;
 }
 
+#memberNav .memberImg i {
+  left: 0;
+  margin: auto;
+  position: absolute;
+  color: rgba(255, 255, 255, 0.7);
+  right: 0;
+  bottom: 0;
+}
+
 #memberNav h3 {
   margin-top: 25px;
   text-align: center;
@@ -1577,9 +1586,10 @@ footer img {
 
 #memberOrder .allOrderBox table {
   background: #fff;
-  width: 100%;
+  width: 70%;
   border-radius: 8px;
   margin: auto;
+  padding: 20px 20px;
 }
 
 #memberOrder .allOrderBox table tr:hover {
@@ -1592,11 +1602,12 @@ footer img {
 }
 
 #memberOrder .allOrderBox table th {
+  text-align: left;
   font-size: 16px;
 }
 
 #memberOrder .allOrderBox table td {
-  text-align: center;
+  text-align: left;
   font-size: 16px;
   color: #5c5c5c;
 }

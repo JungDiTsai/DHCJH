@@ -1383,6 +1383,15 @@ footer img {
   vertical-align: top;
 }
 
+#memberNav .memberImg i {
+  left: 0;
+  margin: auto;
+  position: absolute;
+  color: rgba(255, 255, 255, 0.7);
+  right: 0;
+  bottom: 0;
+}
+
 #memberNav h3 {
   margin-top: 25px;
   text-align: center;
@@ -1562,6 +1571,8 @@ footer img {
 }
 
 .col-md-10 .myFootprint .myMessage {
+  height: 500px;
+  overflow: auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 10px auto;
@@ -1578,13 +1589,8 @@ footer img {
   border-bottom: 1.5px solid rgba(25, 25, 25, 0.5);
 }
 
-.col-md-10 .myFootprint .myMessage p a {
-  text-decoration: none;
-  color: #FF1361;
-}
-
-.col-md-10 .myFootprint .myMessage p a:hover {
-  color: #eca92d;
+.col-md-10 .myFootprint .myMessage p span {
+  font-family: Microsoft JhengHei;
 }
 
 .col-md-10 .myFootprint .myMessage p:last-of-type {

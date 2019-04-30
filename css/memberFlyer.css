@@ -1383,6 +1383,15 @@ footer img {
   vertical-align: top;
 }
 
+#memberNav .memberImg i {
+  left: 0;
+  margin: auto;
+  position: absolute;
+  color: rgba(255, 255, 255, 0.7);
+  right: 0;
+  bottom: 0;
+}
+
 #memberNav h3 {
   margin-top: 25px;
   text-align: center;
@@ -1590,6 +1599,10 @@ footer img {
 .AllflyerBox table tbody tr:hover {
   background-image: -webkit-gradient(linear, right top, left top, from(#ff8177), color-stop(0%, #ff867a), color-stop(21%, #ff8c7f), color-stop(52%, #f99185), color-stop(78%, #cf556c), to(#b12a5b));
   background-image: linear-gradient(to left, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+}
+
+.AllflyerBox table td {
+  font-family: Microsoft JhengHei;
 }
 
 .AllflyerBox table td:first-of-type {

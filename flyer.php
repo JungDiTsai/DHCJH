@@ -360,7 +360,12 @@
         </div>
     </article>
 
-    
+    <!-- 匯入訂單燈箱 -->
+    <div id="intoLightBox">
+        <h4>你的訂單</h4>
+        <ul>
+        </ul>
+    </div>
     <!-- 宣傳單燈箱 -->
     <div class="blackBox">
         <div class="envelopeLightBox">
@@ -419,27 +424,37 @@
             
             for (let i = 0; i < joinAct.length; i++) {
                 joinAct[i].addEventListener('click',function(e){
-                    
-                    let orderNo = e.target.getAttribute('order');
 
-                    //依統計人數狀態拒絕執行或執行
-                    
-                    var xhr = new XMLHttpRequest();
-                    //註冊callback function
-                    xhr.onreadystatechange = function(){
-                        if( xhr.readyState == XMLHttpRequest.DONE ){ //server端執行完畢
-                          if( xhr.status == 200){ //server端可以正確的執行
-                               alert(xhr.responseText);
-                          }else{ //其它
-                              alert( xhr.status );
-                          }
-                        }
-                    } 
-                    //設定好所要連結的程式
-                    var url = "php/components/_joinAct.php?orderNo=" + orderNo ;
-                    xhr.open("get", url, true);
-                    //送出資料
-                    xhr.send(null);
+                    let disabled = e.target.getAttribute('disabled');
+
+                        if(disabled!=true){
+
+                        let orderNo = e.target.getAttribute('order');
+                        e.target.setAttribute('disabled',true);
+                        //依統計人數狀態拒絕執行或執行
+                        
+                        var xhr = new XMLHttpRequest();
+                        //註冊callback function
+                        xhr.onreadystatechange = function(){
+                            if( xhr.readyState == XMLHttpRequest.DONE ){ //server端執行完畢
+                              if( xhr.status == 200){ //server端可以正確的執行
+                                    if(xhr.responseText!='此活動暫時不開放參加'){
+                                        alert('你已經報名參加');
+                                        document.getElementById('MyNumber').innerText = xhr.responseText;
+                                    }else{
+                                        alert('此活動暫時不開放參加');
+                                    }
+                              }else{ //其它
+                                  alert( xhr.status );
+                              }
+                            }
+                        } 
+                        //設定好所要連結的程式
+                        var url = "php/components/_joinAct.php?orderNo=" + orderNo ;
+                        xhr.open("get", url, true);
+                        //送出資料
+                        xhr.send(null);
+                    }
 
                     event.cancelBubble=true;
                 })
@@ -473,28 +488,33 @@
                 alert('請先有花車才能使用此功能喔');
             }
             else{
-                let str = '';
-                 for (let i = 0; i < LoginState.length; i++) {
-                     if(i==LoginState.length-1){
-                         str +=LoginState[i]['orderName'];
-                     }else{
-                         str +=LoginState[i]['orderName']+',';
-                     }
+                document.getElementById('intoLightBox').style.display = 'block';
 
+                 for (let i = 0; i < LoginState.length; i++) {
+                     let label = document.createElement('label');
+                     let input = document.createElement('input');
+                     input.setAttribute('type','radio');
+                     input.setAttribute('name','order');
+                     label.appendChild(input);
+                     let li = document.createElement('li');
+                     li.innerText = LoginState[i]['orderName'];
+                     li.setAttribute('orderNo',LoginState[i]['orderNo']);
+                     label.appendChild(li);
+                     document.querySelector('#intoLightBox ul').appendChild(label);
                  }
-                 let enterData = prompt(`請輸入你要匯入訂單的名稱  ${str}`,'');
-                 if(str.match(enterData)==null||str.match(enterData)==""){
-                     alert('沒有這個訂單請重新輸入');
-                 }
-                 else{
-                    OrderNo = enterData;
-                     console.log(OrderNo);
-                     alert('已匯入您的訂單');
-                     let clothCurtain = document.querySelector('.clothCurtain');
-                     clothCurtain.style.setProperty('animation', `blurFadeInOut 2s ease-in backwards`);
-                     setTimeout(function () {
-                         clothCurtain.style.display = "none"
-                     }, 2000);
+                 let Allli = document.querySelectorAll('#intoLightBox ul li');
+                 for (let j = 0; j < Allli.length; j++) {
+                     Allli[j].addEventListener('click',function(e){
+                        OrderNo = e.target.getAttribute('orderNo');
+                        alert('已匯入您的訂單');
+                        let clothCurtain = document.querySelector('.clothCurtain');
+                        clothCurtain.style.setProperty('animation', `blurFadeInOut 2s ease-in backwards`);
+                            document.getElementById('intoLightBox').style.display = 'none';
+                        setTimeout(function () {
+                            clothCurtain.style.display = "none";
+                        }, 2000);
+                     });
+                     
                  }
             }
         })
@@ -683,12 +703,14 @@
             if (nowScrollHeight >= secScreen) {
                 document.querySelector('.one').style.setProperty('z-index', '5');
                 document.querySelector('.bigCarcouselBox').style.setProperty('opacity', '1');
-                document.querySelector('.bigCarcouselBox').style.setProperty('bottom', '150px')
+                
                 //判斷螢幕大小對 相框加大
                 if (screenWidth >= 768) {
                     document.querySelector('.bigCarcouselBox').style.setProperty('transform', 'scale(1.2)');
+                    document.querySelector('.bigCarcouselBox').style.setProperty('bottom', '150px');
                 } else {
                     document.querySelector('.bigCarcouselBox').style.setProperty('transform', 'scale(1)');
+                    document.querySelector('.bigCarcouselBox').style.setProperty('bottom', '50px');
                 }
                 document.querySelector('.bigCarcouselBox').style.setProperty('position', 'fixed')
                 document.querySelectorAll('.card')[0].querySelector('.cardContent').style.setProperty(

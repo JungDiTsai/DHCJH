@@ -1383,6 +1383,15 @@ footer img {
   vertical-align: top;
 }
 
+#memberNav .memberImg i {
+  left: 0;
+  margin: auto;
+  position: absolute;
+  color: rgba(255, 255, 255, 0.7);
+  right: 0;
+  bottom: 0;
+}
+
 #memberNav h3 {
   margin-top: 25px;
   text-align: center;
@@ -1532,10 +1541,11 @@ table {
   width: 100%;
   margin: 20px auto;
   text-align: center;
-  font-size: 24px;
 }
 
 table td {
+  font-size: 18px;
+  font-family: Microsoft JhengHei;
   padding: 5px;
   vertical-align: middle;
   color: #5c5c5c;
