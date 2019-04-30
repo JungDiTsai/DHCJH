@@ -26,7 +26,7 @@ a{
 #gameHub{
   opacity:0.85;
   position: fixed;
-  left: -370px;
+  left: -385px;
   bottom: 100px;
   width: 80px;
   height: 65px;
@@ -213,8 +213,8 @@ a{
 @keyframes gameCar{
   0%{transform:translateX(10px);}
   20%{transform:translateX(-20px);}
-  40%{transform:translateX(-100px);}
-  60%{transform:translateX(-100px);}
+  40%{transform:translateX(-90px);}
+  60%{transform:translateX(-90px);}
   80%{transform:translateX(-10px);}
   100%{transform:translateX(10px);}
 }
@@ -236,7 +236,7 @@ a{
     max-width: 1200px;
 }
 #carIntroWrap{
-    padding-top:80px; 
+    padding-top:100px; 
     position: relative;
     background-image: url(../images/carIntroWrapBgi.jpg);
     background-repeat: no-repeat;
@@ -319,7 +319,7 @@ a{
   left: 0;
   right: 0;
   //outline: 5px blue solid;
-  height:100vh;
+  height: 100vh;
   width: 100%;
   position: relative;
   perspective: 900px;
@@ -330,7 +330,7 @@ a{
   transform:scale(.2);
   width: 80%;
   margin:auto;
-  margin-top:52vh;
+  margin-top:48vh;
   font-family: "wangHangMing";
   font-size: 32px;
   color: #ffffbd;
@@ -752,7 +752,7 @@ a{
         right: 0;
         bottom: 0;
         margin: auto;
-        animation: turn2 12s alternate infinite;
+        animation: turn2 90s alternate infinite;
     }
     .img2{
         width: 80px;
@@ -762,7 +762,7 @@ a{
         right: 0;
         bottom: 0;
         margin: auto;
-        animation: turn3 18s alternate infinite;
+        animation: turn3 90s alternate infinite;
     }
 }
 
@@ -777,9 +777,13 @@ a{
     background-position: center;
     background-size: cover;
     z-index: 0;
-    height:100vh;
+    height: 100vh;
     min-height: 600px;
     ////outline: 5px red solid;
+      #equipBtnTwo{
+        display: none;
+        margin-left: 20vw;
+      }
   }
   #equipIntroTabsSection{
     transform: scale(.5);
@@ -790,7 +794,7 @@ a{
     margin-top:100px;
     position: relative;
     width: 90vw;
-    margin-top: -185px; 
+    margin-top: -220px; 
     //outline: red 5px solid;
   }
   .popOut{
@@ -801,7 +805,7 @@ a{
     //outline: blue 5px solid;
     display: flex;
     flex-wrap: wrap;
-    margin:-40px auto auto auto;
+    margin:-50px auto auto auto;
     width:100%;
     height: 100vh;
     font-family:$contentFontFamily;
@@ -991,12 +995,12 @@ a{
   .introSpecialBlock.one{
       width: 50%;
       left: 0;
-      top: -60px
+      top: -40px
   }
   .introSpecialBlock.two{
     width: 70%;
-    right: 0px;
-    top: -90px
+    right: -10px;
+    top: -75px
 }
   .introSpecialBlock.three{
     width: 25%;
@@ -1093,7 +1097,7 @@ a{
   background-position: center;
   background-size: cover;
   z-index: 0;
-  height:100vh;
+  height: 100vh;
   overflow: hidden;
   min-height: 600px;
   ////outline: 5px red solid;
@@ -1119,11 +1123,16 @@ a{
   max-width: 1200px;
 }
 .tryCustEquipWrap {
-  margin: 10px auto;
+  margin: -10px auto;
   //outline: red solid 5px;
   transform: scale(.3);
   opacity:0;
 }
+.fireworkInfo{
+  p{
+    color:$fontColor;   
+  }
+} 
 
 
 ul.tryCustTabs {
@@ -1263,7 +1272,7 @@ ul.tryCustTabs li a.tryCustActive {
   color: $fontColor;
   .commonBtn{
     margin: auto;
-    margin-top: 60vh;
+    margin-top: 53vh;
   }
 }
 .introFlyer img{
@@ -1276,7 +1285,7 @@ ul.tryCustTabs li a.tryCustActive {
   width: 100px;
   height: 120px;
   margin: auto;
-  margin-top:29vh;
+  margin-top:27vh;
   top: 0;
   bottom: 0;
   left: 0;
@@ -1406,6 +1415,7 @@ ul.tryCustTabs li a.tryCustActive {
   @include fontStyle;
   .commonBtn{
       margin: auto;
+      margin-top: -20px;
       text-align: center;
   }
   border: none;
@@ -1446,7 +1456,7 @@ ul.tryCustTabs li a.tryCustActive {
   text-shadow: 0px 0px 5px #000;
   overflow: hidden;
   img{
-      width: 85%;
+      height: 35%;
       margin: auto;
       filter: drop-shadow(0px 0px 5px rgb(255, 253, 185));
   }
@@ -1515,7 +1525,7 @@ ul.tryCustTabs li a.tryCustActive {
   position: relative;
   width: 100vw;
   z-index: 0;
-  height:100vh;
+  height: 100vh;
   min-height: 600px; 
   .titleBgi{
     background: url(../images/titleNeonLightBlueNew.gif) center no-repeat;
@@ -2170,7 +2180,7 @@ footer{
     }
   }
   #carEquipmentsIntroWrap{
-    height:100vh;
+    height: 100vh;
   }
   #equipCarStage{
     width: 55%;
@@ -2200,6 +2210,11 @@ footer{
     height: 100vh;
     .commonBtn{
       margin: 2vh auto auto auto;
+    }
+    .fireworkInfo{
+      p{
+        color:#04edc1;
+      }
     }
   }
   

@@ -1,7 +1,7 @@
 #gameHub{
     opacity:0.85;
     position: fixed;
-    left: -370px;
+    left: -385px;
     bottom: 100px;
     width: 80px;
     height: 65px;
@@ -154,8 +154,8 @@
   @keyframes gameCar{
     0%{transform:translateX(10px);}
     20%{transform:translateX(-20px);}
-    40%{transform:translateX(-100px);}
-    60%{transform:translateX(-100px);}
+    40%{transform:translateX(-90px);}
+    60%{transform:translateX(-90px);}
     80%{transform:translateX(-10px);}
     100%{transform:translateX(10px);}
   }
