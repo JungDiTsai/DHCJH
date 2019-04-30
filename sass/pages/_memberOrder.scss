@@ -19,11 +19,11 @@
         }
         table{
             background: #fff;
-            width: 100%;
+            width: 85%;
             // border:1px solid #ccc;
             border-radius: 8px;
             margin: auto;
-            
+            padding: 20px 20px;
             tr:hover{
                 background-color: #afa;
                 cursor: pointer;
@@ -32,12 +32,17 @@
                 background-color:#fff;
             }
             th{
+                text-align: left;
+
                 font-size: $contentWord;
             }
             td{
-                text-align: center;
+                text-align: left;
                 font-size: $contentWord;
                 color: #5c5c5c;
+                &:first-of-type{
+
+                }
             }
         }
     }
@@ -154,6 +159,7 @@
                     margin: auto;
                     width: 70%;
                     th, td{
+                        
                         font-size: 22px;
                     }
                 }
