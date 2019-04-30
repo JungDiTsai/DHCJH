@@ -173,7 +173,7 @@
 
                     <div class="clothCurtain">
                         <div>
-                            <p>如有舞台客製訂單者，可指定訂單，即可匯入宣傳單內，無訂單者，也可以免費體驗客製宣傳單估能。<br><br>＊公開體驗宣傳單將於發布達三天後移除＊</p>
+                            <p>如有舞台客製訂單者，可指定訂單，即可匯入宣傳單內，無訂單者，也可以免費體驗客製宣傳單功能。<br><br>＊公開體驗宣傳單將於發布達三天後移除＊</p>
                         </div>
                         <div>
                             <button class="commonBtnSmall" id="enterOrder">匯入訂單</button>
