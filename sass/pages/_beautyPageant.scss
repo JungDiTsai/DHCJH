@@ -156,7 +156,7 @@ li{
     left: 0;
     top: 0;
     width: 100%;
-    height: 580px;
+    height: 375px;
     transition: opacity .7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     opacity: 0;
     filter: alpha(opacity=0);
@@ -175,9 +175,10 @@ li{
          filter:drop-shadow(3px 2px 20px rgba(245, 132, 132, 0.7));
      }
      p{
-      text-align: center;
+      text-align: left;
       color: white;
-      opacity: 0.7;;
+      opacity: 0.7;
+      margin-left: calc(6.5% + 30px); 
      }
   }
   .beautyRankingSocialBtns{
@@ -187,31 +188,37 @@ li{
       padding: 0px 30px;
       max-width: 87%;
       margin-left: 6.5%;
-      .fa-heart,.fa-heart{
-        color:#eee ;}
+    .fa-heart,.fa-heart{
+        color:#eee ;
+    }
     p{
         color:white;
         // flex-grow: 1;
-        height: 44px;
         width:50%;
-        line-height: 44px;
-        text-align: center;
-    }
-      i{
-        justify-content:space-between;
-        width:44px;
-        height: 44px;
-        font-size: 28px;
-        flex-grow: 1;
-        align-content: center;
-        color:#eee;
         line-height: 30px;
         text-align: left;
-        &:nth-child(5){
-          flex-grow: 3;
-          text-align: right;
-        }
+        position: absolute;
+    }
+    i{
+      justify-content:space-between;
+      width:30px;
+      height: 30px;
+      font-size: 28px;
+      flex-grow: 1;
+      align-content: center;
+      color:#eee;
+      line-height: 30px;
+      text-align: left;
+      img{
+        width: 30px;
+        margin-top: 0px;
+        height: 30px;
       }
+      &:nth-child(4){
+        flex-grow: 5;
+        text-align: right;
+      }
+    }
       .fa-bookmark::before,.fa-external-link-alt::before,.fa-comment::before,.fa-heart::before{
         cursor: pointer;
       }
@@ -256,7 +263,6 @@ li{
   .dotflip{
     text-align:right;
     position: relative;
-    width: 100%;
     z-index: 0;
     margin-right: 5px; 
     i{
@@ -292,17 +298,62 @@ li{
       margin: auto;
       padding: 10px;
       padding-top: 20px;
+      .beautyDiscFilter{
+        margin-top: 50px;
+        max-width: 1200px;
+        height: 50px;
+        margin-left: 19px;
+        margin-right: 19px;
+        display: flex;
+        justify-content:space-between;
+        i{
+          color: #F2EB50;
+          font-size: 44px;
+          padding: 3px;
+          cursor: pointer;
+        }
+        .beautyDiscFilterBox{
+          width: 160px;
+          display: inline-block;
+          height: 48px;
+          border-radius: 10px;
+          background-color: #F2EB50;
+          padding: 7px; 
+          select{
+            margin: auto;
+             /*移除箭頭樣式*/
+            appearance:none;
+            -moz-appearance:none;
+            -webkit-appearance:none;
+            margin-left: 13px;
+            /*改變右邊箭頭樣式*/
+            background: url(../images/beautyPageant/caret-square-down-solid.svg) no-repeat right center transparent;
+            
+            border:0px;
+            // width:100%;
+            height:34px;
+            padding-left:2px;
+            padding-right:40px;
+            background-color:#F6F7F7;
+            color:gray;
+          }
+        }
+      }
     }
     .beautyDiscStageContainer{
       .beautyDiscIg{
-        height:auto;
-        max-height: 650px;
+        height: 580px;
         width: 100%;
         background-color: #fff700c2;
         border-radius: 10px;
         padding: 26px;
         margin: 50px 0;
         filter: drop-shadow(0 0 8px #fff);
+        .beautyDiscIgMemStage{
+          width: 302px;
+          height: 302px;
+          margin-top: 15px;
+        }
         .likeCount{
           margin-left: 5px;
           letter-spacing:0.1em;
@@ -315,7 +366,7 @@ li{
           max-width: 100%;
           margin-left: 5px;
           padding: 0px;
-          margin-top: 0px;
+          margin-top: -35px;
           i{
             color: #111;
           }
@@ -326,10 +377,6 @@ li{
         .beautyDiscIgMem{
         display: flex;
         padding: 0 0 10px 0;
-        .beautyDiscIgMemStage{
-          width: 302px;
-          height: 302px;
-        }
           .beautyDiscIgTopic{
             height: 50px;
             width: 200%;
@@ -342,7 +389,7 @@ li{
               max-width: 100%;
             }
             .beautyDiscIgMNameCar{
-              font-size: 18px;
+              font-size: 16px;
               width: 100%;
               line-height: 25px;
               height: 25px;
@@ -355,6 +402,7 @@ li{
             height: 50px;
             border-radius: 50%;
             margin-left: 5px;
+            object-fit: cover;
           }
           p{
             max-width: calc(100% - 50px );
@@ -366,11 +414,10 @@ li{
           }
         }
         .beautyDiscIgMemTextContainerWrap{
-          margin: 20px 0px;
+          margin: 15px 0px;
           font-family: '微軟正黑';
           overflow-y:scroll;
-          max-height: 76px;
-          height: 76px;
+          height: 85px;
           .beautyDiscIgMemTextContainer{
             display: flex;
             width: 100%;
@@ -418,10 +465,11 @@ li{
           border-radius: 50%;
           line-height: 28px;
           margin-left:5px; 
+          object-fit: cover;
           }
           form{
             width: 100%;
-            height: 44px;
+            height: 34px;
             .DiscTextArea{
               line-height: 28px;
               width: calc(100% - 10px);
@@ -534,6 +582,11 @@ li{
               width: 30%;
               margin: 50px 19px;
               margin-top: 20px;
+              height: 580px;
+              .beautyDiscIgMemStage{
+                width: 302px;
+                height: 302px;
+              }
           }
         }
       }
@@ -678,11 +731,56 @@ li{
             transition: 1s;
             box-sizing: border-box ;
             text-align: center;
+            .beautyRankingSocialBtns{
+              display: flex;
+              text-align: center;
+              justify-content:center;
+              padding: 0px 30px;
+              max-width: 70%;
+              margin-left: 15%;
+            .fa-heart,.fa-heart{
+                color:#eee ;
+            }
+            p{
+                color:white;
+                // flex-grow: 1;
+                height: 30;
+                width:50%;
+                line-height: 30px;
+                text-align: left;
+                position: absolute;
+                top: 345px;
+                left: 0px;
+            }
+            i{
+              justify-content:space-between;
+              width:30px;
+              height: 30px;
+              font-size: 28px;
+              flex-grow: 1;
+              align-content: center;
+              color:#eee;
+              line-height: 30px;
+              text-align: left;
+              img{
+                width: 30px;
+                margin-top: 0px;
+                height: 30px;
+              }
+              &:nth-child(4){
+                flex-grow: 5;
+                text-align: right;
+              }
+            }
+              .fa-bookmark::before,.fa-external-link-alt::before,.fa-comment::before,.fa-heart::before{
+                cursor: pointer;
+              }
+          }
             p{
               text-align: left;
               color: white;
               opacity: 0.7;
-              margin-left:calc(6.5% + 30px);
+              margin-left:calc(15% + 30px);
               font-family: '微軟正黑';
               font-size: 12px;
              }
@@ -716,21 +814,28 @@ li{
         transition: 1s;
         box-sizing: border-box ;
         text-align: center;
+        .beautyRankingSocialBtns{
+          display: flex;
+          text-align: center;
+          justify-content:center;
+          padding: 0px 30px;
+          max-width: 70%;
+          margin-left: 15%;
+        }
         p{
           text-align: left;
           color: white;
           opacity: 0.7;
-          margin-left:calc(6.5% + 30px);
+          margin-left:calc(15% + 30px);
           font-family: '微軟正黑';
           font-size: 12px;
+          position: absolute;
+          top:345px;
+          left: 0;
          }
          .likeHeart{
           width: 30px;
           height:30px;
-        }
-        .beautyDiscIgMemStage{
-          width: 302px;
-          height: 302px;
         }
         img{
             margin: 0px;

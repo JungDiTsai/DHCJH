@@ -7,9 +7,10 @@
 }
 
 #bigMember{
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 
@@ -42,7 +43,7 @@
   }
   
   #nav-icon2 span:nth-child(1), #nav-icon2 span:nth-child(2) {
-    top: 0px;
+    top: 5px;
   }
   
   #nav-icon2 span:nth-child(3), #nav-icon2 span:nth-child(4) {
@@ -50,7 +51,7 @@
   }
   
   #nav-icon2 span:nth-child(5), #nav-icon2 span:nth-child(6) {
-    top: 36px;
+    top: 31px;
   }
   
   #nav-icon2.open span:nth-child(1),#nav-icon2.open span:nth-child(6) {
@@ -109,13 +110,13 @@
 #menu_control:checked~header .mainNav{
     top: 80px;
     transition: 0.3s;
-    img{
-        top: 10px;
+    #bigMember{
+        top: 0px;
     }
 } 
 .menubtn{
     display:block;
-    width: 44px;
+    width: 36px;
     position: absolute;
     height: 40px;
     top: 20px;
@@ -165,6 +166,7 @@
         font-size: 44px;
         height: 44px;
         width: 44px;
+        text-align: center;
         img{
           cursor: pointer;
           position: absolute;
@@ -192,6 +194,7 @@ header{
 @media screen and (min-width:1200px){
     #bigMember{
       transform: translateY(-25%)translateX(-25%);
+      object-fit: cover;
     }
 
     .menubtn{display: none}

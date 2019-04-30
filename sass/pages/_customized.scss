@@ -746,7 +746,7 @@
         background: url(../images/customized/new_cust/customized_step_stage_selected.svg) center no-repeat;
         width: 125px;
         height: 75px;
-        z-index: 2;
+        z-index: 1;
         opacity: 1;
         &:hover{
             opacity: 1;
@@ -1158,10 +1158,7 @@
 }
 #weekdate{
     color: #fff;
-    
 }
-
-
 .infoNLoc{
     padding-top: 20px;
     width: 80%;
@@ -1177,9 +1174,14 @@
         font-family: $contentFontFamily;
     }
 }
-#dateWeather {
-    color: #fff;
+#weather {
+    display: inline-block;
+    img{
+        width: 28px;
+        vertical-align: middle;
+    }
 }
+
 .loc{
     margin: auto;
     .locInput{
@@ -1269,7 +1271,7 @@
         width: 45%;
         margin: 0 auto;
         p{
-            padding: 10px;
+            padding: 0px 0px 10px 0px;
         }
     }
     .dateChoose{
@@ -1792,6 +1794,40 @@
         }
     }
 }
+.waitLightBox{
+    width: 330px;
+    height: 180px;
+    h4{
+        font-size: 26px;
+        color: $logoColor;
+    }
+}
+.mustLightBox{
+    width: 350px;
+    height: 230px;
+    h4{
+        padding-top: 20px;
+        font-size: 26px;
+        color: $logoColor;
+    }
+} 
+.waitLightBox, .mustLightBox,  .endLightBox{
+    position: fixed;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: #ffffbd 8px groove;
+    border-radius: 10px;
+    background-color: #222222;
+    box-shadow: 0 0 10px 12px rgba(230, 230, 230, 0.3);
+    z-index: 6;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
 .endLightBoxBg{
     top: 0;
     left: 0;
@@ -1802,24 +1838,8 @@
     background-color: rgba($color: #000000, $alpha: 0.6);
 }
 .endLightBox{
-    position: fixed;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border: #ffffbd 8px groove;
-    border-radius: 10px;
     width: 330px;
     height: 500px;
-    background-color: #222222;
-    box-shadow: 0 0 10px 12px rgba(230, 230, 230, 0.3);
-    z-index: 6;
-    overflow: auto;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
     h3{
         padding-top: 20px;
         font-size: $thrTitleWord;
@@ -1837,12 +1857,12 @@
         // color: $fontColor;
         text-decoration: none;
     }
-    .endBtn{
-        margin: 20px auto;
-        text-align: center;
-    }
-    
 }
+.mustBtn, .endBtn{
+    margin: 20px auto;
+    text-align: center;
+}
+
 
 
 // 舞台背景被選擇

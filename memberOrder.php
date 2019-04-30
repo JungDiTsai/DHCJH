@@ -24,9 +24,8 @@
                 <h3>所有訂單</h3>
                 <table>
                     <tr class="orderBoxTitle">
-                        <th>訂單編號</th>
-                        <th>活動日期</th>
-                        <th>活動地點</th>
+                        <th>編號</th>
+                        <th>花車名稱</th>
                         <th>金額</th>
                     </tr>
                     <?php
@@ -45,8 +44,7 @@
                     ?>
                     <tr class="orderTr" value="<?php echo $data[0] ?>">
                         <td><?php echo $data[0] ?></td>
-                        <td><?php echo $data['actStart'] ?></td>
-                        <td><?php echo $data['actPlace'] ?></td>
+                        <td><?php echo $data['orderName'] ?></td>
                         <td><?php echo $data['totalMoney'] ?></td>
                     </tr>
                     <?php } ?>
@@ -57,11 +55,11 @@
                     <h4></h4>
                     <div class="detailContent">
                         <div class="col-5 col-xl-2">活動日期 :</div>
-                        <div class="col-7 col-xl-10"></div>
+                        <div class="col-7 col-xl-10"><?php echo $_SESSION['member'][0]['actStart'] ?></div>
                         <div class="col-5 col-xl-2">活動地點 :</div>
-                        <div class="col-7 col-xl-10"></div>
+                        <div class="col-7 col-xl-10"><?php echo $_SESSION['member'][0]['actPlace'] ?></div>
                         <div class="col-5 col-xl-2 big">總金額 :</div>
-                        <div class="col-7 col-xl-10 big"></div>
+                        <div class="col-7 col-xl-10 big"><?php echo $_SESSION['member'][0]['totalMoney'] ?></div>
                     </div>
                     <div class="detailHost">
                         <!-- <div class="col-12">主持人</div> -->
@@ -119,6 +117,45 @@
     </div>
 
     <script>
+        window.onload = function(){
+            let orderNo = <?php echo $_SESSION['member'][0]['orderNo'] ?>;
+            var xhr = new XMLHttpRequest();
+                  //註冊callback function
+                  xhr.onreadystatechange = function(){
+                    if( xhr.readyState == XMLHttpRequest.DONE ){ //server端執行完畢
+                      if( xhr.status == 200){ //server端可以正確的執行
+                           console.log(JSON.parse(xhr.responseText));
+                           let data = JSON.parse(xhr.responseText);
+                           //塞值主持人內容
+                           document.querySelectorAll('.detailHost div')[1].innerText = data['hostNo']['hostName'];
+                           document.querySelectorAll('.detailHost div')[3].innerText = data['hostNo']['hostTel'];
+                           //塞值訂單細項內容
+                           document.querySelectorAll('.detailStageImg img')[0].src = data['data']['orderImgUrl'];
+                           document.querySelectorAll('.detailStage tr')[1].querySelectorAll('td')[1].innerText = data['audioNo']['audioName'];
+                           document.querySelectorAll('.detailStage tr')[1].querySelectorAll('td')[2].innerText = data['audioNo']['audioPrice'];
+                           document.querySelectorAll('.detailStage tr')[2].querySelectorAll('td')[1].innerText = data['pipeNo']['pipeName'];
+                           document.querySelectorAll('.detailStage tr')[2].querySelectorAll('td')[2].innerText = data['pipeNo']['pipePrice'];
+                           document.querySelectorAll('.detailStage tr')[3].querySelectorAll('td')[1].innerText = data['fireworkNo']['fireworkName'];
+                           document.querySelectorAll('.detailStage tr')[3].querySelectorAll('td')[2].innerText = data['fireworkNo']['fireworkPrice'];
+                           document.querySelectorAll('.detailStage tr')[4].querySelectorAll('td')[1].innerText = data['fireNo']['effectsName'];
+                           document.querySelectorAll('.detailStage tr')[4].querySelectorAll('td')[2].innerText = data['fireNo']['effectsPrice'];
+                           document.querySelectorAll('.detailStage tr')[5].querySelectorAll('td')[1].innerText = data['troupeNo']['troupeName'];
+                           document.querySelectorAll('.detailStage tr')[5].querySelectorAll('td')[2].innerText = data['troupeNo']['troupePrice'];
+
+                      }else{ //其它
+                          alert( xhr.status );
+                      }
+                    }
+                  } 
+                  //設定好所要連結的程式
+                  
+                  console.log(orderNo);
+                  var url = "php/components/_searchOrderDetail.php?orderNo=" + orderNo;
+                  xhr.open("get", url, true);
+                  //送出資料
+                  xhr.send(null);
+                
+        }
         let orderTr = document.querySelectorAll('.orderTr');
         for (let i = 0; i < orderTr.length; i++) {
             orderTr[i].addEventListener('click',function(e){
@@ -137,7 +174,7 @@
                            console.log(JSON.parse(xhr.responseText));
                            let data = JSON.parse(xhr.responseText);
                            //塞值編號
-                           document.querySelector('.bckColor h4').innerText = '編號' + data['data']['orderNo'];
+                           document.querySelector('.bckColor h4').innerText = data['data']['orderName'];
                            //塞值訂單內容
                            document.querySelectorAll('.detailContent div')[1].innerText = data['data']['actStart'];
                            document.querySelectorAll('.detailContent div')[3].innerText = data['data']['actPlace'];

@@ -27,7 +27,7 @@
                     <thead>
                         <tr>
                             <th>NO.</th>
-                            <th>日期</th>
+                            <th>名稱</th>
                             <th>狀態</th>
                             <th>統計狀態</th>
                             <th>人數</th>
@@ -50,7 +50,7 @@
                     ?>
                     <tr class="flyerTr">
                         <td><?php echo $data['orderNo'] ?></td>
-                        <td><?php echo $data['flyeDate'] ?></td>
+                        <td><?php echo $data['orderName'] ?></td>
                         <td>
                             <?php 
                                 if(strtotime(date('Y/m/d'))>strtotime($data['flyeDate'])){ echo '已過期'; }

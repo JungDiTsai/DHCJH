@@ -3,6 +3,11 @@
     <div class="memberImg max_view">
         <label for="memberImgFile">
             <img src="<?php echo $_SESSION["member"][0][6]?>" alt="">
+            <?php
+                if($_SERVER['PHP_SELF']=='/demo-projects/CD106/CD106G1/php/components/_seeSession.php'){
+                    echo '<i class="fas fa-camera-retro fa-2x"></i>';
+                }
+            ?>
         </label>
     </div>
     <h3 class="max_view"><?php echo $_SESSION["member"][0][3]?></h3>
@@ -46,13 +51,13 @@
                         LoginState[0][1];
 
                     //會員PSW
-                    let pswdata = LoginState[0][2].split("").length;
-                    let str = '';
-                    for (let i = 0; i < pswdata; i++) {
-                        str += "*";
-                    }
-                    document.querySelectorAll('#memberData tr')[1].getElementsByTagName('p')[0].innerHTML =
-                        str;
+                    // let pswdata = LoginState[0][2].split("").length;
+                    // let str = '';
+                    // for (let i = 0; i < pswdata; i++) {
+                    //     str += "*";
+                    // }
+                    // document.querySelectorAll('#memberData tr')[1].getElementsByTagName('p')[0].innerHTML =
+                    //     str;
 
                     //會員Mail
                     document.querySelectorAll('#memberData tr')[5].getElementsByTagName('input')[0].value =
@@ -86,7 +91,7 @@
         xhr.onload = function () {
             if (xhr.status == 200) { //server端可以正確的執行
                 alert('已成功登出');
-                window.location.href = "flyer.php";
+                window.location.href = "index.php";
             } else { //其它
                 alert(xhr.status);
             }
