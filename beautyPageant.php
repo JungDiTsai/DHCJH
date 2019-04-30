@@ -25,7 +25,7 @@ try{
     <input type="checkbox" id=menu_control>
     <?php require_once("php/header.php");?>
     <?php require_once("php/loginLightBox.php");?>
-    <?php require_once("php/uploadbeauty.php");?>
+    <?php //require_once("php/uploadbeauty.php");// ?>
     <script src="js/_login.js"></script>
     <script src="js/_font_loginLightBox.js"></script>
     <!-- beauty pageant 第一屏幕 -->
@@ -56,18 +56,6 @@ try{
                 <?php while($beautyContestRow = $beautyContest->fetchAll()){ ?>
                     <div id="beautyRankingbg1" class="beautyRankingbg">
                         <img src="images/beautyPageant/rank/newVersionStage1.png" alt="選美車車">
-                        <h3><?php echo $beautyContestRow[0]['orderName']; ?></h3>
-                        <div class="beautyRankingSocialBtns">
-                            <i><img class="likeHeart" src="images/like.png" alt="喜歡收藏"></i>
-                            <span style="display:none"><?php echo $beautyContestRow[0]['orderNo'] ?></span>
-                            <i class="far fa-comment" alt="留言"></i>
-                            <i class="fas fa-external-link-alt" alt="分享"></i>
-                            <i class="far fa-bookmark" alt="分享"></i>
-                        </div>
-                        <p class="likeCount"><?php echo $beautyContestRow[0]['orderVote']; ?>個喜歡</p>
-                    </div>
-                    <div id="beautyRankingbg2" class="beautyRankingbg">
-                       <img src="images/beautyPageant/rank/newVersionStage2.png"  alt=""onclick="window.location.href='beautyDiscuss.html'">
                         <h3><?php echo $beautyContestRow[1]['orderName']; ?></h3>
                         <div class="beautyRankingSocialBtns">
                             <i><img class="likeHeart" src="images/like.png" alt="喜歡收藏"></i>
@@ -77,6 +65,18 @@ try{
                             <i class="far fa-bookmark" alt="分享"></i>
                         </div>
                         <p class="likeCount"><?php echo $beautyContestRow[1]['orderVote']; ?>個喜歡</p>
+                    </div>
+                    <div id="beautyRankingbg2" class="beautyRankingbg">
+                       <img src="images/beautyPageant/rank/newVersionStage2.png"  alt=""onclick="window.location.href='beautyDiscuss.html'">
+                        <h3><?php echo $beautyContestRow[0]['orderName']; ?></h3>
+                        <div class="beautyRankingSocialBtns">
+                            <i><img class="likeHeart" src="images/like.png" alt="喜歡收藏"></i>
+                            <span style="display:none"><?php echo $beautyContestRow[0]['orderNo'] ?></span>
+                            <i class="far fa-comment" alt="留言"></i>
+                            <i class="fas fa-external-link-alt" alt="分享"></i>
+                            <i class="far fa-bookmark" alt="分享"></i>
+                        </div>
+                        <p class="likeCount"><?php echo $beautyContestRow[0]['orderVote']; ?>個喜歡</p>
                     </div>
                     <div id="beautyRankingbg3" class="beautyRankingbg">
                         <img src="images/beautyPageant/rank/newVersionStage3.png" alt="">
@@ -94,18 +94,6 @@ try{
                 <div id="beautyRankingimgsMonth">
                     <div id="beautyRankingbg4" class="beautyRankingbg">
                         <img src="images/beautyPageant/rank/newVersionStage2.png" alt="">
-                        <h3><?php echo $beautyContestRow[3]['orderName']; ?></h3>
-                        <div class="beautyRankingSocialBtns">
-                             <i><img class="likeHeart" src="images/like.png" alt="喜歡收藏"></i>
-                            <span style="display:none"><?php echo $beautyContestRow[3]['orderNo'] ?></span>
-                            <i class="far fa-comment" alt="留言"></i>
-                            <i class="fas fa-external-link-alt" alt="分享"></i>
-                            <i class="far fa-bookmark" alt="分享"></i>
-                        </div>
-                        <p class="likeCount"><?php echo $beautyContestRow[3]['orderVote']; ?>個喜歡</p>
-                    </div>
-                    <div id="beautyRankingbg5" class="beautyRankingbg">
-                        <img src="images/beautyPageant/rank/newVersionStage3.png" alt="">
                         <h3><?php echo $beautyContestRow[4]['orderName']; ?></h3>
                         <div class="beautyRankingSocialBtns">
                              <i><img class="likeHeart" src="images/like.png" alt="喜歡收藏"></i>
@@ -114,7 +102,19 @@ try{
                             <i class="fas fa-external-link-alt" alt="分享"></i>
                             <i class="far fa-bookmark" alt="分享"></i>
                         </div>
-                        <p><?php echo $beautyContestRow[4]['orderVote']; ?>個喜歡</p>
+                        <p class="likeCount"><?php echo $beautyContestRow[4]['orderVote']; ?>個喜歡</p>
+                    </div>
+                    <div id="beautyRankingbg5" class="beautyRankingbg">
+                        <img src="images/beautyPageant/rank/newVersionStage3.png" alt="">
+                        <h3><?php echo $beautyContestRow[3]['orderName']; ?></h3>
+                        <div class="beautyRankingSocialBtns">
+                             <i><img class="likeHeart" src="images/like.png" alt="喜歡收藏"></i>
+                            <span style="display:none"><?php echo $beautyContestRow[3]['orderNo'] ?></span>
+                            <i class="far fa-comment" alt="留言"></i>
+                            <i class="fas fa-external-link-alt" alt="分享"></i>
+                            <i class="far fa-bookmark" alt="分享"></i>
+                        </div>
+                        <p><?php echo $beautyContestRow[3]['orderVote']; ?>個喜歡</p>
                     </div>
                     <div id="beautyRankingbg6" class="beautyRankingbg">
                         <img src="images/beautyPageant/rank/newVersionStage1.png" alt="">
@@ -166,15 +166,7 @@ try{
         </div>
     </div>
 
-    <footer>
-            <p>Copyright © 2019 Taiwan Great Stage Inc.</p>
-            <p id="132">All rights reserved</p>
-            <div>
-                <a href="#"><img src="images/facebook (1).png" alt="FB"></a> 
-                <a href="#"><img src="images/instagram (1).png" alt="IG"></a> 
-                <a href="#"><img src="images/youtube (1).png" alt="YouTube"></a>        
-            </div>
-        </footer>
+    <?php require_once("php/footer.php");?>
         <script>
         var hearts = document.getElementsByClassName("likeHeart");
         for(let i=0; i< hearts.length; i++){
