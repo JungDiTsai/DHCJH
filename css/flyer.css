@@ -1408,7 +1408,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: -20px;
   margin: auto;
   width: 300px;
   height: 425px;
@@ -1417,8 +1417,8 @@ header {
 .blackBox .envelopeLightBox #hiddenEnvelopeLightBox {
   color: #fff;
   position: absolute;
-  right: 0px;
-  top: -40px;
+  right: -30px;
+  top: 10px;
   cursor: pointer;
 }
 
@@ -1431,8 +1431,8 @@ header {
 .blackBox .envelopeLightBox #envelopeIcon {
   width: 40px;
   position: absolute;
-  right: 40px;
-  top: -50px;
+  right: -40px;
+  top: 50px;
   cursor: pointer;
 }
 
@@ -1443,8 +1443,8 @@ header {
 
 .blackBox .envelopeLightBox #QrcodeIcon {
   position: absolute;
-  right: 90px;
-  top: -50px;
+  right: -40px;
+  top: 100px;
   cursor: pointer;
 }
 
@@ -1628,7 +1628,7 @@ header {
 #intoLightBox {
   display: none;
   width: 300px;
-  height: 500px;
+  height: 400px;
   overflow: auto;
   position: fixed;
   left: 50%;

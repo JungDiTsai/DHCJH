@@ -571,6 +571,11 @@
             //點擊 close BOX 
             document.getElementById('hiddenEnvelopeLightBox').addEventListener('click', function () {
                 document.querySelector('.blackBox').style.display = 'none';
+                let joinAct = document.querySelectorAll('.joinAct');
+                for (let i = 0; i < joinAct.length; i++) {
+                    joinAct[i].removeAttribute('disabled');
+                }
+                
             });
             //點擊QRcodeICON
             document.getElementById('QrcodeIcon').addEventListener('click', function (e) {
