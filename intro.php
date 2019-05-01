@@ -18,107 +18,6 @@
     <script src="js/jquery-3.3.1.min.js"></script>
 
     <style type="text/css">
-    #teamIntroWrap{
-        background-image:url(images/teamIntroBgi.jpg) ;
-        background-size:cover ;
-        background-position:center ;
-    }
-    .sliderBox{
-        outline: 1px solid #000;
-        height: 100vh;
-        position: relative;
-        color: beige;
-        transform: scale(.9);
-    }
-    .sliderBox .introBox{
-        background-image:url(images/teamIntroBgi.png);
-        width: 300px;
-        height: 500px;
-        position: absolute;
-        top:50%;
-        transform: translateX(-50%) translateY(-50%);
-        /* 對文字做設定 */
-        line-height: 40px;
-        color:#000;
-        text-align: center;
-        font-size: 50px;
-        
-    }
-
-    #a1{
-        /* background: rgb(255, 251, 0); */
-        z-index: 3;
-        opacity: 1;
-        filter: drop-shadow(0px 0px 35px rgb(255, 248, 187));
-    }
-    #a2{
-        /* background: rgb(8, 168, 8); */
-        z-index: 2;
-        transform: translateX(-50%) translateY(-50%) scale(0.7);
-    }
-    #a3{
-        /* background: rgb(12, 143, 12); */
-        z-index: 1;
-        transform: translateX(-50%) translateY(-50%) scale(0.4);
-    }
-    #a4{
-        /* background: rgb(247, 255, 170); */
-        z-index: 1;
-        transform: translateX(-50%) translateY(-50%) scale(0.4);
-    }
-    #a5{
-        /* background: #aff; */
-        z-index: 1;
-        transform: translateX(-50%) translateY(-50%) scale(0.7);
-    }
-    .memImg{
-      width: 100px;
-        /* transform: translateX(100%) translateY(100%); */
-        float: left;
-    }
-    .memImg img{
-        margin-top: 0px;
-        margin-left: -135px;
-        width: 120%;
-        transform: translateX(50%);
-        filter: drop-shadow(0px 0px 15px rgb(255, 248, 187));
-
-    }
-    .introductionSec{  
-        margin-top: 40px;
-        width:190px;
-        float: left;
-        font-size: 22px;
-        color: beige;
-    }
-    .introductionSec li{
-        list-style:none;
-        margin-left: -80px;
-        color: beige;
-        font-size: 18px;
-        line-height: 32px;
-        z-index:5;
-        font-family:"微軟正黑體";
-    }
-    .introBox{
-        opacity: 0.6;
-        transition: 1s ease;
-    }
-    .introBox h5{
-        margin-top:100px;
-        font-size: 40px;
-        line-height: 0px;
-        color: beige;
-        font-family:"微軟正黑體";
-        
-    }
-    .introBox p{
-        font-size: 16px;
-        line-height: 0px;
-        color: beige;
-        margin-top: 40px;
-        font-family:"微軟正黑體";
-    }
 
     </style>
 </head>
@@ -231,6 +130,7 @@
 
     <!-- -----團隊介紹---------------- --> 
     <div id="teamIntroWrap">
+      <div class="titleBgi">烏路誰</div>
     <div class="sliderBox">
        <div class="introBox" id="a1" style="left:50%">
            <h5>蔡仲廸</h5>
@@ -341,7 +241,7 @@
     
     </div>
     </div>
-    
+    <?php require_once("php/footer.php")?>
     <script>
     document.querySelector('.sliderBox').addEventListener('click',function(){
         let allDiv = document.querySelectorAll('.sliderBox div')
