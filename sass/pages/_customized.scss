@@ -1322,20 +1322,20 @@
     margin: auto;
     width: 100%;
     height: 530px;
-    // position: relative;
+}
+.hostWrap{
+    width: 100%;
+    overflow: hidden;
 }
 .hostInfoDetail{
-    // top: 48%;
-    // transform: translateX(-50%) translateY(-50%);
     transform: scale(0.6) translateY(-2rem);
     opacity: 0;
-    position: absolute;
-    left: calc(50%-260px);
+    // position: absolute;
+    position: relative;
+    transition: 1s;
     z-index: 1;
     cursor: pointer;
-    // transition: 1s;
     pointer-events: none;
-    // position: absolute;
     background-image: url(../images/customized/host/host_info_02.jpg);
     background-position: center;
     width: 260px;
@@ -1366,21 +1366,22 @@
     transform: scale(1) translateY(0) translateX(0);
     opacity: 1;
     pointer-events: auto;
-    transition: .8s;
     box-shadow: 0px 0px 30px $logoColor;
+    transition: 1s;
 }
 .prev, .next{
     z-index: 2;
     transform: scale(0.8) translateY(-1rem) translateX(0);
     opacity: 0.6;
     pointer-events: auto;
-    transition: .5s;
+    transition: 1s;
 }
+
 .prev{
-    left: 0px;
+    left: 50px;
 }
 .next{
-    right: 0px;
+    right: 50px;
 }
 // codepen radar chart start
 .card {
@@ -1399,29 +1400,17 @@
     .hostInfo{
         padding-top: 20px;
     }
-    .hostSliderBox{
-        width: 700px;
-    }
 }
 @media screen and (min-width:992px){
-    .hostSliderBox{
-        width: 900px;
-        .prev{
-            left: 100px;
-        }
-        .next{
-            right: 100px;
-        }
-    }
 }
 @media screen and (min-width:1200px){
     .hostSliderBox{
         width: 1200px;
         .prev{
-            left: 200px;
+            left: 0px;
         }
         .next{
-            right: 200px;
+            right: 0px;
         }
     }
 }
@@ -1839,7 +1828,7 @@
 }
 .endLightBox{
     width: 330px;
-    height: 500px;
+    height: 450px;
     h3{
         padding-top: 20px;
         font-size: $thrTitleWord;
@@ -1849,17 +1838,23 @@
         padding-top: 5px;
         font-family: $contentFontFamily;
         font-size: $contentWord;
-        color: #22dbdb;
+        color: #04dddd;
+        // color: $fontColor;
+    }
+    &>p{
+        width: 250px;
+        margin: auto;
+        color: $fontColor;
     }
     a{
-        margin: 20px auto ;
+        margin: 50px auto -10px;
         display: block;
         // color: $fontColor;
         text-decoration: none;
     }
 }
 .mustBtn, .endBtn{
-    margin: 20px auto;
+    margin: 20px auto 30px;
     text-align: center;
 }
 

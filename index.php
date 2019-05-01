@@ -33,7 +33,7 @@ try{
     <script src="js/TweenMax.min.js"></script>
     <script src="js/ScrollMagic.min.js"></script>
     <script src="js/animation.gsap.min.js"></script>
-    <!---開發時除蟲蟲用的 上線時要刪掉--->
+    <!---開發時除蟲蟲用的 上線時要刪掉-->
     <script src="js/debug.addIndicators.min.js"></script>
     <script src="js/scrollMagic2.js" defer></script>
     
@@ -336,7 +336,6 @@ try{
                                 </a>
                             </p> 
                         
-                        
                     </section>  
                         
                     </div>
@@ -429,27 +428,9 @@ try{
                         <div id="perspectiveTry" class="perspective">
                             <div class="groupA">
                                 <!-- 周邊細項 -->
-                                    <!-- ? -->
-                                <div class="stairsA"></div>
-                                    <!-- ? -->
-                                <div class="stairsB"></div>
-                                    <!-- 壁屏 -->
-                                <div class="stairsC1"></div>
-                                <div class="stairsC2"></div>
-                                <div class="stairsC3"></div>
-                                <div class="stairsC4"></div>
-                                <!-- 上壁屏 -->
-                                <div class="stairsF"></div>
-                                <div class="stairsF2"></div>
-                                <div class="stairsF3"></div>
-                                <div class="stairsF4"></div>
-                                <!-- 舞台 -->
-                                <div class="front"></div>
-                                <div class="back"></div>
-                                <div class="up"></div>
-                                <div class="down"></div>
-                                <div class="left"></div>
-                                <div class="right"></div>
+                                
+                                <img id="tryCustStageBack" src="images/newVersionStage20.png" alt="客製試試看花車">
+                                
                                 <!-- 跑馬燈 -->
                                 <div class="subtitleAll disN">
                                     <div class="subtitles">
@@ -458,47 +439,7 @@ try{
                                     <div class="subtitles1"></div>
                                     <div class="subtitles2"></div>
                                 </div>
-                                <!-- 樓梯三角形 -->
-                                <div class="triangleA"></div>
-                                <div class="triangleB"></div>
-                                <div class="triangleC"></div>
-                                <div class="triangleD"></div>
-                                <div class="triangleE"></div>
-                                <div class="triangleF"></div>
-                                <!-- 樓梯 -->
-                                <div class="ladder ladderA"></div>
-                                <div class="ladder ladderB"></div>
-                                <div class="ladder ladderC"></div>
-                                <div class="ladder ladderD"></div>
-                                <div class="ladder ladderE"></div>
-                                <div class="ladder ladderF"></div>
-                                <div class="ladder ladderG"></div>
-                                <div class="ladder ladderH"></div>
-                                <!-- 燈柱 -->
-                                <div class="headlightbox headlightbox0"></div>
-                                <div class="headlightbox headlightbox1"></div>
-                                <div class="headlightbox headlightbox2"></div>
-                                <div class="headlightbox headlightbox3"></div>
-                                <div class="headlightbox headlightbox4"></div>
-                                <div class="headlightbox headlightbox5"></div>
-                                <!-- 投射燈 -->
-                                <div class="headlightAll disN">
-                                    <!-- 中間投射燈 -->
-                                    <div class="headlight headlight0"></div>
-                                    <div class="headlight headlight1"></div>
-                                    <div class="headlight headlight2"></div>
-                                    <div class="headlight headlight3"></div>
-                                    <!-- 左邊投射燈 -->
-                                    <div class="headlight headlight4"></div>
-                                    <div class="headlight headlight5"></div>
-                                    <div class="headlight headlight6"></div>
-                                    <div class="headlight headlight7"></div>
-                                    <!-- 右邊投射燈 -->
-                                    <div class="headlight headlight8"></div>
-                                    <div class="headlight headlight9"></div>
-                                    <div class="headlight headlight10"></div>
-                                    <div class="headlight headlight11"></div>
-                                </div>
+                                
                                 
                                 <!-- 特效 -->
                                 <div class="effectAll">
@@ -584,18 +525,7 @@ try{
                                 <!-- 特效 -->
                                 <div id="effectItem" class="custItem effectItem">
                                     <div id="effectCustItemContent" class="custItemContent effectItem">
-                                        <?php 
-                                            $sql = "select * from effects";
-                                            $effects = $pdo->query($sql);
-                                            $i = 1;
-                                            while( $effect = $effects->fetch(PDO::FETCH_ASSOC) ){
-                                        ?>
-                                        <div id="fireEffect<?php echo $i ?>" class="custItemContentInfo fireInfo">
-                                            <img src="<?php echo $effect["effectsImgUrl"]; ?>" alt="">
-                                            <p><?php echo $effect["effectsName"]; ?></p>
-                                            <p>$<?php echo $effect["effectsPrice"]; ?></p>
-                                        </div>
-                                        <?php $i++; } ?>
+                                        
                                         <?php
                                             $i = 1;
                                             while( $firework = $fireworks->fetch(PDO::FETCH_ASSOC) ){
@@ -604,6 +534,18 @@ try{
                                             <img src="<?php echo $firework["fireworkImgUrl"] ?>" alt="">
                                             <p><?php echo $firework["fireworkName"] ?></p>
                                             <p>$<?php echo $firework["fireworkPrice"] ?></p>
+                                        </div>
+                                        <?php $i++; } ?>
+                                        <?php 
+                                          $sql = "select * from effects";
+                                          $effects = $pdo->query($sql);
+                                          $i = 1;
+                                          while( $effect = $effects->fetch(PDO::FETCH_ASSOC) ){
+                                                                            ?>
+                                        <div id="fireEffect<?php echo $i ?>" class="custItemContentInfo fireInfo">
+                                            <img src="<?php echo $effect["effectsImgUrl"]; ?>" alt="">
+                                            <p><?php echo $effect["effectsName"]; ?></p>
+                                            <p effectsNo="<?php echo $effect["effectsNo"]; ?>">$<?php echo $effect["effectsPrice"]; ?></p>
                                         </div>
                                         <?php $i++; } ?>
                                     </div>

@@ -732,13 +732,13 @@ if ($num % 2 == 0) {
 }
 
 $('.hostInfoDetail').click(function() {
-//   $slide = $('.active').width();
-  
-//   if ($(this).hasClass('next')) {
-//     $('.hostSliderBox').stop(false, true).animate({left: '-=' + $slide});
-//   } else if ($(this).hasClass('prev')) {
-//     $('.hostSliderBox').stop(false, true).animate({left: '+=' + $slide});
-//   }
+
+  $slide = $('.active').width();
+  if ($(this).hasClass('next')) {
+    $('.hostSliderBox').stop(false, true).animate({left: '-=' + $slide});
+  } else if ($(this).hasClass('prev')) {
+    $('.hostSliderBox').stop(false, true).animate({left: '+=' + $slide});
+  }
   
   $(this).removeClass('prev next');
   $(this).siblings().removeClass('prev active next');
@@ -833,8 +833,14 @@ function getOrderInfo(){
     subtotal = parseInt(patternPrice) + parseInt(orderDancePrice) + parseInt(orderFirePrice) + parseInt(orderFireworkPrice) + parseInt(orderAudioPrice) + parseInt(orderPolePrice) + parseInt(orderHostPrice);
     // console.log(subtotal);
     $('.orderSub span').text(subtotal);
-    // 付款金額總計
     $('.checkoutOrder p span').text(subtotal);
+    // 付款金額總計
+    $('#couponUse').change(function(){
+        subtotalAll = 0;
+        subtotalAll = subtotal - parseInt($('#couponUse :selected').val());
+        // console.log(subtotalAll);
+        $('.checkoutOrder p span').text(subtotalAll);
+    });
 }
 // 照片存檔
 // function saveCustImg(){
@@ -889,7 +895,7 @@ function saveOrder (){
             
             var orderInfo = {};
             orderInfo.memNo = LoginState[0][0];
-            orderInfo.totalMoney = subtotal;
+            orderInfo.totalMoney = subtotalAll;
             orderInfo.orderName = orderName;
             orderInfo.actPlace = locValue;
             orderInfo.actStart = datevalue;

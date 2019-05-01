@@ -8,7 +8,6 @@ $('.owl-carousel').owlCarousel({
   items: 1,
   dots: false,
   autoplay: true,
-  autoHeight:true,
   autoplayHoverPause: true,
   nav:false,
   autoplayTimeout: 1000,
