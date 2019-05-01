@@ -1960,7 +1960,7 @@ animation: shineExplosion .9s ease 1 forwards;
   #equipCarStage{
     margin-top: -80vh;
   }
-  #introCarStage{
+  #processIntroCarStage{
     width: 100%;
     position:absolute;
     ////outline: red 5px solid;
@@ -2530,7 +2530,7 @@ footer{
 }
 @media screen and (min-width:1200px) {
   #tryCustormiseWrap .commonBtn{
-    margin: 10vh auto auto auto;
+    margin: 2vh auto auto auto;
   }
 
 }
@@ -2567,7 +2567,7 @@ footer{
     }
   }
   .tryCustEquipWrap{
-    margin-top: 47px;
+    margin-top: 10px;
   }
   #processWorker1{
     width: 90px;

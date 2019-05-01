@@ -825,7 +825,7 @@ try{
                     <img class="introSpecialBlock one" src="images/Fireworks2.gif" alt="特效＿煙火" style="display: block;">
                     <img class="introSpecialBlock two" src="images/Fireworks1.gif" alt="特效＿煙火2" style="display: block;">
                     <!--配件展示的車-->
-                    <img id="introCarStage" src="images/newVersionStage2.png" alt="介紹用的花車">
+                    <img id="processIntroCarStage" src="images/newVersionStage3.png" alt="介紹用的花車">
                     <div id="introScreenBlock" style="display: none;"><!--跑馬燈的框-->
                     <span>
                     我要嗨翻全場！有看到嗎有看到嗎～可以跑字超酷的啦！嘿嘿嘿 趕快來試試看啊！台灣大舞台！
