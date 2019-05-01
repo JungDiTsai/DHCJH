@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>我的發表</title>
+    <title>台灣大舞台-我的發表</title>
+    <link rel="Shortcut Icon" type="image/x-icon" href="images/logo.ico">
     <link rel="stylesheet" href="css/memberBeauty.css">
     <!-- font awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -114,6 +115,13 @@
                         p.innerText = input;
                         li.appendChild(p);
                         document.getElementById('allMessage').appendChild(li);
+
+                        let p2 = document.createElement('p');
+                        
+                        let beforeNode = document.querySelector('.myMessage p');
+                        p2.innerHTML = `你回復的新留言 :<br><span>${input}</span>`;
+                        p2.style.background = "#ffa";
+                        document.querySelector('.myMessage').insertBefore(p2,beforeNode);
                       }
                   }else{ //其它
                       alert( xhr.status );

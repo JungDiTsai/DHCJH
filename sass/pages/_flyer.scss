@@ -525,9 +525,9 @@
 }
 
 .secScreen {
-  background: url(../images/bkground/flyerbg3.jpeg) center;
-  background-size: cover;
+  background:url(../images/bkground/flyerBgi123.jpg) center;
   background-attachment: fixed;
+  background-size: contain;
   padding-bottom: 50px;
   box-sizing: border-box;
   padding-top: 20px;
@@ -596,8 +596,9 @@
 }
 
 .thrScreen {
-  cursor: url(./cur2.ico), auto;
-  background:#000;
+  background:url(../images/bkground/flyerBgi123.jpg) center;
+  background-attachment: fixed;
+  background-size: contain;
   padding-top: 20px;
   padding-bottom: 100px;
 

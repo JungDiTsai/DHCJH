@@ -45,7 +45,9 @@ $(document).ready(function(){
                         loginBox.style.setProperty('display', "block");
                     }
                 }else{
+                    getMemCoupons();
                     $('.checkoutBg').removeClass('disN');  //準備結帳
+
                 }
             }
         }
@@ -842,6 +844,45 @@ function getOrderInfo(){
         $('.checkoutOrder p span').text(subtotalAll);
     });
 }
+// 抓取折價券
+function getMemCoupons(){
+    //產生折價券選項
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange=function (){
+        if( xhr.readyState == 4){
+            if( xhr.status == 200 ){
+            showCoupons( xhr.responseText );
+            }else{
+            alert( xhr.status );
+            }
+        }
+    }
+    
+    var url = "php/components/_getCoupons.php?memNo="+ LoginState[0][0];
+    xhr.open("Get", url, true);
+    xhr.send( null );
+}
+
+function showCoupons(jsonStr){
+    var coupon = JSON.parse(jsonStr);
+    // console.log(coupon);
+    var couponInnerHtml = "";
+
+    document.getElementById("couponUse").innerHTML = couponInnerHtml;
+    
+    
+    couponInnerHtml += `<option couponNo="0" value="0">選擇折價券</option>`;
+    for(let i=0; i < coupon.length; i++){
+        couponInnerHtml += `<option value="${coupon[i].discount}" couponNo="${coupon[i].memCouponsNo}">${coupon[i].discount}</option>`;
+    }
+    couponNo = 0;
+    document.getElementById("couponUse").addEventListener('input', function(){
+        couponNo = $('#couponUse :selected').attr('couponNo');
+        // console.log(couponNo);
+    })
+    
+    document.getElementById("couponUse").innerHTML = couponInnerHtml;
+}
 // 照片存檔
 // function saveCustImg(){
 //     domtoimage.toJpeg(orderStage)
@@ -877,14 +918,14 @@ function getOrderInfo(){
 function saveOrder (){   
     domtoimage.toPng(orderStagePic)
         .then(function (dataUrl) {
-            console.log(dataUrl);
+            // console.log(dataUrl);
             let img = dataUrl
 
             // 產生XMLHttpRequest物件
             var xhr = new XMLHttpRequest();
             xhr.onload=function (){
                 if( xhr.status == 200 ){
-                    console.log(xhr.responseText);
+                    // console.log(xhr.responseText);
                 }else{
                     alert( xhr.status );
                 }
@@ -895,6 +936,7 @@ function saveOrder (){
             
             var orderInfo = {};
             orderInfo.memNo = LoginState[0][0];
+            orderInfo.memCouponsNo = couponNo;
             orderInfo.totalMoney = subtotalAll;
             orderInfo.orderName = orderName;
             orderInfo.actPlace = locValue;
@@ -910,6 +952,7 @@ function saveOrder (){
             var jsonStr = JSON.stringify(orderInfo);
             //設定好所要連結的程式
             var url = "php/components/_saveCustOrder.php?jsonStr=" + jsonStr;
+            // var url = `php/components/_saveCustOrder.php?jsonStr= jsonStr ?memNo= LoginState[0][0]`;
             xhr.open("Post", url, true);
             xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
             //送出資料
@@ -919,41 +962,6 @@ function saveOrder (){
         .catch(function (error) {
             console.error('oops, something went wrong!', error);
     });
-
-    
-    // datevalue = $('.orderDate span').text();
-    // locValue = $('.orderLoc span').text();
-    // orderName = $('#orderName').val();
-
-    // var xhr = new XMLHttpRequest();
-    // xhr.onload=function (){
-    //     if( xhr.status == 200 ){
-    //         console.log(xhr.responseText);
-    //     }else{
-    //         alert( xhr.status );
-    //     }
-    // }
-    
-    // var orderInfo = {};
-    // // orderInfo.memId = $id("memId").value;
-    // // orderInfo.memCouponsNo = ;
-    // orderInfo.totalMoney = subtotal;
-    // orderInfo.orderName = orderName;
-    // orderInfo.actPlace = locValue;
-    // orderInfo.actStart = datevalue;
-    // orderInfo.hostNo = orderHostNo;
-    // // orderContent
-    // orderInfo.troupeNo = orderDanceNo;
-    // orderInfo.fireNo = orderFireNo;
-    // orderInfo.fireworkNo = orderFireworkNo;
-    // orderInfo.audioNo = orderAudioNo;
-    // orderInfo.pipeNo = orderPipeNo;
-
-    // var jsonStr = JSON.stringify(orderInfo);
-    // // alert ( jsonStr ); 
-    // var url = "php/components/_saveCustImg.php?jsonStr=" + jsonStr;
-    // xhr.open("Post", url, true);
-    // xhr.send( null );
 }
 
 // function endStep (){
