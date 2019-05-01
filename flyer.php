@@ -769,7 +769,11 @@
     <!-- jquery UI datepicker -->
     <script>
         $(function () {
-            $("#datepicker").datepicker();
+            $("#datepicker").datepicker({
+              showOtherMonths : true,
+              hideIfNoPrevNext : true,
+              minDate : "+1d"
+            });
         });
         $('#selectDay input').on('change', function () {
             $('#selectDay p').html('活動日期' + ' : <span>' + this.value + '</span>');
