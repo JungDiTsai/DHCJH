@@ -49,7 +49,7 @@ body {
   transform: translateX( -50% );
   border-radius: 90px;
   text-align: center;
-  background: #dde3e6;
+  background: transparent;
   z-index: 100;
 }
 .slider__arrow {
@@ -70,7 +70,7 @@ body {
   left: 16px;
   width: 64px;
   height: 64px;
-  background-image: url(../images/intro/assets/arrow__left-white.png);
+  background-image: url(../images/intro/assets/arrow__left.png);
   background-image: url(../images/intro/assets/arrow__left-white.png);
   /* background-image: url(/arrow__left-white.png); */
   background-repeat: no-repeat;
@@ -81,7 +81,7 @@ body {
   right: 16px;
   width: 64px;
   height: 64px;
-  background-image: url(../images/intro/assets/arrow__right-white.png);
+  background-image: url(../images/intro/assets/arrow__right.png);
   background-image: url(../images/intro/assets/arrow__right-white.png);
   background-repeat: no-repeat;
   background-position: center center;
@@ -313,9 +313,16 @@ body {
 
 
 @media screen and (max-width: 640px) {
-
+  .slider-list__item .title__element {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 4;
+  }
   .slider-list__item .title__element .title {
-    font-size: 26vw;
+    font-size: 10vw;
   }
 
   .slider-list__item .more__element .content .excerpt {

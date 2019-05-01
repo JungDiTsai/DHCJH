@@ -3,7 +3,7 @@
   height: 100vh;
   background-size: cover;
   background-color: #3b3a3a;
-  background-image: url(../images/loading/load1.png);
+  background-image: url(../../images/loading/load1.png);
   background-repeat: no-repeat;
   background-position: center center;
 }

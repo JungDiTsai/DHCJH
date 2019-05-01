@@ -8,7 +8,7 @@ echo $couponstype. '-' .$name;
 $errMsg = "";
         try {
 
-            require_once("back/connectBooks.php");
+            require_once("connectBooks.php");
             $sql = "INSERT INTO memcoupons VALUES (NULL , :name , :couponstype , '2019-04-25' , '未使用') ";
 
             $products = $pdo->prepare( $sql );

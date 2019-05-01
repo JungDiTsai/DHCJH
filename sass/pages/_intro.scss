@@ -2,8 +2,18 @@
     margin: 0;
     padding: 0;
 }
+footer #footerBgiNew{
+    position: relative;
+}
 canvas{
     display: block;
+}
+.content .titleBgi {
+    margin-left: 0;
+    font-weight: 400;
+}
+.titleBgi{
+    font-weight: 400;
 }
 #canvasScene {
         /* display: block; */
@@ -19,7 +29,7 @@ canvas{
     width: 100%;
  //    height: 60vh;
      padding-top:35px;
-     margin-top: 75px;
+     margin-top: 0px;
     position: relative;
  
      .introStage{
@@ -111,7 +121,7 @@ canvas{
  ////////////團體介紹768/////////////
  @media all and (min-width:768px){
      .introTime{  
- 
+        margin-top: 75px;
         .introStage{
             
           .people{
@@ -151,6 +161,7 @@ canvas{
  ///////////團體介紹992/////////////
  @media all and (min-width:992px){
      .introTime{  
+        margin-top: 75px;
         .introStage{
          width: 80%;
         
@@ -234,7 +245,7 @@ canvas{
              }
           }
           .led{
-             top:2%;    
+             top:55%;    
              marquee{
                  font-size: 21px;
              }

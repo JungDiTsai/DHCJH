@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <style>
+    body{
+        background-color: black;
+    }
+    .lightBox{
+        width: 300px;
+        height: 580px;
+        position: relative;
+        background-color: #fff700c2;
+        border-radius: 10px;
+        padding: 26px;
+        margin: 50px 0;
+        filter: drop-shadow(0 0 8px #fff);
+    }
+    .fas{
+      position: absolute;
+      right:  20px;
+      top: 10px;
+    }
+    </style>
+</head>
+<body>
+    <div class="lightBox">
+            <i class="fas fa-times fa-3x"></i>
+    </div>
+    <script>
+    var boxCancel= document.querySelector('.lightBox');
+    boxCancel.addEventListener('click',function(){
+        boxCancel.remove();
+    });
+    
+    </script>
+</body>
+</html>

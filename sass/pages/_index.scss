@@ -12,6 +12,16 @@
 }*/
 a{
   text-decoration: none;
+  .commonBtn{
+     margin: auto;
+  }
+
+}
+.commonBtn{
+  a{
+    text-decoration: none;
+    color:$fontColor;
+  }
 }
 #gameHub{
   opacity:0.85;
@@ -2496,7 +2506,7 @@ footer{
   #tryCustormiseFlyerWrap,
   #beautyContestWrap,
   #processWrap{
-    padding-top:160px;
+    padding-top:130px;
   }
   #carEquipmentsIntroWrap{
     #equipBtnOne{

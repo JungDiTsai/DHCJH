@@ -258,34 +258,6 @@ header {
           animation: headerNeon 1s infinite;
 }
 
-footer {
-  padding-top: 15px;
-  width: 100%;
-  height: 115px;
-  background-image: url(../images/footerBgi.jpg);
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center;
-  background-size: cover;
-}
-
-footer p {
-  font-size: 16px;
-  color: #fff;
-  text-align: center;
-  padding-top: 0px;
-}
-
-footer div {
-  text-align: center;
-}
-
-footer img {
-  border-radius: 100%;
-  margin: 4px;
-  width: 36px;
-}
-
 @media screen and (min-width: 1200px) {
   .menubtn {
     display: none;
@@ -3400,17 +3372,9 @@ body {
 #startGame, #endtGame, #backpage {
   font-size: 21px;
   font-weight: 300;
-  padding: 0rem 3.84rem;
-  line-height: 3.2rem;
-  border: 1px solid #00ffff;
-  background-color: rgba(247, 140, 140, 0.3);
-  color: #fff;
   cursor: pointer;
-  position: relative;
   -webkit-transition: .5s;
   transition: .5s;
-  -webkit-box-shadow: 0 0 0 0 transparent;
-          box-shadow: 0 0 0 0 transparent;
   overflow: hidden;
   margin: auto;
   text-align: center;
@@ -3423,13 +3387,21 @@ body {
 #carGame {
   width: 500px;
   position: absolute;
-  top: 20vh;
+  top: 16vh;
   bottom: 0px;
   left: 0px;
   right: 0px;
   margin: auto;
   text-align: center;
   font-family: monospace;
+}
+
+#carGame h1, #carGame h2 {
+  color: white;
+}
+
+#carGame h2 {
+  font-size: 21px;
 }
 
 #carGame canvas {
@@ -3451,6 +3423,17 @@ body {
 
 .clearboth {
   clear: both;
+}
+
+#startButton {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#endButton p {
+  margin-bottom: 30px;
 }
 
 .loginBox {
