@@ -117,4 +117,4 @@ var ImageSwiper = function(beautyRankingimgs, minRange) {
   
     }
     //傳參
-  var beautyRankingimgs = new ImageSwiper(document.getElementById('beautyRankingimgs'), 30)
+  var beautyRankingimgs = new ImageSwiper(document.getElementById('beautyRankingimgs'), 200)

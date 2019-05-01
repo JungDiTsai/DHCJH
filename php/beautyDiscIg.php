@@ -179,9 +179,7 @@
 				for(let i=0; i< collection.length; i++){
 					collection[i].onclick = function(e){
 						let orderNo = e.target.parentNode.nextElementSibling.innerText;
-						let memNo = <?php if(isset($_SESSION['member'])){print_r($_SESSION['member'][0][0]);}else {
-								print_r("1");
-							} ?>;
+						let memNo =LoginState[0][0];
 						let url = "php/addcollection.php?memNo=" + memNo + "&orderNo=" + orderNo;
 						if(e.target.src.indexOf("images/bookmark.png") != -1 ){
 							e.target.src = "images/bookmarkdeep.png";
