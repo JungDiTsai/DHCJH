@@ -2267,7 +2267,7 @@ header {
 }
 
 .thrScreen .titleBgi {
-  background-image: url("./images/titleNeonLightDarkBlueNew.gif");
+  background-image: url("../images/titleNeonLightDarkBlueNew.gif");
   margin-top: 0;
   margin-bottom: 50px;
   opacity: 0;
