@@ -1,14 +1,17 @@
 $(document).ready(function(){
     if(document.body.clientWidth < 1200){
-        $(".beautyDiscStageContainer").on('click','.dotflip',function(){
+        $(".beautyDiscStageContainer").on('vclick','.dotflip',function(){
             var x = $('.dotflip').index(this);
             console.log(x);
             $('.dotpanel').eq(x).css('display','block');
             
         });
-       $('.dotpanel').click(function(){
-        $('#dotpanel').css('display','none');
+       $('.dotpanel li').on('vclick',function(){
+        $('.dotpanel').css('display','none');
        });
+    //    $(document).on('vclick', '#button', function(){ 
+    //     console.log("click");
+    //     });
     }else{
         $(".beautyDiscStageContainerWrap").on('click','.dotflip',function(){
             var x = $('.dotflip').index(this);

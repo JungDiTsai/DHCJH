@@ -1,3 +1,9 @@
+#memOrderLightBox{
+  top:0;
+}
+.fa-bookmark::before{
+  cursor: pointer;
+}
 footer #footerBgiNew{
   position: relative;
 }
@@ -180,6 +186,14 @@ li{
       opacity: 0.7;
       margin-left: calc(6.5% + 30px); 
      }
+     .beautyRankingSocialBtns{
+       i{
+        &:nth-child(4){
+          flex-grow: 5;
+          text-align: left;
+        }
+       }
+     }
   }
   .beautyRankingSocialBtns{
       display: flex;
@@ -341,6 +355,7 @@ li{
       }
     }
     .beautyDiscStageContainer{
+      font-family: $contentFontFamily;
       .beautyDiscIg{
         height: 580px;
         width: 100%;
@@ -351,8 +366,9 @@ li{
         filter: drop-shadow(0 0 8px #fff);
         .beautyDiscIgMemStage{
           width: 302px;
-          height: 302px;
           margin-top: 15px;
+          height: 279px;
+          text-align: center;
         }
         .likeCount{
           margin-left: 5px;
@@ -366,7 +382,7 @@ li{
           max-width: 100%;
           margin-left: 5px;
           padding: 0px;
-          margin-top: -35px;
+          margin-top: -25px;
           i{
             color: #111;
           }
@@ -382,6 +398,7 @@ li{
             width: 200%;
             margin-left: 5px;
             .beautyDiscIgMName{
+              font-family: $contentFontFamily;
               font-size: 18px;
               width: 100%;
               line-height: 25px;
@@ -389,6 +406,7 @@ li{
               max-width: 100%;
             }
             .beautyDiscIgMNameCar{
+              font-family: $contentFontFamily;
               font-size: 16px;
               width: 100%;
               line-height: 25px;
@@ -415,7 +433,7 @@ li{
         }
         .beautyDiscIgMemTextContainerWrap{
           margin: 15px 0px;
-          font-family: '微軟正黑';
+          font-family: $contentFontFamily;
           overflow-y:scroll;
           height: 85px;
           .beautyDiscIgMemTextContainer{
@@ -436,6 +454,7 @@ li{
               font-weight: 900;
               padding-left: 5px;
               width: 80px;
+              font-family: $contentFontFamily;
             }
             .beautyDiscIgNameText{
               margin-left: 20px;
@@ -443,11 +462,14 @@ li{
               font-size: $contentWord;
               color: #444;
               width: 150px;
+              font-family: $contentFontFamily;
             }
           }
         }
           img{
-            width: 100%;
+            width: auto;
+            height: 100%;
+            max-height: 279px;
             filter: drop-shadow(2px 2px 4px #444);
           }
           .likeHeart{
@@ -738,6 +760,12 @@ li{
               padding: 0px 30px;
               max-width: 70%;
               margin-left: 15%;
+              i{
+                &:nth-child(4){
+                  flex-grow: 5;
+                  text-align: left;
+                }
+              }
             .fa-heart,.fa-heart{
                 color:#eee ;
             }
@@ -766,10 +794,6 @@ li{
                 width: 30px;
                 margin-top: 0px;
                 height: 30px;
-              }
-              &:nth-child(4){
-                flex-grow: 5;
-                text-align: right;
               }
             }
               .fa-bookmark::before,.fa-external-link-alt::before,.fa-comment::before,.fa-heart::before{
