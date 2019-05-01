@@ -1,3 +1,12 @@
+.mainNav{
+  li{
+    &:nth-child(4){
+      a{
+        color:$logoColor;
+      }
+    }
+  }
+}
 #memOrderLightBox{
   top:0;
 }

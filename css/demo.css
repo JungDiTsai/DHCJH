@@ -28,7 +28,7 @@ body {
   min-height: 100%;
   min-height: 100vh;
   overflow: hidden;
-  top: 0;
+  top: 40px;
 }
 
 .slider {
@@ -255,9 +255,10 @@ body {
   letter-spacing: 0.1em;
   font-size: 16px;
   line-height: 24px;
-  padding: 8px 10px 16px;
+  padding: 20px;
   background-color: rgba(255, 255, 255, 0.19);
   border-radius: 25px;
+  margin-top: 25px;
 }
 .slider-list__item .more__element .content .link {
   position: relative;
@@ -310,7 +311,11 @@ body {
           transform: translateX(0);
   z-index: 2;
 }
-
+@media screen and (min-width:1200px){
+  #coidea{
+    top: 0;
+  }
+}
 
 @media screen and (max-width: 640px) {
   .slider-list__item .title__element {
