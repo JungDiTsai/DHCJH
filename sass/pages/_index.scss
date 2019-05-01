@@ -747,22 +747,22 @@ a{
     img{
         width: 80px;
         position: absolute;
-        top:0;
-        left: 0;
+        top:-140px;
+        left: -150px;
         right: 0;
         bottom: 0;
         margin: auto;
-        animation: turn2 90s alternate infinite;
+        //animation: turn2 90s alternate infinite;
     }
     .img2{
         width: 80px;
         position: absolute;
-        top:0;
-        left: 0;
+        top:-140px;
+        left: 150px;
         right: 0;
         bottom: 0;
         margin: auto;
-        animation: turn3 90s alternate infinite;
+        //animation: turn3 90s alternate infinite;
     }
 }
 
@@ -1297,7 +1297,7 @@ ul.tryCustTabs li a.tryCustActive {
   width: 100px;
   height: 120px;
   margin: auto;
-  margin-top:27vh;
+  margin-top:28vh;
   top: 0;
   bottom: 0;
   left: 0;
