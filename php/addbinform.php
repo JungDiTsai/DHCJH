@@ -8,9 +8,10 @@ try {
 	$memNo=1;
     $memNo =$_REQUEST["memNo"];
     $informReason=$_REQUEST["informReason"];
-    $informStatus="未處理";
-	$sql = "INSERT INTO binform(orderNo,memNo,informReason,informStatus)
-	VALUES($orderNo,$memNo,'$informReason','$informStatus')";
+	$informStatus="未處理";
+	$binformWay="無";
+	$sql = "INSERT INTO binform(orderNo,memNo,informReason,informStatus,binformWay)
+	VALUES($orderNo,$memNo,'$informReason','$informStatus','$binformWay')";
 	$addmessage = $pdo ->exec($sql);
 	
 } catch (PDOException $e) {

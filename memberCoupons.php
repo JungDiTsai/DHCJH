@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>我的優惠券</title>
+    <title>台灣大舞台-我的優惠券</title>
+    <link rel="Shortcut Icon" type="image/x-icon" href="images/logo.ico">
     <link rel="stylesheet" href="css/memberCoupons.css">
     <!-- font awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"

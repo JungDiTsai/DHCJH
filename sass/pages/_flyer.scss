@@ -1,4 +1,13 @@
 
+.mainNav{
+  li{
+    &:nth-child(2){
+      a{
+        color:$logoColor;
+      }
+    }
+  }
+}
 .firstScreen {
   
   background: #000 center;
