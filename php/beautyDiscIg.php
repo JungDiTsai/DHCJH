@@ -80,7 +80,7 @@
 							"<i><img class='likeHeart' src='images/like.png' alt='喜歡'></i>"+
 							"<span style='display:none;'>"+n['orderNo']+"</span>"+
 							"<p class='likeCount'>"+n['orderVote']+"個喜歡</p>"+
-							"<i class='far fa-bookmark' alt='收藏'></i>"+
+							"<i><img class='far fa-bookmark' src='images/bookmark.png' alt='收藏'></i>"+
 							"<span style='display:none;'>"+n['orderNo']+"</span>"+
 						"</div>"+
 						"<div class='beautyDiscIgMemTextContainerWrap'>"+
@@ -175,21 +175,25 @@
 					}
 				)};
 				//收藏
-				//click 改顏色
 				var collection = document.getElementsByClassName("fa-bookmark");
 				for(let i=0; i< collection.length; i++){
 					collection[i].onclick = function(e){
-						let orderNo = e.target.nextElementSibling.innerText;
-						let memNo = <?php if(isset($_SESSION['member'])){print_r($_SESSION['member'][0][0]);}else {
-								print_r("1");
-							} ?>;
+						let orderNo = e.target.parentNode.nextElementSibling.innerText;
+						let memNo =LoginState[0][0];
 						let url = "php/addcollection.php?memNo=" + memNo + "&orderNo=" + orderNo;
+						
 						console.log(url);
 						console.log(orderNo);
 						console.log(memNo);
 						var xhr = new XMLHttpRequest();
 						xhr.onload = function(){
-						
+							if(e.target.src.indexOf("images/bookmark.png") != -1 ){
+							e.target.src = "images/bookmarkdeep.png";
+							amount = 1;
+						}else{
+							e.target.src = "images/bookmark.png";
+							amount = -1;
+						}
 						}
 						xhr.open("get",url,true);
 						xhr.send(null);

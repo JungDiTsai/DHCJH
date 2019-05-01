@@ -62,7 +62,8 @@ try{
                             <i><img class="likeHeart" src="images/like.png" alt="喜歡收藏"></i><span style="display:none"><?php echo $beautyContestRow[5]['orderNo'] ?></span>
                             <p class="likeCount"><?php echo $beautyContestRow[5]['orderVote'];?>個喜歡</p>
                             <i class="far fa-comment showOrderLightBox" alt="留言" orderNo="<?php echo $beautyContestRow[5]['orderNo'] ?>"></i>
-                            <i class="far fa-bookmark" alt="分享"></i>
+                            <div><i class="far fa-bookmark" alt="分享"></i></div>
+                            <span style='display:none;'><?php echo $beautyContestRow[5]['orderNo'] ?></span>
                         </div>
                     </div>
                     <div id="beautyRankingbg2" class="beautyRankingbg">
@@ -72,7 +73,8 @@ try{
                             <i><img class="likeHeart" src="images/like.png" alt="喜歡收藏"></i><span style="display:none"><?php echo $beautyContestRow[3]['orderNo'] ?></span>
                             <p class="likeCount"><?php echo $beautyContestRow[3]['orderVote'];?>個喜歡</p>
                             <i class="far fa-comment showOrderLightBox" alt="留言" orderNo="<?php echo $beautyContestRow[3]['orderNo'] ?>" ></i>
-                            <i class="far fa-bookmark" alt="分享"></i>
+                            <div><i class="far fa-bookmark" alt="分享"></i></div>
+                            <span style='display:none;'><?php echo $beautyContestRow[3]['orderNo'] ?></span>
                         </div>
                     </div>
                     <div id="beautyRankingbg3" class="beautyRankingbg">
@@ -82,7 +84,8 @@ try{
                             <i><img class="likeHeart" src="images/like.png" alt="喜歡收藏"></i><span style="display:none"><?php echo $beautyContestRow[4]['orderNo'] ?></span>
                             <p class="likeCount"><?php echo $beautyContestRow[4]['orderVote'];?>個喜歡</p>
                             <i class="far fa-comment showOrderLightBox" alt="留言" orderNo="<?php echo $beautyContestRow[4]['orderNo'] ?>"></i>
-                            <i class="far fa-bookmark" alt="分享"></i>
+                            <div><i class="far fa-bookmark" alt="分享"></i></div>
+                            <span style='display:none;'><?php echo $beautyContestRow[4]['orderNo'] ?></span>
                         </div>
                     </div>
                 </div>
@@ -94,7 +97,8 @@ try{
                             <i><img class="likeHeart" src="images/like.png" alt="喜歡收藏"></i><span style="display:none"><?php echo $beautyContestRow[1]['orderNo'] ?></span>
                             <p class="likeCount"><?php echo $beautyContestRow[1]['orderVote'];?>個喜歡</p>
                             <i class="far fa-comment showOrderLightBox" alt="留言" orderNo="<?php echo $beautyContestRow[1]['orderNo'] ?>"></i>
-                            <i class="far fa-bookmark" alt="分享"></i>
+                            <div><i class="far fa-bookmark" alt="分享"></i></div>
+                            <span style='display:none;'><?php echo $beautyContestRow[1]['orderNo'] ?></span>
                         </div>
                     </div>
                     <div id="beautyRankingbg5" class="beautyRankingbg">
@@ -104,7 +108,8 @@ try{
                             <i><img class="likeHeart" src="images/like.png" alt="喜歡收藏"></i><span style="display:none"><?php echo $beautyContestRow[0]['orderNo'] ?></span>
                             <p class="likeCount"><?php echo $beautyContestRow[0]['orderVote'];?>個喜歡</p>
                             <i class="far fa-comment showOrderLightBox" alt="留言" orderNo="<?php echo $beautyContestRow[0]['orderNo'] ?>"></i>
-                            <i class="far fa-bookmark" alt="分享"></i>
+                            <div><i class="far fa-bookmark" alt="分享"></i></div>
+                            <span style='display:none;'><?php echo $beautyContestRow[0]['orderNo'] ?></span>
                         </div>
                     </div>
                     <div id="beautyRankingbg6" class="beautyRankingbg">
@@ -114,7 +119,8 @@ try{
                             <i><img class="likeHeart" src="images/like.png" alt="喜歡收藏"></i><span style="display:none"><?php echo $beautyContestRow[2]['orderNo'] ?></span>
                             <p class="likeCount"><?php echo $beautyContestRow[2]['orderVote'];?>個喜歡</p>
                             <i class="far fa-comment showOrderLightBox" alt="留言" orderNo="<?php echo $beautyContestRow[2]['orderNo'] ?>"></i>
-                            <i class="far fa-bookmark" alt="分享"></i>
+                            <div><i class="far fa-bookmark" alt="分享"></i></div>
+                            <span style='display:none;'><?php echo $beautyContestRow[2]['orderNo'] ?></span>
                         </div>
                     </div>
                 </div>
@@ -188,7 +194,7 @@ try{
     <div id="memOrderLightBox">
          <div id="LightBox">
             <i class="fas fa-times fa-2x" id="hiddenBox"></i>
-            <img src="images/stageImages/2.png" alt="">
+            <img src="images/stageImages/2.png" alt="" id="_OrderImg">
             <div id="allMessage">  
             </div>
             <div id="my_Message">
@@ -251,9 +257,9 @@ try{
                  xhr.onreadystatechange = function(){
                    if( xhr.readyState == XMLHttpRequest.DONE ){ //server端執行完畢
                      if( xhr.status == 200){ //server端可以正確的執行
-                          if(xhr.responseText!="沒有留言"){
-                            document.getElementById('allMessage').innerText = '';
-                              let data = JSON.parse(xhr.responseText);
+                           document.getElementById('allMessage').innerText = '';
+                           let data = JSON.parse(xhr.responseText)
+                          if(Array.isArray(data)){
                               for (let i = 0; i < data.length; i++) {
                                  let li = document.createElement('li');
                                  let img = document.createElement('img');
@@ -263,9 +269,10 @@ try{
                                  p.innerText = data[i]['messageContent'];
                                  li.appendChild(p);
                                  document.getElementById('allMessage').appendChild(li);
+                                 document.getElementById('_OrderImg').src = data[i]['orderImgUrl'];
                               }
                           }else{
-                             console.log('沒有留言');
+                             document.getElementById('_OrderImg').src = data['orderImgUrl'];
                           }
                           
                      }else{ //其它
@@ -278,7 +285,6 @@ try{
                  xhr.open("get", url, true);
                  //送出資料
                  xhr.send(null);
-               
             })
          }
          

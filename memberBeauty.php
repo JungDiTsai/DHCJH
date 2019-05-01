@@ -64,7 +64,7 @@
                          try {
                             $member =$_SESSION['member'][0][0];
 
-                            $sql = "SELECT * from message join orders on orders.orderNo= message.orderNo where message.memno = $member order by messageNo desc ;";
+                            $sql = "SELECT * from message join orders on orders.orderNo= message.orderNo where message.memno = $member;";
                             $products = $pdo->query($sql);
                          } catch (PDOException $e) {
                             $errMsg = '';
@@ -85,7 +85,7 @@
       <div id="memOrderLightBox">
          <div id="LightBox">
             <i class="fas fa-times fa-2x" id="hiddenBox"></i>
-            <img src="images/stageImages/2.png" alt="" id="_OrderImg">
+            <img src="images/stageImages/2.png" alt="">
             <div id="allMessage">  
             </div>
             <div id="my_Message">
@@ -155,9 +155,8 @@
                  xhr.onreadystatechange = function(){
                    if( xhr.readyState == XMLHttpRequest.DONE ){ //server端執行完畢
                      if( xhr.status == 200){ //server端可以正確的執行
-                           document.getElementById('allMessage').innerText = '';
-                           let data = JSON.parse(xhr.responseText)
-                          if(Array.isArray(data)){
+                          if(xhr.responseText!="沒有留言"){
+                              let data = JSON.parse(xhr.responseText);
                               for (let i = 0; i < data.length; i++) {
                                  let li = document.createElement('li');
                                  let img = document.createElement('img');
@@ -167,10 +166,9 @@
                                  p.innerText = data[i]['messageContent'];
                                  li.appendChild(p);
                                  document.getElementById('allMessage').appendChild(li);
-                                 document.getElementById('_OrderImg').src = data[i]['orderImgUrl'];
                               }
                           }else{
-                             document.getElementById('_OrderImg').src = data['orderImgUrl'];
+                             console.log('沒有留言');
                           }
                           
                      }else{ //其它
@@ -183,6 +181,7 @@
                  xhr.open("get", url, true);
                  //送出資料
                  xhr.send(null);
+               
             })
          }
          
