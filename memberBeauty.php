@@ -162,7 +162,6 @@
                                  document.getElementById('_OrderImg').src = data[i]['orderImgUrl'];
                               }
                           }else{
-                             
                              document.getElementById('_OrderImg').src = data['orderImgUrl'];
                           }
                           
