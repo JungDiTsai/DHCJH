@@ -3,14 +3,14 @@ $errMsg="";
 // exit( $_REQUEST["orderNo"] . $_REQUEST["messageContent"]);
 try {
 	require_once("../php/components/_connectDHC.php"); 
-	$pdo = new PDO( $dsn, $user, $password, $options);   
     //撈訊息
 	$orderNo = $_REQUEST["orderNo"];
-	// $memNo=1;
+	$memNo=1;
     $memNo =$_REQUEST["memNo"];
-    $messageContent=$_REQUEST["messageContent"];
-	$sql = "INSERT INTO message(orderNo,memNo,messageContent)
-	VALUES($orderNo,$memNo,'$messageContent')";
+    $informReason=$_REQUEST["informReason"];
+    $informStatus="未處理";
+	$sql = "INSERT INTO binform(orderNo,memNo,informReason,informStatus)
+	VALUES($orderNo,$memNo,'$informReason','$informStatus')";
 	$addmessage = $pdo ->exec($sql);
 	
 } catch (PDOException $e) {

@@ -56,35 +56,32 @@ try{
                 <?php while($beautyContestRow = $beautyContest->fetchAll()){ ?>
                     <div id="beautyRankingbg1" class="beautyRankingbg">
                         <img src="<?php echo $beautyContestRow[5]['orderImgUrl']; ?>" alt="選美車車">
-                        <h3><?php echo $beautyContestRow[5]['orderName']; ?></h3>
+                        <h3><?php echo $beautyContestRow[5]['orderName'];?></h3>
                         <div class="beautyRankingSocialBtns">
-                            <i><img class="likeHeart" src="images/like.png" alt="喜歡收藏"></i>
+                            <i><img class="likeHeart" src="images/like.png" alt="喜歡收藏"></i><span style="display:none"><?php echo $beautyContestRow[5]['orderNo'] ?></span>
+                            <p class="likeCount"><?php echo $beautyContestRow[5]['orderVote'];?>個喜歡</p>
                             <i class="far fa-comment" alt="留言"></i>
-                              <p class="likeCount"><?php echo $beautyContestRow[5]['orderVote']; ?>個喜歡</p>
                             <i class="far fa-bookmark" alt="分享"></i>
-                            <span style="display:none"><?php echo $beautyContestRow[5]['orderNo'] ?></span>
                         </div>
                     </div>
                     <div id="beautyRankingbg2" class="beautyRankingbg">
                        <img src="<?php echo $beautyContestRow[3]['orderImgUrl']; ?>"  alt=""onclick="window.location.href='beautyDiscuss.html'">
                         <h3><?php echo $beautyContestRow[3]['orderName']; ?></h3>
                         <div class="beautyRankingSocialBtns">
-                            <i><img class="likeHeart" src="images/like.png" alt="喜歡收藏"></i>
+                            <i><img class="likeHeart" src="images/like.png" alt="喜歡收藏"></i><span style="display:none"><?php echo $beautyContestRow[3]['orderNo'] ?></span>
+                            <p class="likeCount"><?php echo $beautyContestRow[3]['orderVote'];?>個喜歡</p>
                             <i class="far fa-comment" alt="留言"></i>
-                              <p class="likeCount"><?php echo $beautyContestRow[3]['orderVote']; ?>個喜歡</p>
                             <i class="far fa-bookmark" alt="分享"></i>
-                            <span style="display:none"><?php echo $beautyContestRow[5]['orderNo'] ?></span>
                         </div>
                     </div>
                     <div id="beautyRankingbg3" class="beautyRankingbg">
                         <img src="<?php echo $beautyContestRow[4]['orderImgUrl']; ?>" alt="">
                         <h3><?php echo $beautyContestRow[4]['orderName']; ?></h3>
                         <div class="beautyRankingSocialBtns">
-                            <i><img class="likeHeart" src="images/like.png" alt="喜歡收藏"></i>
+                            <i><img class="likeHeart" src="images/like.png" alt="喜歡收藏"></i><span style="display:none"><?php echo $beautyContestRow[4]['orderNo'] ?></span>
+                            <p class="likeCount"><?php echo $beautyContestRow[4]['orderVote'];?>個喜歡</p>
                             <i class="far fa-comment" alt="留言"></i>
-                              <p class="likeCount"><?php echo $beautyContestRow[4]['orderVote']; ?>個喜歡</p>
                             <i class="far fa-bookmark" alt="分享"></i>
-                            <span style="display:none"><?php echo $beautyContestRow[5]['orderNo'] ?></span>
                         </div>
                     </div>
                 </div>
@@ -93,33 +90,30 @@ try{
                         <img src="<?php echo $beautyContestRow[1]['orderImgUrl']; ?>" alt="">
                         <h3><?php echo $beautyContestRow[1]['orderName']; ?></h3>
                         <div class="beautyRankingSocialBtns">
-                            <i><img class="likeHeart" src="images/like.png" alt="喜歡收藏"></i>
+                            <i><img class="likeHeart" src="images/like.png" alt="喜歡收藏"></i><span style="display:none"><?php echo $beautyContestRow[1]['orderNo'] ?></span>
+                            <p class="likeCount"><?php echo $beautyContestRow[1]['orderVote'];?>個喜歡</p>
                             <i class="far fa-comment" alt="留言"></i>
-                              <p class="likeCount"><?php echo $beautyContestRow[1]['orderVote']; ?>個喜歡</p>
                             <i class="far fa-bookmark" alt="分享"></i>
-                            <span style="display:none"><?php echo $beautyContestRow[5]['orderNo'] ?></span>
                         </div>
                     </div>
                     <div id="beautyRankingbg5" class="beautyRankingbg">
                         <img src="<?php echo $beautyContestRow[0]['orderImgUrl']; ?>" alt="">
                         <h3><?php echo $beautyContestRow[0]['orderName']; ?></h3>
                         <div class="beautyRankingSocialBtns">
-                            <i><img class="likeHeart" src="images/like.png" alt="喜歡收藏"></i>
+                            <i><img class="likeHeart" src="images/like.png" alt="喜歡收藏"></i><span style="display:none"><?php echo $beautyContestRow[0]['orderNo'] ?></span>
+                            <p class="likeCount"><?php echo $beautyContestRow[0]['orderVote'];?>個喜歡</p>
                             <i class="far fa-comment" alt="留言"></i>
-                              <p class="likeCount"><?php echo $beautyContestRow[0]['orderVote']; ?>個喜歡</p>
                             <i class="far fa-bookmark" alt="分享"></i>
-                            <span style="display:none"><?php echo $beautyContestRow[5]['orderNo'] ?></span>
                         </div>
                     </div>
                     <div id="beautyRankingbg6" class="beautyRankingbg">
                         <img src="<?php echo $beautyContestRow[2]['orderImgUrl']; ?>" alt="">
                         <h3><?php echo $beautyContestRow[2]['orderName']; ?></h3>
                         <div class="beautyRankingSocialBtns">
-                            <i><img class="likeHeart" src="images/like.png" alt="喜歡收藏"></i>
+                            <i><img class="likeHeart" src="images/like.png" alt="喜歡收藏"></i><span style="display:none"><?php echo $beautyContestRow[2]['orderNo'] ?></span>
+                            <p class="likeCount"><?php echo $beautyContestRow[2]['orderVote'];?>個喜歡</p>
                             <i class="far fa-comment" alt="留言"></i>
-                              <p class="likeCount"><?php echo $beautyContestRow[2]['orderVote']; ?>個喜歡</p>
                             <i class="far fa-bookmark" alt="分享"></i>
-                            <span style="display:none"><?php echo $beautyContestRow[5]['orderNo'] ?></span>
                         </div>
                     </div>
                 </div>
@@ -161,14 +155,14 @@ try{
     </div>
 
     <?php require_once("php/footer.php");?>
-
-        <script>
+        <!-- <script>
         var hearts = document.getElementsByClassName("likeHeart");
         for(let i=0; i< hearts.length; i++){
-            hearts[i].onclick = function(e){
-                let orderNo = e.target.parentNode.parentNode.nextElementSibling.innerText;
+            heartss[i].onclick = function(e){
+                // let orderNo = e.target.parentNode.nextElementSibling.innerText;
+                let orderNo = e.target.nextElementSibling.innerText;
                 let amount;
-   
+                console.log(orderNo);
 
                 if(e.target.src.indexOf("images/like.png") != -1 ){
                     e.target.src = "images/likeAlready.png";
@@ -181,15 +175,15 @@ try{
                 var xhr3 = new XMLHttpRequest();
                 xhr3.onload = function(){
                     //console.log(xhr2.responseText);
-                    var str = e.target.parentNode.parentNode.nextElementSibling.innerHTML.replace("個喜歡","");
+                    var str = e.target.parentNode.nextElementSibling.innerHTML.replace("個喜歡","");
                     console.log("------",parseInt(str)+ amount +"個喜歡" );
-                    e.target.parentNode.parentNode.nextElementSibling.innerHTML = parseInt(str)+ amount +"個喜歡";
+                    e.target.parentNode.nextElementSibling.innerHTML = parseInt(str)+ amount +"個喜歡";
                 }
                 xhr3.open("get",url,true);
                 xhr3.send(null);
             }
         }
-    </script>
+    </script> -->
     <script src="js/beautyRankingScale.js"></script>
     <script src="js/beautyPagentSwipe.js"></script>
     <script>
@@ -197,7 +191,7 @@ try{
        
     </script>
     <script src="js/musicBar.js"></script>
-    <script src="js/dotReport.js"></script>
+    <!-- <script src="js/dotReport.js"></script> -->
     <script src="js/navmenu.js"></script>
     <script src="js/discoBall.js"></script>
     
