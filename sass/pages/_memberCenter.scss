@@ -84,6 +84,14 @@
         height: 100%;;
         cursor: pointer;
     }
+    i{
+        left: 0;
+        margin: auto;
+        position: absolute;
+        color: rgba(255,255,255,.7);
+        right: 0;
+        bottom:0;
+    }
     &:hover{
         transform: scale(1.05);
     }

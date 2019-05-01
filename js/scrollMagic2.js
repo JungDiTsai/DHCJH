@@ -260,11 +260,11 @@ var section_06 = new ScrollMagic.Scene({
 var tl = new  TimelineMax();
 
 var tl_01 = TweenMax.to('.introFlyerBoard' , .65 ,{ 
-    width:280,
+    width:260,
     ease: Elastic.easeOut.config(1, 0.4)
 });
 var tl_02 = TweenMax.to('.introFlyerBoard' , .55 ,{ 
-    height:420,
+    height:410,
     ease: Elastic.easeOut.config(1, 0.4)
 });
 var tl_03 = TweenMax.to('.introFlyerBoard img' , 0.4 ,{ 
@@ -277,16 +277,16 @@ var tl_035 = TweenMax.to('.introFlyerFunction' , 0.5 ,{
     height:75,
 });
 var tl_04 = TweenMax.to('#introFlyerFunctionOne' , 0.35 ,{ 
-    y:120,
+    y:100,
     ease: Back.easeOut.config(1.7)
 });
 var tl_05 = TweenMax.to('#introFlyerFunctionTwo' , 0.35 ,{ 
-    y:120,
+    y:100,
     x:-90,
     ease: Back.easeOut.config(1.7)
 });
 var tl_06 = TweenMax.to('#introFlyerFunctionThree' , 0.35 ,{ 
-    y:120,
+    y:100,
     x:90,
     ease: Back.easeOut.config(1.7)
 });
@@ -321,7 +321,7 @@ var section_01 = new ScrollMagic.Scene({
     //觸發點偏移量
     triggerHook: .8
 }).setTween(anime1)//觸發動畫
-.addIndicators()
+//.addIndicators()
 .addTo(controller)
 
 
@@ -330,7 +330,7 @@ var section_01 = new ScrollMagic.Scene({
 
 var tlA = new  TimelineMax();
 var tlA_01 = new TweenMax.to('.popOut' , 1.4 ,{ 
-    scale:1,
+    scale:.9,
     ease: Elastic.easeOut.config(1, 0.5)
 });
 var tlA_02 = new TweenMax.to('#hint1' , 1 ,{ 
@@ -355,7 +355,7 @@ var section_02 = new ScrollMagic.Scene({
     triggerHook: 1,
     name:'start2',
 }).setTween(anime2)//觸發動畫
-.addIndicators()
+//.addIndicators()
 .addTo(controller2)
 
 
@@ -364,7 +364,7 @@ var section_02 = new ScrollMagic.Scene({
 var tlB = new  TimelineMax();
 
 var tlB_01 = new TweenMax.to('.tryCustShowAni' , .8 ,{ 
-    scale:1,
+    scale:.85,
     ease: Elastic.easeOut.config(1, 0.8),
     opacity:1,
 });
@@ -392,9 +392,9 @@ var section_0B = new ScrollMagic.Scene({
     triggerHook: 1,
     name:'start2',
 }).setTween(animeB)//觸發動畫
-.addIndicators({
+//.addIndicators({
 
-})
+//})
 .addTo(controllerB)
 
 
@@ -430,7 +430,7 @@ var section_03 = new ScrollMagic.Scene({
     triggerHook: .8,
     name:'start3',
 }).setTween(anime3)//觸發動畫
-.addIndicators()
+//.addIndicators()
 .addTo(controller3)
 
 //首頁客服與遊戲動畫   
@@ -450,7 +450,7 @@ var section_04 = new ScrollMagic.Scene({
     triggerHook: .8,
     name:'start4',
 }).setTween(anime4)//觸發動畫
-.addIndicators()
+//.addIndicators()
 .addTo(controller4)
 
 
@@ -469,9 +469,9 @@ var section_05 = new ScrollMagic.Scene({
     triggerHook: .8,
     name:'start5',
 }).setTween(anime5)//觸發動畫
-.addIndicators({
+//.addIndicators({
 
-})
+//})
 .addTo(controller4)
 
 
@@ -506,8 +506,12 @@ var section_06 = new ScrollMagic.Scene({
     //觸發點偏移量
     triggerHook: .9
 }).setTween(anime6)//觸發動畫
-.addIndicators({
+//.addIndicators({
 
+<<<<<<< HEAD
 })
 >>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
+=======
+//})
+>>>>>>> 78fdda13c4d287db066d539fbec5d44188b17e3e
 .addTo(controller6)

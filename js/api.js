@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //////先選到月份日期 
 <<<<<<< HEAD
 window.addEventListener("load", function(){
@@ -22,14 +23,32 @@ nextmon.addEventListener('click',function(){
     calendar();
 });
 function calendar(){
+=======
+// 先選到月份日期 
+window.addEventListener("load", function(){
+    // getInfo();
+    calendarA();
+})
+// var nextmon= document.getElementById('nextMon');
+// nextmon.addEventListener('click',function(){
+//     calendarA();
+// });
+
+
+function calendarA(){
+>>>>>>> 78fdda13c4d287db066d539fbec5d44188b17e3e
     var custmonth= document.querySelector('#calendarTitle').innerText;
-    // console.log(custmonth);
+    console.log(custmonth);
 
-    var custday = document.querySelectorAll('#days li');
+    var custday = document.querySelectorAll('#caleBody td');   
     var custdayLen = custday.length;
+<<<<<<< HEAD
 >>>>>>> 2170ebda4f360dc7b905c65271eb6d0b0bbaf07a
+=======
+    console.log(custdayLen);
+>>>>>>> 78fdda13c4d287db066d539fbec5d44188b17e3e
 
-    ////今天日期
+    //今天日期
     dateObj=new Date();
     todaydata=dateObj.getDate();
     otherdata = todaydata;
@@ -169,20 +188,17 @@ function showWeather(jsonStr ,todaydata,otherdata){
         
     }
 };
-//天氣
+// 天氣
 function $id(id){
     return document.getElementById(id);
 } 
-window.addEventListener("load", function(){
-    getInfo();
-    calendar();
-})
+
 
 function getInfo(){
 	var xhr = new XMLHttpRequest();
 	var url = "http://api.openweathermap.org/data/2.5/forecast?q=Taipei,TW&units=metric&appid=2dac4978aa2278e716f6f7895b632224&lang=zh_TW"
 	xhr.onload = function(){
-    //    console.log(todaydata);
+    // console.log(todaydata);
         
         //todaydata傳日期
 		if( xhr.status == 200){
@@ -198,17 +214,61 @@ function showWeather(jsonStr ,todaydata,otherdata){
     today = JSON.parse(jsonStr);
     console.log('get',todaydata ,otherdata );
     if(todaydata==otherdata){
-        $id("weathertest").innerText = today.list[0].weather[0].main;
-    }else if(otherdata== (todaydata+1)){
-        $id("weathertest").innerText = today.list[8].weather[0].main;
+        console.log(123);
+         var weathertext=today.list[0].weather[0].main;
+         if(weathertext=='Clouds'){
+              weathertext = '<img src="./images/api/cloud.png" alt="cloud">';
+         }else if(weathertext=='Clear'){
+             weathertext = '<img src="./images/api/sun.png" alt="sun">';
+         }else if(weathertext=='Rain'){
+             weathertext = '<img src="./images/api/rain.png" alt="rain">';
+         }
+        $id("weather").innerHTML = weathertext;
+    }else if(otherdata == (todaydata+1)){
+        console.log(456);
+        var weathertext = today.list[8].weather[0].main;
+        if(weathertext=='Clouds'){
+            weathertext = '<img src="./images/api/cloud.png" alt="cloud">';
+       }else if(weathertext=='Clear'){
+           weathertext = '<img src="./images/api/sun.png" alt="sun">';
+       }else if(weathertext=='Rain'){
+           weathertext = '<img src="./images/api/rain.png" alt="rain">';
+       }
+         $id("weather").innerHTML = weathertext;
     }else if(otherdata==(todaydata+2)){
-        $id("weathertest").innerText = today.list[16].weather[0].main;
-        console.log(today.list[16].weather[0].main)
+        var weathertext= today.list[16].weather[0].main;
+       
+            if(weathertext=='Clouds'){
+                    weathertext = '<img src="./images/api/cloud.png" alt="cloud">';
+            }else if(weathertext=='Clear'){
+                weathertext = '<img src="./images/api/sun.png" alt="sun">';
+            }else if(weathertext=='Rain'){
+                weathertext = '<img src="./images/api/rain.png" alt="rain">';
+            }
+         $id("weather").innerHTML = weathertext;
     }else if(otherdata==(todaydata+3)){
-        $id("weathertest").innerText = today.list[24].weather[0].main;
+        var weathertext = today.list[24].weather[0].main;
+        
+            if(weathertext=='Clouds'){
+                    weathertext = '<img src="./images/api/cloud.png" alt="cloud">';
+            }else if(weathertext=='Clear'){
+                weathertext = '<img src="./images/api/sun.png" alt="sun">';
+            }else if(weathertext=='Rain'){
+                weathertext = '<img src="./images/api/rain.png" alt="rain">';
+            }
+         $id("weather").innerHTML = weathertext;
     }else if(otherdata==(todaydata+4)){
-        $id("weathertest").innerText = today.list[32].weather[0].main;
+        var weathertext = today.list[32].weather[0].main;
+            if(weathertext=='Clouds'){
+            weathertext = '<img src="./images/api/cloud.png" alt="cloud">';
+            }else if(weathertext=='Clear'){
+                weathertext = '<img src="./images/api/sun.png" alt="sun">';
+            }else if(weathertext=='Rain'){
+                weathertext = '<img src="./images/api/rain.png" alt="rain">';
+            }
+            $id("weather").innerHTML = weathertext;
     }
+<<<<<<< HEAD
      
     
     
@@ -221,6 +281,10 @@ function showWeather(jsonStr ,todaydata,otherdata){
     // console.log(today.list[16].weather[0].main);
   };
 
+=======
+    else $id("weather").innerHTML = '';
+};
+>>>>>>> 78fdda13c4d287db066d539fbec5d44188b17e3e
 
 
 

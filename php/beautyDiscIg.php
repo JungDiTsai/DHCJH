@@ -13,7 +13,7 @@
 				selectUrl =  'php/_switchBeautySelect.php';
 				switchList(selectUrl);
 			}else{
-				return;_
+				return;
 			};
 			// console.log(selectUrl);
 		});
@@ -69,6 +69,7 @@
 								"<i class='fas fa-ellipsis-h'></i>"+
 								"<div class='dotpanel'>"+
 									"<li>檢舉</li>"+
+									"<input type='hidden' name='orderNo' value='"+ n['orderNo'] +"' placeholder='留言回覆...'>"+
 								"</div>"+
 							"</div>"+
 						"</div>"+
@@ -76,13 +77,12 @@
 							"<img src='"+n['orderImgUrl']+"' alt=''>"+
 						"</div>"+
 						"<div class='beautyRankingSocialBtns'>"+
-							"<i><img class='likeHeart' src='images/like.png' alt='喜歡收藏'></i>"+
-							"<span class='display:none;'></span>"+
-							"<i class='far fa-comment' alt='留言'></i>"+
-							"<i class='fas fa-external-link-alt' alt='分享'></i>"+
-							"<i class='far fa-bookmark' alt='分享'></i>"+
+							"<i><img class='likeHeart' src='images/like.png' alt='喜歡'></i>"+
+							"<span style='display:none;'>"+n['orderNo']+"</span>"+
+							"<p class='likeCount'>"+n['orderVote']+"個喜歡</p>"+
+							"<i class='far fa-bookmark' alt='收藏'></i>"+
+							"<span style='display:none;'>"+n['orderNo']+"</span>"+
 						"</div>"+
-						"<p class='likeCount'>"+n['orderVote']+"個喜歡</p>"+
 						"<div class='beautyDiscIgMemTextContainerWrap'>"+
 						//留言內容開始
 						// n['memNo']+
@@ -105,37 +105,43 @@
 				});
 				$('.beautyDiscStageContainer').eq(0).remove();
 				$('.beautyDiscStageContainerWrap').eq(0).prepend(beautyDiscIgData);
+				
+				
+				//增加讚數並送入資料
 				var hearts = document.getElementsByClassName("likeHeart");
-        for(let i=0; i< hearts.length; i++){
-            hearts[i].onclick = function(e){
+				for(let i=0; i< hearts.length; i++){
+					hearts[i].onclick = function(e){
 
-                let orderNo = e.target.parentNode.nextElementSibling.innerText;
-                let amount;
-    
+						let orderNo = e.target.parentNode.nextElementSibling.innerText;
+						let amount;
+						console.log(orderNo);
 
-                if(e.target.src.indexOf("images/like.png") != -1 ){
-                    e.target.src = "images/likeAlready.png";
-                    amount = 1;
-                }else{
-                    e.target.src = "images/like.png";
-                    amount = -1;
+						if(e.target.src.indexOf("images/like.png") != -1 ){
+							e.target.src = "images/likeAlready.png";
+							amount = 1;
+						}else{
+							e.target.src = "images/like.png";
+							amount = -1;
+						}
+						console.log(orderNo);
+						let url = "updateVotes.php?orderNo=" + orderNo + "&amount=" + amount;
+						
+						var xhr2 = new XMLHttpRequest();
+						xhr2.onload = function(){
+							// console.log(xhr2.responseText);
+							var str = e.target.parentNode.nextElementSibling.nextElementSibling.innerHTML.replace("個喜歡","");
+							console.log("------",parseInt(str)+ amount +"個喜歡" );
+							e.target.parentNode.nextElementSibling.nextElementSibling.innerHTML = parseInt(str)+ amount +"個喜歡";
+						}
+						xhr2.open("get",url,true);
+						xhr2.send(null);
+					}
 				}
-				console.log(orderNo);
-                let url = "updateVotes.php?orderNo=" + <?php if(isset($_SESSION['member'])){print_r($_SESSION['member'][0]['orderNo']);}else{ echo "images/member/member.jpg";} ?> + "&amount=" + amount;
-                var xhr2 = new XMLHttpRequest();
-                xhr2.onload = function(){
-                    //console.log(xhr2.responseText);
-                    var str = e.target.parentNode.parentNode.nextElementSibling.innerHTML.replace("個喜歡","");
-                    console.log("------",parseInt(str)+ amount +"個喜歡" );
-                    e.target.parentNode.parentNode.nextElementSibling.innerHTML = parseInt(str)+ amount +"個喜歡";
-                }
-                xhr2.open("get",url,true);
-                xhr2.send(null);
-            }
-        }
+			
+		
 				//註冊每個表單接受訊息
 				for(let i=0;i<document.getElementsByClassName("DiscSent").length;i++){
-					console.log('5566');
+					// console.log('5566');
 					document.getElementsByClassName("DiscSent")[i].addEventListener("click", function(e){
 						let btn = e.target;
 						let orderNo = btn.nextElementSibling.value;
@@ -168,8 +174,113 @@
 
 					}
 				)};
-				
-				
+				//收藏
+				//click 改顏色
+				var collection = document.getElementsByClassName("fa-bookmark");
+				for(let i=0; i< collection.length; i++){
+					collection[i].onclick = function(e){
+						let orderNo = e.target.nextElementSibling.innerText;
+						let memNo = <?php if(isset($_SESSION['member'])){print_r($_SESSION['member'][0][0]);}else {
+								print_r("1");
+							} ?>;
+						let url = "php/addcollection.php?memNo=" + memNo + "&orderNo=" + orderNo;
+						console.log(url);
+						console.log(orderNo);
+						console.log(memNo);
+						var xhr = new XMLHttpRequest();
+						xhr.onload = function(){
+						
+						}
+						xhr.open("get",url,true);
+						xhr.send(null);
+					}
+				}
+		
+				//report 功能
+				$(document).ready(function(){
+					if(document.body.clientWidth < 1200){
+						$(".beautyDiscStageContainer").on('click','.dotflip',function(){
+							var x = $('.dotflip').index(this);
+							console.log(x);
+							$('.dotpanel').eq(x).css('display','block');
+							
+						});
+						$(".beautyDiscStageContainerWrap").on('click','.dotpanel',function(e){
+							var x = $('.dotpanel').index(this);
+							console.log(x);
+							$('.dotpanel').eq(x).css('display','none');
+							
+							let btn = e.target;
+							let orderNo = btn.nextElementSibling.value;
+							console.log(orderNo);
+							// prompt("請輸入檢舉原因","");
+							let informReason = prompt("請輸入檢舉原因","");
+							let xhr = new XMLHttpRequest();
+							xhr.onload = function (){
+								// alert(xhr.responseText);
+								//reset
+								btn.nextElementSibling.value="";
+							}
+							xhr.open("get", "php/addbinform.php?informReason=" + informReason + "&orderNo=" +orderNo+"&memNo="+<?php if(isset($_SESSION['member'])){print_r($_SESSION['member'][0][0]);}else {
+								print_r("1");
+							} ?>);
+							xhr.send(null);
+							console.log("addbinform.php?informReason=" + informReason + "&orderNo=" + orderNo+"&memNo="+<?php if(isset($_SESSION['member'])){print_r($_SESSION['member'][0][0]);}else {
+								print_r("1");
+							} ?>);
+								
+							
+					});
+					//    $(document).on('vclick', '#button', function(){ 
+					//     console.log("click");
+					//     });
+					}else{
+						$(".beautyDiscStageContainerWrap").on('click','.dotflip',function(){
+							var x = $('.dotflip').index(this);
+							// console.log(x);
+							$('.dotpanel').eq(x).css('display','block');
+							
+						});
+						$(".beautyDiscStageContainerWrap").on('click','.dotpanel',function(e){
+							var x = $('.dotpanel').index(this);
+							console.log(x);
+							$('.dotpanel').eq(x).css('display','none');
+							
+							let btn = e.target;
+							let orderNo = btn.nextElementSibling.value;
+							console.log(orderNo);
+							// prompt("請輸入檢舉原因","");
+							let informReason = prompt("請輸入檢舉原因","");
+							let xhr = new XMLHttpRequest();
+							xhr.onload = function (){
+								// alert(xhr.responseText);
+								//reset
+								btn.nextElementSibling.value="";
+							}
+							xhr.open("get", "php/addbinform.php?informReason=" + informReason + "&orderNo=" + +orderNo+"&memNo="+<?php if(isset($_SESSION['member'])){print_r($_SESSION['member'][0][0]);}else {
+								print_r("1");
+							} ?>);
+							xhr.send(null);
+							console.log("addbinform.php?informReason=" + informReason + "&orderNo=" + orderNo+"&memNo="+<?php if(isset($_SESSION['member'])){print_r($_SESSION['member'][0][0]);}else {
+								print_r("1");
+							} ?>);
+								
+							
+					});
+						$(".beautyDiscStageContainerWrap").on('mouseleave','.dotpanel',function(){
+							// $('.dotpanel').css('display','none');
+							var x = $('.dotpanel').index(this);
+							console.log(x);
+							$('.dotpanel').eq(x).css('display','none');
+							// var x = $('.dotpanel').index(this);
+							// $(this).css({
+							//     "display":"none",
+							// });
+							//目前先註冊事件 
+							// alert();
+						});
+					}   
+				});
 			},//sucess
 			error: function(xhr) {
 			alert('Ajax request 發生錯誤');
@@ -177,15 +288,6 @@
 		});
 	}
 	});
-
-
-</script>
-<script>
-	// $(document).ready(function(){
-	// 		$(".DiscSent").click(function(){
-	// 			var result1 = $(this).siblings('.DiscTextArea').val();
-	// 			alert("result1 = " + result1);
-	// 		});
 
 
 </script>

@@ -6,6 +6,17 @@
   cursor: pointer;
 }
 
+<<<<<<< HEAD
+=======
+#bigMember{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+>>>>>>> 78fdda13c4d287db066d539fbec5d44188b17e3e
 #nav-icon2 span {
     display: block;
     position: absolute;
@@ -35,7 +46,7 @@
   }
   
   #nav-icon2 span:nth-child(1), #nav-icon2 span:nth-child(2) {
-    top: 0px;
+    top: 5px;
   }
   
   #nav-icon2 span:nth-child(3), #nav-icon2 span:nth-child(4) {
@@ -43,7 +54,7 @@
   }
   
   #nav-icon2 span:nth-child(5), #nav-icon2 span:nth-child(6) {
-    top: 36px;
+    top: 31px;
   }
   
   #nav-icon2.open span:nth-child(1),#nav-icon2.open span:nth-child(6) {
@@ -102,13 +113,13 @@
 #menu_control:checked~header .mainNav{
     top: 80px;
     transition: 0.3s;
-    img{
-        top: 10px;
+    #bigMember{
+        top: 0px;
     }
 } 
 .menubtn{
     display:block;
-    width: 44px;
+    width: 36px;
     position: absolute;
     height: 40px;
     top: 20px;
@@ -158,6 +169,7 @@
         font-size: 44px;
         height: 44px;
         width: 44px;
+        text-align: center;
         img{
           cursor: pointer;
           position: absolute;
@@ -185,6 +197,13 @@ header{
     animation: headerNeon 1s infinite; 
 }
 @media screen and (min-width:1200px){
+<<<<<<< HEAD
+=======
+    #bigMember{
+      transform: translateY(-25%)translateX(-25%);
+      object-fit: cover;
+    }
+>>>>>>> 78fdda13c4d287db066d539fbec5d44188b17e3e
 
     .menubtn{display: none}
     header{

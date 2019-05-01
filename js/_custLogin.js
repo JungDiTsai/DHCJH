@@ -41,6 +41,8 @@ function sendLogin() {
                 // window.location.reload();
                 let loginBox = document.querySelector('.loginBox');
                 loginBox.style.setProperty('display', "none");
+                let lightWrap = document.querySelector('#lightWrap');
+                lightWrap.style.setProperty('display', "none");
                 // $('.checkoutBg').removeClass('disN');
             }
         } else { //其它

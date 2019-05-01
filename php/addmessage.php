@@ -2,14 +2,11 @@
 $errMsg="";
 // exit( $_REQUEST["orderNo"] . $_REQUEST["messageContent"]);
 try {
-	$dsn = "mysql:host=localhost;port=3306;dbname=dhc;charset=utf8";
-	$user = "Jung";
-	$password = "626425";
-	$options = array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION);
+	require_once("../php/components/_connectDHC.php"); 
 	$pdo = new PDO( $dsn, $user, $password, $options);   
     //撈訊息
 	$orderNo = $_REQUEST["orderNo"];
-	$memNo=1;
+	// $memNo=1;
     $memNo =$_REQUEST["memNo"];
     $messageContent=$_REQUEST["messageContent"];
 	$sql = "INSERT INTO message(orderNo,memNo,messageContent)

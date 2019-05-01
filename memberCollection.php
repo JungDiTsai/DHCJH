@@ -53,7 +53,6 @@
                   <div class="toolBar">
                     <i class="fas fa-heart"></i>
                     <span><?php echo $data['orderVote'] ?></span>
-                    <i class="fas fa-share"></i>
                     <i class="fas fa-ellipsis-h"></i>
                   </div>  
               </div>

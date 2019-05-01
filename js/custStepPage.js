@@ -32,7 +32,8 @@ $(document).ready(function(){
             datevalue = $('.orderDate span').text();
             locValue = $('.orderLoc span').text();
             if( datevalue == '' || locValue == ''){
-                alert('請選擇活動日期與地址');  //跳窗
+                // 顯示須填寫燈箱
+                $('.mustLightBox').removeClass('disN')
             }else{
                 if(LoginState=="notFound"){
                     // 顯示登入燈箱
@@ -413,6 +414,10 @@ $(document).ready(function(){
     // 更改地址
     $('.map iframe').attr("src", 'https://maps.google.com.tw/maps?f=q&hl=zh-TW&geocode=&q=中央大學資策會&z=16&output=embed&t=');
     changeLoc();
+    // 須填寫燈箱
+    $('.mustBtn').click(function(){
+        $('.mustLightBox').addClass('disN');
+    });
     // 結帳燈箱開關
     // $('.checkoutBg').addClass('disN');
     $('#checkoutClose').click(function(){
@@ -420,9 +425,15 @@ $(document).ready(function(){
     })
     // 跳轉燈箱
     $('.checkoutStep').click(function(){
-        saveOrder(
-            endStep()
-        );
+        saveOrder();
+        $('.waitLightBox').removeClass('disN')
+        setTimeout(function endStep(){
+            $('.checkoutBg').addClass('disN');
+            $('.endLightBoxBg .endLightBox').removeClass('disN');
+            $('.waitLightBox').addClass('disN')
+        }, 5500);
+            
+            
     })
     // 結束
     $('.endBtn').click(function(){
@@ -721,13 +732,13 @@ if ($num % 2 == 0) {
 }
 
 $('.hostInfoDetail').click(function() {
-//   $slide = $('.active').width();
-  
-//   if ($(this).hasClass('next')) {
-//     $('.hostSliderBox').stop(false, true).animate({left: '-=' + $slide});
-//   } else if ($(this).hasClass('prev')) {
-//     $('.hostSliderBox').stop(false, true).animate({left: '+=' + $slide});
-//   }
+
+  $slide = $('.active').width();
+  if ($(this).hasClass('next')) {
+    $('.hostSliderBox').stop(false, true).animate({left: '-=' + $slide});
+  } else if ($(this).hasClass('prev')) {
+    $('.hostSliderBox').stop(false, true).animate({left: '+=' + $slide});
+  }
   
   $(this).removeClass('prev next');
   $(this).siblings().removeClass('prev active next');
@@ -822,8 +833,14 @@ function getOrderInfo(){
     subtotal = parseInt(patternPrice) + parseInt(orderDancePrice) + parseInt(orderFirePrice) + parseInt(orderFireworkPrice) + parseInt(orderAudioPrice) + parseInt(orderPolePrice) + parseInt(orderHostPrice);
     // console.log(subtotal);
     $('.orderSub span').text(subtotal);
-    // 付款金額總計
     $('.checkoutOrder p span').text(subtotal);
+    // 付款金額總計
+    $('#couponUse').change(function(){
+        subtotalAll = 0;
+        subtotalAll = subtotal - parseInt($('#couponUse :selected').val());
+        // console.log(subtotalAll);
+        $('.checkoutOrder p span').text(subtotalAll);
+    });
 }
 // 照片存檔
 // function saveCustImg(){
@@ -878,7 +895,7 @@ function saveOrder (){
             
             var orderInfo = {};
             orderInfo.memNo = LoginState[0][0];
-            orderInfo.totalMoney = subtotal;
+            orderInfo.totalMoney = subtotalAll;
             orderInfo.orderName = orderName;
             orderInfo.actPlace = locValue;
             orderInfo.actStart = datevalue;
@@ -939,10 +956,10 @@ function saveOrder (){
     // xhr.send( null );
 }
 
-function endStep (){
-    $('.checkoutBg').addClass('disN');
-    $('.endLightBoxBg .endLightBox').removeClass('disN');
-}
+// function endStep (){
+//     $('.checkoutBg').addClass('disN');
+//     $('.endLightBoxBg .endLightBox').removeClass('disN');
+// }
 
 
 

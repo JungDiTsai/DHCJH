@@ -154,7 +154,7 @@
 
                     <div class="clothCurtain">
                         <div>
-                            <p>如有舞台客製訂單者，可指定訂單，即可匯入宣傳單內，無訂單者，也可以免費體驗客製宣傳單估能。<br><br>＊公開體驗宣傳單將於發布達三天後移除＊</p>
+                            <p>如有舞台客製訂單者，可指定訂單，即可匯入宣傳單內，無訂單者，也可以免費體驗客製宣傳單功能。<br><br>＊公開體驗宣傳單將於發布達三天後移除＊</p>
                         </div>
                         <div>
                             <button class="commonBtnSmall" id="enterOrder">匯入訂單</button>
@@ -397,7 +397,16 @@
         </div>
     </article>
 
+<<<<<<< HEAD
 
+=======
+    <!-- 匯入訂單燈箱 -->
+    <div id="intoLightBox">
+        <h4>你的訂單</h4>
+        <ul>
+        </ul>
+    </div>
+>>>>>>> 78fdda13c4d287db066d539fbec5d44188b17e3e
     <!-- 宣傳單燈箱 -->
     <div class="blackBox">
         <div class="envelopeLightBox">
@@ -457,27 +466,37 @@
             
             for (let i = 0; i < joinAct.length; i++) {
                 joinAct[i].addEventListener('click',function(e){
-                    
-                    let orderNo = e.target.getAttribute('order');
 
-                    //依統計人數狀態拒絕執行或執行
-                    
-                    var xhr = new XMLHttpRequest();
-                    //註冊callback function
-                    xhr.onreadystatechange = function(){
-                        if( xhr.readyState == XMLHttpRequest.DONE ){ //server端執行完畢
-                          if( xhr.status == 200){ //server端可以正確的執行
-                               alert(xhr.responseText);
-                          }else{ //其它
-                              alert( xhr.status );
-                          }
-                        }
-                    } 
-                    //設定好所要連結的程式
-                    var url = "php/components/_joinAct.php?orderNo=" + orderNo ;
-                    xhr.open("get", url, true);
-                    //送出資料
-                    xhr.send(null);
+                    let disabled = e.target.getAttribute('disabled');
+
+                        if(disabled!=true){
+
+                        let orderNo = e.target.getAttribute('order');
+                        e.target.setAttribute('disabled',true);
+                        //依統計人數狀態拒絕執行或執行
+                        
+                        var xhr = new XMLHttpRequest();
+                        //註冊callback function
+                        xhr.onreadystatechange = function(){
+                            if( xhr.readyState == XMLHttpRequest.DONE ){ //server端執行完畢
+                              if( xhr.status == 200){ //server端可以正確的執行
+                                    if(xhr.responseText!='此活動暫時不開放參加'){
+                                        alert('你已經報名參加');
+                                        document.getElementById('MyNumber').innerText = xhr.responseText;
+                                    }else{
+                                        alert('此活動暫時不開放參加');
+                                    }
+                              }else{ //其它
+                                  alert( xhr.status );
+                              }
+                            }
+                        } 
+                        //設定好所要連結的程式
+                        var url = "php/components/_joinAct.php?orderNo=" + orderNo ;
+                        xhr.open("get", url, true);
+                        //送出資料
+                        xhr.send(null);
+                    }
 
                     event.cancelBubble=true;
                 })
@@ -515,6 +534,7 @@
                 alert('請先有花車才能使用此功能喔');
             }
             else{
+<<<<<<< HEAD
 >>>>>>> ee1f6061ae65be512238b8b9aa6e483557bd014f
                 let str = '';
                  for (let i = 0; i < LoginState.length; i++) {
@@ -523,8 +543,23 @@
                      }else{
                          str +=LoginState[i]['orderName']+',';
                      }
+=======
+                document.getElementById('intoLightBox').style.display = 'block';
+>>>>>>> 78fdda13c4d287db066d539fbec5d44188b17e3e
 
+                 for (let i = 0; i < LoginState.length; i++) {
+                     let label = document.createElement('label');
+                     let input = document.createElement('input');
+                     input.setAttribute('type','radio');
+                     input.setAttribute('name','order');
+                     label.appendChild(input);
+                     let li = document.createElement('li');
+                     li.innerText = LoginState[i]['orderName'];
+                     li.setAttribute('orderNo',LoginState[i]['orderNo']);
+                     label.appendChild(li);
+                     document.querySelector('#intoLightBox ul').appendChild(label);
                  }
+<<<<<<< HEAD
                  let enterData = prompt(`請輸入你要匯入訂單的 "完整名稱"  ${str}`,'');
                  if(str.match(enterData)==null||str.match(enterData)==""){
                      alert('沒有這個訂單請重新輸入');
@@ -543,6 +578,21 @@
                      setTimeout(function () {
                          clothCurtain.style.display = "none"
                      }, 2000);
+=======
+                 let Allli = document.querySelectorAll('#intoLightBox ul li');
+                 for (let j = 0; j < Allli.length; j++) {
+                     Allli[j].addEventListener('click',function(e){
+                        OrderNo = e.target.getAttribute('orderNo');
+                        alert('已匯入您的訂單');
+                        let clothCurtain = document.querySelector('.clothCurtain');
+                        clothCurtain.style.setProperty('animation', `blurFadeInOut 2s ease-in backwards`);
+                            document.getElementById('intoLightBox').style.display = 'none';
+                        setTimeout(function () {
+                            clothCurtain.style.display = "none";
+                        }, 2000);
+                     });
+                     
+>>>>>>> 78fdda13c4d287db066d539fbec5d44188b17e3e
                  }
             }
         })
@@ -606,6 +656,12 @@
             document.getElementById('hiddenEnvelopeLightBox').addEventListener('click', function () {
                 //document.querySelector('.blackBox').style.setProperty('display', 'none');
                 document.querySelector('.blackBox').style.display = 'none';
+                document.querySelector('.envelopeHeader').style.setProperty('bottom', '-100%');
+                let joinAct = document.querySelectorAll('.joinAct');
+                for (let i = 0; i < joinAct.length; i++) {
+                    joinAct[i].removeAttribute('disabled');
+                }
+                
             });
             //點擊QRcodeICON
             document.getElementById('QrcodeIcon').addEventListener('click', function (e) {
@@ -736,12 +792,17 @@
             if (nowScrollHeight >= secScreen) {
                 document.querySelector('.one').style.setProperty('z-index', '5');
                 document.querySelector('.bigCarcouselBox').style.setProperty('opacity', '1');
-                document.querySelector('.bigCarcouselBox').style.setProperty('bottom', '150px')
+                document.querySelectorAll('.titleBgi')[1].style.setProperty('position', 'sticky');
+                
                 //判斷螢幕大小對 相框加大
                 if (screenWidth >= 768) {
                     document.querySelector('.bigCarcouselBox').style.setProperty('transform', 'scale(1.2)');
+                    document.querySelector('.bigCarcouselBox').style.setProperty('bottom', '150px');
+                    document.querySelectorAll('.titleBgi')[1].style.setProperty('top', '100px');
                 } else {
                     document.querySelector('.bigCarcouselBox').style.setProperty('transform', 'scale(1)');
+                    document.querySelector('.bigCarcouselBox').style.setProperty('bottom', '50px');
+                    document.querySelectorAll('.titleBgi')[1].style.setProperty('top', '-10px');
                 }
                 document.querySelector('.bigCarcouselBox').style.setProperty('position', 'fixed')
                 document.querySelectorAll('.card')[0].querySelector('.cardContent').style.setProperty(
@@ -771,7 +832,7 @@
             } else {
                 document.querySelector('.three').style.setProperty('transform', 'translateY(0%)')
             }
-            if (nowScrollHeight > secScreen + 1700) {
+            if (nowScrollHeight > secScreen + 1850) {
                 document.querySelectorAll('.titleBgi')[1].style.setProperty('position', 'absolute');
             }
 
@@ -791,7 +852,11 @@
     <!-- jquery UI datepicker -->
     <script>
         $(function () {
-            $("#datepicker").datepicker();
+            $("#datepicker").datepicker({
+              showOtherMonths : true,
+              hideIfNoPrevNext : true,
+              minDate : "+1d"
+            });
         });
         $('#selectDay input').on('change', function () {
             $('#selectDay p').html('活動日期' + ' : <span>' + this.value + '</span>');
