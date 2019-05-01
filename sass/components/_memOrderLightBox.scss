@@ -1,0 +1,116 @@
+#memOrderLightBox{
+    display: none;
+    // position: fixed;
+    // width: 100vw;
+    // height: 100vh;
+    // background: rgba(0,0,0,.7);
+    #LightBox{
+        position: fixed;
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: #ffffbd 8px groove;
+        border-radius: 10px;
+        background-color: #222222;
+        box-shadow: 0 0 10px 12px rgba(230, 230, 230, 0.3);
+        z-index: 6;
+        text-align: center;
+        width: 300px;
+        padding: 10px;
+        height: 500px;
+
+        i{
+            position: absolute;
+            right:5px;
+            top:5px;
+            color:#fff;
+            cursor: pointer;
+            &:hover{
+                color:yellow;
+            }
+        }
+
+        h3{
+            font-size: 21px;
+            color:#fff;
+        }
+        img{
+            vertical-align: top;
+            margin: 0;
+            width: 100%;
+        }
+        #allMessage{
+            background: rgba(255,255,255,.7);
+            border-radius: 10px;
+            height: 120px;
+            list-style: none;
+            overflow: auto;
+            padding: 10px;
+            position: relative;
+            li{
+                margin-bottom: 10px;
+                display: flex;
+                img{width: 40px;border-radius: 50%;height:40px;}
+                p{
+                    padding: 10px;
+                    line-height: 1;
+                    margin-left:20px; 
+                    border-radius: 10px;
+                    background: rgba(255,255,255,.7)
+                }
+            }
+        }
+        #my_Message{
+            width: 100%;
+            margin: auto;
+            position: absolute;
+            bottom:10px;
+            text-align: left;
+            input{
+                width: 70%;
+                display: inline-block;
+                padding: 5px;
+                background: #fff;
+                border-radius: 5px;
+                border: 2px solid #6e6e6e;
+            }
+            button{
+                display: inline-block;
+                width: 20%;
+                padding: 5px;
+                outline: none;
+                border-radius: 5px;
+                background: #F77952;
+            }
+        }
+    }
+}
+@media screen and (min-width:768px) {
+    #memOrderLightBox{
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0,0,0,.7);
+        #LightBox{
+            position: absolute;
+            width: 700px;
+            height: 500px;
+            img{
+                width: 50%;
+            }
+            #allMessage{
+                display: inline-block;
+                width: 40%;
+                height: 85%;
+            }
+            #my_Message{
+                width: 50%;
+                margin: auto;
+                left: 0;
+                right: 0;
+            }
+        }
+    }
+}
