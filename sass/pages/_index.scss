@@ -244,7 +244,7 @@ a{
     background-position: center;
     background-size: cover;
     z-index: 0;
-    height: 95vh;
+    height: 100vh;
     min-height: 600px;
     ////outline: 5px red solid;
   }
@@ -256,7 +256,7 @@ a{
     margin: auto;
     width: 80vw;
     margin-top: -150px;
-    height: 95vh;
+    height: 100vh;
     min-height: 600px;
     z-index: -2;
     opacity:.8;
@@ -302,7 +302,7 @@ a{
   left: -100vw;
   right: 0;
   margin-top: -120px;
-  height: 95vh;
+  height: 100vh;
   min-height: 600px;
   width: 80%;
   //outline: 5px red solid;
@@ -319,7 +319,7 @@ a{
   left: 0;
   right: 0;
   //outline: 5px blue solid;
-  height: 95vh;
+  height: 100vh;
   width: 100%;
   position: relative;
   perspective: 900px;
@@ -777,7 +777,7 @@ a{
     background-position: center;
     background-size: cover;
     z-index: 0;
-    height: 95vh;
+    height: 100vh;
     min-height: 600px;
     ////outline: 5px red solid;
       #equipBtnTwo{
@@ -807,7 +807,7 @@ a{
     flex-wrap: wrap;
     margin:-50px auto auto auto;
     width:100%;
-    height: 95vh;
+    height: 100vh;
     font-family:$contentFontFamily;
     color:#fff;
     font-size:14px;
@@ -842,8 +842,8 @@ a{
       font-size: 18px;
       font-family:$contentFontFamily;
       color:#222;
-      height:80px;
-      line-height:100px;
+      height:70px;
+      line-height:95px;
       background:linear-gradient(165deg,transparent 29%, #fffc98 20%);
       
       &:hover, &.activeTabs {
@@ -901,7 +901,7 @@ a{
       padding:30px;
       height: 200px;
       width: 100%;
-      max-width:500px;
+      //max-width:500px;
       min-width:210px;
       font-family:$contentFontFamily;
       background:#222;
@@ -926,7 +926,7 @@ a{
     width: 100%;
     position:absolute;
     ////outline: red 5px solid;
-    top: -13px;
+    top: -18px;
     left: 0;
 
   }
@@ -1097,7 +1097,7 @@ a{
   background-position: center;
   background-size: cover;
   z-index: 0;
-  height: 95vh;
+  height: 100vh;
   overflow: hidden;
   min-height: 600px;
   ////outline: 5px red solid;
@@ -1106,7 +1106,7 @@ a{
     background-size: cover;
   }
   .commonBtn{
-    margin: -10px auto auto auto;
+    margin: 5px auto auto auto;
   }
   .custBtnTop{
     z-index:9;
@@ -1123,7 +1123,7 @@ a{
   max-width: 1200px;
 }
 .tryCustEquipWrap {
-  margin: -10px auto;
+  margin: -24px auto;
   //outline: red solid 5px;
   transform: scale(.3);
   opacity:0;
@@ -1246,7 +1246,19 @@ ul.tryCustTabs li a.tryCustActive {
 #tryCustEquipInnerSet{
   overflow-x: scroll;
 }
-
+#tryCustStageBack{
+  width: 305px;
+  margin: auto;
+  margin-top:-205px;
+}
+.groupA .danceDetail1 img,
+.groupA .danceDetail2 img,
+.groupA .danceDetail3 img,
+.groupA .danceDetail4 img,
+.groupA .danceDetail5 img,
+.groupA .danceDetail6 img{
+  width: 50px;
+}
 //引入客製頁面
 
 
@@ -1260,7 +1272,7 @@ ul.tryCustTabs li a.tryCustActive {
   background-position: center;
   background-size: cover;
   z-index: 0;
-  height: 95vh;
+  height: 100vh;
   min-height: 600px;
   ////outline: 5px red solid;
   .titleBgi{
@@ -1404,7 +1416,7 @@ ul.tryCustTabs li a.tryCustActive {
   background-position: center;
   background-size: cover;
   z-index: 0;
-  height: 95vh;
+  height: 100vh;
   min-height: 600px;
   ////outline: 5px red solid;
   .titleBgi{
@@ -1525,7 +1537,7 @@ ul.tryCustTabs li a.tryCustActive {
   position: relative;
   width: 100vw;
   z-index: 0;
-  height: 95vh;
+  height: 100vh;
   min-height: 600px; 
   .titleBgi{
     background: url(../images/titleNeonLightBlueNew.gif) center no-repeat;
@@ -1537,7 +1549,7 @@ ul.tryCustTabs li a.tryCustActive {
   background-position: center;
   background-size: cover;
   width: 100vw;
-  height: 95vh;
+  height: 100vh;
 }
   .processPara{
       position: absolute;
@@ -1718,7 +1730,7 @@ height: 110px;
 /*padding-top:140px;*/ 
 position: relative;
 width: 100%;
-height: 95vh;
+height: 100vh;
 overflow: hidden;
 
 }
@@ -1733,14 +1745,14 @@ overflow: hidden;
 background: url(../images/processBgiShine.jpg) center no-repeat;
 position: absolute;
 width: 100%;
-height: 95vh;
+height: 100vh;
 overflow: hidden;
 animation: shineProcessBgi 17s ease infinite;
 }
 #processShineBgi2{
 position: absolute;
 width: 100%;
-height: 95vh;
+height: 100vh;
 overflow: hidden;
 }
 .processShineBgi2{
@@ -2180,7 +2192,7 @@ footer{
     }
   }
   #carEquipmentsIntroWrap{
-    height: 95vh;
+    height: 100vh;
   }
   #equipCarStage{
     width: 55%;
@@ -2207,7 +2219,7 @@ footer{
     }
   }
   #tryCustormiseWrap{
-    height: 95vh;
+    height: 100vh;
     .commonBtn{
       margin: 2vh auto auto auto;
     }
@@ -2228,7 +2240,7 @@ footer{
     #equipCarStage{
       width: 600px;
       margin:auto;
-      margin-top: -50px
+      margin-top: -15px
   }
   #introCarStage{
     width: 100%;
@@ -2393,6 +2405,12 @@ footer{
     .commonBtn{
       margin: -3vh auto auto auto; 
     }
+  }
+  #tryCustStageBack{
+    width: 400px;
+    margin: auto;
+    margin-top:-250px;
+    margin-left:-51px;
   }
   #carEquipmentsIntroWrap{
     #equipBtnOne{
