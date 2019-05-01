@@ -97,6 +97,7 @@
         font-size: 18px;
         line-height: 32px;
         z-index:5;
+        font-family:"微軟正黑體";
     }
     .introBox{
         opacity: 0.6;
@@ -107,6 +108,7 @@
         font-size: 40px;
         line-height: 0px;
         color: beige;
+        font-family:"微軟正黑體";
         
     }
     .introBox p{
@@ -114,6 +116,7 @@
         line-height: 0px;
         color: beige;
         margin-top: 40px;
+        font-family:"微軟正黑體";
     }
 
     </style>
@@ -240,8 +243,8 @@
                    <li>組長擔當</li>
                    <li>選美頁撰寫</li>
                    <li>選美頁功能</li>
-                   <li>關於我們頁面撰寫</li>
-                   <li>關於我們頁面撰寫</li>
+                   <li>大舞台故事頁面設計</li>
+                   <li>大舞台故事頁面撰寫</li>
                    <li>header撰寫</li>
                </ul>
 

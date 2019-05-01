@@ -433,7 +433,7 @@ a{
     .stairsD{ width: 50px; height: 205px;transform: translateZ(20px)translateX(-95px)translateY(-160px) rotateX(-60deg);background: url(../images/15.jpg)center no-repeat;background-size:cover;}
     .stairsE{ width: 50px; height: 205px;transform: translateZ(20px)translateX(95px)translateY(-160px) rotateX(-60deg);background: url(../images/16.jpg)center no-repeat;background-size:cover;}
     .stairsF{ width: 150px; height: 205px;transform: translateZ(20px)translateY(-160px) rotateX(-60deg);background: url(../images/14.jpg)center no-repeat;background-size:cover;}
-    .stairsF1{width: 240px; height: 205px;transform: translateZ(20px)translateY(-162px) rotateX(-60deg);background: url(../images/2.png)center no-repeat;background-size:cover;}
+    .stairsF1{width: 240px; height: 205px;transform: translateZ(20px)translateY(-162px) rotateX(-60deg);background: none center no-repeat;background-size:cover;}
     .stairsF2{width:2px; height: 208px;transform: translateZ(18px) translateY(-160px) translateX(-120px) rotateY(-90deg) rotateZ(60deg);background: #311345;}
     .stairsF3{width:2px; height: 208px;transform: translateZ(18px) translateY(-160px) translateX(120px) rotateY(-90deg) rotateZ(60deg);background: #311345;}
     .stairsF4{width:240px; height: 2px;transform: translateZ(108px) translateY(-212px) ;background: #311345;}
@@ -2593,14 +2593,15 @@ footer{
   left: 0;
   display: flex;
   flex-wrap: wrap;
+  a{
+    text-align: center;
+    margin-left: 33%;
+  }
 }
 #frontBtn,#backBtn{
   margin: auto;
 }
-a{
-  text-align: center;
-  margin-left: 33%;
-}
+
 @media screen and (min-width:992px) {
 #aButtonGroup{
   height: 100px;   
