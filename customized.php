@@ -484,21 +484,23 @@
 
             <!-- 主持人 -->
             <div class="hostInfo">
-                <div class="hostSliderBox">
-                    <?php 
-                        while ($host = $hosts->fetch(PDO::FETCH_ASSOC)){
-                    ?>
-                    <div class="hostInfoDetail">
-                        <img src="<?php echo $host["hostImgUrl"] ?>" alt="">
-                        <h6><span hostNo="<?php echo $host["hostNo"]?>"><?php echo $host["hostName"]?></span><span>$<?php echo $host["price"]?></span></h6>
-                        <ul>
-                            <li><?php echo $host["hostContent"]?></li>
-                        </ul>
-                        <div class="card">
-                            <canvas class="chartRadar" width="260" height="180"></canvas>
+                <div class="hostWrap">
+                    <div class="hostSliderBox">
+                        <?php 
+                            while ($host = $hosts->fetch(PDO::FETCH_ASSOC)){
+                        ?>
+                        <div class="hostInfoDetail">
+                            <img src="<?php echo $host["hostImgUrl"] ?>" alt="">
+                            <h6><span hostNo="<?php echo $host["hostNo"]?>"><?php echo $host["hostName"]?></span><span>$<?php echo $host["price"]?></span></h6>
+                            <ul>
+                                <li><?php echo $host["hostContent"]?></li>
+                            </ul>
+                            <div class="card">
+                                <canvas class="chartRadar" width="260" height="180"></canvas>
+                            </div>
                         </div>
+                        <?php } ?>
                     </div>
-                    <?php } ?>
                 </div>
             </div>
 
@@ -772,7 +774,7 @@
             <div id="checkoutClose"></div>
             <div class="checkoutOrder">
                 <!-- 總金額 -->
-                <p><span>62000</span>圓</p>
+                <p><span>0</span>圓</p>
             </div>
         </div>
 
@@ -789,19 +791,18 @@
                     </tr>
                     <tr>
                         <th><label for="orderEmail">信箱</label></th>
-                        <td><input type="text" id="orderEmail"></td>
+                        <td><input type="email" name="orderEmail" id="orderEmail"></td>
                     </tr>
                     <tr>
                         <th><label for="orderPhone">聯絡電話</label></th>
-                        <td><input type="text" id="orderPhone"></td>
+                        <td><input type="text" id="orderPhone" placeholder="0911-111111"></td>
                     </tr>
                     <tr>
-                        <th>優惠券編號</th>
+                        <th>折價券</th>
                         <td>
-                            <select name="couponUse" id="">
-                                <option value="">500元</option>
-                                <option value="">1000元</option>
-                                <option value="">1500元</option>
+                            <select name="couponUse" id="couponUse">
+                                <option value="0">無</option>
+                                <option value="1000">1000元</option>
                             </select>
                         </td>
                     </tr>
@@ -816,16 +817,16 @@
                         <td><input type="text" id="cardHolderName"></td>
                     </tr>
                     <tr>
-                        <th><label for="cardNum">信用卡號碼</label></th>
-                        <td><input type="text" id="cardNum" maxlength="16"></td>
+                        <th><label for="cardNum" placeholder="1111-1111-1111-1111">信用卡號碼</label></th>
+                        <td><input type="text" id="cardNum" maxlength="19"></td>
                     </tr>
                     <tr>
-                        <th><label for="cardExpiredDate">過期日期</label></th>
-                        <td><input type="text" id="cardExpiredDate" placeholder="MM/YY"></td>
+                        <th><label for="cardExpiredDate">到期日期</label></th>
+                        <td><input type="text" id="cardExpiredDate" placeholder="MM/YY" maxlength="5"></td>
                     </tr>
                     <tr>
                         <th><label for="cardCVC">CVC</label></th>
-                        <td><input type="text" id="cardCVC"></td>
+                        <td><input type="text" id="cardCVC" maxlength="3"></td>
                     </tr>
                 </table>
             </form>
@@ -859,7 +860,8 @@
                 <p>感謝您對於台灣大舞台的支持</p>
             </div>
             <a class="commonBtn" href="flyer.php">客製宣傳單</a>
-            <a class="commonBtn" href="beautyPageant.php">參加選美</a>
+            <p>您可以客製您的活動宣傳單，並由台灣大舞台為您宣傳。</p>
+            <!-- <a class="commonBtn" href="beautyPageant.php">參加選美</a> -->
             <div class="endBtn commonBtnSmall">返回</div>
         </div>
     </div>
