@@ -336,7 +336,6 @@ try{
                                 </a>
                             </p> 
                         
-                        
                     </section>  
                         
                     </div>
