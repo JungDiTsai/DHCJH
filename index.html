@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/loadingScene.css">
+    <style>
+       #aButtonGroup{
+           position: absolute;
+           width: 60vw;
+           height: 240px;
+           margin:auto;
+           top: 0;
+           right: 0;
+           bottom: 0;
+           left: 0;
+           display: flex;
+           flex-wrap: wrap;
+       }
+       #frontBtn,#backBtn{
+           margin: auto;
+       }
+       a{
+           text-align: center;
+           margin-left: 33%;
+       }
+       @media screen and (min-width:992px) {
+        #buttonGroup{
+           height: 100px;   
+       }
+    }
+    </style>
+</head>
+<body>
+    <!--載入頁面   起-->
+    <div id="loadingScene" class="loading">     
+        <div class="stars"></div>
+        <div id="fog"></div>
+        <canvas id="canvas"></canvas>
+        <div id="car">
+           <img src="images/loadingSceneCar.png" alt="載入車">
+        </div>
+        <div id="aButtonGroup" >
+            <div class="col-12 col-md-6">
+                <div id="frontBtn" class="commonBtn">
+                    <a href="index.php">
+                        前台
+                    </a>    
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div id="backBtn" class="commonBtn">
+                    <a href="login2.php">
+                        後台
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div> 
+
+</body>
+</html>

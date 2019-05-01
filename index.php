@@ -13,7 +13,7 @@ try{
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Scroll Test</title>
+    <title>台灣大舞台-首頁</title>
     <link rel="Shortcut Icon" type="image/x-icon" href="images/logo.ico">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/index.css">
