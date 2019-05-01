@@ -2,36 +2,60 @@
 window.addEventListener("load", function(){
     // getInfo();
     calendarA();
+   
 })
+function $id(id){
+    return document.getElementById(id);
+} 
+dateObj=new Date();
+var todaymon=dateObj.getMonth()+1;
+
+var next=todaymon;
+console.log(todaymon);
+
 // var nextmon= document.getElementById('nextMon');
 // nextmon.addEventListener('click',function(){
+//     next+=1;
+//     console.log('next',next);
 //     calendarA();
 // });
 
+// var prevmon= document.getElementById('prevMon');
+// prevmon.addEventListener('click',function(){
+//     next-=1  ;
+//     console.log('pre',next);
+//     calendarA();
+// });
 
+todaymon=dateObj.getMonth()+1;
 function calendarA(){
-    var custmonth= document.querySelector('#calendarTitle').innerText;
-    console.log(custmonth);
+    // custmonth= document.querySelector('#calendarTitle').innerText;//月份 
+    // console.log(custmonth);
+    
 
-    var custday = document.querySelectorAll('#caleBody td');   
+    var custday = document.querySelectorAll('#caleBody td');  //日期 
     var custdayLen = custday.length;
-    console.log(custdayLen);
+    // console.log(custdayLen);
 
     //今天日期
-    dateObj=new Date();
+    // dateObj=new Date();
     todaydata=dateObj.getDate();
+    
+    
     otherdata = todaydata;
     for(var i =0; i<custdayLen; i++){
         custday[i].addEventListener('click',function(e){
+     
             //點擊的那一天
             var dateLi =e.target.innerText; 
              dateNum = parseInt(dateLi);//num
+            //  console.log(dateNum);
             console.log('點擊',dateNum);
             console.log('原本',todaydata);
 
             //點日期給天氣
             if(dateNum ==todaydata+1){
-                console.log('1');
+                // console.log('1');
                 otherdata=todaydata+1;
                 getInfo();
             }else if(dateNum ==todaydata+2){
@@ -49,16 +73,16 @@ function calendarA(){
             }else if(dateNum ==todaydata){
                 otherdata=todaydata;
                 getInfo();
+            }else {
+               console.log('othersday');
+               otherdata=todaydata+5;
+             
+               getInfo();
             }
-        //    console.log('send',otherdata ,todaydata)
         });
-        
     }
 };
 // 天氣
-function $id(id){
-    return document.getElementById(id);
-} 
 
 
 function getInfo(){
@@ -77,65 +101,79 @@ function getInfo(){
 	xhr.open("get", url, true);
 	xhr.send(null)
 }
+
 function showWeather(jsonStr ,todaydata,otherdata){
     today = JSON.parse(jsonStr);
-    console.log('get',todaydata ,otherdata );
-    if(todaydata==otherdata){
-        console.log(123);
-         var weathertext=today.list[0].weather[0].main;
-         if(weathertext=='Clouds'){
-              weathertext = '<img src="./images/api/cloud.png" alt="cloud">';
-         }else if(weathertext=='Clear'){
-             weathertext = '<img src="./images/api/sun.png" alt="sun">';
-         }else if(weathertext=='Rain'){
-             weathertext = '<img src="./images/api/rain.png" alt="rain">';
-         }
-        $id("weather").innerHTML = weathertext;
-    }else if(otherdata == (todaydata+1)){
-        console.log(456);
-        var weathertext = today.list[8].weather[0].main;
-        if(weathertext=='Clouds'){
-            weathertext = '<img src="./images/api/cloud.png" alt="cloud">';
-       }else if(weathertext=='Clear'){
-           weathertext = '<img src="./images/api/sun.png" alt="sun">';
-       }else if(weathertext=='Rain'){
-           weathertext = '<img src="./images/api/rain.png" alt="rain">';
-       }
-         $id("weather").innerHTML = weathertext;
-    }else if(otherdata==(todaydata+2)){
-        var weathertext= today.list[16].weather[0].main;
-       
+    dateObj=new Date();
+  
+   
+    if(todaymon==next){
+        console.log('同月份1');
+        if(todaydata==otherdata){
+            var weathertext=today.list[0].weather[0].main;
             if(weathertext=='Clouds'){
-                    weathertext = '<img src="./images/api/cloud.png" alt="cloud">';
+                 weathertext = '<img src="./images/api/cloud.png" alt="cloud">';
             }else if(weathertext=='Clear'){
                 weathertext = '<img src="./images/api/sun.png" alt="sun">';
             }else if(weathertext=='Rain'){
                 weathertext = '<img src="./images/api/rain.png" alt="rain">';
             }
-         $id("weather").innerHTML = weathertext;
-    }else if(otherdata==(todaydata+3)){
-        var weathertext = today.list[24].weather[0].main;
-        
-            if(weathertext=='Clouds'){
-                    weathertext = '<img src="./images/api/cloud.png" alt="cloud">';
-            }else if(weathertext=='Clear'){
-                weathertext = '<img src="./images/api/sun.png" alt="sun">';
-            }else if(weathertext=='Rain'){
-                weathertext = '<img src="./images/api/rain.png" alt="rain">';
-            }
-         $id("weather").innerHTML = weathertext;
-    }else if(otherdata==(todaydata+4)){
-        var weathertext = today.list[32].weather[0].main;
-            if(weathertext=='Clouds'){
-            weathertext = '<img src="./images/api/cloud.png" alt="cloud">';
-            }else if(weathertext=='Clear'){
-                weathertext = '<img src="./images/api/sun.png" alt="sun">';
-            }else if(weathertext=='Rain'){
-                weathertext = '<img src="./images/api/rain.png" alt="rain">';
-            }
+           $id("weather").innerHTML = weathertext;
+       }else if(otherdata == (todaydata+1)){
+           var weathertext = today.list[8].weather[0].main;
+           if(weathertext=='Clouds'){
+               weathertext = '<img src="./images/api/cloud.png" alt="cloud">';
+          }else if(weathertext=='Clear'){
+              weathertext = '<img src="./images/api/sun.png" alt="sun">';
+          }else if(weathertext=='Rain'){
+              weathertext = '<img src="./images/api/rain.png" alt="rain">';
+          }
             $id("weather").innerHTML = weathertext;
+       }else if(otherdata==(todaydata+2)){
+           var weathertext= today.list[16].weather[0].main;
+          
+               if(weathertext=='Clouds'){
+                       weathertext = '<img src="./images/api/cloud.png" alt="cloud">';
+               }else if(weathertext=='Clear'){
+                   weathertext = '<img src="./images/api/sun.png" alt="sun">';
+               }else if(weathertext=='Rain'){
+                   weathertext = '<img src="./images/api/rain.png" alt="rain">';
+               }
+            $id("weather").innerHTML = weathertext;
+       }else if(otherdata==(todaydata+3)){
+           var weathertext = today.list[24].weather[0].main;
+           
+               if(weathertext=='Clouds'){
+                       weathertext = '<img src="./images/api/cloud.png" alt="cloud">';
+               }else if(weathertext=='Clear'){
+                   weathertext = '<img src="./images/api/sun.png" alt="sun">';
+               }else if(weathertext=='Rain'){
+                   weathertext = '<img src="./images/api/rain.png" alt="rain">';
+               }
+            $id("weather").innerHTML = weathertext;
+       }else if(otherdata==(todaydata+4)){
+           var weathertext = today.list[32].weather[0].main;
+               if(weathertext=='Clouds'){
+               weathertext = '<img src="./images/api/cloud.png" alt="cloud">';
+               }else if(weathertext=='Clear'){
+                   weathertext = '<img src="./images/api/sun.png" alt="sun">';
+               }else if(weathertext=='Rain'){
+                   weathertext = '<img src="./images/api/rain.png" alt="rain">';
+               }
+               $id("weather").innerHTML = weathertext;
+       }else {
+       
+        $id("weather").innerHTML = '暫時不提供此天氣';
+         }
+       
+    }else {
+        console.log('不同月份');
+        $id("weather").innerHTML = '暫時不提供此天氣';
     }
-    else $id("weather").innerHTML = '';
+   
+
+    // console.log('get',todaydata ,otherdata );
+    
 };
 
 

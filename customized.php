@@ -37,14 +37,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>customized_01</title>
+    <title>台灣大舞台-電子花車客製</title>
     <!-- font awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!-- customzied css -->
     <link rel="stylesheet" href="css/customized.css">
     <!-- jQuery CDN -->
-    
+    <link rel="Shortcut Icon" type="image/x-icon" href="images/logo.ico">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     
 </head>
@@ -466,7 +466,7 @@
                     <div class="dateChoose">
                         <p>選擇日期：
                             <span></span>
-                            <span id="weather">天氣</span>
+                            <span id="weather"></span>
                         </p>
                         
                     </div>
@@ -800,9 +800,9 @@
                     <tr>
                         <th>折價券</th>
                         <td>
-                            <select name="couponUse" id="couponUse">
-                                <option value="0">無</option>
-                                <option value="1000">1000元</option>
+                            <select name="couponUse" id="couponUse">                                
+                                <!-- <option value="0">無</option>
+                                <option class="memCoupons" value="0">無</option> -->
                             </select>
                         </td>
                     </tr>

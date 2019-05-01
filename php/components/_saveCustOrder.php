@@ -1,5 +1,4 @@
 <?php
-// echo "hihi";
     // 存照片
     $upload_dir = "../../images/stageImages/";
     if( ! file_exists($upload_dir ))
@@ -18,35 +17,60 @@
     // echo $success ? $file : 'Unable to save the file.';  
     $orderImgUrl = "images/stageImages/" . $fileNum . ".png";
 
-    // 寫入資料庫
+    
     try{
         require_once("_connectDHC.php");
-        $orderInfo = json_decode($_REQUEST["jsonStr"]);
-        // $orderContent = array('troupeNo'=>$orderInfo['troupeNo'], 'fireNo'=>$orderInfo['fireNo'], 'fireworkNo'=>$orderInfo['fireworkNo'], 'audioNo'=>$orderInfo['audioNo'], 'pipeNo'=>$orderInfo['pipeNo']);
-        $orderContent = array('troupeNo'=>$orderInfo->troupeNo, 
-                              'fireNo'=>$orderInfo->fireNo, 
-                              'fireworkNo'=>$orderInfo->fireworkNo, 
-                              'audioNo'=>$orderInfo->audioNo, 
-                              'pipeNo'=>$orderInfo->pipeNo);
-        $orderContent = json_encode($orderContent);
 
-        $sql = "INSERT INTO ORDERS (orderNo, memNo, memCouponsNo, totalMoney, orderName, orderImgUrl, orderVote, beautyState, actPlace, actStart, actContent, hostNo ) VALUE (:orderNo, :memNo, :memCouponsNo, :totalMoney, :orderName, :orderImgUrl, :orderVote, :beautyState, :actPlace, :actStart, :actContent, :hostNo )";
-        $order = $pdo->prepare( $sql );
+        if(isset($_REQUEST['memNo'])){
+            $memNo = $_REQUEST['memNo'];
+            $date = date("Y-m-d");
+            $sql = "SELECT * FROM memcoupons JOIN coupons ON memcoupons.couponsType = coupons.couponsType WHERE memNo = $memNo AND expiry >= '$date'";
+            $coupons = $pdo->query($sql);
+            
+            $couponAll = [];
+            while ( $coupon = $coupons->fetch(PDO::FETCH_ASSOC) ){
+                $couponAll[] = $coupon;
+            }
+            echo json_encode($couponAll);
+        }
+           // 寫入資料庫
+            $orderInfo = json_decode($_REQUEST["jsonStr"]);
+            // $orderContent = array('troupeNo'=>$orderInfo['troupeNo'], 'fireNo'=>$orderInfo['fireNo'], 'fireworkNo'=>$orderInfo['fireworkNo'], 'audioNo'=>$orderInfo['audioNo'], 'pipeNo'=>$orderInfo['pipeNo']);
+            $orderContent = array('troupeNo'=>$orderInfo->troupeNo, 
+                                'fireNo'=>$orderInfo->fireNo, 
+                                'fireworkNo'=>$orderInfo->fireworkNo, 
+                                'audioNo'=>$orderInfo->audioNo, 
+                                'pipeNo'=>$orderInfo->pipeNo);
+            $orderContent = json_encode($orderContent);
 
-        $order->bindValue(":orderNo", null);
-        $order->bindValue(":memNo", $orderInfo->memNo);
-        $order->bindValue(":memCouponsNo", 001);
-        $order->bindValue(":totalMoney", $orderInfo->totalMoney);
-        $order->bindValue(":orderName", $orderInfo->orderName);
-        $order->bindValue(":orderImgUrl", $orderImgUrl);
-        $order->bindValue(":orderVote", 0);
-        $order->bindValue(":beautyState", 1);
-        $order->bindValue(":actPlace", $orderInfo->actPlace);
-        $order->bindValue(":actStart", $orderInfo->actStart);
-        $order->bindValue(":actContent", $orderContent);
-        $order->bindValue(":hostNo", $orderInfo->hostNo);
+            $sql = "INSERT INTO ORDERS (orderNo, memNo, memCouponsNo, totalMoney, orderName, orderImgUrl, orderVote, beautyState, actPlace, actStart, actContent, hostNo ) VALUE (:orderNo, :memNo, :memCouponsNo, :totalMoney, :orderName, :orderImgUrl, :orderVote, :beautyState, :actPlace, :actStart, :actContent, :hostNo )";
+            $order = $pdo->prepare( $sql );
 
-        $order->execute();
+            $order->bindValue(":orderNo", null);
+            $order->bindValue(":memNo", $orderInfo->memNo);
+            $order->bindValue(":memCouponsNo", $orderInfo->memCouponsNo);
+            $order->bindValue(":totalMoney", $orderInfo->totalMoney);
+            $order->bindValue(":orderName", $orderInfo->orderName);
+            $order->bindValue(":orderImgUrl", $orderImgUrl);
+            $order->bindValue(":orderVote", 0);
+            $order->bindValue(":beautyState", 1);
+            $order->bindValue(":actPlace", $orderInfo->actPlace);
+            $order->bindValue(":actStart", $orderInfo->actStart);
+            $order->bindValue(":actContent", $orderContent);
+            $order->bindValue(":hostNo", $orderInfo->hostNo);
+
+            $order->execute();
+
+            $use = '已使用';
+            $memCouponsNo = $orderInfo->memCouponsNo;
+            $sql = "UPDATE memCoupons SET memStatus = '$use' WHERE memCouponsNo = $memCouponsNo";
+            $memCouponsUse = $pdo->exec( $sql ); 
+        
+        
+        
+
+
+        
 
     }catch(PDOException $e){
         echo $e->getMessage();
