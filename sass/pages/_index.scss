@@ -2581,3 +2581,28 @@ footer{
     left: 40%;
   }
 }
+
+#aButtonGroup{
+  position: absolute;
+  width: 60vw;
+  height: 240px;
+  margin:auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+#frontBtn,#backBtn{
+  margin: auto;
+}
+a{
+  text-align: center;
+  margin-left: 33%;
+}
+@media screen and (min-width:992px) {
+#aButtonGroup{
+  height: 100px;   
+}
+}
