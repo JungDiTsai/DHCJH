@@ -858,7 +858,7 @@ function getMemCoupons(){
         }
     }
     
-    var url = "php/components/_getCoupons.php?memNo="+ LoginState[0][0];
+    var url = "php/components/_saveCustOrder.php?memNo="+ LoginState[0][0];
     xhr.open("Get", url, true);
     xhr.send( null );
 }
