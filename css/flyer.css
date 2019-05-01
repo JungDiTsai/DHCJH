@@ -386,7 +386,7 @@ table {
   width: 150px;
   text-align: center;
   display: block;
-  border-bottom: 30px solid  transparent;
+  border-bottom: 30px solid  transparent;
   border-bottom-width: 30px;
   -o-border-image: url("../images/navTDD.png") 41 round;
      border-image: url("../images/navTDD.png") 41 round;
@@ -2192,9 +2192,9 @@ header {
 }
 
 .secScreen {
-  background: url(../images/bkground/flyerbg3.jpeg) center;
-  background-size: cover;
+  background: url(../images/bkground/flyerBgi123.jpg) center;
   background-attachment: fixed;
+  background-size: contain;
   padding-bottom: 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2259,8 +2259,9 @@ header {
 }
 
 .thrScreen {
-  cursor: url(./cur2.ico), auto;
-  background: #000;
+  background: url(../images/bkground/flyerBgi123.jpg) center;
+  background-attachment: fixed;
+  background-size: contain;
   padding-top: 20px;
   padding-bottom: 100px;
 }

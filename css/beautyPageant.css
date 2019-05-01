@@ -386,7 +386,7 @@ table {
   width: 150px;
   text-align: center;
   display: block;
-  border-bottom: 30px solid  transparent;
+  border-bottom: 30px solid  transparent;
   border-bottom-width: 30px;
   -o-border-image: url("../images/navTDD.png") 41 round;
      border-image: url("../images/navTDD.png") 41 round;
@@ -1425,6 +1425,145 @@ footer img {
   }
 }
 
+#memOrderLightBox {
+  display: none;
+}
+
+#memOrderLightBox #LightBox {
+  position: fixed;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: #ffffbd 8px groove;
+  border-radius: 10px;
+  background-color: #222222;
+  -webkit-box-shadow: 0 0 10px 12px rgba(230, 230, 230, 0.3);
+          box-shadow: 0 0 10px 12px rgba(230, 230, 230, 0.3);
+  z-index: 6;
+  text-align: center;
+  width: 300px;
+  padding: 10px;
+  height: 500px;
+}
+
+#memOrderLightBox #LightBox i {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+#memOrderLightBox #LightBox i:hover {
+  color: yellow;
+}
+
+#memOrderLightBox #LightBox h3 {
+  font-size: 21px;
+  color: #fff;
+}
+
+#memOrderLightBox #LightBox img {
+  vertical-align: top;
+  margin: 0;
+  width: 100%;
+}
+
+#memOrderLightBox #LightBox #allMessage {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  height: 120px;
+  list-style: none;
+  overflow: auto;
+  padding: 10px;
+  position: relative;
+}
+
+#memOrderLightBox #LightBox #allMessage li {
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#memOrderLightBox #LightBox #allMessage li img {
+  width: 40px;
+  border-radius: 50%;
+  height: 40px;
+}
+
+#memOrderLightBox #LightBox #allMessage li p {
+  padding: 10px;
+  line-height: 1;
+  margin-left: 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+#memOrderLightBox #LightBox #my_Message {
+  width: 100%;
+  margin: auto;
+  position: absolute;
+  bottom: 10px;
+  text-align: left;
+}
+
+#memOrderLightBox #LightBox #my_Message input {
+  width: 70%;
+  display: inline-block;
+  padding: 5px;
+  background: #fff;
+  border-radius: 5px;
+  border: 2px solid #6e6e6e;
+}
+
+#memOrderLightBox #LightBox #my_Message button {
+  display: inline-block;
+  width: 20%;
+  padding: 5px;
+  outline: none;
+  border-radius: 5px;
+  background: #F77952;
+}
+
+@media screen and (min-width: 768px) {
+  #memOrderLightBox {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+  }
+  #memOrderLightBox #LightBox {
+    position: absolute;
+    width: 700px;
+    height: 500px;
+  }
+  #memOrderLightBox #LightBox img {
+    width: 50%;
+  }
+  #memOrderLightBox #LightBox #allMessage {
+    display: inline-block;
+    width: 40%;
+    height: 85%;
+  }
+  #memOrderLightBox #LightBox #my_Message {
+    width: 50%;
+    margin: auto;
+    left: 0;
+    right: 0;
+  }
+}
+
+#memOrderLightBox {
+  top: 0;
+}
+
+.fa-bookmark::before {
+  cursor: pointer;
+}
+
 footer #footerBgiNew {
   position: relative;
 }
@@ -1639,6 +1778,13 @@ li {
   margin-left: calc(6.5% + 30px);
 }
 
+.beautyRankingbg .beautyRankingSocialBtns i:nth-child(4) {
+  -webkit-box-flex: 5;
+      -ms-flex-positive: 5;
+          flex-grow: 5;
+  text-align: left;
+}
+
 .beautyRankingSocialBtns {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1829,6 +1975,10 @@ li {
   color: gray;
 }
 
+.beautyDiscWrap .beautyDiscStageContainer {
+  font-family: "微軟正黑體";
+}
+
 .beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg {
   height: 580px;
   width: 100%;
@@ -1842,8 +1992,9 @@ li {
 
 .beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg .beautyDiscIgMemStage {
   width: 302px;
-  height: 302px;
   margin-top: 15px;
+  height: 279px;
+  text-align: center;
 }
 
 .beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg .likeCount {
@@ -1862,7 +2013,7 @@ li {
   max-width: 100%;
   margin-left: 5px;
   padding: 0px;
-  margin-top: -35px;
+  margin-top: -25px;
 }
 
 .beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg .beautyRankingSocialBtns i {
@@ -1887,6 +2038,7 @@ li {
 }
 
 .beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg .beautyDiscIgMem .beautyDiscIgTopic .beautyDiscIgMName {
+  font-family: "微軟正黑體";
   font-size: 18px;
   width: 100%;
   line-height: 25px;
@@ -1895,6 +2047,7 @@ li {
 }
 
 .beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg .beautyDiscIgMem .beautyDiscIgTopic .beautyDiscIgMNameCar {
+  font-family: "微軟正黑體";
   font-size: 16px;
   width: 100%;
   line-height: 25px;
@@ -1923,7 +2076,7 @@ li {
 
 .beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg .beautyDiscIgMemTextContainerWrap {
   margin: 15px 0px;
-  font-family: '微軟正黑';
+  font-family: "微軟正黑體";
   overflow-y: scroll;
   height: 85px;
 }
@@ -1952,6 +2105,7 @@ li {
   font-weight: 900;
   padding-left: 5px;
   width: 80px;
+  font-family: "微軟正黑體";
 }
 
 .beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg .beautyDiscIgMemTextContainerWrap .beautyDiscIgMemTextContainer .beautyDiscIgNameText {
@@ -1960,10 +2114,13 @@ li {
   font-size: 16px;
   color: #444;
   width: 150px;
+  font-family: "微軟正黑體";
 }
 
 .beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg img {
-  width: 100%;
+  width: auto;
+  height: 100%;
+  max-height: 279px;
   -webkit-filter: drop-shadow(2px 2px 4px #444);
           filter: drop-shadow(2px 2px 4px #444);
 }
@@ -2276,6 +2433,12 @@ li {
     max-width: 70%;
     margin-left: 15%;
   }
+  #beautyRankingimgs .beautyRankingbg .beautyRankingSocialBtns i:nth-child(4) {
+    -webkit-box-flex: 5;
+        -ms-flex-positive: 5;
+            flex-grow: 5;
+    text-align: left;
+  }
   #beautyRankingimgs .beautyRankingbg .beautyRankingSocialBtns .fa-heart, #beautyRankingimgs .beautyRankingbg .beautyRankingSocialBtns .fa-heart {
     color: #eee;
   }
@@ -2309,12 +2472,6 @@ li {
     width: 30px;
     margin-top: 0px;
     height: 30px;
-  }
-  #beautyRankingimgs .beautyRankingbg .beautyRankingSocialBtns i:nth-child(4) {
-    -webkit-box-flex: 5;
-        -ms-flex-positive: 5;
-            flex-grow: 5;
-    text-align: right;
   }
   #beautyRankingimgs .beautyRankingbg .beautyRankingSocialBtns .fa-bookmark::before, #beautyRankingimgs .beautyRankingbg .beautyRankingSocialBtns .fa-external-link-alt::before, #beautyRankingimgs .beautyRankingbg .beautyRankingSocialBtns .fa-comment::before, #beautyRankingimgs .beautyRankingbg .beautyRankingSocialBtns .fa-heart::before {
     cursor: pointer;

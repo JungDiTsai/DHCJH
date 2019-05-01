@@ -386,7 +386,7 @@ table {
   width: 150px;
   text-align: center;
   display: block;
-  border-bottom: 30px solid  transparent;
+  border-bottom: 30px solid  transparent;
   border-bottom-width: 30px;
   -o-border-image: url("../images/navTDD.png") 41 round;
      border-image: url("../images/navTDD.png") 41 round;
@@ -5121,25 +5121,21 @@ a .commonBtn {
 .groupIntro img {
   width: 80px;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -140px;
+  left: -150px;
   right: 0;
   bottom: 0;
   margin: auto;
-  -webkit-animation: turn2 90s alternate infinite;
-          animation: turn2 90s alternate infinite;
 }
 
 .groupIntro .img2 {
   width: 80px;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -140px;
+  left: 150px;
   right: 0;
   bottom: 0;
   margin: auto;
-  -webkit-animation: turn3 90s alternate infinite;
-          animation: turn3 90s alternate infinite;
 }
 
 #carEquipmentsIntroWrap {
@@ -5928,7 +5924,7 @@ ul.tryCustTabs li a.tryCustActive {
   width: 100px;
   height: 120px;
   margin: auto;
-  margin-top: 27vh;
+  margin-top: 28vh;
   top: 0;
   bottom: 0;
   left: 0;
@@ -7490,6 +7486,12 @@ footer img {
   #beautyContestWrap,
   #processWrap {
     padding-top: 100px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #tryCustormiseWrap .commonBtn {
+    margin: 10vh auto auto auto;
   }
 }
 

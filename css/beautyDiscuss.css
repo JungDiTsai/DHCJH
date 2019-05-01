@@ -386,7 +386,7 @@ table {
   width: 150px;
   text-align: center;
   display: block;
-  border-bottom: 30px solid  transparent;
+  border-bottom: 30px solid  transparent;
   border-bottom-width: 30px;
   -o-border-image: url("../images/navTDD.png") 41 round;
      border-image: url("../images/navTDD.png") 41 round;
@@ -1760,7 +1760,7 @@ table {
   width: 150px;
   text-align: center;
   display: block;
-  border-bottom: 30px solid  transparent;
+  border-bottom: 30px solid  transparent;
   border-bottom-width: 30px;
   -o-border-image: url("../images/navTDD.png") 41 round;
      border-image: url("../images/navTDD.png") 41 round;
@@ -6293,25 +6293,21 @@ a .commonBtn {
 .groupIntro img {
   width: 80px;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -140px;
+  left: -150px;
   right: 0;
   bottom: 0;
   margin: auto;
-  -webkit-animation: turn2 90s alternate infinite;
-          animation: turn2 90s alternate infinite;
 }
 
 .groupIntro .img2 {
   width: 80px;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -140px;
+  left: 150px;
   right: 0;
   bottom: 0;
   margin: auto;
-  -webkit-animation: turn3 90s alternate infinite;
-          animation: turn3 90s alternate infinite;
 }
 
 #carEquipmentsIntroWrap {
@@ -7100,7 +7096,7 @@ ul.tryCustTabs li a.tryCustActive {
   width: 100px;
   height: 120px;
   margin: auto;
-  margin-top: 27vh;
+  margin-top: 28vh;
   top: 0;
   bottom: 0;
   left: 0;
@@ -8665,6 +8661,12 @@ footer img {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  #tryCustormiseWrap .commonBtn {
+    margin: 10vh auto auto auto;
+  }
+}
+
 @media screen and (min-width: 1500px) {
   #beautyContestSlider {
     margin-top: 3vh;
@@ -8705,6 +8707,14 @@ footer img {
     top: 62%;
     left: 40%;
   }
+}
+
+#memOrderLightBox {
+  top: 0;
+}
+
+.fa-bookmark::before {
+  cursor: pointer;
 }
 
 footer #footerBgiNew {
@@ -8921,6 +8931,13 @@ li {
   margin-left: calc(6.5% + 30px);
 }
 
+.beautyRankingbg .beautyRankingSocialBtns i:nth-child(4) {
+  -webkit-box-flex: 5;
+      -ms-flex-positive: 5;
+          flex-grow: 5;
+  text-align: left;
+}
+
 .beautyRankingSocialBtns {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9111,6 +9128,10 @@ li {
   color: gray;
 }
 
+.beautyDiscWrap .beautyDiscStageContainer {
+  font-family: "微軟正黑體";
+}
+
 .beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg {
   height: 580px;
   width: 100%;
@@ -9124,8 +9145,9 @@ li {
 
 .beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg .beautyDiscIgMemStage {
   width: 302px;
-  height: 302px;
   margin-top: 15px;
+  height: 279px;
+  text-align: center;
 }
 
 .beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg .likeCount {
@@ -9144,7 +9166,7 @@ li {
   max-width: 100%;
   margin-left: 5px;
   padding: 0px;
-  margin-top: -35px;
+  margin-top: -25px;
 }
 
 .beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg .beautyRankingSocialBtns i {
@@ -9169,6 +9191,7 @@ li {
 }
 
 .beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg .beautyDiscIgMem .beautyDiscIgTopic .beautyDiscIgMName {
+  font-family: "微軟正黑體";
   font-size: 18px;
   width: 100%;
   line-height: 25px;
@@ -9177,6 +9200,7 @@ li {
 }
 
 .beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg .beautyDiscIgMem .beautyDiscIgTopic .beautyDiscIgMNameCar {
+  font-family: "微軟正黑體";
   font-size: 16px;
   width: 100%;
   line-height: 25px;
@@ -9205,7 +9229,7 @@ li {
 
 .beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg .beautyDiscIgMemTextContainerWrap {
   margin: 15px 0px;
-  font-family: '微軟正黑';
+  font-family: "微軟正黑體";
   overflow-y: scroll;
   height: 85px;
 }
@@ -9234,6 +9258,7 @@ li {
   font-weight: 900;
   padding-left: 5px;
   width: 80px;
+  font-family: "微軟正黑體";
 }
 
 .beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg .beautyDiscIgMemTextContainerWrap .beautyDiscIgMemTextContainer .beautyDiscIgNameText {
@@ -9242,10 +9267,13 @@ li {
   font-size: 16px;
   color: #444;
   width: 150px;
+  font-family: "微軟正黑體";
 }
 
 .beautyDiscWrap .beautyDiscStageContainer .beautyDiscIg img {
-  width: 100%;
+  width: auto;
+  height: 100%;
+  max-height: 279px;
   -webkit-filter: drop-shadow(2px 2px 4px #444);
           filter: drop-shadow(2px 2px 4px #444);
 }
@@ -9558,6 +9586,12 @@ li {
     max-width: 70%;
     margin-left: 15%;
   }
+  #beautyRankingimgs .beautyRankingbg .beautyRankingSocialBtns i:nth-child(4) {
+    -webkit-box-flex: 5;
+        -ms-flex-positive: 5;
+            flex-grow: 5;
+    text-align: left;
+  }
   #beautyRankingimgs .beautyRankingbg .beautyRankingSocialBtns .fa-heart, #beautyRankingimgs .beautyRankingbg .beautyRankingSocialBtns .fa-heart {
     color: #eee;
   }
@@ -9591,12 +9625,6 @@ li {
     width: 30px;
     margin-top: 0px;
     height: 30px;
-  }
-  #beautyRankingimgs .beautyRankingbg .beautyRankingSocialBtns i:nth-child(4) {
-    -webkit-box-flex: 5;
-        -ms-flex-positive: 5;
-            flex-grow: 5;
-    text-align: right;
   }
   #beautyRankingimgs .beautyRankingbg .beautyRankingSocialBtns .fa-bookmark::before, #beautyRankingimgs .beautyRankingbg .beautyRankingSocialBtns .fa-external-link-alt::before, #beautyRankingimgs .beautyRankingbg .beautyRankingSocialBtns .fa-comment::before, #beautyRankingimgs .beautyRankingbg .beautyRankingSocialBtns .fa-heart::before {
     cursor: pointer;

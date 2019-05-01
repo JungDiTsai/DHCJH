@@ -386,7 +386,7 @@ table {
   width: 150px;
   text-align: center;
   display: block;
-  border-bottom: 30px solid  transparent;
+  border-bottom: 30px solid  transparent;
   border-bottom-width: 30px;
   -o-border-image: url("../images/navTDD.png") 41 round;
      border-image: url("../images/navTDD.png") 41 round;
@@ -1476,6 +1476,7 @@ header {
     color: #ffffbd;
   }
   #memberNav ul li a {
+    cursor: pointer;
     font-size: 24px;
   }
 }
@@ -1483,6 +1484,137 @@ header {
 @media screen and (min-width: 1200px) {
   #memberNav {
     width: 16.666666%;
+  }
+}
+
+#memOrderLightBox {
+  display: none;
+}
+
+#memOrderLightBox #LightBox {
+  position: fixed;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: #ffffbd 8px groove;
+  border-radius: 10px;
+  background-color: #222222;
+  -webkit-box-shadow: 0 0 10px 12px rgba(230, 230, 230, 0.3);
+          box-shadow: 0 0 10px 12px rgba(230, 230, 230, 0.3);
+  z-index: 6;
+  text-align: center;
+  width: 300px;
+  padding: 10px;
+  height: 500px;
+}
+
+#memOrderLightBox #LightBox i {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+#memOrderLightBox #LightBox i:hover {
+  color: yellow;
+}
+
+#memOrderLightBox #LightBox h3 {
+  font-size: 21px;
+  color: #fff;
+}
+
+#memOrderLightBox #LightBox img {
+  vertical-align: top;
+  margin: 0;
+  width: 100%;
+}
+
+#memOrderLightBox #LightBox #allMessage {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  height: 120px;
+  list-style: none;
+  overflow: auto;
+  padding: 10px;
+  position: relative;
+}
+
+#memOrderLightBox #LightBox #allMessage li {
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#memOrderLightBox #LightBox #allMessage li img {
+  width: 40px;
+  border-radius: 50%;
+  height: 40px;
+}
+
+#memOrderLightBox #LightBox #allMessage li p {
+  padding: 10px;
+  line-height: 1;
+  margin-left: 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+#memOrderLightBox #LightBox #my_Message {
+  width: 100%;
+  margin: auto;
+  position: absolute;
+  bottom: 10px;
+  text-align: left;
+}
+
+#memOrderLightBox #LightBox #my_Message input {
+  width: 70%;
+  display: inline-block;
+  padding: 5px;
+  background: #fff;
+  border-radius: 5px;
+  border: 2px solid #6e6e6e;
+}
+
+#memOrderLightBox #LightBox #my_Message button {
+  display: inline-block;
+  width: 20%;
+  padding: 5px;
+  outline: none;
+  border-radius: 5px;
+  background: #F77952;
+}
+
+@media screen and (min-width: 768px) {
+  #memOrderLightBox {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+  }
+  #memOrderLightBox #LightBox {
+    position: absolute;
+    width: 700px;
+    height: 500px;
+  }
+  #memOrderLightBox #LightBox img {
+    width: 50%;
+  }
+  #memOrderLightBox #LightBox #allMessage {
+    display: inline-block;
+    width: 40%;
+    height: 85%;
+  }
+  #memOrderLightBox #LightBox #my_Message {
+    width: 50%;
+    margin: auto;
+    left: 0;
+    right: 0;
   }
 }
 

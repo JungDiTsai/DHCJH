@@ -1185,10 +1185,9 @@ try{
         var hearts = document.getElementsByClassName("likeHeart");
         for(let i=0; i< hearts.length; i++){
             hearts[i].onclick = function(e){
-
                 let orderNo = e.target.nextElementSibling.innerText;
                 let amount;
-    
+                console.log(orderNo);
 
                 if(e.target.src.indexOf("images/like.png") != -1 ){
                     e.target.src = "images/likeAlready.png";
