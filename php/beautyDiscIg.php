@@ -181,19 +181,19 @@
 						let orderNo = e.target.parentNode.nextElementSibling.innerText;
 						let memNo =LoginState[0][0];
 						let url = "php/addcollection.php?memNo=" + memNo + "&orderNo=" + orderNo;
-						if(e.target.src.indexOf("images/bookmark.png") != -1 ){
+						
+						console.log(url);
+						console.log(orderNo);
+						console.log(memNo);
+						var xhr = new XMLHttpRequest();
+						xhr.onload = function(){
+							if(e.target.src.indexOf("images/bookmark.png") != -1 ){
 							e.target.src = "images/bookmarkdeep.png";
 							amount = 1;
 						}else{
 							e.target.src = "images/like.png";
 							amount = -1;
 						}
-						console.log(url);
-						console.log(orderNo);
-						console.log(memNo);
-						var xhr = new XMLHttpRequest();
-						xhr.onload = function(){
-						
 						}
 						xhr.open("get",url,true);
 						xhr.send(null);

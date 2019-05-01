@@ -62,7 +62,8 @@ try{
                             <i><img class="likeHeart" src="images/like.png" alt="喜歡收藏"></i><span style="display:none"><?php echo $beautyContestRow[5]['orderNo'] ?></span>
                             <p class="likeCount"><?php echo $beautyContestRow[5]['orderVote'];?>個喜歡</p>
                             <i class="far fa-comment showOrderLightBox" alt="留言" orderNo="<?php echo $beautyContestRow[5]['orderNo'] ?>"></i>
-                            <i class="far fa-bookmark" alt="分享"></i>
+                            <div><i class="far fa-bookmark" alt="分享"></i></div>
+                            <span style='display:none;'><?php echo $beautyContestRow[5]['orderNo'] ?></span>
                         </div>
                     </div>
                     <div id="beautyRankingbg2" class="beautyRankingbg">
@@ -72,7 +73,8 @@ try{
                             <i><img class="likeHeart" src="images/like.png" alt="喜歡收藏"></i><span style="display:none"><?php echo $beautyContestRow[3]['orderNo'] ?></span>
                             <p class="likeCount"><?php echo $beautyContestRow[3]['orderVote'];?>個喜歡</p>
                             <i class="far fa-comment showOrderLightBox" alt="留言" orderNo="<?php echo $beautyContestRow[3]['orderNo'] ?>" ></i>
-                            <i class="far fa-bookmark" alt="分享"></i>
+                            <div><i class="far fa-bookmark" alt="分享"></i></div>
+                            <span style='display:none;'><?php echo $beautyContestRow[3]['orderNo'] ?></span>
                         </div>
                     </div>
                     <div id="beautyRankingbg3" class="beautyRankingbg">
@@ -82,7 +84,8 @@ try{
                             <i><img class="likeHeart" src="images/like.png" alt="喜歡收藏"></i><span style="display:none"><?php echo $beautyContestRow[4]['orderNo'] ?></span>
                             <p class="likeCount"><?php echo $beautyContestRow[4]['orderVote'];?>個喜歡</p>
                             <i class="far fa-comment showOrderLightBox" alt="留言" orderNo="<?php echo $beautyContestRow[4]['orderNo'] ?>"></i>
-                            <i class="far fa-bookmark" alt="分享"></i>
+                            <div><i class="far fa-bookmark" alt="分享"></i></div>
+                            <span style='display:none;'><?php echo $beautyContestRow[4]['orderNo'] ?></span>
                         </div>
                     </div>
                 </div>
@@ -94,7 +97,8 @@ try{
                             <i><img class="likeHeart" src="images/like.png" alt="喜歡收藏"></i><span style="display:none"><?php echo $beautyContestRow[1]['orderNo'] ?></span>
                             <p class="likeCount"><?php echo $beautyContestRow[1]['orderVote'];?>個喜歡</p>
                             <i class="far fa-comment showOrderLightBox" alt="留言" orderNo="<?php echo $beautyContestRow[1]['orderNo'] ?>"></i>
-                            <i class="far fa-bookmark" alt="分享"></i>
+                            <div><i class="far fa-bookmark" alt="分享"></i></div>
+                            <span style='display:none;'><?php echo $beautyContestRow[1]['orderNo'] ?></span>
                         </div>
                     </div>
                     <div id="beautyRankingbg5" class="beautyRankingbg">
@@ -104,7 +108,8 @@ try{
                             <i><img class="likeHeart" src="images/like.png" alt="喜歡收藏"></i><span style="display:none"><?php echo $beautyContestRow[0]['orderNo'] ?></span>
                             <p class="likeCount"><?php echo $beautyContestRow[0]['orderVote'];?>個喜歡</p>
                             <i class="far fa-comment showOrderLightBox" alt="留言" orderNo="<?php echo $beautyContestRow[0]['orderNo'] ?>"></i>
-                            <i class="far fa-bookmark" alt="分享"></i>
+                            <div><i class="far fa-bookmark" alt="分享"></i></div>
+                            <span style='display:none;'><?php echo $beautyContestRow[0]['orderNo'] ?></span>
                         </div>
                     </div>
                     <div id="beautyRankingbg6" class="beautyRankingbg">
@@ -114,7 +119,8 @@ try{
                             <i><img class="likeHeart" src="images/like.png" alt="喜歡收藏"></i><span style="display:none"><?php echo $beautyContestRow[2]['orderNo'] ?></span>
                             <p class="likeCount"><?php echo $beautyContestRow[2]['orderVote'];?>個喜歡</p>
                             <i class="far fa-comment showOrderLightBox" alt="留言" orderNo="<?php echo $beautyContestRow[2]['orderNo'] ?>"></i>
-                            <i class="far fa-bookmark" alt="分享"></i>
+                            <div><i class="far fa-bookmark" alt="分享"></i></div>
+                            <span style='display:none;'><?php echo $beautyContestRow[2]['orderNo'] ?></span>
                         </div>
                     </div>
                 </div>
