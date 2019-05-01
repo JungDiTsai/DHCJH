@@ -59,7 +59,7 @@ try{
                         <h3><?php echo $beautyContestRow[5]['orderName']; ?></h3>
                         <div class="beautyRankingSocialBtns">
                             <i><img class="likeHeart" src="images/like.png" alt="喜歡收藏"></i>
-                            <i class="far fa-comment" alt="留言"></i>
+                            <i class="far fa-comment" alt="留言" order="<?php echo $beautyContestRow[5]['orderNo'] ?>"></i>
                               <p class="likeCount"><?php echo $beautyContestRow[5]['orderVote']; ?>個喜歡</p>
                             <i class="far fa-bookmark" alt="分享"></i>
                             <span style="display:none"><?php echo $beautyContestRow[5]['orderNo'] ?></span>

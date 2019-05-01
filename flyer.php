@@ -571,6 +571,7 @@
             //點擊 close BOX 
             document.getElementById('hiddenEnvelopeLightBox').addEventListener('click', function () {
                 document.querySelector('.blackBox').style.display = 'none';
+                document.querySelector('.envelopeHeader').style.setProperty('bottom', '-100%');
                 let joinAct = document.querySelectorAll('.joinAct');
                 for (let i = 0; i < joinAct.length; i++) {
                     joinAct[i].removeAttribute('disabled');
@@ -708,14 +709,17 @@
             if (nowScrollHeight >= secScreen) {
                 document.querySelector('.one').style.setProperty('z-index', '5');
                 document.querySelector('.bigCarcouselBox').style.setProperty('opacity', '1');
+                document.querySelectorAll('.titleBgi')[1].style.setProperty('position', 'sticky');
                 
                 //判斷螢幕大小對 相框加大
                 if (screenWidth >= 768) {
                     document.querySelector('.bigCarcouselBox').style.setProperty('transform', 'scale(1.2)');
                     document.querySelector('.bigCarcouselBox').style.setProperty('bottom', '150px');
+                    document.querySelectorAll('.titleBgi')[1].style.setProperty('top', '100px');
                 } else {
                     document.querySelector('.bigCarcouselBox').style.setProperty('transform', 'scale(1)');
                     document.querySelector('.bigCarcouselBox').style.setProperty('bottom', '50px');
+                    document.querySelectorAll('.titleBgi')[1].style.setProperty('top', '-10px');
                 }
                 document.querySelector('.bigCarcouselBox').style.setProperty('position', 'fixed')
                 document.querySelectorAll('.card')[0].querySelector('.cardContent').style.setProperty(
@@ -745,7 +749,7 @@
             } else {
                 document.querySelector('.three').style.setProperty('transform', 'translateY(0%)')
             }
-            if (nowScrollHeight > secScreen + 1700) {
+            if (nowScrollHeight > secScreen + 1850) {
                 document.querySelectorAll('.titleBgi')[1].style.setProperty('position', 'absolute');
             }
 

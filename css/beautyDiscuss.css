@@ -386,7 +386,7 @@ table {
   width: 150px;
   text-align: center;
   display: block;
-  border-bottom: 30px solid  transparent;
+  border-bottom: 30px solid  transparent;
   border-bottom-width: 30px;
   -o-border-image: url("../images/navTDD.png") 41 round;
      border-image: url("../images/navTDD.png") 41 round;
@@ -1760,7 +1760,7 @@ table {
   width: 150px;
   text-align: center;
   display: block;
-  border-bottom: 30px solid  transparent;
+  border-bottom: 30px solid  transparent;
   border-bottom-width: 30px;
   -o-border-image: url("../images/navTDD.png") 41 round;
      border-image: url("../images/navTDD.png") 41 round;
@@ -8662,6 +8662,12 @@ footer img {
   #beautyContestWrap,
   #processWrap {
     padding-top: 100px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #tryCustormiseWrap .commonBtn {
+    margin: 10vh auto auto auto;
   }
 }
 
