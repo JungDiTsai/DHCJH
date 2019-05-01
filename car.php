@@ -25,6 +25,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/car1.css">
+    <link rel="Shortcut Icon" type="image/x-icon" href="images/logo.ico">
     
 </head>
 <body> 

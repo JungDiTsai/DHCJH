@@ -17,6 +17,7 @@ try{
     <title>Document</title>
     <link rel="stylesheet" href="css/beautyPageant.css">
     <script src="js/jquery-3.3.1.min.js"></script>
+    <link rel="Shortcut Icon" type="image/x-icon" href="images/logo.ico">
     <!-- font awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
