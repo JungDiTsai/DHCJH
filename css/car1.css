@@ -221,7 +221,7 @@ table {
   width: 150px;
   text-align: center;
   display: block;
-  border-bottom: 30px solid  transparent;
+  border-bottom: 30px solid  transparent;
   border-bottom-width: 30px;
   -o-border-image: url("../images/navTDD.png") 41 round;
      border-image: url("../images/navTDD.png") 41 round;
