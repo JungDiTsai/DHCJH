@@ -114,6 +114,13 @@
                         p.innerText = input;
                         li.appendChild(p);
                         document.getElementById('allMessage').appendChild(li);
+
+                        let p2 = document.createElement('p');
+                        
+                        let beforeNode = document.querySelector('.myMessage p');
+                        p2.innerHTML = `你回復的新留言 :<br><span>${input}</span>`;
+                        p2.style.background = "#ffa";
+                        document.querySelector('.myMessage').insertBefore(p2,beforeNode);
                       }
                   }else{ //其它
                       alert( xhr.status );
