@@ -181,7 +181,17 @@
 						let orderNo = e.target.parentNode.nextElementSibling.innerText;
 						let memNo =LoginState[0][0];
 						let url = "php/addcollection.php?memNo=" + memNo + "&orderNo=" + orderNo;
+						let here = e.target.style.color;
+						// let style = window.getComputedStyle(here).getPropertyValue('color');
 						
+							e.target.style.color ='deepskyblue';
+							if(here=='deepskyblue'){
+								e.target.style.color ='white';
+							}
+						
+						// if(e.target.css('filter','drop-shadow(2px 2px 2px #ff0)'){
+							
+						// })
 						console.log(url);
 						console.log(orderNo);
 						console.log(memNo);
