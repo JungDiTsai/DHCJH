@@ -71,11 +71,11 @@ try{
     <script> 
 
         window.addEventListener("load",function(){
-            var storage = window.sessionStorage;
-            if( storage["alreadyShow"] == undefined){
-                storage["alreadyShow"] = "yes";   
-                var loadFadeOut = function(){
-                console.log('hi');
+            // var storage = window.sessionStorage;
+            // if( storage["alreadyShow"] == undefined){
+            //     storage["alreadyShow"] = "yes";   
+                 var loadFadeOut = function(){
+                 console.log('hi');
                 $(".loading").fadeOut(1800);
 
                 $("#introCarStageOne").css("left","0");
@@ -86,14 +86,14 @@ try{
             $("#car").removeClass('readyLoadingCar');
             $("#car").addClass('loadingCar');
             setTimeout(loadFadeOut,5200);   
-            }else{ //已經載入過了
-                $("#loadingScene").fadeOut(300);
-                $("#introCarStageOne").css("left","0");
-                $("#introCarStageOne").fadeIn(600);
-                $("#introWords").css("transform","scale(1)"); 
-                console.log('hi'); 
-                //setTimeout(loadFadeOut,1000);  
-            }
+            // }else{ //已經載入過了
+            //     $("#loadingScene").fadeOut(300);
+            //     $("#introCarStageOne").css("left","0");
+            //     $("#introCarStageOne").fadeIn(600);
+            //     $("#introWords").css("transform","scale(1)"); 
+            //     console.log('hi'); 
+            //     //setTimeout(loadFadeOut,1000);  
+            // }
       
         });
          
@@ -826,7 +826,7 @@ try{
                     <img class="introSpecialBlock one" src="images/Fireworks2.gif" alt="特效＿煙火" style="display: block;">
                     <img class="introSpecialBlock two" src="images/Fireworks1.gif" alt="特效＿煙火2" style="display: block;">
                     <!--配件展示的車-->
-                    <img id="introCarStage" src="images/newVersionStage2.png" alt="介紹用的花車">
+                    <img id="processIntroCarStage" src="images/newVersionStage3.png" alt="介紹用的花車">
                     <div id="introScreenBlock" style="display: none;"><!--跑馬燈的框-->
                     <span>
                     我要嗨翻全場！有看到嗎有看到嗎～可以跑字超酷的啦！嘿嘿嘿 趕快來試試看啊！台灣大舞台！
@@ -1220,7 +1220,7 @@ try{
             centerMode: true,
             infinite: false,
             centerPadding: '60px',
-            focusOnSelect: false,
+            focusOnSelect: true,
             slidesToShow: 3,
             responsive: [
                 {
@@ -1230,7 +1230,7 @@ try{
                     centerMode: true,
                     centerPadding: '40px',
                     slidesToShow: 3,
-                    //focusOnSelect: true
+                    focusOnSelect: true
                 }
                 },
                 {
@@ -1240,7 +1240,7 @@ try{
                     centerMode: true,
                     centerPadding: '60px',
                     slidesToShow: 1,
-                    //focusOnSelect: true
+                    focusOnSelect: true
                 }
                 }
             ]

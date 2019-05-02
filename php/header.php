@@ -14,7 +14,7 @@
     <nav class="mainNav">
         <li class="mainNavCell"><a href="customized.php">電子花車客製</a></li>
         <li class="mainNavCell"><a href="flyer.php">客製化宣傳單</a></li>
-        <h1 class="navLogo"><a href="index.php"><img src="images/logo.png" alt="台灣大舞台"></a></h1>
+        <h1 class="navLogo"><a href="index2.php"><img src="images/logo.png" alt="台灣大舞台"></a></h1>
         <li class="mainNavCell"><a href="beautyPageant.php">花車選美</a></li>
         <li class="mainNavCell"><a href="intro.php">大舞台的故事</a></li>
         <div class="navMemBtn"> 

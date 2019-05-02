@@ -189,7 +189,7 @@ li{
      .beautyRankingSocialBtns{
        i{
         &:nth-child(4){
-          flex-grow: 5;
+          flex-grow: 4;
           text-align: left;
         }
        }
@@ -220,7 +220,7 @@ li{
       font-size: 28px;
       flex-grow: 1;
       align-content: center;
-      color:#eee;
+      color:white;
       line-height: 30px;
       text-align: left;
       img{
@@ -234,6 +234,9 @@ li{
         margin-right: -5px;
       }
     }
+    .fa-bookmark{
+      text-align: right;
+    } 
       .fa-bookmark::before,.fa-external-link-alt::before,.fa-comment::before,.fa-heart::before{
         cursor: pointer;
       }
@@ -791,15 +794,19 @@ li{
               font-size: 28px;
               flex-grow: 1;
               align-content: center;
-              color:#eee;
+              color:white;
               line-height: 30px;
               text-align: left;
+              
               img{
                 width: 30px;
                 margin-top: 0px;
                 height: 30px;
               }
             }
+            .fa-bookmark{
+              text-align: right;
+            } 
               .fa-bookmark::before,.fa-external-link-alt::before,.fa-comment::before,.fa-heart::before{
                 cursor: pointer;
               }

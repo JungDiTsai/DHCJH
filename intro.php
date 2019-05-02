@@ -231,6 +231,10 @@
 
     <!-- -----團隊介紹---------------- --> 
     <div id="teamIntroWrap">
+<<<<<<< HEAD
+=======
+      <div class="titleBgi">工人介紹</div>
+>>>>>>> ec9dec12ef877dd006de92ebdca04af0126cc5b2
     <div class="sliderBox">
        <div class="introBox" id="a1" style="left:50%">
            <h5>蔡仲廸</h5>
@@ -243,7 +247,8 @@
                <ul>
                    <li>組長擔當</li>
                    <li>選美頁撰寫</li>
-                   <li>選美頁功能</li>
+                   <li>選美討論區</li>
+                   <li>選美收藏功能</li>
                    <li>大舞台故事頁面設計</li>
                    <li>大舞台故事頁面撰寫</li>
                    <li>header撰寫</li>
