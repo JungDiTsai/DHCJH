@@ -505,6 +505,8 @@ function custReset(){
     var mm = new Date().getMonth(); //月份
     var dd = new Date().getDate();//今天日期
     var arrmm = new Array();
+    var datevalue = "";
+    var datevalueTemp = "";
     arrmm[0] = "一月";
     arrmm[1] = "二月";
     arrmm[2] = "三月";
@@ -641,7 +643,7 @@ function custReset(){
             ss = document.getElementsByClassName("tdclass")[k];
             ss.addEventListener("click", tdclass);
             ss.style.color="rgb(255, 255, 255)";
-            ss.style.cursor="pointer";
+            // ss.style.cursor="pointer";
 
             var numF = arrmm.indexOf(document.querySelector("#calendarTitle").innerText);
             var num = arrmm.indexOf(document.querySelector("#calendarTitle").innerText)+1;
@@ -670,10 +672,11 @@ function custReset(){
                 ss.style.cursor="default";
                 ss.removeEventListener("click", tdclass);
             }
-            // if(ss.innerText == datevalueTemp.split("-")[2] && num == datevalueTemp.split("-")[1] && document.querySelector("#yy-sp").innerText == datevalueTemp.split("-")[0]){
-            //     ss.style.background = "rgb(64, 58, 96)";
-            //     ss.style.color = "rgb(255, 255, 255)";
-            // }
+            if(ss.innerText == datevalueTemp.split("-")[2] && num == datevalueTemp.split("-")[1] && document.querySelector("#calendarYear").innerText == datevalueTemp.split("-")[0]){
+                ss.style.background = "rgb(247, 83, 156)";
+                ss.style.color = "rgb(255, 255, 255)";
+                ss.style.borderRadius = "50%";
+            }
             arr[k] = ss;
         }
     }
@@ -690,7 +693,7 @@ function custReset(){
         var value = document.querySelector("#calendarTitle").innerText;
         var mmtext = Number(arrmm.indexOf(value));//月
         mmtext += 1;
-        datevaluetemp = document.querySelector("#calendarYear").innerText + "-" + ('00' + mmtext).slice(-2) + "-" + ('00' + e.target.innerText).slice(-2);
+        datevalueTemp = document.querySelector("#calendarYear").innerText + "-" + mmtext + "-" + e.target.innerText;
         datevalue = document.querySelector("#calendarYear").innerText + "-" + ('00' + mmtext).slice(-2) + "-" + ('00' + e.target.innerText).slice(-2);
         // 獲取日期
         $('.dateChoose p span:first-of-type').text(datevalue);
@@ -837,12 +840,20 @@ function getOrderInfo(){
     $('.orderSub span').text(subtotal);
     $('.checkoutOrder p span').text(subtotal);
     // 付款金額總計
-    $('#couponUse').change(function(){
-        subtotalAll = 0;
-        subtotalAll = subtotal - parseInt($('#couponUse :selected').val());
-        // console.log(subtotalAll);
+    subtotalAll = 0;
+    if( $('#couponUse').change() == true ){
+       $('#couponUse').change(function(){
+            subtotalAll = parseInt(subtotal) - parseInt($('#couponUse :selected').val());
+            console.log(subtotalAll);
+            $('.checkoutOrder p span').text(subtotalAll);
+        }); 
+    }else{
+        subtotalAll = subtotal;
         $('.checkoutOrder p span').text(subtotalAll);
-    });
+        console.log(subtotalAll);
+    }
+        
+    
 }
 // 抓取折價券
 function getMemCoupons(){

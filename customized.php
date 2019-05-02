@@ -46,7 +46,6 @@
     <!-- jQuery CDN -->
     <link rel="Shortcut Icon" type="image/x-icon" href="images/logo.ico">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    
 </head>
 <body>
 <input type="checkbox" id=menu_control>
@@ -466,10 +465,11 @@
                     <div class="dateChoose">
                         <p>選擇日期：
                             <span></span>
-                            <span id="weather"></span>
+                         <span id="weather"></span>
                         </p>
                         
                     </div>
+                    
                     <!-- loc -->
                     <div class="loc">
                         <div class="locInput">
