@@ -35,7 +35,7 @@
             </tr>
             <tr>
                 <th>會員電話</th>
-                <td><input type="tel" id="addMemTel"></td>
+                <td><input type="tel" id="addMemTel" maxlength="10"></td>
             </tr>
             <tr>
                 <th>會員信箱</th>

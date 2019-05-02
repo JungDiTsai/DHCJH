@@ -2289,6 +2289,8 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0;
+  -webkit-column-count: 2;
+          column-count: 2;
   -webkit-column-gap: 15px;
           column-gap: 15px;
 }

@@ -1,0 +1,30 @@
+.loginBox{
+    width: 300px;
+    height: 350px;
+    background: #fff;
+    border:5px solid yellow;
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 3;
+    border-radius: 10px;
+    padding: 30px 40px;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 0 0 10px yellow;
+    box-shadow:0 0 10px  rgb(211, 235, 192) inset;
+}
+.fa-times{
+    color:red;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    
+}
+.fa-times:hover{
+    color:#000;
+}

@@ -75,7 +75,7 @@
                         </tr>
                         <tr>
                             <th>會員電話</th>
-                            <td><input type="tel" value="<?php echo $_SESSION["member"][0][4]?>"></td>
+                            <td><input type="tel" value="<?php echo $_SESSION["member"][0][4]?>" maxlength="10"></td>
                         </tr>
                         <tr>
                             <th>會員姓名</th>
