@@ -23,7 +23,7 @@
        }
        #frontBtn,#backBtn{
            margin: auto;
-           transition: 1.2s ease;
+           transition: .7s ease;
        }
        a{
            text-align: center;
@@ -47,18 +47,18 @@
         </div>
         <div id="aButtonGroup" >
             <div class="col-12 col-md-6">
-                <div id="frontBtn" class="commonBtn">
-                    <a href="index.php">
+                <a href="index.php">
+                    <div id="frontBtn" class="commonBtn">
                         前台
-                    </a>    
-                </div>
+                    </div>
+                </a> 
             </div>
             <div class="col-12 col-md-6">
-                <div id="backBtn" class="commonBtn">
-                    <a href="login2.php">
+                <a href="login2.php">
+                    <div id="backBtn" class="commonBtn">
                         後台
-                    </a>
-                </div>
+                    </div>
+                </a>
             </div>
             
         </div>
@@ -66,14 +66,15 @@
     </div> 
 <script src="js/jquery-3.3.1.min.js"></script>
 <script>
-$('#frontBtn').addEventListener("click",function(){
-    $('#backBtn').fadeout(1200);
+$('#frontBtn').click(function(){
+    $('#backBtn').fadeout(800);
     $('#frontBtn').css('transform','scale(2)');
-})
-$('#backBtn').addEventListener("click",function(){
-    $('#frontBtn').fadeout(1200);
+});
+$('#backBtn').click(function(){
+    $('#frontBtn').fadeout(800);
     $('#backBtn').css('transform','scale(2)');
-})
+});
+
 </script>
 </body>
 </html>
