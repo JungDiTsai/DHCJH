@@ -3942,6 +3942,10 @@ header {
   }
 }
 
+.mainNav li:nth-child(1) a {
+  color: #ffffbd;
+}
+
 /*.noscroll{
   position: fixed;
   width: 100%;
