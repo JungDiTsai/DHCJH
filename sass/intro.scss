@@ -15,3 +15,7 @@
 @import "components/_forgotPSW.scss";  //忘記密碼燈箱
 @import "components/_titlebackground.scss";
 @import "pages/_intro.scss";
+
+.mainNav li:nth-child(5) a{
+    color:#2cffff;
+}

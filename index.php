@@ -1220,7 +1220,7 @@ try{
             centerMode: true,
             infinite: false,
             centerPadding: '60px',
-            focusOnSelect: false,
+            focusOnSelect: ture,
             slidesToShow: 3,
             responsive: [
                 {
@@ -1230,7 +1230,7 @@ try{
                     centerMode: true,
                     centerPadding: '40px',
                     slidesToShow: 3,
-                    //focusOnSelect: true
+                    focusOnSelect: true
                 }
                 },
                 {
@@ -1240,7 +1240,7 @@ try{
                     centerMode: true,
                     centerPadding: '60px',
                     slidesToShow: 1,
-                    //focusOnSelect: true
+                    focusOnSelect: true
                 }
                 }
             ]

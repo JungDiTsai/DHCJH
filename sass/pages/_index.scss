@@ -782,7 +782,7 @@ a{
     ////outline: 5px red solid;
       #equipBtnTwo{
         display: none;
-        margin-left: 20vw;
+        margin: auto;
       }
   }
   #equipIntroTabsSection{
@@ -1510,6 +1510,7 @@ ul.tryCustTabs li a.tryCustActive {
 }
 .beautyContestStages{
   //background-color: rgb(255, 148, 148);
+  outline:none;
   text-align: center;
   margin: 2vh;
   height: 55vh;
