@@ -2400,6 +2400,9 @@ footer{
 
 //舞台配件介紹 col-lg 尾
 @media screen and (min-width:992px) {
+  #tryCustEquipInnerSet{
+    overflow-x: none;
+  }
   .perspectiveIntro{
     transform: scale(1.6);
     margin-top:50px;
