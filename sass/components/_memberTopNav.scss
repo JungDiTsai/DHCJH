@@ -1,3 +1,6 @@
+body{
+    background: #2c3b42;
+}
 // 卷軸------------------
 ::-webkit-scrollbar {
     width: 10px;
@@ -24,7 +27,9 @@
 }
 
 // ---------------------
-.wrap{margin-top:80px }
+.wrap{
+    padding-top: 80px;
+}
 .min_view{
   display: block;
 }

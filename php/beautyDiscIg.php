@@ -191,7 +191,7 @@
 							e.target.src = "images/bookmarkdeep.png";
 							amount = 1;
 						}else{
-							e.target.src = "images/bookmark.png";
+							e.target.src = "images/like.png";
 							amount = -1;
 						}
 						}

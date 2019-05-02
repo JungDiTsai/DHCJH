@@ -9,12 +9,12 @@ switch($_FILES['memberImg']['error']){
             // $FileNum=count(glob("$dir/*.*"))+1;
             $from = $_FILES['memberImg']['tmp_name'];
             $type = $_FILES['memberImg']['type'];
-			$to = $dir . "member_$memberNo.png";
+			$to = $dir . "member_$memberNo.jpg";
 			copy($from, $to);
 			
 
 			try {
-				$sql = "UPDATE member SET memImgUrl='images/member/member_$memberNo.png' where memNo = $memberNo";
+				$sql = "UPDATE member SET memImgUrl='images/member/member_$memberNo.jpg' where memNo = $memberNo";
 				$products = $pdo->exec($sql);
 				
 			 } catch (PDOException $e) {
@@ -22,7 +22,7 @@ switch($_FILES['memberImg']['error']){
 				$errMsg .=  '錯誤行號' . $e->getLine() . '<br>';
 			 }
 
-			 echo "images/member/member_$memberNo.png";
+			 echo "images/member/member_$memberNo.jpg";
 			break;	
 	case 1:
 			echo "上傳檔案太大, 不得超過", ini_get("upload_max_filesize") ,"<br>";

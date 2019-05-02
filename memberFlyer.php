@@ -291,7 +291,7 @@
                       if( xhr.readyState == XMLHttpRequest.DONE ){ //server端執行完畢
                         if( xhr.status == 200){ //server端可以正確的執行
                              console.log(xhr.responseText);
-                          //    window.location.reload();
+                             window.location.reload();
                         }else{ //其它
                             alert( xhr.status );
                         }

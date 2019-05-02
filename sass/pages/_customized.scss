@@ -1,14 +1,5 @@
 // mobile
 // bg
-.mainNav{
-    li{
-      &:nth-child(1){
-        a{
-          color:$logoColor;
-        }
-      }
-    }
-  }
 .custBg{
     padding-top: 100px;
     background-image: url(../images/customized/customized_bg_02.jpg);

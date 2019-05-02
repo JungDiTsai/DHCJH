@@ -120,14 +120,7 @@ new Vue({
                 //(1)---------------------------------------將設定寫到資料庫
                 this.setting[0]=document.getElementById('A4page').value;
                 console.log('setting:'+this.setting);
-                //比對Order 對照訂單
-                let number = 0;
-                for (let i = 0; i < LoginState.length; i++) {
-                    if(LoginState[i]['orderName'].search(OrderNo)!= -1){
-                        number = i;
-                    }
-                }
-                console.log("第"+number+"筆訂單");
+                console.log('現在OrderNo:'+OrderNo)
 
                   //產生XMLHttpRequest物件
                   var xhr = new XMLHttpRequest();
@@ -144,7 +137,7 @@ new Vue({
                   //設定好所要連結的程式
                   
                   var url = "php/components/_upoadSetting.php";
-                  var data_info = "flyerSetting=" + JSON.stringify(this.setting) + "&member= " + JSON.stringify(LoginState[number]);
+                  var data_info = "flyerSetting=" + JSON.stringify(this.setting) + "&orderNo=" + OrderNo;
                   console.log(data_info);
 
                   xhr.open("post", url, true);
@@ -386,8 +379,8 @@ new Vue({
                             //讀取檔案----------------------
                             xhr.onload = function () {
                                 if (xhr.status == 200) {
-                                   
-                            document.getElementById('A4page').value = xhr.responseText;
+                                   console.log('儲存的路徑為:'+xhr.responseText);
+                                    document.getElementById('A4page').value = xhr.responseText;
                                 } else{
                                     alert();
                                 }
@@ -401,17 +394,9 @@ new Vue({
                             xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
                             //送出資料
                             //比對Order 對照訂單
-                            let number = 0;
-                            for (let i = 0; i < LoginState.length; i++) {
-                                if(LoginState[i]['orderName'].search(OrderNo)!= -1){
-                                    number = i;
-                                }
-                            }
-                            console.log("第"+number+"筆訂單");
-                            console.log(LoginState[number]['orderNo']);
-                            var data_info = "imgURL=" + img +"&orderNo=" + LoginState[number]['orderNo'];
+                            console.log(`修改到編號${OrderNo}訂單`);
+                            var data_info = "imgURL=" + img +"&orderNo="+OrderNo;
                             xhr.send(data_info);
-
 
                         });
                     }else{

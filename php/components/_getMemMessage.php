@@ -3,14 +3,17 @@
     $errMsg="";
     $orderNo = $_REQUEST['orderNo'];
     try {
-       $sql = "SELECT * FROM message join member on message.memNo = member.memNo where orderno = $orderNo;";
+       $sql = "select * from orders left outer join message on  orders.orderno = message.orderno join member on message.memNo = member.memNo where orders.orderno = $orderNo;";
        $products = $pdo->query($sql);
        $number = $products->rowCount();
        if($number!=0){
            $data = $products->fetchAll();
            echo json_encode($data);
        }else{
-            echo "沒有留言";
+            $sql = "select * from orders where orders.orderno = $orderNo;";
+            $products = $pdo->query($sql);
+            $data = $products->fetch();
+            echo json_encode($data);
        }
     } catch (PDOException $e) {
        $errMsg .=  '錯誤原因' . $e->getMessage() . '<br>'; 

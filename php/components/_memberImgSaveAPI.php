@@ -1,8 +1,7 @@
 <?php
 
     $orderNo = $_REQUEST["orderNo"];
-    $saveDir ="../../images//flyer//member_";
-    $dir = "../../images//flyer//";
+    $saveDir ="../../images/flyer/member_";
     $file = "$saveDir$orderNo.jpg"; //更改儲存的檔名
     $img = $_REQUEST["imgURL"]; //取得ajax的值
 

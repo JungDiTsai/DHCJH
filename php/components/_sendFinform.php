@@ -10,7 +10,7 @@
         $products = $pdo->query($sql);
         $products = $products->fetch();
         $flyerNo = $products['flyerNo'];
-        $sql = "INSERT into finform value (null,:flyerNo,:memNo,:informReason,'未處理');";
+        $sql = "INSERT into finform value (null,:flyerNo,:memNo,:informReason,'未處理','無');";
         $products = $pdo->prepare($sql);
         $products->bindValue(':flyerNo',$flyerNo);
         $products->bindValue(':memNo',$MymemNo);

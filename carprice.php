@@ -1,5 +1,6 @@
 <?php
 $price = $_REQUEST["price"];
+// echo 'fuck';
 $name = $_REQUEST["no"];
 $couponstype = $_REQUEST["couponstype"];
 
@@ -7,7 +8,7 @@ echo $couponstype. '-' .$name;
 $errMsg = "";
         try {
 
-            require_once("dhc.php");
+            require_once("connectBooks.php");
             $sql = "INSERT INTO memcoupons VALUES (NULL , :name , :couponstype , '2019-04-25' , '未使用') ";
 
             $products = $pdo->prepare( $sql );

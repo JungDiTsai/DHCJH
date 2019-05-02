@@ -161,29 +161,28 @@ function drawFrame() {
 //判斷登入
 LoginState="notFound";
 OrderNo="notFound";
-// window.addEventListener("load", function () {
-//     //產生XMLHttpRequest物件
-//     let xhr = new XMLHttpRequest();
-//     //註冊callback function
-//     xhr.onload = function () {
-//         if (xhr.status == 200) { //server端可以正確的執行
-//             if(xhr.responseText!="notFound"){
-//                 LoginState =  JSON.parse(xhr.responseText);
-//                 document.querySelector('.fa-user').src = LoginState[0]['memImgUrl'];
-//                 document.querySelector('.fa-user').setAttribute("id","bigMember");
-//                 console.log("LoginState:已輸入值");
+window.addEventListener("load", function () {
+    //產生XMLHttpRequest物件
+    let xhr = new XMLHttpRequest();
+    //註冊callback function
+    xhr.onload = function () {
+        if (xhr.status == 200) { //server端可以正確的執行
+            if(xhr.responseText!="notFound"){
+                LoginState = JSON.parse(xhr.responseText);
+                document.querySelector('.fa-user').src = LoginState[0]['memImgUrl'];
+                document.querySelector('.fa-user').setAttribute("id","bigMember");
+                console.log("LoginState:已輸入值");
 
-//             }
-//             console.log("Session:"+xhr.responseText)
-//         } else { //其它
-//             alert(xhr.status);
-//         }
-//     }
-//     //設定好所要連結的程式
-//     xhr.open("get", "../php/components/_JudgeLogin.php", true);
-// 	xhr.send(null);
-	
-// })
+            }
+            console.log("Session:"+xhr.responseText)
+        } else { //其它
+            alert(xhr.status);
+        }
+    }
+    //設定好所要連結的程式
+    xhr.open("get", "php/components/_JudgeLogin.php", true);
+    xhr.send(null);
+})
 
 
 //登入
@@ -202,7 +201,11 @@ xhr.onload = function () {
 		else{
 			// window.location.reload();
 			// var price=document.getElementById(' test').value;
-			LoginState =  JSON.parse(xhr.responseText);
+             LoginState = JSON.parse(xhr.responseText);
+            console.log(xhr.responseText);
+            var box = document.querySelector('.loginBox');
+            box.style.display='none';
+
 		}
 	} else { //其它
 		alert(xhr.status);
@@ -216,7 +219,6 @@ var data_info = "memId=" + document.getElementById("memId").value + "&memPsw="+ 
 //送出資料
 xhr.send(data_info);
 }
-
 
 /* 登入燈箱 JS*/
         // 點擊icon開啟登入燈箱----------------------------
@@ -236,15 +238,15 @@ xhr.send(data_info);
                 }
             }else{
                 // window.location.href = "memberCenter.php";
-                // console.log(price,LoginState[0][0] );
+                console.log(price,LoginState[0][0], couponstype);
                 $.ajax({
-                    url:'../carprice.php',
+                    url:'./carprice.php',
                     data:{ price:price , no:LoginState[0][0] , couponstype:couponstype },  
-                                     
+                    // data:{price:'1'},              
                     type:'get',
                     error:function(){                                                                 
     
-                        alert("失敗");
+                        alert("aa失敗");
     
                         },
                     success:function(data){

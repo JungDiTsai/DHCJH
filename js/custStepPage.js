@@ -837,12 +837,13 @@ function getOrderInfo(){
     $('.orderSub span').text(subtotal);
     $('.checkoutOrder p span').text(subtotal);
     // 付款金額總計
+    subtotalAll = 0;
     $('#couponUse').change(function(){
-        subtotalAll = 0;
         subtotalAll = subtotal - parseInt($('#couponUse :selected').val());
         // console.log(subtotalAll);
         $('.checkoutOrder p span').text(subtotalAll);
     });
+    $('.checkoutOrder p span').text(subtotalAll);
 }
 // 抓取折價券
 function getMemCoupons(){
@@ -858,7 +859,7 @@ function getMemCoupons(){
         }
     }
     
-    var url = "php/components/_getCoupons.php?memNo="+ LoginState[0][0];
+    var url = "php/components/_saveCustOrder.php?memNo="+ LoginState[0][0];
     xhr.open("Get", url, true);
     xhr.send( null );
 }

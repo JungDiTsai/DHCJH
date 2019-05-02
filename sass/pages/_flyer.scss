@@ -1,13 +1,4 @@
 
-.mainNav{
-  li{
-    &:nth-child(2){
-      a{
-        color:$logoColor;
-      }
-    }
-  }
-}
 .firstScreen {
   
   background: #000 center;
@@ -534,9 +525,9 @@
 }
 
 .secScreen {
-  background:url(../images/bkground/flyerBgi123.jpg) center;
+  background:#000;
   background-attachment: fixed;
-  background-size: contain;
+  background-size: cover;
   padding-bottom: 50px;
   box-sizing: border-box;
   padding-top: 20px;
@@ -605,9 +596,9 @@
 }
 
 .thrScreen {
-  background:url(../images/bkground/flyerBgi123.jpg) center;
+  background:#000;
   background-attachment: fixed;
-  background-size: contain;
+  background-size: cover;
   padding-top: 20px;
   padding-bottom: 100px;
 
@@ -629,7 +620,7 @@
       flex-wrap: wrap;
       justify-content: center;
       padding: 0;
-      column-count: 2;
+
       column-gap: 15px;
     }
 
@@ -763,7 +754,15 @@
       }
     }
   }
+  .secScreen{
+    background:url(../images/bkground/flyerBgi123.jpg) center no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
   .thrScreen {
+    background:url(../images/bkground/flyerBgi123.jpg) center no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     .titleBgi{
       transform: translateX(300%);
       margin-top: 80px;

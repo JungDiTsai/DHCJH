@@ -1,10 +1,9 @@
 <?php 
-
+//car
+   
     $errMsg="";
-    
 
     try {
-       
         require_once("dhc.php");
         $sql = "select * from coupons order by rand() limit 0,1";
         $back=$pdo->query($sql);  //下指令
@@ -23,10 +22,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>台灣大舞台-遊戲</title>
     <link rel="stylesheet" href="css/car1.css">
-    <link rel="Shortcut Icon" type="image/x-icon" href="images/logo.ico">
-    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 <body> 
     <?php require_once("php/header.php") ?>;
@@ -39,8 +37,8 @@
            
                 <h3>使用←跟→來閃躲來車，閃躲5秒後即可獲得優惠卷哦!</h3>
                 <div id="startButton">
-                    <button id="backpage">返回</button>
-                    <button id="startGame">開始</button>
+                    <button id="backpage" class="commonBtnSmall">返回</button>
+                    <button id="startGame" class="commonBtnSmall">開始</button>
                 </div>
                 <div class="clearboth"></div>
             </div>
@@ -58,15 +56,15 @@
                     <p >金額：<span id="test" couponsType="<?php echo $backprice["couponsType"]  ;?>"><?php echo $backprice["couponsName"]  ;?></span> </p>
                     
                     <?php }?>  
-                    <button id="endtGame">領取優惠卷</button>
+                    <button id="endtGame" class="commonBtnSmall">領取優惠卷</button>
                 </div>
             </div>
         </div>
 
         <div id="carGame">
                 <h1 id="score">5</h1>
-                <h2 id="retry">使用←跟→來閃躲來車，閃躲5秒後即可獲得優惠卷哦～</h2>
-                <canvas width="500" height="600"></canvas>
+                <h2 id="retry">使用←跟→來閃躲來車，閃躲5秒後即可獲得優惠卷</h2>
+                <canvas width="500" height="800"></canvas>
         </div>
       
 
