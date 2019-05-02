@@ -1,6 +1,6 @@
 <?php
 try{
-    require_once("php/components/_connectDHC.php");
+    require_once("components/_connectDHC.php");
     $sql = "select * from robot where locate(robotAsk,:robotAsk)>0";
     $robotAsk = $pdo->prepare($sql);
     $robotAsk -> bindValue(":robotAsk",$_REQUEST["robotAsk"]);
