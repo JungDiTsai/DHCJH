@@ -782,7 +782,7 @@ a{
     ////outline: 5px red solid;
       #equipBtnTwo{
         display: none;
-        margin-left: 20vw;
+        margin: auto;
       }
   }
   #equipIntroTabsSection{
@@ -1254,10 +1254,15 @@ ul.tryCustTabs li a.tryCustActive {
 .groupA .danceDetail1 img,
 .groupA .danceDetail2 img,
 .groupA .danceDetail3 img,
-.groupA .danceDetail4 img,
-.groupA .danceDetail5 img,
-.groupA .danceDetail6 img{
+.groupA .danceDetail4 img{
   width: 50px;
+}
+.groupA .danceDetail6 img,
+.groupA .danceDetail5 img{
+  width: 64px;
+}
+.groupA .fireEffect2 img{
+  margin-top: -10px;
 }
 //引入客製頁面
 
@@ -1510,6 +1515,7 @@ ul.tryCustTabs li a.tryCustActive {
 }
 .beautyContestStages{
   //background-color: rgb(255, 148, 148);
+  outline:none;
   text-align: center;
   margin: 2vh;
   height: 55vh;
@@ -1756,7 +1762,7 @@ height: 100vh;
 overflow: hidden;
 }
 .processShineBgi2{
-background:rgba(255, 255, 147, 0.746);
+background:rgba(255, 255, 147, 0.346);
 animation: shineExplosion .9s ease 1 forwards;
 }
 @keyframes shineExplosion{
@@ -2387,13 +2393,16 @@ footer{
     padding: 10px 0px 0px 0px;
   }
   .tryCustEquipWrap{
-    margin-top: -50px;
+    margin-top: -15px;
   }
 }
 
 
 //舞台配件介紹 col-lg 尾
 @media screen and (min-width:992px) {
+  #tryCustEquipInnerSet{
+    overflow: hidden;
+  }
   .perspectiveIntro{
     transform: scale(1.6);
     margin-top:50px;
@@ -2567,7 +2576,7 @@ footer{
     }
   }
   .tryCustEquipWrap{
-    margin-top: 10px;
+    margin-top: -10px;
   }
   #processWorker1{
     width: 90px;

@@ -291,14 +291,10 @@ try{
       </script>
     <script src="js/beautyRankingScale.js"></script>
     <script src="js/beautyPagentSwipe.js"></script>
-    <script>
-        
-       
-    </script>
     <script src="js/musicBar.js"></script>
     <!-- <script src="js/dotReport.js"></script> -->
     <script src="js/navmenu.js"></script>
     <script src="js/discoBall.js"></script>
-    
+   
 </body>
 </html>

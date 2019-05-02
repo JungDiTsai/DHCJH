@@ -71,11 +71,11 @@ try{
     <script> 
 
         window.addEventListener("load",function(){
-            var storage = window.sessionStorage;
-            if( storage["alreadyShow"] == undefined){
-                storage["alreadyShow"] = "yes";   
-                var loadFadeOut = function(){
-                console.log('hi');
+            // var storage = window.sessionStorage;
+            // if( storage["alreadyShow"] == undefined){
+            //     storage["alreadyShow"] = "yes";   
+                 var loadFadeOut = function(){
+                 console.log('hi');
                 $(".loading").fadeOut(1800);
 
                 $("#introCarStageOne").css("left","0");
@@ -86,14 +86,14 @@ try{
             $("#car").removeClass('readyLoadingCar');
             $("#car").addClass('loadingCar');
             setTimeout(loadFadeOut,5200);   
-            }else{ //已經載入過了
-                $("#loadingScene").fadeOut(300);
-                $("#introCarStageOne").css("left","0");
-                $("#introCarStageOne").fadeIn(600);
-                $("#introWords").css("transform","scale(1)"); 
-                console.log('hi'); 
-                //setTimeout(loadFadeOut,1000);  
-            }
+            // }else{ //已經載入過了
+            //     $("#loadingScene").fadeOut(300);
+            //     $("#introCarStageOne").css("left","0");
+            //     $("#introCarStageOne").fadeIn(600);
+            //     $("#introWords").css("transform","scale(1)"); 
+            //     console.log('hi'); 
+            //     //setTimeout(loadFadeOut,1000);  
+            // }
       
         });
          
@@ -1220,7 +1220,7 @@ try{
             centerMode: true,
             infinite: false,
             centerPadding: '60px',
-            focusOnSelect: false,
+            focusOnSelect: true,
             slidesToShow: 3,
             responsive: [
                 {
@@ -1230,7 +1230,7 @@ try{
                     centerMode: true,
                     centerPadding: '40px',
                     slidesToShow: 3,
-                    //focusOnSelect: true
+                    focusOnSelect: true
                 }
                 },
                 {
@@ -1240,7 +1240,7 @@ try{
                     centerMode: true,
                     centerPadding: '60px',
                     slidesToShow: 1,
-                    //focusOnSelect: true
+                    focusOnSelect: true
                 }
                 }
             ]
