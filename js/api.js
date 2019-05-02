@@ -11,80 +11,78 @@ dateObj=new Date();
 var todaymon=dateObj.getMonth()+1;
 
 var next=todaymon;
-console.log(todaymon);
+console.log('現在月份',todaymon);
 
-// var nextmon= document.getElementById('nextMon');
-// nextmon.addEventListener('click',function(){
-//     next+=1;
-//     console.log('next',next);
-//     calendarA();
-// });
+var nextmon= document.getElementById('nextMon');
+nextmon.addEventListener('click',function(){
+    next+=1;
+    console.log('next',next);
+    // calendarA();
+});
 
-// var prevmon= document.getElementById('prevMon');
-// prevmon.addEventListener('click',function(){
-//     next-=1  ;
-//     console.log('pre',next);
-//     calendarA();
-// });
+var prevmon= document.getElementById('prevMon');
+prevmon.addEventListener('click',function(){
+    next-=1  ;
+    console.log('pre',next);
+    // calendarA();
+});
 
-todaymon=dateObj.getMonth()+1;
+// todaymon=dateObj.getMonth()+1;
 function calendarA(){
-    // custmonth= document.querySelector('#calendarTitle').innerText;//月份 
-    // console.log(custmonth);
+    custmonth= document.querySelector('#calendarTitle').innerText;//月份 
+    console.log(custmonth);
     
 
     var custday = document.querySelectorAll('#caleBody td');  //日期 
     var custdayLen = custday.length;
-    // console.log(custdayLen);
+    console.log(custdayLen);
 
-    //今天日期
-    // dateObj=new Date();
+    
+    dateObj=new Date();
     todaydata=dateObj.getDate();
-    
-    
     otherdata = todaydata;
+    console.log('todaydata',todaydata);
     for(var i =0; i<custdayLen; i++){
         custday[i].addEventListener('click',function(e){
      
-            //點擊的那一天
+            // //點擊的那一天
             var dateLi =e.target.innerText; 
              dateNum = parseInt(dateLi);//num
             //  console.log(dateNum);
             console.log('點擊',dateNum);
             console.log('原本',todaydata);
 
-            //點日期給天氣
-            if(dateNum ==todaydata+1){
-                // console.log('1');
-                otherdata=todaydata+1;
-                getInfo();
-            }else if(dateNum ==todaydata+2){
-                otherdata=todaydata+2;
-                getInfo();
+            // //點日期給天氣
+            // if(dateNum ==todaydata+1){
+            //     // console.log('1');
+            //     otherdata=todaydata+1;
+            //     getInfo();
+            // }
+            // else if(dateNum ==todaydata+2){
+            //     otherdata=todaydata+2;
+            //     getInfo();
 
-            }else if(dateNum ==todaydata+3){
-                otherdata=todaydata+3;
-                getInfo();
+            // }else if(dateNum ==todaydata+3){
+            //     otherdata=todaydata+3;
+            //     getInfo();
 
-            }else if(dateNum ==todaydata+4){
-                otherdata=todaydata+4;
-                getInfo();
+            // }else if(dateNum ==todaydata+4){
+            //     otherdata=todaydata+4;
+            //     getInfo();
 
-            }else if(dateNum ==todaydata){
-                otherdata=todaydata;
-                getInfo();
-            }else {
-               console.log('othersday');
-               otherdata=todaydata+5;
+            // }else if(dateNum ==todaydata){
+            //     otherdata=todaydata;
+            //     getInfo();
+            // }else {
+            //    console.log('othersday');
+            //    otherdata=todaydata+5;
              
-               getInfo();
-            }
+            //    getInfo();
+            // }
         });
     }
 };
 // 天氣
-
-
 function getInfo(){
 	var xhr = new XMLHttpRequest();
 	var url = "http://api.openweathermap.org/data/2.5/forecast?q=Taipei,TW&units=metric&appid=2dac4978aa2278e716f6f7895b632224&lang=zh_TW"
@@ -172,7 +170,7 @@ function showWeather(jsonStr ,todaydata,otherdata){
     }
    
 
-    // console.log('get',todaydata ,otherdata );
+//     // console.log('get',todaydata ,otherdata );
     
 };
 
