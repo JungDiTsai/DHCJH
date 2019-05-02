@@ -1757,7 +1757,7 @@ height: 100vh;
 overflow: hidden;
 }
 .processShineBgi2{
-background:rgba(255, 255, 147, 0.746);
+background:rgba(255, 255, 147, 0.346);
 animation: shineExplosion .9s ease 1 forwards;
 }
 @keyframes shineExplosion{
@@ -2388,7 +2388,7 @@ footer{
     padding: 10px 0px 0px 0px;
   }
   .tryCustEquipWrap{
-    margin-top: -50px;
+    margin-top: -15px;
   }
 }
 
@@ -2568,7 +2568,7 @@ footer{
     }
   }
   .tryCustEquipWrap{
-    margin-top: 10px;
+    margin-top: 0px;
   }
   #processWorker1{
     width: 90px;

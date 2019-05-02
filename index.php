@@ -1220,7 +1220,7 @@ try{
             centerMode: true,
             infinite: false,
             centerPadding: '60px',
-            focusOnSelect: ture,
+            focusOnSelect: true,
             slidesToShow: 3,
             responsive: [
                 {
