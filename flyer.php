@@ -90,6 +90,7 @@
                             <img src="" alt="">
                             <h5></h5>
                             <div id="A4qrcode"><img src="" alt=""></div>
+                            <p id="A4content">客製化宣傳單</p>
                         </div>
                         <div id="moveBtn" v-if="stepIndex!=0">
                             <span v-on:click="moveLeft">&larr;</span>
@@ -163,7 +164,7 @@
                             </div>
                             <div id="textWord">
                                 <textarea name="" id="" cols="30" rows="3" maxlength="120"
-                                    placeholder="輸入活動簡介 ( 限120字 )" v-on:change="settingContent"></textarea>
+                                    placeholder="輸入活動簡介 ( 限120字 )" v-on:input="settingContent"></textarea>
                             </div>
                         </div>
                         <div class="btnBar">
@@ -208,7 +209,7 @@
                 <div class="card one">
                     <div class="ElongationBox">
                         <div class="blockBox">
-                            <img src="<?php echo $products[$number-3]['flyerImgUrl'] ?>" alt="">
+                            <img src="<?php echo $products[$number-3]['flyerImgUrl'] ?>" alt="" id="firstBlockBox">
                             <img src="images/flyer/flyerPin.png" alt="">
                             <img src="images/flyer/flyerPin.png" alt="">
                         </div>

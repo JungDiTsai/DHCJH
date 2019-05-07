@@ -6,25 +6,25 @@
     //  $no= $_REQUEST["no"];
     //  $status = $_REQUEST["status"];
      
-    //  echo  $no;  
+    // //  echo  $no;  
 
     
-        // $errMsg = "";
-        //     try {
+    //     $errMsg = "";
+    //         try {
              
-        //     require_once("connectBooks.php");
-        //     $sql = "update binform set  informStatus=:status    where  binformNo=:no" ;
-        //     $products = $pdo->prepare( $sql );         
-        //     $products->bindValue(":no", $no);          
-        //     $products->bindValue(":status", $status);
+    //         require_once("connectBooks.php");
+    //         $sql = "update binform set  informStatus=:status    where  binformNo=:no" ;
+    //         $products = $pdo->prepare( $sql );         
+    //         $products->bindValue(":no", $no);          
+    //         $products->bindValue(":status", $status);
             
-        //     $products->execute();
+    //         $products->execute();
            
 
-        //     } catch (PDOException $e) {
-        //         $errMsg .= "錯誤原因 : ".$e -> getMessage(). "<br>";
-        //         $errMsg .= "錯誤行號 : ".$e -> getLine(). "<br>";	
-        //     }
+    //         } catch (PDOException $e) {
+    //             $errMsg .= "錯誤原因 : ".$e -> getMessage(). "<br>";
+    //             $errMsg .= "錯誤行號 : ".$e -> getLine(). "<br>";	
+    //         }
 
    
 ?>
@@ -60,11 +60,10 @@
             $products->execute();
             ///////
            
-            $sql2 = "update orders set  beautyState=:statusnum    where  orderNo=:no" ;
-            $products2 = $pdo->prepare( $sql2 );     
+            $sql2 = "update orders set  beautyState=:statusnum where  orderNo=:no" ;
+            $products2 = $pdo->prepare( $sql2 );         
             $products2->bindValue(":no", $no);          
             $products2->bindValue(":statusnum", $statusnum);
-           
             
             $products2->execute();
            

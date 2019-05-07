@@ -344,7 +344,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>台灣大舞台-後端</title>
+  <link rel="Shortcut Icon" type="image/x-icon" href="images/logo.ico">
+
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
   integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -956,7 +958,7 @@
                             <button class="btn btn-outline-info my-2 my-sm-0 btn-sm" type="submit">搜尋</button>
                     </form>
                     <table class="table table-hover">
-                            <thead>
+                            <thead style="width:100%;">
                                 <tr>
                                 <th >圖片編號 </th>
                                 <th scope="col">圖片說明</th>
@@ -1468,15 +1470,15 @@
                                     <th scope="col">花車名稱</th>
                                     <th scope="col">花車圖片</th>
                                     <th scope="col">優惠卷編號</th>
-                                    <th scope="col">投票數量</th>
+                                    <th scope="col">投票數</th>
                                     <th scope="col">宣傳單編號</th>
                                     
-                                    <th scope="col">上傳花車日期</th>
+                                    <th scope="col">花車日期</th>
                                     <th scope="col">活動地點</th>
                                     <th scope="col">活動日期</th>
                                     <th scope="col">主持人</th>
                                     <th scope="col">總金額</th>
-                                    <th scope="col">是否參加選美</th>
+                                    <th scope="col">參加選美</th>
                                   
                                     <!-- <th scope="col">修改</th> -->
                                 </tr>
@@ -1495,7 +1497,7 @@
                                     </td>
                                    
                                     <td class="" name=""> <?php echo  $orderTotal["orderName"] ;?> </td>
-                                    <td class="" name=""> <img src="../<?php echo  $orderTotal["orderImgUrl"] ;?>" alt="pic"> </td>
+                                    <td class="" name=""> <img src="<?php echo  $orderTotal["orderImgUrl"] ;?>" alt="pic"> </td>
                                    
                                     <td class="" name=""> <?php echo  $orderTotal["memCouponsNo"] ;?> </td>
                                     <td class="" name=""> <?php echo  $orderTotal["orderVote"] ;?> </td>
@@ -1577,7 +1579,7 @@
                                
                                 <tr class="back">
                                     <th class="add" name="no"> <?php echo  $flyercheckTotal["orderNo"] ;?> </th>
-                                   <td class="first"><img src="../<?php echo $flyercheckTotal["flyerImgUrl"]; ?>" alt="">
+                                   <td class="first"><img src="<?php echo $flyercheckTotal["flyerImgUrl"]; ?>" alt="">
                                     </td>
                                    
                                    <td class="" name=""> <?php 
@@ -2252,8 +2254,8 @@
                     $('#coupontbody').append(addString);
                     ////傳到哪個php
                     urlvalue='coupons.php';
-                    datavalue={ id:newid , psw:newpsw , status:newstatus , pagevalue:pagevalue  };
-                    console.log(newid,newstatus,pagevalue);
+                    datavalue={ id:newid , psw:newid , status:newstatus , pagevalue:pagevalue  };
+                    console.log(newid,newid,newstatus,pagevalue);
 
                 }else if (panelToShow =='flyer'){
                     // alert(newfile);

@@ -6,6 +6,7 @@ new Vue({
         setting: ["url", 1, 0,'', 16, 0, "rgb(0,0,0)","place","content",0,0],
         stepIndex:0,
         moveSetting:[0,0,5,5,5,5],
+        color:'',
         screenWidth: document.body.clientWidth
    },
    methods: {
@@ -380,7 +381,8 @@ new Vue({
                             xhr.onload = function () {
                                 if (xhr.status == 200) {
                                    console.log('儲存的路徑為:'+xhr.responseText);
-                                    document.getElementById('A4page').value = xhr.responseText;
+                                   document.getElementById('A4page').value = xhr.responseText;
+                                   document.getElementById('firstBlockBox').src = xhr.responseText;
                                 } else{
                                     alert();
                                 }
@@ -450,6 +452,7 @@ new Vue({
        //內文更換寫入setting
        settingContent(){
         this.setting[8] = document.querySelector('#textWord textarea').value;
+        document.getElementById('A4content').innerText = document.querySelector('#textWord textarea').value;
        },
        //textPlace寫入setting
        settingPlace(){
@@ -548,16 +551,39 @@ new Vue({
                     colorPicker.style.display = "none";
                 }
         },
-        bindColor(){
-            let A4h5 = document.querySelector('#A4page h5');
-            A4h5.style.setProperty('color', this.setting[6]);
-            console.log(this.setting[6]);
+        bindColor(e){
+            switch (this.stepIndex) {
+                case 1:
+                        let A4h5 = document.querySelector('#A4page h5');
+                        A4h5.style.setProperty('color', this.setting[6]);
+                        console.log(this.setting[6]);
+                        break;
+                case 3:
+                        let A4content = document.querySelector('#A4content');
+                        A4content.style.setProperty('color', e.target.value);
+                        console.log(e.target.value);
+                        break;
+            }
+            
         },
         clickColor(e){
-            let A4h5 = document.querySelector('#A4page h5');
-            this.setting[6] = e.target.style.background;
-            A4h5.style.setProperty('color', this.setting[6]);
-            console.log(this.setting[6]);
+            switch (this.stepIndex) {
+                case 1:
+                        let A4h5 = document.querySelector('#A4page h5');
+                        this.setting[6] = e.target.style.background;
+                        A4h5.style.setProperty('color', this.setting[6]);
+                        console.log(this.setting[6]);
+                        break;
+                case 3:
+                        let A4content = document.querySelector('#A4content');
+                        this.color = e.target.style.background;
+                        A4content.style.setProperty('color', this.color);
+                        console.log(this.color);
+                        break;
+            
+                default:
+                    break;
+            }
         }
    }, 
    computed: {},

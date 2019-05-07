@@ -286,6 +286,15 @@
             height: 40px;
           }
         }
+        #A4content{
+          text-align: center;
+          text-shadow: 0 0 1px #000;
+          width: 100%;
+          padding: 20px;
+          position: absolute;
+          bottom: 0;
+          margin: auto;
+        }
       }
 
       #moveBtn{

@@ -2393,7 +2393,7 @@ footer{
     padding: 10px 0px 0px 0px;
   }
   .tryCustEquipWrap{
-    margin-top: -15px;
+    margin-top: 6px;
   }
 }
 
@@ -2401,6 +2401,9 @@ footer{
 //舞台配件介紹 col-lg 尾
 @media screen and (min-width:992px) {
   #tryCustEquipInnerSet{
+    overflow: hidden;
+  }
+  #tryCustEquipSpecial{
     overflow: hidden;
   }
   .perspectiveIntro{
@@ -2576,7 +2579,7 @@ footer{
     }
   }
   .tryCustEquipWrap{
-    margin-top: -10px;
+    margin-top: -59px;
   }
   #processWorker1{
     width: 90px;

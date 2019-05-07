@@ -841,14 +841,6 @@ function getOrderInfo(){
     $('.checkoutOrder p span').text(subtotal);
     // 付款金額總計
     subtotalAll = 0;
-<<<<<<< HEAD
-    $('#couponUse').change(function(){
-        subtotalAll = subtotal - parseInt($('#couponUse :selected').val());
-        // console.log(subtotalAll);
-        $('.checkoutOrder p span').text(subtotalAll);
-    });
-    $('.checkoutOrder p span').text(subtotalAll);
-=======
     if( $('#couponUse').change() == true ){
        $('#couponUse').change(function(){
             subtotalAll = parseInt(subtotal) - parseInt($('#couponUse :selected').val());
@@ -862,7 +854,6 @@ function getOrderInfo(){
     }
         
     
->>>>>>> ec9dec12ef877dd006de92ebdca04af0126cc5b2
 }
 // 抓取折價券
 function getMemCoupons(){

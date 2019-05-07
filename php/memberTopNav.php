@@ -91,7 +91,7 @@
         xhr.onload = function () {
             if (xhr.status == 200) { //server端可以正確的執行
                 alert('已成功登出');
-                window.location.href = "index.php";
+                window.location.href = "index2.php";
             } else { //其它
                 alert(xhr.status);
             }

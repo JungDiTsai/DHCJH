@@ -204,8 +204,9 @@ xhr.onload = function () {
              LoginState = JSON.parse(xhr.responseText);
             console.log(xhr.responseText);
             var box = document.querySelector('.loginBox');
+            var box2 = document.querySelector('#lightWrap');
             box.style.display='none';
-
+            box2.style.display='none';
 		}
 	} else { //其它
 		alert(xhr.status);
